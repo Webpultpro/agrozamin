@@ -1,0 +1,19 @@
+//- WP menu
+mixin mnu()
+	-
+		var nav= { 
+			"Уруғлар":"#",
+			"Ўғитлар":"#",
+			"Агрокимё":"#",
+			"Озуқалар":"#" ,
+			"Техника":"#",
+			"Хом-ашё":"#",
+			"Ҳайвонлар":"#",
+			"Қишлоқ хўжалик маҳсулотлари":"#",
+			"Хизматлар":"#",
+			}
+	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		each linkPatch, linkName in nav
+			li.menu-item(itemprop="item" ): a(href= linkPatch itemprop="url")= linkName
+
+//- menu

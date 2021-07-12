@@ -1,0 +1,63 @@
+ 
+	  
+.soc{
+	@include roww(10px, m);
+	display: flex;
+	&__item{
+		text-decoration: none !important; 
+		vertical-align: middle;
+		@include mt;
+		display: grid;
+		place-items: center;
+		&:hover{
+		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+			// opacity: .6 ;
+		}
+		
+	}
+	.icon{
+		font-size: rem(30);
+	}
+	 
+
+}
+ 
+
+.counter{
+	counter-reset: num;
+	&__item {
+		position: relative; 
+		&::before {
+			content: counter(num);
+			counter-increment: num;
+		}
+	}
+}
+
+.search-block{
+	max-width: rem(637);
+	form{
+		position: relative;
+	}
+	input{
+		@extend .form-control;
+		border-radius: 41px;
+		padding-left: rem(20);
+		padding-right: rem(40);
+		height: auto;
+		font-size: 10px 	!important;
+	}
+	button{
+		position: absolute;
+		@extend .btn;
+		padding: 0 rem(10);
+		right: 0;
+		right: rem(10);
+		top: 0;
+		height: 100%;
+		.icon{
+			color: #999999;
+			font-size: 14px;
+		}
+	}
+}

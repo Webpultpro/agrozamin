@@ -1,0 +1,81 @@
+
+	.header{
+		background-color: #fff;
+	}
+	// start .topLine
+	.topLine {
+		--sPT: 10px;
+		--sPB: 18px;
+		 .row{
+			 --bs-gutter-x: 20px;
+			//  align-items: center;
+		 }
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.topLine
+
+.swich-block{
+	display: inline-block;
+	margin-bottom: rem(14);
+	&__inner{
+		display: inline-flex;
+		align-items: center;
+		background: #F2F2F2;
+		border-radius: 33px;
+		padding: rem(2);
+		
+	}
+	input{
+		@extend .invisible;
+	}
+	&__btn{
+		padding: rem(4) rem(4);
+		display: inline-block;
+		border-radius: 16px;
+		color: #7C7E80;
+		font-size: 11px;
+		cursor: pointer;
+		min-width: 80px;
+		text-align: center;
+
+		@include mt; 
+		color: var(--unchecked, #fff);
+		font-weight: var(--unchecked, bold);
+		background-color: var(--unchecked, #{$primary});
+		&:nth-child(1) {
+			color: var(--checked, #fff);
+			font-weight: var(--checked, bold);
+			background-color: var(--checked, #{$primary});
+			margin-right: rem(8);
+		} 
+	}
+	input:not(:checked)  ~ &__inner  {
+			--unchecked: ' ';
+	}
+	input:checked  ~ &__inner  {
+			--checked: ' ';
+	}
+
+}

@@ -1,0 +1,36 @@
+mixin topLine()
+	// start topLine
+	+b.topLine.section#topLine&attributes(attributes)
+		.container
+			+b.LABEL.swich-block
+				input(type="checkbox")
+				+e.inner
+					+e.SPAN.btn Харидорлар
+					+e.SPAN.btn Сотувчилар
+			.row
+				.col-auto
+					a(href="/")
+						img(src="img/logo.png", alt="") 
+				.col
+					+search-block
+				.col-auto
+					+b.top-btn(type="button")
+						+icon("user")
+						+e.text Кириш
+				.col-auto
+					+b.top-btn(type="button")
+						+icon("bang")
+						+e.text Хабарнома
+				.col-auto
+					+b.top-btn(type="button")
+						+icon("basket")
+						+e.text Саватча
+				.col-auto
+					+b.lang-choose
+						+e.current Уз
+						+e.dropdown 
+							+e.dropdown-item  Уз
+							+e.dropdown-item  Уз
+							+e.dropdown-item  Уз
+							+e.dropdown-item  Уз
+	// end topLine
