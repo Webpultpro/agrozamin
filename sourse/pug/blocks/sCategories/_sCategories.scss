@@ -1,14 +1,111 @@
 // start .sCategories
 .sCategories {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+	position: relative;
+	overflow: hidden;
+	.row {
+		--bs-gutter-x: #{rem(22)};
+		--bs-gutter-y: #{rem(22)};
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-x: #{rem(30)};
+			--bs-gutter-y: #{rem(30)};
+		}
+	}
+	.section-title {
+		h2 {
+			margin-bottom: 0;
+		}
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background: $white;
+		border: 2px solid $secondary;
+		border-radius: 12px;
+		padding: rem(30) rem(22) rem(22);
+		@include media-breakpoint-up(xl) {
+			padding: rem(42) rem(29) rem(29);
+		}
+		&:hover {
+			box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.2);
+		}
+	}
+	&__title {
+		font-size: rem(18);
+		line-height: 125%;
+		color: $body-color;
+		text-align: center;
+	}
 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	&__img-wrap {
+		position: relative;
+		min-width: 90px;
+		min-height: 90px;
+		border-radius: 50%;
+		background-color: rgba($color: #00cc69, $alpha: 0.15);
+		margin-bottom: rem(22);
+		@include media-breakpoint-up(lg) {
+			min-width: 110px;
+			min-height: 110px;
+		}
+		@include media-breakpoint-up(xl) {
+			min-width: 122px;
+			min-height: 122px;
+			margin-bottom: rem(36);
+		}
+		img {
+			@include a-cent;
+			max-width: 56px;
+			max-height: 58px;
+			@include media-breakpoint-up(xl) {
+				max-width: 75px;
+				max-height: 77px;
+			}
+		}
+	}
+
+	&__slider {
+		// padding-bottom: calc(var(--size));
+		@include media-breakpoint-down(lg) {
+			.row {
+				// min-width: 967.44px;
+				flex-wrap: nowrap;
+			}
+		}
+		.sCategories__col {
+			@include media-breakpoint-down(lg) {
+				width: 210px;
+			}
+		}
+		.swiper-wrapper {
+			width: auto;
+			margin-right: calc(-0.5 * var(--bs-gutter-x));
+			margin-left: calc(-0.5 * var(--bs-gutter-x));
+			margin-top: calc(-1 * var(--bs-gutter-y));
+			@include media-breakpoint-up(lg) {
+				transform: none !important;
+			}
+		}
+		.swiper-slide {
+			height: auto;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sCategories

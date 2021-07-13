@@ -2,13 +2,13 @@
 	--animate-delay: 1.2s;
 	--fontSizeBase: #{$em-base};
 
-	--sPT: #{rem(80 / 2)};
-	--sPB: #{rem(90 / 2)};
-	--sTPB: #{rem(65 / 2)};
-	@include media-breakpoint-up(md) {
-		--sPT: #{rem(80)};
-		--sPB: #{rem(90)};
-		--sTPB: #{rem(65)};
+	--sPT: #{rem(45 / 2)};
+	--sPB: #{rem(45 / 2)};
+	--sTPB: #{rem(70 / 2)};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(45)};
+		--sPB: #{rem(45)};
+		--sTPB: #{rem(70)};
 	}
 
 	--swiperArrowSize: #{rem(68)};

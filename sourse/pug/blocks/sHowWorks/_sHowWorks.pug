@@ -8,11 +8,11 @@ mixin sHowWorks(data)
 				.row
 					mixin item(i, p)
 						+e.col.col-md-4
-							+e.item
-								+e.img-wrap
-									img.res-i(src=`img/svg/how-works-${i}.svg` alt="")
+							+e.item(href='#')
+								+e.DIV.img-wrap
+									img(src=`img/svg/how-works-${i}.svg` alt="")
 								p!= p
-								+e.more(href='#')
+								+e.more
 									span Батафсил
 									+icon('shevron-right-sm')
 					+item(1, `Фермерлар ўз махсулотларини жойлаштирадилар`)

@@ -333,6 +333,21 @@ function eventHandler() {
 		freeModeMomentum: true,
 
 	});
+
+	let sCategoriesSlider = new Swiper('.sCategories__slider--js', {
+		freeModeMomentum: true,
+		watchOverflow: true,
+		slidesPerView: 'auto',
+		spaceBetween: 0,
+		freeMode: true,
+	});
+	let sPopularsSlider = new Swiper('.sPopulars__slider--js', {
+		freeModeMomentum: true,
+		watchOverflow: true,
+		slidesPerView: 'auto',
+		spaceBetween: 0,
+		freeMode: true,
+	});
 	// modal window
 
 };

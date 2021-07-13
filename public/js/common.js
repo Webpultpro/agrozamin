@@ -339,7 +339,21 @@ function eventHandler() {
 		touchRatio: 0.2,
 		slideToClickedSlide: true,
 		freeModeMomentum: true
-	})); // modal window
+	}));
+	let sCategoriesSlider = new Swiper('.sCategories__slider--js', {
+		freeModeMomentum: true,
+		watchOverflow: true,
+		slidesPerView: 'auto',
+		spaceBetween: 0,
+		freeMode: true
+	});
+	let sPopularsSlider = new Swiper('.sPopulars__slider--js', {
+		freeModeMomentum: true,
+		watchOverflow: true,
+		slidesPerView: 'auto',
+		spaceBetween: 0,
+		freeMode: true
+	}); // modal window
 }
 
 ;

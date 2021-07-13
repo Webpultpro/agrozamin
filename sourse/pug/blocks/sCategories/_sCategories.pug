@@ -3,7 +3,17 @@ mixin sCategories(data)
 	+b.SECTION.sCategories.section#sCategories&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sCategories
-				
-			.row
+				h2 Маҳсулот категориялари
+			+e.slider--js
+				.row.swiper-wrapper
+					mixin item(i, t)
+						+e.col.col-lg-3.swiper-slide
+							+e.item(href='#')
+								+e.DIV.img-wrap
+									img(src=`img/svg/categories-${i}.svg` alt="")
+								+e.title!= t
+					+item(1, `Уруғлар`)
+					+item(2, `Агрохимия`)
+					+item(3, `Ўғитлар`)
+					+item(4, `Техника`)
 	// end sCategories
