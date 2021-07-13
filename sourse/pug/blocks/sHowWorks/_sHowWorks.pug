@@ -1,0 +1,22 @@
+mixin sHowWorks(data)
+	// start sHowWorks
+	+b.SECTION.sHowWorks.section#sHowWorks&attributes(attributes)
+		.container
+			+e.wrapper
+				+b.section-title.text-center
+					h2 Хизмат қандай ишлаши ҳақида
+				.row
+					mixin item(i, p)
+						+e.col.col-md-4
+							+e.item
+								+e.img-wrap
+									img.res-i(src=`img/svg/how-works-${i}.svg` alt="")
+								p!= p
+								+e.more(href='#')
+									span Батафсил
+									+icon('shevron-right-sm')
+					+item(1, `Фермерлар ўз махсулотларини жойлаштирадилар`)
+					+item(2, `Сиз керакли маҳсулотни танлайсиз`)
+					+item(3, `Етказиб бериш ва вақти ҳақида келишиб оласиз`)
+
+	// end sHowWorks

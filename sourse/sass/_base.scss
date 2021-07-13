@@ -121,6 +121,11 @@ body {
 		@include rfs(50px);
 		line-height: 109%;
 	}
+	h2 {
+		font-weight: 500;
+		@include rfs(32px);
+		line-height: 116%;
+	}
 }
 
 .mono {

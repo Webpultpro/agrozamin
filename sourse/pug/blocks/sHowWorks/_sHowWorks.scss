@@ -1,0 +1,103 @@
+// start .sHowWorks
+.sHowWorks {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+
+	.section-title {
+
+		h2 {
+			margin-bottom: 0;
+		}
+	}
+	&__wrapper {
+		max-width: 770px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.row {
+		--bs-gutter-x: #{rem(19)};
+		--bs-gutter-y: #{rem(19)};
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-x: #{rem(25)};
+			--bs-gutter-y: #{rem(25)};
+		}
+	}
+
+	&__item {
+		position: relative;
+		display: flex;
+		align-items: center;
+		height: 100%;
+		background: $white;
+		border: 2px solid $secondary;
+		padding: rem(14) rem(30) rem(17) rem(17);
+		border-radius: 12px;
+		@include media-breakpoint-up(md) {
+			padding: rem(24) rem(19) rem(12);
+			flex-direction: column;
+			min-height: 288px;
+		}
+		p {
+			font-weight: 500;
+			font-size: rem(14);
+			line-height: (16 / 13);
+			margin: rem(29) 0;
+			@include media-breakpoint-up(sm) {
+				font-size: rem(16);
+			}
+			@include media-breakpoint-up(md) {
+				font-size: rem(13);
+				margin: 0 0 rem(19);
+				flex-grow: 1;
+				text-align: center;
+			}
+		}
+	}
+
+	&__more {
+		position: absolute;
+		right: rem(30);
+		bottom: rem(15);
+		@include media-breakpoint-up(md) {
+			margin-left: auto;
+			position: static;
+		}
+		span {
+			margin-right: rem(5);
+		}
+
+		.icon-shevron-right-sm {
+			font-size: rem(8);
+		}
+	}
+
+	&__img-wrap {
+		position: relative;
+		min-width: 110px;
+		height: auto;
+		margin: 0 rem(16) 0 0;
+		@include media-breakpoint-up(md) {
+			margin: 0 auto rem(35);
+		}
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sHowWorks
