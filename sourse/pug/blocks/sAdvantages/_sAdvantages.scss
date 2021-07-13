@@ -3,7 +3,9 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
-
+	&__col {
+		max-width: 715px;
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

@@ -1,9 +1,29 @@
 mixin sAdvantages(data)
 	// start sAdvantages
 	+b.SECTION.sAdvantages.section#sAdvantages&attributes(attributes)
+
 		.container
-			+b.section-title.text-center
-				h2 sAdvantages
-				
+			picture
+				source(type='image/webp' srcset='img/@2x/webp/advantage-lg.webp' media='(min-width:397px)')
+				source(type='image/webp' srcset='img/@2x/webp/advantage-sm.webp')
+				source(type='image/jpg' srcset='img/@2x/advantage-lg.jpg' media='(min-width:397px)')
+				source(type='image/jpg' srcset='img/@2x/advantage-sm.jpg')
+				img(src='img/@2x/advantage-lg.jpg' alt='' loading='lazy')
+		+e.text-wrap.container
 			.row
+				+e.col.col-md-auto
+					+b.section-title
+						h2 Хизматнинг афзалликлари
+					.row
+						.col-md-6
+							p Хизматнинг афзалликлари
+						.col-md-6
+							p Хизматнинг афзалликлари
+						.col-md-6
+							p Хизматнинг афзалликлари
+						.col-md-6
+							p Хизматнинг афзалликлари
+						
+				.col
+					p Хизматнинг афзалликлари
 	// end sAdvantages
