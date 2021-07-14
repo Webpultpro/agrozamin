@@ -1,19 +1,26 @@
 .menu{
 	display: flex;
 	list-style: none;
-	@include roww(20px);
+	@include roww(10);
 	position: relative;
 	margin-bottom: 0;
-	max-width: 100%;
+	max-width: calc(100% + var(--bs-gutter-x));
 	flex-wrap: wrap;
+	margin-bottom: 0;
 	li{
 		// margin-left: 0;
 		// margin-right: 0;
 		padding: 0;
 	}
 	a{
+		color: $body-color;
 		display: block;
 		text-align: center;
-		padding: rem(20) rem(10);
+		padding: rem(15) rem(10);
+		font-weight: 500;
+		&:hover,
+		&:active{
+			color: $primary;
+		}
 	}
 }

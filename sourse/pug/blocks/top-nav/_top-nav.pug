@@ -19,10 +19,79 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container
 			.row
-				.col-auto.d-lg-none
-					+b.toggle-menu-mobile--js
-						span
-				.col.d-none.d-lg-block
-					+mnu()
+				//- .col-auto.d-lg-none
+				//- 	+b.toggle-menu-mobile--js
+				//- 		span
+				+e.col-catalog.col-auto
+					+b.catalog-block
+						.d-md-none
+							+b.swich-block
+								+e.btn(href="#").active Харидорлар
+								+e.btn(href="#") Сотувчилар
+						+e.toggle 
+							span 
+							+e.toggle-text Каталоглар
+						+e.dropdown
+							ul.left-menu
+								mixin liLeft(a)
+									li.menu-item-has-children
+										a(href="#")= a  
+											+icon("chevron-right")
+										ul.sub-menu
+											mixin li(a)
+												li 
+													a(href="#")= a  
+											mixin col(t)
+												li
+													ul
+														li: strong= t
+														block
+														+li('Ещё')
+
+											+col('Полиз екини уруғлари') 
+												+li('Тарвуз')
+												+li('Қовун')
+												+li('Қовоқ')
+												+li('Хандалак')
+												+li('Ошқовоқ')
+											+col('Майса уруғлари')
+												+li("Газон")
+												+li("Жўхори")
+												+li("Доривор ўсимликлар")
+												+li("Эм-хашак ўтлари") 
+											+col('Дуккакли уруғлар')
+												+li("Ловия")
+												+li("Нўхат")
+												+li("Люпин")
+												+li("Ясмиқ ")
+												+li("Фасол")
+											+col('Сабзавот уруғлари')
+												+li("Бодринг")
+												+li("Помидор")
+												+li("Карам")
+												+li("Сабзи") 
+											+col('Дон уруғлари')
+												+li("Қишки буғдой")
+												+li("Арпа")
+												+li("Жавдар")
+												+li("Юлаф") 
+
+
+
+
+
+
+								+liLeft('Уруғлар')
+								+liLeft('Ўғитлар')
+								+liLeft('Ўсимликларни ҳимоялаш воситалари')
+								+liLeft('Озуқалар')
+								+liLeft('Боғ эрлари')
+								+liLeft('Дон махсулотлари')
+								+liLeft('Агрокимё')
+								+liLeft('Екиш материаллари')
+								+liLeft('Тайёр маҳсулотлар')
+				+e.col.col
+					.scroll-menu-wrap(data-btn="Яна")
+						+mnu()
 					
 	// end top-nav

@@ -61,6 +61,7 @@
     "inputmask": "^5.0.6",
     "jquery": "^3.5.1",
     "loading-attribute-polyfill": "^1.5.4",
-    "swiper": "^6.7.5"
+    "swiper": "^6.7.5",
+    "priority-nav": "^1.0.13"
   }
 }

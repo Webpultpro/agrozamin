@@ -18,7 +18,7 @@ root.style.setProperty('--spacing-end', scrollWidth + 'px');
 div.remove();
 const JSCCommon = {
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
-	menuMobile: document.querySelector(".menu-mobile--js"),
+	menuMobile: document.querySelector(".catalog-block"),
 	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
 
 	modalCall() {
@@ -117,57 +117,17 @@ const JSCCommon = {
 			if (!container || link) this.closeMenu();
 		}, {
 			passive: true
-		});
-		window.addEventListener('resize', () => {
-			if (window.matchMedia("(min-width: 992px)").matches) this.closeMenu();
-		}, {
-			passive: true
-		});
+		}); // window.addEventListener('resize', () => {
+		// 	if (window.matchMedia("(min-width: 992px)").matches) this.closeMenu();
+		// }, { passive: true });
 	},
 
 	// /mobileMenu
 	// tabs  .
 	tabscostume(tab) {
-		const tabs = document.querySelectorAll(tab);
-
-		const indexOf = element => Array.from(element.parentNode.children).indexOf(element);
-
-		tabs.forEach(element => {
-			let tabs = element;
-			const tabsCaption = tabs.querySelector(".tabs__caption");
-			const tabsBtn = tabsCaption.querySelectorAll(".tabs__btn");
-			const tabsWrap = tabs.querySelector(".tabs__wrap");
-			const tabsContent = tabsWrap.querySelectorAll(".tabs__content");
-			const random = Math.trunc(Math.random() * 1000);
-			tabsBtn.forEach((el, index) => {
-				const data = "tab-content-".concat(random, "-").concat(index);
-				el.dataset.tabBtn = data;
-				const content = tabsContent[index];
-				content.dataset.tabContent = data;
-				if (!content.dataset.tabContent == data) return;
-				const active = content.classList.contains('active') ? 'active' : ''; // console.log(el.innerHTML);
-
-				content.insertAdjacentHTML("beforebegin", "<div class=\"tabs__btn-accordion  btn btn-primary  mb-1 ".concat(active, "\" data-tab-btn=\"").concat(data, "\">").concat(el.innerHTML, "</div>"));
-			});
-			tabs.addEventListener('click', function (element) {
-				const btn = element.target.closest("[data-tab-btn]:not(.active)");
-				if (!btn) return;
-				const data = btn.dataset.tabBtn;
-				const tabsAllBtn = this.querySelectorAll("[data-tab-btn");
-				const content = this.querySelectorAll("[data-tab-content]");
-				tabsAllBtn.forEach(element => {
-					element.dataset.tabBtn == data ? element.classList.add('active') : element.classList.remove('active');
-				});
-				content.forEach(element => {
-					element.dataset.tabContent == data ? (element.classList.add('active'), element.previousSibling.classList.add('active')) : element.classList.remove('active');
-				});
-			});
-		}); // $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-		// 	$(this)
-		// 		.addClass('active').siblings().removeClass('active')
-		// 		.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-		// 		.eq($(this).index()).fadeIn().addClass('active');
-		// });
+		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
+			$(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active').eq($(this).index()).fadeIn().addClass('active');
+		});
 	},
 
 	// /tabs
@@ -176,60 +136,6 @@ const JSCCommon = {
 		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
 		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
 		Inputmask("+9(999)999-99-99").mask(InputTel);
-	},
-
-	// /inputMask
-	ifie() {
-		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
-
-		if (isIE11) {
-			document.body.insertAdjacentHTML("beforeend", '<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>');
-		}
-	},
-
-	sendForm() {
-		var gets = function () {
-			var a = window.location.search;
-			var b = new Object();
-			var c;
-			a = a.substring(1).split("&");
-
-			for (var i = 0; i < a.length; i++) {
-				c = a[i].split("=");
-				b[c[0]] = c[1];
-			}
-
-			return b;
-		}(); // form
-
-
-		$(document).on('submit', "form", function (e) {
-			e.preventDefault();
-			const th = $(this);
-			var data = th.serialize();
-			th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-			th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-			th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-			th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
-			$.ajax({
-				url: 'action.php',
-				type: 'POST',
-				data: data
-			}).done(function (data) {
-				fancybox.close();
-				Fancybox.show([{
-					src: "#modal-thanks",
-					type: "inline"
-				}]); // window.location.replace("/thanks.html");
-
-				setTimeout(function () {
-					// Done Functions
-					th.trigger("reset"); // $.magnificPopup.close();
-					// ym(53383120, 'reachGoal', 'zakaz');
-					// yaCounter55828534.reachGoal('zakaz');
-				}, 4000);
-			}).fail(function () {});
-		});
 	},
 
 	heightwindow() {
@@ -273,12 +179,11 @@ const JSCCommon = {
 const $ = jQuery;
 
 function eventHandler() {
-	JSCCommon.ifie();
 	JSCCommon.modalCall();
-	JSCCommon.tabscostume('.tabs--js');
+	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
-	JSCCommon.inputMask();
-	JSCCommon.sendForm();
+	JSCCommon.inputMask(); // JSCCommon.sendForm();
+
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll(); // JSCCommon.CustomInputFile(); 
 
@@ -354,6 +259,27 @@ function eventHandler() {
 		spaceBetween: 0,
 		freeMode: true
 	}); // modal window
+
+	var wrapper = document.querySelector(".top-nav");
+	let btnText = document.querySelector('.scroll-menu-wrap').dataset.btn;
+	var nav = priorityNav.init({
+		mainNavWrapper: ".scroll-menu-wrap",
+		// mainnav wrapper selector (must be direct parent from mainNav)
+		mainNav: ".menu",
+		// mainnav selector. (must be inline-block)
+		navDropdownLabel: btnText,
+		navDropdownClassName: "menu__dropdown",
+		// class used for the dropdown.
+		navDropdownToggleClassName: "menu__dropdown-toggle",
+		// class used for the dropdown toggle.
+		// navDropdownBreakpointLabel: "Выбрать", //button label for navDropdownToggle when the breakPoint is reached.
+		breakPoint: 0 // moved: function () { scrolldrop()}, // executed when item is moved to dropdown
+		// movedBack: function () { scrolldrop()} // executed when item is moved back to main menu
+
+	});
+	$(".top-btn--search-toggle-js").click(function () {
+		$(".topLine__search-wrap ").slideToggle();
+	});
 }
 
 ;

@@ -2,17 +2,26 @@ mixin topLine()
 	// start topLine
 	+b.topLine.section#topLine&attributes(attributes)
 		.container
-			+b.LABEL.swich-block
-				input(type="checkbox")
-				+e.inner
-					+e.SPAN.btn Харидорлар
-					+e.SPAN.btn Сотувчилар
-			.row
+			.row.d-none.d-md-flex
 				.col-auto
+					+b.swich-block
+						+e.btn(href="#").active Харидорлар
+						+e.btn(href="#") Сотувчилар
+				.col-auto
+			.row
+				.col-auto.d-md-none
+					+b.toggle-menu-mobile--js
+						span
+				.col-md-auto.col
 					a(href="/")
-						img(src="img/logo.png", alt="") 
-				.col
-					+search-block
+						img(src="img/svg/logo.svg", alt="") 
+				.col-md.order-md-0.order-last
+					+e.search-wrap.d-md-block
+						+search-block
+				.col-auto.d-md-none
+					+b.top-btn--search-toggle-js(type="button")
+						+icon("search")
+						+e.text Поиск
 				.col-auto
 					+b.top-btn(type="button")
 						+icon("user")
@@ -29,8 +38,8 @@ mixin topLine()
 					+b.lang-choose
 						+e.current Уз
 						+e.dropdown 
-							+e.dropdown-item  Уз
-							+e.dropdown-item  Уз
-							+e.dropdown-item  Уз
-							+e.dropdown-item  Уз
+							+e.dropdown-item  Уз1
+							+e.dropdown-item  Уз2
+							+e.dropdown-item  Уз3
+							+e.dropdown-item  Уз4
 	// end topLine
