@@ -1,5 +1,5 @@
 $em-base: 14px;
-$small: rem(14);
+$small: rem(12);
 $url: '../img/';
 $path2: '@2x/';
 $path1: '@1x/';
@@ -91,6 +91,7 @@ $colors: ("blue": $blue,
 
 // scss-docs-start theme-color-variables
 $primary: $green !default;
+$secondary2: #AAAAAA !default;
 $secondary: #E5E5E5 !default;
 $success: $green !default;
 $info: #3190FF !default;
@@ -102,6 +103,7 @@ $dark: $gray-900 !default;
 
 // scss-docs-start theme-colors-map
 $theme-colors: ("primary": $primary,
+  "secondary2": $secondary2,
   "secondary": $secondary,
   "success": $success,
   "info": $info,

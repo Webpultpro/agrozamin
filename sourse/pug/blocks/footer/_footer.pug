@@ -1,2 +1,43 @@
 mixin footer()
-	footer.footer
+	+b.FOOTER.footer
+		.container
+			.row
+				+e.col-first.col 
+					a(href="/")
+						img(src="img/svg/logo.svg", alt="") 
+					.small.text-secondary2.mt-1.mb-3 Агробанкдан агросервис
+					p Барча саволлар бойича мурожат қилинг: 
+						br
+						a(href="mailto:info@agrozamin.uz") info@agrozamin.uz
+					+soc
+				.col 
+					p.text-secondary2 Фойдали ҳаволалар:
+					ul 
+						li: a(href="#")  Каталоглар
+						li: a(href="#")  Оммабоп маҳсулотлар
+						li: a(href="#")  Хизмат қандай ишлаши ҳақида
+						li: a(href="#")  Хабарнома
+						li: a(href="#")  Саватча
+				.col 
+					p.text-secondary2 Биз ҳақимизда:
+					ul 
+						li: a(href="#")  Агробанк ҳақида
+						li: a(href="#")  Лойиҳа ҳақида
+						li: a(href="#")  Оммабоп саволлар
+						li: a(href="#")  Партнёрларимиз
+				+e.col.col-auto
+					p.text-secondary2 Биз ҳақимизда:
+					p 
+						span.text-secondary2 Манзил: 
+						| 100096, г. Ташкент,  ул. Мукими 43
+					p 
+						span.text-secondary2 Телефон: 
+							a(href="tel:1216").text-body  1216
+					p 
+						span.text-secondary2 Факс: 
+							a(href="tel:+998711505395").text-body  +998 71 150 53 95
+					p 
+						span.text-secondary2 E-mail: 
+							a(href="mailto:headoffice@agrobank.uz").text-body  headoffice@agrobank.uz
+
+			p.text-secondary2.mt-5 2021 © Barcha huquqlar himoya qilingan. Barcha xizmatlar litsenziyalangan

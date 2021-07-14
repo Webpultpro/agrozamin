@@ -1,7 +1,40 @@
 .footer {
-		
-	margin-top: auto;
+		background: #F5F5F5;
+		padding-top: rem(40);
+		padding-bottom: rem(20);
 
+	margin-top: auto;
+	li{
+		list-style: none;
+		margin-bottom: rem(10);
+		a{
+			@extend .text-body;
+		}
+	}
+	p{
+		a{
+				font-size: rem(18);
+			 
+		}
+	}
+	&__col{
+		max-width: rem(240);
+	}
+	&__col-first{
+		p{
+			max-width: rem((180));
+					a {
+						font-size: rem(18);
+						@extend .text-body;
+
+						border-bottom: 1px solid;
+
+						&:hover {
+							border-color: transparent;
+						}
+					}
+		}
+	}
 // 
 @include media-breakpoint-up(xl) {}
 
