@@ -5,10 +5,10 @@
 	// start .topLine
 	.topLine {
 		--sPT: 10px;
-		--sPB: 18px;
+		--sPB: 9px;
 		 .row{
 			 --bs-gutter-x: 20px;
-			//  align-items: center;
+			 align-items: center;
 		 }
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -30,26 +30,54 @@
 	//
 	@include media-breakpoint-down(xl) {}
 	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(md) {
+		&__search-wrap{
+			display: none;
+			padding-top: rem(10);
+		}
+	}
+	@include media-breakpoint-down(sm) {
+		img{
+			width: rem(120);
+		}
+	}
 	@include media-breakpoint-down(xs) {} 
 
 } // end.topLine
 
+.top-btn{
+	&__text{
+			margin-top: rem(5);
+			@include media-breakpoint-down(sm) {
+				display: none;
+			}
+		
+	}
+	@extend .btn;
+	@extend .btn-link;
+	padding: 0;
+	color: #7C7E80;
+	font-size: rem(9);
+	box-shadow: none;
+	&:not(:hover) {
+		.icon{
+			color: #000;
+		}
+	}
+	.icon{
+		font-size: rem(18);
+	}
+}
+
 .swich-block{
 	display: inline-block;
 	margin-bottom: rem(14);
-	&__inner{
-		display: inline-flex;
-		align-items: center;
-		background: #F2F2F2;
-		border-radius: 33px;
-		padding: rem(2);
-		
-	}
-	input{
-		@extend .invisible;
-	}
+	display: inline-flex;
+	align-items: center;
+	background: #F2F2F2;
+	border-radius: 33px;
+	padding: rem(2);
+
 	&__btn{
 		padding: rem(4) rem(4);
 		display: inline-block;
@@ -58,24 +86,82 @@
 		font-size: 11px;
 		cursor: pointer;
 		min-width: 80px;
-		text-align: center;
-
-		@include mt; 
-		color: var(--unchecked, #fff);
-		font-weight: var(--unchecked, bold);
-		background-color: var(--unchecked, #{$primary});
-		&:nth-child(1) {
-			color: var(--checked, #fff);
-			font-weight: var(--checked, bold);
-			background-color: var(--checked, #{$primary});
+		text-align: center; 
+		&.active {
+			color: #fff;
+			font-weight: bold;
+			background-color: $primary;
 			margin-right: rem(8);
 		} 
-	}
-	input:not(:checked)  ~ &__inner  {
-			--unchecked: ' ';
-	}
-	input:checked  ~ &__inner  {
-			--checked: ' ';
-	}
+	} 
 
+}
+
+.lang-choose{
+	position: relative;
+
+	@include media-breakpoint-up(sm) {
+
+		width: rem(65px);
+	}
+	width: rem(60px);
+	// width: rem(55px);
+	text-align: right;
+	font-weight: bold; 
+	cursor: pointer;
+	z-index: 200;
+	border-radius: rem(4px);
+	&:hover {
+		--hover: ' ';
+		background: #F2F2F2;
+	}
+	&__current  {
+		background: #F2F2F2;
+		border-radius: rem(4px);
+		position: relative;
+			@include media-breakpoint-up(sm) {
+
+				padding-right: rem(29);
+			}
+			padding-right: rem(24);
+		padding-top: rem(5);
+		padding-bottom: rem(5);
+		&::after{
+			content: var(--chevron-down);
+			position: absolute;
+			@include media-breakpoint-up(sm) {
+				right: rem(10);
+			}
+			right: rem(8);
+			top: rem(2);
+		}
+	}
+	&__dropdown{
+		background: #F2F2F2;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		border-radius: rem(4px);
+		visibility: var(--hover, hidden);
+		opacity: var(--hover, 0);
+		@include mt;
+		overflow: hidden;
+	}
+	
+	&__dropdown-item{
+		@include mt;
+		padding-top: rem(4);
+		padding-bottom: rem(4);
+		@include media-breakpoint-up(sm) { 
+			padding-right: rem(29);
+		} 
+		padding-right: rem(24);
+		@include mt;
+		// transform: var(--hover, 0);
+		&:hover{
+			background-color: $secondary;
+		}
+	}
+	
 }

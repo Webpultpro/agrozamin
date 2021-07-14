@@ -3,8 +3,8 @@ $small: rem(14);
 $url: '../img/';
 $path2: '@2x/';
 $path1: '@1x/';
-$rfs-breakpoint: 1200px !default;
-$rfs-rem-value: 14 !default;
+// $rfs-breakpoint: 1200px !default;
+// $rfs-rem-value: 16 !default;
 
 $themeColor: $primary !default;
 $colors: (
@@ -93,7 +93,7 @@ $colors: ("blue": $blue,
 $primary: $green !default;
 $secondary: #E5E5E5 !default;
 $success: $green !default;
-$info: $cyan !default;
+$info: #3190FF !default;
 $warning: $yellow !default;
 $danger: $red !default;
 $light: #F2F2F2 !default;
