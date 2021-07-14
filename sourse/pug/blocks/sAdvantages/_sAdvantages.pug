@@ -1,12 +1,13 @@
 mixin sAdvantages(data)
 	// start sAdvantages
 	+b.SECTION.sAdvantages.section#sAdvantages&attributes(attributes)
-
+		+e.tooltip--1 Сизда янги буюртма бор
+		+e.tooltip--2 Мижоз буюртмани қабул қилди
 		.container
 			picture
-				source(type='image/webp' srcset='img/@2x/webp/advantage-lg.webp' media='(min-width:397px)')
+				source(type='image/webp' srcset='img/@2x/webp/advantage-lg.webp' media='(min-width:768px)')
 				source(type='image/webp' srcset='img/@2x/webp/advantage-sm.webp')
-				source(type='image/jpg' srcset='img/@2x/advantage-lg.jpg' media='(min-width:397px)')
+				source(type='image/jpg' srcset='img/@2x/advantage-lg.jpg' media='(min-width:768px)')
 				source(type='image/jpg' srcset='img/@2x/advantage-sm.jpg')
 				img(src='img/@2x/advantage-lg.jpg' alt='' loading='lazy')
 		+e.text-wrap.container
