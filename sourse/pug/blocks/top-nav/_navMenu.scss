@@ -4,7 +4,7 @@
 	@include roww(10);
 	position: relative;
 	margin-bottom: 0;
-	max-width: calc(100% + var(--bs-gutter-x));
+	width: calc(100% + var(--bs-gutter-x));
 	flex-wrap: wrap;
 	margin-bottom: 0;
 	li{

@@ -86,8 +86,8 @@ const JSCCommon = {
 		const menu = this.menuMobile;
 		document.addEventListener("click", function (event) {
 			const toggleEv = event.target.closest(".toggle-menu-mobile--js");
-			if (!toggleEv) return;
-			toggle.forEach(el => el.classList.toggle("on"));
+			if (!toggleEv) return; // toggle.forEach(el => el.classList.toggle("on"));
+
 			menu.classList.toggle("active");
 			[document.body, document.querySelector('html')].forEach(el => el.classList.toggle("fixed"));
 		}, {
@@ -111,10 +111,8 @@ const JSCCommon = {
 		this.toggleMenu();
 		document.addEventListener('mouseup', event => {
 			let container = event.target.closest(".menu-mobile--js.active"); // (1)
-
-			let link = event.target.closest(".menu-mobile .menu a"); // (1)
-
-			if (!container || link) this.closeMenu();
+			// let link = event.target.closest(".menu-mobile .menu a"); // (1)
+			// if (!container || link) this.closeMenu();
 		}, {
 			passive: true
 		}); // window.addEventListener('resize', () => {
@@ -203,6 +201,17 @@ function eventHandler() {
 
 	function whenResize() {
 		setFixedNav();
+
+		if (window.matchMedia("(max-width: 768px)").matches) {
+			$(".menu-item-has-children > a").click(function (e) {
+				e.preventDefault();
+				$(this).next().slideToggle();
+			});
+			$(".catalog-block__toggle").click(function (e) {
+				$('.catalog-block').removeClass('active');
+				$("body, html").removeClass('fixed');
+			});
+		}
 	}
 
 	window.addEventListener('scroll', () => {

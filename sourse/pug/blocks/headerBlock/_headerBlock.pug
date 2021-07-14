@@ -1,7 +1,8 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.headerBlock.section#headerBlock&attributes(attributes)
-		+pic('header-block-1.jpg','bg','')
+	+b.headerBlock.section#headerBlock.bg-wrap&attributes(attributes)
+		+pic('header-block-1.jpg','bg','').picture-bg
+		
 		.container
 			+b.section-title
 				h1 Ўз аграр бизнесингизни биз билан қуринг
