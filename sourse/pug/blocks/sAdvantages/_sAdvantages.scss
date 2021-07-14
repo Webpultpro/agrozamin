@@ -1,20 +1,82 @@
 // start .sAdvantages
 .sAdvantages {
-	// --sTPB: ;
+	--sTPB: #{rem(55)};
+	--sPB: #{rem(35)};
 	@include media-breakpoint-up(md) {
-	--sPT: #{rem(72)};
-	--sPB: #{rem(52)};
+		--sPT: #{rem(72)};
+		--sPB: #{rem(52)};
+		--sTPB: #{rem(45)};
 	}
 	position: relative;
+	max-width: 1440px;
+	margin-left: auto;
+	margin-right: auto;
+	.section-title {
+		h2 {
+			margin-bottom: 0;
+			text-align: center;
+			@include media-breakpoint-up(md) {
+				text-align: left;
+			}
+		}
+	}
 	&__tooltip {
+		display: none;
+		@media (min-width: 1440px) {
+			display: block;
+		}
+		position: absolute;
+		font-size: 11px;
+		line-height: 125%;
+		color: #ffffff;
+		&::before {
+			content: "";
+			position: absolute;
+			border-top: 1px solid $white;
+			border-left: 1px solid $white;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			background-image: url(../img/svg/circle.svg);
+		}
 		&--1 {
-
+			right: -4%;
+			top: 32%;
+			&::before {
+				width: 140px;
+				height: 112.5px;
+				left: -17.5px;
+				top: 100%;
+				transform: skewX(-15deg);
+			}
+			&::after {
+				bottom: -125px;
+				left: -38.5px;
+			}
 		}
 		&--2 {
-			
+			right: -10%;
+			top: 56%;
+			&::before {
+				width: 173px;
+				height: 83px;
+				left: -14px;
+				top: 100%;
+				transform: skewX(-15deg);
+			}
+			&::after {
+				bottom: -95px;
+				left: -31.5px;
+			}
 		}
 	}
 	picture {
+		@include media-breakpoint-down(md) {
+			margin-bottom: rem(25);
+		}
 		img {
 			width: 100%;
 			@include media-breakpoint-up(md) {
@@ -32,6 +94,7 @@
 		}
 	}
 	&__text-wrap {
+		position: relative;
 		@include media-breakpoint-up(md) {
 		}
 	}
@@ -48,7 +111,6 @@
 			--bs-gutter-x: #{rem(25)};
 			--bs-gutter-y: #{rem(25)};
 			@include media-breakpoint-up(md) {
-			
 				--bs-gutter-y: #{rem(19)};
 			}
 		}
@@ -66,9 +128,12 @@
 		// }
 		p {
 			font-weight: 500;
-			font-size: 11px;
+			font-size: 14px;
 			line-height: 125%;
 			// color: #3e3e3e;
+			@include media-breakpoint-up(md) {
+				font-size: 11px;
+			}
 			&:last-of-type {
 				margin-bottom: 0;
 			}
