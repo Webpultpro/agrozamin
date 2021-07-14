@@ -10,20 +10,29 @@ mixin sAdvantages(data)
 				source(type='image/jpg' srcset='img/@2x/advantage-sm.jpg')
 				img(src='img/@2x/advantage-lg.jpg' alt='' loading='lazy')
 		+e.text-wrap.container
-			.row
-				+e.col.col-md-auto
-					+b.section-title
-						h2 Хизматнинг афзалликлари
-					.row
-						.col-md-6
-							p Хизматнинг афзалликлари
-						.col-md-6
-							p Хизматнинг афзалликлари
-						.col-md-6
-							p Хизматнинг афзалликлари
-						.col-md-6
-							p Хизматнинг афзалликлари
-						
-				.col
-					p Хизматнинг афзалликлари
+			+e.wrapper
+				+b.section-title
+					h2 Хизматнинг афзалликлари
+				.row
+					.col-md-6
+						+e.item
+							+e.img-wrap
+								img.res-i(src="img/svg/advantages.svg", alt="")
+							p Ўзбекистонда фермерлар учун екосистема яратамиз
+					.col-md-6
+						+e.item
+							+e.img-wrap
+								img.res-i(src="img/svg/advantages.svg", alt="")
+							p Маҳсулотлар каталоги ва батафсил тавсифи
+					.col-md-6
+						+e.item
+							+e.img-wrap
+								img.res-i(src="img/svg/advantages.svg", alt="")
+							p Қишлоқ хўжалиги маҳсулотлари учун Ўзбекистондаги биринчи бозор
+					.col-md-6
+						+e.item
+							+e.img-wrap
+								img.res-i(src="img/svg/advantages.svg", alt="")
+							p Харидорларни ҳимоя қилиш кафолати
+
 	// end sAdvantages
