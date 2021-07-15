@@ -3,13 +3,16 @@
 	// --sPT: ;
 	// --sPB: ;
 	// --sTPB: ;
+	--sPT: calc(#{rem(50)} / 2);
+	--sPB: calc(#{rem(100)} / 2);
+	--sTPB: calc(#{rem(75)} / 2);
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(50)};
+		--sPB: #{rem(100)};
+		--sTPB: #{rem(75)};
+	}
 	position: relative;
 	overflow: hidden;
-	.section-title {
-		h2 {
-			margin-bottom: 0;
-		}
-	}
 	.row {
 		--bs-gutter-x: #{rem(28)};
 		--bs-gutter-y: #{rem(28)};

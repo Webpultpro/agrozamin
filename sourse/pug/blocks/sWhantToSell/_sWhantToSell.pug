@@ -2,8 +2,15 @@ mixin sWhantToSell(data)
 	// start sWhantToSell
 	+b.SECTION.sWhantToSell.section#sWhantToSell&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sWhantToSell
-				
 			.row
+				.col-md-6
+					+e.heading
+						+b.section-title
+							h2 Сотишни хохлайсизми?
+						p Ўзингизнинг маҳсулотингиз ёки хизматингиз борми? Сиз уни бизнинг платформамизда сотишни бошлашингиз мумкин.
+						+e.btn.btn(href="#") Сотувни бошлаш
+				+e.col.col-md-6
+					+e.tooltip--1 Товарнинг <br> батафсил тавсифи
+					+e.tooltip--2 Фючерслар, тендерлар, <br> сотиб олиш ва сотиш
+					+pic(`whant-to-sell.png`, ``, ``)
 	// end sWhantToSell

@@ -3,6 +3,14 @@
 	// --sPT: ;
 	// --sPB: ;
 	// --sTPB: ;
+	--sPT: calc(#{rem(85)} / 2);
+	--sPB: calc(#{rem(50)} / 2);
+	--sTPB: calc(#{rem(90)} / 2);
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(85)};
+		--sPB: #{rem(50)};
+		--sTPB: #{rem(90)};
+	}
 	position: relative;
 	overflow: hidden;
 	.row {
@@ -11,11 +19,6 @@
 		@include media-breakpoint-up(lg) {
 			--bs-gutter-x: #{rem(30)};
 			--bs-gutter-y: #{rem(30)};
-		}
-	}
-	.section-title {
-		h2 {
-			margin-bottom: 0;
 		}
 	}
 	&__item {

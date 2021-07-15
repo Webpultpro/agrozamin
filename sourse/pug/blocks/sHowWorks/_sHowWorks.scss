@@ -1,11 +1,15 @@
 // start .sHowWorks
 .sHowWorks {
-	// --sPT: ;
-	// --sPB: ;
-	// --sTPB: ;
+	--sPT: calc(#{rem(65)} / 2);
+	--sPB: calc(#{rem(86)} / 2);
+	--sTPB: calc(#{rem(57)} / 2);
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(65)};
+		--sPB: #{rem(86)};
+		--sTPB: #{rem(57)};
+	}
 
 	.section-title {
-
 		h2 {
 			margin-bottom: 0;
 		}
@@ -40,9 +44,8 @@
 		}
 		@include media-breakpoint-up(lg) {
 			min-height: 288px;
-			
 		}
-		
+
 		&:hover {
 			box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
 		}
@@ -51,7 +54,7 @@
 			font-size: rem(14);
 			line-height: (16 / 13);
 			margin: rem(29) 0;
-			color: #3E3E3E;
+			color: #3e3e3e;
 			@include media-breakpoint-up(sm) {
 				font-size: rem(16);
 			}
@@ -87,7 +90,7 @@
 		min-height: 109px;
 		margin: 0 rem(16) 0 0;
 		border-radius: 50%;
-		border: 5px solid #E0E0E0;
+		border: 5px solid #e0e0e0;
 		@include media-breakpoint-up(md) {
 			margin: 0 auto rem(35);
 		}
@@ -95,7 +98,6 @@
 			@include a-cent;
 			max-width: 68px;
 			max-height: 54px;
-
 		}
 	}
 
