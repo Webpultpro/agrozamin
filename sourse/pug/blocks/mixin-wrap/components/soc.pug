@@ -18,7 +18,7 @@ mixin soc()
 
 
 mixin item-soc(i, t)
-	+e.BUTTON.item
+	+e.BUTTON.item&attributes(attributes)
 		if block
 			block
 		else
@@ -31,8 +31,8 @@ mixin soc-authorization()
 		if block
 			block
 		else
-			+item-soc(`google`, `Google`)
-			+item-soc(`mail-ru`, `Mail.ru`)
-			+item-soc(`facebook`, `Facebook`)
+			+item-soc(`google`, `Google`)#soc-goolge
+			+item-soc(`mail-ru`, `Mail.ru`)#soc-mail-ru
+			+item-soc(`facebook`, `Facebook`)#soc-facebook
 
 //- /social authorization buttons 
