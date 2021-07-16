@@ -66,6 +66,7 @@ $output-bourbon-deprecation-warnings: false;
 
 .breadcrumb {
 	margin-top: rem(22);
+	font-weight: 500;
 	.active {
 		a {
 			color: $breadcrumb-active-color;

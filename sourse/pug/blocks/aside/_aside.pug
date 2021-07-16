@@ -1,9 +1,20 @@
 mixin aside(data)
 	// start aside
-	+b.SECTION.aside.section#aside&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 aside
-				
-			.row
+	+b.ASIDE.aside.section.pt-0&attributes(attributes)
+		+e.toggle-btn--js.btn.btn-outline-info.mb-3.w-100.d-lg-none Показать меню 
+			span
+		+e.toggle-block.d-lg-block 
+				mixin item(t, ...items) 
+					ul
+						li: strong= t
+						li.has-children
+							ul
+								each item in items
+									li: a(href="#")= item
+										span 999 
+				+item("Сабзавот уруғлари","Бодринг ","Помидор  ","Карам  ","Сабзи ","Қалапмир")
+				+item("Дуккакли уруғлар","Ловия","Нўхат","Ясмиқ ","Люпин","Фасол")
+				+item("Дон уруғлари","Қишки буғдой ","Арпа ","Жавдар ","Юлаф ","Қорабуғдой  ")
+				+item("Майса уруғлари","Газон ","Жўхори ","Доривор ўсимликлар ","Эм-хашак ўтлари  ")
+				+item("Полиз екини уруғлари","Тарвуз ","Қовун ","Қовоқ")
 	// end aside

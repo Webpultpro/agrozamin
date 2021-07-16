@@ -1,9 +1,76 @@
+mixin card-hor(i)
+	+b.card-prod
+		.row
+			.col-auto
+				+e.img-wrap.bg-wrap(href="#")
+					+pic(`prod-${i}.jpg`,'bg',0).picture-bg
+			.col
+				+e.row.row
+					.col
+						+e.price 1 999 сум
+							span килограмм
+						.h5: a.text-body(href="#")  Қизил Юсуф памидори
+						.d-none.d-md-block
+							ul
+								li Хусусиятлари: Доимий талабга жавоб беради
+								li Екиш вақти: Апрель - Май
+								li Жойлашуви: Очиқ эр, иссиқхона
+								li Пишиб етиш даври: Мавсум ўртаси (100 - 120 кун) 
+								li Сотувчи: ИП ГКФХ Савчук Евгений Борисович
+							+e.btn-more(href="#").text-info Батафсил
+								+icon("chevron-right")
+					+e.foot.col-md-auto
+				
+						.d-none.d-md-block
+							.h5 МЧЖ "Green technology"
+							p.text-secondary на AgroZamin с окт. 2020
+							+stars()
+							ul
+								li 
+									+e.icon-wrap: +icon("mark")
+									| Тошкент шахри
+								li 
+									+e.icon-wrap: +icon("shipping")
+									| Жойидан олиб кетиш
+								li 
+									+e.icon-wrap: +icon("pay")
+									| Жойида тўлов
+						+e.btn(type="button") Саватчага қўшиш
+				
+
 mixin sCatalog(data)
 	// start sCatalog
-	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sCatalog
+	+b.sCatalog.section.pt-0&attributes(attributes)
+		+b.banner-block(style="background: #D8E0F0")
+			.row.align-items-center
+				.col
+					+e.content
+						h3 2021йил учун екиш мавсуми бошланди
+						p Келажакда ҳосил учун уруғнинг керакли турини танланг
+				.col-md-auto
+					+pic("pile-black-beans 1.png",'',0)
+		+e.btns.row.gy-3
+			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Полиз экини уруғлари
+			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Дуккакли уруғлар
+			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Дон уруғлари
+			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Майса уруғлари
+			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Сабзавот уруғлари
+		h2 Оммабоб махсулотлар
+		.row.align-items-center.g-2.py-3
+			.col-auto Саралаш: 
+			.col-auto
+				select.form-select.form-select-filter
+					option Рейтинг
+					option Енг қиммат
+					option Енг арзон
+		div
+			+card-hor(1)
+			+card-hor(2)
+			+card-hor(3)
+			+card-hor(4)
+			+card-hor(5)
+			+card-hor(6)
+		+e.foot.text-center
+			+e.btn-footer(type="button") Кўпроқ кўриш
 				
-			.row
 	// end sCatalog

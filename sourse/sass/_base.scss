@@ -472,12 +472,13 @@ iframe {
 	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='15' viewBox='0 0 24 24'><path fill='#{$primary}' d='M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z'/></svg>");
 }
 
-// .btn {
-// 	color: $white;
-// 	&:hover,
-// 	&:active {
-// 		color: $white;
-// 	}
+.btn-primary {
+	color: $white;
+	&:hover,
+	&:active {
+		color: $white;
+	}
+	}
 
 // }
 // .btn-primary {
@@ -490,5 +491,44 @@ iframe {
 
 
 .page-title{
-	margin-bottom: rem(35);
+	margin-bottom: rem(30);
+}
+
+	@include media-breakpoint-up(lg) {
+
+		.col--aside{
+			max-width: var(--aside-w);
+		}
+		.col--main{
+			max-width: calc(100% - var(--aside-w));
+			
+		}
+	}
+
+
+.form-select-filter{
+	width: 140px;
+	padding: rem(4) rem(14);
+	height: auto;
+	background-image: url("data:image/svg+xml,%3Csvg width='9' height='13' viewBox='0 0 9 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4.0752L4.5 1.0752L8 4.0752' stroke='%233E3E3E' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 9.0752L4.5 12.0752L1 9.0752' stroke='%233E3E3E' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+	background-size:  rem(7) rem(11);
+}
+
+.stars{
+	margin-bottom: rem(14);
+	.icon{
+		cursor: pointer;
+		font-size: rem(16);
+		&:not(:last-child){
+			margin-right: rem(5);
+		}
+		stroke: currentColor;
+		fill: transparent;
+		@include mt;
+		&.active,
+		&:hover{ 
+			stroke: #f6c23d;
+			fill: #F6C23D;
+		}
+	}
 }
