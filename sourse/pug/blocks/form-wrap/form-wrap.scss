@@ -21,12 +21,15 @@
 
 	&__input-wrap {
 		// @extend .form-group;
+		margin-bottom: rem(13);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(23);
+		}
 	}
 	&__input {
 		// @extend .form-control;
 		//  outline: 0 !important;
 		resize: none;
-		margin-bottom: rem(23);
 	}
 	&__btn {
 		cursor: pointer;
@@ -67,7 +70,7 @@
 			top: 0;
 			height: 1px;
 			width: calc(100% + #{rem(60)});
-			background-color: #E2E2E2;
+			background-color: #e2e2e2;
 		}
 		.form-wrap__subtitle {
 			font-size: rem(13);

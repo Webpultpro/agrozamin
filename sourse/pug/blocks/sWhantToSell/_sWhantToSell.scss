@@ -155,6 +155,9 @@
 		background: #ffffff;
 		border-radius: 68px;
 		text-align: center;
+		&:hover, &:focus {
+			color: shift-color(#3550af, 20%);
+		}
 	}
 	@include media-breakpoint-up(xl) {
 	}

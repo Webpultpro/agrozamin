@@ -1,0 +1,32 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sAdvantages/_sAdvantages.pug
+//- include ../blocks/sCategories/_sCategories.pug
+//- include ../blocks/sPopulars/_sPopulars.pug
+//- include ../blocks/sWhantToSell/_sWhantToSell.pug
+//- include ../blocks/sHowWorks/_sHowWorks.pug
+include ../blocks/sPersonalDataChange/_sPersonalDataChange.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= '07-personal-data-change.jpg'
+
+block title
+	- let  title= 'Шахсий маълумотларни ўзгартириш'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+topLine()
+		+top-nav()
+	+sPersonalDataChange()
+	+footer()
+
+
+

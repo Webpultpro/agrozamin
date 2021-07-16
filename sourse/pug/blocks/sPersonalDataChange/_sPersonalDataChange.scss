@@ -1,0 +1,79 @@
+// start .sPersonalDataChange
+.sPersonalDataChange {
+	--sPT: #{rem(50)};
+	--sPB: #{rem(50)};
+	--sTPB: #{rem(50)};
+	min-height: 750px;
+	@include media-breakpoint-up(md) {
+		min-height: 591px;
+	}
+	.container {
+		--bs-gutter-x: #{rem(24)};
+	}
+	.form-wrap {
+		max-width: 900px;
+		box-shadow: none;
+		padding: 0;
+		form {
+			text-align: center;
+			@include media-breakpoint-up(md) {
+				text-align: right;
+			}
+		}
+		.row {
+			@include media-breakpoint-up(lg) {
+				--bs-gutter-x: #{rem(60)};
+			}
+		}
+		.section-title {
+			text-align: center;
+			@include media-breakpoint-up(md) {
+				text-align: left;
+			}
+			h1 {
+				font-weight: 500;
+				line-height: 116%;
+				color: #3e3e3e;
+				margin-bottom: 0;
+				@include rfs(32px);
+				@include media-breakpoint-up(xl) {
+					font-size: 32px;
+				}
+			}
+		}
+
+		&__input-wrap {
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(13);
+			}
+		}
+		// &__input-title {
+		// 	margin-left: 0;
+		// }
+		&__btn {
+			margin-top: rem(27);
+			margin-bottom: rem(90);
+			min-width: 250px;
+			@include media-breakpoint-up(md) {
+				min-width: 190px;
+			}
+			@include media-breakpoint-up(lg) {
+				margin-top: rem(24);
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sPersonalDataChange
