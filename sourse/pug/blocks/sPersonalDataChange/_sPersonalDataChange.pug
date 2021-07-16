@@ -1,0 +1,19 @@
+mixin sPersonalDataChange(data)
+	// start sPersonalDataChange
+	+b.SECTION.sPersonalDataChange.section#sPersonalDataChange&attributes(attributes)
+		.container
+			+form-wrap
+				.section-title
+					h1 Шахсий маълумотларни ўзгартириш
+				.row
+					.col-md-6
+						+input(``, 'tel', `Телефон рақами`)
+						+input(``, 'text', `Туғилган сана`)
+						+input(``, 'email', `E-mail`)
+					.col-md-6
+						+input(``, 'text', `Исм`)
+						+input(``, 'text', `Фамилияси`)
+						+input(``, 'text', `Отасининг исми`)
+				+e.BUTTON.btn.btn.btn-primary Сақлаш
+
+	// end sPersonalDataChange
