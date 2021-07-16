@@ -1,10 +1,11 @@
 // start .sPersonalDataChange
 .sPersonalDataChange {
 	--sPT: #{rem(40)};
-	--sPB: #{rem(90)};
+	--sPB: #{rem(50)};
 	--sTPB: #{rem(45)};
+	min-height: 750px;
 	@include media-breakpoint-up(md) {
-		--sPB: #{rem(155)};
+		min-height: 590px;
 		--sTPB: #{rem(50)};
 	}
 	

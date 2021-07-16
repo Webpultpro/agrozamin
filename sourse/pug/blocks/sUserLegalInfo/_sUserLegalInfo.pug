@@ -1,0 +1,26 @@
+mixin sUserLegalInfo(data)
+	// start sUserLegalInfo
+	+b.SECTION.sUserLegalInfo.section#sUserLegalInfo&attributes(attributes)
+		.container
+				+b.section-title.text-center
+					h1 Фойдаланувчининг юридик маълумотлари
+					p Юридик маълумотларни тасдиқлаш орқали сиз маълумотларингизни сайтга юклай олишингиз мумкин
+				+e.wrapper
+					.row
+						.col-md-6
+							mixin item(h, t)
+								+e.item
+									+e.title= h
+									+e.text= t
+							+item(`Номи`, `Шокиров Дилмурод Асқарович `)
+							+item(`Телефон рақами`, `+998974050002`)
+							+item(`Вилоят`, `Самарқанд вилояти`)
+							+item(`Туман`, `Пастдарғом туман`)
+						.col-md-6
+							+item(`Банк МФО си`, `"Агробанк" аксиядорлик-тижорат банки»`)
+							+item(`Манзил`, `43 Мукимий Кўчаси, Тошкент, Ўзбекистон, 100096-уй`)
+							+item(`СТИР`, `154786022`)
+							+item(`Хисоб рақами`, `2223 1238 4568 1234 9963 `)
+							+e.BUTTON.btn.btn.btn-primary Тасдиқлаш
+
+	// end sUserLegalInfo

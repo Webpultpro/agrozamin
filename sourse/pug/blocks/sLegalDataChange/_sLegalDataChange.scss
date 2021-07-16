@@ -1,10 +1,11 @@
 // start .sLegalDataChange
 .sLegalDataChange {
 	--sPT: #{rem(40)};
-	--sPB: #{rem(115)};
+	--sPB: #{rem(50)};
 	--sTPB: #{rem(45)};
+	min-height: 935px;
 	@include media-breakpoint-up(md) {
-		--sPB: #{rem(70)};
+		min-height: 590px;
 		--sTPB: #{rem(50)};
 	}
 

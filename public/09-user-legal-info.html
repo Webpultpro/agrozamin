@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Фойдаланувчининг юридик маълумотлари</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=414,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no">
+		<script>
+			let viewport = document.querySelector("meta[name=viewport]");
+			var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+			if (is_safari) {
+				//- alert(navigator.userAgent);
+				function w() {
+					this.outerWidth > 414 
+						? viewport.content = "width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" 
+						:  viewport.content = "width=570,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no" 
+					//- alert(this.outerWidth + ', '+  viewport.content);
+				}
+				 w();
+				window.addEventListener('resize', () => { 
+				 w();
+				}, { passive: true });
+			}
+		</script>
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="libs/priority-nav/priority-nav-core.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+	</head>
+	<body data-bg="09-user-legal-info.jpg">
+		<div class="main-wrapper">
+			<div class="menu-mobile menu-mobile--js d-lg-none">
+				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+				</div>
+				<div class="menu-mobile__inner">
+					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Уруғлар</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Ўғитлар</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Агрокимё</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Озуқалар</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Техника</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Хом-ашё</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Ҳайвонлар</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Қишлоқ хўжалик маҳсулотлари</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Хизматлар</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Хизматлар1</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Хизматлар2</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--  мобильное меню-->
+			<!-- start header-->
+			<header class="header" id="header">
+				<!-- start topLine-->
+				<div class="topLine section" id="topLine">
+					<div class="container">
+						<div class="row d-none d-md-flex">
+							<div class="col-auto">
+								<div class="swich-block"><a class="swich-block__btn active" href="#">Харидорлар</a><a class="swich-block__btn" href="#">Сотувчилар</a>
+								</div>
+							</div>
+							<div class="col-auto"></div>
+						</div>
+						<div class="row">
+							<div class="col-auto d-md-none">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+								</div>
+							</div>
+							<div class="col-md-auto col"><a href="/"><img src="img/svg/logo.svg" alt=""/></a></div>
+							<div class="col-md order-md-0 order-last">
+								<div class="topLine__search-wrap d-md-block">
+									<div class="search-block">
+										<form>
+											<input type="text" placeholder="Агрозамин бўйича қидирув"/>
+											<button> 
+												<svg class="icon icon-search ">
+													<use xlink:href="img/svg/sprite.svg#search"></use>
+												</svg>
+											</button>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="col-auto d-md-none">
+								<button class="top-btn top-btn--search-toggle-js" type="button">
+									<svg class="icon icon-search ">
+										<use xlink:href="img/svg/sprite.svg#search"></use>
+									</svg>
+									<div class="top-btn__text">Поиск
+									</div>
+								</button>
+							</div>
+							<div class="col-auto">
+								<button class="top-btn" type="button">
+									<svg class="icon icon-user ">
+										<use xlink:href="img/svg/sprite.svg#user"></use>
+									</svg>
+									<div class="top-btn__text">Кириш
+									</div>
+								</button>
+							</div>
+							<div class="col-auto">
+								<button class="top-btn" type="button">
+									<svg class="icon icon-bang ">
+										<use xlink:href="img/svg/sprite.svg#bang"></use>
+									</svg>
+									<div class="top-btn__text">Хабарнома
+									</div>
+								</button>
+							</div>
+							<div class="col-auto">
+								<button class="top-btn" type="button">
+									<svg class="icon icon-basket ">
+										<use xlink:href="img/svg/sprite.svg#basket"></use>
+									</svg>
+									<div class="top-btn__text">Саватча
+									</div>
+								</button>
+							</div>
+							<div class="col-auto">
+								<div class="lang-choose">
+									<div class="lang-choose__current">Уз
+									</div>
+									<div class="lang-choose__dropdown"> 
+										<div class="lang-choose__dropdown-item"> Уз1
+										</div>
+										<div class="lang-choose__dropdown-item"> Уз2
+										</div>
+										<div class="lang-choose__dropdown-item"> Уз3
+										</div>
+										<div class="lang-choose__dropdown-item"> Уз4
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end topLine-->
+				<!-- start top-nav-->
+				<div class="top-nav block-with-lazy">
+					<div class="container">
+						<div class="row">
+							<div class="top-nav__col-catalog col-auto">
+								<div class="catalog-block">
+									<div class="d-md-none">
+										<div class="swich-block"><a class="swich-block__btn active" href="#">Харидорлар</a><a class="swich-block__btn" href="#">Сотувчилар</a>
+										</div>
+									</div>
+									<div class="catalog-block__toggle"> <span> </span>
+										<div class="catalog-block__toggle-text">Каталоглар
+										</div>
+									</div>
+									<div class="catalog-block__dropdown">
+										<ul class="left-menu">
+												<li class="menu-item-has-children"><a href="#">Уруғлар
+														<svg class="icon icon-chevron-right ">
+															<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+														</svg></a>
+													<ul class="sub-menu">
+																	<li>
+																		<ul>
+																			<li><strong>Полиз екини уруғлари</strong></li> 
+																						<li> <a href="#">Тарвуз</a></li>
+																						<li> <a href="#">Қовун</a></li>
+																						<li> <a href="#">Қовоқ</a></li>
+																						<li> <a href="#">Хандалак</a></li>
+																						<li> <a href="#">Ошқовоқ</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Майса уруғлари</strong></li>
+																						<li> <a href="#">Газон</a></li>
+																						<li> <a href="#">Жўхори</a></li>
+																						<li> <a href="#">Доривор ўсимликлар</a></li>
+																						<li> <a href="#">Эм-хашак ўтлари</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Дуккакли уруғлар</strong></li>
+																						<li> <a href="#">Ловия</a></li>
+																						<li> <a href="#">Нўхат</a></li>
+																						<li> <a href="#">Люпин</a></li>
+																						<li> <a href="#">Ясмиқ </a></li>
+																						<li> <a href="#">Фасол</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Сабзавот уруғлари</strong></li>
+																						<li> <a href="#">Бодринг</a></li>
+																						<li> <a href="#">Помидор</a></li>
+																						<li> <a href="#">Карам</a></li>
+																						<li> <a href="#">Сабзи</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Дон уруғлари</strong></li>
+																						<li> <a href="#">Қишки буғдой</a></li>
+																						<li> <a href="#">Арпа</a></li>
+																						<li> <a href="#">Жавдар</a></li>
+																						<li> <a href="#">Юлаф</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+													</ul>
+												</li>
+												<li class="menu-item-has-children"><a href="#">Ўғитлар
+														<svg class="icon icon-chevron-right ">
+															<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+														</svg></a>
+													<ul class="sub-menu">
+																	<li>
+																		<ul>
+																			<li><strong>Полиз екини уруғлари</strong></li> 
+																						<li> <a href="#">Тарвуз</a></li>
+																						<li> <a href="#">Қовун</a></li>
+																						<li> <a href="#">Қовоқ</a></li>
+																						<li> <a href="#">Хандалак</a></li>
+																						<li> <a href="#">Ошқовоқ</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Майса уруғлари</strong></li>
+																						<li> <a href="#">Газон</a></li>
+																						<li> <a href="#">Жўхори</a></li>
+																						<li> <a href="#">Доривор ўсимликлар</a></li>
+																						<li> <a href="#">Эм-хашак ўтлари</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Дуккакли уруғлар</strong></li>
+																						<li> <a href="#">Ловия</a></li>
+																						<li> <a href="#">Нўхат</a></li>
+																						<li> <a href="#">Люпин</a></li>
+																						<li> <a href="#">Ясмиқ </a></li>
+																						<li> <a href="#">Фасол</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Сабзавот уруғлари</strong></li>
+																						<li> <a href="#">Бодринг</a></li>
+																						<li> <a href="#">Помидор</a></li>
+																						<li> <a href="#">Карам</a></li>
+																						<li> <a href="#">Сабзи</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Дон уруғлари</strong></li>
+																						<li> <a href="#">Қишки буғдой</a></li>
+																						<li> <a href="#">Арпа</a></li>
+																						<li> <a href="#">Жавдар</a></li>
+																						<li> <a href="#">Юлаф</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+													</ul>
+												</li>
+												<li class="menu-item-has-children"><a href="#">Ўсимликларни ҳимоялаш воситалари
+														<svg class="icon icon-chevron-right ">
+															<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+														</svg></a>
+													<ul class="sub-menu">
+																	<li>
+																		<ul>
+																			<li><strong>Полиз екини уруғлари</strong></li> 
+																						<li> <a href="#">Тарвуз</a></li>
+																						<li> <a href="#">Қовун</a></li>
+																						<li> <a href="#">Қовоқ</a></li>
+																						<li> <a href="#">Хандалак</a></li>
+																						<li> <a href="#">Ошқовоқ</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Майса уруғлари</strong></li>
+																						<li> <a href="#">Газон</a></li>
+																						<li> <a href="#">Жўхори</a></li>
+																						<li> <a href="#">Доривор ўсимликлар</a></li>
+																						<li> <a href="#">Эм-хашак ўтлари</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Дуккакли уруғлар</strong></li>
+																						<li> <a href="#">Ловия</a></li>
+																						<li> <a href="#">Нўхат</a></li>
+																						<li> <a href="#">Люпин</a></li>
+																						<li> <a href="#">Ясмиқ </a></li>
+																						<li> <a href="#">Фасол</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Сабзавот уруғлари</strong></li>
+																						<li> <a href="#">Бодринг</a></li>
+																						<li> <a href="#">Помидор</a></li>
+																						<li> <a href="#">Карам</a></li>
+																						<li> <a href="#">Сабзи</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Дон уруғлари</strong></li>
+																						<li> <a href="#">Қишки буғдой</a></li>
+																						<li> <a href="#">Арпа</a></li>
+																						<li> <a href="#">Жавдар</a></li>
+																						<li> <a href="#">Юлаф</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+													</ul>
+												</li>
+												<li class="menu-item-has-children"><a href="#">Озуқалар
+														<svg class="icon icon-chevron-right ">
+															<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+														</svg></a>
+													<ul class="sub-menu">
+																	<li>
+																		<ul>
+																			<li><strong>Полиз екини уруғлари</strong></li> 
+																						<li> <a href="#">Тарвуз</a></li>
+																						<li> <a href="#">Қовун</a></li>
+																						<li> <a href="#">Қовоқ</a></li>
+																						<li> <a href="#">Хандалак</a></li>
+																						<li> <a href="#">Ошқовоқ</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Майса уруғлари</strong></li>
+																						<li> <a href="#">Газон</a></li>
+																						<li> <a href="#">Жўхори</a></li>
+																						<li> <a href="#">Доривор ўсимликлар</a></li>
+																						<li> <a href="#">Эм-хашак ўтлари</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Дуккакли уруғлар</strong></li>
+																						<li> <a href="#">Ловия</a></li>
+																						<li> <a href="#">Нўхат</a></li>
+																						<li> <a href="#">Люпин</a></li>
+																						<li> <a href="#">Ясмиқ </a></li>
+																						<li> <a href="#">Фасол</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Сабзавот уруғлари</strong></li>
+																						<li> <a href="#">Бодринг</a></li>
+																						<li> <a href="#">Помидор</a></li>
+																						<li> <a href="#">Карам</a></li>
+																						<li> <a href="#">Сабзи</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Дон уруғлари</strong></li>
+																						<li> <a href="#">Қишки буғдой</a></li>
+																						<li> <a href="#">Арпа</a></li>
+																						<li> <a href="#">Жавдар</a></li>
+																						<li> <a href="#">Юлаф</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+													</ul>
+												</li>
+												<li class="menu-item-has-children"><a href="#">Боғ эрлари
+														<svg class="icon icon-chevron-right ">
+															<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+														</svg></a>
+													<ul class="sub-menu">
+																	<li>
+																		<ul>
+																			<li><strong>Полиз екини уруғлари</strong></li> 
+																						<li> <a href="#">Тарвуз</a></li>
+																						<li> <a href="#">Қовун</a></li>
+																						<li> <a href="#">Қовоқ</a></li>
+																						<li> <a href="#">Хандалак</a></li>
+																						<li> <a href="#">Ошқовоқ</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Майса уруғлари</strong></li>
+																						<li> <a href="#">Газон</a></li>
+																						<li> <a href="#">Жўхори</a></li>
+																						<li> <a href="#">Доривор ўсимликлар</a></li>
+																						<li> <a href="#">Эм-хашак ўтлари</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Дуккакли уруғлар</strong></li>
+																						<li> <a href="#">Ловия</a></li>
+																						<li> <a href="#">Нўхат</a></li>
+																						<li> <a href="#">Люпин</a></li>
+																						<li> <a href="#">Ясмиқ </a></li>
+																						<li> <a href="#">Фасол</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Сабзавот уруғлари</strong></li>
+																						<li> <a href="#">Бодринг</a></li>
+																						<li> <a href="#">Помидор</a></li>
+																						<li> <a href="#">Карам</a></li>
+																						<li> <a href="#">Сабзи</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Дон уруғлари</strong></li>
+																						<li> <a href="#">Қишки буғдой</a></li>
+																						<li> <a href="#">Арпа</a></li>
+																						<li> <a href="#">Жавдар</a></li>
+																						<li> <a href="#">Юлаф</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+													</ul>
+												</li>
+												<li class="menu-item-has-children"><a href="#">Дон махсулотлари
+														<svg class="icon icon-chevron-right ">
+															<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+														</svg></a>
+													<ul class="sub-menu">
+																	<li>
+																		<ul>
+																			<li><strong>Полиз екини уруғлари</strong></li> 
+																						<li> <a href="#">Тарвуз</a></li>
+																						<li> <a href="#">Қовун</a></li>
+																						<li> <a href="#">Қовоқ</a></li>
+																						<li> <a href="#">Хандалак</a></li>
+																						<li> <a href="#">Ошқовоқ</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Майса уруғлари</strong></li>
+																						<li> <a href="#">Газон</a></li>
+																						<li> <a href="#">Жўхори</a></li>
+																						<li> <a href="#">Доривор ўсимликлар</a></li>
+																						<li> <a href="#">Эм-хашак ўтлари</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Дуккакли уруғлар</strong></li>
+																						<li> <a href="#">Ловия</a></li>
+																						<li> <a href="#">Нўхат</a></li>
+																						<li> <a href="#">Люпин</a></li>
+																						<li> <a href="#">Ясмиқ </a></li>
+																						<li> <a href="#">Фасол</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Сабзавот уруғлари</strong></li>
+																						<li> <a href="#">Бодринг</a></li>
+																						<li> <a href="#">Помидор</a></li>
+																						<li> <a href="#">Карам</a></li>
+																						<li> <a href="#">Сабзи</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Дон уруғлари</strong></li>
+																						<li> <a href="#">Қишки буғдой</a></li>
+																						<li> <a href="#">Арпа</a></li>
+																						<li> <a href="#">Жавдар</a></li>
+																						<li> <a href="#">Юлаф</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+													</ul>
+												</li>
+												<li class="menu-item-has-children"><a href="#">Агрокимё
+														<svg class="icon icon-chevron-right ">
+															<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+														</svg></a>
+													<ul class="sub-menu">
+																	<li>
+																		<ul>
+																			<li><strong>Полиз екини уруғлари</strong></li> 
+																						<li> <a href="#">Тарвуз</a></li>
+																						<li> <a href="#">Қовун</a></li>
+																						<li> <a href="#">Қовоқ</a></li>
+																						<li> <a href="#">Хандалак</a></li>
+																						<li> <a href="#">Ошқовоқ</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Майса уруғлари</strong></li>
+																						<li> <a href="#">Газон</a></li>
+																						<li> <a href="#">Жўхори</a></li>
+																						<li> <a href="#">Доривор ўсимликлар</a></li>
+																						<li> <a href="#">Эм-хашак ўтлари</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Дуккакли уруғлар</strong></li>
+																						<li> <a href="#">Ловия</a></li>
+																						<li> <a href="#">Нўхат</a></li>
+																						<li> <a href="#">Люпин</a></li>
+																						<li> <a href="#">Ясмиқ </a></li>
+																						<li> <a href="#">Фасол</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Сабзавот уруғлари</strong></li>
+																						<li> <a href="#">Бодринг</a></li>
+																						<li> <a href="#">Помидор</a></li>
+																						<li> <a href="#">Карам</a></li>
+																						<li> <a href="#">Сабзи</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Дон уруғлари</strong></li>
+																						<li> <a href="#">Қишки буғдой</a></li>
+																						<li> <a href="#">Арпа</a></li>
+																						<li> <a href="#">Жавдар</a></li>
+																						<li> <a href="#">Юлаф</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+													</ul>
+												</li>
+												<li class="menu-item-has-children"><a href="#">Екиш материаллари
+														<svg class="icon icon-chevron-right ">
+															<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+														</svg></a>
+													<ul class="sub-menu">
+																	<li>
+																		<ul>
+																			<li><strong>Полиз екини уруғлари</strong></li> 
+																						<li> <a href="#">Тарвуз</a></li>
+																						<li> <a href="#">Қовун</a></li>
+																						<li> <a href="#">Қовоқ</a></li>
+																						<li> <a href="#">Хандалак</a></li>
+																						<li> <a href="#">Ошқовоқ</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Майса уруғлари</strong></li>
+																						<li> <a href="#">Газон</a></li>
+																						<li> <a href="#">Жўхори</a></li>
+																						<li> <a href="#">Доривор ўсимликлар</a></li>
+																						<li> <a href="#">Эм-хашак ўтлари</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Дуккакли уруғлар</strong></li>
+																						<li> <a href="#">Ловия</a></li>
+																						<li> <a href="#">Нўхат</a></li>
+																						<li> <a href="#">Люпин</a></li>
+																						<li> <a href="#">Ясмиқ </a></li>
+																						<li> <a href="#">Фасол</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Сабзавот уруғлари</strong></li>
+																						<li> <a href="#">Бодринг</a></li>
+																						<li> <a href="#">Помидор</a></li>
+																						<li> <a href="#">Карам</a></li>
+																						<li> <a href="#">Сабзи</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Дон уруғлари</strong></li>
+																						<li> <a href="#">Қишки буғдой</a></li>
+																						<li> <a href="#">Арпа</a></li>
+																						<li> <a href="#">Жавдар</a></li>
+																						<li> <a href="#">Юлаф</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+													</ul>
+												</li>
+												<li class="menu-item-has-children"><a href="#">Тайёр маҳсулотлар
+														<svg class="icon icon-chevron-right ">
+															<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+														</svg></a>
+													<ul class="sub-menu">
+																	<li>
+																		<ul>
+																			<li><strong>Полиз екини уруғлари</strong></li> 
+																						<li> <a href="#">Тарвуз</a></li>
+																						<li> <a href="#">Қовун</a></li>
+																						<li> <a href="#">Қовоқ</a></li>
+																						<li> <a href="#">Хандалак</a></li>
+																						<li> <a href="#">Ошқовоқ</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Майса уруғлари</strong></li>
+																						<li> <a href="#">Газон</a></li>
+																						<li> <a href="#">Жўхори</a></li>
+																						<li> <a href="#">Доривор ўсимликлар</a></li>
+																						<li> <a href="#">Эм-хашак ўтлари</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Дуккакли уруғлар</strong></li>
+																						<li> <a href="#">Ловия</a></li>
+																						<li> <a href="#">Нўхат</a></li>
+																						<li> <a href="#">Люпин</a></li>
+																						<li> <a href="#">Ясмиқ </a></li>
+																						<li> <a href="#">Фасол</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Сабзавот уруғлари</strong></li>
+																						<li> <a href="#">Бодринг</a></li>
+																						<li> <a href="#">Помидор</a></li>
+																						<li> <a href="#">Карам</a></li>
+																						<li> <a href="#">Сабзи</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+																	<li>
+																		<ul>
+																			<li><strong>Дон уруғлари</strong></li>
+																						<li> <a href="#">Қишки буғдой</a></li>
+																						<li> <a href="#">Арпа</a></li>
+																						<li> <a href="#">Жавдар</a></li>
+																						<li> <a href="#">Юлаф</a></li>
+																						<li> <a href="#">Ещё</a></li>
+																		</ul>
+																	</li>
+													</ul>
+												</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="top-nav__col col">
+								<div class="scroll-menu-wrap" data-btn="Яна">
+									<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Уруғлар</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Ўғитлар</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Агрокимё</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Озуқалар</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Техника</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Хом-ашё</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Ҳайвонлар</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Қишлоқ хўжалик маҳсулотлари</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Хизматлар</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Хизматлар1</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Хизматлар2</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end top-nav-->
+			</header>
+			<!-- end header-->
+			<!-- start sUserLegalInfo-->
+			<section class="sUserLegalInfo section" id="sUserLegalInfo">
+				<div class="container">
+					<div class="section-title text-center">
+						<h1>Фойдаланувчининг юридик маълумотлари</h1>
+						<p>Юридик маълумотларни тасдиқлаш орқали сиз маълумотларингизни сайтга юклай олишингиз мумкин</p>
+					</div>
+					<div class="sUserLegalInfo__wrapper">
+						<div class="row">
+							<div class="col-md-6">
+										<div class="sUserLegalInfo__item">
+											<div class="sUserLegalInfo__title">Номи
+											</div>
+											<div class="sUserLegalInfo__text">Шокиров Дилмурод Асқарович 
+											</div>
+										</div>
+										<div class="sUserLegalInfo__item">
+											<div class="sUserLegalInfo__title">Телефон рақами
+											</div>
+											<div class="sUserLegalInfo__text">+998974050002
+											</div>
+										</div>
+										<div class="sUserLegalInfo__item">
+											<div class="sUserLegalInfo__title">Вилоят
+											</div>
+											<div class="sUserLegalInfo__text">Самарқанд вилояти
+											</div>
+										</div>
+										<div class="sUserLegalInfo__item">
+											<div class="sUserLegalInfo__title">Туман
+											</div>
+											<div class="sUserLegalInfo__text">Пастдарғом туман
+											</div>
+										</div>
+							</div>
+							<div class="col-md-6">
+										<div class="sUserLegalInfo__item">
+											<div class="sUserLegalInfo__title">Банк МФО си
+											</div>
+											<div class="sUserLegalInfo__text">&quot;Агробанк&quot; аксиядорлик-тижорат банки»
+											</div>
+										</div>
+										<div class="sUserLegalInfo__item">
+											<div class="sUserLegalInfo__title">Манзил
+											</div>
+											<div class="sUserLegalInfo__text">43 Мукимий Кўчаси, Тошкент, Ўзбекистон, 100096-уй
+											</div>
+										</div>
+										<div class="sUserLegalInfo__item">
+											<div class="sUserLegalInfo__title">СТИР
+											</div>
+											<div class="sUserLegalInfo__text">154786022
+											</div>
+										</div>
+										<div class="sUserLegalInfo__item">
+											<div class="sUserLegalInfo__title">Хисоб рақами
+											</div>
+											<div class="sUserLegalInfo__text">2223 1238 4568 1234 9963 
+											</div>
+										</div>
+								<button class="sUserLegalInfo__btn btn btn-primary">Тасдиқлаш
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sUserLegalInfo-->
+			<footer class="footer">
+				<div class="container">
+					<div class="row">
+						<div class="footer__col-first col-sm pb-3"><a href="/"><img src="img/svg/logo.svg" alt=""/></a>
+							<div class="small text-secondary2 mt-1 mb-3">Агробанкдан агросервис</div>
+							<p>Барча саволлар бойича мурожат қилинг: <br/><a href="mailto:info@agrozamin.uz">info@agrozamin.uz</a></p>
+							<div class="soc"><a class="soc__item" href="#" target="_blank">
+								<svg class="icon icon-fb ">
+									<use xlink:href="img/svg/sprite.svg#fb"></use>
+								</svg></a><a class="soc__item" href="#" target="_blank">
+								<svg class="icon icon-instagram ">
+									<use xlink:href="img/svg/sprite.svg#instagram"></use>
+								</svg></a><a class="soc__item" href="#" target="_blank">
+								<svg class="icon icon-telegram ">
+									<use xlink:href="img/svg/sprite.svg#telegram"></use>
+								</svg></a>
+							</div>
+						</div>
+						<div class="col-sm pb-3"> 
+							<p class="text-secondary2">Фойдали ҳаволалар:</p>
+							<ul> 
+								<li><a href="#"> Каталоглар</a></li>
+								<li><a href="#"> Оммабоп маҳсулотлар</a></li>
+								<li><a href="#"> Хизмат қандай ишлаши ҳақида</a></li>
+								<li><a href="#"> Хабарнома</a></li>
+								<li><a href="#"> Саватча</a></li>
+							</ul>
+						</div>
+						<div class="col-sm pb-3"> 
+							<p class="text-secondary2">Биз ҳақимизда:</p>
+							<ul> 
+								<li><a href="#"> Агробанк ҳақида</a></li>
+								<li><a href="#"> Лойиҳа ҳақида</a></li>
+								<li><a href="#"> Оммабоп саволлар</a></li>
+								<li><a href="#"> Партнёрларимиз</a></li>
+							</ul>
+						</div>
+						<div class="footer__col col-sm-auto">
+							<p class="text-secondary2">Биз ҳақимизда:</p>
+							<p> <span class="text-secondary2">Манзил: </span>100096, г. Ташкент,  ул. Мукими 43</p>
+							<p> <span class="text-secondary2">Телефон: <a class="text-body" href="tel:1216"> 1216</a></span></p>
+							<p> <span class="text-secondary2">Факс: <a class="text-body" href="tel:+998711505395"> +998 71 150 53 95</a></span></p>
+							<p> <span class="text-secondary2">E-mail: <a class="text-body" href="mailto:headoffice@agrobank.uz"> headoffice@agrobank.uz</a></span></p>
+						</div>
+					</div>
+					<p class="text-secondary2 mt-5">2021 © Barcha huquqlar himoya qilingan. Barcha xizmatlar litsenziyalangan</p>
+				</div>
+			</footer>
+		</div>
+		<!--  start modals-->
+		<div class="modal-win" id="modal-call" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<div class="text-center">
+						<div class="form-wrap__title form-data h3 ttu">Обратный звонок
+						</div>
+						<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+					</div>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn btn" type="submit"> 
+					</button>
+					<div class="form-wrap__policy">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+						</label>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<!-- end modals-->
+		<!-- modal libs-->
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox.umd.js"></script>
+		<!-- modal libs-->
+		<!-- slider libs-->
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<!-- /slider libs-->
+		<script src="libs/inputmask/inputmask.min.js"></script>
+		<script src="libs/priority-nav/priority-nav.min.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>
