@@ -92,7 +92,7 @@ $colors: ("blue": $blue,
 // scss-docs-start theme-color-variables
 $primary: $green !default;
 $secondary2: #AAAAAA !default;
-$secondary: #E5E5E5 !default;
+$secondary: #7C7E80 !default;
 $success: $green !default;
 $info: #3190FF !default;
 $warning: $yellow !default;
@@ -1282,13 +1282,13 @@ $figure-caption-color: $gray-600 !default;
 
 // scss-docs-start breadcrumb-variables
 $breadcrumb-font-size: null !default;
-$breadcrumb-padding-y: 0 !default;
-$breadcrumb-padding-x: 0 !default;
+$breadcrumb-padding-y: 1rem !default;
+$breadcrumb-padding-x: 1rem !default;
 $breadcrumb-item-padding-x: .5rem !default;
-$breadcrumb-margin-bottom: 1rem !default;
-$breadcrumb-bg: null !default;
-$breadcrumb-divider-color: $gray-600 !default;
-$breadcrumb-active-color: $gray-600 !default;
+$breadcrumb-margin-bottom: rem(28) !default;
+$breadcrumb-bg: #F8F9FA !default;
+$breadcrumb-divider-color: #68717A !default;
+$breadcrumb-active-color: #68717A !default;
 $breadcrumb-divider: quote("/") !default;
 $breadcrumb-divider-flipped: $breadcrumb-divider !default;
 $breadcrumb-border-radius: null !default;
