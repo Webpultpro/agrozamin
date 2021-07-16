@@ -29,7 +29,7 @@
 		<link href="libs/priority-nav/priority-nav-core.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body data-bg="main.jpg">
+	<body data-bg="14.jpg">
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js d-lg-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -737,28 +737,603 @@
 			</div>
 			<div class="container">
 				<div class="row row--main">
-					<div class="col col--aside">
+					<div class="col-lg col--aside">
 						<!-- start aside-->
-						<section class="aside section" id="aside">
-							<div class="container">
-								<div class="section-title text-center">
-									<h2>aside</h2>
-								</div>
-								<div class="row"></div>
+						<aside class="aside section pt-0">
+							<div class="aside__toggle-btn aside__toggle-btn--js btn btn-outline-info mb-3 w-100 d-lg-none">Показать меню <span></span>
 							</div>
-						</section>
+							<div class="aside__toggle-block d-lg-block"> 
+								<ul>
+									<li><strong>Сабзавот уруғлари</strong></li>
+									<li class="has-children">
+										<ul>
+											<li><a href="#">Бодринг <span>999 </span></a></li>
+											<li><a href="#">Помидор  <span>999 </span></a></li>
+											<li><a href="#">Карам  <span>999 </span></a></li>
+											<li><a href="#">Сабзи <span>999 </span></a></li>
+											<li><a href="#">Қалапмир<span>999 </span></a></li>
+										</ul>
+									</li>
+								</ul>
+								<ul>
+									<li><strong>Дуккакли уруғлар</strong></li>
+									<li class="has-children">
+										<ul>
+											<li><a href="#">Ловия<span>999 </span></a></li>
+											<li><a href="#">Нўхат<span>999 </span></a></li>
+											<li><a href="#">Ясмиқ <span>999 </span></a></li>
+											<li><a href="#">Люпин<span>999 </span></a></li>
+											<li><a href="#">Фасол<span>999 </span></a></li>
+										</ul>
+									</li>
+								</ul>
+								<ul>
+									<li><strong>Дон уруғлари</strong></li>
+									<li class="has-children">
+										<ul>
+											<li><a href="#">Қишки буғдой <span>999 </span></a></li>
+											<li><a href="#">Арпа <span>999 </span></a></li>
+											<li><a href="#">Жавдар <span>999 </span></a></li>
+											<li><a href="#">Юлаф <span>999 </span></a></li>
+											<li><a href="#">Қорабуғдой  <span>999 </span></a></li>
+										</ul>
+									</li>
+								</ul>
+								<ul>
+									<li><strong>Майса уруғлари</strong></li>
+									<li class="has-children">
+										<ul>
+											<li><a href="#">Газон <span>999 </span></a></li>
+											<li><a href="#">Жўхори <span>999 </span></a></li>
+											<li><a href="#">Доривор ўсимликлар <span>999 </span></a></li>
+											<li><a href="#">Эм-хашак ўтлари  <span>999 </span></a></li>
+										</ul>
+									</li>
+								</ul>
+								<ul>
+									<li><strong>Полиз екини уруғлари</strong></li>
+									<li class="has-children">
+										<ul>
+											<li><a href="#">Тарвуз <span>999 </span></a></li>
+											<li><a href="#">Қовун <span>999 </span></a></li>
+											<li><a href="#">Қовоқ<span>999 </span></a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</aside>
 						<!-- end aside-->
 					</div>
-					<div class="col col--main">
+					<div class="col-lg col--main">
 						<!-- start sCatalog-->
-						<section class="sCatalog section" id="sCatalog">
-							<div class="container">
-								<div class="section-title text-center">
-									<h2>sCatalog</h2>
+						<div class="sCatalog section pt-0">
+							<div class="banner-block" style="background: #D8E0F0">
+								<div class="row align-items-center">
+									<div class="col">
+										<div class="banner-block__content">
+											<h3>2021йил учун екиш мавсуми бошланди</h3>
+											<p>Келажакда ҳосил учун уруғнинг керакли турини танланг</p>
+										</div>
+									</div>
+									<div class="col-md-auto">
+										<!-- picture-->
+										<picture> 
+											<source type="image/webp" srcset="img/@2x/webp/pile-black-beans 1.webp"/><img src="img/@2x/pile-black-beans 1.png" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture-->
+									</div>
 								</div>
-								<div class="row"></div>
 							</div>
-						</section>
+							<div class="sCatalog__btns row gy-3">
+								<div class="sCatalog__col col-auto"><a class="btn btn-sm btn-primary" href="#">Полиз экини уруғлари</a>
+								</div>
+								<div class="sCatalog__col col-auto"><a class="btn btn-sm btn-primary" href="#">Дуккакли уруғлар</a>
+								</div>
+								<div class="sCatalog__col col-auto"><a class="btn btn-sm btn-primary" href="#">Дон уруғлари</a>
+								</div>
+								<div class="sCatalog__col col-auto"><a class="btn btn-sm btn-primary" href="#">Майса уруғлари</a>
+								</div>
+								<div class="sCatalog__col col-auto"><a class="btn btn-sm btn-primary" href="#">Сабзавот уруғлари</a>
+								</div>
+							</div>
+							<h2>Оммабоб махсулотлар</h2>
+							<div class="row align-items-center g-2 py-3">
+								<div class="col-auto">Саралаш: </div>
+								<div class="col-auto">
+									<select class="form-select form-select-filter">
+										<option>Рейтинг</option>
+										<option>Енг қиммат</option>
+										<option>Енг арзон</option>
+									</select>
+								</div>
+							</div>
+							<div>
+								<div class="card-prod">
+									<div class="row">
+										<div class="col-auto"><a class="card-prod__img-wrap bg-wrap" href="#">
+											<!-- picture-->
+											<picture class="picture-bg"> 
+												<source type="image/webp" srcset="img/@2x/webp/prod-1.webp"/><img class="object-fit-js" src="img/@2x/prod-1.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture--></a>
+										</div>
+										<div class="col">
+											<div class="card-prod__row row">
+												<div class="col">
+													<div class="card-prod__price">1 999 сум<span>килограмм</span>
+													</div>
+													<div class="h5"><a class="text-body" href="#"> Қизил Юсуф памидори</a></div>
+													<div class="d-none d-md-block">
+														<ul>
+															<li>Хусусиятлари: Доимий талабга жавоб беради</li>
+															<li>Екиш вақти: Апрель - Май</li>
+															<li>Жойлашуви: Очиқ эр, иссиқхона</li>
+															<li>Пишиб етиш даври: Мавсум ўртаси (100 - 120 кун) </li>
+															<li>Сотувчи: ИП ГКФХ Савчук Евгений Борисович</li>
+														</ul><a class="card-prod__btn-more text-info" href="#">Батафсил
+														<svg class="icon icon-chevron-right ">
+															<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+														</svg></a>
+													</div>
+												</div>
+												<div class="card-prod__foot col-md-auto">
+													<div class="d-none d-md-block">
+														<div class="h5">МЧЖ "Green technology"</div>
+														<p class="text-secondary">на AgroZamin с окт. 2020</p>
+														<div class="stars">
+															<svg class="icon icon-star  active">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+															<svg class="icon icon-star  active">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+															<svg class="icon icon-star  active">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+															<svg class="icon icon-star  active">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+															<svg class="icon icon-star ">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+														</div>
+														<ul>
+															<li> 
+																<div class="card-prod__icon-wrap">
+																	<svg class="icon icon-mark ">
+																		<use xlink:href="img/svg/sprite.svg#mark"></use>
+																	</svg>
+																</div>Тошкент шахри
+															</li>
+															<li> 
+																<div class="card-prod__icon-wrap">
+																	<svg class="icon icon-shipping ">
+																		<use xlink:href="img/svg/sprite.svg#shipping"></use>
+																	</svg>
+																</div>Жойидан олиб кетиш
+															</li>
+															<li> 
+																<div class="card-prod__icon-wrap">
+																	<svg class="icon icon-pay ">
+																		<use xlink:href="img/svg/sprite.svg#pay"></use>
+																	</svg>
+																</div>Жойида тўлов
+															</li>
+														</ul>
+													</div>
+													<button class="card-prod__btn" type="button">Саватчага қўшиш
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-prod">
+									<div class="row">
+										<div class="col-auto"><a class="card-prod__img-wrap bg-wrap" href="#">
+											<!-- picture-->
+											<picture class="picture-bg"> 
+												<source type="image/webp" srcset="img/@2x/webp/prod-2.webp"/><img class="object-fit-js" src="img/@2x/prod-2.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture--></a>
+										</div>
+										<div class="col">
+											<div class="card-prod__row row">
+												<div class="col">
+													<div class="card-prod__price">1 999 сум<span>килограмм</span>
+													</div>
+													<div class="h5"><a class="text-body" href="#"> Қизил Юсуф памидори</a></div>
+													<div class="d-none d-md-block">
+														<ul>
+															<li>Хусусиятлари: Доимий талабга жавоб беради</li>
+															<li>Екиш вақти: Апрель - Май</li>
+															<li>Жойлашуви: Очиқ эр, иссиқхона</li>
+															<li>Пишиб етиш даври: Мавсум ўртаси (100 - 120 кун) </li>
+															<li>Сотувчи: ИП ГКФХ Савчук Евгений Борисович</li>
+														</ul><a class="card-prod__btn-more text-info" href="#">Батафсил
+														<svg class="icon icon-chevron-right ">
+															<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+														</svg></a>
+													</div>
+												</div>
+												<div class="card-prod__foot col-md-auto">
+													<div class="d-none d-md-block">
+														<div class="h5">МЧЖ "Green technology"</div>
+														<p class="text-secondary">на AgroZamin с окт. 2020</p>
+														<div class="stars">
+															<svg class="icon icon-star  active">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+															<svg class="icon icon-star  active">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+															<svg class="icon icon-star  active">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+															<svg class="icon icon-star  active">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+															<svg class="icon icon-star ">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+														</div>
+														<ul>
+															<li> 
+																<div class="card-prod__icon-wrap">
+																	<svg class="icon icon-mark ">
+																		<use xlink:href="img/svg/sprite.svg#mark"></use>
+																	</svg>
+																</div>Тошкент шахри
+															</li>
+															<li> 
+																<div class="card-prod__icon-wrap">
+																	<svg class="icon icon-shipping ">
+																		<use xlink:href="img/svg/sprite.svg#shipping"></use>
+																	</svg>
+																</div>Жойидан олиб кетиш
+															</li>
+															<li> 
+																<div class="card-prod__icon-wrap">
+																	<svg class="icon icon-pay ">
+																		<use xlink:href="img/svg/sprite.svg#pay"></use>
+																	</svg>
+																</div>Жойида тўлов
+															</li>
+														</ul>
+													</div>
+													<button class="card-prod__btn" type="button">Саватчага қўшиш
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-prod">
+									<div class="row">
+										<div class="col-auto"><a class="card-prod__img-wrap bg-wrap" href="#">
+											<!-- picture-->
+											<picture class="picture-bg"> 
+												<source type="image/webp" srcset="img/@2x/webp/prod-3.webp"/><img class="object-fit-js" src="img/@2x/prod-3.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture--></a>
+										</div>
+										<div class="col">
+											<div class="card-prod__row row">
+												<div class="col">
+													<div class="card-prod__price">1 999 сум<span>килограмм</span>
+													</div>
+													<div class="h5"><a class="text-body" href="#"> Қизил Юсуф памидори</a></div>
+													<div class="d-none d-md-block">
+														<ul>
+															<li>Хусусиятлари: Доимий талабга жавоб беради</li>
+															<li>Екиш вақти: Апрель - Май</li>
+															<li>Жойлашуви: Очиқ эр, иссиқхона</li>
+															<li>Пишиб етиш даври: Мавсум ўртаси (100 - 120 кун) </li>
+															<li>Сотувчи: ИП ГКФХ Савчук Евгений Борисович</li>
+														</ul><a class="card-prod__btn-more text-info" href="#">Батафсил
+														<svg class="icon icon-chevron-right ">
+															<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+														</svg></a>
+													</div>
+												</div>
+												<div class="card-prod__foot col-md-auto">
+													<div class="d-none d-md-block">
+														<div class="h5">МЧЖ "Green technology"</div>
+														<p class="text-secondary">на AgroZamin с окт. 2020</p>
+														<div class="stars">
+															<svg class="icon icon-star  active">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+															<svg class="icon icon-star  active">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+															<svg class="icon icon-star  active">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+															<svg class="icon icon-star  active">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+															<svg class="icon icon-star ">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+														</div>
+														<ul>
+															<li> 
+																<div class="card-prod__icon-wrap">
+																	<svg class="icon icon-mark ">
+																		<use xlink:href="img/svg/sprite.svg#mark"></use>
+																	</svg>
+																</div>Тошкент шахри
+															</li>
+															<li> 
+																<div class="card-prod__icon-wrap">
+																	<svg class="icon icon-shipping ">
+																		<use xlink:href="img/svg/sprite.svg#shipping"></use>
+																	</svg>
+																</div>Жойидан олиб кетиш
+															</li>
+															<li> 
+																<div class="card-prod__icon-wrap">
+																	<svg class="icon icon-pay ">
+																		<use xlink:href="img/svg/sprite.svg#pay"></use>
+																	</svg>
+																</div>Жойида тўлов
+															</li>
+														</ul>
+													</div>
+													<button class="card-prod__btn" type="button">Саватчага қўшиш
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-prod">
+									<div class="row">
+										<div class="col-auto"><a class="card-prod__img-wrap bg-wrap" href="#">
+											<!-- picture-->
+											<picture class="picture-bg"> 
+												<source type="image/webp" srcset="img/@2x/webp/prod-4.webp"/><img class="object-fit-js" src="img/@2x/prod-4.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture--></a>
+										</div>
+										<div class="col">
+											<div class="card-prod__row row">
+												<div class="col">
+													<div class="card-prod__price">1 999 сум<span>килограмм</span>
+													</div>
+													<div class="h5"><a class="text-body" href="#"> Қизил Юсуф памидори</a></div>
+													<div class="d-none d-md-block">
+														<ul>
+															<li>Хусусиятлари: Доимий талабга жавоб беради</li>
+															<li>Екиш вақти: Апрель - Май</li>
+															<li>Жойлашуви: Очиқ эр, иссиқхона</li>
+															<li>Пишиб етиш даври: Мавсум ўртаси (100 - 120 кун) </li>
+															<li>Сотувчи: ИП ГКФХ Савчук Евгений Борисович</li>
+														</ul><a class="card-prod__btn-more text-info" href="#">Батафсил
+														<svg class="icon icon-chevron-right ">
+															<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+														</svg></a>
+													</div>
+												</div>
+												<div class="card-prod__foot col-md-auto">
+													<div class="d-none d-md-block">
+														<div class="h5">МЧЖ "Green technology"</div>
+														<p class="text-secondary">на AgroZamin с окт. 2020</p>
+														<div class="stars">
+															<svg class="icon icon-star  active">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+															<svg class="icon icon-star  active">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+															<svg class="icon icon-star  active">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+															<svg class="icon icon-star  active">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+															<svg class="icon icon-star ">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+														</div>
+														<ul>
+															<li> 
+																<div class="card-prod__icon-wrap">
+																	<svg class="icon icon-mark ">
+																		<use xlink:href="img/svg/sprite.svg#mark"></use>
+																	</svg>
+																</div>Тошкент шахри
+															</li>
+															<li> 
+																<div class="card-prod__icon-wrap">
+																	<svg class="icon icon-shipping ">
+																		<use xlink:href="img/svg/sprite.svg#shipping"></use>
+																	</svg>
+																</div>Жойидан олиб кетиш
+															</li>
+															<li> 
+																<div class="card-prod__icon-wrap">
+																	<svg class="icon icon-pay ">
+																		<use xlink:href="img/svg/sprite.svg#pay"></use>
+																	</svg>
+																</div>Жойида тўлов
+															</li>
+														</ul>
+													</div>
+													<button class="card-prod__btn" type="button">Саватчага қўшиш
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-prod">
+									<div class="row">
+										<div class="col-auto"><a class="card-prod__img-wrap bg-wrap" href="#">
+											<!-- picture-->
+											<picture class="picture-bg"> 
+												<source type="image/webp" srcset="img/@2x/webp/prod-5.webp"/><img class="object-fit-js" src="img/@2x/prod-5.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture--></a>
+										</div>
+										<div class="col">
+											<div class="card-prod__row row">
+												<div class="col">
+													<div class="card-prod__price">1 999 сум<span>килограмм</span>
+													</div>
+													<div class="h5"><a class="text-body" href="#"> Қизил Юсуф памидори</a></div>
+													<div class="d-none d-md-block">
+														<ul>
+															<li>Хусусиятлари: Доимий талабга жавоб беради</li>
+															<li>Екиш вақти: Апрель - Май</li>
+															<li>Жойлашуви: Очиқ эр, иссиқхона</li>
+															<li>Пишиб етиш даври: Мавсум ўртаси (100 - 120 кун) </li>
+															<li>Сотувчи: ИП ГКФХ Савчук Евгений Борисович</li>
+														</ul><a class="card-prod__btn-more text-info" href="#">Батафсил
+														<svg class="icon icon-chevron-right ">
+															<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+														</svg></a>
+													</div>
+												</div>
+												<div class="card-prod__foot col-md-auto">
+													<div class="d-none d-md-block">
+														<div class="h5">МЧЖ "Green technology"</div>
+														<p class="text-secondary">на AgroZamin с окт. 2020</p>
+														<div class="stars">
+															<svg class="icon icon-star  active">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+															<svg class="icon icon-star  active">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+															<svg class="icon icon-star  active">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+															<svg class="icon icon-star  active">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+															<svg class="icon icon-star ">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+														</div>
+														<ul>
+															<li> 
+																<div class="card-prod__icon-wrap">
+																	<svg class="icon icon-mark ">
+																		<use xlink:href="img/svg/sprite.svg#mark"></use>
+																	</svg>
+																</div>Тошкент шахри
+															</li>
+															<li> 
+																<div class="card-prod__icon-wrap">
+																	<svg class="icon icon-shipping ">
+																		<use xlink:href="img/svg/sprite.svg#shipping"></use>
+																	</svg>
+																</div>Жойидан олиб кетиш
+															</li>
+															<li> 
+																<div class="card-prod__icon-wrap">
+																	<svg class="icon icon-pay ">
+																		<use xlink:href="img/svg/sprite.svg#pay"></use>
+																	</svg>
+																</div>Жойида тўлов
+															</li>
+														</ul>
+													</div>
+													<button class="card-prod__btn" type="button">Саватчага қўшиш
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-prod">
+									<div class="row">
+										<div class="col-auto"><a class="card-prod__img-wrap bg-wrap" href="#">
+											<!-- picture-->
+											<picture class="picture-bg"> 
+												<source type="image/webp" srcset="img/@2x/webp/prod-6.webp"/><img class="object-fit-js" src="img/@2x/prod-6.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture--></a>
+										</div>
+										<div class="col">
+											<div class="card-prod__row row">
+												<div class="col">
+													<div class="card-prod__price">1 999 сум<span>килограмм</span>
+													</div>
+													<div class="h5"><a class="text-body" href="#"> Қизил Юсуф памидори</a></div>
+													<div class="d-none d-md-block">
+														<ul>
+															<li>Хусусиятлари: Доимий талабга жавоб беради</li>
+															<li>Екиш вақти: Апрель - Май</li>
+															<li>Жойлашуви: Очиқ эр, иссиқхона</li>
+															<li>Пишиб етиш даври: Мавсум ўртаси (100 - 120 кун) </li>
+															<li>Сотувчи: ИП ГКФХ Савчук Евгений Борисович</li>
+														</ul><a class="card-prod__btn-more text-info" href="#">Батафсил
+														<svg class="icon icon-chevron-right ">
+															<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+														</svg></a>
+													</div>
+												</div>
+												<div class="card-prod__foot col-md-auto">
+													<div class="d-none d-md-block">
+														<div class="h5">МЧЖ "Green technology"</div>
+														<p class="text-secondary">на AgroZamin с окт. 2020</p>
+														<div class="stars">
+															<svg class="icon icon-star  active">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+															<svg class="icon icon-star  active">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+															<svg class="icon icon-star  active">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+															<svg class="icon icon-star  active">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+															<svg class="icon icon-star ">
+																<use xlink:href="img/svg/sprite.svg#star"></use>
+															</svg>
+														</div>
+														<ul>
+															<li> 
+																<div class="card-prod__icon-wrap">
+																	<svg class="icon icon-mark ">
+																		<use xlink:href="img/svg/sprite.svg#mark"></use>
+																	</svg>
+																</div>Тошкент шахри
+															</li>
+															<li> 
+																<div class="card-prod__icon-wrap">
+																	<svg class="icon icon-shipping ">
+																		<use xlink:href="img/svg/sprite.svg#shipping"></use>
+																	</svg>
+																</div>Жойидан олиб кетиш
+															</li>
+															<li> 
+																<div class="card-prod__icon-wrap">
+																	<svg class="icon icon-pay ">
+																		<use xlink:href="img/svg/sprite.svg#pay"></use>
+																	</svg>
+																</div>Жойида тўлов
+															</li>
+														</ul>
+													</div>
+													<button class="card-prod__btn" type="button">Саватчага қўшиш
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sCatalog__foot text-center">
+								<button class="sCatalog__btn-footer" type="button">Кўпроқ кўриш
+								</button>
+							</div>
+						</div>
 						<!-- end sCatalog-->
 					</div>
 				</div>

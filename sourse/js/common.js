@@ -293,8 +293,12 @@ function eventHandler() {
 		$(".topLine__search-wrap ").slideToggle();
 	})
 
-
-
+	$(".aside__toggle-btn--js").click(function(){
+		$(this).toggleClass("active").next().slideToggle();
+	})
+	$(".aside strong").click(function () {
+		$(this).toggleClass("active").parent().next().slideToggle();
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
