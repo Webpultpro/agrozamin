@@ -1,0 +1,20 @@
+mixin sLegalDataChange(data)
+	// start sLegalDataChange
+	+b.SECTION.sLegalDataChange.section#sLegalDataChange&attributes(attributes)
+		.container
+			+form-wrap
+				.section-title
+					h1 Юридик маълумотларни ўзгартириш
+				.row
+					.col-md-6
+						+input(``, 'text', `Номи`)(value= `Шокиров Дилмурод Асқарович` readonly)
+						+input(``, 'tel', `Телефон рақами`)(value= `+998974050002`)
+						+input(``, 'text', `Вилоят`)(value= `Самарқанд вилояти` readonly)
+						+input(``, 'text', `Туман`)(value= `Пастдарғом туман` readonly)
+					.col-md-6
+						+input(``, 'text', `Банк МФО си`)(value= `"Агробанк" аксиядорлик-тижорат банки»`)
+						+input(``, 'text', `Манзил`)(value= `43 Мукимий Кўчаси, Тошкент, Ўзбекистон, 100096-уй`)
+						+input(``, 'text', `СТИР`)(value= `154786022` readonly)
+						+input(``, 'text', `Хисоб рақами`)(value= `2223 1238 4568 1234 9963`)
+				+e.BUTTON.btn.btn.btn-primary Сақлаш
+	// end sLegalDataChange

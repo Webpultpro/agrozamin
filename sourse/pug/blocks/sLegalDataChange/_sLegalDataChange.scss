@@ -1,13 +1,13 @@
-// start .sPersonalDataChange
-.sPersonalDataChange {
+// start .sLegalDataChange
+.sLegalDataChange {
 	--sPT: #{rem(40)};
-	--sPB: #{rem(90)};
+	--sPB: #{rem(115)};
 	--sTPB: #{rem(45)};
 	@include media-breakpoint-up(md) {
-		--sPB: #{rem(155)};
+		--sPB: #{rem(70)};
 		--sTPB: #{rem(50)};
 	}
-	
+
 	.container {
 		--bs-gutter-x: #{rem(24)};
 	}
@@ -79,4 +79,4 @@
 	}
 	@include media-breakpoint-down(xl) {
 	}
-} // end.sPersonalDataChange
+} // end.sLegalDataChange
