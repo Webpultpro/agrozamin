@@ -1,0 +1,18 @@
+mixin sRegistration(data)
+	// start sRegistration
+	+b.SECTION.sRegistration.section#sRegistration&attributes(attributes)
+		.container
+			+form-wrap
+				h1 Рўйхатдан ўтиш
+				+input(``, 'text', `Исм`)
+				+input(``, 'text', `Фамилия`)
+				+input(``, 'text', `Туғилган сана`)
+				+input(``, 'tel', `Телефон рақами`)
+				+input(``, 'email', `E-mail`)
+				+input(``, 'password', `Пароль`)
+				+e.BUTTON.btn.btn.btn-primary Рўйхатдан ўтиш
+				+soc-authorization()
+				+e.footer
+					+e.subtitle Тизимдан рўйхатдан ўтганмисиз?
+					+b.link-info(href="#") Тизимга кириш
+	// end sRegistration

@@ -1,0 +1,38 @@
+// start .sAuthorization
+.sAuthorization {
+	--sPT: #{rem(50)};
+	--sPB: #{rem(50)};
+	// --sTPB: ;
+	.form-wrap {
+		
+		&__subtitle {
+			margin-bottom: rem(23);
+		}
+		.remember {
+			margin-top: -6px;
+			margin-bottom: rem(60);
+		}
+		
+		&__btn {
+			margin-bottom: rem(30);
+		}
+		.soc-authorization {
+			margin-bottom: rem(13);
+		}
+		
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sAuthorization

@@ -15,3 +15,24 @@ mixin soc()
 			+item-sos('telegram')
 
 //- /social buttons 
+
+
+mixin item-soc(i, t)
+	+e.BUTTON.item
+		if block
+			block
+		else
+			img(src=`img/svg/${i}.svg`, alt="")
+			span!= t
+//- social authorization buttons
+
+mixin soc-authorization()
+	+b.soc-authorization
+		if block
+			block
+		else
+			+item-soc(`google`, `Google`)
+			+item-soc(`mail-ru`, `Mail.ru`)
+			+item-soc(`facebook`, `Facebook`)
+
+//- /social authorization buttons 

@@ -1,0 +1,20 @@
+mixin sAuthorization(data)
+	// start sAuthorization
+	+b.SECTION.sAuthorization.section#sAuthorization&attributes(attributes)
+		.container
+			+form-wrap
+				h1 Тизимга кириш
+				+e.subtitle Тизимга қайта ташриф буюрганингиз учун ташаккур, тизимга кириш орқали савда майдонидан фойдаланиш имконига ега бўласиз
+				+input(``, 'text', `Логин`)
+				+input(``, 'password', `Пароль`)
+				+b.remember
+					+in-c("checkbox", "Мени ушбу компютерда сақлаб қўйиш")
+					+b.link-info(href="#") Паролни унутдингизми?
+				+e.BUTTON.btn.btn.btn-primary Кириш
+				+soc-authorization()
+				+e.footer
+					+e.subtitle Тизимдан рўйхатдан ўтмаганмисиз?
+					+b.link-info(href="#") Рўйхатдан ўтиш
+
+
+	// end sAuthorization

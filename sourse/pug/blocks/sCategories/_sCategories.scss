@@ -27,7 +27,7 @@
 		align-items: center;
 		background: $white;
 		border: 2px solid $secondary;
-		border-radius: 12px;
+		border-radius: $border-radius-lg;
 		padding: rem(30) rem(22) rem(22);
 		@include media-breakpoint-up(xl) {
 			padding: rem(42) rem(29) rem(29);
