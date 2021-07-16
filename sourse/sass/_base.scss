@@ -475,7 +475,8 @@ iframe {
 .btn {
 	color: $white;
 	&:hover,
-	&:active {
+	&:active,
+	&:focus {
 		color: $white;
 	}
 
