@@ -5,5 +5,8 @@
 5. <https://pashawol.github.io/0007agroZamin/public/05-password-reset.html>
 6. <https://pashawol.github.io/0007agroZamin/public/07-personal-data-change.html>
 7. <https://pashawol.github.io/0007agroZamin/public/08-legal-data-change.html>
-8. <https://pashawol.github.io/0007agroZamin/public/14-catalog.html>
+8. <https://pashawol.github.io/0007agroZamin/public/09-user-legal-info.html>
+9. <https://pashawol.github.io/0007agroZamin/public/10-warning-no-app.html>
+10. <https://pashawol.github.io/0007agroZamin/public/11-warning-no-key.html>
+11. <https://pashawol.github.io/0007agroZamin/public/14-catalog.html>
 

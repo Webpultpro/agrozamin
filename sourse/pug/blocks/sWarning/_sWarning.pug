@@ -1,0 +1,11 @@
+mixin sWarning(i, h, t, l)
+	// start sWarning
+	+b.SECTION.sWarning.section#sWarning&attributes(attributes)
+		.container
+			+e.img-wrap
+				img(src=`img/svg/${i}`, alt="")
+			+b.section-title.text-center
+				h1!= h
+			+e.text.text-secondary!= t
+				+e.link.link-info(href="#")!= l
+	// end sWarning
