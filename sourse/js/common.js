@@ -377,6 +377,35 @@ function eventHandler() {
 		$('.aside__toggle-block-filter--js').toggleClass("active")
 		$('body').toggleClass("fixed")
 	})
+
+
+
+	var swiper00 = new Swiper(".mySwiper", {
+		loop: true,
+		spaceBetween: 10,
+		slidesPerView: 3,
+		freeMode: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+	});
+	var swiper222 = new Swiper(".mySwiper2", {
+		loop: true,
+		spaceBetween: 10,
+		thumbs: {
+			swiper: swiper00,
+		},
+	});
+
+	$('.readmore-js').readmore({
+		collapsedHeight: 50,
+		moreLink: '<a href="#" class="readmore-link-more">Батафсил </a>',
+		lessLink: '<a href="#" class="readmore-link-more readmore-link-more--close">Close</a>'
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

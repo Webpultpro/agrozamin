@@ -5,6 +5,8 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/aside/_aside.pug
 include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sProdHead/_sProdHead.pug
+include ../blocks/sProdBody/_sProdBody.pug
 //- include ../blocks/sAbout/_sAbout.pug
 //- include ../blocks/sAdvantages/_sAdvantages.pug
 //- include ../blocks/sCategories/_sCategories.pug
@@ -14,10 +16,10 @@ include ../blocks/sCatalog/_sCatalog.pug
 
 block variables
 	- let  mainPage= null 
-	- let  bg= '14.jpg'
+	- let  bg= '15.jpg'
 
 block title
-	- let  title= 'Уруғлар'
+	- let  title= ' Бинафша Шоҳ Нўхати'
 	title= title
 block pagecontent
 
@@ -26,20 +28,10 @@ block pagecontent
 	+header()
 		+topLine()
 		+top-nav()
-	+breadcrumb('Асосий саҳифа',title)
-	+b.page-title
-		.container
-			.row
-				.col-auto
-					h1 Уруғлар
-				.col-auto.pt-lg-3.pt-2
-					.text-secondary 211 маҳсулотлари
-	.container
-		.row.row--main
-			.col-lg.col--aside
-				+aside()
-			.col-lg.col--main
-				+sCatalog()
+	+breadcrumb('Асосий саҳифа','Уруғлар','Сабзавот уруғлари',title)
+	+sProdHead()
+	+sProdBody()
+	+sCatalog15()
 			
 	//- +headerBlock
 	//- +sHowWorks
