@@ -3,6 +3,10 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
+		strong{
+			display: block;
+			padding-bottom: rem(5);
+		}
 		ul{
 			list-style: none;
 			ul{
@@ -78,7 +82,133 @@
 			}
 		}
 
-	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(xl) {
+		margin-top: -5px;
+	}
+	@include media-breakpoint-down(lg) {
+		&__toggle-block-filter{
+			position: fixed;
+			width: 100%;
+			// height: 100%;
+			height: 100vh;
+			overflow-x: hidden;
+			overflow-y: auto;
+			background-color: #fff;
+			z-index: 1000;
+			top: 0;
+			left: 0;
+			padding-top: rem(20);
+			padding-bottom: rem(20);
+			@include mt;
+			&:not(.active) {
+				transform: translateX(-100%);
+			}
+		}
+		
+		&__filter-title-toggle{
+			margin-left: rem(5);
+			cursor: pointer;
+			--h: 1px;
+				margin-bottom: rem(15);
+
+				span {
+					background-color: transparent;
+				}
+
+				span:after,
+				span:before {
+					top: 0;
+					bottom: 0;
+				}
+
+				span:before {
+					transform: rotate3d(0, 0, 1, 45deg);
+				}
+
+				span:after {
+					transform: rotate3d(0, 0, 1, -45deg);
+				} 
+
+				box-sizing: border-box;
+				border-radius: 30px;
+				font-weight: 500;
+				width: rem(133);
+				padding: rem(6) rem(10);
+				padding-left: rem(37);
+				position: relative;
+				cursor: pointer;
+
+				span:after,
+				span:before {
+					content: "";
+					position: absolute;
+					left: 0;
+				}
+
+				span {
+					@include a-cent(y);
+
+					@include media-breakpoint-up(md) {
+						left: rem(18);
+					}
+
+					left: rem(10px);
+				}
+
+				span:before {
+					top: calc(var(--h) * 4);
+				}
+
+				span:after {
+					bottom: calc(var(--h) * 4);
+				}
+
+				span {
+					display: block;
+
+				}
+
+				span,
+				span:after,
+				span:before {
+
+					// width: 32px;
+					@include media-breakpoint-up(md) {
+						width: rem(12);
+					}
+
+					width: rem(18);
+					height: var(--h);
+					background-color: currentColor;
+					transition: all 0.3s;
+					backface-visibility: hidden;
+					border-radius: 6px;
+					transform-origin: 50% 50%;
+				
+		}
+
+			--hoverMain: ' ';
+
+			  span {
+				background-color: transparent;
+			}
+
+			  span:after,
+			  span:before {
+				top: 0;
+				bottom: 0;
+			}
+
+			  span:before {
+				transform: rotate3d(0, 0, 1, 45deg);
+			}
+
+			  span:after {
+				transform: rotate3d(0, 0, 1, -45deg);
+			}
+		}
+
+	}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(sm) {}
@@ -86,3 +216,93 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.aside
+
+.filter-item{
+	@include media-breakpoint-down(lg) {
+		border-top: 1px solid #E0E0E0;
+		&:last-child{
+
+			// border-bottom: 1px solid #E0E0E0;
+		}
+		margin-bottom: -1px;
+	}
+	&__title{
+		font-weight: bold;
+		position: relative;
+		display: inline-block;
+		padding-right: rem(20);
+		@include media-breakpoint-down(lg) {
+			margin-bottom: 0;
+			display: block;
+			padding: rem(14) rem(24);
+			border-bottom: 1px solid #E0E0E0;
+			&.active{
+				color: $primary;
+				&::after {
+					content: var(--chevron-down-primary);
+				}
+			}
+		}
+		margin-bottom: rem(8); 
+			position: relative;
+			cursor: pointer;
+			&::after{
+				content: var(--chevron-down);
+				position: absolute;
+				right: 0;
+				top: rem(0);
+				@include media-breakpoint-down(lg){
+					right: 23px;
+						top: rem(14);
+
+					}
+				@include mt;
+			}
+			&.active{
+				&::after{
+					transform: rotateX(180deg);
+				}
+			} 
+	}
+	margin-bottom: rem(20);
+	&__dropdown{
+		@include media-breakpoint-down(lg) {
+			margin-bottom: 0;
+			padding:  rem(14) rem(24);
+			&:not(.active){
+				display: none;
+			}
+		}
+		@include media-breakpoint-up(lg) {
+			
+			max-width: rem(142);
+			// display: block !important;
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		&__title:not(.filter-item__title--js){
+			pointer-events: none;
+			&::after{
+				display: none;
+			}
+		}
+	}
+	&__title--js ~ &__dropdown:not(.active){
+		display: none;
+	} 
+	&__input{
+		margin-bottom: rem(7);
+	}
+	.custom-input{
+		margin-bottom: rem(10);
+		cursor: pointer;
+	}
+
+	.irs--round {
+		margin-top: -20px;
+	}
+}
+
+.filter-count{
+	color: $secondary;
+}

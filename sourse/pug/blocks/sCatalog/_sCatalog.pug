@@ -22,8 +22,8 @@ mixin card-hor(i)
 					+e.foot.col-md-auto
 				
 						.d-none.d-md-block
-							.h5 МЧЖ "Green technology"
-							p.text-secondary на AgroZamin с окт. 2020
+							.strong МЧЖ "Green technology"
+							.text-secondary на AgroZamin с окт. 2020
 							+stars()
 							ul
 								li 
@@ -37,7 +37,20 @@ mixin card-hor(i)
 									| Жойида тўлов
 						+e.btn(type="button") Саватчага қўшиш
 				
-
+mixin card(i)
+	.col-xl-3.col-md-4
+		+b.card-prod--vertical
+			div
+				+e.img-wrap.bg-wrap(href="#")
+					+pic(`prod-${i}.jpg`,'bg',0).picture-bg
+			+e.caption
+				+e.price 
+					span.d-block.ms-0.pb-1 килограмм
+					
+					| 1 999 сум
+				.fw-500.mb-1: a.text-body(href="#")  Қизил Юсуф памидори
+				block
+				+e.btn(type="button") Саватчага қўшиш
 mixin sCatalog(data)
 	// start sCatalog
 	+b.sCatalog.section.pt-0&attributes(attributes)
@@ -74,3 +87,109 @@ mixin sCatalog(data)
 			+e.btn-footer(type="button") Кўпроқ кўриш
 				
 	// end sCatalog
+
+	
+mixin sCatalog2(data)
+	// start sCatalog
+	+b.sCatalog.section.pt-0&attributes(attributes)
+		+e.btns.row.gy-3
+			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Полиз экини уруғлари
+			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Дуккакли уруғлар
+			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Дон уруғлари
+			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Майса уруғлари
+			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Сабзавот уруғлари
+		.row.align-items-center.g-2.py-3
+			.col-auto Саралаш: 
+			.col
+				select.form-select.form-select-filter
+					option Рейтинг
+					option Енг қиммат
+					option Енг арзон
+			.col-auto.d-none.d-md-block
+				+b.btns-head
+					+e.btn-head.active(type="button")
+						+icon("horizontal")
+					+e.btn-head(type="button")
+						+icon("vertical")
+			.col-auto.d-lg-none
+				+e.toggle-filter--js 
+					+icon("filter-icon")
+					| Фильтр
+		div
+			+card-hor(1)
+			+card-hor(2)
+			+card-hor(3)
+			+card-hor(4)
+			+card-hor(5)
+			+card-hor(6)
+		+e.foot
+			.row
+				.col
+					+pugin()
+				.col-auto.d-none.d-sm-block
+					.text-secondary.pt-3 211 тадан 24 таси кўрилди
+				
+	// end sCatalog
+
+	
+mixin sCatalog3(data)
+	// start sCatalog
+	+b.sCatalog.section.pt-0&attributes(attributes)
+		+e.btns.row.gy-3
+			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Полиз экини уруғлари
+			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Дуккакли уруғлар
+			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Дон уруғлари
+			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Майса уруғлари
+			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Сабзавот уруғлари
+		.row.align-items-center.g-2.py-3
+			.col-auto Саралаш: 
+			.col
+				select.form-select.form-select-filter
+					option Рейтинг
+					option Енг қиммат
+					option Енг арзон
+			.col-auto.d-none.d-md-block
+				+b.btns-head
+					+e.btn-head.active(type="button")
+						+icon("horizontal")
+					+e.btn-head(type="button")
+						+icon("vertical")
+			.col-auto.d-lg-none
+				+e.toggle-filter--js 
+					+icon("filter-icon")
+					| Фильтр
+		+e.row.row
+			+card(1) 
+			+card(2)
+			+card(3)
+			+card(4)
+			+card(5)
+			+card(6)
+			+card(5)
+			+card(6)
+		+e.foot
+			.row
+				.col
+					+pugin()
+				.col-auto.d-none.d-sm-block
+					.text-secondary.pt-3 211 тадан 24 таси кўрилди
+				
+	// end sCatalog
+
+mixin sCatalog15(data)
+	// start sCatalog
+	+b.sCatalog.section.pt-0&attributes(attributes)
+		.container 
+			.section-title.text-center
+				h2 Оммабоп маҳсулотлар
+			+e.row.row
+				+card(1) 
+				+card(2)
+				+card(3)
+				+card(4)
+				+card(5)
+				+card(6)
+				+card(5)
+				+card(6)
+	// end sCatalog
+

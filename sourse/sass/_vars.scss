@@ -370,7 +370,7 @@ $line-height-lg: 2 !default;
 $h1-font-size: rem(32) !default;
 $h2-font-size: $h1-font-size !default;
 $h3-font-size: rem(28) !default;
-$h4-font-size: $font-size-base * 1.5 !default;
+$h4-font-size: rem(20) !default;
 $h5-font-size: rem(18) !default;
 $h6-font-size: rem(16) !default;
 // scss-docs-end font-variables
@@ -970,12 +970,12 @@ $pagination-padding-x-sm: .5rem !default;
 $pagination-padding-y-lg: .75rem !default;
 $pagination-padding-x-lg: 1.5rem !default;
 
-$pagination-color: $link-color !default;
+$pagination-color: $body-color !default;
 $pagination-bg: $white !default;
 $pagination-border-width: $border-width !default;
-$pagination-border-radius: $border-radius !default;
+$pagination-border-radius: rem(4) !default;
 $pagination-margin-start: -$pagination-border-width !default;
-$pagination-border-color: $gray-300 !default;
+$pagination-border-color: #DEE2E6 !default;
 
 $pagination-focus-color: $link-hover-color !default;
 $pagination-focus-bg: $gray-200 !default;
@@ -986,9 +986,9 @@ $pagination-hover-color: $link-hover-color !default;
 $pagination-hover-bg: $gray-200 !default;
 $pagination-hover-border-color: $gray-300 !default;
 
-$pagination-active-color: $component-active-color !default;
-$pagination-active-bg: $component-active-bg !default;
-$pagination-active-border-color: $pagination-active-bg !default;
+$pagination-active-color: $primary !default;
+$pagination-active-bg: #fff !default;
+$pagination-active-border-color: #DEE2E6 !default;
 
 $pagination-disabled-color: $gray-600 !default;
 $pagination-disabled-bg: $white !default;

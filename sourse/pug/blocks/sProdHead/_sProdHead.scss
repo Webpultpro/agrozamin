@@ -1,0 +1,64 @@
+// start .sProdHead
+.sProdHead {
+		--sPT: 0;
+		--sPB: 0;
+		margin-top: rem(-20);
+		// --sTPB: ;
+	
+		ul {
+			list-style: none;
+			margin-bottom: 0;
+
+			span {
+				@extend .text-secondary;
+				margin-right: rem(5);
+			}
+		}
+
+		li {
+			margin-bottom: rem(1);
+		}
+
+
+		&__icon-wrap {
+			text-align: center;
+			min-width: rem(12);
+			margin-right: rem(8);
+			display: inline-block;
+
+			.icon {
+				font-size: rem(14);
+
+				&-pay {
+					font-size: rem(12);
+				}
+			}
+		}
+		.row{	
+			align-items: flex-end;
+		}
+		&__inner{
+			border-bottom: 1px solid #E0E0E0;
+			// padding-bottom: rem(25);
+			.col{
+				margin-bottom: rem(15);
+			}
+		}
+		&__btn{
+			@extend .btn;
+			@extend .btn-outline-primary;
+			width: rem(222);
+			margin-bottom: rem(15);
+		}
+
+	.stars{
+		margin-bottom: rem(15);
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sProdHead
