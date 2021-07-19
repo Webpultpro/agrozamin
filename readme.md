@@ -8,5 +8,6 @@
 8. <https://pashawol.github.io/0007agroZamin/public/09-user-legal-info.html>
 9. <https://pashawol.github.io/0007agroZamin/public/10-warning-no-app.html>
 10. <https://pashawol.github.io/0007agroZamin/public/11-warning-no-key.html>
-11. <https://pashawol.github.io/0007agroZamin/public/14-catalog.html>
+11. <https://pashawol.github.io/0007agroZamin/public/12-enter-legal-info.html>
+12. <https://pashawol.github.io/0007agroZamin/public/14-catalog.html>
 
