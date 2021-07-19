@@ -65,7 +65,7 @@ $output-bourbon-deprecation-warnings: false;
 
 
 .breadcrumb {
-	margin-top: rem(22);
+	margin-top: rem(18);
 	font-weight: 500;
 	.active {
 		a {
@@ -78,10 +78,22 @@ $output-bourbon-deprecation-warnings: false;
 
 .pagination-wrapper ul {
 	@extend .pagination;
+	@include media-breakpoint-down(sm) {
+		justify-content: center;
+	}
+	.icon{
+		font-size: rem(12);
+	}
 }
 
 .pagination-wrapper li .page-numbers {
 	@extend .page-link;
+	width: rem(38);
+	height: rem(38);
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-size: rem(16);
 }
 
 .pagination-wrapper li {

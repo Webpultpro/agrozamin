@@ -515,7 +515,7 @@ iframe {
 }
 
 .stars{
-	margin-bottom: rem(14);
+	margin-bottom: rem(5);
 	.icon{
 		cursor: pointer;
 		font-size: rem(16);
@@ -531,4 +531,26 @@ iframe {
 			fill: #F6C23D;
 		}
 	}
+}
+
+
+
+.irs--round .irs-handle {
+	top: 26px;
+	width: 10px;
+	height: 10px;
+	border: none;
+	background-color: $primary !important;
+	border-radius: 24px; 
+}
+
+.irs--round .irs-line {
+	top: 30px;
+	height: 2px;
+	background-color: #E7E7E7; 
+}
+.irs--round .irs-bar {
+	top: 30px;
+	height: 2px;
+	background: #ABB5BE;
 }

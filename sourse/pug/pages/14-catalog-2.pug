@@ -17,7 +17,7 @@ block variables
 	- let  bg= '14.jpg'
 
 block title
-	- let  title= 'Уруғлар'
+	- let  title= 'Сабзавот уруғлари'
 	title= title
 block pagecontent
 
@@ -26,20 +26,20 @@ block pagecontent
 	+header()
 		+topLine()
 		+top-nav()
-	+breadcrumb('Асосий саҳифа',title)
+	+breadcrumb('Асосий саҳифа','Уруғлар', title)
 	+b.page-title
 		.container
 			.row
 				.col-auto
-					h1 Уруғлар
+					h1= title
 				.col-auto.pt-lg-3.pt-2
 					.text-secondary 211 маҳсулотлари
 	.container
 		.row.row--main
 			.col-lg.col--aside
-				+aside()
+				+aside2()
 			.col-lg.col--main
-				+sCatalog()
+				+sCatalog2()
 			
 	//- +headerBlock
 	//- +sHowWorks

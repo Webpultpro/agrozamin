@@ -299,6 +299,84 @@ function eventHandler() {
 	$(".aside strong").click(function () {
 		$(this).toggleClass("active").parent().next().slideToggle();
 	})
+
+
+
+	$(".range-wrap").each(function () {
+		var _this = $(this);
+
+		var $range = _this.find(".slider-js");
+
+		var $inputFrom = _this.find(".input_from");
+
+		var $inputTo = _this.find(".input_to");
+
+		var instance,
+			from,
+			to,
+			min = $range.data('min'),
+			max = $range.data('max');
+		$range.ionRangeSlider({
+			skin: "round",
+			type: "double",
+			grid: false,
+			grid_snap: false,
+			hide_min_max: true,
+			hide_from_to: true,
+			onStart: updateInputs,
+			onChange: updateInputs,
+			onFinish: updateInputs
+		});
+		instance = $range.data("ionRangeSlider");
+
+		function updateInputs(data) {
+			from = data.from;
+			to = data.to;
+			$inputFrom.prop("value", from);
+			$inputTo.prop("value", to); // InputFormat();
+		}
+
+		$inputFrom.on("change input ", function () {
+			var val = +$(this).prop("value").replace(/\s/g, ''); // validate
+
+			if (val < min) {
+				val = min;
+			} else if (val > to) {
+				val = to;
+			}
+
+			instance.update({
+				from: val
+			});
+			$(this).prop("value", currencyFormat(val));
+			console.log(val);
+		});
+		$inputTo.on("change input ", function () {
+			var val = +$(this).prop("value").replace(/\s/g, ''); // validate
+
+			if (val < from) {
+				val = from;
+			} else if (val > max) {
+				val = max;
+			}
+
+			instance.update({
+				to: val
+			});
+			$(this).prop("value", currencyFormat(val));
+		});
+	});
+
+
+	$(".filter-item__title").click(function(){
+		$(this).toggleClass("active").next().slideToggle(function(){
+			$(this).toggleClass("active");
+		})
+	})
+	$(".sCatalog__toggle-filter--js, .aside__filter-title-toggle--js ").click(function(){
+		$('.aside__toggle-block-filter--js').toggleClass("active")
+		$('body').toggleClass("fixed")
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

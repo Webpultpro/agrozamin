@@ -48,7 +48,6 @@
     "gulp-svgmin": "^2.2.0",
     "gulp-tabify": "0.0.2",
     "gulp-vinyl-flow": "^1.1.0",
-    "ion-rangeslider": "^2.3.1",
     "postcss": "^7.0.36",
     "postcss-combine-media-query": "^1.0.1",
     "postcss-nested": "^4.2.3",
@@ -58,6 +57,7 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^4.0.0-alpha.4",
+    "ion-rangeslider": "^2.3.1",
     "inputmask": "^5.0.6",
     "jquery": "^3.5.1",
     "loading-attribute-polyfill": "^1.5.4",
