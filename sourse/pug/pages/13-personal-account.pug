@@ -1,0 +1,33 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sAdvantages/_sAdvantages.pug
+//- include ../blocks/sCategories/_sCategories.pug
+//- include ../blocks/sPopulars/_sPopulars.pug
+//- include ../blocks/sWhantToSell/_sWhantToSell.pug
+//- include ../blocks/sHowWorks/_sHowWorks.pug
+include ../blocks/sPersonalAccount/_sPersonalAccount.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= '13-personal-account.jpg'
+
+block title
+	- let  title= 'Кабинет'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+topLine()
+		+top-nav()
+	+breadcrumb('Асосий саҳифа',title)
+	+sPersonalAccount()
+	+footer()
+
+
+

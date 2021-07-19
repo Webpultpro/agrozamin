@@ -1,0 +1,46 @@
+mixin sPersonalAccount(data)
+	// start sPersonalAccount
+	+b.SECTION.sPersonalAccount.section#sPersonalAccount&attributes(attributes)
+		.container
+			.row.row--main
+				.col-lg.col--aside
+					+b.avatar.d-none.d-lg-block
+						img(src=`img/@2x/avatar.jpg`, alt="")
+						+e.initials ШД
+					+form-wrap.navigation.d-none.d-lg-block
+						+in-c("radio", "Менинг малумотларим")(checked)
+						+in-c("radio", "Менинг буюртмаларим")
+						+in-c("radio", "Хабарлар")
+					//- +b.UL.navigation.d-none.d-lg-block
+					//- 	+e.LI.item.active: a(href="#") Менинг малумотларим
+					//- 	+e.LI.item: a(href="#") Менинг буюртмаларим
+					//- 	+e.LI.item: a(href="#") Хабарлар
+				.col-lg.col--main
+					+b.personal-info
+						+e.wrapper
+							+e.heading
+								+b.avatar.d-block.d-lg-none
+									img(src=`img/@2x/avatar.jpg`, alt="")
+									+e.initials ШД
+								+e.subtitle.d-none.d-lg-block Шахсий маълумотлар
+								h1 Шокиров Дилмурод
+							.row
+								mixin item(t, v)
+									.col-6
+										+e.item
+											+e.name!= t
+											+e.value!= v
+								+item(`Туғилган сана`, `3.04.1991`)
+								+item(`Жинси`, `Еркак`)
+								+item(`E-mail`, `Кўрсатилмаган`)
+								+item(`Телефон`, `+998 97 405 05 50`)
+							+e.BUTTON.btn.btn.btn-primary Маълумотларни ўзгартириш
+					+b.legal-info-empty
+						+e.wrapper
+							+e.subtitle Юридик малумотлар
+							p Маълумотлар тўлдирилмаган <br> Буюртма бериш учун сиз юридик маълумотларни кўрсатишингиз керак.
+							+e.BUTTON.btn.btn.btn-primary Маълумот қўшиш
+
+
+
+	// end sPersonalAccount
