@@ -1,0 +1,17 @@
+mixin sEnterLegalInfo(data)
+	// start sEnterLegalInfo
+	+b.SECTION.sEnterLegalInfo.section#sEnterLegalInfo&attributes(attributes)
+		.container
+			+e.inner
+				+b.section-title.text-center
+					h1 Юридик маълумотларни киритиш
+					.text-secondary Барча юкланган юридик маълумотлар фойдаланувчининг шахсий кабинетида сақланади
+				+e.item
+					+e.img-wrap
+						//- img(src="", alt="") 
+					+e.content
+						+e.name Шокиров Дилмурод <br> Асқарович
+						+e.value 154786022
+				+e.footer
+					+e.BUTTON.btn.btn.btn-primary Кейингиси
+	// end sEnterLegalInfo

@@ -1,0 +1,130 @@
+// start .sEnterLegalInfo
+.sEnterLegalInfo {
+	--sPT: #{rem(85)};
+	// --sPB: ;
+	--sTPB: #{rem(20)};
+	min-height: 550px;
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(80)};
+		// --sPB: ;
+		--sTPB: #{rem(35)};
+		min-height: 590px;
+	}
+	&__inner {
+		position: relative;
+		overflow: hidden;
+		max-width: 490px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: rem(17) rem(24) rem(24);
+		border-radius: $border-radius-lg;
+		background-color: $white;
+		box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+	}
+	.section-title {
+		max-width: 302px;
+		margin-left: auto;
+		margin-right: auto;
+		@include media-breakpoint-up(sm) {
+			max-width: 100%;
+		}
+		h1 {
+			font-weight: 500;
+			font-size: rem(20);
+			line-height: (23 / 20);
+			margin-bottom: rem(13);
+		}
+	}
+
+	&__item {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-left: auto;
+		margin-right: auto;
+		padding: rem(12) 0;
+		@include media-breakpoint-up(sm) {
+			justify-content: flex-start;
+			padding: rem(20) 0;
+			max-width: 85%;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			width: 200%;
+			height: 1px;
+			top: 0;
+			left: -50%;
+			background-color: #e2e2e2;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			width: 150%;
+			height: 1px;
+			bottom: 0;
+			left: -25%;
+			background-color: #e2e2e2;
+		}
+	}
+	&__name {
+		font-weight: 500;
+		font-size: rem(16);
+		line-height: 1;
+		margin-bottom: 5px;
+	}
+	&__value {
+		font-size: rem(14);
+		line-height: (16 / 14);
+		color: $secondary;
+	}
+
+	&__footer {
+		text-align: center;
+	}
+
+	&__btn {
+		min-width: 190px;
+	}
+
+	&__img-wrap {
+		@include block;
+		width: 37px;
+		height: 37px;
+		min-width: 37px;
+		margin-right: rem(13);
+		background-image: url(../img/svg/avatar-blank.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		border-radius: 50%;
+		overflow: hidden;
+		img {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__footer {
+		padding-top: rem(38);
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sEnterLegalInfo
