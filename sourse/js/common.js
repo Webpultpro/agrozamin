@@ -272,6 +272,13 @@ function eventHandler() {
 		spaceBetween: 0,
 		freeMode: true,
 	});
+	let sProductsOnSite = new Swiper('.sProductsOnSite__slider--js', {
+		freeModeMomentum: true,
+		watchOverflow: true,
+		slidesPerView: 'auto',
+		spaceBetween: 0,
+		freeMode: true,
+	});
 	// modal window
 
 
