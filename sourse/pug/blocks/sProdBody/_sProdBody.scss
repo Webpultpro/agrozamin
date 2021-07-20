@@ -5,7 +5,10 @@
 		// --sTPB: ;
 
 			&__inner {
-				border-bottom: 1px solid #E0E0E0;
+				@include media-breakpoint-up(md) {
+
+					border-bottom: 1px solid #E0E0E0;
+				}
 				padding-bottom: rem(55);
 				margin-bottom: rem(25);
 			}
@@ -42,11 +45,21 @@
 		&__btn{
 			@extend .btn;
 			@extend .btn-primary;
-			width: 100%;
+			@include media-breakpoint-up(md) {
+				width: 100%;
+				margin-top: 0;
+			}
+			margin-top: rem(20);
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			width: rem(250);
 		}
 		h1{
 			font-weight: bold;
-			margin-bottom: rem(16);
+				@include media-breakpoint-up(md) {
+					margin-bottom: rem(16);
+				}
 		}
 		&__price{
 			margin-bottom: rem(20);
@@ -79,8 +92,32 @@
 
 
 		&__col{
-			max-width: calc(250px + var(--bs-gutter-x))
+			@include media-breakpoint-up(md) {
+
+				max-width: calc(250px + var(--bs-gutter-x));
+				margin-bottom: 0;
+
+			}
+			margin-bottom: rem(30);
 		}
+		&__slider{
+			max-width: rem(250);
+			margin-left: auto;
+			margin-right: auto;
+		}
+		&__caption{
+			max-width: rem(665)
+		}
+
+			@include media-breakpoint-down(md) {
+				&__slider-lg-wrap {
+					position: relative;
+					margin-left: auto;
+					margin-right: auto;
+					max-width: 300px;
+				}
+			}
+
 		@include media-breakpoint-up(xl) {}
 		@include media-breakpoint-up(lg) {}
 		@include media-breakpoint-up(md) {}

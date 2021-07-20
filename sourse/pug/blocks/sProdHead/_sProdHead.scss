@@ -38,7 +38,9 @@
 			align-items: flex-end;
 		}
 		&__inner{
-			border-bottom: 1px solid #E0E0E0;
+			@include media-breakpoint-up(md){
+				border-bottom: 1px solid #E0E0E0;
+			}
 			// padding-bottom: rem(25);
 			.col{
 				margin-bottom: rem(15);
@@ -47,7 +49,11 @@
 		&__btn{
 			@extend .btn;
 			@extend .btn-outline-primary;
-			width: rem(222);
+			@include media-breakpoint-up(md){
+
+				width: rem(222);
+			}
+			width: 100%;
 			margin-bottom: rem(15);
 		}
 

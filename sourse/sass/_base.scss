@@ -323,18 +323,19 @@ ul {
 .swiper-pagination {
 	width: 100%;
 	text-align: center;
-
+	margin-top: rem(10);
 	&-bullet {
 		opacity: 1;
 		width: 8px;
 		height: 8px;
 		border-radius: 50%;
-		background-color: $secondary;
+		background-color: #E6E6E6;
 		outline: none !important;
 		@include mt;
 		margin-left: rem(8);
 		// padding-right: rem(8);
 		margin-right: rem(5);
+		display: inline-block;
 
 		&-active,
 		&:hover {

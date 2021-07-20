@@ -39,6 +39,7 @@
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
+
 } // end.sCatalog
 .btns-head{
 	&__btn-head{
@@ -155,6 +156,18 @@
 		@include media-breakpoint-up(md) {
 			min-height: 100%;
 			flex-direction: column;
+		}
+	}
+	@include media-breakpoint-up(md) {
+
+		&--favorite{
+			padding: 0;
+		}
+		&--favorite &__caption{
+			padding: rem(12);
+		}
+		&--favorite &__img-wrap{ 
+			border-radius: 12px 12px 0 0;
 		}
 	}
 	&--vertical &__btn{
