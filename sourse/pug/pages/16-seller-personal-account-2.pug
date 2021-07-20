@@ -1,0 +1,54 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sAdvantages/_sAdvantages.pug
+//- include ../blocks/sCategories/_sCategories.pug
+//- include ../blocks/sPopulars/_sPopulars.pug
+//- include ../blocks/sWhantToSell/_sWhantToSell.pug
+//- include ../blocks/sHowWorks/_sHowWorks.pug
+include ../blocks/sPersonalAccount/_sPersonalAccount.pug
+include ../blocks/personal-info/_personal-info.pug
+include ../blocks/legal-info/_legal-info.pug
+
+block variables
+	- let  mainPage= null 
+	//- - let  bg= '13-personal-account.jpg'
+
+block title
+	- let  title= 'Юридик малумотлар'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+topLine()
+		+top-nav()
+	+breadcrumb('Асосий саҳифа', 'Кабинет', title)
+	+sPersonalAccount()
+		.row.row--main
+			.col-lg.col--aside
+				//- +b.avatar.d-none.d-lg-block
+				//- 	img(src=`img/@2x/avatar.jpg`, alt="")
+				//- 	+e.initials ШД
+				//- +form-wrap.navigation.d-none.d-lg-block
+				//- 	+in-c("radio", "Менинг малумотларим")(checked)
+				//- 	+in-c("radio", "Менинг буюртмаларим")
+				//- 	+in-c("radio", "Хабарлар")
+				+b.UL.navigation.d-none.d-lg-block
+					+e.LI.item.active: a(href="#") Юридик малумотлар
+					+e.LI.item: a(href="#") Докон ҳақида
+					+e.LI.item: a(href="#") Профиль
+					+e.LI.item: a(href="#") Махсулотлар
+					+e.LI.item: a(href="#") Буюртмалар
+					+e.LI.item: a(href="#") Махсулот қўшиш
+					+e.LI.item: a(href="#") Хабарлар
+			.col-lg.col--main
+				+seller-legal-info()
+	+footer()
+
+
+

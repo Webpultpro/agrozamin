@@ -1,14 +1,14 @@
 mixin legal-info(empty)
 	// start legal-info
 	if empty
-		+b.legal-info-empty
+		+b.legal-info-empty&attributes(attributes)
 				+e.wrapper
-					+e.subtitle Юридик малумотлар
+					h2 Юридик малумотлар
 					p Маълумотлар тўлдирилмаган <br> Буюртма бериш учун сиз юридик маълумотларни кўрсатишингиз керак.
 					+e.BUTTON.btn.btn.btn-primary Маълумот қўшиш
 	else
-		+b.legal-info-filled
-			+e.subtitle Юридик малумотлар
+		+b.legal-info-filled&attributes(attributes)
+			h2 Юридик малумотлар
 			.row
 				.col-md-6
 					mixin item(h, t)
@@ -27,3 +27,35 @@ mixin legal-info(empty)
 			+e.BUTTON.btn.btn.btn-primary Маълумотларни ўзгартириш
 
 	// end legal-info
+
+mixin seller-legal-info(empty)
+	// start seller-legal-info
+	if empty
+		+b.seller-legal-info-empty&attributes(attributes)
+				+e.wrapper
+					h1 Юридик малумотлар
+					p Маълумотлар тўлдирилмаган <br> Буюртма бериш учун сиз юридик маълумотларни кўрсатишингиз керак.
+					+e.BUTTON.btn.btn.btn-primary Маълумот қўшиш
+	else
+		+b.seller-legal-info-filled&attributes(attributes)
+			.section-title
+				h1 Юридик малумотлар
+				span Юридик маълумотлар текширилган
+			.row
+				.col-md-6
+					mixin item(h, t)
+						+e.item
+							+e.title= h
+							+e.text= t
+					+item(`Номи`, `Шокиров Дилмурод Асқарович `)
+					+item(`Телефон рақами`, `+998974050002`)
+					+item(`Вилоят`, `Самарқанд вилояти`)
+					+item(`Туман`, `Пастдарғом туман`)
+				.col-md-6
+					+item(`Банк МФО си`, `"Агробанк" аксиядорлик-тижорат банки»`)
+					+item(`Манзил`, `43 Мукимий Кўчаси, Тошкент, Ўзбекистон, 100096-уй`)
+					+item(`СТИР`, `154786022`)
+					+item(`Хисоб рақами`, `2223 1238 4568 1234 9963 `)
+			+e.BUTTON.btn.btn.btn-primary Маълумотларни ўзгартириш
+
+	// end seller-legal-info
