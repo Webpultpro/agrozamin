@@ -29,8 +29,22 @@ block pagecontent
 		+top-nav()
 	+breadcrumb('Асосий саҳифа',title)
 	+sPersonalAccount()
-		+personal-info()
-		+legal-info(`empty`)
+		.row.row--main
+			.col-lg.col--aside
+				+b.avatar.d-none.d-lg-block
+					img(src=`img/@2x/avatar.jpg`, alt="")
+					+e.initials ШД
+				//- +form-wrap.navigation.d-none.d-lg-block
+				//- 	+in-c("radio", "Менинг малумотларим")(checked)
+				//- 	+in-c("radio", "Менинг буюртмаларим")
+				//- 	+in-c("radio", "Хабарлар")
+				+b.UL.navigation.d-none.d-lg-block
+					+e.LI.item.active: a(href="#") Менинг малумотларим
+					+e.LI.item: a(href="#") Менинг буюртмаларим
+					+e.LI.item: a(href="#") Хабарлар
+			.col-lg.col--main
+				+personal-info()
+				+legal-info(`empty`)
 	+footer()
 
 

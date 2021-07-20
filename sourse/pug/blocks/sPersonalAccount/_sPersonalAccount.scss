@@ -7,7 +7,7 @@
 	min-height: 675px;
 	@include media-breakpoint-up(md) {
 		--sPB: #{rem(214)};
-	min-height: 695px;
+		min-height: 695px;
 	}
 	@include media-breakpoint-up(lg) {
 		margin-top: rem(47);
@@ -34,22 +34,51 @@
 	}
 } // end.sPersonalAccount
 
+// .navigation {
+// 	padding: rem(9) rem(6);
+// 	background: #ffffff;
+// 	border: 1px solid $input-border-color;
+// 	border-radius: 12px;
+// 	box-shadow: none;
+// 	.custom-input {
+// 		padding-left: 0;
+// 		&__input {
+// 			visibility: hidden;
+// 		}
+// 		.form-check-label {
+// 			@include mt;
+// 			display: block;
+// 			font-weight: 500;
+// 			font-size: rem(14);
+// 			line-height: 125%;
+// 			color: #3e3e3e;
+// 			padding: rem(7) rem(8);
+// 			border-radius: 8px;
+// 			cursor: pointer;
+// 			&:hover {
+// 				background-color: lighten($primary, 55%);
+// 			}
+// 		}
+// 		.form-check-input:checked {
+// 			& + .form-check-label {
+// 				background-color: $primary;
+// 				color: $white;
+// 				&:hover {
+// 					background-color: #26d580;
+// 				}
 
-
-
-
+// 			}
+// 		}
+// 	}
+// }
 .navigation {
+	list-style: none;
 	padding: rem(9) rem(6);
 	background: #ffffff;
 	border: 1px solid $input-border-color;
 	border-radius: 12px;
-	box-shadow: none;
-	.custom-input {
-		padding-left: 0;
-		&__input {
-			visibility: hidden;
-		}
-		.form-check-label {
+	&__item {
+		a {
 			@include mt;
 			display: block;
 			font-weight: 500;
@@ -58,47 +87,21 @@
 			color: #3e3e3e;
 			padding: rem(7) rem(8);
 			border-radius: 8px;
-			cursor: pointer;
 			&:hover {
 				background-color: lighten($primary, 55%);
 			}
 		}
-		.form-check-input:checked {
-			& + .form-check-label {
+		&.active {
+			a {
 				background-color: $primary;
 				color: $white;
 				&:hover {
 					background-color: #26d580;
 				}
-
 			}
 		}
 	}
 }
-// .navigation {
-// 	list-style: none;
-// 	padding: rem(9) rem(6);
-// 	background: #ffffff;
-// 	border: 1px solid $input-border-color;
-// 	border-radius: 12px;
-// 	&__item {
-// 		a {
-// 			display: block;
-// 			font-weight: 500;
-// 			font-size: rem(14);
-// 			line-height: 125%;
-// 			color: #3e3e3e;
-// 			padding: rem(7) rem(8);
-// 			border-radius: 8px;
-// 		}
-// 		&.active {
-// 			a {
-// 				background-color: $primary;
-// 				color: $white;
-// 			}
-// 		}
-// 	}
-// }
 
 .avatar {
 	@include block;
