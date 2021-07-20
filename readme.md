@@ -1,4 +1,3 @@
-1. <https://pashawol.github.io/0007agroZamin/public>
 1. <https://pashawol.github.io/0007agroZamin/public/02-authorization.html>
 1. <https://pashawol.github.io/0007agroZamin/public/03-registration.html>
 1. <https://pashawol.github.io/0007agroZamin/public/04-forgot-password.html>
@@ -9,6 +8,8 @@
 1. <https://pashawol.github.io/0007agroZamin/public/10-warning-no-app.html>
 1. <https://pashawol.github.io/0007agroZamin/public/11-warning-no-key.html>
 1. <https://pashawol.github.io/0007agroZamin/public/12-enter-legal-info.html>
+1. <https://pashawol.github.io/0007agroZamin/public/13-personal-account-1.html>
+1. <https://pashawol.github.io/0007agroZamin/public/13-personal-account-2.html>
 1. <https://pashawol.github.io/0007agroZamin/public/14-catalog.html>
 1. <https://pashawol.github.io/0007agroZamin/public/14-catalog-2.html>
 1. <https://pashawol.github.io/0007agroZamin/public/14-catalog-3.html>

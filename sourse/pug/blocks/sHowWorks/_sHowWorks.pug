@@ -20,3 +20,26 @@ mixin sHowWorks(data)
 				+item(3, `Етказиб бериш ва вақти ҳақида келишиб оласиз`)
 
 	// end sHowWorks
+
+mixin sHowWorks2(data)
+	// start sHowWorks2
+	+b.SECTION.sHowWorks.section#sHowWorks&attributes(attributes)
+		.container
+			//- +e.wrapper
+			+b.section-title.text-center
+				h2 Хизмат қандай ишлаши ҳақида
+			.row.justify-content-center
+				mixin item(i, p)
+					+e.col.col-md-4.col-lg-3
+						+e.item(href='#')
+							+e.DIV.img-wrap
+								img(src=`img/svg/how-works-${i}.svg` alt="")
+							p!= p
+							+e.more
+								span Батафсил
+								+icon('shevron-right-sm')
+				+item(4, `Ўзингиз ва компаниянгиз ҳақида маълумотни тўлдиринг`)
+				+item(5, `Маҳсулотингизни сайтга <br> юкланг`)
+				+item(6, `Савдо орқли фойдага <br> ега бўлинг`)
+
+	// end sHowWorks2
