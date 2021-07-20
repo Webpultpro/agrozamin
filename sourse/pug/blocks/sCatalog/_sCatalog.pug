@@ -51,6 +51,15 @@ mixin card(i)
 				.fw-500.mb-1: a.text-body(href="#")  Қизил Юсуф памидори
 				block
 				+e.btn(type="button") Саватчага қўшиш
+mixin cardf(i)
+	.col-xl-3.col-md-4
+		+b.card-prod--vertical.--favorite
+			div
+				+e.img-wrap.bg-wrap(href="#")
+					+pic(`prod-${i}.jpg`,'bg',0).picture-bg
+			+e.caption
+				.h6.strong 12 099 сум/ Қадоқда
+				p.text-secondary Лаззатли шифобахш хусусиятларга ега бўлган Аругула ўсимлиги
 mixin sCatalog(data)
 	// start sCatalog
 	+b.sCatalog.section.pt-0&attributes(attributes)
@@ -183,13 +192,13 @@ mixin sCatalog15(data)
 			.section-title.text-center
 				h2 Оммабоп маҳсулотлар
 			+e.row.row
-				+card(1) 
-				+card(2)
-				+card(3)
-				+card(4)
-				+card(5)
-				+card(6)
-				+card(5)
-				+card(6)
+				+cardf(1) 
+				+cardf(2)
+				+cardf(3)
+				+cardf(4)
+				+cardf(5)
+				+cardf(6)
+				+cardf(5)
+				+cardf(6)
 	// end sCatalog
 

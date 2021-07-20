@@ -4,14 +4,19 @@ mixin sProdBody(data)
 		.container
 			+e.inner
 				.row
-					+e.col.col-lg-auto
-						+e.slider--lg.mySwiper2.swiper-container
-							.swiper-wrapper
-								- for (var x = 0; x < 4; x++)
-									+e.slide.swiper-slide
-										+e.img-wrap(href="img/@2x/prod-slide.png" data-fancybox="gal").bg-wrap
-											img.img-bg(src="img/@2x/prod-slide.png" loading="lazy" , alt="")
-						+e.slider-sm-wrap
+					+e.col.col-md-auto
+						+e.slider-lg-wrap
+							+e.slider--lg.mySwiper2.swiper-container
+								.swiper-wrapper
+									- for (var x = 0; x < 4; x++)
+										+e.slide.swiper-slide
+											+e.img-wrap(href="img/@2x/prod-slide.png" data-fancybox="gal").bg-wrap
+												img.img-bg(src="img/@2x/prod-slide.png" loading="lazy" , alt="")
+								.d-md-none
+									.swiper-pagination
+							.d-md-none
+								+arrow
+						+e.slider-sm-wrap.d-none.d-md-block
 							+e.slider--sm.mySwiper.swiper-container
 								.swiper-wrapper
 									- for (var x = 0; x < 4; x++)
@@ -19,24 +24,28 @@ mixin sProdBody(data)
 											+e.img-wrap().bg-wrap
 												img.img-bg(src="img/@2x/prod-slide.png"  loading="lazy", alt="")
 							+arrow
-						+e.btn(href="#") Саватчага қўшиш
-					.col-lg
-						h1 Горох пурпурный король
-						+e.price 
-							strong 4 199 сум
-							span килограм учун
-						.h6 Тавсифи
-						+e.content.readmore-js()
-							p Ўсимликнинг баландлиги 1 метрга етади, екиш пайтида уни зарур ишларни амалга ошириш керак. Озиқ-овқат маҳсулотларидан ташқари, нўхат жуда декоратив кўриришга ега бўлади. Узлуксиз ҳосилдорликни олиш учун тавсия етилади. Озиқ-овқат маҳсулотларидан ташқари, нўхат жуда декоратив кўриришга ега бўлади. Узлуксиз ҳосилдорликни олиш учун тавсия етилади, екиш пайтида уни зарур ишларни амалга ошириш керак.
-							//- +e.btn-more(href="#") Батафсил 
-						ul 
-							li <span>Хусусиятлари:</span> Хар доим талабга жавоб беради
-							li <span>Екиш вақти:</span>  Апрель - Май
-							li <span>Жойлашуви:</span>  Очиқ эр, иссиқхона
-							li <span>Пишиб етиш даври:</span>  Мавсум ўртаси (100 - 120 кун) 
-							li <span>Хусусиятлари:</span>  Хар доим талабга жавоб беради
-							li <span>Екиш вақти:</span>  Апрель - Май
-							li <span>Жойлашуви:</span>  Очиқ эр, иссиқхона
+							
+						+e.btn.d-none.d-md-block(href="#") Саватчага қўшиш
+					.col-md
+						+e.caption
+							.text-secondary.d-md-none Арт. 12757510
+							h1 Горох пурпурный король
+							+e.price 
+								strong 4 199 сум
+								span килограм учун
+							.h6 Тавсифи
+							+e.content.readmore-js()
+								p Ўсимликнинг баландлиги 1 метрга етади, екиш пайтида уни зарур ишларни амалга ошириш керак. Озиқ-овқат маҳсулотларидан ташқари, нўхат жуда декоратив кўриришга ега бўлади. Узлуксиз ҳосилдорликни олиш учун тавсия етилади. Озиқ-овқат маҳсулотларидан ташқари, нўхат жуда декоратив кўриришга ега бўлади. Узлуксиз ҳосилдорликни олиш учун тавсия етилади, екиш пайтида уни зарур ишларни амалга ошириш керак.
+								//- +e.btn-more(href="#") Батафсил 
+							ul 
+								li <span>Хусусиятлари:</span> Хар доим талабга жавоб беради
+								li <span>Екиш вақти:</span>  Апрель - Май
+								li <span>Жойлашуви:</span>  Очиқ эр, иссиқхона
+								li <span>Пишиб етиш даври:</span>  Мавсум ўртаси (100 - 120 кун) 
+								li <span>Хусусиятлари:</span>  Хар доим талабга жавоб беради
+								li <span>Екиш вақти:</span>  Апрель - Май
+								li <span>Жойлашуви:</span>  Очиқ эр, иссиқхона
+				+e.btn.d-md-none(href="#") Саватчага қўшиш
 			.text-end 
 				a(href="#").ttu Кейингиси
 					+icon("chevron-right")
