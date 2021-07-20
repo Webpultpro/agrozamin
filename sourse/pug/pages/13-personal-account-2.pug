@@ -10,6 +10,8 @@ extends layout/main.pug
 //- include ../blocks/sWhantToSell/_sWhantToSell.pug
 //- include ../blocks/sHowWorks/_sHowWorks.pug
 include ../blocks/sPersonalAccount/_sPersonalAccount.pug
+include ../blocks/personal-info/_personal-info.pug
+include ../blocks/legal-info/_legal-info.pug
 
 block variables
 	- let  mainPage= null 
@@ -27,6 +29,8 @@ block pagecontent
 		+top-nav()
 	+breadcrumb('Асосий саҳифа',title)
 	+sPersonalAccount()
+		+personal-info()
+		+legal-info()
 	+footer()
 
 
