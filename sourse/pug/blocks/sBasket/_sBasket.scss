@@ -1,0 +1,212 @@
+// start .sBasket
+.sBasket {
+		// --sPT: ;
+		--sPB: #{rem(80)};
+		// --sTPB: ;
+		table{
+			width: 100%;
+			@include media-breakpoint-down(lg){
+				display: block;
+				tbody,
+				td{
+					display: block;
+				}
+				tr{
+					display: flex;
+					flex-wrap: wrap;
+					padding-left: rem(92 + 20);
+					position: relative;
+					min-height: rem(92 + 20);
+					border-bottom: 1px solid #f8f9fa;
+					margin-bottom: rem(20);
+					padding-bottom: rem(12);
+					padding-right: rem(30);
+					align-items: center;
+				}
+				
+			}
+			picture{
+				@include block;
+				overflow: hidden;
+				border-radius: 8px;
+				@include media-breakpoint-up(lg){
+				}
+				// width: rem(73px);
+				width: rem(92px);
+				img{
+					position: absolute;
+					left: 0;
+					top: 0;
+				}
+			}
+		}
+		thead{
+
+			@include media-breakpoint-down(lg) {display: none;}
+		}
+		th{
+			padding-bottom: rem(20);
+			white-space: nowrap;
+		}
+		ul{
+			@include media-breakpoint-down(lg){
+				display: none;
+			}
+		}
+		td{
+				@include media-breakpoint-up(lg){
+					padding-bottom: rem(18);
+				}
+				padding-bottom: rem(10);
+			vertical-align: middle;
+			&:nth-child(6) {
+				white-space: nowrap;
+			}
+				@include media-breakpoint-up(lg){
+
+					.addBlock{
+						margin-left: auto;
+						margin-right: auto;
+					}
+				}
+				@include media-breakpoint-down(lg){
+					&:first-child{
+						position: absolute;
+						left: 0;
+						top: 0;
+					}
+					&:nth-child(2){
+						padding-bottom: 0;
+					}
+					// &:nth-child(3){
+					&:nth-child(2){
+						width: 100%;
+					}
+					&:last-child{
+						position: absolute;
+						right: 0;
+						top: 0;
+					}
+					&:nth-child(5){
+						width: 100%;
+					}
+					&:nth-child(6){
+						position: absolute;
+						right: 0;
+						bottom: rem(20);
+					}
+
+				}
+		}
+		td,
+		th{
+			// padding-right: rem(13);
+			@include media-breakpoint-up(lg) {
+				padding-right: rem(10);
+
+				text-align: center;
+				&:nth-child(1) {
+					text-align: left;
+				}
+			}
+		}
+		
+		td{
+			&:nth-child(1){
+				width: rem(92 + 13);
+			}
+			&:nth-child(2) {
+				text-align: left;
+			}
+		}
+		li{
+			list-style: none;
+			max-width: rem(400);
+			span{
+				@extend .text-secondary;
+			}
+		}
+
+		&__btn-delete{
+			cursor: pointer;
+			color: #3e3e3e;
+			margin-bottom: rem(2 );
+			&:hover{
+				opacity: 0.8;
+			}
+			.icon{
+				font-size: rem(18);
+			}
+		}
+
+		&__total{
+				text-align: center;
+			@include media-breakpoint-up(lg){
+				text-align: right;
+				padding-top: rem(53);
+				border-top: 1px solid #E0E0E0;
+			}
+			padding-top: rem(27);
+			
+		}
+		&__total-price{
+			font-size: rem(22);
+			font-weight: 500;
+			margin-bottom: rem(47);
+
+		}
+		&__btn{
+			@extend .btn;
+			@extend .btn-primary;
+			width: rem(250);
+		}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sBasket
+
+.addBlock{
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: rem(34 + 34 + 58);
+	// justify-content: center;
+	input{
+		width: rem(58);
+		border: none;
+		text-align: center;
+	}
+	&__btn{
+		@extend .btn;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		border-radius: 50%;
+		width: rem(34);
+		height: rem(34);
+		flex:  0 0 auto;
+		position: relative;
+		&::before,
+		&::after{
+			content: '';
+			@include a-cent;
+			background-color: currentColor;
+			width: rem(14);
+			height: rem(2);
+		}
+		&--minus{
+			@extend .btn-secondary2;
+		}
+		&--plus{
+			@extend .btn-primary;
+			&::after{
+				transform: rotate(90deg);
+			}
+		}
+	}
+}

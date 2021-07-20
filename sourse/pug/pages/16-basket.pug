@@ -1,0 +1,40 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/aside/_aside.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sBasket/_sBasket.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sAdvantages/_sAdvantages.pug
+//- include ../blocks/sCategories/_sCategories.pug
+//- include ../blocks/sPopulars/_sPopulars.pug
+//- include ../blocks/sWhantToSell/_sWhantToSell.pug
+//- include ../blocks/sHowWorks/_sHowWorks.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= '15.jpg'
+
+block title
+	- let  title= ' Саватча'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+topLine()
+		+top-nav()
+	+breadcrumb('Асосий саҳифа',title)
+	+b.page-title
+		.container
+			.row
+				.col-auto
+					h1= title 
+	+sBasket
+	+footer()
+
+
+

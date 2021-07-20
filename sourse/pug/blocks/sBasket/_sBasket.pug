@@ -1,0 +1,49 @@
+mixin sBasket(data)
+	// start sBasket
+	+b.sBasket.section#sBasket&attributes(attributes)
+		.container
+			table
+				thead 
+					tr 
+						th(colspan="2") Товар
+						th Нархи (сум)	
+						th Ў.б.
+						th Миқдори
+						th Суммаси
+						th
+				mixin tr(i, t)
+					tr
+						td
+							a(href="#") 
+								+pic(`prod-${i}.jpg`,'bg',0)
+						td 
+							.strong.mb-1= t
+							ul
+								li <span>Сотувчи:</span> Ташкент АгроФерма
+								block
+
+						td 
+							.text-secondary 10 199 
+						td 
+							.text-secondary килограмм
+						td 
+							+addblock()
+						td 10 199 сум
+						td 
+							+e.btn-delete
+								+icon("delete")
+				tbody
+					+tr("1",'Бинафша Шоҳ Нўхати')
+						li <span>Олиб кетиш:</span> 15, Бектемирский район, массив Олима Оширова, Ташкент, Узбекистан
+					+tr("2",'Қизил лавлаги') 
+					+tr("3",'Яшил парракли укроп')
+						li <span>Олиб кетиш:</span> 15, Бектемирский район, массив Олима Оширова, Ташкент, Узбекистан
+					+tr("4",'Рассия гигант сабзилари') 
+			+e.total
+				+e.total-price
+					span.text-secondary  Жами: 
+					| 
+					| 31 944 889 сум
+				+e.btn(type="button") Буюртма бериш
+	// end sBasket
+
