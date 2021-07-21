@@ -1,0 +1,39 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sAdvantages/_sAdvantages.pug
+//- include ../blocks/sCategories/_sCategories.pug
+//- include ../blocks/sPopulars/_sPopulars.pug
+//- include ../blocks/sWhantToSell/_sWhantToSell.pug
+include ../blocks/sHowWorks/_sHowWorks.pug
+include ../blocks/sProductsOnSite/_sProductsOnSite.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Главная'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+topLine()
+		+top-nav()
+	+headerBlock
+	+sHowWorks2
+	+sProductsOnSite
+	//- +sAdvantages
+	//- +sCategories
+	//- +sPopulars
+	//- +sWhantToSell
+	//- +sAbout
+	+footer()
+
+
+

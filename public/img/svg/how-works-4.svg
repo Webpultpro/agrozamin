@@ -1,7 +1,16 @@
-<svg width="64" height="60" viewBox="0 0 64 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M35.3721 47.6438V43.041L52.5301 19.6438M35.3721 47.6438L33.8379 49.5616M35.3721 47.6438L39.9749 46.8767L61.0708 17.3424L56.468 14.2739L52.5301 19.6438M52.5301 19.6438L61.4543 25.7808L54.1667 35.7534" stroke="#00CD69" stroke-width="3.45205" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M41.1233 28.4659V13.8905C41.1233 11.984 39.5777 10.4385 37.6712 10.4385H5.45205C3.54554 10.4385 2 11.984 2 13.8905V54.5481C2 56.4546 3.54554 58.0001 5.45205 58.0001H37.6712C39.5777 58.0001 41.1233 56.4546 41.1233 54.5481V51.096" stroke="#00CD69" stroke-width="3.45205" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M9.66992 21.9452L12.7384 26.548L16.9576 18.4932M18.1083 25.0137H33.4507" stroke="#00CD69" stroke-width="3.45205" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M9.66992 36.1369L12.7384 40.7396L16.9576 32.6848M18.1083 39.2054H30.7658" stroke="#00CD69" stroke-width="3.45205" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M28.8503 10.4384V9.67123C28.8503 5.43453 25.4157 2 21.179 2V2C16.9423 2 13.5078 5.43453 13.5078 9.67123V10.4384" stroke="#00CD69" stroke-width="3.45205"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 83.9 60" style="enable-background:new 0 0 83.9 60;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#00CD69;stroke-width:3.452;stroke-linecap:round;stroke-linejoin:round;}
+	.st1{fill:none;stroke:#00CD69;stroke-width:3.452;}
+</style>
+<path class="st0" d="M55.3,47.6V43l17.2-23.4 M55.3,47.6l-1.5,1.9 M55.3,47.6l4.6-0.8L81,17.3l-4.6-3.1l-3.9,5.4 M72.4,19.6l8.9,6.1
+	l-7.3,10"/>
+<path class="st0" d="M61,28.5V13.9c0-1.9-1.5-3.5-3.5-3.5H25.4c-1.9,0-3.5,1.5-3.5,3.5v40.7c0,1.9,1.5,3.5,3.5,3.5h32.2
+	c1.9,0,3.5-1.5,3.5-3.5v-3.5"/>
+<path class="st0" d="M29.6,21.9l3.1,4.6l4.2-8.1 M38,25h15.3"/>
+<path class="st0" d="M29.6,36.1l3.1,4.6l4.2-8.1 M38,39.2h12.7"/>
+<path class="st1" d="M48.8,10.4V9.7c0-4.2-3.4-7.7-7.7-7.7l0,0c-4.2,0-7.7,3.4-7.7,7.7v0.8"/>
 </svg>
