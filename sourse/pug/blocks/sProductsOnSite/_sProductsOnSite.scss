@@ -163,8 +163,8 @@
 		}
 		&__btn {
 			@include mt;
-			padding: rem(12);
-			border-radius: 4px;
+			padding: rem(12) !important;
+			border-radius: 4px !important;
 			background-color: transparent;
 			&:not(:last-child) {
 				margin-right: rem(6);
@@ -178,9 +178,12 @@
 				white-space: nowrap;
 			}
 			&:hover {
-				background-color: lighten($primary, 55%);
+				span {
+					color: #00cd69;
+				}
 			}
 			&.active {
+				@extend .btn;
 				@extend .btn-primary;
 				span {
 					color: $white;
