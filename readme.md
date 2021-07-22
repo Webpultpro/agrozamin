@@ -11,6 +11,8 @@
 1. <https://pashawol.github.io/0007agroZamin/public/12-enter-legal-info.html>
 1. <https://pashawol.github.io/0007agroZamin/public/13-personal-account-1.html>
 1. <https://pashawol.github.io/0007agroZamin/public/13-personal-account-2.html>
+1. <https://pashawol.github.io/0007agroZamin/public/13-personal-account-3.html>
+1. <https://pashawol.github.io/0007agroZamin/public/13-personal-account-4.html>
 1. <https://pashawol.github.io/0007agroZamin/public/14-catalog.html>
 1. <https://pashawol.github.io/0007agroZamin/public/14-catalog-2.html>
 1. <https://pashawol.github.io/0007agroZamin/public/14-catalog-3.html>
