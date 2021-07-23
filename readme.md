@@ -10,9 +10,13 @@
 1. <https://webpult.github.io/agrozamin/public/11-warning-no-key.html>
 1. <https://webpult.github.io/agrozamin/public/12-enter-legal-info.html>
 1. <https://webpult.github.io/agrozamin/public/13-personal-account-1.html>
+1. <https://webpult.github.io/agrozamin/public/13-personal-account-1-mobile.html>
 1. <https://webpult.github.io/agrozamin/public/13-personal-account-2.html>
 1. <https://webpult.github.io/agrozamin/public/13-personal-account-3.html>
+1. <https://webpult.github.io/agrozamin/public/13-personal-account-3-mobile.html>
 1. <https://webpult.github.io/agrozamin/public/13-personal-account-4.html>
+1. <https://webpult.github.io/agrozamin/public/13-personal-account-5.html>
+1. <https://webpult.github.io/agrozamin/public/13-personal-account-5-filled.html>
 1. <https://webpult.github.io/agrozamin/public/14-catalog.html>
 1. <https://webpult.github.io/agrozamin/public/14-catalog-2.html>
 1. <https://webpult.github.io/agrozamin/public/14-catalog-3.html>

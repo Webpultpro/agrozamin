@@ -1,0 +1,253 @@
+// start .sAboutStore
+.sAboutStore {
+	// --sPT: ;
+	--sPB: 0;
+	--sTPB: #{rem(20)};
+	.form-wrap {
+		margin: 0;
+		padding: 0;
+		box-shadow: none;
+		// max-width: 420px;
+		max-width: 100%;
+		@include media-breakpoint-up(xl) {
+			padding-left: rem(35);
+		}
+		.form-group {
+			max-width: 420px;
+		}
+		h6 {
+			margin-bottom: 0;
+			line-height: (22 / 16);
+		}
+		form {
+			width: 100%;
+			text-align: left;
+		}
+		.section-title {
+			max-width: 420px;
+			h1 {
+				font-weight: bold;
+				line-height: 116%;
+				@include rfs(32px);
+				margin-bottom: rem(8);
+				@include media-breakpoint-up(xl) {
+					font-size: 32px;
+				}
+			}
+			p {
+				font-size: 12px;
+				line-height: 125%;
+				color: $secondary;
+				margin-bottom: 0;
+			}
+		}
+
+		&__company-title {
+			font-weight: 500;
+			font-size: rem(19);
+			line-height: 125%;
+			color: #5a6066;
+			margin-bottom: rem(10);
+			max-width: 420px;
+		}
+		&__company-description {
+			font-size: 14px;
+			line-height: 125%;
+			color: #000000;
+			max-width: 480px;
+			margin-bottom: rem(38);
+		}
+		&__input-title {
+			font-weight: 500;
+			font-size: rem(16);
+			line-height: 125%;
+			color: #000000;
+		}
+		textarea.form-control {
+			min-height: 130px;
+		}
+		&__prompt {
+			font-size: 11px;
+			line-height: (22 / 11);
+			color: #999999;
+			margin-bottom: rem(11);
+			&--lg {
+				font-size: rem(14);
+				line-height: 125%;
+				color: $body-color;
+				margin-bottom: rem(24);
+			}
+		}
+		&__item {
+			margin-bottom: rem(38);
+			max-width: 420px;
+
+			.form-group {
+				margin-bottom: (rem(14));
+			}
+		}
+
+		&__row {
+			--bs-gutter-x: #{rem(10)};
+			--bs-gutter-y: var(--bs-gutter-x);
+			@include media-breakpoint-up(sm) {
+				--size: #{rem(19)};
+			}
+		}
+
+		&__geo-link {
+			text-decoration: underline;
+			font-size: rem(16);
+			line-height: (21 / 16);
+		}
+
+		&__btn-wrap {
+			margin-top: rem(100);
+			text-align: right;
+		}
+		&__btn {
+			min-width: 250px;
+		}
+		&__shedule {
+			display: flex;
+			align-items: center;
+			margin-bottom: rem(24);
+			.form-group {
+				margin-bottom: 0;
+			}
+			span {
+				font-weight: bold;
+				font-size: rem(14);
+				line-height: (16 / 14);
+				margin: 0 rem(8);
+			}
+			.form-control {
+				position: relative;
+				overflow: visible;
+				font-weight: bold;
+				font-size: rem(14);
+				line-height: (16 / 14);
+				border-radius: 0;
+				border-color: transparent;
+				&::after {
+					content: "";
+					position: absolute;
+					width: 100%;
+					height: 3px;
+					left: 0;
+					bottom: -2px;
+					background-color: #e6e6e6;
+				}
+				// border-bottom: 3px solid #e6e6e6;
+			}
+			.form-check {
+				margin-right: rem(10);
+			}
+			.form-check-label {
+				margin-left: 3px;
+			}
+			.form-check-input {
+				width: rem(16);
+				height: rem(16);
+				margin-top: 2px;
+				border-radius: 0;
+				border-width: 2px;
+
+			}
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sAboutStore
+
+.add-image {
+	@include block(84 / 81);
+	width: 100%;
+	// max-width: 84px;
+	overflow: hidden;
+	background-color: #edeff2;
+	cursor: pointer;
+	border: 1px solid #e6e6e6;
+
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: 5;
+		object-fit: cover;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		background-image: url(../img/svg/camera-2.svg);
+		background-repeat: no-repeat;
+		background-position: 50%;
+		background-size: 40%;
+		background-color: #f8fafd;
+	}
+
+	&__inscription {
+		@include mt;
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		font-weight: 500;
+		font-size: 10px;
+		line-height: 22px;
+		color: $white;
+		background-color: rgba($color: #000000, $alpha: 0.68);
+		opacity: 0;
+		z-index: 6;
+	}
+	&:hover {
+		.add-image__inscription {
+			opacity: 1;
+		}
+	}
+	&--filled {
+		.add-image__inscription {
+			display: none;
+		}
+		&::before {
+			content: "";
+			@include mt;
+			background-image: url(../img/svg/basket.svg);
+			background-repeat: no-repeat;
+			background-position: 50%;
+			background-size: 40%;
+			background-color: rgba($color: #000000, $alpha: 0.68);
+			opacity: 0;
+			z-index: 6;
+		}
+		&:hover {
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+}

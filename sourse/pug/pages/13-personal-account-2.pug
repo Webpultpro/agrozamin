@@ -15,7 +15,7 @@ include ../blocks/legal-info/_legal-info.pug
 
 block variables
 	- let  mainPage= null 
-	- let  bg= '13-personal-account.jpg'
+	//- - let  bg= '13-personal-account.jpg'
 
 block title
 	- let  title= 'Кабинет'
@@ -34,10 +34,6 @@ block pagecontent
 				+b.avatar.d-none.d-lg-block
 					img(src=`img/@2x/avatar.jpg`, alt="")
 					+e.initials ШД
-				//- +form-wrap.navigation.d-none.d-lg-block
-				//- 	+in-c("radio", "Менинг малумотларим")(checked)
-				//- 	+in-c("radio", "Менинг буюртмаларим")
-				//- 	+in-c("radio", "Хабарлар")
 				+b.UL.navigation.d-none.d-lg-block
 					+e.LI.item.active: a(href="#") Менинг малумотларим
 					+e.LI.item: a(href="#") Менинг буюртмаларим

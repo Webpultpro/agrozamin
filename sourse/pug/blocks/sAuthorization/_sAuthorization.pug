@@ -9,12 +9,12 @@ mixin sAuthorization(data)
 				+input(``, 'password', `Пароль`)
 				+b.remember
 					+in-c("checkbox", "Мени ушбу компютерда сақлаб қўйиш")
-					+b.link-info(href="#") Паролни унутдингизми?
+					a.link-info(href="#") Паролни унутдингизми?
 				+e.BUTTON.btn.btn.btn-primary Кириш
 				+soc-authorization()
 				+e.footer
 					+e.subtitle Тизимдан рўйхатдан ўтмаганмисиз?
-					+b.link-info(href="#") Рўйхатдан ўтиш
+					a.link-info(href="#") Рўйхатдан ўтиш
 
 
 	// end sAuthorization
