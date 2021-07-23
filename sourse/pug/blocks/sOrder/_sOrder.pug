@@ -1,0 +1,90 @@
+mixin sOrder(data)
+	// start sOrder
+	+b.FORM.sOrder.section#sOrder&attributes(attributes)
+		.container
+			+e.head
+				.text-center
+					a(href="/")
+						img(src="img/svg/logo.svg", alt="") 
+				+e.link-back(href="#") 
+					+icon('chevron-left')
+					| Харидга қайтиш
+				h1 Буюртмани расмийлаштириш 
+			+e.body
+				+b.sProdHead.mt-0
+					+pic("logo-prod.png",'',0).mb-2
+					.h4 МЧЖ "Green technology"
+					+stars
+					ul
+						li 
+							+e.icon-wrap: +icon("mark")
+							| Тошкент шахри
+						li 
+							+e.icon-wrap: +icon("shipping")
+							| Жойидан олиб кетиш
+						li 
+							+e.icon-wrap: +icon("pay")
+							| Жойида тўлов
+				+e.group
+					+e.group-title Иш вақти:
+					+e.group-text.text-secondary 10:00 – 22:00
+				+e.group
+					+e.group-title Докон суратлари
+					.row.g-2
+						.col-auto
+							+pic('img-1.jpg','bg',0).img-block
+						.col-auto
+							+pic('img-2.jpg','bg',0).img-block
+						.col-auto
+							+pic('img-3.jpg','bg',0).img-block
+				+e.group
+					+e.group-title Тўлов тури
+					+e.group-text.text-secondary Сотувчига жойида
+				+e.group
+					+e.group-title Буюртмага изоҳ қолдиринг
+					+e.group-text.text-secondary Сиз сотувчига кўринадиган шарҳ қолдиришингиз мумкин
+					+input("Изоҳ қолдиринг",'textarea')
+					.text-end 
+						+e.btn(type="submit") Жўнатиш
+				+e.group
+					if !data
+						+in-c("checkbox",'Бошқа киши томонидан олиб кетилинади')
+					else
+						+in-c("checkbox",'Бошқа киши томонидан олиб кетилинади')(checked)
+						.h6.text-primary.pb-4 Бошқа шахс томонидан буюртмалар ҳар қандай идентификация ҳужжатининг тақдимномасига биноан берилади,
+						+input("Исм")
+						+input("Фамилия")
+						+input("Телефон рақами",'tel')
+						.text-end 
+							+e.btn(type="submit") Сақлаш
+				
+				
+				+e.group
+					+e.group-title Буюртмада 4 та махсулот, 31 944 889 сўм мавжуд
+				+e.group
+					p Бинафша Шоҳ Нўхати
+						br
+						span.text-secondary 1 килограмм. x 10 199 сум
+					p Қизил лавлаги 
+						br
+						span.text-secondary  2 килограмм. x 13 136 сум
+					p Яшил парракли укроп 
+						br
+						span.text-secondary  1 упаковка. x 1 290 сум
+					p 
+						span.text-secondary Рассия гигант сабзилари
+					p Рассия гигант сабзилари 
+						br
+						span.text-secondary 2 тонна. x 31 920 264 сум
+				+e.btn--lg(type="submit") Буюртма бериш
+		+e.footer
+			.container
+				.row
+					.col Қўллаб қувватлаш хизмати: #[strong 1216]
+					.col-auto
+						a.text-body(href="#") Қайтиш
+					.col-auto
+						a.text-body(href="#") Барча ҳуқуқлар ҳимоя қилинган
+					.col-auto
+						a.text-body(href="#") Маълумотнома
+	// end sOrder

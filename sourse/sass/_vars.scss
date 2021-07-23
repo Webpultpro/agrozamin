@@ -24,7 +24,12 @@ $utilities: ("opacity": (
       // 50: .5,
       // 75: .75,
       // 100: 1,
-    )));
+    )),
+    "width": (property: width,
+      class: w,
+      values: (100px: 100px,
+      )),
+    );
 /// Variables
 //
 // Variables should follow the `$component-state-property-size` formula for

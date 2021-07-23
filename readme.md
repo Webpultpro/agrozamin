@@ -1,3 +1,4 @@
+1. <https://webpult.github.io/agrozamin/public/00-modal.html>
 1. <https://webpult.github.io/agrozamin/public/index-company.html>
 1. <https://webpult.github.io/agrozamin/public/02-authorization.html>
 1. <https://webpult.github.io/agrozamin/public/03-registration.html>
@@ -22,4 +23,5 @@
 1. <https://webpult.github.io/agrozamin/public/14-catalog-3.html>
 1. <https://webpult.github.io/agrozamin/public/15-prod.html>
 1. <https://webpult.github.io/agrozamin/public/16-basket.html>
-
+1. <https://webpult.github.io/agrozamin/public/17-order.html>
+1. <https://webpult.github.io/agrozamin/public/17-order-1.html>

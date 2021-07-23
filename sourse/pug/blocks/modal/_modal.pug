@@ -12,5 +12,27 @@ mixin modal()
 			+e.BUTTON.btn.btn(type="submit"  ) 
 			+policy()
 	// #modal-call
+	+b.modal-win.text-center(id="modal-go-reg" class=" " style="display: none" )
+		img(src="img/svg/home-icon.svg", loading="lazy"  alt="").w-100px.mx-auto
+		br
+		br
+		br
+		p.text-secondary Сотувни амалга ошириш учун тизмидан рўйхатдан ўтган болишингиз зарур
+		br
+		br
+		br
+		a.btn.btn-primary.w-190.mx-auto(href="#") Рўйхатдан ўтиш 
+	// #modal-go-reg
+	+b.modal-win.text-center(id="modal-view-order" class=" " style="display: none" )
+		img(src="img/svg/basket-i.svg",  loading="lazy" alt="").w-100px.mx-auto
+		br
+		.h4.text-center Сизнинг буюртмангиз қабул қилинди
+		br
+		p.text-secondary Мутахассис буюртмани тасдиқлаш ва маълумотларни аниқлаштириш учун сизга мурожаат қилади
+		br
+		br
+		br
+		a.btn.btn-primary.w-190.mx-auto(href="#") Буюртмани кўриш
+	// #modal-view-order
 	
 	// end modals
