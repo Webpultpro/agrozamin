@@ -1,0 +1,124 @@
+mixin sAboutStore(empty)
+	// start sAboutStore
+	+b.SECTION.sAboutStore.section#sAboutStore&attributes(attributes)
+			+form-wrap
+				if empty
+					+b.section-title
+						h1 Дўкон ҳақида
+						p Фойдаланувчилар докон ҳақида маълумотлар кўришлари учун маълумотларни киритинг
+					+input(``, 'text', `Дўкон номи`)
+					+input(``, 'textarea', `Дўконнинг қисқача тавсифим`)
+					+e.item
+						h6 Компания логотипи
+						+e.prompt Лого формати JPG, SVG, PNG
+						+e.row.row
+							.col-3
+								+b.add-image
+									//- img(src=`img/@2x/logo-prod.png`, alt="")
+									+e.inscription Сурат қўшиш
+					+e.item
+						h6 Дўкон сурати
+						+e.prompt 5 та сурат юклаш мумкин
+						+e.row.row
+							.col-3
+								+b.add-image
+									//- img(src=`img/@2x/avatar.jpg`, alt="")
+									+e.inscription Сурат қўшиш
+							.col-3
+								+b.add-image
+									//- img(src=`img/@2x/avatar.jpg`, alt="")
+									+e.inscription Сурат қўшиш
+							.col-3
+								+b.add-image
+									//- img(src=`img/@2x/avatar.jpg`, alt="")
+									+e.inscription Сурат қўшиш
+							.col-3
+								+b.add-image
+									//- img(src=`img/@2x/avatar.jpg`, alt="")
+									+e.inscription Сурат қўшиш
+						
+					+e.item
+						h6 Иш вақти
+						+e.prompt--lg Дўконнинг иш вақти ва харидорларга товарларни етказиб бериш
+						mixin shedule(d)
+							+e.shedule
+								+in-c("checkbox", `${d}`)
+								+input(``, 'time', ``)
+								span &minus;
+								+input(``, 'time', ``)
+						+shedule(`Понедельник`)
+						+shedule(`Вторник`)
+						+shedule(`Среда`)
+						+shedule(`Четверг`)
+						+shedule(`Пятница`)
+						+shedule(`Суббота`)
+						+shedule(`Воскресенье`)
+
+					+e.item
+						h6 Компания логотипи
+						+e.prompt--lg Дўкон маълумотларини қошиш орқали харидорларга дўкон билан боғланиш имкониятини яратасиз
+						+input(`Телефон рақами`, 'tel', ``)
+						+input(`E-mail`, 'email', ``)
+						+e.geo-link.link-info(href="#") Геолакация жойланг
+					+e.btn-wrap
+						+e.BUTTON.btn.btn.btn-primary Сақлаш
+				else
+					+b.section-title
+						h1 Дўкон ҳақида
+					+e.company-title МЧЖ "Green technology"
+					+e.company-description Доконимизда енг сар асабзовот уруғлари сотилади. Бизда чегирмалар мавжуд болиб, исталган тарзда хардни амалга оширишингиз мумкин
+					+e.item
+						h6 Компания логотипи
+						+e.prompt Лого формати JPG, SVG, PNG
+						+e.row.row
+							.col-3
+								+b.add-image--filled
+									img(src=`img/@2x/logo-prod.png`, alt="")
+									+e.inscription Сурат қўшиш
+					+e.item
+						h6 Дўкон сурати
+						+e.prompt 5 та сурат юклаш мумкин
+						+e.row.row
+							.col-3
+								+b.add-image--filled
+									img(src=`img/@2x/about-store-1.png`, alt="")
+									+e.inscription Сурат қўшиш
+							.col-3
+								+b.add-image--filled
+									img(src=`img/@2x/about-store-2.png`, alt="")
+									+e.inscription Сурат қўшиш
+							.col-3
+								+b.add-image--filled
+									img(src=`img/@2x/about-store-3.png`, alt="")
+									+e.inscription Сурат қўшиш
+							.col-3
+								+b.add-image--filled
+									img(src=`img/@2x/about-store-4.png`, alt="")
+									+e.inscription Сурат қўшиш
+						
+					+e.item
+						h6 Иш вақти
+						+e.prompt--lg Дўконнинг иш вақти ва харидорларга товарларни етказиб бериш
+						mixin shedule(d)
+							+e.shedule
+								+in-c("checkbox", `${d}`)
+								+input(``, 'time', ``)
+								span &minus;
+								+input(``, 'time', ``)
+						+shedule(`Понедельник`)
+						+shedule(`Вторник`)
+						+shedule(`Среда`)
+						+shedule(`Четверг`)
+						+shedule(`Пятница`)
+						+shedule(`Суббота`)
+						+shedule(`Воскресенье`)
+
+					+e.item
+						h6 Компания логотипи
+						+e.prompt--lg Дўкон маълумотларини қошиш орқали харидорларга дўкон билан боғланиш имкониятини яратасиз
+						+input(`Телефон рақами`, 'tel', ``)
+						+input(`E-mail`, 'email', ``)
+						+e.geo-link.link-info(href="#") Геолакация жойланг
+					+e.btn-wrap
+						+e.BUTTON.btn.btn.btn-primary Сақлаш
+	// end sAboutStore

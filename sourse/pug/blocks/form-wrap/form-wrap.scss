@@ -82,6 +82,10 @@
 			// 	}
 		}
 	}
+	.link-info {
+		font-size: 13px;
+		line-height: (15 / 13);
+	}
 }
 
 .parsley-error {
@@ -335,11 +339,4 @@ input::-webkit-inner-spin-button {
 	}
 }
 
-.link-info {
-	font-size: 13px;
-	line-height: (15 / 13);
-	color: $info;
-	&:hover {
-		color: shift-color($info, 20%);
-	}
-}
+
