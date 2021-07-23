@@ -18,16 +18,18 @@ const JSCCommon = {
 	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
 
 	modalCall() {
-		const link = ".link-modal-js";
+		const link = "[data-fancybox]";
 
 		Fancybox.bind(link , {
 				arrows: false,
 				infobar: false,
 				touch: false,
+				infinite: false,
+				dragToClose: false,
 				type: 'inline',
 				autoFocus: false,
-				keyboard: {
-						CLOSE: "Закрыть",
+				l10n: {
+						Escape: "Закрыть",
 						NEXT: "Вперед",
 						PREV: "Назад",
 						// PLAY_START: "Start slideshow",
