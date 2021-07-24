@@ -54,7 +54,7 @@
 			font-size: 14px;
 			line-height: 125%;
 			color: #000000;
-			max-width: 480px;
+			max-width: 420px;
 			margin-bottom: rem(38);
 		}
 		&__input-title {
@@ -76,15 +76,30 @@
 				line-height: 125%;
 				color: $body-color;
 				margin-bottom: rem(24);
+				margin-top: rem(9);
 			}
 		}
+
+		
 		&__item {
 			margin-bottom: rem(38);
 			max-width: 420px;
 
+			&--wide {
+				max-width: 500px;
+			}
+			.form-check-input {
+				width: rem(16);
+				height: rem(16);
+				margin-top: 2px;
+				border-radius: 0;
+				border-width: 2px;
+
+			}
 			.form-group {
 				margin-bottom: (rem(14));
 			}
+
 		}
 
 		&__row {
@@ -96,14 +111,31 @@
 		}
 
 		&__geo-link {
+			display: inline-block;
 			text-decoration: underline;
 			font-size: rem(16);
 			line-height: (21 / 16);
+			margin-bottom: rem(30);
+			@include media-breakpoint-up(sm) {
+			margin-bottom: rem(50);
+			}
+		}
+
+		&__map {
+			max-width: 500px;
+			height: 200px;
+			&--min{
+				// height: 90px;
+			}
 		}
 
 		&__btn-wrap {
-			margin-top: rem(100);
-			text-align: right;
+			margin-top: rem(40);
+			text-align: center;
+			@include media-breakpoint-up(sm) {
+				margin-top: rem(100);
+				text-align: right;
+			}
 		}
 		&__btn {
 			min-width: 250px;
@@ -146,14 +178,7 @@
 			.form-check-label {
 				margin-left: 3px;
 			}
-			.form-check-input {
-				width: rem(16);
-				height: rem(16);
-				margin-top: 2px;
-				border-radius: 0;
-				border-width: 2px;
-
-			}
+			
 		}
 	}
 

@@ -1,11 +1,12 @@
-mixin sProdHead(data)
+mixin sProdHead(p)
 	// start sProdHead
 	+b.SECTION.sProdHead.section#sProdHead&attributes(attributes)
 		.container
 			+e.inner
 				.row
 					.col
-						p.text-secondary.d-none.d-md-block Арт. 12757510
+						if !p
+							p.text-secondary.d-none.d-md-block Арт. 12757510
 						+pic("logo-prod.png",'',0).mb-2
 						.h4 МЧЖ "Green technology"
 						+stars
@@ -19,6 +20,7 @@ mixin sProdHead(data)
 							li 
 								+e.icon-wrap: +icon("pay")
 								| Жойида тўлов
-					.col-md-auto
-						+e.btn(href="#") Қўнғироқ қилиш
+					if !p
+						.col-md-auto
+							+e.btn(href="#") Қўнғироқ қилиш
 	// end sProdHead
