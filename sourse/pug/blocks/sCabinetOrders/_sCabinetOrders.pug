@@ -1,0 +1,68 @@
+mixin sCabinetOrders()
+	// start sCabinetOrders
+	+b.sCabinetOrders#sCabinetOrders&attributes(attributes)
+		mixin item(data)
+			+b.orders-item
+				.row
+					.col
+						+e.title= data.title
+						+e.status(style=`--color: ${data.color}`)
+							= data.status
+						+e.number № RU210403-907701
+						ul
+							li 
+								span.text-secondary Буюртма берилган сана
+								| 27.04.2021
+							li 
+								span.text-secondary Тўлов тури:
+								| Етказиб берилади #[strong 50 380 сум] 3 та махсулот учун
+							li 
+								span.text-secondary Қабул қилиш усули:
+								| Олиб кетиш, 15, Бектемирский район, массив Олима Оширова, Ташкент
+					+e.col.col-sm-auto
+						+e.images.row
+							if data.emty
+								.col-auto
+									+e.img-wrap
+
+							else
+								.col-auto 
+									+e.img-wrap
+										+pic(`prod-1.jpg`,'bg',0)
+								.col-auto 
+									+e.img-wrap
+										+pic(`prod-1.jpg`,'bg',0)
+								block
+						if data.btn
+							+e.btn.btn-primary(href="#") Тасдиқлаш
+
+						else
+							+e.btn.btn-outline-primary(href="#") Бекор қилиш
+		+item({
+			title:'МЧЖ "Green technology"',
+			color:'#27B7D6',
+			status:'Тўлов қилинган', 
+			btn:"fgb"
+		})
+			.col-auto 
+				+e.img-wrap 
+					span +6
+		+item({
+			title:'МЧЖ "Azia media"',
+			color:'#7C7E80',
+			status:'Буюртма берилган', 
+			btn:"fgb"
+		})
+		+item({
+			title:'ЧП “Mega group”',
+			color:'#00CC69',
+			status:'Буюртма этказилган', 
+			btn:"fgb"
+		})
+		+item({
+			title:'МЧЖ "Azia media"',
+			color:' #7C7E80',
+			status:'Буюртма берилган',
+			emty:"dasd"
+		})
+	// end sCabinetOrders

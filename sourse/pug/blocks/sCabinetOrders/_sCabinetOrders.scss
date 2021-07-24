@@ -1,0 +1,112 @@
+// start .sCabinetOrders
+.sCabinetOrders {
+		--sPT: 0;
+		// --sPB: ;
+		// --sTPB: ;
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCabinetOrders
+
+.orders-item{
+	background: #FFFFFF;
+	/* Серый/Серый */
+
+	border: 1px solid #E6E6E6; 
+	border-radius: 12px;
+	padding: rem(23) rem(25);
+	margin-bottom: rem(24);
+	@include mt;
+	&:hover{
+		box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+	}
+	&__title{
+		font-size: rem(18);
+		font-weight: bold;
+		margin-bottom: rem(10);
+	}
+	&__status{
+		font-weight: 500;
+		position: relative;
+		padding-left: rem(20);
+		&::before{
+			content: '';
+			width: rem(14);
+			height: rem(14);
+			border-radius: 50%;
+			background-color: var(--color);
+			display: block;
+			left: 0;
+			top: rem(4);
+			position: absolute;
+			
+		}
+	}
+	&__number{
+		font-size: 12px;
+		margin-bottom: rem(16);
+	}
+	li{
+		list-style: none;
+		margin-bottom: rem(5);
+	}
+	&__col{
+		@include media-breakpoint-up(md) {
+
+			width: calc(var(--bs-gutter-x) + 76px * 3 );
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: flex-end;
+			margin-top: 0;
+		}
+		margin-top: rem(28);
+		.row{
+			--bs-gutter-x: 8px;
+		}
+	}
+	&__img-wrap{
+		@include block;
+		width: 68px;
+		border-radius: 4px;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center; 
+		box-shadow: inset 0 0 0 2px #CED4DA;
+		color: #CED4DA;
+		font-size: rem(18);
+		background-image: url(../img/svg/empty-img.svg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 80%;
+		span{
+			box-shadow: inset 0 0 0 2px #CED4DA;
+			border-radius: 4px;
+			background-color: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;	
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		img{
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+	&__btn{
+		@extend .btn;
+		width: rem(146);
+		margin-top: 40px;
+	}
+}
