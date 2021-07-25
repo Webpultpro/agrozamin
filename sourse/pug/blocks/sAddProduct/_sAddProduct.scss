@@ -123,6 +123,7 @@
 		}
 		&__map {
 			max-width: 500px;
+			height: 200px;
 		}
 	}
 	@include media-breakpoint-up(xl) {
