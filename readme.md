@@ -18,6 +18,8 @@
 1. <https://webpult.github.io/agrozamin/public/13-personal-account-4.html>
 1. <https://webpult.github.io/agrozamin/public/13-personal-account-5.html>
 1. <https://webpult.github.io/agrozamin/public/13-personal-account-5-filled.html>
+1. <https://webpult.github.io/agrozamin/public/13-personal-account-6.html>
+1. <https://webpult.github.io/agrozamin/public/13-personal-account-6-filled.html>
 1. <https://webpult.github.io/agrozamin/public/14-catalog.html>
 1. <https://webpult.github.io/agrozamin/public/14-catalog-2.html>
 1. <https://webpult.github.io/agrozamin/public/14-catalog-3.html>

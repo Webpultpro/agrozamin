@@ -18,6 +18,7 @@
 		h6 {
 			margin-bottom: 0;
 			line-height: (22 / 16);
+			color: #000000;
 		}
 		form {
 			width: 100%;
@@ -106,7 +107,7 @@
 			--bs-gutter-x: #{rem(10)};
 			--bs-gutter-y: var(--bs-gutter-x);
 			@include media-breakpoint-up(sm) {
-				--size: #{rem(19)};
+				--bs-gutter-x: #{rem(19)};
 			}
 		}
 
