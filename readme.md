@@ -21,6 +21,7 @@
 1. <https://webpult.github.io/agrozamin/public/13-personal-account-6.html>
 1. <https://webpult.github.io/agrozamin/public/13-personal-account-6-filled.html>
 1. <https://webpult.github.io/agrozamin/public/13-personal-account-7.html>
+1. <https://webpult.github.io/agrozamin/public/13-personal-account-8.html>
 2. <https://webpult.github.io/agrozamin/public/13-pa-orders-1.html>
 3. <https://webpult.github.io/agrozamin/public/13-pa-order.html>
 4. <https://webpult.github.io/agrozamin/public/13-pa-order-1.html>
