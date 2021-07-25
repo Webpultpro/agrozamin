@@ -1,0 +1,21 @@
+mixin sProfile(data)
+	// start sProfile
+	+b.SECTION.sProfile.section#sProfile&attributes(attributes)
+		.container
+			+e.inner
+				+pic("logo-prod.png",'',0).mb-2
+				.h4 МЧЖ "Green technology"
+				ul
+					li Манзил: 
+						span 15, Бектемир тумани, Олим Оширов даҳа, Тошкент, Ўзбекистон
+					li Иш вақти:
+						span 10:00 – 22:00
+					li Телефон:
+						span +998974050002
+					li E-mail:
+						span greentechnology@mail.ru
+				p Доконимизда енг сар асабзовот уруғлари сотилади. Бизда чегирмалар мавжуд болиб, исталган тарзда хардни амалга оширишингиз мумкин
+			+e.social
+				.text-secondary.mb-4 Ўз саҳифангизни ижтимоий тармоқлар <br> орқали бўлишинг
+				+soc
+	// end sProfile
