@@ -736,18 +736,19 @@
 			<!-- start sBasket-->
 			<div class="sBasket section" id="sBasket">
 				<div class="container">
-					<table>
-						<thead> 
-							<tr> 
-								<th colspan="2">Товар</th>
-								<th>Нархи (сум)	</th>
-								<th>Ў.б.</th>
-								<th>Миқдори</th>
-								<th>Суммаси</th>
-								<th></th>
-							</tr>
-						</thead>
-						<tbody>
+					<div class="sBasket__inner">
+						<table>
+							<thead> 
+								<tr> 
+									<th colspan="2">Товар</th>
+									<th>Нархи (сум)	</th>
+									<th>Ў.б.</th>
+									<th>Миқдори</th>
+									<th>Суммаси</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
 									<tr>
 										<td><a href="#"> 
 												<!-- picture-->
@@ -766,7 +767,8 @@
 											<div class="text-secondary">10 199 </div>
 										</td>
 										<td> 
-											<div class="text-secondary">килограмм</div>
+											<div class="text-secondary"> килограмм
+											</div>
 										</td>
 										<td> 
 											<div class="addBlock">
@@ -803,7 +805,8 @@
 											<div class="text-secondary">10 199 </div>
 										</td>
 										<td> 
-											<div class="text-secondary">килограмм</div>
+											<div class="text-secondary"> килограмм
+											</div>
 										</td>
 										<td> 
 											<div class="addBlock">
@@ -841,7 +844,8 @@
 											<div class="text-secondary">10 199 </div>
 										</td>
 										<td> 
-											<div class="text-secondary">килограмм</div>
+											<div class="text-secondary"> килограмм
+											</div>
 										</td>
 										<td> 
 											<div class="addBlock">
@@ -878,7 +882,8 @@
 											<div class="text-secondary">10 199 </div>
 										</td>
 										<td> 
-											<div class="text-secondary">килограмм</div>
+											<div class="text-secondary"> килограмм
+											</div>
 										</td>
 										<td> 
 											<div class="addBlock">
@@ -898,14 +903,15 @@
 											</div>
 										</td>
 									</tr>
-						</tbody>
-					</table>
-					<div class="sBasket__total">
-						<div class="sBasket__total-price"><span class="text-secondary"> Жами: </span> 
-							31 944 889 сум
+							</tbody>
+						</table>
+						<div class="sBasket__total">
+							<div class="sBasket__total-price"><span class="text-secondary"> Жами: </span> 
+								31 944 889 сум
+							</div>
+							<button class="sBasket__btn" type="button">Буюртма бериш
+							</button>
 						</div>
-						<button class="sBasket__btn" type="button">Буюртма бериш
-						</button>
 					</div>
 				</div>
 			</div>
@@ -990,6 +996,28 @@
 			<p class="text-secondary">Мутахассис буюртмани тасдиқлаш ва маълумотларни аниқлаштириш учун сизга мурожаат қилади</p><br/><br/><br/><a class="btn btn-primary w-190 mx-auto" href="#">Буюртмани кўриш</a>
 		</div>
 		<!-- #modal-view-order-->
+		<div class="modal-win text-center" id="modal-star" style="display: none"><img class="w-100px mx-auto" src="img/svg/star-i.svg" loading="lazy" alt=""/><br/>
+			<div class="h4 text-center">Баҳолаш мезони</div><br/>
+			<p class="text-secondary">Харид сизга мақул келган бўлса ўз&nbsp;баҳоингизни қолдиришингиз мумкин. Сизнинг баҳоингиз сотувчиларнинг рейтинги учун муҳимдир</p><br/>
+			<div class="stars stars--lg">
+				<svg class="icon icon-star  active">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+				<svg class="icon icon-star  active">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+				<svg class="icon icon-star  active">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+				<svg class="icon icon-star  active">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+				<svg class="icon icon-star ">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+			</div><br/><br/><a class="btn btn-primary w-190 mx-auto" href="#">Таййор</a>
+		</div>
+		<!-- #modal-star-->
 		<!-- end modals-->
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>

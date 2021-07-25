@@ -1,0 +1,19 @@
+mixin sOrderHead(data)
+	// start sOrderHead
+	+b.sOrderHead.section#sOrderHead&attributes(attributes)
+		.container
+			+e.inner
+				.row
+					.col-auto
+						+e.back(href="#")
+							+icon('arrow-left')
+					.col-auto
+						h1 № 210403-907701
+					.col
+						if block
+							block
+						else
+							+e.status(style="--color:#7C7E80") Буюртма берилган
+					.col-auto
+						+e.btn(href="#") Бекор қилиш 
+	// end sOrderHead

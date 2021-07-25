@@ -125,6 +125,9 @@
 		&__map {
 			max-width: 500px;
 			height: 200px;
+			&--min{
+				// height: 90px;
+			}
 		}
 
 		&__btn-wrap {

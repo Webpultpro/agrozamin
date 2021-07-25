@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title> Саватча</title>
+		<title> Модалки</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=414,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no">
@@ -32,7 +32,7 @@
 	</head>
 	<body data-bg="15.jpg">
 		<div class="main-wrapper">
-			<div class="section container"><a class="btn btn-primary px-3 m-3" href="#modal-go-reg" data-fancybox>Рўйхатдан ўтиш</a><a class="btn btn-primary px-3 m-3" href="#modal-view-order" data-fancybox>Буюртмани кўриш</a>
+			<div class="section container"><a class="btn btn-primary px-3 m-3" href="#modal-go-reg" data-fancybox>Рўйхатдан ўтиш</a><a class="btn btn-primary px-3 m-3" href="#modal-view-order" data-fancybox>Буюртмани кўриш</a><a class="btn btn-primary px-3 m-3" href="#modal-star" data-fancybox>Баҳолаш мезони</a>
 			</div>
 		</div>
 		<!--  start modals-->
@@ -66,6 +66,28 @@
 			<p class="text-secondary">Мутахассис буюртмани тасдиқлаш ва маълумотларни аниқлаштириш учун сизга мурожаат қилади</p><br/><br/><br/><a class="btn btn-primary w-190 mx-auto" href="#">Буюртмани кўриш</a>
 		</div>
 		<!-- #modal-view-order-->
+		<div class="modal-win text-center" id="modal-star" style="display: none"><img class="w-100px mx-auto" src="img/svg/star-i.svg" loading="lazy" alt=""/><br/>
+			<div class="h4 text-center">Баҳолаш мезони</div><br/>
+			<p class="text-secondary">Харид сизга мақул келган бўлса ўз&nbsp;баҳоингизни қолдиришингиз мумкин. Сизнинг баҳоингиз сотувчиларнинг рейтинги учун муҳимдир</p><br/>
+			<div class="stars stars--lg">
+				<svg class="icon icon-star  active">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+				<svg class="icon icon-star  active">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+				<svg class="icon icon-star  active">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+				<svg class="icon icon-star  active">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+				<svg class="icon icon-star ">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+			</div><br/><br/><a class="btn btn-primary w-190 mx-auto" href="#">Таййор</a>
+		</div>
+		<!-- #modal-star-->
 		<!-- end modals-->
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>

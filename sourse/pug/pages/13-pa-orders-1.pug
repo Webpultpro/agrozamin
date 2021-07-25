@@ -1,3 +1,4 @@
+
 extends layout/main.pug
 
 
@@ -11,14 +12,14 @@ extends layout/main.pug
 //- include ../blocks/sHowWorks/_sHowWorks.pug
 //- include ../blocks/legal-info/_legal-info.pug
 include ../blocks/sPersonalAccount/_sPersonalAccount.pug
-include ../blocks/sAboutStore/_sAboutStore.pug
+include ../blocks/sCabinetOrders/_sCabinetOrders.pug
 
 block variables
 	- let  mainPage= null 
-	//- - let  bg= '13-1.jpg'
+	//- - let  bg= '13-personal-account.jpg'
 
 block title
-	- let  title= 'Дўкон ҳақида'
+	- let  title= 'Буюртмалар'
 	title= title
 block pagecontent
 
@@ -31,6 +32,11 @@ block pagecontent
 	+sPersonalAccount()
 		.row.row--main
 			.col-lg.col--aside
+			.col-lg.col--main
+				+b.cabinet-head
+					h1 Буюртмалар
+		.row.row--main
+			.col-lg.col--aside
 				+b.UL.navigation.d-none.d-lg-block
 					+e.LI.item: a(href="#") Юридик малумотлар
 					+e.LI.item.active: a(href="#") Докон ҳақида
@@ -40,7 +46,7 @@ block pagecontent
 					+e.LI.item: a(href="#") Махсулот қўшиш
 					+e.LI.item: a(href="#") Хабарлар
 			.col-lg.col--main
-				+sAboutStore()
+				+sCabinetOrders
 	+footer()
 
 

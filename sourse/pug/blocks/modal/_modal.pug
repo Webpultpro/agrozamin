@@ -34,5 +34,17 @@ mixin modal()
 		br
 		a.btn.btn-primary.w-190.mx-auto(href="#") Буюртмани кўриш
 	// #modal-view-order
+	+b.modal-win.text-center(id="modal-star" class=" " style="display: none" )
+		img(src="img/svg/star-i.svg",  loading="lazy" alt="").w-100px.mx-auto
+		br
+		.h4.text-center Баҳолаш мезони
+		br
+		p.text-secondary Харид сизга мақул келган бўлса ўз&nbsp;баҳоингизни қолдиришингиз мумкин. Сизнинг баҳоингиз сотувчиларнинг рейтинги учун муҳимдир
+		br
+		+stars().--lg
+		br
+		br
+		a.btn.btn-primary.w-190.mx-auto(href="#") Таййор
+	// #modal-star
 	
 	// end modals

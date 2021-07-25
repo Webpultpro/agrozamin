@@ -530,6 +530,14 @@ iframe {
 			fill: #F6C23D;
 		}
 	}
+	&--lg .icon{
+		font-size: rem(55);
+		stroke-width: 1px;
+		&:not(.active),
+		&:not(:hover){
+				color: #CFCFCF;
+		}
+	}
 }
 
 
@@ -556,4 +564,13 @@ iframe {
 
 .w-190{
 	width: 190px;
+}
+
+.cabinet-head{
+ h1{
+	 font-weight: bold;
+	//  font-size: rem(32);
+	@include rfs(32px);
+	margin-bottom: rem(34);
+ }
 }
