@@ -32,4 +32,3 @@
 9. <https://webpult.github.io/agrozamin/public/16-basket.html>
 10. <https://webpult.github.io/agrozamin/public/17-order.html>
 11. <https://webpult.github.io/agrozamin/public/17-order-1.html>
->>>>>>> 84454607b800f0c1e4bd894449aed61a10a6f3dc
