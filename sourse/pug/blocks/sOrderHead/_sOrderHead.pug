@@ -17,3 +17,23 @@ mixin sOrderHead(data)
 					.col-auto
 						+e.btn(href="#") Бекор қилиш 
 	// end sOrderHead
+
+
+mixin sOrderHeadSeller(data)
+	// start sOrderHeadSeller
+	+b.sOrderHead--seller.section#sOrderHead&attributes(attributes)
+		.container
+			+e.inner
+				.row
+					.col-auto
+						+e.back(href="#")
+							+icon('arrow-left')
+					.col-auto
+						h1= data.number
+					.col.text-end.text-md-start
+						if block
+							block
+						else
+							+e.status(style=`--color:${data.color}`)= data.status
+				+e.date.text-secondary.d-none.d-md-block 29.04.2021
+	// end sOrderHeadSeller
