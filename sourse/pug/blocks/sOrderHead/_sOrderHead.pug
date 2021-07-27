@@ -35,5 +35,9 @@ mixin sOrderHeadSeller(data)
 							block
 						else
 							+e.status(style=`--color:${data.color}`)= data.status
-				+e.date.text-secondary.d-none.d-md-block 29.04.2021
+					if data.btn
+						+e.col.col.text-center.text-md-end
+							+e.btn(href="#")= data.btn
+				if data.date
+					+e.date.text-secondary.d-none.d-md-block= data.date
 	// end sOrderHeadSeller
