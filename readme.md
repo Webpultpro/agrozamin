@@ -1,19 +1,20 @@
 # Страницы покупателя
-1.  <https://webpult.github.io/agrozamin/public/13-personal-account-1.html>
-2.  <https://webpult.github.io/agrozamin/public/13-personal-account-1-mobile.html>
-3.  <https://webpult.github.io/agrozamin/public/13-personal-account-2.html>
-4.  <https://webpult.github.io/agrozamin/public/13-personal-account-3.html>
-5.  <https://webpult.github.io/agrozamin/public/13-personal-account-3-mobile.html>
-6.  <https://webpult.github.io/agrozamin/public/13-pa-orders-1.html>
-7.  <https://webpult.github.io/agrozamin/public/13-pa-order.html>
-8.  <https://webpult.github.io/agrozamin/public/13-pa-order-1.html>
-9.  <https://webpult.github.io/agrozamin/public/14-catalog.html>
-10. <https://webpult.github.io/agrozamin/public/14-catalog-2.html>
-11. <https://webpult.github.io/agrozamin/public/14-catalog-3.html>
-12. <https://webpult.github.io/agrozamin/public/15-prod.html>
-13. <https://webpult.github.io/agrozamin/public/16-basket.html>
-14. <https://webpult.github.io/agrozamin/public/17-order.html>
-15. <https://webpult.github.io/agrozamin/public/17-order-1.html>
+1.  <https://webpult.github.io/agrozamin/public/index.html>
+2.  <https://webpult.github.io/agrozamin/public/13-personal-account-1.html>
+3.  <https://webpult.github.io/agrozamin/public/13-personal-account-1-mobile.html>
+4.  <https://webpult.github.io/agrozamin/public/13-personal-account-2.html>
+5.  <https://webpult.github.io/agrozamin/public/13-personal-account-3.html>
+6.  <https://webpult.github.io/agrozamin/public/13-personal-account-3-mobile.html>
+7.  <https://webpult.github.io/agrozamin/public/13-pa-orders-1.html>
+8.  <https://webpult.github.io/agrozamin/public/13-pa-order.html>
+9.  <https://webpult.github.io/agrozamin/public/13-pa-order-1.html>
+10. <https://webpult.github.io/agrozamin/public/14-catalog.html>
+11. <https://webpult.github.io/agrozamin/public/14-catalog-2.html>
+12. <https://webpult.github.io/agrozamin/public/14-catalog-3.html>
+13. <https://webpult.github.io/agrozamin/public/15-prod.html>
+14. <https://webpult.github.io/agrozamin/public/16-basket.html>
+15. <https://webpult.github.io/agrozamin/public/17-order.html>
+16. <https://webpult.github.io/agrozamin/public/17-order-1.html>
 
 # Страницы продавца
 1.  <https://webpult.github.io/agrozamin/public/index-company.html>
