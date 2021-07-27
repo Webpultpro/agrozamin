@@ -148,43 +148,106 @@
 	}
 } // end.sMessages
 .all-users {
-	&__name {
-		@include mt;
-		font-size: 14px;
-		line-height: 1;
-		color: #000;
-		margin-bottom: rem(6);
+	@include media-breakpoint-down(sm) {
+		--bs-gutter-x: #{rem(24)};
 	}
+	@include media-breakpoint-down(md) {
+		--bs-gutter-x: #{rem(10.5)};
+		list-style: none;
+		h1 {
+			font-weight: 500;
+			line-height: (28 / 24);
+			font-size: rem(24);
+			margin-bottom: rem(40);
+		}
+		&__user {
+			position: relative;
+			display: block;
+			padding: rem(13) 0;
+			&::after {
+				content: "";
+				position: absolute;
+				width: calc(100% + var(--bs-gutter-x) * 2);
+				height: 0.5px;
+				background-color: #e0e0e0;
+				left: calc(-1 * var(--bs-gutter-x));
+				bottom: 0;
+			}
+			&:last-of-type {
+				&::after {
+					display: none;
+				}
+			}
 
-	&__time {
-		@include mt;
-		font-size: 12px;
-		line-height: (14 / 12);
-		color: #999999;
-	}
-	&__user {
-		@include mt;
-		padding: rem(8) rem(13);
-		border-radius: 8px;
-		margin-bottom: rem(8);
-		width: 185px;
-		cursor: pointer;
-		&:hover {
-			box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.04);
-			.all-users__name,
-			.all-users__time {
-				color: $primary;
+			&:hover {
+				.all-users__name,
+				.all-users__time {
+					color: $primary;
+				}
+			}
+			&:last-child {
+				margin-bottom: 0;
 			}
 		}
-		&:last-child {
-			margin-bottom: 0;
+		&__name {
+			@include mt;
+			display: block;
+			font-size: 14px;
+			line-height: 1;
+			color: #000;
+			margin-bottom: rem(6);
 		}
-		&.active {
-			background-color: #00cc69;
-			box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.04);
-			.all-users__name,
-			.all-users__time {
-				color: $white;
+
+		&__time {
+			@include mt;
+			display: block;
+			font-size: 12px;
+			line-height: (14 / 12);
+			color: #999999;
+		}
+	}
+	@include media-breakpoint-up(md) {
+		&__name {
+			@include mt;
+			display: block;
+			font-size: 14px;
+			line-height: 1;
+			color: #000;
+			margin-bottom: rem(6);
+		}
+
+		&__time {
+			@include mt;
+			display: block;
+			font-size: 12px;
+			line-height: (14 / 12);
+			color: #999999;
+		}
+		&__user {
+			@include mt;
+			display: block;
+			padding: rem(8) rem(13);
+			border-radius: 8px;
+			margin-bottom: rem(8);
+			width: 185px;
+			cursor: pointer;
+			&:hover {
+				box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.04);
+				.all-users__name,
+				.all-users__time {
+					color: $primary;
+				}
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&.active {
+				background-color: #00cc69;
+				box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.04);
+				.all-users__name,
+				.all-users__time {
+					color: $white;
+				}
 			}
 		}
 	}

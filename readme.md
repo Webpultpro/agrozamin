@@ -36,3 +36,4 @@
 11. <https://webpult.github.io/agrozamin/public/17-order-1.html>
 11. <https://webpult.github.io/agrozamin/public/18-messages.html>
 11. <https://webpult.github.io/agrozamin/public/18-messages-filled.html>
+11. <https://webpult.github.io/agrozamin/public/18-messages-mobile.html>
