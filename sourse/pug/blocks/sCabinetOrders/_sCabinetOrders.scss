@@ -25,6 +25,79 @@
 			margin-bottom: rem(10);
 		}
 	}
+	&--products {
+		.sCabinetOrders__heading {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: rem(30);
+			h1 {
+				font-weight: bold;
+				line-height: 116%;
+				margin-bottom: 0;
+				@include rfs(32);
+				@include media-breakpoint-up(xl) {
+					font-size: rem(32);
+				}
+			}
+		}
+		.sCabinetOrders__add-prod {
+			border: none;
+			outline: none;
+			background: none;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: rem(5) 0;
+			color: #3e3e3e;
+			.icon {
+				@include mt;
+				font-size: rem(19);
+				@include media-breakpoint-up(md) {
+					font-size: rem(26);
+				}
+			}
+			span {
+				@include mt;
+				font-weight: 500;
+				font-size: rem(14);
+				line-height: (18 / 16);
+				margin-left: rem(4);
+				@include media-breakpoint-up(md) {
+					margin-left: rem(8);
+					font-size: rem(16);
+				}
+			}
+			&:hover,
+			&:active {
+				.icon {
+					color: $primary;
+				}
+				span {
+					color: $primary;
+				}
+			}
+		}
+		.orders-item__status {
+			margin-bottom: rem(-20);
+		}
+		.orders-item__number {
+			font-size: rem(12);
+			line-height: 125%;
+			color: #000000;
+			margin-bottom: rem(7);
+		}
+		h5 {
+			font-weight: bold;
+			font-size: 18px;
+			line-height: 21px;
+			letter-spacing: 0.035em;
+			margin-bottom: rem(8);
+		}
+		ul {
+			margin-top: rem(28);
+		}
+	}
 
 	@include media-breakpoint-up(xl) {
 	}

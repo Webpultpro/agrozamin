@@ -167,3 +167,196 @@ mixin sCabinetOrdersSeller()
 			total: '50 кг',
 		})
 	// end sCabinetOrdersSeller
+
+mixin sCabinetOrdersProducts(status)
+	// start sCabinetOrdersProducts
+	+b.sCabinetOrders--products#sCabinetOrders&attributes(attributes)
+		+e.heading
+			h1 Махсулотлар
+			+e.BUTTON.add-prod
+				+icon('plus-circle')
+				span Махсулот қўшиш
+		if status
+			mixin item(data)
+				+b.orders-item--products
+					.row
+						.col
+							+e.number= data.number
+							h5= data.title
+							+e.status(style=`--color: ${data.color}`)
+								= data.status
+							ul
+								li 
+									span.text-secondary Яратилган санаси:
+									= data.date
+								li 
+									span.text-secondary Фаасовка:
+									= data.unit
+								li 
+									span.text-secondary Жорий нархи:
+									= data.sum
+								
+						+e.col.col-sm-auto
+							+e.images.row
+								if data.emty
+									.col-auto
+										+e.img-wrap
+								else
+									block
+							if data.btn
+								+e.btn.btn-primary(href="#") Тасдиқлаш
+							else
+								+e.btn.btn-outline-primary(href="#") Батафсил
+			+item({
+				number: '235356751',
+				title: 'Горох пурпурный король',
+				color:'#27B7D6',
+				status:'Сотувда', 
+				date: '28.04.2021 16:08',
+				unit: 'Килограм',
+				sum: '4 199 сум',
+			})
+				.col-auto 
+					+e.img-wrap
+						+pic(`prod-2.jpg`,'bg',0)
+				.col-auto 
+					+e.img-wrap
+						+pic(`add-product-2.png`,'bg',0)
+				.col-auto 
+					+e.img-wrap 
+						span +2
+			+item({
+				number: '235356751',
+				title: 'Россия гигант сабзиси',
+				color:'#00CC69',
+				status:'Сотилган', 
+				date: '28.04.2021 16:08',
+				unit: 'Килограм',
+				sum: '15 099 сум',
+			})
+				.col-auto 
+					+e.img-wrap
+						+pic(`prod-5.jpg`,'bg',0)
+				.col-auto 
+					+e.img-wrap 
+						span +1
+
+			+item({
+				number: '235356751',
+				title: 'Яшил нўхат',
+				color:'#27B7D6',
+				status:'Сотувда',
+				date: '28.04.2021 16:08',
+				unit: 'Килограм',
+				sum: '12 099 сум',
+			})
+				.col-auto 
+					+e.img-wrap
+						+pic(`products-site-2.jpg`,'bg',0)
+				.col-auto 
+					+e.img-wrap 
+						span +2
+			+item({
+				number: '235356751',
+				title: 'Шакарли Рукола',
+				color:'#00CC69',
+				status:'Сотилган',
+				date: '28.04.2021 16:08',
+				unit: 'Килограм',
+				sum: '12 099 сум',
+			})
+				.col-auto 
+					+e.img-wrap
+						+pic(`prod-7.jpg`,'bg',0)
+				.col-auto 
+					+e.img-wrap 
+						span +2
+		else
+			mixin item(data)
+				+b.orders-item--products
+					.row
+						.col
+							+e.number= data.number
+							h5= data.title
+							ul
+								li 
+									span.text-secondary Яратилган санаси:
+									= data.date
+								li 
+									span.text-secondary Фаасовка:
+									= data.unit
+								li 
+									span.text-secondary Жорий нархи:
+									= data.sum
+								
+						+e.col.col-sm-auto
+							+e.images.row
+								if data.emty
+									.col-auto
+										+e.img-wrap
+								else
+									block
+									
+							if data.btn
+								+e.btn.btn-primary(href="#") Тасдиқлаш
+
+							else
+								+e.btn.btn-outline-primary(href="#") Батафсил
+			+item({
+				number: '235356751',
+				title: 'Горох пурпурный король',
+				date: '28.04.2021 16:08',
+				unit: 'Килограм',
+				sum: '4 199 сум',
+			})
+				.col-auto 
+					+e.img-wrap
+						+pic(`prod-2.jpg`,'bg',0)
+				.col-auto 
+					+e.img-wrap
+						+pic(`add-product-2.png`,'bg',0)
+				.col-auto 
+					+e.img-wrap 
+						span +2
+			+item({
+				number: '235356751',
+				title: 'Россия гигант сабзиси',
+				date: '28.04.2021 16:08',
+				unit: 'Килограм',
+				sum: '15 099 сум',
+			})
+				.col-auto 
+					+e.img-wrap
+						+pic(`prod-5.jpg`,'bg',0)
+				.col-auto 
+					+e.img-wrap 
+						span +1
+
+			+item({
+				number: '235356751',
+				title: 'Яшил нўхат',
+				date: '28.04.2021 16:08',
+				unit: 'Килограм',
+				sum: '12 099 сум',
+			})
+				.col-auto 
+					+e.img-wrap
+						+pic(`products-site-2.jpg`,'bg',0)
+				.col-auto 
+					+e.img-wrap 
+						span +2
+			+item({
+				number: '235356751',
+				title: 'Шакарли Рукола',
+				date: '28.04.2021 16:08',
+				unit: 'Килограм',
+				sum: '12 099 сум',
+			})
+				.col-auto 
+					+e.img-wrap
+						+pic(`prod-7.jpg`,'bg',0)
+				.col-auto 
+					+e.img-wrap 
+						span +2
+
+	// end sCabinetOrdersProducts
