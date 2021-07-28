@@ -62,7 +62,6 @@
 								<div class="swich-block"><a class="swich-block__btn active" href="#">Харидорлар</a><a class="swich-block__btn" href="#">Сотувчилар</a>
 								</div>
 							</div>
-							<div class="col-auto"></div>
 						</div>
 						<div class="row">
 							<div class="col-auto d-md-none">
@@ -95,27 +94,90 @@
 							</div>
 							<div class="col-auto">
 								<button class="top-btn" type="button">
-									<svg class="icon icon-user ">
-										<use xlink:href="img/svg/sprite.svg#user"></use>
-									</svg>
+									<div class="top-btn__icon-wrap">
+										<svg class="icon icon-user ">
+											<use xlink:href="img/svg/sprite.svg#user"></use>
+										</svg>
+									</div>
 									<div class="top-btn__text">Кириш
 									</div>
 								</button>
 							</div>
-							<div class="col-auto">
-								<button class="top-btn" type="button">
-									<svg class="icon icon-bang ">
-										<use xlink:href="img/svg/sprite.svg#bang"></use>
-									</svg>
+							<div class="col-auto position-relative">
+								<button class="top-btn top-btn--alerts" type="button">
+									<div class="top-btn__icon-wrap">
+										<svg class="icon icon-bang ">
+											<use xlink:href="img/svg/sprite.svg#bang"></use>
+										</svg>
+										<div class="top-btn__count">99 
+										</div>
+									</div>
 									<div class="top-btn__text">Хабарнома
 									</div>
 								</button>
+								<div class="dropdown-alert">
+									<div class="dropdown-alert__item"><a class="dropdown-alert__img-wrap bg-wrap" href="#">
+										<!-- picture-->
+										<picture class="picture-bg"> 
+											<source type="image/webp" srcset="img/@2x/webp/prod-1.webp"/><img class="object-fit-js" src="img/@2x/prod-1.jpg" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture--></a>
+										<div class="dropdown-alert__caption">
+											<div class="dropdown-alert__text">Буюртмалар
+											</div>
+											<div class="dropdown-alert__title"><a href="#"> ЧП “Mega Gruop”</a>
+											</div>
+											<div class="dropdown-alert__text text-secondary">Буюртма “Буюртма этказилган” статусига ўзгарди
+											</div>
+											<div class="dropdown-alert__time">Кеча 14:27
+											</div>
+										</div>
+									</div>
+									<div class="dropdown-alert__item"><a class="dropdown-alert__img-wrap bg-wrap" href="#">
+										<!-- picture-->
+										<picture class="picture-bg"> 
+											<source type="image/webp" srcset="img/@2x/webp/prod-2.webp"/><img class="object-fit-js" src="img/@2x/prod-2.jpg" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture--></a>
+										<div class="dropdown-alert__caption">
+											<div class="dropdown-alert__text">Буюртмалар
+											</div>
+											<div class="dropdown-alert__title"><a href="#"> ЧП “Mega Gruop”</a>
+											</div>
+											<div class="dropdown-alert__text text-secondary">Буюртма “Буюртма этказилган” статусига ўзгарди
+											</div>
+											<div class="dropdown-alert__time">Кеча 14:27
+											</div>
+										</div>
+									</div>
+									<div class="dropdown-alert__item"><a class="dropdown-alert__img-wrap bg-wrap" href="#">
+										<!-- picture-->
+										<picture class="picture-bg"> 
+											<source type="image/webp" srcset="img/@2x/webp/prod-3.webp"/><img class="object-fit-js" src="img/@2x/prod-3.jpg" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture--></a>
+										<div class="dropdown-alert__caption">
+											<div class="dropdown-alert__text">Буюртмалар
+											</div>
+											<div class="dropdown-alert__title"><a href="#"> ЧП “Mega Gruop”</a>
+											</div>
+											<div class="dropdown-alert__text text-secondary">Буюртма “Буюртма этказилган” статусига ўзгарди
+											</div>
+											<div class="dropdown-alert__time">Кеча 14:27
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 							<div class="col-auto">
 								<button class="top-btn" type="button">
-									<svg class="icon icon-basket ">
-										<use xlink:href="img/svg/sprite.svg#basket"></use>
-									</svg>
+									<div class="top-btn__icon-wrap">
+										<svg class="icon icon-basket ">
+											<use xlink:href="img/svg/sprite.svg#basket"></use>
+										</svg>
+										<div class="top-btn__count">99 
+										</div>
+									</div>
 									<div class="top-btn__text">Саватча
 									</div>
 								</button>
@@ -140,7 +202,7 @@
 					</div>
 				</div>
 				<!-- end topLine-->
-				<!-- start top-nav-->
+				<!-- start top-nav  в этом блоке   отличия-->
 				<div class="top-nav block-with-lazy">
 					<div class="container">
 						<div class="row">
@@ -149,8 +211,12 @@
 									<div class="d-md-none">
 										<div class="swich-block"><a class="swich-block__btn active" href="#">Харидорлар</a><a class="swich-block__btn" href="#">Сотувчилар</a>
 										</div>
+										<div class="catalog-block__toggle catalog-block__toggle--mob"> <span> </span>
+											<div class="catalog-block__toggle-text">Каталоглар
+											</div>
+										</div>
 									</div>
-									<div class="catalog-block__toggle"> <span> </span>
+									<div class="catalog-block__toggle catalog-block__toggle--desctop d-none d-md-block"><span> </span>
 										<div class="catalog-block__toggle-text">Каталоглар
 										</div>
 									</div>
@@ -788,9 +854,9 @@
 						<div class="footer__col col-sm-auto">
 							<p class="text-secondary2">Биз ҳақимизда:</p>
 							<p> <span class="text-secondary2">Манзил: </span>100096, г. Ташкент,  ул. Мукими 43</p>
-							<p> <span class="text-secondary2">Телефон: <a class="text-body" href="tel:1216"> 1216</a></span></p>
-							<p> <span class="text-secondary2">Факс: <a class="text-body" href="tel:+998711505395"> +998 71 150 53 95</a></span></p>
-							<p> <span class="text-secondary2">E-mail: <a class="text-body" href="mailto:headoffice@agrobank.uz"> headoffice@agrobank.uz</a></span></p>
+							<p> <span class="text-secondary2">Телефон: <a href="tel:1216">  1216</a></span></p>
+							<p> <span class="text-secondary2">Факс: <a href="tel:+998711505395">+998 71 150 53 95</a></span></p>
+							<p> <span class="text-secondary2">E-mail: <a href="mailto:headoffice@agrobank.uz">  headoffice@agrobank.uz</a></span></p>
 						</div>
 					</div>
 					<p class="text-secondary2 mt-5">2021 © Barcha huquqlar himoya qilingan. Barcha xizmatlar litsenziyalangan</p>

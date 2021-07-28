@@ -204,16 +204,22 @@ function eventHandler() {
 
 		if (window.matchMedia("(max-width: 768px)").matches) {
 
-			$(".menu-item-has-children > a").click(function (e) {
-				e.preventDefault();
-				$(this).next().slideToggle();
-			})
-			$(".catalog-block__toggle").click(function (e) {
-				$('.catalog-block').removeClass('active');
-				$("body, html").removeClass('fixed');
-			})
+			
 		}
 	}
+	
+	
+	$(" .catalog-block__toggle--mob").click(function (e) {
+		$('.catalog-block').removeClass('active');
+		$("body, html").removeClass('fixed');
+	})
+
+	$(" .menu-item-has-children > a").click(function (e) {
+		if ($(".catalog-block").hasClass("active")) {
+			e.preventDefault();
+			$(this).next().slideToggle();
+		}
+	})
 
 	window.addEventListener('scroll', () => {
 		setFixedNav();
@@ -427,8 +433,32 @@ function eventHandler() {
 		lessLink: '<a href="#" class="readmore-link-more readmore-link-more--close">Close</a>'
 	});
 
-};
-if (document.readyState !== 'loading') {
+	function toggleShow(toggle, drop) {
+
+		let catalogDrop = drop;
+		let catalogToggle = toggle;
+		
+		$(document).on('click', catalogToggle, function(){
+			$(this).toggleClass('active').next().fadeToggle('fast', function(){
+				$(this).toggleClass("active")
+			});
+		})
+		
+		document.addEventListener('mouseup', (event) => {
+			let container = event.target.closest(catalogDrop + ".active"); // (1)
+			let link = event.target.closest(catalogToggle); // (1)
+			if (!container || !catalogToggle) {
+				$(catalogDrop).removeClass('active').fadeOut();
+				$(catalogToggle).removeClass('active');
+			};
+		}, { passive: true });
+	}
+	toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
+	toggleShow('.lang-choose__current', ".lang-choose__dropdown");
+	toggleShow('.top-btn--alerts', ".dropdown-alert");
+		
+	};
+	if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);

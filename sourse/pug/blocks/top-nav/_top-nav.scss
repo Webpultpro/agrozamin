@@ -73,6 +73,7 @@
 	&__toggle{
 			@include media-breakpoint-down(md) {
 				// padding-bottom: rem(10);
+				font-size: 20px;
 				margin-bottom: rem(15);
 				span {
 					background-color: transparent;
@@ -92,12 +93,15 @@
 					transform: rotate3d(0, 0, 1, -45deg);
 				}
 			}
+			&--mob{
+				
+			}
 			box-sizing: border-box;
 			border-radius: 30px;
 			font-weight: 500;
-			width: rem(133);
 			padding: rem(6) rem(10);
 			@include media-breakpoint-up(md) {
+				width: rem(133);
 
 
 				border: 1.5px solid #CFCFCF;
@@ -149,11 +153,40 @@
 			border-radius: 6px;
 			transform-origin: 50% 50%;
 		}
+			&:hover {
+				border-color: $primary;
+			}
+
+		&.active {
+			pointer-events: none;
+		}
+		&.active span {
+			background-color: transparent;
+		}
+
+		&.active span:after,
+		&.active span:before {
+			top: 0;
+			bottom: 0;
+		}
+
+		&.active span:before {
+			transform: rotate3d(0, 0, 1, 45deg);
+		}
+
+		&.active span:after {
+			transform: rotate3d(0, 0, 1, -45deg);
+		}
+
+		--hoverMain: ' ';
 	}
 	ul{
 		list-style: none;
 	}
 	&__dropdown{
+		@include media-breakpoint-down(md) {
+			display: block !important;
+		}
 		@include media-breakpoint-up(md) {
 			z-index: 200;
 			background: #FFFFFF;
@@ -163,28 +196,15 @@
 			position: absolute;
 			left: calc(var(--bs-gutter-x) / 2);
 			top: 100%;
-				visibility: var(--hoverMain, hidden);
-				opacity: var(--hoverMain, 0);
-				@include mt;
-			}
+			// visibility: var(--hoverMain, hidden);
+			// opacity: var(--hoverMain, 0);
+			// @include mt;
+		}
+		display: none;
+		
+
 	}
 	&:hover { 
-		--hoverMain: ' '; 
-		.catalog-block__toggle span {
-			background-color: transparent;
-		}
-		.catalog-block__toggle span:after,
-		.catalog-block__toggle span:before { 
-			top: 0;
-			bottom: 0; 
-		}
-
-		.catalog-block__toggle span:before {
-			transform: rotate3d(0, 0, 1, 45deg);
-		} 
-		.catalog-block__toggle span:after {
-			transform: rotate3d(0, 0, 1, -45deg);
-		}
 	}
 }
 
@@ -203,6 +223,7 @@
 		// border-bottom: 0.5px solid #E0E0E0;
 
 		@include media-breakpoint-up(md) {
+
 			width: var(--li-w);
 			border: none;
 			// pointer-events: none; 
@@ -236,7 +257,9 @@
 	}
 	.sub-menu{
 
+		@include media-breakpoint-down(md) {
 		display: none;
+		}
 		@include media-breakpoint-up(md) {
 			display: block !important;
 			position: absolute;
@@ -381,9 +404,11 @@
 	box-shadow: none;
 	color: #999999;
 	box-shadow: none !important;
+	&.active,
 	&:hover {
 		color: $primary;
 		--chevron-down-gray: var(--chevron-down-primary); 
+		border-color: $primary;
 	}
 
 	@include media-breakpoint-up(xl) {

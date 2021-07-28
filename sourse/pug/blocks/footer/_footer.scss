@@ -8,13 +8,18 @@
 		list-style: none;
 		margin-bottom: rem(10);
 		a{
-			@extend .text-body;
+			// @extend .text-body;
+			&:not(:hover){
+				color: $body-color;
+			}
 		}
 	}
 	p{
 		a{
 				font-size: rem(18);
-			 
+			 &:not(:hover) {
+			 	color: $body-color;
+			 }
 		}
 	}
 	&__col{
@@ -25,7 +30,9 @@
 			max-width: rem((180));
 					a {
 						font-size: rem(18);
-						@extend .text-body;
+						&:not(:hover) {
+							color: $body-color;
+						}
 
 						border-bottom: 1px solid;
 

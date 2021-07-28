@@ -1,13 +1,19 @@
-mixin topLine()
+mixin topLine(comp)
 	// start topLine
 	+b.topLine.section#topLine&attributes(attributes)
 		.container
 			.row.d-none.d-md-flex
 				.col-auto
 					+b.swich-block
-						+e.btn(href="#").active Харидорлар
-						+e.btn(href="#") Сотувчилар
-				.col-auto
+						if !comp
+							+e.btn(href="#").active Харидорлар
+							+e.btn(href="#") Сотувчилар
+						if comp
+							+e.btn(href="#") Харидорлар
+							+e.btn(href="#").active Сотувчилар
+				if comp
+					.col-auto.d-none.d-sm-block
+						+e.name Менинг компаниям
 			.row
 				.col-auto.d-md-none
 					+b.toggle-menu-mobile--js
@@ -18,22 +24,54 @@ mixin topLine()
 				.col-md.order-md-0.order-last
 					+e.search-wrap.d-md-block
 						+search-block
-				.col-auto.d-md-none
-					+b.top-btn--search-toggle-js(type="button")
-						+icon("search")
-						+e.text Поиск
+				if !comp
+					.col-auto.d-md-none
+						+b.top-btn--search-toggle-js(type="button")
+							+icon("search")
+							+e.text Поиск
 				.col-auto
 					+b.top-btn(type="button")
-						+icon("user")
+						+e.icon-wrap
+							+icon("user")
 						+e.text Кириш
-				.col-auto
-					+b.top-btn(type="button")
-						+icon("bang")
+				.col-auto.position-relative
+					+b.top-btn--alerts(type="button")
+						+e.icon-wrap
+							+icon("bang")
+							+e.count 99 
 						+e.text Хабарнома
-				.col-auto
-					+b.top-btn(type="button")
-						+icon("basket")
-						+e.text Саватча
+					+b.dropdown-alert
+						+e.item
+							+e.img-wrap.bg-wrap(href="#")
+								+pic("prod-1.jpg",'bg',0).picture-bg
+							+e.caption
+								+e.text Буюртмалар
+								+e.title: a(href="#")  ЧП “Mega Gruop”
+								+e.text.text-secondary Буюртма “Буюртма этказилган” статусига ўзгарди
+								+e.time Кеча 14:27
+						+e.item
+							+e.img-wrap.bg-wrap(href="#")
+								+pic("prod-2.jpg",'bg',0).picture-bg
+							+e.caption
+								+e.text Буюртмалар
+								+e.title: a(href="#")  ЧП “Mega Gruop”
+								+e.text.text-secondary Буюртма “Буюртма этказилган” статусига ўзгарди
+								+e.time Кеча 14:27
+						+e.item
+							+e.img-wrap.bg-wrap(href="#")
+								+pic("prod-3.jpg",'bg',0).picture-bg
+							+e.caption
+								+e.text Буюртмалар
+								+e.title: a(href="#")  ЧП “Mega Gruop”
+								+e.text.text-secondary Буюртма “Буюртма этказилган” статусига ўзгарди
+								+e.time Кеча 14:27
+				if !comp
+					.col-auto
+						+b.top-btn(type="button")
+							+e.icon-wrap
+								+icon("basket")
+								+e.count 99 
+							+e.text Саватча
 				.col-auto
 					+b.lang-choose
 						+e.current Уз

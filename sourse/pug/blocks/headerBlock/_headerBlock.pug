@@ -1,10 +1,17 @@
-mixin headerBlock()
+mixin headerBlock(comp)
 	// start headerBlock
 	+b.headerBlock.section#headerBlock.bg-wrap&attributes(attributes)
-		+pic('header-block-1.jpg','bg','').picture-bg
+		- let bg = (comp ? 'head-bg.jpg' : 'header-block-1.jpg' )
+		+pic(bg,'bg','').picture-bg
+		+pic(bg,'bg','').picture-bg
 		
 		.container
 			+b.section-title
-				h1 Ўз аграр бизнесингизни биз билан қуринг
-				p Ҳамкорлар, дилерлар, етказиб берувчилар ва улгуржи харидорларни топиш учун ягона онлайн платформа
+				if !comp
+					h1 Ўз аграр бизнесингизни биз билан қуринг
+					p Ҳамкорлар, дилерлар, етказиб берувчилар ва улгуржи харидорларни топиш учун ягона онлайн платформа
+				else
+					img.dots.d-none.d-sm-block(src="img/svg/dots2.svg", alt="")
+					h1 Агрозамин билан ҳамкорликда ривожланинг
+					p Қишлоқ хўжалиги маҳсулотларини рақобатбардош нархларда сотишда сизга ёрдам берадиган янги бозор
 	// end headerBlock
