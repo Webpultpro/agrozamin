@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="uz">
+	<head>
+		<meta charset="utf-8">
+		<title>№ 001-001</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=414,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no">
+		<script>
+			let viewport = document.querySelector("meta[name=viewport]");
+			var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+			if (is_safari) {
+				//- alert(navigator.userAgent);
+				function w() {
+					this.outerWidth > 414 
+						? viewport.content = "width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" 
+						:  viewport.content = "width=570,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no" 
+					//- alert(this.outerWidth + ', '+  viewport.content);
+				}
+				 w();
+				window.addEventListener('resize', () => { 
+				 w();
+				}, { passive: true });
+			}
+		</script>
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="libs/priority-nav/priority-nav-core.css" rel="stylesheet"/>
+		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<div class="main-wrapper">
+			<div class="menu-mobile menu-mobile--js d-lg-none">
+				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+				</div>
+				<div class="menu-mobile__inner">
+					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Уруғлар</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Ўғитлар</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Агрокимё</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Озуқалар</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Техника</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Хом-ашё</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Ҳайвонлар</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Қишлоқ хўжалик маҳсулотлари</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Хизматлар</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Хизматлар1</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Хизматлар2</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--  мобильное меню-->
+			<!-- start header-->
+			<header class="header" id="header">
+				<!-- start topLine-->
+				<div class="topLine section" id="topLine">
+					<div class="container">
+						<div class="row d-none d-md-flex">
+							<div class="col-auto">
+								<div class="swich-block"><a class="swich-block__btn" href="#">Харидорлар</a><a class="swich-block__btn active" href="#">Сотувчилар</a>
+								</div>
+							</div>
+							<div class="col-auto d-none d-sm-block">
+								<div class="topLine__name">Менинг компаниям
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-auto d-md-none">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+								</div>
+							</div>
+							<div class="col-md-auto col"><a href="/"><img src="img/svg/logo.svg" alt=""/></a></div>
+							<div class="col-md order-md-0 order-last">
+								<div class="topLine__search-wrap d-md-block">
+									<div class="search-block">
+										<form>
+											<input type="text" placeholder="Агрозамин бўйича қидирув"/>
+											<button> 
+												<svg class="icon icon-search ">
+													<use xlink:href="img/svg/sprite.svg#search"></use>
+												</svg>
+											</button>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="col-auto">
+								<button class="top-btn" type="button"><span class="top-btn__icon-wrap">
+									<svg class="icon icon-user ">
+										<use xlink:href="img/svg/sprite.svg#user"></use>
+									</svg></span><span class="top-btn__text">Кириш</span>
+								</button>
+							</div>
+							<div class="col-auto position-relative">
+								<button class="top-btn top-btn--alerts" type="button"><span class="top-btn__icon-wrap">
+									<svg class="icon icon-bang ">
+										<use xlink:href="img/svg/sprite.svg#bang"></use>
+									</svg><span class="top-btn__count">99 </span></span><span class="top-btn__text">Хабарнома</span>
+								</button>
+								<div class="dropdown-alert">
+									<div class="dropdown-alert__item"><a class="dropdown-alert__img-wrap bg-wrap" href="#">
+										<!-- picture-->
+										<picture class="picture-bg"> 
+											<source type="image/webp" srcset="img/@2x/webp/prod-1.webp"/><img class="object-fit-js" src="img/@2x/prod-1.jpg" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture--></a>
+										<div class="dropdown-alert__caption">
+											<div class="dropdown-alert__text">Буюртмалар
+											</div>
+											<div class="dropdown-alert__title"><a href="#"> ЧП “Mega Gruop”</a>
+											</div>
+											<div class="dropdown-alert__text text-secondary">Буюртма “Буюртма этказилган” статусига ўзгарди
+											</div>
+											<div class="dropdown-alert__time">Кеча 14:27
+											</div>
+										</div>
+									</div>
+									<div class="dropdown-alert__item"><a class="dropdown-alert__img-wrap bg-wrap" href="#">
+										<!-- picture-->
+										<picture class="picture-bg"> 
+											<source type="image/webp" srcset="img/@2x/webp/prod-2.webp"/><img class="object-fit-js" src="img/@2x/prod-2.jpg" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture--></a>
+										<div class="dropdown-alert__caption">
+											<div class="dropdown-alert__text">Буюртмалар
+											</div>
+											<div class="dropdown-alert__title"><a href="#"> ЧП “Mega Gruop”</a>
+											</div>
+											<div class="dropdown-alert__text text-secondary">Буюртма “Буюртма этказилган” статусига ўзгарди
+											</div>
+											<div class="dropdown-alert__time">Кеча 14:27
+											</div>
+										</div>
+									</div>
+									<div class="dropdown-alert__item"><a class="dropdown-alert__img-wrap bg-wrap" href="#">
+										<!-- picture-->
+										<picture class="picture-bg"> 
+											<source type="image/webp" srcset="img/@2x/webp/prod-3.webp"/><img class="object-fit-js" src="img/@2x/prod-3.jpg" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture--></a>
+										<div class="dropdown-alert__caption">
+											<div class="dropdown-alert__text">Буюртмалар
+											</div>
+											<div class="dropdown-alert__title"><a href="#"> ЧП “Mega Gruop”</a>
+											</div>
+											<div class="dropdown-alert__text text-secondary">Буюртма “Буюртма этказилган” статусига ўзгарди
+											</div>
+											<div class="dropdown-alert__time">Кеча 14:27
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-auto">
+								<div class="lang-choose">
+									<div class="lang-choose__current">Уз
+									</div>
+									<div class="lang-choose__dropdown"> 
+										<div class="lang-choose__dropdown-item"> Уз1
+										</div>
+										<div class="lang-choose__dropdown-item"> Уз2
+										</div>
+										<div class="lang-choose__dropdown-item"> Уз3
+										</div>
+										<div class="lang-choose__dropdown-item"> Уз4
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end topLine-->
+				<!-- start top-nav  в этом блоке   отличия-->
+				<div class="top-nav block-with-lazy d-md-none">
+					<div class="container">
+						<div class="row">
+							<div class="top-nav__col-catalog col-auto">
+								<div class="catalog-block">
+									<div class="swich-block"><a class="swich-block__btn" href="#">Харидорлар</a><a class="swich-block__btn active" href="#">Сотувчилар</a>
+									</div>
+									<div class="catalog-block__toggle catalog-block__toggle--mob"> <span> </span>
+										<div class="catalog-block__toggle-text">МЧЖ "Green technology"
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end top-nav-->
+			</header>
+			<!-- end header-->
+			<!-- start sOrderHeadSeller-->
+			<div class="sOrderHead sOrderHead--seller section" id="sOrderHead">
+				<div class="container">
+					<div class="sOrderHead__inner">
+						<div class="row">
+							<div class="col-auto"><a class="sOrderHead__back" href="#">
+								<svg class="icon icon-arrow-left ">
+									<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+								</svg></a>
+							</div>
+							<div class="col-auto">
+								<h1>№ 001-001</h1>
+							</div>
+							<div class="col text-end text-md-start">
+								<div class="sOrderHead__status" style="--color:#00CC69">Буюртма ёпилган
+								</div>
+							</div>
+						</div>
+						<div class="sOrderHead__date text-secondary d-none d-md-block">29.04.2021
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end sOrderHeadSeller-->
+			<!-- start sProdHeadSeller-->
+			<section class="sProdHead sProdHead--seller section" id="sProdHead">
+				<div class="container">
+					<div class="sProdHead__inner">
+						<div class="row">
+							<div class="col">
+								<div class="sProdHead__row row">
+									<div class="col-auto">
+										<!-- picture-->
+										<picture> 
+											<source type="image/webp" srcset="img/@2x/webp/avatar.webp"/><img class="object-fit-js" src="img/@2x/avatar.jpg" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture-->
+									</div>
+									<div class="col-auto">
+										<h4>Шокиров Дилмурод</h4>
+										<div class="sProdHead__email">shokirov.d@yandex.ru
+										</div>
+										<div class="sProdHead__tel text-secondary">+998 97 405 00 03
+										</div>
+									</div>
+								</div>
+								<div class="sProdHead__message"><img src="img/svg/message.svg" alt=""/>
+									<p>Ассалому алайкум. Шу юсуповиский помидор ҳақида тўлиқроқ малумот олмоқчи едим телефон орқали алоқага чиқа оласизми? </p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sProdHeadSeller-->
+			<!-- start sBasket-->
+			<div class="sBasket section section--order" id="sBasket">
+				<div class="container">
+					<div class="sBasket__inner">
+						<table>
+							<thead> 
+								<tr> 
+									<th colspan="2">Товар</th>
+									<th>Нархи (сум)	</th>
+									<th>Ў.б.</th>
+									<th>Суммаси</th>
+								</tr>
+							</thead>
+							<tbody>
+									<tr>
+										<td><a href="#"> 
+												<!-- picture-->
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/prod-1.webp"/><img class="object-fit-js" src="img/@2x/prod-1.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture--></a></td>
+										<td> 
+											<div class="strong mb-1">Бинафша Шоҳ Нўхати</div>
+											<ul>
+												<li><span>Сотувчи:</span> Ташкент АгроФерма</li>
+												<li><span>Олиб кетиш:</span> 15, Бектемирский район, массив Олима Оширова, Ташкент, Узбекистан</li>
+											</ul>
+										</td>
+										<td> 
+											<div class="text-secondary">10 199 </div>
+										</td>
+										<td> 
+											<div class="text-secondary"> 1 килограмм
+											</div>
+										</td>
+										<td>10 199 сум</td>
+									</tr>
+									<tr>
+										<td><a href="#"> 
+												<!-- picture-->
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/prod-2.webp"/><img class="object-fit-js" src="img/@2x/prod-2.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture--></a></td>
+										<td> 
+											<div class="strong mb-1">Қизил лавлаги</div>
+											<ul>
+												<li><span>Сотувчи:</span> Ташкент АгроФерма</li> 
+											</ul>
+										</td>
+										<td> 
+											<div class="text-secondary">10 199 </div>
+										</td>
+										<td> 
+											<div class="text-secondary"> 1 килограмм
+											</div>
+										</td>
+										<td>10 199 сум</td>
+									</tr>
+									<tr>
+										<td><a href="#"> 
+												<!-- picture-->
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/prod-3.webp"/><img class="object-fit-js" src="img/@2x/prod-3.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture--></a></td>
+										<td> 
+											<div class="strong mb-1">Яшил парракли укроп</div>
+											<ul>
+												<li><span>Сотувчи:</span> Ташкент АгроФерма</li>
+												<li><span>Олиб кетиш:</span> 15, Бектемирский район, массив Олима Оширова, Ташкент, Узбекистан</li>
+											</ul>
+										</td>
+										<td> 
+											<div class="text-secondary">10 199 </div>
+										</td>
+										<td> 
+											<div class="text-secondary"> 1 килограмм
+											</div>
+										</td>
+										<td>10 199 сум</td>
+									</tr>
+									<tr>
+										<td><a href="#"> 
+												<!-- picture-->
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/prod-4.webp"/><img class="object-fit-js" src="img/@2x/prod-4.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture--></a></td>
+										<td> 
+											<div class="strong mb-1">Рассия гигант сабзилари</div>
+											<ul>
+												<li><span>Сотувчи:</span> Ташкент АгроФерма</li> 
+											</ul>
+										</td>
+										<td> 
+											<div class="text-secondary">10 199 </div>
+										</td>
+										<td> 
+											<div class="text-secondary"> 1 килограмм
+											</div>
+										</td>
+										<td>10 199 сум</td>
+									</tr>
+							</tbody>
+						</table>
+						<div class="sBasket__total w-100 text-start">
+							<div class="sBasket__total-price">
+								<div class="row">
+									<div class="col"><span>Жами:</span></div>
+									<div class="col-auto">31 944 889 сум</div>
+								</div>
+							</div>
+						</div>
+						<div class="orderClosed">
+							<div class="orderClosed__title">Ушбу буюртма харидор томинидан тасдиқиланган
+							</div>
+							<div class="orderClosed__switch form-check form-switch">
+								<input class="form-check-input" id="switch" type="checkbox" checked="checked"/>
+								<label class="form-check-label" for="switch">Буюртма ёпилган</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end sBasket-->
+			<footer class="footer">
+				<div class="container">
+					<div class="row">
+						<div class="footer__col-first col-sm pb-3"><a href="/"><img src="img/svg/logo.svg" alt=""/></a>
+							<div class="small text-secondary2 mt-1 mb-3">Агробанкдан агросервис</div>
+							<p>Барча саволлар бойича мурожат қилинг: <br/><a href="mailto:info@agrozamin.uz">info@agrozamin.uz</a></p>
+							<div class="soc"><a class="soc__item" href="#" target="_blank">
+								<svg class="icon icon-fb ">
+									<use xlink:href="img/svg/sprite.svg#fb"></use>
+								</svg></a><a class="soc__item" href="#" target="_blank">
+								<svg class="icon icon-instagram ">
+									<use xlink:href="img/svg/sprite.svg#instagram"></use>
+								</svg></a><a class="soc__item" href="#" target="_blank">
+								<svg class="icon icon-telegram ">
+									<use xlink:href="img/svg/sprite.svg#telegram"></use>
+								</svg></a>
+							</div>
+						</div>
+						<div class="col-sm pb-3"> 
+							<p class="text-secondary2">Фойдали ҳаволалар:</p>
+							<ul> 
+								<li><a href="#"> Каталоглар</a></li>
+								<li><a href="#"> Оммабоп маҳсулотлар</a></li>
+								<li><a href="#"> Хизмат қандай ишлаши ҳақида</a></li>
+								<li><a href="#"> Хабарнома</a></li>
+								<li><a href="#"> Саватча</a></li>
+							</ul>
+						</div>
+						<div class="col-sm pb-3"> 
+							<p class="text-secondary2">Биз ҳақимизда:</p>
+							<ul> 
+								<li><a href="#"> Агробанк ҳақида</a></li>
+								<li><a href="#"> Лойиҳа ҳақида</a></li>
+								<li><a href="#"> Оммабоп саволлар</a></li>
+								<li><a href="#"> Партнёрларимиз</a></li>
+							</ul>
+						</div>
+						<div class="footer__col col-sm-auto">
+							<p class="text-secondary2">Биз ҳақимизда:</p>
+							<p> <span class="text-secondary2">Манзил: </span>100096, г. Ташкент,  ул. Мукими 43</p>
+							<p> <span class="text-secondary2">Телефон: <a href="tel:1216">  1216</a></span></p>
+							<p> <span class="text-secondary2">Факс: <a href="tel:+998711505395">+998 71 150 53 95</a></span></p>
+							<p> <span class="text-secondary2">E-mail: <a href="mailto:headoffice@agrobank.uz">  headoffice@agrobank.uz</a></span></p>
+						</div>
+					</div>
+					<p class="text-secondary2 mt-5">2021 © Barcha huquqlar himoya qilingan. Barcha xizmatlar litsenziyalangan</p>
+				</div>
+			</footer>
+		</div>
+		<!--  start modals-->
+		<div class="modal-win" id="modal-call" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<div class="text-center">
+						<div class="form-wrap__title form-data h3 ttu">Обратный звонок
+						</div>
+						<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+					</div>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn btn" type="submit"> 
+					</button>
+					<div class="form-wrap__policy">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+						</label>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div class="modal-win text-center" id="modal-go-reg" style="display: none"><img class="w-100px mx-auto" src="img/svg/home-icon.svg" loading="lazy" alt=""/><br/><br/><br/>
+			<p class="text-secondary">Сотувни амалга ошириш учун тизмидан рўйхатдан ўтган болишингиз зарур</p><br/><br/><br/><a class="btn btn-primary w-190 mx-auto" href="#">Рўйхатдан ўтиш </a>
+		</div>
+		<!-- #modal-go-reg-->
+		<div class="modal-win text-center" id="modal-view-order" style="display: none"><img class="w-100px mx-auto" src="img/svg/basket-i.svg" loading="lazy" alt=""/><br/>
+			<div class="h4 text-center">Сизнинг буюртмангиз қабул қилинди</div><br/>
+			<p class="text-secondary">Мутахассис буюртмани тасдиқлаш ва маълумотларни аниқлаштириш учун сизга мурожаат қилади</p><br/><br/><br/><a class="btn btn-primary w-190 mx-auto" href="#">Буюртмани кўриш</a>
+		</div>
+		<!-- #modal-view-order-->
+		<div class="modal-win text-center" id="modal-star" style="display: none"><img class="w-100px mx-auto" src="img/svg/star-i.svg" loading="lazy" alt=""/><br/>
+			<div class="h4 text-center">Баҳолаш мезони</div><br/>
+			<p class="text-secondary">Харид сизга мақул келган бўлса ўз&nbsp;баҳоингизни қолдиришингиз мумкин. Сизнинг баҳоингиз сотувчиларнинг рейтинги учун муҳимдир</p><br/>
+			<div class="stars stars--lg">
+				<svg class="icon icon-star  active">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+				<svg class="icon icon-star  active">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+				<svg class="icon icon-star  active">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+				<svg class="icon icon-star  active">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+				<svg class="icon icon-star ">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+			</div><br/><br/><a class="btn btn-primary w-190 mx-auto" href="#">Таййор</a>
+		</div>
+		<!-- #modal-star-->
+		<div class="modal-win text-center" id="modal-close-order" style="display: none"><img class="w-100px mx-auto" src="img/svg/gift-1.svg" loading="lazy" alt=""/><br/>
+			<div class="h4 text-center">Буюртмани ёпиш</div><br/>
+			<p class="text-secondary">Буюртмани ёпиш ҳақидаги сўровингиз харидор томонидан тасдиқлаганганидан сўнг қабул қилинади ва&nbsp;&laquo;Буюртма ёпилган&raquo; статусига ўзгаради</p><br/><br/><a class="btn btn-primary w-190 mx-auto" href="#">Тайёр</a>
+		</div>
+		<!-- #modal-close-order-->
+		<!-- end modals-->
+		<!-- modal libs-->
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox.umd.js"></script>
+		<!-- modal libs-->
+		<!-- slider libs-->
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<!-- /slider libs-->
+		<script src="libs/inputmask/inputmask.min.js"></script>
+		<script src="libs/priority-nav/priority-nav.min.js"></script>
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+		<script src="libs/readmore-js/readmore.min.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

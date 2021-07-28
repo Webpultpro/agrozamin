@@ -1,6 +1,6 @@
 mixin sProdHead(p)
 	// start sProdHead
-	+b.SECTION.sProdHead.section#sProdHead&attributes(attributes)
+	+b.sProdHead.section#sProdHead&attributes(attributes)
 		.container
 			+e.inner
 				.row
@@ -24,3 +24,26 @@ mixin sProdHead(p)
 						.col-md-auto
 							+e.btn(href="#") Қўнғироқ қилиш
 	// end sProdHead
+
+
+mixin sProdHeadSeller(b)
+	// start sProdHeadSeller
+	+b.SECTION.sProdHead--seller.section#sProdHead&attributes(attributes)
+		.container
+			+e.inner
+				.row
+					.col
+						+e.row.row
+							.col-auto
+								+pic("avatar.jpg",'bg',0)
+							.col-auto
+								h4 Шокиров Дилмурод
+								+e.email shokirov.d@yandex.ru
+								+e.tel.text-secondary +998 97 405 00 03
+						+e.message
+							img(src="img/svg/message.svg", alt="")
+							p Ассалому алайкум. Шу юсуповиский помидор ҳақида тўлиқроқ малумот олмоқчи едим телефон орқали алоқага чиқа оласизми? 
+					if b
+						.col-md-auto
+							+e.btn(href="#") Хабар жўнатиш
+	// end sProdHeadSeller

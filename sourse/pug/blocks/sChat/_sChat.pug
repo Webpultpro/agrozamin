@@ -1,0 +1,90 @@
+mixin sChat(filled)
+	// start sChat
+	+b.SECTION.sChat.section#sChat&attributes(attributes)
+		if filled
+			+e.inner
+				+b.section-title
+					h1 Хабарлар
+				.row
+					+e.col.col-auto.d-none.d-md-block
+						+b.all-users
+							mixin user(n, t)
+								+e.user&attributes(attributes)
+									+e.name!= n
+									+e.time!= t
+							+user(`Шокиров Дилмурод`, `16:09 Сегодня`).active
+							+user(`АгроФерма`, `16:09 Сегодня`)
+							+user(`ПомидорыИзТашкента`, `16:09 Сегодня`)
+							+user(`УзбекистанскиеТовары`, `16:09 Сегодня`)
+							+user(`Самид`, `16:09 Сегодня`)
+							+user(`Марат`, `16:09 Сегодня`)
+							+user(`Аршак`, `16:09 Сегодня`)
+							
+					.col
+						+e.all-messages
+							+e.messages-body
+								mixin message(out, p, t)
+									if out
+										+e.message-wrap--out
+											+e.message 
+												p!= p
+												+e.time!= t
+									else
+										+e.message-wrap--in
+											+e.message 
+												p!= p
+												+e.time!= t
+								+message(`out`, `Ассалому алайкум. Шу юсуповиский помидор ҳақида тўлиқроқ малумот олмоқчи едим телефон орқали алоқага чиқа оласизми?`, `Кеча 16:00`)
+								+message(``, `Ассалому алайкум қандай ёрдам бера оламан?`, `Кеча 16:00`)
+								+message(`out`, `Менга шу помидордан 500 кг керак еди. Иложиси борми?`, `Бугун 12:11`)
+								+message(``, `Ха албатта`, `Бугун 13:10`)
+								
+							+e.input-wrap.form-group
+								+e.INPUT.input.form-control(name='text' type='text' placeholder='Хабарни киритинг')
+								+e.BUTTON.btn
+									+icon('chat-arrow')
+		else
+			+e.inner
+				+b.section-title
+					h1 Хабарлар
+				.row
+					+e.col.col-auto.d-none.d-md-block
+						+b.all-users
+							mixin user(n, t)
+								+e.user&attributes(attributes)
+									+e.name!= n
+									+e.time!= t
+							+user(`Шокиров Дилмурод`, `16:09 Сегодня`)
+							+user(`АгроФерма`, `16:09 Сегодня`)
+							+user(`ПомидорыИзТашкента`, `16:09 Сегодня`)
+							+user(`УзбекистанскиеТовары`, `16:09 Сегодня`)
+							+user(`Самид`, `16:09 Сегодня`)
+							+user(`Марат`, `16:09 Сегодня`)
+							+user(`Аршак`, `16:09 Сегодня`)
+							
+					.col
+						+e.all-messages--empty
+							+e.messages-body
+								mixin message(out, p, t)
+									if out
+										+e.message-wrap--out
+											+e.message 
+												p!= p
+												+e.time!= t
+									else
+										+e.message-wrap--in
+											+e.message 
+												p!= p
+												+e.time!= t
+								+message(`out`, `Ассалому алайкум. Шу юсуповиский помидор ҳақида тўлиқроқ малумот олмоқчи едим телефон орқали алоқага чиқа оласизми?`, `Кеча 16:00`)
+								+message(``, `Ассалому алайкум қандай ёрдам бера оламан?`, `Кеча 16:00`)
+								+message(`out`, `Менга шу помидордан 500 кг керак еди. Иложиси борми?`, `Бугун 12:11`)
+								+message(``, `Ха албатта`, `Бугун 13:10`)
+								
+							+e.input-wrap.form-group
+								+e.INPUT.input.form-control(name='text' type='text' placeholder='Хабарни киритинг')
+								+e.BUTTON.btn
+									+icon('chat-arrow')
+
+
+	// end sChat

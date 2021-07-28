@@ -44,4 +44,10 @@ mixin addblock()
 		input(type="text" value="1")
 		+e.btn--plus(type="button")
 
+mixin orderClosed(data)
+	+b.orderClosed
+		+e.title= data.title
+		+e.switch.form-check.form-switch
+			input#switch.form-check-input(type='checkbox')&attributes(attributes)
+			label.form-check-label(for='switch')= data.label
 

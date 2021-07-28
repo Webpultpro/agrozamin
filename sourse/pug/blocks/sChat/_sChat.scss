@@ -1,0 +1,254 @@
+// start .sMessages
+.sChat {
+	// --sPT: ;
+	--sPB: 0;
+	--sTPB: #{rem(22)};
+	@include media-breakpoint-up(md) {
+		--sTPB: #{rem(45)};
+	}
+	.section-title {
+		h1 {
+			margin-bottom: 0;
+			font-weight: 500;
+			line-height: (37 / 32);
+			color: #000000;
+			@include rfs(32px);
+			@include media-breakpoint-up(xl) {
+				font-size: rem(32);
+			}
+		}
+	}
+	&__inner {
+		background: #ffffff;
+		border-radius: 16px;
+		@include media-breakpoint-up(sm) {
+			border: 1px solid #e6e6e6;
+			padding: rem(25);
+		}
+	}
+
+	&__time {
+		font-size: 12px;
+		line-height: (14 / 12);
+		color: #999999;
+	}
+
+	&__all-messages {
+		min-height: 600px;
+		background-color: #f8f9fa;
+		border-radius: 8px;
+		display: flex;
+		flex-direction: column;
+		padding: rem(16) rem(8);
+		@include media-breakpoint-up(sm) {
+			padding: rem(16);
+		}
+		&--empty {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			&::before {
+				content: "Хабар юбориш учун чатни танланг";
+				font-size: rem(18);
+			}
+			.sChat__messages-body {
+				display: none;
+			}
+			.sChat__input-wrap {
+				display: none;
+			}
+		}
+	}
+
+	&__messages-body {
+		flex-grow: 1;
+	}
+
+	&__message-wrap {
+		margin-bottom: rem(14);
+		display: flex;
+		&:last-child {
+			margin-bottom: rem(25);
+		}
+		.sChat__message {
+			padding: rem(12);
+			box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.04);
+			border-radius: 8px;
+			p {
+				margin-bottom: rem(8);
+			}
+		}
+		&--out {
+			justify-content: flex-start;
+			.sChat__message {
+				background-color: $white;
+				max-width: 305px;
+				@include media-breakpoint-up(sm) {
+					max-width: 340px;
+				}
+				p {
+					color: $black;
+				}
+			}
+		}
+		&--in {
+			justify-content: flex-end;
+			.sChat__message {
+				background-color: #00cd69;
+				max-width: 240px;
+				@include media-breakpoint-up(sm) {
+					max-width: 265px;
+				}
+				p {
+					color: $white;
+				}
+				.sChat__time {
+					color: #89ffc5;
+				}
+			}
+		}
+	}
+	.form-group {
+		position: relative;
+		.form-control {
+			padding: rem(9) rem(40) rem(8) rem(8);
+		}
+	}
+	&__btn {
+		@include a-cent(y);
+		padding: rem(10);
+		right: 0;
+		border: none;
+		outline: none;
+		background-color: transparent;
+		.icon {
+			@include mt;
+			font-size: rem(20);
+		}
+		&:hover {
+			.icon {
+				color: $primary;
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sMessages
+.all-users {
+	@include media-breakpoint-down(sm) {
+		--bs-gutter-x: #{rem(24)};
+	}
+	@include media-breakpoint-down(md) {
+		--bs-gutter-x: #{rem(10.5)};
+		list-style: none;
+		h1 {
+			font-weight: 500;
+			line-height: (28 / 24);
+			font-size: rem(24);
+			margin-bottom: rem(40);
+		}
+		&__user {
+			position: relative;
+			display: block;
+			padding: rem(13) 0;
+			&::after {
+				content: "";
+				position: absolute;
+				width: calc(100% + var(--bs-gutter-x) * 2);
+				height: 0.5px;
+				background-color: #e0e0e0;
+				left: calc(-1 * var(--bs-gutter-x));
+				bottom: 0;
+			}
+			&:last-of-type {
+				&::after {
+					display: none;
+				}
+			}
+
+			&:hover {
+				.all-users__name,
+				.all-users__time {
+					color: $primary;
+				}
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		&__name {
+			@include mt;
+			display: block;
+			font-size: 14px;
+			line-height: 1;
+			color: #000;
+			margin-bottom: rem(6);
+		}
+
+		&__time {
+			@include mt;
+			display: block;
+			font-size: 12px;
+			line-height: (14 / 12);
+			color: #999999;
+		}
+	}
+	@include media-breakpoint-up(md) {
+		&__name {
+			@include mt;
+			display: block;
+			font-size: 14px;
+			line-height: 1;
+			color: #000;
+			margin-bottom: rem(6);
+		}
+
+		&__time {
+			@include mt;
+			display: block;
+			font-size: 12px;
+			line-height: (14 / 12);
+			color: #999999;
+		}
+		&__user {
+			@include mt;
+			display: block;
+			padding: rem(8) rem(13);
+			border-radius: 8px;
+			margin-bottom: rem(8);
+			width: 185px;
+			cursor: pointer;
+			&:hover {
+				box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.04);
+				.all-users__name,
+				.all-users__time {
+					color: $primary;
+				}
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&.active {
+				background-color: #00cc69;
+				box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.04);
+				.all-users__name,
+				.all-users__time {
+					color: $white;
+				}
+			}
+		}
+	}
+}

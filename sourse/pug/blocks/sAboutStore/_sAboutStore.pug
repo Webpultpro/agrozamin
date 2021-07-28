@@ -1,128 +1,128 @@
 mixin sAboutStore(empty)
 	// start sAboutStore
 	+b.SECTION.sAboutStore.section#sAboutStore&attributes(attributes)
-			+form-wrap
-				if empty
-					+b.section-title
-						h1 Дўкон ҳақида
-						p Фойдаланувчилар докон ҳақида маълумотлар кўришлари учун маълумотларни киритинг
-					+input(``, 'text', `Дўкон номи`)
-					+input(``, 'textarea', `Дўконнинг қисқача тавсифим`)
-					+e.item
-						h6 Компания логотипи
-						+e.prompt Лого формати JPG, SVG, PNG
-						+e.row.row
-							.col-3
-								+b.add-image
-									//- img(src=`img/@2x/logo-prod.png`, alt="")
-									+e.inscription Сурат қўшиш
-					+e.item
-						h6 Дўкон сурати
-						+e.prompt 5 та сурат юклаш мумкин
-						+e.row.row
-							.col-3
-								+b.add-image
-									//- img(src=`img/@2x/avatar.jpg`, alt="")
-									+e.inscription Сурат қўшиш
-							.col-3
-								+b.add-image
-									//- img(src=`img/@2x/avatar.jpg`, alt="")
-									+e.inscription Сурат қўшиш
-							.col-3
-								+b.add-image
-									//- img(src=`img/@2x/avatar.jpg`, alt="")
-									+e.inscription Сурат қўшиш
-							.col-3
-								+b.add-image
-									//- img(src=`img/@2x/avatar.jpg`, alt="")
-									+e.inscription Сурат қўшиш
-						
-					+e.item
-						h6 Иш вақти
-						+e.prompt--lg Дўконнинг иш вақти ва харидорларга товарларни етказиб бериш
-						mixin shedule(d)
-							+e.shedule
-								+in-c("checkbox", `${d}`)
-								+input(``, 'time', ``)
-								span &minus;
-								+input(``, 'time', ``)
-						+shedule(`Понедельник`)
-						+shedule(`Вторник`)
-						+shedule(`Среда`)
-						+shedule(`Четверг`)
-						+shedule(`Пятница`)
-						+shedule(`Суббота`)
-						+shedule(`Воскресенье`)
+		+form-wrap
+			if empty
+				+b.section-title
+					h1 Дўкон ҳақида
+					p Фойдаланувчилар докон ҳақида маълумотлар кўришлари учун маълумотларни киритинг
+				+input(``, 'text', `Дўкон номи`)
+				+input(``, 'textarea', `Дўконнинг қисқача тавсифим`)
+				+e.item
+					h6 Компания логотипи
+					+e.prompt Лого формати JPG, SVG, PNG
+					+e.row.row
+						.col-3
+							+b.add-image
+								//- img(src=`img/@2x/logo-prod.png`, alt="")
+								+e.inscription Сурат қўшиш
+				+e.item
+					h6 Дўкон сурати
+					+e.prompt 5 та сурат юклаш мумкин
+					+e.row.row
+						.col-3
+							+b.add-image
+								//- img(src=`img/@2x/avatar.jpg`, alt="")
+								+e.inscription Сурат қўшиш
+						.col-3
+							+b.add-image
+								//- img(src=`img/@2x/avatar.jpg`, alt="")
+								+e.inscription Сурат қўшиш
+						.col-3
+							+b.add-image
+								//- img(src=`img/@2x/avatar.jpg`, alt="")
+								+e.inscription Сурат қўшиш
+						.col-3
+							+b.add-image
+								//- img(src=`img/@2x/avatar.jpg`, alt="")
+								+e.inscription Сурат қўшиш
+					
+				+e.item
+					h6 Иш вақти
+					+e.prompt--lg Дўконнинг иш вақти ва харидорларга товарларни етказиб бериш
+					mixin shedule(d)
+						+e.shedule
+							+in-c("checkbox", `${d}`)
+							+input(``, 'time', ``)
+							span &minus;
+							+input(``, 'time', ``)
+					+shedule(`Понедельник`)
+					+shedule(`Вторник`)
+					+shedule(`Среда`)
+					+shedule(`Четверг`)
+					+shedule(`Пятница`)
+					+shedule(`Суббота`)
+					+shedule(`Воскресенье`)
 
-					+e.item
-						h6 Боғланиш учун маълумот
-						+e.prompt--lg Дўкон маълумотларини қошиш орқали харидорларга дўкон билан боғланиш имкониятини яратасиз
-						+input(`Телефон рақами`, 'tel', ``)
-						+input(`E-mail`, 'email', ``)
-						+e.geo-link.link-info(href="#") Геолакация жойланг
-						+in-c("checkbox", `Профил маълумотларидан фойдаланиш`)
-					+e.btn-wrap
-						+e.BUTTON.btn.btn.btn-primary Сақлаш
-				else
-					+b.section-title
-						h1 Дўкон ҳақида
-					+e.company-title МЧЖ "Green technology"
-					+e.company-description Доконимизда енг сар асабзовот уруғлари сотилади. Бизда чегирмалар мавжуд болиб, исталган тарзда хардни амалга оширишингиз мумкин
-					+e.item
-						h6 Компания логотипи
-						+e.prompt Лого формати JPG, SVG, PNG
-						+e.row.row
-							.col-3
-								+b.add-image--filled
-									img(src=`img/@2x/logo-prod.png`, alt="")
-									+e.inscription Сурат қўшиш
-					+e.item
-						h6 Дўкон сурати
-						+e.prompt 5 та сурат юклаш мумкин
-						+e.row.row
-							.col-3
-								+b.add-image--filled
-									img(src=`img/@2x/about-store-1.png`, alt="")
-									+e.inscription Сурат қўшиш
-							.col-3
-								+b.add-image--filled
-									img(src=`img/@2x/about-store-2.png`, alt="")
-									+e.inscription Сурат қўшиш
-							.col-3
-								+b.add-image--filled
-									img(src=`img/@2x/about-store-3.png`, alt="")
-									+e.inscription Сурат қўшиш
-							.col-3
-								+b.add-image--filled
-									img(src=`img/@2x/about-store-4.png`, alt="")
-									+e.inscription Сурат қўшиш
-						
-					+e.item
-						h6 Иш вақти
-						+e.prompt--lg Дўконнинг иш вақти ва харидорларга товарларни етказиб бериш
-						mixin shedule(d)
-							+e.shedule
-								+in-c("checkbox", `${d}`)
-								+input(``, 'time', ``)
-								span &minus;
-								+input(``, 'time', ``)
-						+shedule(`Понедельник`)
-						+shedule(`Вторник`)
-						+shedule(`Среда`)
-						+shedule(`Четверг`)
-						+shedule(`Пятница`)
-						+shedule(`Суббота`)
-						+shedule(`Воскресенье`)
+				+e.item
+					h6 Боғланиш учун маълумот
+					+e.prompt--lg Дўкон маълумотларини қошиш орқали харидорларга дўкон билан боғланиш имкониятини яратасиз
+					+input(`Телефон рақами`, 'tel', ``)
+					+input(`E-mail`, 'email', ``)
+					+e.geo-link.link-info(href="#") Геолакация жойланг
+					+in-c("checkbox", `Профил маълумотларидан фойдаланиш`)
+				+e.btn-wrap
+					+e.BUTTON.btn.btn.btn-primary Сақлаш
+			else
+				+b.section-title
+					h1 Дўкон ҳақида
+				+e.company-title МЧЖ "Green technology"
+				+e.company-description Доконимизда енг сар асабзовот уруғлари сотилади. Бизда чегирмалар мавжуд болиб, исталган тарзда хардни амалга оширишингиз мумкин
+				+e.item
+					h6 Компания логотипи
+					+e.prompt Лого формати JPG, SVG, PNG
+					+e.row.row
+						.col-3
+							+b.add-image--filled
+								img(src=`img/@2x/logo-prod.png`, alt="")
+								+e.inscription Сурат қўшиш
+				+e.item
+					h6 Дўкон сурати
+					+e.prompt 5 та сурат юклаш мумкин
+					+e.row.row
+						.col-3
+							+b.add-image--filled
+								img(src=`img/@2x/about-store-1.png`, alt="")
+								+e.inscription Сурат қўшиш
+						.col-3
+							+b.add-image--filled
+								img(src=`img/@2x/about-store-2.png`, alt="")
+								+e.inscription Сурат қўшиш
+						.col-3
+							+b.add-image--filled
+								img(src=`img/@2x/about-store-3.png`, alt="")
+								+e.inscription Сурат қўшиш
+						.col-3
+							+b.add-image--filled
+								img(src=`img/@2x/about-store-4.png`, alt="")
+								+e.inscription Сурат қўшиш
+					
+				+e.item
+					h6 Иш вақти
+					+e.prompt--lg Дўконнинг иш вақти ва харидорларга товарларни етказиб бериш
+					mixin shedule(d)
+						+e.shedule
+							+in-c("checkbox", `${d}`)
+							+input(``, 'time', ``)
+							span &minus;
+							+input(``, 'time', ``)
+					+shedule(`Понедельник`)
+					+shedule(`Вторник`)
+					+shedule(`Среда`)
+					+shedule(`Четверг`)
+					+shedule(`Пятница`)
+					+shedule(`Суббота`)
+					+shedule(`Воскресенье`)
 
-					+e.item
-						h6 Боғланиш учун маълумот
-						+e.tel.text-secondary Телефон: #[span.text-body +998974050002]
-						+e.email.text-secondary E-mail: #[span.text-body greentechnology@mail.ru]
-					+e.item--wide
-						h6 Боғланиш учун маълумот
-						+e.prompt--lg.text-secondary 15, Бектемир тумани, Олим Оширов даҳа, Тошкент, Ўзбекистон
-						+e.map
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5993.788816048251!2d69.28181339826368!3d41.31116065483939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b2931f41f23%3A0x81095e06b654b845!2z0KHQutCy0LXRgCDQuNC8LiDQkNC80LjRgNCwINCi0LXQvNGD0YDQsA!5e0!3m2!1sru!2sby!4v1627060681100!5m2!1sru!2sby" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-					+e.btn-wrap
-						+e.BUTTON.btn.btn.btn-primary Таҳрирлаш
+				+e.item
+					h6.mb-2 Боғланиш учун маълумот
+					+e.tel.text-secondary Телефон: #[span.text-body +998974050002]
+					+e.email.text-secondary E-mail: #[span.text-body greentechnology@mail.ru]
+				+e.item--wide
+					h6 Боғланиш учун маълумот
+					+e.prompt--lg.text-secondary 15, Бектемир тумани, Олим Оширов даҳа, Тошкент, Ўзбекистон
+					+e.map
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5993.788816048251!2d69.28181339826368!3d41.31116065483939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b2931f41f23%3A0x81095e06b654b845!2z0KHQutCy0LXRgCDQuNC8LiDQkNC80LjRgNCwINCi0LXQvNGD0YDQsA!5e0!3m2!1sru!2sby!4v1627060681100!5m2!1sru!2sby" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				+e.btn-wrap
+					+e.BUTTON.btn.btn.btn-primary Таҳрирлаш
 	// end sAboutStore

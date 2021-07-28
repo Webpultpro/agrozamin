@@ -12,11 +12,11 @@
 	@include media-breakpoint-up(lg) {
 		margin-top: rem(47);
 	}
-	.container {
-		@include media-breakpoint-down(sm) {
-			--bs-gutter-x: #{rem(24)};
-		}
-	}
+	// .container {
+	// 	@include media-breakpoint-down(sm) {
+	// 		--bs-gutter-x: #{rem(24)};
+	// 	}
+	// }
 	&__wrapper {
 		max-width: 520px;
 	}

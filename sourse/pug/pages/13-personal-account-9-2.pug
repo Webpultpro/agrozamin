@@ -1,0 +1,51 @@
+
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sAdvantages/_sAdvantages.pug
+//- include ../blocks/sCategories/_sCategories.pug
+//- include ../blocks/sPopulars/_sPopulars.pug
+//- include ../blocks/sWhantToSell/_sWhantToSell.pug
+//- include ../blocks/sHowWorks/_sHowWorks.pug
+//- include ../blocks/legal-info/_legal-info.pug
+include ../blocks/sPersonalAccount/_sPersonalAccount.pug
+include ../blocks/sProdHead/_sProdHead.pug
+include ../blocks/sProdBody/_sProdBody.pug
+include ../blocks/sCabinetOrders/_sCabinetOrders.pug
+include ../blocks/sBasket/_sBasket.pug
+include ../blocks/sOrderHead/_sOrderHead.pug
+include ../blocks/sBasket/_sBasket.pug
+
+
+block variables
+	- let  mainPage= null 
+	//- - let  bg= '13-1.jpg'
+
+block title
+	- let  title= 'Махсулотлар'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+topLine('comp')
+		+top-nav('comp') 
+	+breadcrumb('Асосий саҳифа', 'Кабинет', title)
+	+sOrderHeadSeller({
+		number:'235356751',
+		color:'#27B7D6',
+		status:'Сотувда',
+		btn:'Махсулотни очириш',
+		}).pt-0
+	+sProdBodySeller()
+	//- +sProdHead('sds')
+	//- +sBasket("order").--order
+	
+	+footer()
+
+
+

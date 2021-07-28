@@ -28,18 +28,18 @@ mixin topLine(comp)
 					.col-auto.d-md-none
 						+b.top-btn--search-toggle-js(type="button")
 							+icon("search")
-							+e.text Поиск
+							+e.SPAN.text Поиск
 				.col-auto
 					+b.top-btn(type="button")
-						+e.icon-wrap
+						+e.SPAN.icon-wrap
 							+icon("user")
-						+e.text Кириш
+						+e.SPAN.text Кириш
 				.col-auto.position-relative
 					+b.top-btn--alerts(type="button")
-						+e.icon-wrap
+						+e.SPAN.icon-wrap
 							+icon("bang")
-							+e.count 99 
-						+e.text Хабарнома
+							+e.SPAN.count 99 
+						+e.SPAN.text Хабарнома
 					+b.dropdown-alert
 						+e.item
 							+e.img-wrap.bg-wrap(href="#")
@@ -68,10 +68,10 @@ mixin topLine(comp)
 				if !comp
 					.col-auto
 						+b.top-btn(type="button")
-							+e.icon-wrap
+							+e.SPAN.icon-wrap
 								+icon("basket")
-								+e.count 99 
-							+e.text Саватча
+								+e.SPAN.count 99 
+							+e.SPAN.text Саватча
 				.col-auto
 					+b.lang-choose
 						+e.current Уз

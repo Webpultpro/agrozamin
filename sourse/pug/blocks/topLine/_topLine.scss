@@ -59,6 +59,9 @@
 } // end.topLine
 
 .top-btn{
+	span{
+		display: block;
+	}
 	&__text{
 			margin-top: rem(5);
 			@include media-breakpoint-down(sm) {

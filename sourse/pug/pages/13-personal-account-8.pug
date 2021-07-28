@@ -1,0 +1,47 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sAdvantages/_sAdvantages.pug
+//- include ../blocks/sCategories/_sCategories.pug
+//- include ../blocks/sPopulars/_sPopulars.pug
+//- include ../blocks/sWhantToSell/_sWhantToSell.pug
+//- include ../blocks/sHowWorks/_sHowWorks.pug
+//- include ../blocks/legal-info/_legal-info.pug
+include ../blocks/sPersonalAccount/_sPersonalAccount.pug
+include ../blocks/sCabinetOrders/_sCabinetOrders.pug
+
+block variables
+	- let  mainPage= null 
+	//- - let  bg= '13-personal-account.jpg'
+
+block title
+	- let  title= 'Буюртмалар'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+topLine('comp')
+		+top-nav('comp') 
+	+breadcrumb('Асосий саҳифа', 'Кабинет', title)
+	+sPersonalAccount()
+		.row.row--main
+			.col-lg.col--aside
+				+b.UL.navigation.d-none.d-lg-block
+					+e.LI.item: a(href="#") Юридик малумотлар
+					+e.LI.item: a(href="#") Докон ҳақида
+					+e.LI.item: a(href="#") Профиль
+					+e.LI.item: a(href="#") Махсулотлар
+					+e.LI.item.active: a(href="#") Буюртмалар
+					+e.LI.item: a(href="#") Махсулот қўшиш
+					+e.LI.item: a(href="#") Хабарлар
+			.col-lg.col--main
+				+sCabinetOrdersSeller()
+	+footer()
+
+
+

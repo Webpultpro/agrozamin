@@ -93,3 +93,32 @@
 		}
 	}
 }
+
+.orderClosed {
+	margin-bottom: rem(130);
+	@include media-breakpoint-up(md) {
+	margin-bottom: rem(70);
+	}
+	&__title {
+		font-size: rem(18);
+		line-height: 125%;
+		color: #999999;
+		max-width: 760px;
+		margin-bottom: rem(16);
+	}
+	.form-switch {
+		padding-left: rem(44);
+	}
+	.form-check-input {
+		width: rem(44);
+		height: rem(22);
+		margin-left: rem(-44);
+		margin-top: 0;
+		margin-right: rem(22);
+	}
+	.form-check-label {
+		font-weight: bold;
+		font-size: rem(16);
+		line-height: (22 / 16);
+	}
+}
