@@ -65,7 +65,7 @@
 	&__text{
 			margin-top: rem(5);
 			@include media-breakpoint-down(sm) {
-				display: none;
+				display: none !important;
 			}
 		
 	}
@@ -163,6 +163,9 @@
 	&__current  {
 		background: var(--bg, #F2F2F2);
 		@include mt;
+		&.active{
+			pointer-events: none;
+		}
 		&:hover{
 
 		}
@@ -195,7 +198,7 @@
 		// visibility: var(--hover, hidden);
 		// opacity: var(--hover, 0);
 		display: none;
-		@include mt;
+		// @include mt;
 		overflow: hidden;
 	}
 	

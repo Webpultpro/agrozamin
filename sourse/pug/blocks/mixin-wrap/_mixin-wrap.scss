@@ -7,8 +7,10 @@
 		@include mt;
 		display: grid;
 		place-items: center;
-		@extend .text-body;
+		// @extend .text-body;
+		color: $body-color;
 		&:hover {
+			color: $primary;
 			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			// opacity: .6 ;
 		}

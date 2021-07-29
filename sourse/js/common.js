@@ -291,22 +291,29 @@ function eventHandler() {
 
 
 	var wrapper = document.querySelector(".top-nav");
-	let btnText = document.querySelector('.scroll-menu-wrap').dataset.btn
-	var nav = priorityNav.init({
-		mainNavWrapper: ".scroll-menu-wrap", // mainnav wrapper selector (must be direct parent from mainNav)
-		mainNav: ".menu", // mainnav selector. (must be inline-block)
-		navDropdownLabel: btnText,
-		navDropdownClassName: "menu__dropdown", // class used for the dropdown.
-		navDropdownToggleClassName: "menu__dropdown-toggle", // class used for the dropdown toggle.
-		// navDropdownBreakpointLabel: "Выбрать", //button label for navDropdownToggle when the breakPoint is reached.
-		breakPoint: 0,
-		// moved: function () { scrolldrop()}, // executed when item is moved to dropdown
-		// movedBack: function () { scrolldrop()} // executed when item is moved back to main menu
-	});
-	
-	$(".top-btn--search-toggle-js").click(function(){
-		$(".topLine__search-wrap ").slideToggle();
-	})
+	if (wrapper) {
+
+		let btn = document.querySelector('.scroll-menu-wrap');
+		if (btn) {
+			
+			let btnText = btn.dataset.btn
+			var nav = priorityNav.init({
+				mainNavWrapper: ".scroll-menu-wrap", // mainnav wrapper selector (must be direct parent from mainNav)
+				mainNav: ".menu", // mainnav selector. (must be inline-block)
+				navDropdownLabel: btnText,
+				navDropdownClassName: "menu__dropdown", // class used for the dropdown.
+				navDropdownToggleClassName: "menu__dropdown-toggle", // class used for the dropdown toggle.
+				// navDropdownBreakpointLabel: "Выбрать", //button label for navDropdownToggle when the breakPoint is reached.
+				breakPoint: 0,
+				// moved: function () { scrolldrop()}, // executed when item is moved to dropdown
+				// movedBack: function () { scrolldrop()} // executed when item is moved back to main menu
+			});
+			
+		}
+		}
+		$(".top-btn--search-toggle-js").click(function(){
+			$(".topLine__search-wrap ").slideToggle();
+		})
 
 	$(".aside__toggle-btn--js").click(function(){
 		$(this).toggleClass("active").next().slideToggle();
