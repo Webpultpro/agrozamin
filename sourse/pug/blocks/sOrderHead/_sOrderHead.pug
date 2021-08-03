@@ -1,4 +1,4 @@
-mixin sOrderHead(data)
+mixin sOrderHead(b="Бекор қилиш ")
 	// start sOrderHead
 	+b.sOrderHead.section#sOrderHead&attributes(attributes)
 		.container
@@ -14,8 +14,8 @@ mixin sOrderHead(data)
 							block
 						else
 							+e.status(style="--color:#7C7E80") Буюртма берилган
-					.col-auto
-						+e.btn(href="#") Бекор қилиш 
+					.col-md-auto
+						+e.btn(href="#")= b
 	// end sOrderHead
 
 

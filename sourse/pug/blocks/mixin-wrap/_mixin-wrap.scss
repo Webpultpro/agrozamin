@@ -85,6 +85,7 @@
 		position: absolute;
 		@extend .btn;
 		padding: 0 rem(10);
+		box-shadow: none !important;
 		right: 0;
 		right: rem(7);
 		top: rem(-1);

@@ -516,7 +516,7 @@ iframe {
 .stars{
 	margin-bottom: rem(5);
 	.icon{
-		cursor: pointer;
+		// cursor: pointer;
 		font-size: rem(16);
 		&:not(:last-child){
 			margin-right: rem(5);
@@ -524,15 +524,24 @@ iframe {
 		stroke: currentColor;
 		fill: transparent;
 		@include mt;
-		&.active,
-		&:hover{ 
+		// &:hover
+		&.active{
 			stroke: #f6c23d;
 			fill: #F6C23D;
 		}
 	}
 	&--lg .icon{
-		font-size: rem(55);
+		@include media-breakpoint-up(sm) {
+			font-size: rem(55);
+		}
+		font-size: rem(50);
 		stroke-width: 1px;
+		cursor: pointer;
+			&:hover,
+			&.active {
+				stroke: #f6c23d;
+				fill: #F6C23D;
+			}
 		&:not(.active),
 		&:not(:hover){
 				color: #CFCFCF;
@@ -573,4 +582,13 @@ iframe {
 	@include rfs(32px);
 	margin-bottom: rem(34);
  }
+}
+
+.btn-outline-primary{
+	&:hover{
+		color: #fff !important;
+	}
+}
+.btn-primary{
+	color: #fff !important;
 }

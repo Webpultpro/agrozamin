@@ -38,7 +38,7 @@
 	}
 
 	&__wrapper {
-		max-width: 900px;
+		max-width: 940px;
 		margin-left: auto;
 		margin-right: auto;
 		@include media-breakpoint-up(md) {
@@ -89,6 +89,10 @@
 			margin-top: rem(78);
 			
 		}
+	}
+
+	&__title{
+		color: #7C7E80;
 	}
 
 	@include media-breakpoint-up(xl) {

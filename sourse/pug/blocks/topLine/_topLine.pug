@@ -24,13 +24,13 @@ mixin topLine(comp)
 				.col-md.order-md-0.order-last
 					+e.search-wrap.d-md-block
 						+search-block
-				if !comp
-					.col-auto.d-md-none
-						+b.top-btn--search-toggle-js(type="button")
-							+icon("search")
-							+e.SPAN.text Поиск
+				//- if !comp
+				.col-auto.d-md-none
+					+b.top-btn--search-toggle-js(type="button")
+						+icon("search")
+						+e.SPAN.text Поиск
 				.col-auto
-					+b.top-btn(type="button")
+					+b.top-btn(href="#")
 						+e.SPAN.icon-wrap
 							+icon("user")
 						+e.SPAN.text Кириш
@@ -67,7 +67,7 @@ mixin topLine(comp)
 								+e.time Кеча 14:27
 				if !comp
 					.col-auto
-						+b.top-btn(type="button")
+						+b.top-btn(href="#")
 							+e.SPAN.icon-wrap
 								+icon("basket")
 								+e.SPAN.count 99 
@@ -76,8 +76,8 @@ mixin topLine(comp)
 					+b.lang-choose
 						+e.current Уз
 						+e.dropdown 
-							+e.dropdown-item  Уз1
-							+e.dropdown-item  Уз2
-							+e.dropdown-item  Уз3
-							+e.dropdown-item  Уз4
+							+e.dropdown-item(href="#")  Уз1
+							+e.dropdown-item(href="#")  Уз2
+							+e.dropdown-item(href="#")  Уз3
+							+e.dropdown-item(href="#")  Уз4
 	// end topLine

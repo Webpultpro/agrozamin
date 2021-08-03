@@ -3,12 +3,12 @@
 	--sPB: 0;
 	--sPT: #{rem(40)};
 	
-	margin-bottom: rem(97);
+	// margin-bottom: rem(97);
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(47)};
 		--sPB: #{rem(37)};
 		--sTPB: #{rem(18)};
-		margin-bottom: rem(87);
+		// margin-bottom: rem(87);
 	}
 	background-color: #3550af;
 	color: $white;
@@ -158,7 +158,10 @@
 		border-radius: 68px;
 		text-align: center;
 		&:hover, &:focus {
-			color: shift-color(#3550af, 20%);
+			// color: shift-color(#3550af, 20%);
+			background-color: $primary;
+			border-color: $primary;
+			color: #fff;
 		}
 	}
 	@include media-breakpoint-up(xl) {

@@ -420,7 +420,7 @@ function eventHandler() {
 	$('.readmore-js').readmore({
 		collapsedHeight: 50,
 		moreLink: '<a href="#" class="readmore-link-more">Батафсил </a>',
-		lessLink: '<a href="#" class="readmore-link-more readmore-link-more--close">Close</a>'
+		lessLink: '<a href="#" class="readmore-link-more readmore-link-more--close">Қисқача</a>'
 	});
 
 	function toggleShow(toggle, drop) {
