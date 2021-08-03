@@ -41,8 +41,10 @@
 				left: 20px;
 				top: rem(50);
 				width: rem(37);
-				height: calc(100% - #{rem(100)});
+				height: calc(100% - #{rem(105)});
 				background-image: url(../img/svg/dots.svg);
+				background-repeat: repeat-y;
+				background-size: 100%;
 				
 			}
 		}
