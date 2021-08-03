@@ -2,8 +2,8 @@ mixin headerBlock(comp)
 	// start headerBlock
 	+b.headerBlock.section#headerBlock.bg-wrap&attributes(attributes)
 		- let bg = (comp ? 'head-bg.jpg' : 'header-block-1.jpg' )
-		+pic(bg,'bg','').picture-bg
-		+pic(bg,'bg','').picture-bg
+		+pic(bg,'bg').picture-bg
+		+pic(bg,'bg').picture-bg
 		
 		.container
 			+b.section-title

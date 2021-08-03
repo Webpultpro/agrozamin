@@ -754,12 +754,18 @@
 			<div class="headerBlock section bg-wrap" id="headerBlock">
 				<!-- picture-->
 				<picture class="picture-bg"> 
-					<source type="image/webp" srcset="img/@2x/webp/header-block-1.webp"/><img class="object-fit-js" src="img/@2x/header-block-1.jpg" alt="" loading="lazy"/>
+					<source type="image/webp" srcset="img/@2x/webp/header-block-1.webp" media="(min-width:576px)"/>
+					<source type="image/webp" srcset="img/@1x/webp/header-block-1.webp"/>
+					<source type="image/jpg" srcset="img/@2x/header-block-1.jpg" media="(min-width:576px)"/>
+					<source type="image/jpg" srcset="img/@1x/header-block-1.jpg"/><img class="object-fit-js" src="img/@2x/header-block-1.jpg" alt="" loading="lazy"/>
 				</picture>
 				<!-- /picture-->
 				<!-- picture-->
 				<picture class="picture-bg"> 
-					<source type="image/webp" srcset="img/@2x/webp/header-block-1.webp"/><img class="object-fit-js" src="img/@2x/header-block-1.jpg" alt="" loading="lazy"/>
+					<source type="image/webp" srcset="img/@2x/webp/header-block-1.webp" media="(min-width:576px)"/>
+					<source type="image/webp" srcset="img/@1x/webp/header-block-1.webp"/>
+					<source type="image/jpg" srcset="img/@2x/header-block-1.jpg" media="(min-width:576px)"/>
+					<source type="image/jpg" srcset="img/@1x/header-block-1.jpg"/><img class="object-fit-js" src="img/@2x/header-block-1.jpg" alt="" loading="lazy"/>
 				</picture>
 				<!-- /picture-->
 				<div class="container">
@@ -1072,16 +1078,15 @@
 		<!-- #modal-close-order-->
 		<!-- end modals-->
 		<!-- modal libs-->
-		<script src="libs/jquery/jquery.min.js"></script>
-		<script src="libs/@fancyapps/ui/fancybox.umd.js"></script>
+		<script async="defer" src="libs/jquery/jquery.min.js"></script>
+		<script async="defer" src="libs/@fancyapps/ui/fancybox.umd.js"></script>
 		<!-- modal libs-->
 		<!-- slider libs-->
-		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script async="defer" src="libs/swiper/swiper-bundle.min.js"> </script>
 		<!-- /slider libs-->
-		<script src="libs/inputmask/inputmask.min.js"></script>
-		<script src="libs/priority-nav/priority-nav.min.js"></script>
-		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
-		<script src="libs/readmore-js/readmore.min.js"></script>
-		<script src="js/common.js"></script>
+		<script async="defer" src="libs/priority-nav/priority-nav.min.js"></script>
+		<script async="defer" src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+		<script async="defer" src="libs/readmore-js/readmore.min.js"></script>
+		<script async="defer" src="js/common.js"></script>
 	</body>
 </html>
