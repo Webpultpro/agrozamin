@@ -11,7 +11,8 @@ mixin sPopulars(data)
 							+e.item(href='#')
 								+e.DIV.img-wrap
 									if i
-										img(src=`img/@2x/populars-${i}.jpg` alt="")
+										//- img(src=`img/@2x/populars-${i}.jpg` alt="")
+										+pic(`populars-${i}.jpg`,'',0)
 								+e.DIV.caption
 									+e.DIV.price!= t
 									p!= p
