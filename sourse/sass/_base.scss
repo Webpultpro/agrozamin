@@ -585,6 +585,7 @@ iframe {
 }
 
 .btn-outline-primary{
+	&.active,
 	&:hover{
 		color: #fff !important;
 	}

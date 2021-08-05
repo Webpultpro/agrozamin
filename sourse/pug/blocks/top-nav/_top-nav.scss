@@ -240,8 +240,18 @@
 			font-size: rem(12);
 			right: rem(12);
 			top: rem(18);
+			// @include mt;
 			@include media-breakpoint-down(md){
-					transform: rotate(90deg);
+				right: rem(15);
+				transform: rotate(90deg);
+			}
+		}
+		&.active{
+			.icon{
+					@include media-breakpoint-down(md){
+				transform: rotate(270deg);
+					}
+
 			}
 		}
 		&::before {
@@ -307,6 +317,9 @@
 			}
 			a{
 				color: #676767;
+				&:hover{
+					color: $primary;
+				}
 			}
 			li{
 				margin-bottom: rem(10);

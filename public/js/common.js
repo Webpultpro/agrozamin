@@ -182,7 +182,7 @@ function eventHandler() {
 	$(" .menu-item-has-children > a").click(function (e) {
 		if ($(".catalog-block").hasClass("active")) {
 			e.preventDefault();
-			$(this).next().slideToggle();
+			$(this).toggleClass("active").next().slideToggle();
 		}
 	});
 	window.addEventListener('scroll', () => {

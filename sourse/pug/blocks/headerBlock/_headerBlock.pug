@@ -6,12 +6,14 @@ mixin headerBlock(comp)
 		+pic(bg,'bg').picture-bg
 		
 		.container
+			.before
+				if comp
+					img.dots.d-none.d-sm-block(src="img/svg/dots2.svg", alt="")
 			+b.section-title
 				if !comp
 					h1 Ўз аграр бизнесингизни биз билан қуринг
 					p Ҳамкорлар, дилерлар, етказиб берувчилар ва улгуржи харидорларни топиш учун ягона онлайн платформа
-				else
-					img.dots.d-none.d-sm-block(src="img/svg/dots2.svg", alt="")
+				else 
 					h1 Агрозамин билан ҳамкорликда ривожланинг
 					p Қишлоқ хўжалиги маҳсулотларини рақобатбардош нархларда сотишда сизга ёрдам берадиган янги бозор
 	// end headerBlock

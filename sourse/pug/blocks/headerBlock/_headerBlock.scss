@@ -13,14 +13,9 @@
 	margin-left: auto;
 	margin-right: auto;
 
-		.dots {
-			position: absolute;
-			top: 20px;
-			left: calc(100% + 20px);
-		}
 		
-	&::after{
-		content: '';
+		
+	.before{ 
 		position: absolute;
 		left: 0;top: 0;
 		// width: rem();
@@ -31,21 +26,25 @@
 		height: 100%;
 		z-index: -1;
 		background: rgba(0, 205, 105, 0.86);
+		.dots {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+		}
 
 	}
 		@include media-breakpoint-up(md){
 
-			&::before{
+			&::before{ 
 				content: '';
 				position: absolute;
 				left: 20px;
 				top: rem(50);
 				width: rem(37);
-				height: calc(100% - #{rem(105)});
+				height: calc(100% - #{rem(99)});
 				background-image: url(../img/svg/dots.svg);
 				background-repeat: repeat-y;
 				background-size: 100%;
-				
 			}
 		}
 

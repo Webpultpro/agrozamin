@@ -106,7 +106,7 @@
 		}
 		
 		&__filter-title-toggle{
-			margin-left: rem(5);
+			margin-left: rem(10);
 			cursor: pointer;
 			--h: 1px;
 				margin-bottom: rem(15);
@@ -231,6 +231,7 @@
 		position: relative;
 		display: inline-block;
 		padding-right: rem(20);
+		transform-origin: center center;
 		@include media-breakpoint-down(lg) {
 			margin-bottom: 0;
 			display: block;
@@ -239,7 +240,7 @@
 			&.active{
 				color: $primary;
 				&::after {
-					content: var(--chevron-down-primary);
+					background-image: var(--chevron-down-primary);
 				}
 			}
 		}
@@ -247,13 +248,18 @@
 			position: relative;
 			cursor: pointer;
 			&::after{
-				content: var(--chevron-down);
+				content: '';
+				background-image: var(--chevron-down);
+				background-size: contain;
+				background-repeat: no-repeat;
 				position: absolute;
 				right: 0;
-				top: rem(0);
+				top: rem(7);
+				width: 11px;
+				height: 6px;
 				@include media-breakpoint-down(lg){
 					right: 23px;
-						top: rem(14);
+						top: rem(22);
 
 					}
 				@include mt;

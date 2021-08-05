@@ -176,6 +176,11 @@
 		margin-top: auto;
 		}
 	}
+	@include media-breakpoint-up(md) {
+	&--vertical .fw-500.mb-1{
+		padding-bottom: rem(40);
+	}
+	}
 	&--vertical &__img-wrap{
 		flex:  0 0 auto;
 		margin-right: rem(23);
