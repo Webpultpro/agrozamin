@@ -137,3 +137,13 @@ a {
 @include media-breakpoint-down(sm) {}
 
 @include media-breakpoint-down(xs) {}
+
+
+.fancybox__container{
+	// max-width: 100%;
+	// min-width: 100%;
+	width: 100% !important;
+	min-height: 100%;
+	// transform: m;
+	transform: none !important;
+}

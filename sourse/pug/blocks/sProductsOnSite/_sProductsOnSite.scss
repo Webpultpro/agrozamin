@@ -1,4 +1,10 @@
 // start .sProductsOnSite
+.sProductsOnSite  + .footer{
+	margin-top: rem(97); 
+	@include media-breakpoint-up(md) { 
+		margin-top: rem(87);
+	}
+}
 .sProductsOnSite {
 	--sPT: #{rem(22)};
 	--sPB: #{rem(120)};

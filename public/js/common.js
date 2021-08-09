@@ -1,11 +1,5 @@
 "use strict";
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 let div = document.createElement('div');
 div.style.overflowY = 'scroll';
 div.style.width = '50px';
@@ -195,36 +189,38 @@ function eventHandler() {
 	}, {
 		passive: true
 	});
-	whenResize();
-	let defaultSl = {
-		spaceBetween: 0,
-		lazy: {
-			loadPrevNext: true
-		},
-		watchOverflow: true,
-		spaceBetween: 0,
-		loop: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev'
-		},
-		pagination: {
-			el: ' .swiper-pagination',
-			type: 'bullets',
-			clickable: true // renderBullet: function (index, className) {
-			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-			// }
+	whenResize(); // let defaultSl = {
+	// 	spaceBetween: 0,
+	// 	lazy: {
+	// 		loadPrevNext: true,
+	// 	},
+	// 	watchOverflow: true,
+	// 	spaceBetween: 0,
+	// 	loop: true,
+	// 	navigation: {
+	// 		nextEl: '.swiper-button-next',
+	// 		prevEl: '.swiper-button-prev',
+	// 	},
+	// 	pagination: {
+	// 		el: ' .swiper-pagination',
+	// 		type: 'bullets',
+	// 		clickable: true,
+	// 		// renderBullet: function (index, className) {
+	// 		// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+	// 		// }
+	// 	},
+	// }
+	// const swiper4 = new Swiper('.sBanners__slider--js', {
+	// 	// slidesPerView: 5,
+	// 	...defaultSl,
+	// 	slidesPerView: 'auto',
+	// 	freeMode: true,
+	// 	loopFillGroupWithBlank: true,
+	// 	touchRatio: 0.2,
+	// 	slideToClickedSlide: true,
+	// 	freeModeMomentum: true,
+	// });
 
-		}
-	};
-	const swiper4 = new Swiper('.sBanners__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true
-	}));
 	let sCategoriesSlider = new Swiper('.sCategories__slider--js', {
 		freeModeMomentum: true,
 		watchOverflow: true,
@@ -418,6 +414,17 @@ function eventHandler() {
 	toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	toggleShow('.lang-choose__current', ".lang-choose__dropdown");
 	toggleShow('.top-btn--alerts', ".dropdown-alert");
+	let addImgBlock = document.querySelectorAll('.add-image input');
+	addImgBlock.forEach(el => {
+		el.onchange = evt => {
+			const [file] = el.files;
+
+			if (file) {
+				el.parentNode.classList.add("add-image--filled");
+				el.parentNode.querySelector('img').src = URL.createObjectURL(file);
+			}
+		};
+	});
 }
 
 ;

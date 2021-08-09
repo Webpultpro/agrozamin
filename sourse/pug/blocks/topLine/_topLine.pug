@@ -22,13 +22,7 @@ mixin topLine(comp)
 					a(href="/")
 						img(src="img/svg/logo.svg", alt="") 
 				.col-md.order-md-0.order-last
-					+e.search-wrap.d-md-block
-						+search-block
-				//- if !comp
-				.col-auto.d-md-none
-					+b.top-btn--search-toggle-js(type="button")
-						+icon("search")
-						+e.SPAN.text Поиск
+					+search-block
 				.col-auto
 					+b.top-btn(href="#")
 						+e.SPAN.icon-wrap
@@ -45,7 +39,7 @@ mixin topLine(comp)
 							+e.img-wrap.bg-wrap(href="#")
 								+pic("prod-1.jpg",'bg',0).picture-bg
 							+e.caption
-								+e.text Буюртмалар
+								+e.text.fw-500 Буюртмалар
 								+e.title: a(href="#")  ЧП “Mega Gruop”
 								+e.text.text-secondary Буюртма “Буюртма этказилган” статусига ўзгарди
 								+e.time Кеча 14:27
@@ -53,7 +47,7 @@ mixin topLine(comp)
 							+e.img-wrap.bg-wrap(href="#")
 								+pic("prod-2.jpg",'bg',0).picture-bg
 							+e.caption
-								+e.text Буюртмалар
+								+e.text.fw-500 Буюртмалар
 								+e.title: a(href="#")  ЧП “Mega Gruop”
 								+e.text.text-secondary Буюртма “Буюртма этказилган” статусига ўзгарди
 								+e.time Кеча 14:27
@@ -61,7 +55,7 @@ mixin topLine(comp)
 							+e.img-wrap.bg-wrap(href="#")
 								+pic("prod-3.jpg",'bg',0).picture-bg
 							+e.caption
-								+e.text Буюртмалар
+								+e.text.fw-500 Буюртмалар
 								+e.title: a(href="#")  ЧП “Mega Gruop”
 								+e.text.text-secondary Буюртма “Буюртма этказилган” статусига ўзгарди
 								+e.time Кеча 14:27

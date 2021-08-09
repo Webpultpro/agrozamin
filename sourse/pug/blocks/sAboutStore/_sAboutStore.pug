@@ -13,28 +13,33 @@ mixin sAboutStore(empty)
 					+e.prompt Лого формати JPG, SVG, PNG
 					+e.row.row
 						.col-3
-							+b.add-image
-								//- img(src=`img/@2x/logo-prod.png`, alt="")
+							+b.LABEL.add-image
+								input.invisible(type="file")
+								img(src=`#`, alt="")
 								+e.inscription Сурат қўшиш
 				+e.item
 					h6 Дўкон сурати
 					+e.prompt 5 та сурат юклаш мумкин
 					+e.row.row
 						.col-3
-							+b.add-image
-								//- img(src=`img/@2x/avatar.jpg`, alt="")
+							+b.LABEL.add-image
+								input.invisible(type="file")
+								img(src=`#`, alt="")
 								+e.inscription Сурат қўшиш
 						.col-3
-							+b.add-image
-								//- img(src=`img/@2x/avatar.jpg`, alt="")
+							+b.LABEL.add-image
+								input.invisible(type="file")
+								img(src=`#`, alt="")
 								+e.inscription Сурат қўшиш
 						.col-3
-							+b.add-image
-								//- img(src=`img/@2x/avatar.jpg`, alt="")
+							+b.LABEL.add-image
+								input.invisible(type="file")
+								img(src=`#`, alt="")
 								+e.inscription Сурат қўшиш
 						.col-3
-							+b.add-image
-								//- img(src=`img/@2x/avatar.jpg`, alt="")
+							+b.LABEL.add-image
+								input.invisible(type="file")
+								img(src=`#`, alt="")
 								+e.inscription Сурат қўшиш
 					
 				+e.item
@@ -73,7 +78,7 @@ mixin sAboutStore(empty)
 					+e.prompt Лого формати JPG, SVG, PNG
 					+e.row.row
 						.col-3
-							+b.add-image--filled
+							+b.LABEL.add-image
 								img(src=`img/@2x/logo-prod.png`, alt="")
 								+e.inscription Сурат қўшиш
 				+e.item
@@ -81,19 +86,19 @@ mixin sAboutStore(empty)
 					+e.prompt 5 та сурат юклаш мумкин
 					+e.row.row
 						.col-3
-							+b.add-image--filled
+							+b.LABEL.add-image
 								img(src=`img/@2x/about-store-1.png`, alt="")
 								+e.inscription Сурат қўшиш
 						.col-3
-							+b.add-image--filled
+							+b.LABEL.add-image
 								img(src=`img/@2x/about-store-2.png`, alt="")
 								+e.inscription Сурат қўшиш
 						.col-3
-							+b.add-image--filled
+							+b.LABEL.add-image
 								img(src=`img/@2x/about-store-3.png`, alt="")
 								+e.inscription Сурат қўшиш
 						.col-3
-							+b.add-image--filled
+							+b.LABEL.add-image
 								img(src=`img/@2x/about-store-4.png`, alt="")
 								+e.inscription Сурат қўшиш
 					

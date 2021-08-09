@@ -130,11 +130,11 @@
 		// }
 		p {
 			font-weight: 500;
-			font-size: 14px;
+			// font-size: 14px;
 			line-height: 125%;
 			// color: #3e3e3e;
 			@include media-breakpoint-up(md) {
-				font-size: 11px;
+				// font-size: 11px;
 			}
 			&:last-of-type {
 				margin-bottom: 0;

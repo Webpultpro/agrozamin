@@ -202,39 +202,39 @@ function eventHandler() {
 	whenResize();
 
 
-	let defaultSl = {
-		spaceBetween: 0,
-		lazy: {
-			loadPrevNext: true,
-		},
-		watchOverflow: true,
-		spaceBetween: 0,
-		loop: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-		pagination: {
-			el: ' .swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-			// renderBullet: function (index, className) {
-			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-			// }
-		},
-	}
+	// let defaultSl = {
+	// 	spaceBetween: 0,
+	// 	lazy: {
+	// 		loadPrevNext: true,
+	// 	},
+	// 	watchOverflow: true,
+	// 	spaceBetween: 0,
+	// 	loop: true,
+	// 	navigation: {
+	// 		nextEl: '.swiper-button-next',
+	// 		prevEl: '.swiper-button-prev',
+	// 	},
+	// 	pagination: {
+	// 		el: ' .swiper-pagination',
+	// 		type: 'bullets',
+	// 		clickable: true,
+	// 		// renderBullet: function (index, className) {
+	// 		// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+	// 		// }
+	// 	},
+	// }
 
-	const swiper4 = new Swiper('.sBanners__slider--js', {
-		// slidesPerView: 5,
-		...defaultSl,
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
+	// const swiper4 = new Swiper('.sBanners__slider--js', {
+	// 	// slidesPerView: 5,
+	// 	...defaultSl,
+	// 	slidesPerView: 'auto',
+	// 	freeMode: true,
+	// 	loopFillGroupWithBlank: true,
+	// 	touchRatio: 0.2,
+	// 	slideToClickedSlide: true,
+	// 	freeModeMomentum: true,
 
-	});
+	// });
 
 	let sCategoriesSlider = new Swiper('.sCategories__slider--js', {
 		freeModeMomentum: true,
@@ -434,6 +434,19 @@ function eventHandler() {
 	toggleShow('.lang-choose__current', ".lang-choose__dropdown");
 	toggleShow('.top-btn--alerts', ".dropdown-alert");
 		
+
+	let addImgBlock = document.querySelectorAll('.add-image input');
+	addImgBlock.forEach((el) => {
+		el.onchange = evt => {
+			const [file] = el.files;
+			if (file) { 
+				el.parentNode.classList.add("add-image--filled")
+				el.parentNode.querySelector('img').src = URL.createObjectURL(file)
+			}
+
+	}
+	});
+
 	};
 	if (document.readyState !== 'loading') {
 	eventHandler();

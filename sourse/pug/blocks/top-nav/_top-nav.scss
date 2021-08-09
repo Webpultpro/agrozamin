@@ -192,7 +192,7 @@
 		@include media-breakpoint-up(md) {
 			z-index: 200;
 			background: #FFFFFF;
-			min-height: 620px;
+			// min-height: 620px;
 			
 			border: 1px solid #E6E6E6;
 			width: calc(100% - var(--bs-gutter-x));

@@ -44,8 +44,8 @@
 	@include media-breakpoint-down(xl) {}
 	@include media-breakpoint-down(lg) {}
 	@include media-breakpoint-down(md) {
-		&__search-wrap{
-			display: none;
+		.search-block {
+			// display: none;
 			padding-top: rem(10);
 		}
 	}
@@ -99,7 +99,7 @@
 	box-shadow: none !important;
 	padding: 0;
 	color: #7C7E80;
-	font-size: rem(9);
+	font-size: rem(11);
 	box-shadow: none;
 	&:not(:hover) {
 		.icon{
@@ -107,7 +107,7 @@
 		}
 	}
 	.icon{
-		font-size: rem(18);
+		font-size: rem(20);
 	}
 }
 
@@ -228,7 +228,7 @@
 .dropdown-alert{
 	display: none;
 	position: absolute;
-	top: calc(100% - 10px);
+	top: calc(100% + 10px);
 	background: #FFFFFF;
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.11);
 	border-radius: 4px;
@@ -238,8 +238,9 @@
 	width: 320px;
 	left: 50%;
 	@include media-breakpoint-up(sm) {
+		width: 397px;
 
-		margin-left: -160px;
+		margin-left: -200px;
 	}
 	margin-left: -200px;
 	&__item{
@@ -247,22 +248,27 @@
 		display: flex;
 		align-items: flex-start;
 		position: relative;
+		font-size: 12px;
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
 	}
 	&__img-wrap{
-		width: 50px;
+		width: 61px;
 		@include block;
-		flex:  0 0 50px;
+		flex:  0 0 61px;
 		margin-right: 10px;
 	}
 	&__text{
-		font-size: 9px;
 		line-height: 1.2;
 	}
 	&__title{
 		font-weight: 500;
+		font-size: 14px;
+		// margin-bottom: 8px;
 	}
 	&__time{
-		font-size: 10px;
+		// font-size: 10px;
 		position: absolute;
 		right: 10px;
 		top: 10px;
