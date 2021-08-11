@@ -8,10 +8,13 @@ mixin sProdBody(data)
 						+e.slider-lg-wrap
 							+e.slider--lg.mySwiper2.swiper-container
 								.swiper-wrapper
-									- for (var x = 0; x < 4; x++)
+									+e.slide.swiper-slide
+										+e.img-wrap(href=`img/@2x/prod-slide.png` data-fancybox="gal").bg-wrap
+											img.img-bg(src="img/@2x/prod-slide.png" loading="lazy" , alt="")
+									- for (var x = 0; x < 3; x++)
 										+e.slide.swiper-slide
-											+e.img-wrap(href="img/@2x/prod-slide.png" data-fancybox="gal").bg-wrap
-												img.img-bg(src="img/@2x/prod-slide.png" loading="lazy" , alt="")
+											+e.img-wrap(href=`img/@2x/prod-${x+1}.jpg` data-fancybox="gal").bg-wrap
+												img.img-bg(src=`img/@2x/prod-${x+1}.jpg` loading="lazy" , alt="")
 								.d-md-none
 									.swiper-pagination
 							.d-md-none
