@@ -59,6 +59,10 @@
 } // end.topLine
 
 .top-btn{
+	border-radius: 0;
+	&--alerts.active{
+		pointer-events: none;
+	}
 	span{
 		display: block;
 	}
@@ -237,12 +241,17 @@
 	z-index: 300;
 	width: 320px;
 	left: 50%;
-	@include media-breakpoint-up(sm) {
-		width: 397px;
+	@include media-breakpoint-up(xl) {
+		// width: 397px;
 
 		margin-left: -200px;
 	}
-	margin-left: -200px;
+	@include media-breakpoint-up(sm) {
+		width: 397px;
+
+		margin-left: -300px;
+	}
+	margin-left: -230px;
 	&__item{
 		padding: rem(5) rem(10);
 		display: flex;

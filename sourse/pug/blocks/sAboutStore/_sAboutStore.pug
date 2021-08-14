@@ -48,9 +48,9 @@ mixin sAboutStore(empty)
 					mixin shedule(d)
 						+e.shedule
 							+in-c("checkbox", `${d}`)
-							+input(``, 'time', ``)
+							+input(``, 'time', ``)(value="09:10")
 							span &minus;
-							+input(``, 'time', ``)
+							+input(``, 'time', ``)(value="19:10")
 					+shedule(`Понедельник`)
 					+shedule(`Вторник`)
 					+shedule(`Среда`)

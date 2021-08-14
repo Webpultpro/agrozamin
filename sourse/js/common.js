@@ -191,6 +191,7 @@ function eventHandler() {
 		}
 	})
 
+
 	window.addEventListener('scroll', () => {
 		setFixedNav();
 
@@ -430,7 +431,15 @@ function eventHandler() {
 			};
 		}, { passive: true });
 	}
+	$(".menu-item-has-children:first-child").addClass("active");
+	// $(".catalog-block__toggle--desctop").click(function(){
+	// })
+	$(".menu-item-has-children").hover(function(){
+		$(this).addClass("active").siblings().removeClass('active');
+
+	})
 	toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
+
 	toggleShow('.lang-choose__current', ".lang-choose__dropdown");
 	toggleShow('.top-btn--alerts', ".dropdown-alert");
 		
@@ -447,6 +456,8 @@ function eventHandler() {
 	}
 	});
 
+	let elt = document.querySelector(".sChat__messages-body");
+	elt.scrollTop = elt.scrollHeight
 	};
 	if (document.readyState !== 'loading') {
 	eventHandler();

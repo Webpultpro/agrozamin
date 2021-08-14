@@ -147,7 +147,25 @@
 	@include media-breakpoint-down(xl) {
 	}
 } // end.sMessages
+.sChat__messages-body{
+	max-height: 500px;
+	overflow-y: auto;
+	position: relative;
+	// padding-right: 0;
+	padding-right: rem(15);
+	@include media-breakpoint-up(lg) {
+		
+		margin-right: rem(-15);
+	}
+}
 .all-users {
+	padding-right: rem(15);
+	@include media-breakpoint-up(lg) {
+	margin-right: rem(-15);
+	}
+	max-height: 600px;
+	overflow-y: auto;
+	position: relative;
 	@include media-breakpoint-down(sm) {
 		--bs-gutter-x: #{rem(24)};
 	}

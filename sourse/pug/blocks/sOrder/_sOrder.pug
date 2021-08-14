@@ -52,8 +52,10 @@ mixin sOrder(data)
 					else
 						+in-c("checkbox",'Бошқа киши томонидан олиб кетилинади')(checked)
 						.h6.text-primary.pb-4 Бошқа шахс томонидан буюртмалар ҳар қандай идентификация ҳужжатининг тақдимномасига биноан берилади,
-						+input("Исм")
-						+input("Фамилия")
+						+input("Исм").is-valid
+							
+						+input("Фамилия").is-invalid
+							
 						+input("Телефон рақами",'tel')
 						.text-end 
 							+e.btn(type="submit") Сақлаш
