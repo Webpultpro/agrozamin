@@ -231,7 +231,7 @@
 			> a{
 				color: $primary;
 			}
-			--hover: ' ';
+			--hover: flex;
 		} 
 	&:last-child {
 		&> a {
@@ -285,7 +285,7 @@
 	}
 	&:hover{
 		--colorLink: #{$primary};
-		--hover: ' ';
+		// --hover: ' ';
 	}
 	.sub-menu{
 
@@ -293,10 +293,10 @@
 		display: none;
 		}
 		@include media-breakpoint-up(md) {
-			display: flex !important;
+			display: var(--hover, none) !important;
 			position: absolute;
-			visibility: var(--hover, hidden);
-			opacity: var(--hover, 0);
+			// visibility: var(--hover, hidden);
+			// opacity: var(--hover, 0);
 			// @include mt;
 			
 			
