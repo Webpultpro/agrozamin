@@ -8,39 +8,46 @@ mixin sAboutStore(empty)
 					p Фойдаланувчилар докон ҳақида маълумотлар кўришлари учун маълумотларни киритинг
 				+input(``, 'text', `Дўкон номи`)
 				+input(``, 'textarea', `Дўконнинг қисқача тавсифим`)
+
 				+e.item
 					h6 Компания логотипи
-					+e.prompt Лого формати JPG, SVG, PNG
-					+e.row.row
-						.col-3
-							+b.LABEL.add-image
-								input.invisible(type="file")
-								img(src=`#`, alt="")
-								+e.inscription Сурат қўшиш
-				+e.item
+					+e.prompt Лого формати JPG, SVG, PNG 
+					.avatar-block
+						input( type="file" 
+								class="filepond inputavatar"
+								name="filepond"
+								accept="image/png, image/jpeg, image/gif")
+				+e.item.gal-img
 					h6 Дўкон сурати
 					+e.prompt 5 та сурат юклаш мумкин
-					+e.row.row
-						.col-3
-							+b.LABEL.add-image
-								input.invisible(type="file")
-								img(src=`#`, alt="")
-								+e.inscription Сурат қўшиш
-						.col-3
-							+b.LABEL.add-image
-								input.invisible(type="file")
-								img(src=`#`, alt="")
-								+e.inscription Сурат қўшиш
-						.col-3
-							+b.LABEL.add-image
-								input.invisible(type="file")
-								img(src=`#`, alt="")
-								+e.inscription Сурат қўшиш
-						.col-3
-							+b.LABEL.add-image
-								input.invisible(type="file")
-								img(src=`#`, alt="")
-								+e.inscription Сурат қўшиш
+					input( type="file" 
+						class="filepond inputGal"
+						name="filepond" 
+						multiple 
+						data-allow-reorder="true"
+						data-max-file-size="3MB"
+						data-max-files="6")
+					//- +e.row.row
+					//- 	.col-3
+					//- 		+b.LABEL.add-image
+					//- 			input.invisible(type="file")
+					//- 			img(src=`#`, alt="")
+					//- 			+e.inscription Сурат қўшиш
+					//- 	.col-3
+					//- 		+b.LABEL.add-image
+					//- 			input.invisible(type="file")
+					//- 			img(src=`#`, alt="")
+					//- 			+e.inscription Сурат қўшиш
+					//- 	.col-3
+					//- 		+b.LABEL.add-image
+					//- 			input.invisible(type="file")
+					//- 			img(src=`#`, alt="")
+					//- 			+e.inscription Сурат қўшиш
+					//- 	.col-3
+					//- 		+b.LABEL.add-image
+					//- 			input.invisible(type="file")
+					//- 			img(src=`#`, alt="")
+					//- 			+e.inscription Сурат қўшиш
 					
 				+e.item
 					h6 Иш вақти

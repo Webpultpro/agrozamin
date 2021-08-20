@@ -457,8 +457,40 @@ function eventHandler() {
 	});
 
 	let elt = document.querySelector(".sChat__messages-body");
-	elt.scrollTop = elt.scrollHeight
-	};
+	if (elt) elt.scrollTop = elt.scrollHeight
+
+
+	FilePond.registerPlugin(
+		FilePondPluginImagePreview,
+		// FilePondPluginImageExifOrientation,
+		// FilePondPluginFileValidateSize,
+		// FilePondPluginImageEdit
+	);
+
+	// Select the file input and use 
+	// create() to turn it into a pond
+	FilePond.create(
+		document.querySelector('.inputGal'),
+		{
+			labelIdle: 'Перетащите Ваши изображения  или <span class="filepond--label-action"> Загрузите </span> (не более 5ти)'
+		}
+	);
+
+
+	FilePond.create(
+		document.querySelector('.inputavatar'),
+		{
+			labelIdle: ' Загрузить',
+			imagePreviewHeight: 89,
+			imageCropAspectRatio: '1:1',
+			imageResizeTargetWidth: 89,
+			imageResizeTargetHeight: 89,
+			stylePanelLayout: 'compact',
+		}
+	);
+
+};
+	
 	if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
@@ -472,3 +504,6 @@ function eventHandler() {
 // 		document.body.classList.remove('loaded_hiding');
 // 	}, 500);
 // }
+
+
+ 

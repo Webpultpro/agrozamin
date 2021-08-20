@@ -593,3 +593,46 @@ iframe {
 .btn-primary{
 	color: #fff !important;
 }
+
+
+.filepond--credits{
+	display: none !important;
+}
+.gal-img{
+
+	.filepond--list{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
+	.filepond--item{
+		width: 90px;
+		min-height: 90px;
+	}
+}
+
+.avatar-block{
+	.filepond--root[data-style-panel-layout~=compact] .filepond--item,
+	.filepond--root[data-style-panel-layout~=integrated] .filepond--item,
+	.filepond--image-preview-wrapper,
+	.filepond--drop-label{
+		width: 90px;
+		min-height: 90px;
+		
+	}
+	.filepond--root{
+		width: 90px;
+
+	}
+	.filepond--list-scroller,
+	.filepond--list{
+		width: 90px;
+
+	}
+	label  {
+	 text-align: center !important; 
+ }
+ .filepond--drop-label{
+	 cursor: pointer;
+ }
+}

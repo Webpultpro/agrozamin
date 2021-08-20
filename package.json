@@ -57,8 +57,11 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^4.0.0-beta.0",
+    "filepond": "^4.29.0",
+    "filepond-plugin-image-preview": "^4.6.8",
     "ion-rangeslider": "^2.3.1",
     "jquery": "^3.5.1",
+    "jquery-filepond": "^1.0.0",
     "loading-attribute-polyfill": "^1.5.4",
     "priority-nav": "^1.0.13",
     "readmore-js": "^2.2.1",

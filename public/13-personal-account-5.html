@@ -27,6 +27,8 @@
 <link rel="preload" href="fonts/Ubuntu-Medium.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/Ubuntu-Bold.woff2" as="font" type="font/woff2" crossorigin>
 		<link href="libs/priority-nav/priority-nav-core.css" rel="stylesheet"/>
+		<link href="libs/filepond/filepond.min.css" rel="stylesheet"/>
+		<link href="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css" rel="stylesheet"/>
 		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
@@ -237,42 +239,17 @@
 										<!-- +e.input-wrap-->
 										<div class="form-wrap__item">
 											<h6>Компания логотипи</h6>
-											<div class="form-wrap__prompt">Лого формати JPG, SVG, PNG
+											<div class="form-wrap__prompt">Лого формати JPG, SVG, PNG 
 											</div>
-											<div class="form-wrap__row row">
-												<div class="col-3">
-													<label class="add-image">
-														<input class="invisible" type="file"/><img src="#" alt=""/><span class="add-image__inscription">Сурат қўшиш</span>
-													</label>
-												</div>
+											<div class="avatar-block">
+												<input class="filepond inputavatar" type="file" name="filepond" accept="image/png, image/jpeg, image/gif"/>
 											</div>
 										</div>
-										<div class="form-wrap__item">
+										<div class="form-wrap__item gal-img">
 											<h6>Дўкон сурати</h6>
 											<div class="form-wrap__prompt">5 та сурат юклаш мумкин
 											</div>
-											<div class="form-wrap__row row">
-												<div class="col-3">
-													<label class="add-image">
-														<input class="invisible" type="file"/><img src="#" alt=""/><span class="add-image__inscription">Сурат қўшиш</span>
-													</label>
-												</div>
-												<div class="col-3">
-													<label class="add-image">
-														<input class="invisible" type="file"/><img src="#" alt=""/><span class="add-image__inscription">Сурат қўшиш</span>
-													</label>
-												</div>
-												<div class="col-3">
-													<label class="add-image">
-														<input class="invisible" type="file"/><img src="#" alt=""/><span class="add-image__inscription">Сурат қўшиш</span>
-													</label>
-												</div>
-												<div class="col-3">
-													<label class="add-image">
-														<input class="invisible" type="file"/><img src="#" alt=""/><span class="add-image__inscription">Сурат қўшиш</span>
-													</label>
-												</div>
-											</div>
+											<input class="filepond inputGal" type="file" name="filepond" multiple="multiple" data-allow-reorder="true" data-max-file-size="3MB" data-max-files="6"/>
 										</div>
 										<div class="form-wrap__item">
 											<h6>Иш вақти</h6>
@@ -492,7 +469,10 @@
 		<!-- /slider libs-->
 		<script src="libs/priority-nav/priority-nav.min.js"></script>
 		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
-		<script src="libs/readmore-js/readmore.min.js"></script>
+		<script src="libs/readmore-js/readmore.min.js"> </script>
+		<script src="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js"> </script>
+		<script src="libs/filepond/filepond.min.js"> </script>
+		<script src="libs/jquery-filepond/filepond.jquery.js"> </script>
 		<script src="js/common.js"></script>
 	</body>
 </html>
