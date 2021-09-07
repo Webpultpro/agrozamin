@@ -2,12 +2,12 @@ mixin sPopulars(data)
 	// start sPopulars
 	+b.SECTION.sPopulars.section#sPopulars&attributes(attributes)
 		.container
-			+b.section-title.text-center
+			+b.section-title.text-center(class="wow animate__fadeInUp" )
 				h2 Оммабоп маҳсулотлар
 			+e.slider--js
 				.row.swiper-wrapper
 					mixin item(i, t, p)
-						+e.col.col-lg-3.swiper-slide
+						+e.col.col-lg-3.swiper-slide(class="wow animate__fadeInUp" )
 							+e.item(href='#')
 								+e.DIV.img-wrap
 									if i

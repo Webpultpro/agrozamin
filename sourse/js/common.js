@@ -489,6 +489,31 @@ function eventHandler() {
 		}
 	);
 
+
+	// let dur = .3;
+	// let delay = dur;
+	// $('.section-title').each(function () {
+
+	// 	$(this).addClass("wow fadeInUp");
+	// 	$(this).attr("data-wow-duration", dur + 's');
+	// 	// $(this).attr("data-wow-delay", delay + 's')
+	// })
+
+	// $(".sClients__col ").each(function (i) {
+	// 	$(this).attr("data-wow-delay", delay * .01 * (i + .5) + 's')
+	// })
+
+	// $(" .sAbout__item").each(function (i) {
+	// 	$(this).attr("data-wow-delay", delay * .1 * (i + .5) + 's')
+	// })
+
+	var wow = new WOW({
+		mobile: false,
+		animateClass: 'animate__animated',
+	});
+	wow.init();
+
+
 };
 	
 	if (document.readyState !== 'loading') {

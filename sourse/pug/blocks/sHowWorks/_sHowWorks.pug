@@ -3,11 +3,11 @@ mixin sHowWorks(data)
 	+b.SECTION.sHowWorks.section#sHowWorks&attributes(attributes)
 		.container
 			//- +e.wrapper
-			+b.section-title.text-center
+			+b.section-title.text-center(class="wow animate__fadeInUp" )
 				h2 Хизмат қандай ишлаши ҳақида
 			.row.justify-content-center
 				mixin item(i, p)
-					+e.col.col-md-4.col-lg-3
+					+e.col.col-md-4.col-lg-3(class="wow animate__fadeInUp" )
 						+e.item(href='#')
 							+e.DIV.img-wrap
 								img(src=`img/svg/how-works-${i}.svg` alt="")
@@ -26,11 +26,11 @@ mixin sHowWorks2(data)
 	+b.SECTION.sHowWorks.section#sHowWorks&attributes(attributes)
 		.container
 			//- +e.wrapper
-			+b.section-title.text-center
+			+b.section-title.text-center(class="wow animate__fadeInUp" )
 				h2 Хизмат қандай ишлаши ҳақида
 			.row.justify-content-center
 				mixin item(i, p)
-					+e.col.col-md-4.col-lg-3
+					+e.col.col-md-4.col-lg-3(class="wow animate__fadeInUp" )
 						+e.item(href='#')
 							+e.DIV.img-wrap
 								img(src=`img/svg/how-works-${i}.svg` alt="")

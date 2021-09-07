@@ -2,35 +2,35 @@ mixin sAdvantages(data)
 	// start sAdvantages
 	+b.SECTION.sAdvantages.section#sAdvantages&attributes(attributes)
 		.container
-			picture
+			picture(class="wow animate__fadeIn" )
 				source(type='image/webp' srcset='img/@2x/webp/advantage-lg.webp' media='(min-width:768px)')
 				source(type='image/webp' srcset='img/@2x/webp/advantage-sm.webp')
 				source(type='image/jpg' srcset='img/@2x/advantage-lg.jpg' media='(min-width:768px)')
 				source(type='image/jpg' srcset='img/@2x/advantage-sm.jpg')
 				img(src='img/@2x/advantage-lg.jpg' alt='' loading='lazy')
-		+e.text-wrap.container
+		+e.text-wrap.container(class="wow animate__fadeIn" )
 			+e.tooltip--1 Сизда янги буюртма бор
 			+e.tooltip--2 Мижоз буюртмани қабул қилди
 			+e.wrapper
-				+b.section-title
+				+b.section-title(class="wow animate__fadeInUp" data-wow-delay=".1s")
 					h2 Хизматнинг афзалликлари
 				.row
-					.col-md-6
+					.col-md-6(class="wow animate__fadeInUp" data-wow-delay=".2s")
 						+e.item
 							+e.img-wrap
 								img.res-i(src="img/svg/advantages.svg", alt="")
 							p Ўзбекистонда фермерлар учун екосистема яратамиз
-					.col-md-6
+					.col-md-6(class="wow animate__fadeInUp" data-wow-delay=".12s")
 						+e.item
 							+e.img-wrap
 								img.res-i(src="img/svg/advantages.svg", alt="")
 							p Маҳсулотлар каталоги ва батафсил тавсифи
-					.col-md-6
+					.col-md-6(class="wow animate__fadeInUp" data-wow-delay=".14s")
 						+e.item
 							+e.img-wrap
 								img.res-i(src="img/svg/advantages.svg", alt="")
 							p Қишлоқ хўжалиги маҳсулотлари учун Ўзбекистондаги биринчи бозор
-					.col-md-6
+					.col-md-6(class="wow animate__fadeInUp" data-wow-delay=".16s")
 						+e.item
 							+e.img-wrap
 								img.res-i(src="img/svg/advantages.svg", alt="")

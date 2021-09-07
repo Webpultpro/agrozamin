@@ -30,6 +30,7 @@
 		<link href="libs/filepond/filepond.min.css" rel="stylesheet"/>
 		<link href="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css" rel="stylesheet"/>
 		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/>
+		<link href="libs/animate.css/animate.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="main-page">
@@ -185,7 +186,7 @@
 			</header>
 			<!-- end header-->
 			<!-- start headerBlock-->
-			<div class="headerBlock section bg-wrap" id="headerBlock">
+			<div class="headerBlock section bg-wrap wow animate__fadeIn" id="headerBlock">
 				<!-- picture-->
 				<picture class="picture-bg"> 
 					<source type="image/webp" srcset="img/@2x/webp/head-bg.webp" media="(min-width:576px)"/>
@@ -206,8 +207,8 @@
 					<div class="before"><img class="dots d-none d-sm-block" src="img/svg/dots2.svg" alt=""/>
 					</div>
 					<div class="section-title">
-						<h1>Агрозамин билан ҳамкорликда ривожланинг</h1>
-						<p>Қишлоқ хўжалиги маҳсулотларини рақобатбардош нархларда сотишда сизга ёрдам берадиган янги бозор</p>
+						<h1 class="wow animate__fadeInLeft" data-wow-delay=".2s">Агрозамин билан ҳамкорликда ривожланинг</h1>
+						<p class="wow animate__fadeInLeft" data-wow-delay=".4s">Қишлоқ хўжалиги маҳсулотларини рақобатбардош нархларда сотишда сизга ёрдам берадиган янги бозор</p>
 					</div>
 				</div>
 			</div>
@@ -215,11 +216,11 @@
 			<!-- start sHowWorks2-->
 			<section class="sHowWorks section" id="sHowWorks">
 				<div class="container">
-					<div class="section-title text-center">
+					<div class="section-title text-center wow animate__fadeInUp">
 						<h2>Хизмат қандай ишлаши ҳақида</h2>
 					</div>
 					<div class="row justify-content-center">
-								<div class="sHowWorks__col col-md-4 col-lg-3"><a class="sHowWorks__item" href="#">
+								<div class="sHowWorks__col col-md-4 col-lg-3 wow animate__fadeInUp"><a class="sHowWorks__item" href="#">
 									<div class="sHowWorks__img-wrap"><img src="img/svg/how-works-4.svg" alt=""/>
 									</div>
 									<p>Ўзингиз ва компаниянгиз ҳақида маълумотни тўлдиринг</p><span class="sHowWorks__more"><span>Батафсил</span>
@@ -227,7 +228,7 @@
 										<use xlink:href="img/svg/sprite.svg#shevron-right-sm"></use>
 									</svg></span></a>
 								</div>
-								<div class="sHowWorks__col col-md-4 col-lg-3"><a class="sHowWorks__item" href="#">
+								<div class="sHowWorks__col col-md-4 col-lg-3 wow animate__fadeInUp"><a class="sHowWorks__item" href="#">
 									<div class="sHowWorks__img-wrap"><img src="img/svg/how-works-5.svg" alt=""/>
 									</div>
 									<p>Маҳсулотингизни сайтга <br> юкланг</p><span class="sHowWorks__more"><span>Батафсил</span>
@@ -235,7 +236,7 @@
 										<use xlink:href="img/svg/sprite.svg#shevron-right-sm"></use>
 									</svg></span></a>
 								</div>
-								<div class="sHowWorks__col col-md-4 col-lg-3"><a class="sHowWorks__item" href="#">
+								<div class="sHowWorks__col col-md-4 col-lg-3 wow animate__fadeInUp"><a class="sHowWorks__item" href="#">
 									<div class="sHowWorks__img-wrap"><img src="img/svg/how-works-6.svg" alt=""/>
 									</div>
 									<p>Савдо орқли фойдага <br> ега бўлинг</p><span class="sHowWorks__more"><span>Батафсил</span>
@@ -475,6 +476,7 @@
 		<!-- modal libs-->
 		<!-- slider libs-->
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/wowjs/wow.min.js"> </script>
 		<!-- /slider libs-->
 		<script src="libs/priority-nav/priority-nav.min.js"></script>
 		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>

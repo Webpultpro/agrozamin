@@ -2,12 +2,12 @@ mixin sCategories(data)
 	// start sCategories
 	+b.SECTION.sCategories.section#sCategories&attributes(attributes)
 		.container
-			+b.section-title.text-center
+			+b.section-title.text-center(class="wow animate__fadeInUp"  )
 				h2 Маҳсулот категориялари
 			+e.slider--js
 				.row.swiper-wrapper
 					mixin item(i, t)
-						+e.col.col-lg-3.swiper-slide
+						+e.col.col-lg-3.swiper-slide(class="wow animate__fadeInUp" )
 							+e.item(href='#')
 								+e.DIV.img-wrap
 									img(src=`img/svg/categories-${i}.svg` alt="")

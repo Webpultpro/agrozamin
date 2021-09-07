@@ -1,6 +1,6 @@
 mixin headerBlock(comp)
 	// start headerBlock
-	+b.headerBlock.section#headerBlock.bg-wrap&attributes(attributes)
+	+b.headerBlock.section#headerBlock.bg-wrap(class="wow animate__fadeIn"  )&attributes(attributes)
 		- let bg = (comp ? 'head-bg.jpg' : 'header-block-1.jpg' )
 		+pic(bg,'bg').picture-bg
 		+pic(bg,'bg').picture-bg
@@ -11,9 +11,9 @@ mixin headerBlock(comp)
 					img.dots.d-none.d-sm-block(src="img/svg/dots2.svg", alt="")
 			+b.section-title
 				if !comp
-					h1 Ўз аграр бизнесингизни биз билан қуринг
-					p Ҳамкорлар, дилерлар, етказиб берувчилар ва улгуржи харидорларни топиш учун ягона онлайн платформа
+					h1(class="wow animate__fadeInLeft" data-wow-delay=".2s") Ўз аграр бизнесингизни биз билан қуринг
+					p(class="wow animate__fadeInLeft" data-wow-delay=".4s") Ҳамкорлар, дилерлар, етказиб берувчилар ва улгуржи харидорларни топиш учун ягона онлайн платформа
 				else 
-					h1 Агрозамин билан ҳамкорликда ривожланинг
-					p Қишлоқ хўжалиги маҳсулотларини рақобатбардош нархларда сотишда сизга ёрдам берадиган янги бозор
+					h1(class="wow animate__fadeInLeft" data-wow-delay=".2s") Агрозамин билан ҳамкорликда ривожланинг
+					p(class="wow animate__fadeInLeft" data-wow-delay=".4s") Қишлоқ хўжалиги маҳсулотларини рақобатбардош нархларда сотишда сизга ёрдам берадиган янги бозор
 	// end headerBlock
