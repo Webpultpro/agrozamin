@@ -241,6 +241,35 @@ function eventHandler() {
 		slidesPerView: 'auto',
 		spaceBetween: 0,
 		freeMode: true
+	});
+	let sPartnersSlider = new Swiper('.sPartners__slider--js', {
+		// freeModeMomentum: true,
+		watchOverflow: true,
+		slidesPerView: 1,
+		spaceBetween: 30,
+		navigation: {
+			nextEl: '.sPartners .swiper-button-next',
+			prevEl: '.sPartners .swiper-button-prev'
+		},
+		pagination: {
+			type: 'bullets',
+			clickable: true,
+			el: ".sPartners .swiper-pagination"
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 20
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 20
+			},
+			1200: {
+				slidesPerView: 3,
+				spaceBetween: 30
+			}
+		}
 	}); // modal window
 
 	var wrapper = document.querySelector(".top-nav");

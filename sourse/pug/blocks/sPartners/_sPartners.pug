@@ -1,0 +1,33 @@
+mixin sPartners(data)
+	// start sPartners
+	+b.SECTION.sPartners.section#sPartners&attributes(attributes)
+		.container
+			+b.section-title.text-center(class="wow animate__fadeInUp" )
+				h2 Аргробанк лойиҳалари ва ҳамкорлари
+		+e.slider-wrap(class="wow animate__fadeInUp" )
+			.container
+				+e.slider--js.swiper-container
+					.swiper-wrapper
+						+e.slide.swiper-slide 
+							+e.item
+								span Фермерлар Мактаби
+						+e.slide.swiper-slide 
+							+e.item
+								span Агролаб
+						+e.slide.swiper-slide 
+							+e.item
+								span Тошкент давлат аграр университети
+						+e.slide.swiper-slide 
+							+e.item
+								span Агролаб
+						+e.slide.swiper-slide 
+							+e.item
+								span Фермерлар Мактаби
+						+e.slide.swiper-slide 
+							+e.item
+								span Тошкент давлат аграр университети
+						
+				+arrow
+			.container
+				.swiper-pagination
+	// end sPartners

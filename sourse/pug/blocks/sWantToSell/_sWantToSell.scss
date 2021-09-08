@@ -1,14 +1,14 @@
-// start .sWhantToSell
-.sWhantToSell {
+// start .sWantToSell
+.sWantToSell {
 	--sPB: 0;
 	--sPT: #{rem(40)};
 	
-	margin-bottom: rem(97);
+	margin-bottom: 0;
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(47)};
 		--sPB: #{rem(37)};
 		--sTPB: #{rem(18)};
-		margin-bottom: rem(87);
+		margin-bottom: rem(47);
 	}
 	background-color: #3550af;
 	color: $white;
@@ -178,4 +178,4 @@
 	}
 	@include media-breakpoint-down(xl) {
 	}
-} // end.sWhantToSell
+} // end.sWantToSell

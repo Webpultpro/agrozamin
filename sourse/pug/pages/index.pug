@@ -7,8 +7,9 @@ include ../blocks/sAbout/_sAbout.pug
 include ../blocks/sAdvantages/_sAdvantages.pug
 include ../blocks/sCategories/_sCategories.pug
 include ../blocks/sPopulars/_sPopulars.pug
-include ../blocks/sWhantToSell/_sWhantToSell.pug
+include ../blocks/sWantToSell/_sWantToSell.pug
 include ../blocks/sHowWorks/_sHowWorks.pug
+include ../blocks/sPartners/_sPartners.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -29,7 +30,8 @@ block pagecontent
 	+sAdvantages
 	+sCategories
 	+sPopulars
-	+sWhantToSell
+	+sWantToSell
+	+sPartners
 	//- +sAbout
 	+footer()
 
