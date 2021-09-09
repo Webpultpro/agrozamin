@@ -7,6 +7,9 @@
 		&:last-child {
 			margin-bottom: 0;
 		}
+		&.notification {
+			border-color: $primary;
+		}
 	}
 
 	&--seller {

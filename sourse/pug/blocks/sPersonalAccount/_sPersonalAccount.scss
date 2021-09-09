@@ -62,7 +62,6 @@
 	}
 } // end.sPersonalAccount
 
-
 .navigation {
 	@include media-breakpoint-down(sm) {
 		--bs-gutter-x: #{rem(24)};
@@ -114,6 +113,23 @@
 				}
 			}
 		}
+		&__item-count {
+			@include mt;
+			position: absolute;
+			@include a-cent(y);
+			right: rem(25);
+
+			width: rem(16px);
+			height: rem(16px);
+			background: #ed6262;
+			border-radius: 50%;
+			color: #fff;
+			display: flex !important;
+			justify-content: center;
+			align-items: center;
+			font-size: rem(10);
+			font-weight: 500;
+		}
 	}
 	@include media-breakpoint-up(lg) {
 		list-style: none;
@@ -124,6 +140,7 @@
 		&__item {
 			a {
 				@include mt;
+				position: relative;
 				display: block;
 				font-weight: 500;
 				font-size: rem(14);
@@ -133,6 +150,9 @@
 				border-radius: 8px;
 				&:hover {
 					color: #00cd69;
+					.navigation__item-count {
+						background-color: lighten(#ed6262, 5%);
+					}
 				}
 			}
 			&.active {
@@ -144,6 +164,23 @@
 					}
 				}
 			}
+		}
+		&__item-count {
+			@include mt;
+			position: absolute;
+			@include a-cent(y);
+			right: rem(6);
+
+			width: rem(16px);
+			height: rem(16px);
+			background: #ed6262;
+			border-radius: 50%;
+			color: #fff;
+			display: flex !important;
+			justify-content: center;
+			align-items: center;
+			font-size: rem(10);
+			font-weight: 500;
 		}
 	}
 }

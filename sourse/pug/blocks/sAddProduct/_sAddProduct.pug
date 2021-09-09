@@ -4,9 +4,9 @@ mixin sAddProduct(empty)
 		+form-wrap
 			if empty
 				+b.section-title
-					h1 Дўкон ҳақида
+					h1 Махсулот қўшиш
 				+e.item--small
-					h6 Дўкон сурати
+					h6 Махсулот сурати
 					+e.prompt 5 та сурат юклаш мумкин
 					.row
 						.col-3
@@ -28,25 +28,41 @@ mixin sAddProduct(empty)
 
 				+e.item--wide
 					.row
-						.col-md-6.order-md-1
-							+input(``, 'text', `Маҳсулот номи`)
-						.col-md-6.order-md-3
-							+input(``, 'text', `Жорий нархи`)
-						.col-md-6.order-md-2
-							+input(`Уруғлар`, 'select', `Категория`)
-						.col-md-6.order-md-4
-							+input(`Полиз екини уруғлари`, 'select', `Махсулот тури`)
+						.col-md-6
+							+input(`Керакли махсулот каталогини танланг`, 'select', `Каталог`)
+						.col-md-6
+							+input(`Керакли махсулот категориясини танланг`, 'select', `Категория`)
+						.col-md-6
+							+input(`Керакли махсулот субкатегориясини танланг`, 'select', `Субкатегория`)
+						.col-md-6
+							+input(`Керакли махсулот турини танланг`, 'select', `Махсулот тури`)
 
 				+e.item--wide
 					.row
-						.col-md-6.order-md-1
-							+input(`Карта орқали`, 'select', `Тўлов тури`)
-						.col-md-6.order-md-3
-							+input(`Жойидан олиб кетиш`, 'select', `Етказиб бериш тури`)
-						.col-md-6.order-md-2
-							+input(``, 'text', `Ўлчов бирлиги`)
-						.col-md-6.order-md-4
-							+input(``, 'text', `Тўлов шартлари`)
+						.col-md-6
+							+input(`Килограм`, 'select', `Ўлчов бирлиги`)
+						.col-md-6
+							.row
+								.col-6
+									+input(``, 'text', `Жорий нархи`)
+								.col-6
+									+input(`Сўм`, 'select', `Валюта`)
+						.col-md-6
+							+input(`Мавжуд емас`, 'select', `Қолдиқ ҳолати`)
+						.col-md-6
+							+input(``, 'text', `Қолдиқ миқдори`)
+						.col-md-6
+							.form-wrap__input-title Тўлов тури
+							.row
+								.col-6
+									+in-c(`radio`, `Пул ўтказиш орқали`)
+								.col-6
+									+in-c(`radio`, `Нақт пул орқали`)
+								.col-6.mt-0
+									+in-c(`radio`, `Карта орқали`)
+						.col-md-6
+							+input(`Харидор томонидан олиб кетиш`, 'select', `Этказиб бериш тури`)
+
 				+e.item--wide
 					.row
 						.col-md-6
@@ -55,14 +71,15 @@ mixin sAddProduct(empty)
 							+input(``, 'text', `Хусусиятлари`)
 						.col-12
 							+input(``, 'textarea', `Тавсифи`)
-					+e.geo-link.link-info(href="#") Геолакация жойланг
+					+e.geo-link.link-info(href="#") Геолакация жойлаш
 				+e.btn-wrap
 					+e.BUTTON.btn.btn.btn-primary Жойлаш
+
 			else
 				+b.section-title
 					h1 Таҳрирлаш
 				+e.item--small
-					h6 Дўкон сурати
+					h6 Махсулот сурати
 					+e.prompt 5 та сурат юклаш мумкин
 					+e.row.row
 						.col-3
@@ -83,25 +100,40 @@ mixin sAddProduct(empty)
 								+e.inscription Сурат қўшиш
 				+e.item--wide
 					.row
-						.col-md-6.order-md-1
-							+input(``, 'text', `Маҳсулот номи`)
-						.col-md-6.order-md-3
-							+input(``, 'text', `Жорий нархи`)
-						.col-md-6.order-md-2
-							+input(`Уруғлар`, 'select', `Категория`)
-						.col-md-6.order-md-4
-							+input(`Полиз екини уруғлари`, 'select', `Махсулот тури`)
+						.col-md-6
+							+input(`Керакли махсулот каталогини танланг`, 'select', `Каталог`)
+						.col-md-6
+							+input(`Керакли махсулот категориясини танланг`, 'select', `Категория`)
+						.col-md-6
+							+input(`Керакли махсулот субкатегориясини танланг`, 'select', `Субкатегория`)
+						.col-md-6
+							+input(`Керакли махсулот турини танланг`, 'select', `Махсулот тури`)
 
 				+e.item--wide
 					.row
-						.col-md-6.order-md-1
-							+input(`Карта орқали`, 'select', `Тўлов тури`)
-						.col-md-6.order-md-3
-							+input(`Жойидан олиб кетиш`, 'select', `Етказиб бериш тури`)
-						.col-md-6.order-md-2
-							+input(``, 'text', `Ўлчов бирлиги`)
-						.col-md-6.order-md-4
-							+input(``, 'text', `Тўлов шартлари`)
+						.col-md-6
+							+input(`Килограм`, 'select', `Ўлчов бирлиги`)
+						.col-md-6
+							.row
+								.col-6
+									+input(``, 'text', `Жорий нархи`)
+								.col-6
+									+input(`Сўм`, 'select', `Валюта`)
+						.col-md-6
+							+input(`Мавжуд емас`, 'select', `Қолдиқ ҳолати`)
+						.col-md-6
+							+input(``, 'text', `Қолдиқ миқдори`)
+						.col-md-6
+							.form-wrap__input-title Тўлов тури
+							.row
+								.col-6
+									+in-c(`radio`, `Пул ўтказиш орқали`)
+								.col-6
+									+in-c(`radio`, `Нақт пул орқали`)
+								.col-6.mt-0
+									+in-c(`radio`, `Карта орқали`)
+						.col-md-6
+							+input(`Харидор томонидан олиб кетиш`, 'select', `Этказиб бериш тури`)
 				+e.item--wide
 					.row
 						.col-md-6

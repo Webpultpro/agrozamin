@@ -35,9 +35,11 @@ block pagecontent
 					+e.LI.item: a(href="#") Юридик малумотлар
 					+e.LI.item: a(href="#") Докон ҳақида
 					+e.LI.item: a(href="#") Профиль
-					+e.LI.item: a(href="#") Махсулотлар
+					+e.LI.item.active: a(href="#") Махсулотлар
+						+e.SPAN.item-count 1
 					+e.LI.item: a(href="#") Буюртмалар
-					+e.LI.item.active: a(href="#") Махсулот қўшиш
+						+e.SPAN.item-count 59
+					+e.LI.item: a(href="#") Махсулот қўшиш
 					+e.LI.item: a(href="#") Хабарлар
 			.col-lg.col--main
 				+sAddProduct()

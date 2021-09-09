@@ -100,7 +100,7 @@
 .orderClosed {
 	margin-bottom: rem(130);
 	@include media-breakpoint-up(md) {
-	margin-bottom: rem(70);
+		margin-bottom: rem(70);
 	}
 	&__title {
 		font-size: rem(18);
@@ -123,5 +123,29 @@
 		font-weight: bold;
 		font-size: rem(16);
 		line-height: (22 / 16);
+	}
+}
+
+.info-message {
+	position: relative;
+	min-height: 75px;
+	background: #edeff2;
+	border-radius: 4px;
+	padding: rem(15) rem(15) rem(15) rem(54);
+	@include media-breakpoint-up(md) {
+		max-width: 520px;
+	}
+	p {
+		color: #000000;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	img {
+		position: absolute;
+		top: rem(15);
+		left: rem(15);
+		max-width: 25px;
+		max-height: 25px;
 	}
 }

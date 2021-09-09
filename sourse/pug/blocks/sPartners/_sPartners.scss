@@ -63,14 +63,13 @@
 				color: $primary;
 			}
 		}
-
-		--swiperColorDefHover: $primary;
 		.icon {
 			@include a-cent;
 			font-size: rem(22);
 		}
 		&.swiper-button-disabled {
 			opacity: 0;
+			pointer-events: none;
 		}
 	}
 

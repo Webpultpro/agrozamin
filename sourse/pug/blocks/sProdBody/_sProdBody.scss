@@ -85,7 +85,11 @@
 	&__content {
 		position: relative;
 		overflow: hidden;
-		margin-bottom: rem(20);
+		margin-bottom: rem(15);
+	}
+
+	.readmore-link-more {
+		margin-bottom: rem(11)
 	}
 
 	&__col {
@@ -121,6 +125,12 @@
 		@include media-breakpoint-up(md) {
 			--sPB: #{rem(214)};
 			min-height: 695px;
+		}
+	}
+
+	.text-end {
+		a.ttu {
+			font-weight: 500;
 		}
 	}
 

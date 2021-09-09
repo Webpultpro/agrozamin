@@ -35,28 +35,28 @@ mixin topLine(comp)
 							+e.SPAN.count 99 
 						+e.SPAN.text Хабарнома
 					+b.dropdown-alert
-						+e.item
-							+e.img-wrap.bg-wrap(href="#")
+						+e.item(href='#')
+							+e.DIV.img-wrap.bg-wrap
 								+pic("prod-1.jpg",'bg',0).picture-bg
-							+e.caption
-								+e.text.fw-500 Буюртмалар
-								+e.title: a(href="#")  ЧП “Mega Gruop”
+							+e.DIV.caption
+								+e.text.fw-500.text-body Буюртмалар
+								+e.DIV.title: span.text-primary ЧП “Mega Gruop”
 								+e.text.text-secondary Буюртма “Буюртма этказилган” статусига ўзгарди
 								+e.time Кеча 14:27
-						+e.item
-							+e.img-wrap.bg-wrap(href="#")
+						+e.item(href='#')
+							+e.DIV.img-wrap.bg-wrap
 								+pic("prod-2.jpg",'bg',0).picture-bg
-							+e.caption
-								+e.text.fw-500 Буюртмалар
-								+e.title: a(href="#")  ЧП “Mega Gruop”
+							+e.DIV.caption
+								+e.text.fw-500.text-body Буюртмалар
+								+e.DIV.title: span.text-primary ЧП “Mega Gruop”
 								+e.text.text-secondary Буюртма “Буюртма этказилган” статусига ўзгарди
 								+e.time Кеча 14:27
-						+e.item
-							+e.img-wrap.bg-wrap(href="#")
+						+e.item(href='#')
+							+e.DIV.img-wrap.bg-wrap
 								+pic("prod-3.jpg",'bg',0).picture-bg
-							+e.caption
-								+e.text.fw-500 Буюртмалар
-								+e.title: a(href="#")  ЧП “Mega Gruop”
+							+e.DIV.caption
+								+e.text.fw-500.text-body Буюртмалар
+								+e.DIV.title: span.text-primary ЧП “Mega Gruop”
 								+e.text.text-secondary Буюртма “Буюртма этказилган” статусига ўзгарди
 								+e.time Кеча 14:27
 				if !comp

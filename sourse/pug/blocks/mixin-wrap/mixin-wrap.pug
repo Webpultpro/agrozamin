@@ -12,9 +12,9 @@ include components/btn.pug
 
 mixin arrow()
 	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
-		+icon('chevron-left')
+		+icon('chevron-left-slider')
 	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
-		+icon('chevron-right')
+		+icon('chevron-right-slider')
 //- /arrow for swiper-slider
 
 mixin ie11()
@@ -50,4 +50,9 @@ mixin orderClosed(data)
 		+e.switch.form-check.form-switch
 			input#switch.form-check-input(type='checkbox')&attributes(attributes)
 			label.form-check-label(for='switch')= data.label
+
+mixin info-message(p)
+	+b.info-message&attributes(attributes)
+		img(src="img/svg/message.svg", alt="")
+		p!= p
 
