@@ -270,6 +270,39 @@ function eventHandler() {
 				spaceBetween: 30
 			}
 		}
+	});
+	let sHeaderBannerSlider = new Swiper('.sHeaderBanner__slider--js', {
+		// freeModeMomentum: true,
+		watchOverflow: true,
+		slidesPerView: 1,
+		spaceBetween: 30,
+		navigation: {
+			nextEl: '.sHeaderBanner .swiper-button-next',
+			prevEl: '.sHeaderBanner .swiper-button-prev'
+		},
+		pagination: {
+			type: 'bullets',
+			clickable: true,
+			el: ".sHeaderBanner .swiper-pagination"
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+				pagination: {
+					el: ".sHeaderBanner .swiper-pagination",
+					type: "fraction"
+				}
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 20
+			},
+			1200: {
+				slidesPerView: 3,
+				spaceBetween: 30
+			}
+		}
 	}); // modal window
 
 	var wrapper = document.querySelector(".top-nav");

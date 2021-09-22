@@ -10,6 +10,7 @@ include ../blocks/sPopulars/_sPopulars.pug
 include ../blocks/sWantToSell/_sWantToSell.pug
 include ../blocks/sHowWorks/_sHowWorks.pug
 include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sHeaderBanner/_sHeaderBanner.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -25,7 +26,8 @@ block pagecontent
 	+header()
 		+topLine()
 		+top-nav()
-	+headerBlock
+	+sHeaderBanner
+	//- +headerBlock
 	+sHowWorks
 	+sAdvantages
 	+sCategories

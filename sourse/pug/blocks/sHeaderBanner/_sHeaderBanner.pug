@@ -1,0 +1,21 @@
+mixin sHeaderBanner(data)
+	// start sHeaderBanner
+	+b.SECTION.sHeaderBanner.section#sHeaderBanner&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 sHeaderBanner
+			+e.slider--js.swiper-container
+				.swiper-wrapper
+					mixin slide(t)
+						+e.slide.swiper-slide
+							+e.item
+								span!= t
+					+slide(`Фермерлар Мактаби`)
+					+slide(`Агролаб`)
+					+slide(`Тошкент давлат аграр университети`)
+					+slide(`Агролаб`)
+					+slide(`Фермерлар Мактаби`)
+					+slide(`Тошкент давлат аграр университети`)
+				+arrow
+				.swiper-pagination
+	// end sHeaderBanner
