@@ -79,5 +79,12 @@
 
 @include media-breakpoint-down(sm) {}
 
-@include media-breakpoint-down(xs) {}
+@include media-breakpoint-down(xs) {
+	.soc{
+		display: none;
+	}
+	&__col{
+		margin-bottom: 50px;
+	}
+}
 }

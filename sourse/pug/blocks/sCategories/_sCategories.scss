@@ -49,6 +49,7 @@
 		min-height: 90px;
 		border-radius: 50%;
 		background-color: rgba($color: #00cc69, $alpha: 0.15);
+		@include mt;
 		margin-bottom: rem(22);
 		@include media-breakpoint-up(lg) {
 			min-width: 110px;
@@ -59,15 +60,29 @@
 			min-height: 122px;
 			margin-bottom: rem(36);
 		}
+		svg,
 		img {
 			@include a-cent;
 			max-width: 56px;
 			max-height: 58px;
+			@include mt;
 			@include media-breakpoint-up(xl) {
 				max-width: 75px;
 				max-height: 77px;
 			}
 		}
+	}
+	&__item:hover &__img-wrap {
+			background-color: var(--hover-bg, rgba($color: #E7A460, $alpha: 0.15));
+			svg{
+				[stroke="#00CD69"]{
+					stroke: var(--hover-color, #E7A460)  !important; 
+				}
+				[fill="#00cd69"],
+				[fill="#00CD69"] {
+					fill: var(--hover-color, #E7A460)  !important;
+				}
+			}
 	}
 
 	&__slider {

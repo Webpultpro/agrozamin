@@ -8,16 +8,21 @@ mixin sPartners(data)
 			.container
 				+e.slider--js.swiper-container
 					.swiper-wrapper
-						mixin slide(t)
+						mixin slide(i,t)
 							+e.slide.swiper-slide
 								+e.item
-									span!= t
-						+slide(`Фермерлар Мактаби`)
-						+slide(`Агролаб`)
-						+slide(`Тошкент давлат аграр университети`)
-						+slide(`Агролаб`)
-						+slide(`Фермерлар Мактаби`)
-						+slide(`Тошкент давлат аграр университети`)
+									.row
+										if img
+										.col-auto
+											+pic(`logo-${i}.png`,'',0)
+										if t
+											.col!= t
+						+slide('1')
+						+slide('2')
+						+slide('3',`Тошкент давлат аграр университети`)
+						+slide('4',`Агролаб`)
+						+slide('6',`Фермерлар Мактаби`)
+						+slide('6',`Тошкент давлат аграр университети`)
 				+arrow
 			.container
 				.swiper-pagination

@@ -1,5 +1,13 @@
 // start .sPopulars
 .sPopulars {
+			.swiper-wrapper { 
+				@include media-breakpoint-up(lg) {
+					transform: none !important;
+				}
+			}
+}
+.sBankProducs,
+.sPopulars {
 	// --sPT: ;
 	// --sPB: ;
 	// --sTPB: ;
@@ -98,9 +106,7 @@
 			margin-right: calc(-0.5 * var(--bs-gutter-x));
 			margin-left: calc(-0.5 * var(--bs-gutter-x));
 			margin-top: calc(-1 * var(--bs-gutter-y));
-			@include media-breakpoint-up(lg) {
-				transform: none !important;
-			}
+			
 		}
 		.swiper-slide {
 			height: auto;

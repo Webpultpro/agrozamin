@@ -251,6 +251,22 @@ function eventHandler() {
 		spaceBetween: 0,
 		freeMode: true,
 	});
+	let sBankProducsSlider = new Swiper('.sBankProducs__slider--js', {
+		freeModeMomentum: true,
+		watchOverflow: true,
+		slidesPerView: 'auto',
+		spaceBetween: 33,
+		freeMode: true,
+		loop: true,
+		pauseOnMouseEnter: true,
+		navigation: {
+			nextEl: '.sBankProducs .swiper-button-next',
+			prevEl: '.sBankProducs .swiper-button-prev'
+		},
+		autoplay: {
+			delay: 5000,
+		},
+	});
 	let sProductsOnSite = new Swiper('.sProductsOnSite__slider--js', {
 		freeModeMomentum: true,
 		watchOverflow: true,
@@ -263,6 +279,9 @@ function eventHandler() {
 		watchOverflow: true,
 		slidesPerView: 1,
 		spaceBetween: 30,
+		autoplay: {
+			delay: 5000,
+		},
 		navigation: {
 			nextEl: '.sPartners .swiper-button-next',
 			prevEl: '.sPartners .swiper-button-prev'
@@ -576,6 +595,48 @@ function eventHandler() {
 		animateClass: 'animate__animated',
 	});
 	wow.init();
+
+
+
+	//img-svg
+	$('img.img-svg-js, .sCategories__img-wrap img').each(function () {
+		var $img = $(this);
+		var imgClass = $img.attr('class');
+		var imgURL = $img.attr('src');
+		if (imgURL) {
+
+
+			$.get(imgURL, function (data) {
+				// Get the SVG tag, ignore the rest
+				var $svg = $(data).find('svg'); // Add replaced image's classes to the new SVG
+
+				if (typeof imgClass !== 'undefined') {
+					$svg = $svg.attr('class', imgClass + ' replaced-svg');
+				} // Remove any invalid XML tags as per http://validator.w3.org
+
+
+				$svg = $svg.removeAttr('xmlns:a').attr('style', function (i, style) {
+					return style && style.replace(/enable-background[^;]+;?/g, '');
+				}); // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
+				// $svg = $svg.removeAttr('xmlns:a'); // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
+
+
+				if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+					$svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'));
+				} // Replace image with new SVG
+				if ($svg.attr('viewBox') && !$svg.attr('height') && !$svg.attr('width')) {
+					let width = $svg.attr("viewBox").split(' ')[2];
+					let height = $svg.attr("viewBox").split(' ')[3];
+					$svg.attr('width', width);
+					$svg.attr('height', height);
+				} // Replace image with new SVG
+
+
+				$img.replaceWith($svg);
+			}, 'xml');
+		}
+	});
+
 
 
 };

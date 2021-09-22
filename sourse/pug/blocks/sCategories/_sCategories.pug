@@ -8,7 +8,7 @@ mixin sCategories(data)
 				.row.swiper-wrapper
 					mixin item(i, t)
 						+e.col.col-lg-3.swiper-slide(class="wow animate__fadeInUp" )
-							+e.item(href='#')
+							+e.item(href='#' style=`--hover-bg: rgba(231,164,96,.15);--hover-color: #E7A460;`)
 								+e.DIV.img-wrap
 									img(src=`img/svg/categories-${i}.svg` alt="")
 								+e.title!= t
