@@ -33,16 +33,24 @@
 
 # Общие страницы
 1.  <https://webpult.github.io/agrozamin/public/00-modal.html>
-2.  <https://webpult.github.io/agrozamin/public/02-authorization.html>
-3.  <https://webpult.github.io/agrozamin/public/03-registration.html>
-4.  <https://webpult.github.io/agrozamin/public/04-forgot-password.html>
-5.  <https://webpult.github.io/agrozamin/public/05-password-reset.html>
-6.  <https://webpult.github.io/agrozamin/public/07-personal-data-change.html>
-7.  <https://webpult.github.io/agrozamin/public/08-legal-data-change.html>
-8.  <https://webpult.github.io/agrozamin/public/09-user-legal-info.html>
-9.  <https://webpult.github.io/agrozamin/public/10-warning-no-app.html>
-10. <https://webpult.github.io/agrozamin/public/11-warning-no-key.html>
-11. <https://webpult.github.io/agrozamin/public/12-enter-legal-info.html>
-12. <https://webpult.github.io/agrozamin/public/18-messages.html>
-13. <https://webpult.github.io/agrozamin/public/18-messages-filled.html>
-14. <https://webpult.github.io/agrozamin/public/18-messages-mobile.html>
+1.  <https://webpult.github.io/agrozamin/public/02-authorization.html>
+1.  <https://webpult.github.io/agrozamin/public/03-registration.html>
+1.  <https://webpult.github.io/agrozamin/public/04-forgot-password.html>
+1.  <https://webpult.github.io/agrozamin/public/05-password-reset.html>
+1.  <https://webpult.github.io/agrozamin/public/07-personal-data-change.html>
+1.  <https://webpult.github.io/agrozamin/public/08-legal-data-change.html>
+1.  <https://webpult.github.io/agrozamin/public/09-user-legal-info.html>
+1.  <https://webpult.github.io/agrozamin/public/10-warning-no-app.html>
+1. <https://webpult.github.io/agrozamin/public/11-warning-no-key.html>
+1. <https://webpult.github.io/agrozamin/public/12-enter-legal-info.html>
+1. <https://webpult.github.io/agrozamin/public/18-messages.html>
+1. <https://webpult.github.io/agrozamin/public/18-messages-filled.html>
+1. <https://webpult.github.io/agrozamin/public/18-messages-mobile.html>
+# Новая регистрация
+1.  <https://webpult.github.io/agrozamin/public/19-reg-step-1.html>
+2.  <https://webpult.github.io/agrozamin/public/19-reg-step-3.html>
+3.  <https://webpult.github.io/agrozamin/public/19-reg-step-5.html>
+# Вход в систему
+1.  <https://webpult.github.io/agrozamin/public/20-login-step-1.html>
+2.  <https://webpult.github.io/agrozamin/public/20-login-step-3.html>
+3.  <https://webpult.github.io/agrozamin/public/20-login-step-5.html>

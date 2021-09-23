@@ -1,0 +1,50 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sAdvantages/_sAdvantages.pug
+//- include ../blocks/sCategories/_sCategories.pug
+//- include ../blocks/sPopulars/_sPopulars.pug
+//- include ../blocks/sWantToSell/_sWantToSell.pug
+//- include ../blocks/sHowWorks/_sHowWorks.pug
+include ../blocks/sRegistration/_sRegistration.pug
+
+block variables
+	- let  mainPage= 'body-reg' 
+	//- - let  bg= '03-registration.jpg'
+
+block title
+	- let  title= 'Рўйхатдан ўтиш'
+	title= title
+block pagecontent
+
+
+	//- +mob-mnu()
+	//- +header()
+	//- 	+topLine()
+	//- 	+top-nav()
+	+b.SECTION.sRegistration.section.container#sRegistration&attributes(attributes)
+			+e.logo-wrap.text-center
+				a.logo(href="/")
+					img(src="img/svg/logo.svg", alt="")
+			+form-wrap
+				h1.mb-2 Тизимга кириш
+				p 
+					| +998 97 401 87 97
+					br
+					| Рақамига тасдиқлаш коди юбордилди
+					br
+					span.text-info Рақамни ўзгартириш
+
+				+input(``, 'text', `Тасдиқлаш коди`)  
+				p.text-secondary  #[span.text-body 00:45] сониядан сўнг янги код <br> олиш мумкин
+
+				+e.BUTTON.btn.btn.btn-primary.disabled Кейингиси
+				+e.footer 
+					.text-secondary Мен савдо майдончасидан #[a.text-info(href="#") фойдаланиш шартлари] ва  #[a.text-info(href="#") қоидаларига] розиман
+	//- +footer()
+
+
+

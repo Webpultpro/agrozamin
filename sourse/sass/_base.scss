@@ -664,3 +664,14 @@ iframe {
 		animation-timing-function: ease-out;
 	}
 }
+
+
+
+.btn{
+	&.disabled{
+		color: $body-color 	!important;
+		border-color: #E6E6E6;
+		background: #E6E6E6;
+		opacity: 1;
+	}
+}

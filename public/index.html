@@ -31,6 +31,7 @@
 		<link href="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css" rel="stylesheet"/>
 		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/>
 		<link href="libs/animate.css/animate.min.css" rel="stylesheet"/>
+		<link href="libs/jquery-asPieProgress/css/asPieProgress.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="main-page">
@@ -75,7 +76,7 @@
 							<div class="col-md order-md-0 order-last">
 								<div class="search-block">
 									<form>
-										<input type="text" placeholder="Агрозамин бўйича қидирув"/>
+										<input type="text" data-text="Агрозамин бўйича қидирувб, Агрозамин бўйича қидирув 213123, еще текст "/>
 										<button> 
 											<svg class="icon icon-search ">
 												<use xlink:href="img/svg/sprite.svg#search"></use>
@@ -781,48 +782,88 @@
 			<!-- end header-->
 			<!-- start sHeaderBanner-->
 			<section class="sHeaderBanner section" id="sHeaderBanner">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>sHeaderBanner</h2>
-					</div>
+				<div class="container"> 
 					<div class="sHeaderBanner__slider sHeaderBanner__slider--js swiper-container">
 						<div class="swiper-wrapper">
-								<div class="sHeaderBanner__slide swiper-slide">
-									<div class="sHeaderBanner__item"><span>Фермерлар Мактаби</span>
-									</div>
+								<div class="sHeaderBanner__slide swiper-slide bg-wrap"> 
+									<!-- picture-->
+									<picture class="picture-bg"> 
+										<source type="image/webp" srcset="img/@2x/webp/head-slider-bg-1.webp" media="(min-width:576px)"/>
+										<source type="image/webp" srcset="img/@1x/webp/head-slider-bg-1.webp"/>
+										<source type="image/jpg" srcset="img/@2x/head-slider-bg-1.jpg" media="(min-width:576px)"/>
+										<source type="image/jpg" srcset="img/@1x/head-slider-bg-1.jpg"/><img class="object-fit-js" src="img/@2x/head-slider-bg-1.jpg" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture-->
+									<div class="sHeaderBanner__content">
+										<div class="sHeaderBanner__title">Ўз&nbsp;аграр бизнесингизни биз билан қуринг
+										</div>
+										<p>Ҳамкорлар, дилерлар, етказиб берувчилар ва&nbsp;улгуржи харидорларни топиш учун ягона онлайн платформа</p>
+									</div><a class="sHeaderBanner__btn" href="#">Харидни бошлаш</a>
+									<picture class="head-slide-img">
+										<source type="image/webp" srcset="img/@2x/webp/head-slider-img-1.webp" media="(min-width:992px)"/>
+										<source type="image/webp" srcset="img/@2x/webp/head-slider-img-mob-1.webp"/>
+										<source type="image/png" srcset="img/@2x/head-slider-img-1.png" media="(min-width:992px)"/><img src="img/@2x/head-slider-img-mob-1.png" alt="" loading="lazy"/>
+									</picture>
 								</div>
-								<div class="sHeaderBanner__slide swiper-slide">
-									<div class="sHeaderBanner__item"><span>Агролаб</span>
-									</div>
+								<div class="sHeaderBanner__slide swiper-slide bg-wrap"> 
+									<!-- picture-->
+									<picture class="picture-bg"> 
+										<source type="image/webp" srcset="img/@2x/webp/head-slider-bg-2.webp" media="(min-width:576px)"/>
+										<source type="image/webp" srcset="img/@1x/webp/head-slider-bg-2.webp"/>
+										<source type="image/jpg" srcset="img/@2x/head-slider-bg-2.jpg" media="(min-width:576px)"/>
+										<source type="image/jpg" srcset="img/@1x/head-slider-bg-2.jpg"/><img class="object-fit-js" src="img/@2x/head-slider-bg-2.jpg" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture-->
+									<div class="sHeaderBanner__content">
+										<div class="sHeaderBanner__title">Маҳсулотингизни жойланг ва&nbsp;ўз&nbsp;мижозларингизга ега бўлинг
+										</div>
+										<p>Махсулотингизни платформага жойлаш орқали сиз янги харидорларга ега бўласиз ва&nbsp;ўз&nbsp;бизнесингизни ривожлантирасиз</p>
+									</div><a class="sHeaderBanner__btn" href="#">Харидни бошлаш</a>
+									<picture class="head-slide-img">
+										<source type="image/webp" srcset="img/@2x/webp/head-slider-img-2.webp" media="(min-width:992px)"/>
+										<source type="image/webp" srcset="img/@2x/webp/head-slider-img-mob-2.webp"/>
+										<source type="image/png" srcset="img/@2x/head-slider-img-2.png" media="(min-width:992px)"/><img src="img/@2x/head-slider-img-mob-2.png" alt="" loading="lazy"/>
+									</picture>
 								</div>
-								<div class="sHeaderBanner__slide swiper-slide">
-									<div class="sHeaderBanner__item"><span>Тошкент давлат аграр университети</span>
-									</div>
-								</div>
-								<div class="sHeaderBanner__slide swiper-slide">
-									<div class="sHeaderBanner__item"><span>Агролаб</span>
-									</div>
-								</div>
-								<div class="sHeaderBanner__slide swiper-slide">
-									<div class="sHeaderBanner__item"><span>Фермерлар Мактаби</span>
-									</div>
-								</div>
-								<div class="sHeaderBanner__slide swiper-slide">
-									<div class="sHeaderBanner__item"><span>Тошкент давлат аграр университети</span>
-									</div>
+								<div class="sHeaderBanner__slide swiper-slide bg-wrap"> 
+									<!-- picture-->
+									<picture class="picture-bg"> 
+										<source type="image/webp" srcset="img/@2x/webp/head-slider-bg-3.webp" media="(min-width:576px)"/>
+										<source type="image/webp" srcset="img/@1x/webp/head-slider-bg-3.webp"/>
+										<source type="image/jpg" srcset="img/@2x/head-slider-bg-3.jpg" media="(min-width:576px)"/>
+										<source type="image/jpg" srcset="img/@1x/head-slider-bg-3.jpg"/><img class="object-fit-js" src="img/@2x/head-slider-bg-3.jpg" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture-->
+									<div class="sHeaderBanner__content">
+										<div class="sHeaderBanner__title">Маҳсулотингизни жойланг ва&nbsp;ўз&nbsp;мижозларингизга ега бўлинг
+										</div>
+										<p>Махсулотингизни платформага жойлаш орқали сиз янги харидорларга ега бўласиз ва&nbsp;ўз&nbsp;бизнесингизни ривожлантирасиз</p>
+									</div><a class="sHeaderBanner__btn" href="#">Харидни бошлаш</a>
+									<picture class="head-slide-img">
+										<source type="image/webp" srcset="img/@2x/webp/head-slider-img-3.webp" media="(min-width:992px)"/>
+										<source type="image/webp" srcset="img/@2x/webp/head-slider-img-mob-3.webp"/>
+										<source type="image/png" srcset="img/@2x/head-slider-img-3.png" media="(min-width:992px)"/><img src="img/@2x/head-slider-img-mob-3.png" alt="" loading="lazy"/>
+									</picture>
 								</div>
 						</div>
-						<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-							<svg class="icon icon-chevron-left-slider ">
-								<use xlink:href="img/svg/sprite.svg#chevron-left-slider"></use>
-							</svg>
+						<div class="sHeaderBanner__arrow-wrapper d-none d-lg-block">
+							<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+								<svg class="icon icon-chevron-left-slider ">
+									<use xlink:href="img/svg/sprite.svg#chevron-left-slider"></use>
+								</svg>
+							</div>
+							<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+								<svg class="icon icon-chevron-right-slider ">
+									<use xlink:href="img/svg/sprite.svg#chevron-right-slider"></use>
+								</svg>
+							</div>
 						</div>
-						<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-							<svg class="icon icon-chevron-right-slider ">
-								<use xlink:href="img/svg/sprite.svg#chevron-right-slider"></use>
-							</svg>
+						<div class="swiper-pagination-wrap">
+							<div class="pieProgress d-none d-lg-block" role="progressbar" aria-valuemin="0" data-step="2" aria-valuemax="100">
+								<div class="progress__meter"><span class="progress__label"></span></div>
+							</div>
+							<div class="swiper-pagination"></div>
 						</div>
-						<div class="swiper-pagination"></div>
 					</div>
 				</div>
 			</section>
@@ -1355,6 +1396,8 @@
 		<script src="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js"> </script>
 		<script src="libs/filepond/filepond.min.js"> </script>
 		<script src="libs/jquery-filepond/filepond.jquery.js"> </script>
+		<script src="libs/jquery-asPieProgress/jquery-asPieProgress.min.js"> </script>
+		<script src="libs/typed.js/lib/typed.min.js"> </script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

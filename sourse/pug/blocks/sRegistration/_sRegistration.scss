@@ -15,6 +15,9 @@
 			margin-bottom: rem(13);
 		}
 	}
+	&__logo-wrap{
+		padding-bottom: 10vh;
+	}
 
 	@include media-breakpoint-up(xl) {
 	}

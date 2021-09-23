@@ -290,38 +290,51 @@ function eventHandler() {
 			}
 		}
 	});
+	let speed = 5000;
 	let sHeaderBannerSlider = new Swiper('.sHeaderBanner__slider--js', {
 		// freeModeMomentum: true,
 		watchOverflow: true,
 		slidesPerView: 1,
-		spaceBetween: 30,
+		spaceBetween: 0,
+		loop: true,
 		navigation: {
 			nextEl: '.sHeaderBanner .swiper-button-next',
 			prevEl: '.sHeaderBanner .swiper-button-prev'
 		},
 		pagination: {
+			el: ".sHeaderBanner .swiper-pagination",
 			type: 'bullets',
-			clickable: true,
-			el: ".sHeaderBanner .swiper-pagination"
+			clickable: true
+		},
+		autoplay: {
+			delay: speed
 		},
 		breakpoints: {
-			768: {
-				slidesPerView: 2,
-				spaceBetween: 20,
+			992: {
+				slidesPerView: 1,
+				spaceBetween: 0,
 				pagination: {
 					el: ".sHeaderBanner .swiper-pagination",
 					type: "fraction"
 				}
-			},
-			992: {
-				slidesPerView: 3,
-				spaceBetween: 20
-			},
-			1200: {
-				slidesPerView: 3,
-				spaceBetween: 30
 			}
 		}
+	});
+	$('.pieProgress').asPieProgress({
+		namespace: 'pieProgress',
+		barcolor: '#FFFFFF',
+		barsize: '3',
+		size: 38,
+		speed: speed / 80,
+		goal: 100,
+		trackcolor: 'rgba(255, 255, 255, 0.23)'
+	});
+	$('.pieProgress').asPieProgress('start');
+	sHeaderBannerSlider.on('init', () => {}); // modal window
+
+	sHeaderBannerSlider.on('slideChange', () => {
+		$('.pieProgress').asPieProgress('reset');
+		$('.pieProgress').asPieProgress('start');
 	}); // modal window
 
 	var wrapper = document.querySelector(".top-nav");
@@ -358,6 +371,19 @@ function eventHandler() {
 	$(".aside strong").click(function () {
 		$(this).toggleClass("active").parent().next().slideToggle();
 	});
+	let serchInput = document.querySelector(".search-block input");
+
+	if (serchInput) {
+		let text = serchInput.dataset.text;
+		let textArray = text.split(',');
+		var typed = new Typed(serchInput, {
+			strings: [...textArray],
+			typeSpeed: 80,
+			loop: true,
+			attr: 'placeholder'
+		});
+	}
+
 	$(".range-wrap").each(function () {
 		var _this = $(this);
 
@@ -586,6 +612,12 @@ function eventHandler() {
 				$img.replaceWith($svg);
 			}, 'xml');
 		}
+	});
+	$(".form-wrap__btn-toggle-visible").click(function () {
+		let typeInput = $(this).parent().find("input")[0];
+		$(this).toggleClass("active");
+		const type = typeInput.getAttribute('type') === 'password' ? 'text' : 'password';
+		typeInput.setAttribute('type', type);
 	});
 }
 

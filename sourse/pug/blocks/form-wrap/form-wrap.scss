@@ -91,6 +91,33 @@
 		font-size: 13px;
 		line-height: (15 / 13);
 	}
+	&__password-wrap{
+		position: relative;
+	}
+	&__btn-toggle-visible{
+		position: absolute;
+		right: rem(10px);
+		top: rem(34px);
+		cursor: pointer;
+		input{
+			padding-right: 50px;
+		}
+		svg{ 
+			path {
+				fill: transparent;
+				stroke: currentColor;
+				stroke-width: 2px;
+				&:nth-child(2) {
+
+					fill: var(--color, transparent);
+					// opacity: 0;
+				}
+				} 
+		}
+		&.active{
+			--color:  currentColor;
+		}
+	}
 }
 
 .parsley-error {
