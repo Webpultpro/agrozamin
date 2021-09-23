@@ -20,6 +20,19 @@ body:not(.main-page) .header {
 		font-size: rem(19);
 		margin-bottom: rem(15);
 	}
+
+	.logo{
+		.row{
+			--bs-gutter-x: #{rem(12)};
+		}
+		&__text{
+			font-size: 11px;
+			color: #808080;
+		}
+		.col{
+			// opacity: 0;
+		}
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
@@ -60,7 +73,7 @@ body:not(.main-page) .header {
 	}
 	@include media-breakpoint-down(sm) {
 		img {
-			width: rem(110);
+			// width: rem(110);
 		}
 	}
 	@include media-breakpoint-down(xs) {

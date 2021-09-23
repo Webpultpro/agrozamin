@@ -397,17 +397,7 @@ function eventHandler() {
 		$(this).toggleClass("active").parent().next().slideToggle();
 	})
 
-	let serchInput = document.querySelector(".search-block input");
-	if (serchInput) {
-		let text = serchInput.dataset.text;
-		let textArray = text.split(',');
-		var typed = new Typed(serchInput, {
-			strings: [...textArray],
-			typeSpeed: 80,
-			loop: true,
-			attr: 'placeholder'
-		});
-	}
+
 
 
 
@@ -672,12 +662,35 @@ function eventHandler() {
 
 
 
+	let serchInput = document.querySelector(".search-block input");
+	if (serchInput) {
+		let text = serchInput.dataset.text;
+		let textArray = text.split(',');
+		var typed = new Typed(serchInput, {
+			strings: [...textArray],
+			typeSpeed: 80,
+			loop: true,
+			attr: 'placeholder'
+		});
+	}
+	let logoText = document.querySelector(".logo__text");
+	if (logoText) {
+		let text2 = logoText.dataset.text;
+		var typed2 = new Typed(logoText, {
+			strings: ['','Agrobankdan'],
+			typeSpeed: 40,
+			showCursor: false
+		});
+	}
+
 	$(".form-wrap__btn-toggle-visible").click(function(){ 
 		let typeInput = $(this).parent().find("input")[0];
 		$(this).toggleClass("active") 
 		const type = typeInput.getAttribute('type') === 'password' ? 'text' : 'password';
 		typeInput.setAttribute('type', type);
 	})
+
+
 
 };
 

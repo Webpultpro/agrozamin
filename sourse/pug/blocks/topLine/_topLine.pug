@@ -19,8 +19,14 @@ mixin topLine(comp)
 					+b.toggle-menu-mobile--js
 						span
 				.col-md-auto.col
-					a(href="/")
-						img(src="img/svg/logo.svg", alt="") 
+
+					+b.logo(href="/")
+						.row
+							.col-auto
+								img(src="img/svg/logo-sm.svg", alt="") 
+							.col
+								+e.DIV.text
+								img(src="img/svg/logo-text.svg", alt="") 
 				.col-md.order-md-0.order-last
 					+search-block
 				.col-auto
