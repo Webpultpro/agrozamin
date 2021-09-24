@@ -31,6 +31,7 @@
 		<link href="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css" rel="stylesheet"/>
 		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/>
 		<link href="libs/animate.css/animate.min.css" rel="stylesheet"/>
+		<link href="libs/jquery-asPieProgress/css/asPieProgress.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body>
@@ -71,7 +72,15 @@
 								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 								</div>
 							</div>
-							<div class="col-md-auto col"><a href="/"><img src="img/svg/logo.svg" alt=""/></a></div>
+							<div class="col-md-auto col"><a class="logo" href="/">
+								<div class="row">
+									<div class="col-auto"><img src="img/svg/logo-sm.svg" alt=""/></div>
+									<div class="col">
+										<div class="logo__text">
+										</div><img src="img/svg/logo-text.svg" alt=""/>
+									</div>
+								</div></a>
+							</div>
 							<div class="col-md order-md-0 order-last">
 								<div class="search-block">
 									<form>
@@ -1134,6 +1143,8 @@
 		<script src="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js"> </script>
 		<script src="libs/filepond/filepond.min.js"> </script>
 		<script src="libs/jquery-filepond/filepond.jquery.js"> </script>
+		<script src="libs/jquery-asPieProgress/jquery-asPieProgress.min.js"> </script>
+		<script src="libs/typed.js/lib/typed.min.js"> </script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

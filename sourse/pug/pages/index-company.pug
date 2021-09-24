@@ -11,6 +11,8 @@ include ../blocks/sContact/_sContact.pug
 include ../blocks/sHowWorks/_sHowWorks.pug
 include ../blocks/sProductsOnSite/_sProductsOnSite.pug
 include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sHeaderBanner/_sHeaderBanner.pug
+include ../blocks/sBankProducs/_sBankProducs.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -26,9 +28,10 @@ block pagecontent
 	+header()
 		+topLine('comp')
 		+top-nav('comp')
-	+headerBlock('comp')
+	+sHeaderBanner2
 	+sHowWorks2
 	+sProductsOnSite
+	+sBankProducs
 	+sPartners
 	//- +sAdvantages
 	//- +sCategories

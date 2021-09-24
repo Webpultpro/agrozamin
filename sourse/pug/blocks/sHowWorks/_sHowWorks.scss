@@ -88,16 +88,38 @@
 		position: relative;
 		min-width: 109px;
 		min-height: 109px;
+		display: block;
 		margin: 0 rem(16) 0 0;
 		border-radius: 50%;
 		border: 5px solid #e0e0e0;
+		@include mt;
 		@include media-breakpoint-up(md) {
 			margin: 0 auto rem(35);
 		}
+		svg,
 		img {
+			@include mt;
 			@include a-cent;
 			max-width: 68px;
 			max-height: 54px;
+		}
+	}
+
+
+	&__item:hover &__img-wrap {
+		border-color: var(--hover-bg, rgba($color: #E7A460, $alpha: 1));
+
+		svg {
+			.st1,
+			.st0,
+			[stroke="#00CD69"] {
+				stroke: var(--hover-color, #E7A460) !important;
+			}
+			
+			[fill="#00cd69"],
+			[fill="#00CD69"] {
+				fill: var(--hover-color, #E7A460) !important;
+			}
 		}
 	}
 

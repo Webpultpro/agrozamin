@@ -54,3 +54,4 @@
 1.  <https://webpult.github.io/agrozamin/public/20-login-step-1.html>
 2.  <https://webpult.github.io/agrozamin/public/20-login-step-3.html>
 3.  <https://webpult.github.io/agrozamin/public/20-login-step-5.html>
+4.  <https://webpult.github.io/agrozamin/public/00-modal.html>

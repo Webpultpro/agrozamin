@@ -1,25 +1,27 @@
-mixin sHeaderBanner(data)
+mixin slidehead(i,t,p, b="Харидни бошлаш")
+	+e.slide.swiper-slide.bg-wrap 
+		if block
+			block
+		else
+			+pic(`head-slider-bg-${i}.jpg`,'bg').picture-bg
+		+e.content
+			+e.title!= t
+			p!= p 
+		+e.btn(href="#")= b
+		//- +pic(`head-slider-img-${i}.png`,'').head-slide-img
+		if i
+			picture.head-slide-img
+				source(type='image/webp' srcset=`img/@2x/webp/head-slider-img-${i}.webp` media=`(min-width:992px)`)
+				source(type=`image/webp` srcset=`img/@2x/webp/head-slider-img-mob-${i}.webp`)
+				source(type=`image/png` srcset=`img/@2x/head-slider-img-${i}.png` media=`(min-width:992px)`) 
+				img(src=`img/@2x/head-slider-img-mob-${i}.png` alt='' loading='lazy')
+mixin sHeaderBannerBody(data)
 	// start sHeaderBanner
 	+b.SECTION.sHeaderBanner.section#sHeaderBanner&attributes(attributes)
 		.container 
 			+e.slider--js.swiper-container
 				.swiper-wrapper
-					mixin slide(i,t,p)
-						+e.slide.swiper-slide.bg-wrap 
-							+pic(`head-slider-bg-${i}.jpg`,'bg').picture-bg
-							+e.content
-								+e.title!= t
-								p!= p 
-							+e.btn(href="#") Харидни бошлаш
-							//- +pic(`head-slider-img-${i}.png`,'').head-slide-img
-							picture.head-slide-img
-								source(type='image/webp' srcset=`img/@2x/webp/head-slider-img-${i}.webp` media=`(min-width:992px)`)
-								source(type=`image/webp` srcset=`img/@2x/webp/head-slider-img-mob-${i}.webp`)
-								source(type=`image/png` srcset=`img/@2x/head-slider-img-${i}.png` media=`(min-width:992px)`) 
-								img(src=`img/@2x/head-slider-img-mob-${i}.png` alt='' loading='lazy')
-					+slide(1,`Ўз&nbsp;аграр бизнесингизни биз билан қуринг`,`Ҳамкорлар, дилерлар, етказиб берувчилар ва&nbsp;улгуржи харидорларни топиш учун ягона онлайн платформа`)
-					+slide(2,`Маҳсулотингизни жойланг ва&nbsp;ўз&nbsp;мижозларингизга ега бўлинг`,`Махсулотингизни платформага жойлаш орқали сиз янги харидорларга ега бўласиз ва&nbsp;ўз&nbsp;бизнесингизни ривожлантирасиз`)
-					+slide(3, `Маҳсулотингизни жойланг ва&nbsp;ўз&nbsp;мижозларингизга ега бўлинг`,`Махсулотингизни платформага жойлаш орқали сиз янги харидорларга ега бўласиз ва&nbsp;ўз&nbsp;бизнесингизни ривожлантирасиз`)
+					block
 				+e.arrow-wrapper.d-none.d-lg-block
 					+arrow
 				.swiper-pagination-wrap
@@ -30,3 +32,17 @@ mixin sHeaderBanner(data)
 					.swiper-pagination
 
 	// end sHeaderBanner
+mixin sHeaderBanner(data)
+	+sHeaderBannerBody
+		+slidehead(1,`Ўз&nbsp;аграр бизнесингизни биз билан қуринг`,`Ҳамкорлар, дилерлар, етказиб берувчилар ва&nbsp;улгуржи харидорларни топиш учун ягона онлайн платформа`)
+		+slidehead(2,`Маҳсулотингизни жойланг ва&nbsp;ўз&nbsp;мижозларингизга ега бўлинг`,`Махсулотингизни платформага жойлаш орқали сиз янги харидорларга ега бўласиз ва&nbsp;ўз&nbsp;бизнесингизни ривожлантирасиз`)
+		+slidehead(3, `Маҳсулотингизни жойланг ва&nbsp;ўз&nbsp;мижозларингизга ега бўлинг`,`Махсулотингизни платформага жойлаш орқали сиз янги харидорларга ега бўласиз ва&nbsp;ўз&nbsp;бизнесингизни ривожлантирасиз`) 
+mixin sHeaderBanner2(data)
+	+sHeaderBannerBody
+		+slidehead('2-1',`Агрозамин билан ҳамкорликда ривожланинг`,`Қишлоқ хўжалиги маҳсулотларини рақобатбардош нархларда сотишда сизга ёрдам берадиган янги бозор`,'Сотувни бошлаш')
+		+slidehead('',`Қишлоқ хожалигига асосланган&nbsp;биринчи Market&nbsp;Place`,`Ўзбекистондаги барча фермерлар ва тадбиркорларни бирлаштирган биринчи Market Place`,'Харидни бошлаш')
+			picture.picture-bg
+				source(type='image/webp' srcset=`img/@2x/webp/head-slider-bg-2-2.webp` media=`(min-width:992px)`)
+				source(type=`image/webp` srcset=`img/@2x/webp/head-slider-bg-mob-2-2.webp`)
+				source(type=`image/png` srcset=`img/@2x/head-slider-bg-2-2.png` media=`(min-width:992px)`) 
+				img.object-fit-js(src=`img/@2x/head-slider-bg-mob-2-2.png` alt='' loading='lazy')

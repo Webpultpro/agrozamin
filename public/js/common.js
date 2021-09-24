@@ -563,7 +563,7 @@ function eventHandler() {
 	});
 	wow.init(); //img-svg
 
-	$('img.img-svg-js, .sCategories__img-wrap img').each(function () {
+	$('img.img-svg-js, .sCategories__img-wrap img, .sHowWorks__img-wrap img').each(function () {
 		var $img = $(this);
 		var imgClass = $img.attr('class');
 		var imgURL = $img.attr('src');
@@ -599,19 +599,16 @@ function eventHandler() {
 				$img.replaceWith($svg);
 			}, 'xml');
 		}
-	});
-	let serchInput = document.querySelector(".search-block input");
-
-	if (serchInput) {
-		let text = serchInput.dataset.text;
-		let textArray = text.split(',');
-		var typed = new Typed(serchInput, {
-			strings: [...textArray],
-			typeSpeed: 80,
-			loop: true,
-			attr: 'placeholder'
-		});
-	}
+	}); // let serchInput = document.querySelector(".search-block input");
+	// if (serchInput) {
+	// 	let text = serchInput.dataset.text;
+	// 	let textArray = text.split(',');
+	// 	var typed = new Typed(serchInput, {
+	// 		strings: [...textArray],
+	// 		typeSpeed: 80,
+	// 		attr: 'placeholder'
+	// 	});
+	// }
 
 	let logoText = document.querySelector(".logo__text");
 
@@ -619,7 +616,9 @@ function eventHandler() {
 		let text2 = logoText.dataset.text;
 		var typed2 = new Typed(logoText, {
 			strings: ['', 'Agrobankdan'],
-			typeSpeed: 40,
+			typeSpeed: 120,
+			backSpeed: 120,
+			loop: true,
 			showCursor: false
 		});
 	}

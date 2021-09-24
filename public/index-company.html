@@ -88,7 +88,7 @@
 							<div class="col-md order-md-0 order-last">
 								<div class="search-block">
 									<form>
-										<input type="text" data-text="Агрозамин бўйича қидирувб, Агрозамин бўйича қидирув 213123, еще текст "/>
+										<input type="text" placeholder="Агрозамин бўйича қидирув"/>
 										<button> 
 											<svg class="icon icon-search ">
 												<use xlink:href="img/svg/sprite.svg#search"></use>
@@ -194,34 +194,66 @@
 				<!-- end top-nav-->
 			</header>
 			<!-- end header-->
-			<!-- start headerBlock-->
-			<div class="headerBlock section bg-wrap wow animate__fadeIn" id="headerBlock">
-				<!-- picture-->
-				<picture class="picture-bg"> 
-					<source type="image/webp" srcset="img/@2x/webp/head-bg.webp" media="(min-width:576px)"/>
-					<source type="image/webp" srcset="img/@1x/webp/head-bg.webp"/>
-					<source type="image/jpg" srcset="img/@2x/head-bg.jpg" media="(min-width:576px)"/>
-					<source type="image/jpg" srcset="img/@1x/head-bg.jpg"/><img class="object-fit-js" src="img/@2x/head-bg.jpg" alt="" loading="lazy"/>
-				</picture>
-				<!-- /picture-->
-				<!-- picture-->
-				<picture class="picture-bg"> 
-					<source type="image/webp" srcset="img/@2x/webp/head-bg.webp" media="(min-width:576px)"/>
-					<source type="image/webp" srcset="img/@1x/webp/head-bg.webp"/>
-					<source type="image/jpg" srcset="img/@2x/head-bg.jpg" media="(min-width:576px)"/>
-					<source type="image/jpg" srcset="img/@1x/head-bg.jpg"/><img class="object-fit-js" src="img/@2x/head-bg.jpg" alt="" loading="lazy"/>
-				</picture>
-				<!-- /picture-->
-				<div class="container">
-					<div class="before"><img class="dots d-none d-sm-block" src="img/svg/dots2.svg" alt=""/>
-					</div>
-					<div class="section-title">
-						<h1 class="wow animate__fadeInLeft" data-wow-delay=".2s">Агрозамин билан ҳамкорликда ривожланинг</h1>
-						<p class="wow animate__fadeInLeft" data-wow-delay=".4s">Қишлоқ хўжалиги маҳсулотларини рақобатбардош нархларда сотишда сизга ёрдам берадиган янги бозор</p>
+			<!-- start sHeaderBanner-->
+			<section class="sHeaderBanner section" id="sHeaderBanner">
+				<div class="container"> 
+					<div class="sHeaderBanner__slider sHeaderBanner__slider--js swiper-container">
+						<div class="swiper-wrapper">
+							<div class="sHeaderBanner__slide swiper-slide bg-wrap"> 
+								<!-- picture-->
+								<picture class="picture-bg"> 
+									<source type="image/webp" srcset="img/@2x/webp/head-slider-bg-2-1.webp" media="(min-width:576px)"/>
+									<source type="image/webp" srcset="img/@1x/webp/head-slider-bg-2-1.webp"/>
+									<source type="image/jpg" srcset="img/@2x/head-slider-bg-2-1.jpg" media="(min-width:576px)"/>
+									<source type="image/jpg" srcset="img/@1x/head-slider-bg-2-1.jpg"/><img class="object-fit-js" src="img/@2x/head-slider-bg-2-1.jpg" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+								<div class="sHeaderBanner__content">
+									<div class="sHeaderBanner__title">Агрозамин билан ҳамкорликда ривожланинг
+									</div>
+									<p>Қишлоқ хўжалиги маҳсулотларини рақобатбардош нархларда сотишда сизга ёрдам берадиган янги бозор</p>
+								</div><a class="sHeaderBanner__btn" href="#">Сотувни бошлаш</a>
+								<picture class="head-slide-img">
+									<source type="image/webp" srcset="img/@2x/webp/head-slider-img-2-1.webp" media="(min-width:992px)"/>
+									<source type="image/webp" srcset="img/@2x/webp/head-slider-img-mob-2-1.webp"/>
+									<source type="image/png" srcset="img/@2x/head-slider-img-2-1.png" media="(min-width:992px)"/><img src="img/@2x/head-slider-img-mob-2-1.png" alt="" loading="lazy"/>
+								</picture>
+							</div>
+							<div class="sHeaderBanner__slide swiper-slide bg-wrap"> 
+								<picture class="picture-bg">
+									<source type="image/webp" srcset="img/@2x/webp/head-slider-bg-2-2.webp" media="(min-width:992px)"/>
+									<source type="image/webp" srcset="img/@2x/webp/head-slider-bg-mob-2-2.webp"/>
+									<source type="image/png" srcset="img/@2x/head-slider-bg-2-2.png" media="(min-width:992px)"/><img class="object-fit-js" src="img/@2x/head-slider-bg-mob-2-2.png" alt="" loading="lazy"/>
+								</picture>
+								<div class="sHeaderBanner__content">
+									<div class="sHeaderBanner__title">Қишлоқ хожалигига асосланган&nbsp;биринчи Market&nbsp;Place
+									</div>
+									<p>Ўзбекистондаги барча фермерлар ва тадбиркорларни бирлаштирган биринчи Market Place</p>
+								</div><a class="sHeaderBanner__btn" href="#">Харидни бошлаш</a>
+							</div>
+						</div>
+						<div class="sHeaderBanner__arrow-wrapper d-none d-lg-block">
+							<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+								<svg class="icon icon-chevron-left-slider ">
+									<use xlink:href="img/svg/sprite.svg#chevron-left-slider"></use>
+								</svg>
+							</div>
+							<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+								<svg class="icon icon-chevron-right-slider ">
+									<use xlink:href="img/svg/sprite.svg#chevron-right-slider"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="swiper-pagination-wrap">
+							<div class="pieProgress d-none d-lg-block" role="progressbar" aria-valuemin="0" data-step="2" aria-valuemax="100">
+								<div class="progress__meter"><span class="progress__label"></span></div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
 					</div>
 				</div>
-			</div>
-			<!-- end headerBlock-->
+			</section>
+			<!-- end sHeaderBanner-->
 			<!-- start sHowWorks2-->
 			<section class="sHowWorks section" id="sHowWorks">
 				<div class="container">
@@ -229,30 +261,30 @@
 						<h2>Хизмат қандай ишлаши ҳақида</h2>
 					</div>
 					<div class="row justify-content-center">
-								<div class="sHowWorks__col col-md-4 col-lg-3 wow animate__fadeInUp"><a class="sHowWorks__item" href="#">
-									<div class="sHowWorks__img-wrap"><img src="img/svg/how-works-4.svg" alt=""/>
-									</div>
-									<p>Ўзингиз ва компаниянгиз ҳақида маълумотни тўлдиринг</p><span class="sHowWorks__more"><span>Батафсил</span>
-									<svg class="icon icon-shevron-right-sm ">
-										<use xlink:href="img/svg/sprite.svg#shevron-right-sm"></use>
-									</svg></span></a>
-								</div>
-								<div class="sHowWorks__col col-md-4 col-lg-3 wow animate__fadeInUp"><a class="sHowWorks__item" href="#">
-									<div class="sHowWorks__img-wrap"><img src="img/svg/how-works-5.svg" alt=""/>
-									</div>
-									<p>Маҳсулотингизни сайтга <br> юкланг</p><span class="sHowWorks__more"><span>Батафсил</span>
-									<svg class="icon icon-shevron-right-sm ">
-										<use xlink:href="img/svg/sprite.svg#shevron-right-sm"></use>
-									</svg></span></a>
-								</div>
-								<div class="sHowWorks__col col-md-4 col-lg-3 wow animate__fadeInUp"><a class="sHowWorks__item" href="#">
-									<div class="sHowWorks__img-wrap"><img src="img/svg/how-works-6.svg" alt=""/>
-									</div>
-									<p>Савдо орқли фойдага <br> ега бўлинг</p><span class="sHowWorks__more"><span>Батафсил</span>
-									<svg class="icon icon-shevron-right-sm ">
-										<use xlink:href="img/svg/sprite.svg#shevron-right-sm"></use>
-									</svg></span></a>
-								</div>
+						<div class="sHowWorks__col col-md-4 col-lg-3 wow animate__fadeInUp"><a class="sHowWorks__item" href="#" style="--hover-bg: rgba(231,164,96,1);--hover-color: #E7A460;">
+							<div class="sHowWorks__img-wrap"><img src="img/svg/how-works-4.svg" alt=""/>
+							</div>
+							<p>Ўзингиз ва компаниянгиз ҳақида маълумотни тўлдиринг</p><span class="sHowWorks__more"><span>Батафсил</span>
+							<svg class="icon icon-shevron-right-sm ">
+								<use xlink:href="img/svg/sprite.svg#shevron-right-sm"></use>
+							</svg></span></a>
+						</div>
+						<div class="sHowWorks__col col-md-4 col-lg-3 wow animate__fadeInUp"><a class="sHowWorks__item" href="#" style="--hover-bg: rgba(231,164,96,1);--hover-color: #E7A460;">
+							<div class="sHowWorks__img-wrap"><img src="img/svg/how-works-5.svg" alt=""/>
+							</div>
+							<p>Маҳсулотингизни сайтга <br> юкланг</p><span class="sHowWorks__more"><span>Батафсил</span>
+							<svg class="icon icon-shevron-right-sm ">
+								<use xlink:href="img/svg/sprite.svg#shevron-right-sm"></use>
+							</svg></span></a>
+						</div>
+						<div class="sHowWorks__col col-md-4 col-lg-3 wow animate__fadeInUp"><a class="sHowWorks__item" href="#" style="--hover-bg: rgba(231,164,96,1);--hover-color: #E7A460;">
+							<div class="sHowWorks__img-wrap"><img src="img/svg/how-works-6.svg" alt=""/>
+							</div>
+							<p>Савдо орқли фойдага <br> ега бўлинг</p><span class="sHowWorks__more"><span>Батафсил</span>
+							<svg class="icon icon-shevron-right-sm ">
+								<use xlink:href="img/svg/sprite.svg#shevron-right-sm"></use>
+							</svg></span></a>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -371,6 +403,92 @@
 				</div>
 			</section>
 			<!-- end sProductsOnSite-->
+			<!-- start sBankProducs-->
+			<section class="sBankProducs section" id="sBankProducs">
+				<div class="container">
+					<div class="section-title text-center wow animate__fadeInUp">
+						<h2>Банк махсулотлари</h2>
+					</div>
+					<div class="sBankProducs__slider-wrap">
+						<div class="sBankProducs__slider sBankProducs__slider--js swiper-container">
+							<div class="swiper-wrapper">
+									<div class="sBankProducs__col col-lg-3 swiper-slide wow animate__fadeInUp"><a class="sBankProducs__item" href="#">
+										<div class="sBankProducs__img-wrap">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/bank-1.webp"/><img src="img/@2x/bank-1.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="sBankProducs__caption">
+											<div class="sBankProducs__price">Visa Business корпоратив картаси
+											</div>
+											<p>Виса халқаро тўлов тизимининг корпоратив банк картаси бўлиб у хизмат сафарлар харажатлари</p>
+											<div class="sBankProducs__btn">Батафсил
+											</div>
+										</div></a>
+									</div>
+									<div class="sBankProducs__col col-lg-3 swiper-slide wow animate__fadeInUp"><a class="sBankProducs__item" href="#">
+										<div class="sBankProducs__img-wrap">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/bank-2.webp"/><img src="img/@2x/bank-2.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="sBankProducs__caption">
+											<div class="sBankProducs__price">100 китоб тўплами
+											</div>
+											<p>Барча учун керакли бўлган фойдали китобларнинг електрон топлами</p>
+											<div class="sBankProducs__btn">Батафсил
+											</div>
+										</div></a>
+									</div>
+									<div class="sBankProducs__col col-lg-3 swiper-slide wow animate__fadeInUp"><a class="sBankProducs__item" href="#">
+										<div class="sBankProducs__img-wrap">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/bank-3.webp"/><img src="img/@2x/bank-3.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="sBankProducs__caption">
+											<div class="sBankProducs__price">Ўсимликларни ҳимоя қилиш бўйича ажратиладиган кредит
+											</div>
+											<p>Ўсимликларни ҳимоя қилиш бўйича ажратиладиган кредит</p>
+											<div class="sBankProducs__btn">Батафсил
+											</div>
+										</div></a>
+									</div>
+									<div class="sBankProducs__col col-lg-3 swiper-slide wow animate__fadeInUp"><a class="sBankProducs__item" href="#">
+										<div class="sBankProducs__img-wrap">
+										</div>
+										<div class="sBankProducs__caption">
+											<div class="sBankProducs__price">Сабзавот ва мевалар ишлаб чиқаришни ривожлантириш учун кредит
+											</div>
+											<p>Мева-сабзавот ва узумни етиштириш, қайта ишлаш ва експорт қилиш корхоналари учун</p>
+											<div class="sBankProducs__btn">Батафсил
+											</div>
+										</div></a>
+									</div>
+							</div>
+						</div>
+						<div class="d-none d-md-block">
+							<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+								<svg class="icon icon-chevron-left-slider ">
+									<use xlink:href="img/svg/sprite.svg#chevron-left-slider"></use>
+								</svg>
+							</div>
+							<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+								<svg class="icon icon-chevron-right-slider ">
+									<use xlink:href="img/svg/sprite.svg#chevron-right-slider"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sBankProducs-->
 			<!-- start sPartners-->
 			<section class="sPartners section" id="sPartners">
 				<div class="container">
@@ -432,7 +550,7 @@
 													</picture>
 													<!-- /picture-->
 												</div>
-												<div class="col">Агролаб</div>
+												<div class="col">Қишлоқ хўжалиги вазирлиги</div>
 											</div>
 										</div>
 									</div>
@@ -446,7 +564,7 @@
 													</picture>
 													<!-- /picture-->
 												</div>
-												<div class="col">Фермерлар Мактаби</div>
+												<div class="col">Илмий тадқиқот институтлари</div>
 											</div>
 										</div>
 									</div>
@@ -460,7 +578,7 @@
 													</picture>
 													<!-- /picture-->
 												</div>
-												<div class="col">Тошкент давлат аграр университети</div>
+												<div class="col">Халқаро университетлар</div>
 											</div>
 										</div>
 									</div>

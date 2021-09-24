@@ -29,7 +29,7 @@
 		.row{
 			align-items: center;
 			// justify-content: center;
-			--bs-gutter-x: 10px;
+			--bs-gutter-x: 16px;
 		}
 	}
 	&__item {
@@ -45,12 +45,15 @@
 		background-color: #ffffff;
 		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 		border-radius: 49px;
-		padding: rem(5) rem(15);
+		padding: rem(5) rem(20);
 		font-size: rem(18);
 		font-weight: 500;
 		line-height: 1.05;
 		span {
-			font-size: rem(20);
+		}
+		.col{
+			// font-size: rem(20);
+			padding-right: 30px;
 		}
 	}
 	.swiper-button-hand {

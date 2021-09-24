@@ -20,6 +20,7 @@
 
 			padding: rem(40);
 			padding-bottom: rem(29);
+			min-height: rem(367);
 		}
 		padding: rem(20);
 		padding-bottom: rem(40);
@@ -109,6 +110,21 @@
 			font-size: rem(12px);
 		}
 	}
+
+
+		.swiper-pagination-bullet {
+			background-color: #afafaf;
+			width: rem(10);
+			height: rem(10);
+			margin-left: rem(5);
+			margin-right: rem(5);
+
+			&-active {
+				width: rem(14);
+				height: rem(14);
+				background-color: $primary;
+			}
+		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

@@ -675,3 +675,11 @@ iframe {
 		opacity: 1;
 	}
 }
+
+
+@include media-breakpoint-down(sm) {
+	.container{
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+}
