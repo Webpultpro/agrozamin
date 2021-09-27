@@ -677,8 +677,8 @@ function eventHandler() {
 		let text2 = logoText.dataset.text;
 		var typed2 = new Typed(logoText, {
 			strings: ['','Agrobankdan'],
-			typeSpeed: 80,
-			backSpeed: 80,
+			typeSpeed: 70,
+			backSpeed: 70,
 			loop: true,
 			showCursor: false
 		});

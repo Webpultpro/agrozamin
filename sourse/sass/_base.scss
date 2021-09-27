@@ -683,3 +683,9 @@ iframe {
 		padding-right: 24px;
 	}
 }
+
+.orderClosed{
+	.form-check-input[type=checkbox] {
+		border-radius: 40px;
+	}
+}

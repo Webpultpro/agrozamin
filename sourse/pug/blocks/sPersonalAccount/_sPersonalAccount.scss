@@ -18,7 +18,9 @@
 	// 	}
 	// }
 	&__wrapper {
+		@include media-breakpoint-up(lg) {
 		max-width: 520px;
+		}
 	}
 
 	&__heading {

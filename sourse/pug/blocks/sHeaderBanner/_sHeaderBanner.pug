@@ -7,7 +7,7 @@ mixin slidehead(i,t,p, b="Харидни бошлаш")
 		+e.content
 			+e.title!= t
 			p!= p 
-		+e.btn(href="#")= b
+		+e.btn.heartbeat(href="#")= b
 		//- +pic(`head-slider-img-${i}.png`,'').head-slide-img
 		if i
 			picture.head-slide-img
