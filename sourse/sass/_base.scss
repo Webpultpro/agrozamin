@@ -634,7 +634,7 @@ iframe {
 * ---------------------------------------------- */
 
 .heartbeat {
-	animation: heartbeat 1.5s ease-in-out infinite both;
+	animation: heartbeat 2s ease-in-out infinite both;
 }
 /**
  * ----------------------------------------
@@ -659,7 +659,7 @@ iframe {
 		transform: scale(0.87);
 		animation-timing-function: ease-in;
 	}
-	45% {
+	40% {
 		transform: scale(1);
 		animation-timing-function: ease-out;
 	}

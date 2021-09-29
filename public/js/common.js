@@ -618,6 +618,7 @@ function eventHandler() {
 			strings: ['', 'Agrobankdan'],
 			typeSpeed: 70,
 			backSpeed: 70,
+			backDelay: 2200,
 			loop: true,
 			showCursor: false
 		});

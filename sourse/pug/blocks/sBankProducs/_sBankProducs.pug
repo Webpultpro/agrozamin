@@ -1,27 +1,38 @@
-mixin sBankProducs(data)
+mixin sBankProducsBody(h2)
 	// start sBankProducs
 	+b.SECTION.sBankProducs.section#sBankProducs&attributes(attributes)
 		.container
 			+b.section-title.text-center(class="wow animate__fadeInUp" )
-				h2 Банк махсулотлари
+				h2= h2
 			+e.slider-wrap
 				+e.slider--js.swiper-container
 					.swiper-wrapper
-						mixin item(i, t, p)
-							+e.col.col-lg-3.swiper-slide(class="wow animate__fadeInUp" )
-								+e.item(href='#')
-									+e.DIV.img-wrap
-										if i
-											//- img(src=`img/@2x/populars-${i}.jpg` alt="")
-											+pic(`bank-${i}.jpg`,'',0)
-									+e.DIV.caption
-										+e.DIV.price!= t
-										p!= p
-										+e.btn Батафсил
-						+item(1, `Visa Business корпоратив картаси`, `Виса халқаро тўлов тизимининг корпоратив банк картаси бўлиб у хизмат сафарлар харажатлари`)
-						+item(`2`, `100 китоб тўплами`, `Барча учун керакли бўлган фойдали китобларнинг електрон топлами`)
-						+item(3, `Ўсимликларни ҳимоя қилиш бўйича ажратиладиган кредит`, `Ўсимликларни ҳимоя қилиш бўйича ажратиладиган кредит`)
-						+item('', `Сабзавот ва мевалар ишлаб чиқаришни ривожлантириш учун кредит`, `Мева-сабзавот ва узумни етиштириш, қайта ишлаш ва експорт қилиш корхоналари учун`)
-				.d-none.d-md-block
+						block
+				.d-none.d-md-block(class="wow animate__fadeInUp" )
 					+arrow
 	// end sBankProducs
+mixin itemSlide(i, t, p, l)
+	+e.col.col-lg-3.swiper-slide(class="wow animate__fadeInUp" )
+		+e.item(href='#')
+			+e.DIV.img-wrap
+				if i
+					//- img(src=`img/@2x/populars-${i}.jpg` alt="")
+					+pic(`bank-${i}.jpg`,'',0)
+			+e.DIV.caption
+				+e.DIV.price!= t
+				p!= p
+				if !l
+					+e.btn Батафсил
+				else
+					.text-info.mt-auto Батафсил
+mixin sBankProducs(data)
+	+sBankProducsBody('Банк махсулотлари')
+		+itemSlide(1, `Visa Business корпоратив картаси`, `Виса халқаро тўлов тизимининг корпоратив банк картаси бўлиб у хизмат сафарлар харажатлари`)
+		+itemSlide(`2`, `100 китоб тўплами`, `Барча учун керакли бўлган фойдали китобларнинг електрон топлами`)
+		+itemSlide(3, `Ўсимликларни ҳимоя қилиш бўйича ажратиладиган кредит`, `Ўсимликларни ҳимоя қилиш бўйича ажратиладиган кредит`)
+		+itemSlide('', `Сабзавот ва мевалар ишлаб чиқаришни ривожлантириш учун кредит`, `Мева-сабзавот ва узумни етиштириш, қайта ишлаш ва експорт қилиш корхоналари учун`)
+	+sBankProducsBody('Янгиликлар')
+		+itemSlide("1-1", `"Фермерлар мактабида" курслар бошланди`, `"Фермерлар мактабида" ўсимликларни ҳимоя қилиш `,'l')
+		+itemSlide(`2`, `Банкоматларда техник ишлар олиб борилмоқда!`, `Барча учун керакли бўлган фойдали китобларнинг електрон топлами`,'l')
+		+itemSlide('1-3', `"Унутилмас саёҳатни ютиб олинг" `, `Виса билан ҳамкорликада "Унутилмас саёҳатни ютиб олинг" аксиясини еълон қиламиз.`,'l')
+		+itemSlide('', `"Банкоматларда техник ишлар олиб борилмоқда!" `, `Банкоматларда техник ишлар олиб борилмоқда!`,'l')
