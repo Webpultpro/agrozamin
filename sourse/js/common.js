@@ -253,30 +253,35 @@ function eventHandler() {
 		spaceBetween: 0,
 		freeMode: true,
 	});
-	let sBankProducsSlider = new Swiper('.sBankProducs__slider--js', {
-		freeModeMomentum: true,
-		watchOverflow: true,
-		slidesPerView: 'auto',
-		spaceBetween: 33,
-		freeMode: true,
-		loop: true,
-		pauseOnMouseEnter: true,
-		navigation: {
-			nextEl: '.sBankProducs .swiper-button-next',
-			prevEl: '.sBankProducs .swiper-button-prev'
-		},
-		autoplay: {
-			delay: 5000,
-		},
-	});
-	let sProductsOnSite = new Swiper('.sProductsOnSite__slider--js', {
-		freeModeMomentum: true,
-		watchOverflow: true,
-		slidesPerView: 'auto',
-		spaceBetween: 0,
-		freeMode: true,
-	});
-	let sPartnersSlider = new Swiper('.sPartners__slider--js', {
+
+	let sliderWrap = document.querySelectorAll(".sBankProducs");
+	sliderWrap.forEach(el => {
+
+		let sBankProducsSlider = new Swiper(el.querySelector('.sBankProducs__slider--js'), {
+			freeModeMomentum: true,
+			watchOverflow: true,
+			slidesPerView: 'auto',
+			spaceBetween: 33,
+			freeMode: true,
+			loop: true,
+			pauseOnMouseEnter: true,
+			navigation: {
+				nextEl: el.querySelector(' .swiper-button-next'),
+				prevEl: el.querySelector(' .swiper-button-prev')
+			},
+			autoplay: {
+				delay: 5000,
+			},
+		});
+	})
+		let sProductsOnSite = new Swiper('.sProductsOnSite__slider--js', {
+			freeModeMomentum: true,
+			watchOverflow: true,
+			slidesPerView: 'auto',
+			spaceBetween: 0,
+			freeMode: true,
+		});
+		let sPartnersSlider = new Swiper('.sPartners__slider--js', {
 		// freeModeMomentum: true,
 		watchOverflow: true,
 		slidesPerView: 1,
