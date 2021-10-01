@@ -17,7 +17,7 @@ mixin slidehead(i,t,p, b="Харидни бошлаш")
 				img(src=`img/@2x/head-slider-img-mob-${i}.png` alt='' loading='lazy')
 mixin sHeaderBannerBody(data)
 	// start sHeaderBanner
-	+b.SECTION.sHeaderBanner.section#sHeaderBanner&attributes(attributes)
+	+b.sHeaderBanner.section#sHeaderBanner&attributes(attributes)
 		.container 
 			+e.slider--js.swiper-container
 				.swiper-wrapper
