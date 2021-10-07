@@ -56,6 +56,10 @@
 				}
 			}
 	}
+
+	&__slider--page{
+		overflow: visible;
+	}
 	@include media-breakpoint-up(xl) {
 		--swiperArrowPosition: -55px;
 	}
@@ -69,6 +73,12 @@
 		vertical-align: middle;
 		text-align: center;
 		color: $primary;
+	}
+	.pagination-wrapper{
+		margin-top: rem(50);
+	}
+	.page-numbers{
+		justify-content: center;
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

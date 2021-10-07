@@ -59,3 +59,6 @@
 # 07.10.2021
 
 1. <https://webpult.github.io/agrozamin/public/21-about-project.html>
+1. <https://webpult.github.io/agrozamin/public/22-news.html>
+1. <https://webpult.github.io/agrozamin/public/25-faq.html>
+2. <https://webpult.github.io/agrozamin/public/26-form.html>

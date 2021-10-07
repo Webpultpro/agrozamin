@@ -2,7 +2,7 @@
 .sAboutProject {
 	--sTPB: 0;
 	--sPT: 0;
-	margin-top: rem(25);
+	margin-top: rem(-16);
 	--sPB: #{rem(28)};
 	@include media-breakpoint-up(lg) {
 		margin-top: rem(37);

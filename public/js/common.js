@@ -254,6 +254,26 @@ function eventHandler() {
 			}
 		});
 	});
+	sliderWrap.forEach(el => {
+		let sBankProducsSlider = new Swiper(el.querySelector('.sBankProducs__slider--page-js'), {
+			freeModeMomentum: true,
+			watchOverflow: true,
+			slidesPerView: 'auto',
+			spaceBetween: 33,
+			freeMode: true,
+			loop: false,
+			pauseOnMouseEnter: true,
+			slidesPerColumn: 4,
+			slidesPerColumnFill: "row" // navigation: {
+			// 	nextEl: el.querySelector(' .swiper-button-next'),
+			// 	prevEl: el.querySelector(' .swiper-button-prev')
+			// },
+			// autoplay: {
+			// 	delay: 5000,
+			// },
+
+		});
+	});
 	let sProductsOnSite = new Swiper('.sProductsOnSite__slider--js', {
 		freeModeMomentum: true,
 		watchOverflow: true,
@@ -546,20 +566,7 @@ function eventHandler() {
 		imageResizeTargetWidth: 89,
 		imageResizeTargetHeight: 89,
 		stylePanelLayout: 'compact'
-	}); // let dur = .3;
-	// let delay = dur;
-	// $('.section-title').each(function () {
-	// 	$(this).addClass("wow fadeInUp");
-	// 	$(this).attr("data-wow-duration", dur + 's');
-	// 	// $(this).attr("data-wow-delay", delay + 's')
-	// })
-	// $(".sClients__col ").each(function (i) {
-	// 	$(this).attr("data-wow-delay", delay * .01 * (i + .5) + 's')
-	// })
-	// $(" .sAbout__item").each(function (i) {
-	// 	$(this).attr("data-wow-delay", delay * .1 * (i + .5) + 's')
-	// })
-
+	});
 	var wow = new WOW({
 		mobile: false,
 		animateClass: 'animate__animated'
@@ -602,17 +609,7 @@ function eventHandler() {
 				$img.replaceWith($svg);
 			}, 'xml');
 		}
-	}); // let serchInput = document.querySelector(".search-block input");
-	// if (serchInput) {
-	// 	let text = serchInput.dataset.text;
-	// 	let textArray = text.split(',');
-	// 	var typed = new Typed(serchInput, {
-	// 		strings: [...textArray],
-	// 		typeSpeed: 80,
-	// 		attr: 'placeholder'
-	// 	});
-	// }
-
+	});
 	let logoText = document.querySelector(".logo__text");
 
 	if (logoText) {
@@ -632,6 +629,9 @@ function eventHandler() {
 		$(this).toggleClass("active");
 		const type = typeInput.getAttribute('type') === 'password' ? 'text' : 'password';
 		typeInput.setAttribute('type', type);
+	});
+	$(".accordeon-item__head").click(function () {
+		$(this).next().slideToggle().parent().toggleClass("active");
 	});
 }
 
