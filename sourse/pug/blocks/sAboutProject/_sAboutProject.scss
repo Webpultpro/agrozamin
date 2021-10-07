@@ -1,0 +1,75 @@
+// start .sAboutProject
+.sAboutProject {
+	--sTPB: 0;
+	--sPT: 0;
+	margin-top: rem(25);
+	--sPB: #{rem(28)};
+	@include media-breakpoint-up(lg) {
+		margin-top: rem(37);
+		--sPT: 0;
+		--sPB: #{rem(47.5)};
+		--sTPB: 0;
+	}
+	color: $white;
+	&__banner {
+		border-radius: 19px;
+		overflow: hidden;
+		padding: rem(45);
+		@include media-breakpoint-up(lg) {
+			padding: rem(65);
+		}
+		picture {
+			width: 120%;
+			left: -8%;
+			img.object-fit-js {
+				object-position: center 16.4%;
+			}
+			&::before {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: rgba($color: #000000, $alpha: 0.45);
+				z-index: 1;
+			}
+		}
+	}
+	.section-title {
+		h1 {
+			line-height: calc(47 / 43);
+			margin-bottom: rem(10);
+			max-width: 7.8em;
+			margin-left: auto;
+			margin-right: auto;
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(24);
+			}
+		}
+		p {
+			font-size: rem(18);
+			line-height: 125%;
+			margin-bottom: 0;
+			max-width: 12.9em;
+			margin-left: auto;
+			margin-right: auto;
+			@include media-breakpoint-up(sm) {
+				max-width: 18.9em;
+				padding-bottom: rem(20);
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sAboutProject

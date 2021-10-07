@@ -26,7 +26,7 @@
 		flex-direction: column;
 		align-items: center;
 		background: $white;
-		border: 2px solid #E5E5E5;
+		border: 2px solid #e5e5e5;
 		border-radius: $border-radius-lg;
 		padding: rem(30) rem(22) rem(22);
 		@include media-breakpoint-up(xl) {
@@ -73,17 +73,17 @@
 		}
 	}
 	&__item:hover &__img-wrap {
-			background-color: var(--hover-bg, rgba($color: #E7A460, $alpha: 0.15));
-			svg{
-				[stroke="#00CD69"]{
-					stroke: var(--hover-color, #E7A460)  !important; 
-				}
-				.cls-1,
-				[fill="#00cd69"],
-				[fill="#00CD69"] {
-					fill: var(--hover-color, #E7A460)  !important;
-				}
+		background-color: var(--hover-bg, rgba($color: #e7a460, $alpha: 0.15));
+		svg {
+			[stroke="#00CD69"] {
+				stroke: var(--hover-color, #e7a460) !important;
 			}
+			.cls-1,
+			[fill="#00cd69"],
+			[fill="#00CD69"] {
+				fill: var(--hover-color, #e7a460) !important;
+			}
+		}
 	}
 
 	&__slider {

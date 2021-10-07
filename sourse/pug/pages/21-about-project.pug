@@ -1,0 +1,31 @@
+extends layout/main.pug
+
+
+include ../blocks/sAboutProject/_sAboutProject.pug
+include ../blocks/sOurGoal/_sOurGoal.pug
+include ../blocks/sOurDuty/_sOurDuty.pug
+include ../blocks/sServicePurpose/_sServicePurpose.pug
+
+block variables
+	- let  mainPage= 'about-project'
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Лойиҳа ҳақида'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+topLine()
+		+top-nav()
+	+breadcrumb('Асосий саҳифа', title)
+	+sAboutProject()
+	+sOurGoal()
+	+sOurDuty()
+	+sServicePurpose()
+	+footer()
+
+
+
