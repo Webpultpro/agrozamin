@@ -60,5 +60,7 @@
 
 1. <https://webpult.github.io/agrozamin/public/21-about-project.html>
 1. <https://webpult.github.io/agrozamin/public/22-news.html>
-1. <https://webpult.github.io/agrozamin/public/25-faq.html>
-2. <https://webpult.github.io/agrozamin/public/26-form.html>
+2. <https://webpult.github.io/agrozamin/public/23-news-article.html>
+3. <https://webpult.github.io/agrozamin/public/24-news-article-no-pic.html>
+4. <https://webpult.github.io/agrozamin/public/25-faq.html>
+5. <https://webpult.github.io/agrozamin/public/26-form.html>
