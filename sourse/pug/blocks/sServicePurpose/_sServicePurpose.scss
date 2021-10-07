@@ -28,10 +28,6 @@
 			box-shadow: 0px 69px 68px rgba(0, 0, 0, 0.03);
 		}
 
-		// &:nth-child(even) {
-		// 	.sServicePurpose__col {
-		// 	}
-		// }
 		&:nth-child(odd) {
 			.sServicePurpose__col {
 				@include media-breakpoint-up(lg) {

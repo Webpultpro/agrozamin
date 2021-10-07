@@ -1,19 +1,20 @@
 mixin sOurDuty(data)
 	// start sOurDuty
-	+b.SECTION.sOurDuty.section#sOurDuty&attributes(attributes)
+	+b.SECTION.sOurDuty.section#sOurDuty
 		.container
-			+b.section-title.text-center
+			+b.section-title.text-center(class="wow animate__fadeInUp" data-wow-delay=".1s")
 				h2 Бизнинг вазифамиз
 			.row
 				mixin item(i, p)
 					.col-md-6.col-lg-4
-						+e.item
+						+e.item&attributes(attributes)
 							+icon(`duty-${i}`)
 							p!= p
-				+item(1, `Сотувчилар ва харидорларга қулайлик яратиш`)
-				+item(2, `Қишлоқ хўжалиги соҳасини ривожлантириш`)
-				+item(3, `Сизнинг бизнесингизга ёрдам бериш`)
-				+item(4, `Сайт орқали фойдаланувчиларнинг вақтини&nbsp;тежаш`)
-				+item(5, `Агробизнеснинг барча иш жараёнларини оптималлаштириш `)
-				+item(6, `Бизнесменлар учун янги имкониятлар яратиш`)
+				+item(1, `Сотувчилар ва харидорларга қулайлик яратиш`)(class="wow animate__fadeInUp" data-wow-delay=".2s")
+				+item(2, `Қишлоқ хўжалиги соҳасини ривожлантириш`)(class="wow animate__fadeInUp" data-wow-delay=".3s")
+				+item(3, `Сизнинг бизнесингизга ёрдам бериш`)(class="wow animate__fadeInUp" data-wow-delay=".4s")
+				+item(4, `Сайт орқали фойдаланувчиларнинг вақтини&nbsp;тежаш`)(class="wow animate__fadeInUp" data-wow-delay=".5s")
+				+item(5, `Агробизнеснинг барча иш жараёнларини оптималлаштириш `)(class="wow animate__fadeInUp" data-wow-delay=".6s")
+				+item(6, `Бизнесменлар учун янги имкониятлар яратиш`)(class="wow animate__fadeInUp" data-wow-delay=".7s")
+	
 	// end sOurDuty

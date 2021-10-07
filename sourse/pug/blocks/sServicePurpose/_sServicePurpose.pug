@@ -1,34 +1,32 @@
-mixin sServicePurpose(data)
+mixin sServicePurpose(t)
 	// start sServicePurpose
 	+b.SECTION.sServicePurpose.section#sServicePurpose&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 Хизмат кимлар учун?
-			+e.card
-				.row.aligin-items-center
-					.col-lg-6.col-xl
-						+e.card-content
-							h3 Сотувчилар учун
-							p Ўз махсулотига ега бўлган, янги мижозлар орқали бизнесини ривожлантирмоқчи бўлган бизнес егалари ишлаб чиқарувчи корхоналар учун
-							mixin card-item(i, p)
-								+e.card-item
-									+e.img-wrap
-										img(src=`img/svg/purpose-${i}.svg`, alt="")
-									p!= p
-							+card-item(1, `Ўзингиз ва компаниянгиз ҳақида маълумотни тўлдиринг`)
-							+card-item(2, `Маҳсулотингизни сайтга юкланг`)
-							+card-item(3, `Савдо орқли фойдага ега бўлинг`)
-					+e.col.col-lg-6.col-xl-auto
-						+pic(`purpose-lg-1.png`,'', 0)
-			+e.card
-				.row.aligin-items-center
-					.col-lg-6.col-xl
-						+e.card-content
-							h3 Харидорлар учун
-							p Хар бир харидор ўзлари учун керакли бўлган махсулотни танлаб унга буюртма беришлари ва сотувчи билан ўзаро алоқа ўрнатишлари мумкин
-							+card-item(4, `Фермерлар ўз махсулотларини жойлаштирадилар`)
-							+card-item(5, `Сиз керакли маҳсулотни танлайсиз`)
-							+card-item(6, `Етказиб бериш ва вақти ҳақида келишиб оласиз`)
-					+e.col.col-lg-6.col-xl-auto
-						+pic(`purpose-lg-2.png`,'', 0)
+			+b.section-title.text-center(class="wow animate__fadeInUp" data-wow-delay=".1s")
+				h2!= t
+			block
+
 	// end sServicePurpose
+
+mixin card(h, p, i)
+	// start card
+	+e.card(class="wow animate__fadeInUp" data-wow-delay=".2s")
+		.row.aligin-items-center
+			.col-lg-6.col-xl
+				+e.card-content
+					h3!= h
+					p!= p
+					block
+			+e.col.col-lg-6.col-xl-auto
+				+pic(`purpose-lg-${i}.png`,'', 0)(class="wow animate__fadeIn" data-wow-delay=".5s")
+
+	// end card
+
+mixin card-item(i, p)
+	// start card-item
+	+e.card-item(class="wow animate__fadeInUp" data-wow-delay=".4s")
+		+e.img-wrap
+			img(src=`img/svg/purpose-${i}.svg`, alt="")
+		p!= p
+
+	// end card-item
