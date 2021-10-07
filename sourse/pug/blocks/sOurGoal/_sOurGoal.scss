@@ -1,14 +1,46 @@
 // start .sOurGoal
 .sOurGoal {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
-
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	background-color: #f2f2f2;
+	--sPT: #{rem(31)};
+	--sPB: #{rem(53)};
+	--sTPB: #{rem(35)};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(46)};
+		--sPB: #{rem(75)};
+		--sTPB: #{rem(41)};
+	}
+	&__content {
+		background-color: $white;
+		border-radius: 37px;
+		padding: rem(30);
+		box-shadow: 9px 31px 82px rgba(0, 0, 0, 0.04);
+		@include media-breakpoint-up(lg) {
+			padding: rem(46) rem(70) rem(51);
+		}
+		p {
+			font-size: rem(18);
+			line-height: 169%;
+			text-align: center;
+			margin-bottom: rem(18);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(25);
+				font-size: rem(20);
+			}
+			
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sOurGoal
