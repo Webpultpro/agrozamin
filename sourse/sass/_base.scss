@@ -693,3 +693,9 @@ iframe {
 .about-project {
 	background-color: #F8F9FA;
 }
+
+.bg-only-mobile-gray {
+	@include media-breakpoint-down(lg) {
+		background-color: #F8F9FA;
+	}
+}
