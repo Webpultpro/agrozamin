@@ -1,0 +1,78 @@
+// start .sFaq
+.sFaq {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+ 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sFaq
+
+.accordeon-item{
+	background: #FAFAFA;
+	border: 1px solid #D7D7D7;
+	margin-top: -1px;
+		@include media-breakpoint-up(sm) {
+			--p-x: 32px;
+		}
+		--p-x: 12px;
+	&:first-child{
+		border-radius: 10px 10px 0px 0px;
+	}
+	&:last-child{
+		border-radius: 0px 0px 10px 10px;
+	}
+	&__head{
+		font-weight: 500;
+		cursor: pointer;
+		position: relative;
+		line-height: 1;
+		.icon{
+			position: absolute;
+			// right: 0;
+			top: 50%;
+			margin-top: rem(-23);
+			right: var(--p-x);
+			font-size: rem(46);
+			@include mt;
+			color: $primary;
+		}
+		
+	
+		// @include rfs(24px);
+		@include media-breakpoint-up(sm) {
+			
+			font-size: rem(24);
+		}
+		
+		font-size: rem(20);
+			@include media-breakpoint-up(sm) {
+				padding: rem(30) calc(var(--p-x) + 40px) rem(30) var(--p-x);
+			}
+			padding: rem(10) calc(var(--p-x) + 50px) rem(10) var(--p-x);
+	}
+
+		&:not(.active){
+			.icon{
+				transform: rotate(135deg);
+				color: #999;
+			}
+		}
+	&__body{
+		padding: rem(10) calc(var(--p-x) + 40px) rem(10) var(--p-x);
+		background-color: #fff;
+		display: none;
+		border-top: 1px solid #D7D7D7;
+		p{
+			@include media-breakpoint-up(sm) {
+			font-size: rem(20);
+			}
+			color: #7C7E80;
+		}
+	}
+}

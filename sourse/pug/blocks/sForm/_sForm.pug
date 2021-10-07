@@ -1,9 +1,34 @@
 mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			.row
+		.container 
+			+e.inner
+				.row.g-0
+					.col-md-7
+						+e.block--form-wrap
+							h2 Хавабар жўнатиш
+							+form-wrap
+								+input("Исмингиз")
+								+input("Телефон рақамингиз",'tel')
+								+input("Хабар киритинг",'textarea')
+								+e.btn(type="submit") Жўнатиш
+					.col-md-5
+						+e.block--sidebar
+							h2 Боғланиш
+							+e.sidebar-body
+								
+								+e.link(href="#")
+									+e.icon-wap: +icon('telegram2')
+									| Telegram Bot
+								
+								+e.link(href="mailto:headoffice@agrobank.uz")
+									+e.icon-wap: +icon('email')
+									| headoffice@agrobank.uz
+								
+								+e.link(href="tel:+998711505395")
+									+e.icon-wap: +icon('phone')
+									| +998 71 150 53 95
+								
+							+e.sidebar-footer
+								+soc
 	// end sForm
