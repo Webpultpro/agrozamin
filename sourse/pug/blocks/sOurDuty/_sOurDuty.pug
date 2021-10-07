@@ -3,7 +3,17 @@ mixin sOurDuty(data)
 	+b.SECTION.sOurDuty.section#sOurDuty&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sOurDuty
-				
+				h2 Бизнинг вазифамиз
 			.row
+				mixin item(i, p)
+					.col-md-6.col-lg-4
+						+e.item
+							+icon(`duty-${i}`)
+							p!= p
+				+item(1, `Сотувчилар ва харидорларга қулайлик яратиш`)
+				+item(2, `Қишлоқ хўжалиги соҳасини ривожлантириш`)
+				+item(3, `Сизнинг бизнесингизга ёрдам бериш`)
+				+item(4, `Сайт орқали фойдаланувчиларнинг вақтини&nbsp;тежаш`)
+				+item(5, `Агробизнеснинг барча иш жараёнларини оптималлаштириш `)
+				+item(6, `Бизнесменлар учун янги имкониятлар яратиш`)
 	// end sOurDuty
