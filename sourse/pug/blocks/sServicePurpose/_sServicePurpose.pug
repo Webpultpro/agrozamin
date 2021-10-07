@@ -3,7 +3,32 @@ mixin sServicePurpose(data)
 	+b.SECTION.sServicePurpose.section#sServicePurpose&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sServicePurpose
-				
-			.row
+				h2 Хизмат кимлар учун?
+			+e.card
+				.row.aligin-items-center
+					.col-lg-6.col-xl
+						+e.card-content
+							h3 Сотувчилар учун
+							p Ўз махсулотига ега бўлган, янги мижозлар орқали бизнесини ривожлантирмоқчи бўлган бизнес егалари ишлаб чиқарувчи корхоналар учун
+							mixin card-item(i, p)
+								+e.card-item
+									+e.img-wrap
+										img(src=`img/svg/purpose-${i}.svg`, alt="")
+									p!= p
+							+card-item(1, `Ўзингиз ва компаниянгиз ҳақида маълумотни тўлдиринг`)
+							+card-item(2, `Маҳсулотингизни сайтга юкланг`)
+							+card-item(3, `Савдо орқли фойдага ега бўлинг`)
+					+e.col.col-lg-6.col-xl-auto
+						+pic(`purpose-1.jpg`,'', '')
+			+e.card
+				.row.aligin-items-center
+					.col-lg-6.col-xl
+						+e.card-content
+							h3 Харидорлар учун
+							p Хар бир харидор ўзлари учун керакли бўлган махсулотни танлаб унга буюртма беришлари ва сотувчи билан ўзаро алоқа ўрнатишлари мумкин
+							+card-item(4, `Фермерлар ўз махсулотларини жойлаштирадилар`)
+							+card-item(5, `Сиз керакли маҳсулотни танлайсиз`)
+							+card-item(6, `Етказиб бериш ва вақти ҳақида келишиб оласиз`)
+					+e.col.col-lg-6.col-xl-auto
+						+pic(`purpose-2.jpg`,'', '')
 	// end sServicePurpose
