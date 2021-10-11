@@ -186,12 +186,12 @@ function eventHandler() {
 		$("body, html").removeClass('fixed');
 	})
 
-	$(" .menu-item-has-children > a").click(function (e) {
-		if ($(".catalog-block").hasClass("active")) {
-			e.preventDefault();
-			$(this).toggleClass("active").next().slideToggle();
-		}
-	})
+	// $(" .menu-item-has-children > a").click(function (e) {
+	// 	if ($(".catalog-block").hasClass("active")) {
+	// 		e.preventDefault();
+	// 		$(this).toggleClass("active").next().slideToggle();
+	// 	}
+	// })
 
 
 	window.addEventListener('scroll', () => {
@@ -545,34 +545,57 @@ function eventHandler() {
 		lessLink: '<a href="#" class="readmore-link-more readmore-link-more--close">Қисқача</a>'
 	});
 
-	function toggleShow(toggle, drop) {
+	function toggleShow(toggle, drop, body) {
 
 		let catalogDrop = drop;
 		let catalogToggle = toggle;
+		
 
 		$(document).on('click', catalogToggle, function () {
 			$(this).toggleClass('active').next().fadeToggle('fast', function () {
-				$(this).toggleClass("active")
+				$(this).toggleClass("active");
 			});
-		})
+			if (body) {
+				document.body.classList.toggle('fixed2');
 
+			}
+		})
+		
 		document.addEventListener('mouseup', (event) => {
 			let container = event.target.closest(catalogDrop + ".active"); // (1)
 			let link = event.target.closest(catalogToggle); // (1)
 			if (!container || !catalogToggle) {
 				$(catalogDrop).removeClass('active').fadeOut();
 				$(catalogToggle).removeClass('active');
+				if (body) {
+					document.body.classList.remove('fixed2');
+					
+				}
 			};
 		}, { passive: true });
 	}
-	$(".menu-item-has-children:first-child").addClass("active");
+	// $(".menu-item-has-children:first-child").addClass("active");
 	// $(".catalog-block__toggle--desctop").click(function(){
 	// })
-	$(".menu-item-has-children").hover(function () {
-		$(this).addClass("active").siblings().removeClass('active');
+	$(".menu-item-has-children > a").click(function (e) { 
+			e.preventDefault();
+		// console.log();
+		let title = $(this).text();
+		$(this).parent().addClass("active").siblings('li').removeClass('active')
+		.find('li').removeClass('active');
+		$(this).next().find(".btn-back").remove();
+		$(this).next().children().prepend(`<li class='btn-back d-md-none'> 
+															<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M6.86474 0.00180554C7.12953 0.00134969 7.38614 0.0825446 7.59003 0.231296C7.70478 0.31506 7.79964 0.417934 7.86917 0.534023C7.9387 0.650112 7.98153 0.777137 7.99521 0.907824C8.0089 1.03851 7.99317 1.17029 7.94892 1.29562C7.90467 1.42094 7.83278 1.53735 7.73735 1.63818L2.66033 6.98632L7.55603 12.3444C7.65017 12.4465 7.72047 12.5639 7.76289 12.69C7.80531 12.8161 7.81901 12.9482 7.80321 13.079C7.78742 13.2097 7.74243 13.3364 7.67084 13.4518C7.59925 13.5672 7.50246 13.669 7.38604 13.7513C7.26879 13.8421 7.13147 13.9107 6.98272 13.9526C6.83396 13.9945 6.67698 14.0088 6.52162 13.9948C6.36625 13.9807 6.21587 13.9385 6.0799 13.8709C5.94392 13.8032 5.8253 13.7116 5.73147 13.6016L0.257804 7.61492C0.0911212 7.43639 0 7.21244 0 6.98133C0 6.75021 0.0911212 6.52627 0.257804 6.34773L5.92413 0.36101C6.03782 0.24026 6.18223 0.144808 6.34566 0.0823977C6.50909 0.0199873 6.68692 -0.00762439 6.86474 0.00180554Z" fill="#3E3E3E"/>
+																	</svg>
 
+															${title}</li>`)
 	})
-	toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
+
+	$(document).on("click", ".btn-back", function(){
+		$(this).parent().parent().parent().removeClass("active");
+	})
+	toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown', true);
 
 	toggleShow('.lang-choose__current', ".lang-choose__dropdown");
 	toggleShow('.top-btn--alerts', ".dropdown-alert");

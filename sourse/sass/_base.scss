@@ -76,6 +76,15 @@ body {
 		overflow: hidden;
 	}
 
+	&.fixed2{
+
+		overflow: hidden;
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 0;
+		z-index: 999;
+	}
 	&.fixed {
 		overflow: hidden;
 		position: absolute;
