@@ -14,6 +14,8 @@ mixin sBasket(order)
 							th Суммаси
 							if !order
 								th
+							if order
+								th.td-alert
 					mixin tr(i, t)
 						tr
 							td
@@ -40,6 +42,11 @@ mixin sBasket(order)
 								td 
 									+e.btn-delete
 										+icon("delete")
+							if order
+								td.td-alert
+									+b.alert-btn(href="#")
+										+e.counter 4 
+										+icon("alert")
 					tbody
 						+tr("1",'Бинафша Шоҳ Нўхати')
 							li <span>Олиб кетиш:</span> 15, Бектемирский район, массив Олима Оширова, Ташкент, Узбекистан

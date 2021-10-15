@@ -71,6 +71,7 @@
 		font-size: rem(14);
 		line-height: 125%;
 		color: #000000;
+		@include ellips;
 	}
 	&__btn {
 		padding: rem(10) rem(20);

@@ -539,7 +539,7 @@ function eventHandler() {
 	// })
 
 
-	$(".menu-item-has-children > a").click(function (e) {
+	$(".menu-item-has-children > a").hover(function (e) {
 		e.preventDefault(); // console.log();
 
 		let title = $(this).text();

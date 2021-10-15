@@ -640,3 +640,7 @@ li.active{
 		top: rem(-1);
 	}
 }
+
+.menu-item-has-children .sub-menu>li.menu-item-has-children.active > a {
+	color: $success;
+}

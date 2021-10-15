@@ -13,12 +13,13 @@
 		@extend .btn;
 		@extend .btn-primary;
 		border-radius: 8px;
-		width: rem(113);
+		// width: rem(113);
 		margin-top: auto;
 	}
 	p{
 		// margin-bottom: rem(50);
 		padding-bottom: rem(7);
+		flex-grow: 1;
 	}
 	&__price{
 		font-size: 1rem !important;

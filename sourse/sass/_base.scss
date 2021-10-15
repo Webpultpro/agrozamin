@@ -708,3 +708,30 @@ iframe {
 		background-color: #F8F9FA;
 	}
 }
+
+
+.alert-btn{
+	position: relative; 
+	cursor: pointer;
+	display: inline-block;
+
+	.icon{
+		font-size: rem(24);
+	}
+	&__counter{
+		background: #ED6262;
+		border-radius: 50%;
+		width: rem(16);
+		height: rem(16);
+		position: absolute;
+		right: 0;
+		top: 0;
+		transform: translate(30%, -50%);
+		color: #fff;
+		font-size: rem(10);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+	}
+}
