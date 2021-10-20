@@ -195,6 +195,9 @@
 
 	}
 	.left-menu{
+		 & >li > a{
+			 font-weight: bold;
+		 }
 		// position: relative;
 		// z-index: 4;
 		// position: relative;
