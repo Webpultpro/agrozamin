@@ -1,138 +1,142 @@
 // start .sHeaderBanner
 .sHeaderBanner {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
 
-	&__slider{
-		// border-radius: 19px;
+	&__slider {
+		border-radius: 19px;
 	}
-	&__slide{
+	&__slide {
 		border-radius: 19px;
 		position: relative;
 		overflow: hidden;
-		@include media-breakpoint-down(lg) {
-
-			display: flex;
-		}
+		display: flex;
 		flex-direction: column;
+		@include media-breakpoint-down(lg) {
+		}
 		@include media-breakpoint-up(lg) {
-
 			padding: rem(40);
-			padding-bottom: rem(29);
+			// padding-bottom: rem(29);
 			min-height: rem(367);
 		}
 		padding: rem(20);
 		padding-bottom: rem(40);
 		position: relative;
 		z-index: 2;
-		background-color: rgba($color: $primary, $alpha: .2);
+		background-color: rgba($color: $primary, $alpha: 0.2);
 		height: auto;
 	}
-	.head-slide-img{
+	.head-slide-img {
 		position: absolute;
 		right: 0;
 		top: 0;
 		z-index: -1;
-		img{
+		img {
 			max-height: 100%;
 		}
 		width: 50%;
-			@include media-breakpoint-up(lg) {
-
-				height: 100%;
-				max-height: 100%;
-			}
-			height: 80%;
-			max-height: 80%;
+		@include media-breakpoint-up(lg) {
+			height: 100%;
+			max-height: 100%;
+		}
+		height: 80%;
+		max-height: 80%;
 		text-align: right;
 	}
-	&__title{
+	&__title {
 		@include media-breakpoint-up(lg) {
 			@include rfs(43px);
 		}
 		@include media-breakpoint-up(md) {
-
 			font-size: 35px;
 		}
 		font-size: 20px;
 		font-weight: bold;
 		line-height: 1.2;
+		margin-bottom: rem(10);
 	}
-	p{
+	p {
 		@include media-breakpoint-up(lg) {
 			max-width: rem(480);
 			font-size: rem(18);
 		}
 		max-width: rem(340);
 	}
-	&__content{
+	&__content {
+		flex-grow: 1;
+		max-width: 65%;
 		@include media-breakpoint-up(lg) {
-			max-width: rem(600);
+			max-width: rem(580);
 		}
-		max-width: 70%
 	}
 	@include media-breakpoint-down(lg) {
 		display: flex;
 		flex-direction: column;
-		min-height: 100%
+		min-height: 100%;
 	}
-	&__btn{
+	&__btn {
 		@extend .btn, .btn-success;
 		color: #fff;
-			@include media-breakpoint-down(lg) {
-				width: 100%;
-				margin-top: auto;
-			}
+		align-self: flex-start;
+		@include media-breakpoint-down(lg) {
+			width: 100%;
+			margin-top: auto;
+		}
 	}
 
-	&__arrow-wrapper{
+	&__arrow-wrapper {
 		width: rem(57.09px);
 		height: rem(27px);
 		position: absolute;
 		right: 30px;
 		bottom: 30px;
 		z-index: 4;
-		
 	}
 
 	--swiperArrowPosition: 0;
 	.swiper-button-hand {
 		width: rem(27);
 		height: rem(27);
-		background: #FFFFFF;
+		background: #ffffff;
 		box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
 		line-height: rem(27);
 		vertical-align: middle;
 		text-align: center;
 		color: $primary;
-		.icon{
+		.icon {
 			font-size: rem(12px);
 		}
 	}
 
+	.swiper-pagination-bullet {
+		background-color: #afafaf;
+		width: rem(10);
+		height: rem(10);
+		margin-left: rem(5);
+		margin-right: rem(5);
 
-		.swiper-pagination-bullet {
-			background-color: #afafaf;
-			width: rem(10);
-			height: rem(10);
-			margin-left: rem(5);
-			margin-right: rem(5);
-
-			&-active {
-				width: rem(14);
-				height: rem(14);
-				background-color: $primary;
-			}
+		&-active {
+			width: rem(14);
+			height: rem(14);
+			background-color: $primary;
 		}
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
-	.swiper-pagination-wrap{
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+	.swiper-pagination-wrap {
 		@include media-breakpoint-up(lg) {
 			position: absolute;
 			right: 20px;
@@ -181,11 +185,9 @@
 			// 	// background: #222;
 			// 	z-index: 1000;
 			// }
-
-
 		}
 	}
-	.swiper-pagination{
+	.swiper-pagination {
 		@include media-breakpoint-up(lg) {
 			margin-top: 0;
 			position: absolute;
@@ -200,13 +202,13 @@
 			text-align: center;
 			color: #fff;
 			font-size: 16px;
-			background: #C1D0C5;
+			background: #c1d0c5;
 			border: 3px solid rgba(255, 255, 255, 0.23);
 			box-sizing: border-box;
 			filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.08));
 		}
 		z-index: 10;
-			@include media-breakpoint-down(lg) {
+		@include media-breakpoint-down(lg) {
 			position: relative;
 			// margin-top: -50px;
 			top: -40px;
