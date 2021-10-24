@@ -1,11 +1,9 @@
 mixin aside(data)
 	// start aside
 	+b.ASIDE.aside.section.pt-0&attributes(attributes)
-		+e.head-row.row
-			.col-auto
-				h1 Уруғлар
-			.col
-				.text-secondary 211 маҳсулотлари
+		+e.heading
+			h1 Уруғлар
+			.text-secondary 211 маҳсулотлари 
 		+e.toggle-btn--js.btn.btn-outline-success.mb-3.w-100.d-lg-none Показать меню 
 			span
 		+e.toggle-block.d-lg-block 

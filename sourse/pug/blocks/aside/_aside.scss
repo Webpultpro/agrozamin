@@ -27,16 +27,13 @@
 		}
 	}
 
-	&__head-row {
-		align-items: center;
+	&__heading {
 		padding-bottom: rem(20);
 		@include media-breakpoint-up(lg) {
 			padding-bottom: rem(27);
 		}
 		h1 {
-			@include media-breakpoint-up(lg) {
-				margin-bottom: 3px;
-			}
+			margin-bottom: 5px;
 		}
 	}
 
