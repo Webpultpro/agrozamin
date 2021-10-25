@@ -68,7 +68,12 @@ mixin cardf(i)
 				+e.img-wrap.bg-wrap(href="#")
 					+pic(`prod-${i}.jpg`,'bg',0).picture-bg
 			+e.caption
-				.h6.strong 12 099 сум/ Қадоқда
+				+e.heading.row
+					.col-auto
+						.h6.strong.mb-0 12 099 сум
+					.col
+						.text-secondary килограмм
+				+e.name Самарқанд вилояти ёввойи Озорник Укропи
 				p.text-secondary Лаззатли шифобахш хусусиятларга ега бўлган Аругула ўсимлиги
 mixin sCatalog(data)
 	// start sCatalog

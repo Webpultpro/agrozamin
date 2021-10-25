@@ -1,8 +1,11 @@
 // start .sHeaderBanner
 .sHeaderBanner {
-	// --sPT: ;
-	// --sPB: ;
-	// --sTPB: ;
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30)};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(30)};
+		--sPB: #{rem(40)};
+	}
 
 	&__slider {
 		border-radius: 19px;
@@ -120,6 +123,11 @@
 			width: rem(14);
 			height: rem(14);
 			background-color: $primary;
+		}
+	}
+	.swiper-pagination-wrap {
+		@include media-breakpoint-down(lg) {
+			height: 0;
 		}
 	}
 	@include media-breakpoint-up(xl) {

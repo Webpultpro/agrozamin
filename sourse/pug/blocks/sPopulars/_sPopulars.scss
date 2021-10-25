@@ -1,26 +1,34 @@
 // start .sPopulars
 .sPopulars {
-			.swiper-wrapper { 
-				@include media-breakpoint-up(lg) {
-					transform: none !important;
-				}
-			}
+	.swiper-wrapper {
+		@include media-breakpoint-up(lg) {
+			transform: none !important;
+		}
+	}
 }
 .sBankProducs,
 .sPopulars {
 	// --sPT: ;
 	// --sPB: ;
 	// --sTPB: ;
-	--sPT: calc(#{rem(50)} / 2);
-	--sPB: calc(#{rem(100)} / 2);
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30)};
+	// --sPT: calc(#{rem(50)} / 2);
+	// --sPB: calc(#{rem(100)} / 2);
 	--sTPB: calc(#{rem(75)} / 2);
-	@include media-breakpoint-up(lg) {
-		--sPT: #{rem(50)};
-		--sPB: #{rem(100)};
-		--sTPB: #{rem(75)};
-	}
 	position: relative;
 	overflow: hidden;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(40)};
+		--sPB: #{rem(40)};
+		--sTPB: #{rem(75)};
+	}
+	& + .footer {
+		margin-top: rem(30);
+		@include media-breakpoint-up(lg) {
+			margin-top: rem(40);
+		}
+	}
 	.row {
 		--bs-gutter-x: #{rem(28)};
 		--bs-gutter-y: #{rem(28)};
@@ -29,7 +37,7 @@
 			--bs-gutter-y: #{rem(35)};
 		}
 	}
-	.swiper-slide{
+	.swiper-slide {
 		height: auto;
 	}
 	&__item {
@@ -40,7 +48,8 @@
 		border-radius: $border-radius-lg;
 		position: relative;
 		overflow: hidden;
-		min-height: 100%;
+		height: 100%;
+		min-height: rem(344);
 		&:hover {
 			box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.2);
 		}
@@ -76,9 +85,9 @@
 
 	&__caption {
 		flex-grow: 1;
-		padding: rem(10);
+		padding: rem(12);
 		@include media-breakpoint-up(lg) {
-			padding: rem(12) rem(12) rem(25) rem(12);
+			padding: rem(15) rem(18) rem(18) rem(18);
 		}
 	}
 
@@ -88,7 +97,7 @@
 		font-size: rem(16);
 		line-height: 125%;
 		color: #152536;
-		margin-bottom: rem(15);
+		margin-bottom: rem(6);
 	}
 
 	&__slider {
@@ -109,7 +118,6 @@
 			margin-right: calc(-0.5 * var(--bs-gutter-x));
 			margin-left: calc(-0.5 * var(--bs-gutter-x));
 			margin-top: calc(-1 * var(--bs-gutter-y));
-			
 		}
 		.swiper-slide {
 			height: auto;

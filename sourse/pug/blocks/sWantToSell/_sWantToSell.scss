@@ -2,42 +2,45 @@
 .sWantToSell {
 	--sPB: 0;
 	--sPT: #{rem(40)};
-	
-	margin-bottom: 0;
+	margin-top: rem(30);
+	margin-bottom: rem(30);
+	// margin-bottom: 0;
 	position: relative;
-	@include media-breakpoint-up(md) {
-		--sPT: #{rem(47)};
-		--sPB: #{rem(37)};
-		--sTPB: #{rem(18)};
-		margin-bottom: rem(47);
-	}
-	background-color: var(--bg,#3550af);
+	background-color: var(--bg, #3550af);
 	color: $white;
 	position: relative;
 	overflow: hidden;
 	z-index: 2;
 	--posX: calc(0);
-// @media (min-width: 1334px) {
-// 	&::before,
-// 	&::after{
-// 		content: url(../img/svg/ell.svg);
-// 		@include a-cent(y);
-// 		height: 221px;
-// 		z-index: -1;
-// 	}
-// 	}
-// 	&::before{
-// 		left: var(--posX);
-// 		transform: translateX(-50%);
-// 	}
-	
-// 	&::after{
-// 		right: var(--posX);
-// 		transform: translateX(50%);
-// 	}
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(47)};
+		--sPB: #{rem(37)};
+		--sTPB: #{rem(18)};
+	}
+	@include media-breakpoint-up(lg) {
+		margin-top: rem(40);
+		margin-bottom: rem(40);
+	}
+	// @media (min-width: 1334px) {
+	// 	&::before,
+	// 	&::after{
+	// 		content: url(../img/svg/ell.svg);
+	// 		@include a-cent(y);
+	// 		height: 221px;
+	// 		z-index: -1;
+	// 	}
+	// 	}
+	// 	&::before{
+	// 		left: var(--posX);
+	// 		transform: translateX(-50%);
+	// 	}
+
+	// 	&::after{
+	// 		right: var(--posX);
+	// 		transform: translateX(50%);
+	// 	}
 	.container {
 		position: relative;
-
 	}
 	.section-title {
 		h2 {
@@ -179,7 +182,8 @@
 		background: #ffffff;
 		border-radius: 68px;
 		text-align: center;
-		&:hover, &:focus {
+		&:hover,
+		&:focus {
 			// color: shift-color(#3550af, 20%);
 			background-color: $primary;
 			border-color: $primary;

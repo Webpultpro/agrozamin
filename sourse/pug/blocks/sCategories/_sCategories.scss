@@ -3,13 +3,13 @@
 	// --sPT: ;
 	// --sPB: ;
 	// --sTPB: ;
-	--sPT: calc(#{rem(85)} / 2);
-	--sPB: calc(#{rem(50)} / 2);
-	--sTPB: calc(#{rem(90)} / 2);
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30)};
+	--sTPB: calc(#{rem(50)} / 2);
 	@include media-breakpoint-up(lg) {
-		--sPT: #{rem(85)};
-		--sPB: #{rem(50)};
-		--sTPB: #{rem(90)};
+		--sPT: #{rem(40)};
+		--sPB: #{rem(40)};
+		--sTPB: #{rem(50)};
 	}
 	position: relative;
 	overflow: hidden;

@@ -1,14 +1,16 @@
 // start .sAdvantages
 .sAdvantages {
-	--sTPB: #{rem(55)};
-	--sPB: #{rem(35)};
-	@include media-breakpoint-up(md) {
-		--sPT: #{rem(72)};
-		--sPB: #{rem(55)};
-		--sTPB: #{rem(45)};
-	}
 	@extend .container;
 	position: relative;
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30)};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(40)};
+		--sPB: #{rem(40)};
+		--sTPB: #{rem(45)};
+		margin-top: rem(80);
+		margin-bottom: rem(40);
+	}
 	// max-width: 1440px;
 	// margin-left: auto;
 	// margin-right: auto;

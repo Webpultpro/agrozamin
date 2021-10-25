@@ -155,6 +155,18 @@
 		@include media-breakpoint-down(md) {
 			min-height: 100%;
 		}
+		.card-prod__heading {
+			margin-bottom: rem(5);
+			--bs-gutter-x: #{rem(10)};
+			@include media-breakpoint-up(md) {
+				--bs-gutter-x: #{rem(10)};
+			}
+		}
+		.card-prod__name {
+			font-weight: 500;
+			font-size: rem(14);
+			line-height: calc(22 / 14);
+		}
 	}
 	&--vertical {
 		padding: rem(15);

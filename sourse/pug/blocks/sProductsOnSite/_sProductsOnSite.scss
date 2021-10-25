@@ -1,17 +1,21 @@
 // start .sProductsOnSite
-.sProductsOnSite  + .footer{
-	margin-top: rem(97); 
-	@include media-breakpoint-up(md) { 
+.sProductsOnSite + .footer {
+	margin-top: rem(97);
+	@include media-breakpoint-up(md) {
 		margin-top: rem(87);
 	}
 }
 .sProductsOnSite {
-	--sPT: #{rem(22)};
-	--sPB: #{rem(120)};
-	--sTPB: #{rem(50)};
-	@include media-breakpoint-up(md) {
+	--sPT: #{rem(40)};
+	--sPB: #{rem(40)};
+	--sTPB: #{rem(40)};
+	margin-top: rem(30);
+	margin-bottom: rem(30);
+	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(40)};
-		--sPB: #{rem(45)};
+		--sPB: #{rem(40)};
+		margin-top: rem(40);
+		margin-bottom: rem(40);
 	}
 	@include media-breakpoint-up(lg) {
 		--sTPB: 0;

@@ -1,11 +1,11 @@
 // start .sHowWorks
 .sHowWorks {
-	--sPT: calc(#{rem(65)} / 2);
-	--sPB: calc(#{rem(86)} / 2);
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30)};
 	--sTPB: calc(#{rem(57)} / 2);
 	@include media-breakpoint-up(lg) {
-		--sPT: #{rem(65)};
-		--sPB: #{rem(86)};
+		--sPT: #{rem(40)};
+		--sPB: #{rem(40)};
 		--sTPB: #{rem(57)};
 	}
 
@@ -22,14 +22,11 @@
 	.row {
 		--bs-gutter-x: #{rem(19)};
 		--bs-gutter-y: #{rem(19)};
-		@include media-breakpoint-up(md) {
-			--bs-gutter-x: #{rem(30)};
-			--bs-gutter-y: #{rem(30)};
-		}
 		@include media-breakpoint-up(lg) {
 			--bs-gutter-x: #{rem(25)};
 			--bs-gutter-y: #{rem(25)};
 		}
+	
 	}
 
 	&__item {

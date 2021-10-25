@@ -1,10 +1,11 @@
 // start .sPartners
 .sPartners {
-	--sPT: #{rem(40)};
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30)};
 	--sTPB: #{rem(38)};
-	--sPB: #{rem(97)};
-	@include media-breakpoint-up(md) {
-		--sPB: #{rem(130)};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(40)};
+		--sPB: #{rem(40)};
 	}
 	&__slider-wrap {
 		background-color: #ebf1f9;
