@@ -1,5 +1,5 @@
 mixin itemh(i, p)
-	+e.col.col-md-4.col-lg-3(class="wow animate__fadeInUp" )
+	+e.col.col-md-6.col-lg-3(class="wow animate__fadeInUp" )
 		+e.item(href='#' style=`--hover-bg: rgba(231,164,96,1);--hover-color: #E7A460;`)
 			+e.DIV.img-wrap
 				img(src=`img/svg/how-works-${i}.svg` alt="")
@@ -17,6 +17,7 @@ mixin sHowWorks(data)
 			.row.justify-content-center
 				+itemh(1, `Фермерлар ўз махсулотларини жойлаштирадилар`)
 				+itemh(2, `Сиз керакли маҳсулотни танлайсиз`)
+				+itemh(7, `Етказиб берувчи керакли маҳсулотни текширади ва тасдиқлайди`)
 				+itemh(3, `Етказиб бериш ва вақти ҳақида келишиб оласиз`)
 
 	// end sHowWorks
@@ -30,7 +31,8 @@ mixin sHowWorks2(data)
 				h2 Хизмат қандай ишлаши ҳақида
 			.row.justify-content-center
 				+itemh(4, `Ўзингиз ва компаниянгиз ҳақида маълумотни тўлдиринг`)
-				+itemh(5, `Маҳсулотингизни сайтга <br> юкланг`)
-				+itemh(6, `Савдо орқли фойдага <br> ега бўлинг`)
+				+itemh(5, `Маҳсулотингизни сайтга юкланг`)
+				+itemh(8, `Буюртмани қабул қилинг`)
+				+itemh(6, `Ва савдоингизи кенгайтиринг`)
 
 	// end sHowWorks2

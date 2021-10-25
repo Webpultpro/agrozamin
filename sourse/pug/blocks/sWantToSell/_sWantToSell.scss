@@ -17,24 +17,24 @@
 	overflow: hidden;
 	z-index: 2;
 	--posX: calc(0);
-@media (min-width: 1334px) {
-	&::before,
-	&::after{
-		content: url(../img/svg/ell.svg);
-		@include a-cent(y);
-		height: 221px;
-		z-index: -1;
-	}
-	}
-	&::before{
-		left: var(--posX);
-		transform: translateX(-50%);
-	}
+// @media (min-width: 1334px) {
+// 	&::before,
+// 	&::after{
+// 		content: url(../img/svg/ell.svg);
+// 		@include a-cent(y);
+// 		height: 221px;
+// 		z-index: -1;
+// 	}
+// 	}
+// 	&::before{
+// 		left: var(--posX);
+// 		transform: translateX(-50%);
+// 	}
 	
-	&::after{
-		right: var(--posX);
-		transform: translateX(50%);
-	}
+// 	&::after{
+// 		right: var(--posX);
+// 		transform: translateX(50%);
+// 	}
 	.container {
 		position: relative;
 
