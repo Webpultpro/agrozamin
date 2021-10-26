@@ -14,8 +14,10 @@
 	// max-width: 1440px;
 	// margin-left: auto;
 	// margin-right: auto;
-	
-	
+
+	.container {
+		padding: 0;
+	}
 	.section-title {
 		h2 {
 			text-align: center;
@@ -95,7 +97,6 @@
 				object-position: center;
 				z-index: -1;
 				border-radius: 19px;
-
 			}
 			// @include media-breakpoint-up(xxl) {
 			// 	object-position: center;

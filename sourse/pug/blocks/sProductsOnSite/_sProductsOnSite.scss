@@ -28,11 +28,20 @@
 			--bs-gutter-x: #{rem(24)};
 		}
 	}
+	&__main-row {
+		@include media-breakpoint-up(xl) {
+		--bs-gutter-x: #{rem(37)};
+		}
+	}
 
 	.section-title {
 		text-align: center;
 		@include media-breakpoint-up(sm) {
 			text-align: left;
+		}
+
+		@include media-breakpoint-up(xl) {
+			max-width: 287px;
 		}
 		&__btn {
 			padding: rem(12) rem(20);
@@ -50,7 +59,7 @@
 		p {
 			font-size: rem(14);
 			line-height: 125%;
-			margin-bottom: rem(26);
+			margin-bottom: rem(30);
 			max-width: 300px;
 			margin-left: auto;
 			margin-right: auto;
@@ -58,6 +67,9 @@
 				margin-left: 0;
 				margin-right: 0;
 				max-width: 480px;
+			}
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(45);
 			}
 		}
 	}
@@ -72,12 +84,16 @@
 		height: 100%;
 		&:hover {
 			box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.2);
+			.sProductsOnSite__card-btn {
+				@extend .btn-outline-primary:hover;
+			}
 		}
 		p {
-			font-size: rem(13);
-			line-height: 119%;
+			font-size: rem(12);
+			line-height: calc(17 / 12);
 			color: #68717a;
 			margin-bottom: rem(10);
+			flex-grow: 1;
 			&:last-of-type {
 				margin-bottom: 0;
 			}
@@ -104,43 +120,84 @@
 	}
 
 	&__caption {
+		display: flex;
+		flex-direction: column;
 		flex-grow: 1;
-		padding: rem(10);
+		padding: rem(12) rem(12) rem(15);
 		@include media-breakpoint-up(lg) {
-			padding: rem(12) rem(12) rem(20) rem(12);
+			padding: rem(14) rem(15) rem(19);
 		}
 	}
-
-	&__price {
-		display: block;
+	&__title {
 		font-weight: bold;
-		font-size: rem(16);
-		line-height: 125%;
+		font-size: rem(15);
+		line-height: calc(22 / 16);
+		color: #3e3e3e;
+		margin-bottom: rem(5);
+		@include media-breakpoint-up(xl) {
+			font-size: rem(16);
+		}
+	}
+	&__value {
+		display: flex;
+		align-items: center;
+		margin-bottom: rem(12);
+	}
+	&__price {
+		font-weight: 500;
+		font-size: rem(14);
+		line-height: calc(18 / 14);
 		color: #152536;
-		margin-bottom: rem(10);
+		margin-right: rem(8);
 	}
-	&__footer {
-		text-align: right;
-		padding-top: rem(20);
+	&__unit {
+		font-weight: normal;
+		font-size: rem(12);
+		line-height: calc(18 / 12);
 	}
+	&__card-btn {
+		@extend .btn;
+		@extend .btn-outline-primary;
+		@include mt;
+		max-width: 131px;
+		width: 100%;
+		font-size: rem(14);
+		line-height: calc(16 / 14);
+		font-weight: normal;
+		padding: rem(11) rem(20);
+		margin-top: rem(20);
+	}
+	// &__footer {
+	// 	text-align: right;
+	// 	padding-top: rem(20);
+	// }
 
 	&__link {
 		@include mt;
 		display: inline-block;
-		padding: rem(12);
+		padding: rem(12) 0;
 		border-radius: 4px;
 		background-color: transparent;
 		font-size: rem(14);
 		line-height: (21 / 14);
-		text-decoration: underline;
-		color: #3e3e3e;
 		white-space: nowrap;
+		margin-left: auto;
+		// @include media-breakpoint-up(md) {
+		// }
+		span {
+			margin-right: rem(8);
+		}
+
+		.icon-shevron-right-sm {
+			font-size: rem(10);
+		}
 	}
 
 	&__slider {
 		// padding-bottom: calc(var(--size));
-		@include media-breakpoint-down(lg) {
-			.row {
+		.row {
+			--bs-gutter-x: #{rem(12)};
+			@include media-breakpoint-down(lg) {
 				// min-width: 967.44px;
 				flex-wrap: nowrap;
 				--bs-gutter-y: var(--bs-gutter-x);
@@ -148,7 +205,7 @@
 		}
 		.sProductsOnSite__col {
 			@include media-breakpoint-down(lg) {
-				width: 238px;
+				width: 240px;
 			}
 		}
 		.swiper-wrapper {
@@ -169,11 +226,12 @@
 	.tabs {
 		&__caption {
 			display: flex;
+			align-items: center;
 			margin-bottom: rem(26);
 		}
 		&__btn {
 			@include mt;
-			padding: rem(12) !important;
+			padding: rem(10) rem(12) !important;
 			border-radius: 4px !important;
 			background-color: transparent;
 			&:not(:last-child) {
@@ -181,9 +239,10 @@
 			}
 			span {
 				@include mt;
+				display: inline-block;
 				font-weight: 500;
 				font-size: rem(14);
-				line-height: (21 / 14);
+				line-height: (16 / 14);
 				color: #3e3e3e;
 				white-space: nowrap;
 			}

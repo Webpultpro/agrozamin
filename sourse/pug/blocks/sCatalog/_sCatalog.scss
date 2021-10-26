@@ -117,6 +117,11 @@
 			box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
 		}
 	}
+	&:hover {
+		.card-prod__card-btn {
+			@extend .btn-outline-primary:hover;
+		}
+	}
 	.row {
 		@include media-breakpoint-up(md) {
 			--bs-gutter-x: 33px;
@@ -155,18 +160,18 @@
 		@include media-breakpoint-down(md) {
 			min-height: 100%;
 		}
-		.card-prod__heading {
-			margin-bottom: rem(5);
-			--bs-gutter-x: #{rem(10)};
-			@include media-breakpoint-up(md) {
-				--bs-gutter-x: #{rem(10)};
-			}
-		}
-		.card-prod__name {
-			font-weight: 500;
-			font-size: rem(14);
-			line-height: calc(22 / 14);
-		}
+		// .card-prod__heading {
+		// 	margin-bottom: rem(5);
+		// 	--bs-gutter-x: #{rem(10)};
+		// 	@include media-breakpoint-up(md) {
+		// 		--bs-gutter-x: #{rem(10)};
+		// 	}
+		// }
+		// .card-prod__name {
+		// 	font-weight: 500;
+		// 	font-size: rem(14);
+		// 	line-height: calc(22 / 14);
+		// }
 	}
 	&--vertical {
 		padding: rem(15);
@@ -273,6 +278,74 @@
 			height: 100%;
 			flex-direction: column;
 			justify-content: space-between;
+		}
+	}
+	&__heading {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		padding: 0;
+		@include media-breakpoint-up(md) {
+			padding: rem(12) rem(12) rem(15);
+		}
+		@include media-breakpoint-up(lg) {
+			padding: rem(14) rem(15) rem(19);
+		}
+		p {
+			font-size: rem(12);
+			line-height: calc(17 / 12);
+			color: #68717a;
+			margin-bottom: rem(10);
+			flex-grow: 1;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__title {
+		font-weight: bold;
+		font-size: rem(15);
+		line-height: calc(22 / 16);
+		color: #3e3e3e;
+		margin-bottom: rem(5);
+		@include media-breakpoint-up(xl) {
+			font-size: rem(16);
+		}
+	}
+	&__value {
+		display: flex;
+		align-items: center;
+		margin-bottom: rem(8);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(12);
+		}
+	}
+	&__prices {
+		font-weight: 500;
+		font-size: rem(14);
+		line-height: calc(18 / 14);
+		color: #152536;
+		margin-right: rem(8);
+	}
+	&__unit {
+		font-weight: normal;
+		font-size: rem(12);
+		line-height: calc(18 / 12);
+	}
+	&__card-btn {
+		@extend .btn;
+		@extend .btn-outline-primary;
+		@include mt;
+		max-width: 131px;
+		width: 100%;
+		font-size: rem(14);
+		line-height: calc(16 / 14);
+		font-weight: normal;
+		padding: rem(11) rem(20);
+		margin-top: rem(20);
+		@include media-breakpoint-down(md) {
+			align-self: flex-start;
+			margin-top: rem(15);
 		}
 	}
 }

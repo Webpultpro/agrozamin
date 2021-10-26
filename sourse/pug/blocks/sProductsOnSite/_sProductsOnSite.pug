@@ -2,13 +2,13 @@ mixin sProductsOnSite(data)
 	// start sProductsOnSite
 	+b.SECTION.sProductsOnSite.section#sProductsOnSite&attributes(attributes)
 		.container
-			.row
-				.col-lg-4.d-lg-flex.align-items-center(class="wow animate__fadeInLeft" )
+			+e.main-row.row
+				.col-lg-3.col-xl-auto.d-lg-flex.align-items-center(class="wow animate__fadeInLeft" )
 					+b.section-title
 						h1 Сайтдаги маҳсулотлар
 						p Маҳсулотларингизни бизнинг сайтимизда бепул жойлаштиринг. Тўғридан-тўғри фермер хўжаликларига сотинг
 						+e.BUTTON.btn.btn.btn-primary.heartbeat Сотувни бошлаш
-				.col-lg-8(class="wow animate__fadeInRight" )
+				.col-lg-9.col-xl(class="wow animate__fadeInRight" )
 					.tabs
 						.tabs__caption
 							//- .tabs__caption.d-none.d-md-flex
@@ -18,70 +18,49 @@ mixin sProductsOnSite(data)
 								span Ўғитлар
 							.tabs__btn.d-none.d-md-block
 								span Ўсимликларни ҳимоя қилиш маҳсулотлари
-							.tabs__btn.d-none.d-md-block
+							.tabs__btn.d-none.d-xl-block
 								span Техника
-							+e.link.d-block.d-md-none(href="#") Барча категориялар
+							+e.link.d-block(href="#")
+								span Барча категориялар
+								+icon('shevron-right-sm')
 						.tabs__wrap
 							.tabs__content.active
 								+e.slider--js
 									.row.swiper-wrapper
-										mixin item(i, t, p)
+										mixin item(i, h, p, u, t)
 											+e.col.col-lg-4.swiper-slide
 												+e.item(href='#')
 													+e.DIV.img-wrap
 														if i
 															img(src=`img/@2x/products-site-${i}.jpg` alt="")
 													+e.DIV.caption
-														+e.price!= t
-														p!= p
-										+item(1, `12 099 сум/ дона`, `"Морковь гигант"`)
-										+item(``, `12 099 сум/ шт1`, `Маккажўхори геолиа уруғлар " Ранняя лакомка»`)
-										+item(2, `12 099 сум/ дона`, `Оқ мевали қовоқ геолиа "Лангар" уруғлари»`)
+														+e.title!= h
+														+e.value
+															+e.price!= p
+															+e.unit.text-secondary!= u
+														p!= t
+														+e.card-btn Харид қилиш
+										+item(1, `Сабзи Рус гиганти`, `15 990 132 сум`, `Тонна`, `Европ ва осиё мамалакатларида кўп учрайдиган Россия гигант сабзилари Россия гигант сабзилари `)
+										+item(``, `Укроп Озорник`, `2 190 сум`, `Тонна`, `Орта осиёда кенг тарқалган яшил парракли укроплар`)
+										+item(2, `Яшил нохот доначалари`, `2 299 сум`, `Тонна`, `Ажойиб хухусиятларга ега бўлган яши нохот доначали`)
 							.tabs__content
 								+e.slider--js
 									.row.swiper-wrapper
-										mixin item(i, t, p)
-											+e.col.col-lg-4.swiper-slide
-												+e.item(href='#')
-													+e.DIV.img-wrap
-														if i
-															img(src=`img/@2x/populars-${i}.jpg` alt="")
-													+e.caption
-														+e.price!= t
-														p!= p
-										+item(1, `12 099 сум/ дона`, `"Корневин" илдизларининг шаклланиши ва ўсишини стимулятори 0,005 kg`)
-										+item(2, `12 099 сум/ дона`, `Оқ мевали қовоқ геолиа "Лангар" уруғлари»`)
-										+item(3, `12 099 сум/ шт1`, `Маккажўхори геолиа уруғлар " Ранняя лакомка»`)
+										+item(1, `Сабзи Рус гиганти`, `15 990 132 сум`, `Тонна`, `Европ ва осиё мамалакатларида кўп учрайдиган Россия гигант сабзилари Россия гигант сабзилари`)
+										+item(``, `Укроп Озорник`, `2 190 сум`, `Тонна`, `Орта осиёда кенг тарқалган яшил парракли укроплар`)
+										+item(2, `Яшил нохот доначалари`, `2 299 сум`, `Тонна`, `Ажойиб хухусиятларга ега бўлган яши нохот доначали`)
 							.tabs__content
 								+e.slider--js
 									.row.swiper-wrapper
-										mixin item(i, t, p)
-											+e.col.col-lg-4.swiper-slide
-												+e.item(href='#')
-													+e.DIV.img-wrap
-														if i
-															img(src=`img/@2x/populars-${i}.jpg` alt="")
-													+e.caption
-														+e.price!= t
-														p!= p
-										+item(``, `12 099 сум/ шт1`, `Маккажўхори геолиа уруғлар " Ранняя лакомка»`)
-										+item(1, `12 099 сум/ дона`, `"Корневин" илдизларининг шаклланиши ва ўсишини стимулятори 0,005 kg`)
-										+item(2, `12 099 сум/ дона`, `Оқ мевали қовоқ геолиа "Лангар" уруғлари»`)
+										+item(1, `Сабзи Рус гиганти`, `15 990 132 сум`, `Тонна`, `Европ ва осиё мамалакатларида кўп учрайдиган Россия гигант сабзилари Россия гигант сабзилари`)
+										+item(``, `Укроп Озорник`, `2 190 сум`, `Тонна`, `Орта осиёда кенг тарқалган яшил парракли укроплар`)
+										+item(2, `Яшил нохот доначалари`, `2 299 сум`, `Тонна`, `Ажойиб хухусиятларга ега бўлган яши нохот доначали`)
 							.tabs__content
 								+e.slider--js
 									.row.swiper-wrapper
-										mixin item(i, t, p)
-											+e.col.col-lg-4.swiper-slide
-												+e.item(href='#')
-													+e.DIV.img-wrap
-														if i
-															img(src=`img/@2x/populars-${i}.jpg` alt="")
-													+e.caption
-														+e.price!= t
-														p!= p
-										+item(``, `12 099 сум/ шт1`, `Маккажўхори геолиа уруғлар " Ранняя лакомка»`)
-										+item(2, `12 099 сум/ дона`, `Оқ мевали қовоқ геолиа "Лангар" уруғлари»`)
-										+item(1, `12 099 сум/ дона`, `"Корневин" илдизларининг шаклланиши ва ўсишини стимулятори 0,005 kg`)
-					+e.footer.d-none.d-md-block
-						+e.link(href="#") Барча категориялар
+										+item(1, `Сабзи Рус гиганти`, `15 990 132 сум`, `Тонна`, `Европ ва осиё мамалакатларида кўп учрайдиган Россия гигант сабзилари Россия гигант сабзилари`)
+										+item(``, `Укроп Озорник`, `2 190 сум`, `Тонна`, `Орта осиёда кенг тарқалган яшил парракли укроплар`)
+										+item(2, `Яшил нохот доначалари`, `2 299 сум`, `Тонна`, `Ажойиб хухусиятларга ега бўлган яши нохот доначали`)
+					//- +e.footer.d-none.d-md-block
+					//- 	+e.link(href="#") Барча категориялар
 	// end sProductsOnSite
