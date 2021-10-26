@@ -254,16 +254,16 @@ function eventHandler() {
 		freeMode: true,
 	});
 
-	let sliderWrap = document.querySelectorAll(".sBankProducs");
+	let sliderWrap = document.querySelectorAll(".sBankProducts");
 	sliderWrap.forEach(el => {
 
-		let sBankProducsSlider = new Swiper(el.querySelector('.sBankProducs__slider--js'), {
+		let sBankProductsSlider = new Swiper(el.querySelector('.sBankProducts__slider--js'), {
 			freeModeMomentum: true,
 			watchOverflow: true,
 			slidesPerView: 'auto',
 			spaceBetween: 33,
 			freeMode: true,
-			loop: true,
+			// loop: true,
 			pauseOnMouseEnter: true,
 			navigation: {
 				nextEl: el.querySelector(' .swiper-button-next'),
@@ -277,7 +277,7 @@ function eventHandler() {
 
 	sliderWrap.forEach(el => {
 
-		let sBankProducsSlider = new Swiper(el.querySelector('.sBankProducs__slider--page-js'), {
+		let sBankProductsSlider = new Swiper(el.querySelector('.sBankProducts__slider--page-js'), {
 			freeModeMomentum: true,
 			watchOverflow: true,
 			slidesPerView: 'auto',

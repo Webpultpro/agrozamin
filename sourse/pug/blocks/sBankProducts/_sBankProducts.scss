@@ -1,5 +1,5 @@
-// start .sBankProducs
-.sBankProducs {
+// start .sBankProducts
+.sBankProducts {
 	
 	.col-lg-3 {
 		@include media-breakpoint-up(lg) {
@@ -80,6 +80,10 @@
 	.page-numbers {
 		justify-content: center;
 	}
+	.swiper-button-disabled {
+		opacity: 0;
+		pointer-events: none;
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
@@ -97,4 +101,4 @@
 			overflow: visible;
 		}
 	}
-} // end.sBankProducs
+} // end.sBankProducts

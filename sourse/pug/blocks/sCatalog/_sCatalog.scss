@@ -342,10 +342,12 @@
 		line-height: calc(16 / 14);
 		font-weight: normal;
 		padding: rem(11) rem(20);
-		margin-top: rem(20);
+		margin-top: rem(15);
+		@include media-breakpoint-up(lg) {
+			margin-top: rem(20);
+		}
 		@include media-breakpoint-down(md) {
 			align-self: flex-start;
-			margin-top: rem(15);
 		}
 	}
 }
