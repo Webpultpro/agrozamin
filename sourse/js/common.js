@@ -721,6 +721,10 @@ function eventHandler() {
 	$(".accordeon-item__head").click(function(){
 		$(this).next().slideToggle().parent().toggleClass("active")
 	})
+
+
+	// $('.catalog-block__dropdown-inner ul').each(element, new SimpleBar());
+	// new SimpleBar($('.catalog-block__dropdown-inner ul')[0], { autoHide: false });
 };
 
 if (document.readyState !== 'loading') {

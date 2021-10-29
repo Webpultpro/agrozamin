@@ -435,43 +435,29 @@ iframe {
 // }
 
 .custom-scroll {
-	scrollbar-color: var(--bs-primary) transparent;
+	/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+	--bs-primary: #DEDEDE;
+  & {
+    scrollbar-width: auto;
+    scrollbar-color: var(--bs-primary) transparent;
+  }
 
-	scrollbar-width: thin;
-	scrollbar-color: var(--bs-primary) transparent;
+  /* Chrome, Edge, and Safari */
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
 
-	&::-webkit-scrollbar-thumb {
-		opacity: 1;
-		display: block;
-	}
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
 
-	&::-webkit-scrollbar-track {
-		border: none;
-		background-color: transparent;
-		border-color: transparent;
-		-webkit-box-shadow: none;
-	}
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--bs-primary);
+    border-radius: 16px;
+    border: 0px solid transparent;
+  }
 
-	&::-webkit-scrollbar {
-		width: 4px;
-		height: 2px;
-		background-color: transparent;
-		// border-right: 2px;
-		/* or add it to the track */
-		border-color: transparent;
-		opacity: 0;
-		-webkit-box-shadow: none;
-	}
-
-	/* Add a thumb */
-	&::-webkit-scrollbar-thumb {
-		background: var(--bs-primary);
-		border-radius: 2.5px;
-	}
-
-	&::-webkit-scrollbar-button {
-		display: none;
-	}
 }
 
 ::-webkit-calendar-picker-indicator {
@@ -734,4 +720,8 @@ iframe {
 		align-items: center;
 
 	}
+}
+
+.catalog-block__dropdown-inner ul{
+	@extend .custom-scroll;
 }
