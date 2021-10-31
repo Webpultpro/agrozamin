@@ -187,10 +187,14 @@
 		list-style: none;
 	}
 	&__dropdown-inner{
+		@include media-breakpoint-up(lg){
+
+			width: rem(336);
+		}
 		@include media-breakpoint-up(md){
 			position: relative;
 			z-index: 2;
-			width: rem(336);
+			width: rem(246);
 		}
 
 	}
@@ -402,10 +406,14 @@
 			height: 100vh;
 			padding-bottom: 50px;
 		}
+		@include media-breakpoint-up(lg){
+
+			width: rem(268);
+		}
 		@include media-breakpoint-up(md){
 			min-height: 100%;
+			width: rem(228);
 			display: none;
-			width: rem(268);
 		}
 		background-color: #fff;
 		.sub-menu{
@@ -440,12 +448,15 @@
 				// position: fixed;
 				width: 100vw;
 			}
+			@include media-breakpoint-up(lg){
+
+				width: rem(268);
+			}
 			@include media-breakpoint-up(md){
 				
 				position: absolute;
 					left: 100%;
 					min-height: 100%;
-					width: rem(268);
 				}
 			top: 0;
 			background-color: #fff;
