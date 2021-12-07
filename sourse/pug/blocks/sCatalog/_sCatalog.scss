@@ -56,7 +56,7 @@
 		color: #7c7e80;
 		&:hover,
 		&.active {
-			color: $primary;
+			color: var(--bs-primary);
 		}
 		.icon {
 			font-size: rem(18);
@@ -119,7 +119,8 @@
 	}
 	&:hover {
 		.card-prod__card-btn {
-			@extend .btn-outline-primary:hover;
+			// @extend .btn-outline-primary:hover;
+			@extend .btn-outline-primary;
 		}
 	}
 	.row {

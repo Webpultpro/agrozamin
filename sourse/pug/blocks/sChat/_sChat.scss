@@ -1,4 +1,6 @@
 // start .sMessages
+@use "sass:math";
+
 .sChat {
 	// --sPT: ;
 	--sPB: 0;
@@ -10,7 +12,7 @@
 		h1 {
 			margin-bottom: 0;
 			font-weight: 500;
-			line-height: (37 / 32);
+			line-height: math.div(37, 32);
 			color: #000000;
 			@include rfs(32px);
 			@include media-breakpoint-up(xl) {
@@ -29,7 +31,7 @@
 
 	&__time {
 		font-size: 12px;
-		line-height: (14 / 12);
+		line-height: math.div(14, 12);
 		color: #999999;
 	}
 
@@ -95,7 +97,7 @@
 		&--in {
 			justify-content: flex-end;
 			.sChat__message {
-				background-color: #00cd69;
+				background-color: var(--bs-primary);
 				max-width: 240px;
 				@include media-breakpoint-up(sm) {
 					max-width: 265px;
@@ -128,7 +130,7 @@
 		}
 		&:hover {
 			.icon {
-				color: $primary;
+				color: var(--bs-primary);
 			}
 		}
 	}
@@ -174,7 +176,7 @@
 		list-style: none;
 		h1 {
 			font-weight: 500;
-			line-height: (28 / 24);
+			line-height: math.div(28, 24);
 			font-size: rem(24);
 			margin-bottom: rem(40);
 		}
@@ -200,7 +202,7 @@
 			&:hover {
 				.all-users__name,
 				.all-users__time {
-					color: $primary;
+					color: var(--bs-primary);
 				}
 			}
 			&:last-child {
@@ -220,7 +222,7 @@
 			@include mt;
 			display: block;
 			font-size: 12px;
-			line-height: (14 / 12);
+			line-height: math.div(14, 12);
 			color: #999999;
 		}
 	}
@@ -238,7 +240,7 @@
 			@include mt;
 			display: block;
 			font-size: 12px;
-			line-height: (14 / 12);
+			line-height: math.div(14, 12);
 			color: #999999;
 		}
 		&__user {
@@ -253,14 +255,14 @@
 				box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.04);
 				.all-users__name,
 				.all-users__time {
-					color: $primary;
+					color: var(--bs-primary);
 				}
 			}
 			&:last-child {
 				margin-bottom: 0;
 			}
 			&.active {
-				background-color: #00cc69;
+				background-color: var(--bs-primary);
 				box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.04);
 				.all-users__name,
 				.all-users__time {

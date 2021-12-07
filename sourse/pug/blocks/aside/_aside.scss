@@ -83,7 +83,7 @@
 					background-repeat: no-repeat;
 				}
 				&.active {
-					color: $primary;
+					color: var(--bs-primary); 
 					--chevron-down: var(--chevron-down-primary);
 				}
 			}
@@ -247,7 +247,7 @@
 			padding: rem(14) rem(24);
 			border-bottom: 1px solid #e0e0e0;
 			&.active {
-				color: $primary;
+				color: var(--bs-primary);
 				&::after {
 					background-image: var(--chevron-down-primary);
 				}

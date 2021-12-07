@@ -40,7 +40,7 @@
 			right: var(--p-x);
 			font-size: rem(46);
 			@include mt;
-			color: $primary;
+			color: var(--bs-primary);
 		}
 		
 	

@@ -1,4 +1,6 @@
 // start .sAddProduct
+@use "sass:math";
+
 .sAddProduct {
 	// --sPT: ;
 	--sPB: 0;
@@ -17,7 +19,7 @@
 		}
 		h6 {
 			margin-bottom: 0;
-			line-height: (22 / 16);
+			line-height: math.div(22, 16);
 			color: #000000;
 		}
 		.section-title {
@@ -86,7 +88,7 @@
 			display: inline-block;
 			text-decoration: underline;
 			font-size: rem(16);
-			line-height: (21 / 16);
+			line-height: math.div(21, 16);
 			margin-top: rem(11);
 		}
 
@@ -96,7 +98,7 @@
 
 		&__prompt {
 			font-size: 11px;
-			line-height: (22 / 11);
+			line-height: math.div(22, 11);
 			color: #999999;
 			margin-bottom: rem(11);
 			&--lg {

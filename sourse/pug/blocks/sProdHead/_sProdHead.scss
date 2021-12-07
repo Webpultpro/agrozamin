@@ -1,4 +1,6 @@
 // start .sProdHead
+@use "sass:math";
+
 .sProdHead {
 	--sPT: 0;
 	--sPB: 0;
@@ -82,13 +84,13 @@
 		}
 		.sProdHead__email {
 			font-size: rem(13);
-			line-height: (15 / 13);
+			line-height: math.div(15, 13);
 			letter-spacing: 0.035em;
 			margin-bottom: rem(4);
 		}
 		.sProdHead__tel {
 			font-size: rem(11);
-			line-height: (13 / 11);
+			line-height: math.div(13, 11);
 			letter-spacing: 0.035em;
 		}
 		.sProdHead__message {

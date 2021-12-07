@@ -2,9 +2,9 @@
 	--animate-delay: 1.2s;
 	--fontSizeBase: #{$em-base};
 	
-	--sPT: #{rem(45 / 2)};
-	--sPB: #{rem(45 / 2)};
-	--sTPB: #{rem(70 / 2)};
+	--sPT: #{rem(45 * 0.5)};
+	--sPB: #{rem(45 * 0.5)};
+	--sTPB: #{rem(70 * 0.5)};
 	@include media-breakpoint-up(lg) {
 		--fontSizeBase: 14px;
 		--sPT: #{rem(45)};

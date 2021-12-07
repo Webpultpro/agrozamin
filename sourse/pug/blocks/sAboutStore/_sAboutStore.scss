@@ -1,4 +1,6 @@
 // start .sAboutStore
+@use "sass:math";
+
 .sAboutStore {
 	// --sPT: ;
 	--sPB: 0;
@@ -17,7 +19,7 @@
 		}
 		h6 {
 			margin-bottom: 0;
-			line-height: (22 / 16);
+			line-height: math.div(22, 16);
 			color: #000000;
 		}
 		form {
@@ -69,7 +71,7 @@
 		}
 		&__prompt {
 			font-size: 11px;
-			line-height: (22 / 11);
+			line-height: math.div(22, 11);
 			color: #999999;
 			margin-bottom: rem(11);
 			&--lg {
@@ -115,7 +117,7 @@
 			display: inline-block;
 			text-decoration: underline;
 			font-size: rem(16);
-			line-height: (21 / 16);
+			line-height: math.div(21, 16);
 			margin-bottom: rem(30);
 			@include media-breakpoint-up(sm) {
 			margin-bottom: rem(50);
@@ -149,7 +151,7 @@
 			span {
 				font-weight: bold;
 				font-size: rem(14);
-				line-height: (16 / 14);
+				line-height: math.div(16, 14);
 				margin: 0 rem(8);
 			}
 			.form-control {
@@ -157,7 +159,7 @@
 				overflow: visible;
 				font-weight: bold;
 				font-size: rem(14);
-				line-height: (16 / 14);
+				line-height: math.div(16, 14);
 				border-radius: 0;
 				border-color: transparent;
 				&::after {
@@ -198,7 +200,7 @@
 } // end.sAboutStore
 
 .add-image {
-	@include block(84 / 81);
+	@include block(math.div(84, 81));
 	width: 100%;
 	// max-width: 84px;
 	overflow: hidden;

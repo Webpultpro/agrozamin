@@ -1,4 +1,6 @@
 // start .sProductsOnSite
+@use "sass:math";
+
 .sProductsOnSite + .footer {
 	margin-top: rem(97);
 	@include media-breakpoint-up(md) {
@@ -86,7 +88,8 @@
 		&:hover {
 			box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.2);
 			.sProductsOnSite__card-btn {
-				@extend .btn-outline-primary:hover;
+				// @extend .btn-outline-primary:hover;
+				@extend .btn-outline-primary;
 			}
 		}
 		p {
@@ -102,7 +105,7 @@
 	}
 
 	&__img-wrap {
-		@include block(195 / 111);
+		@include block(math.div(195, 111));
 		width: 100%;
 		&::before {
 			background-color: #e0e0e0;
@@ -182,7 +185,7 @@
 		border-radius: 4px;
 		background-color: transparent;
 		font-size: rem(14);
-		line-height: (21 / 14);
+		line-height: math.div(21, 14);
 		white-space: nowrap;
 		margin-left: auto;
 		// @include media-breakpoint-up(md) {
@@ -245,13 +248,13 @@
 				display: inline-block;
 				font-weight: 500;
 				font-size: rem(14);
-				line-height: (16 / 14);
+				line-height: math.div(16, 14);
 				color: #3e3e3e;
 				white-space: nowrap;
 			}
 			&:hover {
 				span {
-					color: #00cd69;
+					color: var(--bs-primary);
 				}
 			}
 			&.active {

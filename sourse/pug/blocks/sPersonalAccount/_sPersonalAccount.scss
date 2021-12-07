@@ -103,7 +103,7 @@
 				color: #3e3e3e;
 				padding: rem(16) 0;
 				&:hover {
-					color: #00cd69;
+					color: var(--bs-primary);
 				}
 				&::after {
 					content: "";
@@ -151,7 +151,7 @@
 				padding: rem(7) rem(8);
 				border-radius: 8px;
 				&:hover {
-					color: #00cd69;
+					color: var(--bs-primary);
 					.navigation__item-count {
 						background-color: lighten(#ed6262, 5%);
 					}
@@ -159,7 +159,7 @@
 			}
 			&.active {
 				a {
-					background-color: $primary;
+					background-color: var(--bs-primary);
 					color: $white;
 					&:hover {
 						background-color: #26d580;

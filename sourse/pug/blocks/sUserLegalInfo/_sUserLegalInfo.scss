@@ -1,4 +1,6 @@
 // start .sUserLegalInfo
+@use "sass:math";
+
 .sUserLegalInfo {
 	--sPT: #{rem(60)};
 	--sPB: #{rem(50)};
@@ -65,7 +67,7 @@
 		}
 		p {
 			font-size: rem(14);
-			line-height: (16 / 14);
+			line-height: math.div(16, 14);
 			color: $secondary;
 			max-width: 525px;
 			margin-left: auto;

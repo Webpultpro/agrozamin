@@ -44,11 +44,12 @@
 	}
 
 	&__img-wrap {
+		--bs-text-opacity: .15;
+		background-color:  rgba(var(--bs-primary-rgb),var(--bs-text-opacity));
 		position: relative;
 		min-width: 90px;
 		min-height: 90px;
 		border-radius: 50%;
-		background-color: rgba($color: #00cc69, $alpha: 0.15);
 		@include mt;
 		margin-bottom: rem(22);
 		@include media-breakpoint-up(lg) {
@@ -70,10 +71,19 @@
 				max-width: 75px;
 				max-height: 77px;
 			}
+			[stroke="#00CD69"] {
+				stroke: var(--bs-primary) !important;
+			}
+			.cls-1,
+			[fill="#00cd69"],
+			[fill="#00CD69"] {
+				@include mt;
+				fill: var(--bs-primary) !important;
+			}
 		}
 	}
 	&__item:hover &__img-wrap {
-		background-color: var(--hover-bg, rgba($color: #e7a460, $alpha: 0.15));
+		background-color: var(--hover-bg, rgba(#e7a460, 0.15));
 		svg {
 			[stroke="#00CD69"] {
 				stroke: var(--hover-color, #e7a460) !important;

@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .form-wrap {
 	max-width: 500px;
 	margin-left: auto;
@@ -14,7 +16,7 @@
 	}
 	h1 {
 		font-weight: 500;
-		line-height: (25 / 22);
+		line-height: math.div(25, 22);
 		color: #393939;
 		@include rfs(22px);
 		margin-bottom: rem(27);
@@ -49,13 +51,13 @@
 		display: inline-block;
 		font-weight: 500;
 		font-size: 14px;
-		line-height: (16 / 14);
+		line-height: math.div(16, 14);
 		margin-bottom: 5px;
 		margin-left: 5px;
 	}
 	&__subtitle {
 		font-size: 14px;
-		line-height: (16 / 14);
+		line-height: math.div(16, 14);
 		color: #7c7e80;
 	}
 	&__footer {
@@ -89,7 +91,7 @@
 	}
 	.link-info {
 		font-size: 13px;
-		line-height: (15 / 13);
+		line-height: math.div(15, 13);
 	}
 	&__password-wrap{
 		position: relative;

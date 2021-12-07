@@ -72,7 +72,7 @@
 		line-height: rem(40);
 		vertical-align: middle;
 		text-align: center;
-		color: $primary;
+		color: var(--bs-primary);
 	}
 	.pagination-wrapper {
 		margin-top: rem(50);

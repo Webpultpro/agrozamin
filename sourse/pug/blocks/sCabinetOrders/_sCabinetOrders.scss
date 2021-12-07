@@ -1,4 +1,6 @@
 // start .sCabinetOrders
+@use "sass:math";
+
 .sCabinetOrders {
 	--sPT: 0;
 	// --sPB: ;
@@ -8,7 +10,7 @@
 			margin-bottom: 0;
 		}
 		&.notification {
-			border-color: $primary;
+			border-color: var(--bs-primary);
 		}
 	}
 
@@ -64,7 +66,7 @@
 				@include mt;
 				font-weight: 500;
 				font-size: rem(14);
-				line-height: (18 / 16);
+				line-height: math.div(18, 16);
 				margin-left: rem(4);
 				@include media-breakpoint-up(md) {
 					margin-left: rem(8);
@@ -74,10 +76,10 @@
 			&:hover,
 			&:active {
 				.icon {
-					color: $primary;
+					color: var(--bs-primary);
 				}
 				span {
-					color: $primary;
+					color: var(--bs-primary);
 				}
 			}
 		}

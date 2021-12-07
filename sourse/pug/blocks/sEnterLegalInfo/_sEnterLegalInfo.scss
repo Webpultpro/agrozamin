@@ -1,4 +1,6 @@
 // start .sEnterLegalInfo
+@use "sass:math";
+
 .sEnterLegalInfo {
 	--sPT: #{rem(85)};
 	// --sPB: ;
@@ -31,7 +33,7 @@
 		h1 {
 			font-weight: 500;
 			font-size: rem(20);
-			line-height: (23 / 20);
+			line-height: (23 * 0.05);
 			margin-bottom: rem(13);
 		}
 	}
@@ -76,7 +78,7 @@
 	}
 	&__value {
 		font-size: rem(14);
-		line-height: (16 / 14);
+		line-height: math.div(16, 14);
 		color: $secondary;
 	}
 

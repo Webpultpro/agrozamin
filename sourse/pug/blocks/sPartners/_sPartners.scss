@@ -70,7 +70,7 @@
 		}
 		&:hover {
 			@include media-breakpoint-up(lg) {
-				color: $primary;
+				color: var(--bs-primary);
 			}
 		}
 		.icon {
@@ -99,7 +99,7 @@
 		&-active {
 			width: rem(14);
 			height: rem(14);
-			background-color: $primary;
+			background-color: var(--bs-primary);
 		}
 	}
 

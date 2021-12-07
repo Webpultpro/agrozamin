@@ -1,0 +1,44 @@
+:root{
+	--bs-primary-hover: #1ad278;
+		
+}
+ .btn-success,
+ .btn-primary
+ {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+
+}
+
+.btn-outline-primary{
+	border-color: var(--bs-primary);
+	color: var(--bs-primary);
+}
+.btn-success,
+.btn-primary,
+.btn-outline-primary{
+	box-shadow: none !important;
+	&:focus,
+	&:active,
+	&.active,
+	&:hover {
+		background-color: var(--bs-primary-hover);
+		border-color: var(--bs-primary-hover);
+		color: #fff;
+	}
+
+}
+.sServicePurpose__img-wrap svg,
+.sWarning__img-wrap svg,
+.modal-win .w-100px.mx-auto{
+	.st1,
+	.st0,
+	[stroke="#00CD69"],
+	[stroke="#00CC69"]{
+		stroke: var(--bs-primary) !important;
+	}
+	[fill="#00CD69"] {
+		fill: var(--bs-primary) !important;
+
+	}
+}

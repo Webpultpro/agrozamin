@@ -1,4 +1,6 @@
 // start .sPopulars
+@use "sass:math";
+
 .sPopulars {
 	.swiper-wrapper {
 		@include media-breakpoint-up(lg) {
@@ -65,7 +67,7 @@
 	}
 
 	&__img-wrap {
-		@include block(253 / 145);
+		@include block(math.div(253, 145));
 		width: 100%;
 		&::before {
 			background-color: #e0e0e0;

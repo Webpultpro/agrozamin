@@ -162,7 +162,7 @@ body:not(.main-page) .header {
 		&.active {
 			color: #fff;
 			font-weight: bold;
-			background-color: $primary;
+			background-color: var(--bs-primary);
 		}
 		&:first-child {
 			margin-right: rem(8);

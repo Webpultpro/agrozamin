@@ -1,4 +1,6 @@
 // start .sOrderHead
+@use "sass:math";
+
 .sOrderHead {
 	--sPT: #{rem(40)};
 	// --sPB: ;
@@ -39,7 +41,7 @@
 		// font-size: 12px;
 		font-weight: bold;
 		font-size: rem(14);
-		line-height: (16 / 14);
+		line-height: math.div(16, 14);
 		@include media-breakpoint-down(md) {
 			width: 100%;
 			margin-top: 32px;

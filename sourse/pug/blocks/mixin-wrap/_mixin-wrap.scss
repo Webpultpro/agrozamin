@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .soc {
 	@include roww(10px, m);
 	display: flex;
@@ -10,7 +12,7 @@
 		// @extend .text-body;
 		color: $body-color;
 		&:hover {
-			color: $primary;
+			color: var(--bs-primary);
 			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			// opacity: .6 ;
 		}
@@ -49,7 +51,7 @@
 		span {
 			@include mt;
 			font-size: 12px;
-			line-height: (7 / 6);
+			line-height: math.div(7, 6);
 			color: #676767;
 		}
 	}
@@ -122,7 +124,7 @@
 	.form-check-label {
 		font-weight: bold;
 		font-size: rem(16);
-		line-height: (22 / 16);
+		line-height: math.div(22, 16);
 	}
 }
 

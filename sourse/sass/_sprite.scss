@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .icon {
 	display: inline-block;
 	width: 1em;
@@ -6,190 +8,190 @@
 }
 
 .icon-accordeon {
-	font-size:(49/10)*1rem;
-	width:(50/49)*1em;
+	font-size:math.div(49,10)*1rem;
+	width: math.div(50,49)*1em;
 }
 .icon-alert {
-	font-size:(22/10)*1rem;
-	width:(25/22)*1em;
+	font-size:math.div(22,10)*1rem;
+	width: math.div(25,22)*1em;
 }
 .icon-arrow-left {
-	font-size:(25/10)*1rem;
-	width:(24/25)*1em;
+	font-size:math.div(25,10)*1rem;
+	width: math.div(24,25)*1em;
 }
 .icon-bang {
-	font-size:(18/10)*1rem;
-	width:(15/18)*1em;
+	font-size:math.div(18,10)*1rem;
+	width: math.div(15,18)*1em;
 }
 .icon-basket {
-	font-size:(18/10)*1rem;
-	width:(15/18)*1em;
+	font-size:math.div(18,10)*1rem;
+	width: math.div(15,18)*1em;
 }
 .icon-chat-arrow {
-	font-size:(20/10)*1rem;
-	width:(20/20)*1em;
+	font-size:math.div(20,10)*1rem;
+	width: math.div(20,20)*1em;
 }
 .icon-check {
-	font-size:(27/10)*1rem;
-	width:(27/27)*1em;
+	font-size:math.div(27,10)*1rem;
+	width: math.div(27,27)*1em;
 }
 .icon-chevron-double-left {
-	font-size:(500/10)*1rem;
-	width:(375/500)*1em;
+	font-size:math.div(500,10)*1rem;
+	width: math.div(375,500)*1em;
 }
 .icon-chevron-double-right {
-	font-size:(500/10)*1rem;
-	width:(375/500)*1em;
+	font-size:math.div(500,10)*1rem;
+	width: math.div(375,500)*1em;
 }
 .icon-chevron-left {
-	font-size:(17/10)*1rem;
-	width:(9/17)*1em;
+	font-size:math.div(17,10)*1rem;
+	width: math.div(9,17)*1em;
 }
 .icon-chevron-left-slider {
-	font-size:(22/10)*1rem;
-	width:(11/22)*1em;
+	font-size:math.div(22,10)*1rem;
+	width: math.div(11,22)*1em;
 }
 .icon-chevron-right {
-	font-size:(12/10)*1rem;
-	width:(6/12)*1em;
+	font-size:math.div(12,10)*1rem;
+	width: math.div(6,12)*1em;
 }
 .icon-chevron-right-slider {
-	font-size:(22/10)*1rem;
-	width:(11/22)*1em;
+	font-size:math.div(22,10)*1rem;
+	width: math.div(11,22)*1em;
 }
 .icon-chevron-right2 {
-	font-size:(17/10)*1rem;
-	width:(10/17)*1em;
+	font-size:math.div(17,10)*1rem;
+	width: math.div(10,17)*1em;
 }
 .icon-delete {
-	font-size:(18/10)*1rem;
-	width:(17/18)*1em;
+	font-size:math.div(18,10)*1rem;
+	width: math.div(17,18)*1em;
 }
 .icon-duty-1 {
-	font-size:(58/10)*1rem;
-	width:(58/58)*1em;
+	font-size:math.div(58,10)*1rem;
+	width: math.div(58,58)*1em;
 }
 .icon-duty-2 {
-	font-size:(58/10)*1rem;
-	width:(58/58)*1em;
+	font-size:math.div(58,10)*1rem;
+	width: math.div(58,58)*1em;
 }
 .icon-duty-3 {
-	font-size:(58/10)*1rem;
-	width:(58/58)*1em;
+	font-size:math.div(58,10)*1rem;
+	width: math.div(58,58)*1em;
 }
 .icon-duty-4 {
-	font-size:(58/10)*1rem;
-	width:(58/58)*1em;
+	font-size:math.div(58,10)*1rem;
+	width: math.div(58,58)*1em;
 }
 .icon-duty-5 {
-	font-size:(58/10)*1rem;
-	width:(58/58)*1em;
+	font-size:math.div(58,10)*1rem;
+	width: math.div(58,58)*1em;
 }
 .icon-duty-6 {
-	font-size:(53/10)*1rem;
-	width:(53/53)*1em;
+	font-size:math.div(53,10)*1rem;
+	width: math.div(53,53)*1em;
 }
 .icon-email {
-	font-size:(19/10)*1rem;
-	width:(23/19)*1em;
+	font-size:math.div(19,10)*1rem;
+	width: math.div(23,19)*1em;
 }
 .icon-eye {
-	font-size:(24/10)*1rem;
-	width:(24/24)*1em;
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
 }
 .icon-eye-2 {
-	font-size:(13/10)*1rem;
-	width:(18/13)*1em;
+	font-size:math.div(13,10)*1rem;
+	width: math.div(18,13)*1em;
 }
 .icon-facebook {
-	font-size:(24/10)*1rem;
-	width:(24/24)*1em;
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
 }
 .icon-fb {
-	font-size:(20/10)*1rem;
-	width:(20/20)*1em;
+	font-size:math.div(20,10)*1rem;
+	width: math.div(20,20)*1em;
 }
 .icon-filter-icon {
-	font-size:(16/10)*1rem;
-	width:(16/16)*1em;
+	font-size:math.div(16,10)*1rem;
+	width: math.div(16,16)*1em;
 }
 .icon-horizontal {
-	font-size:(19/10)*1rem;
-	width:(23/19)*1em;
+	font-size:math.div(19,10)*1rem;
+	width: math.div(23,19)*1em;
 }
 .icon-instagram {
-	font-size:(27/10)*1rem;
-	width:(28/27)*1em;
+	font-size:math.div(27,10)*1rem;
+	width: math.div(28,27)*1em;
 }
 .icon-instagram2 {
-	font-size:(24/10)*1rem;
-	width:(24/24)*1em;
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
 }
 .icon-mark {
-	font-size:(14/10)*1rem;
-	width:(12/14)*1em;
+	font-size:math.div(14,10)*1rem;
+	width: math.div(12,14)*1em;
 }
 .icon-pay {
-	font-size:(10/10)*1rem;
-	width:(12/10)*1em;
+	font-size:math.div(10,10)*1rem;
+	width: math.div(12,10)*1em;
 }
 .icon-phone {
-	font-size:(20/10)*1rem;
-	width:(26/20)*1em;
+	font-size:math.div(20,10)*1rem;
+	width: math.div(26,20)*1em;
 }
 .icon-plus-circle {
-	font-size:(16/10)*1rem;
-	width:(16/16)*1em;
+	font-size:math.div(16,10)*1rem;
+	width: math.div(16,16)*1em;
 }
 .icon-search {
-	font-size:(18/10)*1rem;
-	width:(18/18)*1em;
+	font-size:math.div(18,10)*1rem;
+	width: math.div(18,18)*1em;
 }
 .icon-share {
-	font-size:(26/10)*1rem;
-	width:(26/26)*1em;
+	font-size:math.div(26,10)*1rem;
+	width: math.div(26,26)*1em;
 }
 .icon-shevron-right-sm {
-	font-size:(8/10)*1rem;
-	width:(4/8)*1em;
+	font-size:math.div(8,10)*1rem;
+	width: math.div(4,8)*1em;
 }
 .icon-shipping {
-	font-size:(15/10)*1rem;
-	width:(15/15)*1em;
+	font-size:math.div(15,10)*1rem;
+	width: math.div(15,15)*1em;
 }
 .icon-star {
-	font-size:(15/10)*1rem;
-	width:(15/15)*1em;
+	font-size:math.div(15,10)*1rem;
+	width: math.div(15,15)*1em;
 }
 .icon-telegram {
-	font-size:(27/10)*1rem;
-	width:(28/27)*1em;
+	font-size:math.div(27,10)*1rem;
+	width: math.div(28,27)*1em;
 }
 .icon-telegram2 {
-	font-size:(21/10)*1rem;
-	width:(26/21)*1em;
+	font-size:math.div(21,10)*1rem;
+	width: math.div(26,21)*1em;
 }
 .icon-telegram3 {
-	font-size:(24/10)*1rem;
-	width:(24/24)*1em;
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
 }
 .icon-user {
-	font-size:(18/10)*1rem;
-	width:(18/18)*1em;
+	font-size:math.div(18,10)*1rem;
+	width: math.div(18,18)*1em;
 }
 .icon-vertical {
-	font-size:(18/10)*1rem;
-	width:(18/18)*1em;
+	font-size:math.div(18,10)*1rem;
+	width: math.div(18,18)*1em;
 }
 .icon-viber {
-	font-size:(16/10)*1rem;
-	width:(16/16)*1em;
+	font-size:math.div(16,10)*1rem;
+	width: math.div(16,16)*1em;
 }
 .icon-vk {
-	font-size:(24/10)*1rem;
-	width:(24/24)*1em;
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
 }
 .icon-whatsapp {
-	font-size:(16/10)*1rem;
-	width:(16/16)*1em;
+	font-size:math.div(16,10)*1rem;
+	width: math.div(16,16)*1em;
 }

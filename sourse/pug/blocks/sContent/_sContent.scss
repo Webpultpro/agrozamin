@@ -102,7 +102,7 @@
 		width: rem(54);
 		height: rem(54);
 		border-radius: 50%;
-		background-color: $primary;
+		background-color: var(--bs-primary);
 		margin-left: 0px !important;
 		border: 1px solid transparent;
 		.icon {

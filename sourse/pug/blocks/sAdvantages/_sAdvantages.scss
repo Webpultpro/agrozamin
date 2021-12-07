@@ -154,6 +154,15 @@
 		width: 100%;
 		max-width: 47px;
 		margin-right: rem(18);
+		svg{
+			[stroke]{
+				stroke: var(--bs-primary) !important;
+
+			}
+			// path{
+			// 	fill: var(--bs-primary) !important;
+			// }
+		}
 	}
 
 	@include media-breakpoint-up(xl) {

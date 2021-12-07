@@ -1,4 +1,6 @@
 // start .personal-info
+@use "sass:math";
+
 .personal-info {
 	position: relative;
 	padding-bottom: rem(48);
@@ -53,7 +55,7 @@
 	&__subtitle {
 		font-weight: 500;
 		font-size: rem(18);
-		line-height: (22 / 18);
+		line-height: math.div(22, 18);
 		margin-bottom: rem(8);
 	}
 	.row {

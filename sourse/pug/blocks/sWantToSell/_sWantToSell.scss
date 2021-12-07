@@ -1,4 +1,6 @@
 // start .sWantToSell
+@use "sass:math";
+
 .sWantToSell {
 	--sPB: 0;
 	--sPT: #{rem(40)};
@@ -178,15 +180,15 @@
 		text-align: center;
 		font-weight: bold;
 		font-size: 14px;
-		line-height: (16 / 14);
+		line-height: math.div(16, 14);
 		background: #ffffff;
 		border-radius: 68px;
 		text-align: center;
 		&:hover,
 		&:focus {
 			// color: shift-color(#3550af, 20%);
-			background-color: $primary;
-			border-color: $primary;
+			background-color: var(--bs-primary);
+			border-color: var(--bs-primary);
 			color: #fff;
 		}
 	}

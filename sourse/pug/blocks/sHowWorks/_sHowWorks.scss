@@ -1,4 +1,6 @@
 // start .sHowWorks
+@use "sass:math";
+
 .sHowWorks {
 	--sPT: #{rem(30)};
 	--sPB: #{rem(30)};
@@ -53,7 +55,7 @@
 		p {
 			font-weight: 500;
 			font-size: rem(14);
-			line-height: (16 / 13);
+			line-height: math.div(16, 13);
 			margin: rem(29) 0;
 			color: #3e3e3e;
 			@include media-breakpoint-up(sm) {
@@ -97,7 +99,8 @@
 		display: block;
 		margin: 0 rem(16) 0 0;
 		border-radius: 50%;
-		border: 5px solid #e0e0e0;
+		background-color: var(--bg-img-wrap);
+		border: var(--border-size, 5px) solid #e0e0e0;
 		@include mt;
 		@include media-breakpoint-up(md) {
 			margin: 0 auto rem(25);
@@ -111,12 +114,22 @@
 			@include a-cent;
 			max-width: 68px;
 			max-height: 54px;
+			.st1,
+			.st0,
+			[stroke="#00CD69"] {
+				stroke: var(--color-icon, var(--bs-primary)) !important;
+			}
+
+			[fill="#00cd69"],
+			[fill="#00CD69"] {
+				fill: var(--color-icon, var(--bs-primary)) !important;
+			}
 		}
 	}
 
 	&__item:hover &__img-wrap {
-		border-color: var(--hover-bg, rgba($color: #e7a460, $alpha: 1));
-
+		border-color: var(--hover-bd, rgba($color: #e7a460, $alpha: 1));
+		background-color: var(--bg-img-wrap-hover, none);
 		svg {
 			.st1,
 			.st0,
