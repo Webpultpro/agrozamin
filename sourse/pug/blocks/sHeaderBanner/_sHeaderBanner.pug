@@ -65,3 +65,16 @@ mixin sHeaderBanner2(data)
 				source(type=`image/webp` srcset=`img/@2x/webp/head-slider-bg-mob-2-2.webp`)
 				source(type=`image/png` srcset=`img/@2x/head-slider-bg-2-2.png` media=`(min-width:992px)`) 
 				img.object-fit-js(src=`img/@2x/head-slider-bg-mob-2-2.png` alt='' loading='lazy')
+
+mixin sHeaderBannerBlue()
+	// start sHeaderBanner
+	+b.sHeaderBanner--theme.section.bg-wrap.text-white&attributes(attributes)
+		+pic("head-blue.jpg",'bg',0).picture-bg
+		.container 
+			.row
+				.col-lg-7
+					h1 Керакли махсулотларни Фермерлардан харид қилинг
+					.h5.fw-400 Харидни бизнинг сервис орқали амалга оширинг
+					+e.btn--theme.heartbeat(href="#") Харидни бошлаш
+			+headcards()
+	// end sHeaderBanner

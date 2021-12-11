@@ -1,6 +1,6 @@
-mixin sWantToSell(data)
+mixin sWantToSell(bg="#804F98",i='want-to-sell.png')
 	// start sWantToSell
-	+b.SECTION.sWantToSell.section#sWantToSell(style="--bg: #804F98")&attributes(attributes)
+	+b.SECTION.sWantToSell.section#sWantToSell(style=`--bg:${bg}`)&attributes(attributes)
 		.container
 			.row
 				.col-md-6
@@ -12,5 +12,6 @@ mixin sWantToSell(data)
 				+e.col.col-md-6(class="wow animate__fadeInRight" )
 					+e.tooltip--1 Товарнинг <br> батафсил тавсифи
 					+e.tooltip--2 Фючерслар, тендерлар, <br> сотиб олиш ва сотиш
-					+pic(`want-to-sell.png`, ``, ``)
+
+					+pic(i, ``, ``)
 	// end sWantToSell

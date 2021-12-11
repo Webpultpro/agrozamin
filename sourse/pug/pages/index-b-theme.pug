@@ -13,13 +13,14 @@ include ../blocks/sPartners/_sPartners.pug
 include ../blocks/sHeaderBanner/_sHeaderBanner.pug
 include ../blocks/sBankProducts/_sBankProducts.pug
 include ../blocks/sProductsOnSite/_sProductsOnSite.pug
+include ../blocks/sInformation/_sInformation.pug
 
 block variables
 	- let  mainPage= 'main-page theme-blue' 
 	- let  bg= 'main.jpg'
 
 block title
-	- let  title= 'Главная'
+	- let  title= 'Cиняя тема'
 	title= title
 block pagecontent
 
@@ -28,19 +29,19 @@ block pagecontent
 	+header()
 		+topLine()
 		+top-nav()
-	+sHeaderBanner
 	//- +headerBlock
-	+sHowWorks
+	+sHeaderBannerBlue
+	//- +sHowWorks
 	+sProductsOnSite
-	+sAdvantages
 	+sCategories
-	+sPartners
-	+sBankProducts2
-	+sWantToSell
-	+sBankProducts
+	//- +headerBlock
+	//- +sHowWorks
+	//- +sAdvantages
+	+sWantToSell('var(--bs-primary)','want-to-sell-bl.png')
+	+sInformationB
+	//- +sPartners
+	//- +sBankProducts2
+	//- +sBankProducts
 	//- +sPopulars
 	//- +sAbout
 	+footer()
-
-
-

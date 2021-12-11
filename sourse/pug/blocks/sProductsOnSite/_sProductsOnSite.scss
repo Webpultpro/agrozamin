@@ -8,15 +8,16 @@
 	}
 }
 .sProductsOnSite {
-	--sPT: #{rem(40)};
-	--sPB: #{rem(40)};
+	// --sPT: #{rem(40)};
+	// --sPB: #{rem(40)};
 	--sTPB: #{rem(40)};
 	margin-top: rem(30);
 	margin-bottom: rem(30);
+	border-radius: 0px 0px 50px 50px;
 	
 	@include media-breakpoint-up(lg) {
-		--sPT: #{rem(40)};
-		--sPB: #{rem(40)};
+		--sPT: #{rem(80)};
+		--sPB: #{rem(80)};
 		margin-top: rem(40);
 		margin-bottom: rem(40);
 	}

@@ -2,6 +2,9 @@
 .sHeaderBanner {
 	--sPT: #{rem(30)};
 	--sPB: #{rem(30)};
+	& + .sProductsOnSite{
+		margin-top: 0;
+	}
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(30)};
 		--sPB: #{rem(40)};
@@ -81,9 +84,13 @@
 		min-height: 100%;
 	}
 	&__btn {
-		@extend .btn, .btn-success;
+		@extend .btn, .btn-primary;
 		color: #fff;
 		align-self: flex-start;
+		&--theme{
+			width: reM(188);
+			margin-bottom: rem(42);
+		}	
 		@include media-breakpoint-down(lg) {
 			width: 100%;
 			margin-top: auto;
@@ -132,6 +139,26 @@
 			height: 0;
 		}
 	}
+
+
+	&--theme{
+		// padding-top: rem(75);
+		background-color: $body-color;
+		.h5{
+			max-width: rem(400);
+			margin-bottom: rem(18);
+			line-height: 146%;
+		}
+		h1{
+			@include rfs(45px);
+			@include media-breakpoint-up(xl) {
+				font-size: 45px;
+				margin-top: rem(30);
+			}
+			font-weight: bold;
+		}
+	}
+
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
@@ -227,6 +254,7 @@
 } // end.sHeaderBanner
 .cardsHead{
 	margin-top: rem(32);
+	color: $body-color;
 	&__row{
 		--bs-gutter-y: var(--bs-gutter-x);
 	}

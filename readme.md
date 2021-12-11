@@ -52,15 +52,20 @@
 3.  <https://webpult.github.io/agrozamin/public/19-reg-step-5.html>
 # Вход в систему
 1.  <https://webpult.github.io/agrozamin/public/20-login-step-1.html>
-2.  <https://webpult.github.io/agrozamin/public/20-login-step-3.html>
-3.  <https://webpult.github.io/agrozamin/public/20-login-step-5.html>
-4.  <https://webpult.github.io/agrozamin/public/00-modal.html>
+1.  <https://webpult.github.io/agrozamin/public/20-login-step-3.html>
+1.  <https://webpult.github.io/agrozamin/public/20-login-step-5.html>
+1.  <https://webpult.github.io/agrozamin/public/00-modal.html>
 
 # 07.10.2021
 
-1. <https://webpult.github.io/agrozamin/public/21-about-project.html>
-1. <https://webpult.github.io/agrozamin/public/22-news.html>
-2. <https://webpult.github.io/agrozamin/public/23-news-article.html>
-3. <https://webpult.github.io/agrozamin/public/24-news-article-no-pic.html>
-4. <https://webpult.github.io/agrozamin/public/25-faq.html>
-5. <https://webpult.github.io/agrozamin/public/26-form.html>
+1 <https://webpult.github.io/agrozamin/public/21-about-project.html>
+1 <https://webpult.github.io/agrozamin/public/22-news.html>
+1 <https://webpult.github.io/agrozamin/public/23-news-article.html>
+1 <https://webpult.github.io/agrozamin/public/24-news-article-no-pic.html>
+1 <https://webpult.github.io/agrozamin/public/25-faq.html>
+1 <https://webpult.github.io/agrozamin/public/26-form.html>
+
+# 00.12.2021
+1. <https://webpult.github.io/agrozamin/public/index-b-theme.html>
+2. <https://webpult.github.io/agrozamin/public/27-news-new.html>
+3. <https://webpult.github.io/agrozamin/public/28-news-video.html>

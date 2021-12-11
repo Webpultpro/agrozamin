@@ -1,0 +1,16 @@
+mixin videoItem(i,t)
+	+e.col.col-lg-4.col-sm-6
+		+b.item-video(href="https://www.youtube.com/watch?v=KP09uMK-tho" data-fancybox)
+			+e.DIV.img-wrap.bg-wrap 
+				+pic(`bank-${i}.jpg`,'bg',0).picture-bg
+			+e.title!= t
+mixin sVideos(data)
+	// start sVideos
+	+b.sVideos.section#sVideos&attributes(attributes)
+		.container
+			+e.row.row
+				- for (var x = 0; x < 2; x++)
+					+videoItem("1-1", `"Фермерлар мактабида" курслар бошланди`, `"Фермерлар мактабида" ўсимликларни ҳимоя қилиш `)
+					+videoItem(`2`, `Банкоматларда техник ишлар олиб борилмоқда!`, `Барча учун керакли бўлган фойдали китобларнинг електрон топлами`)
+					+videoItem('1-3', `"Унутилмас саёҳатни ютиб олинг" `, `Виса билан ҳамкорликада "Унутилмас саёҳатни ютиб олинг" аксиясини еълон қиламиз.`)
+	// end sVideos
