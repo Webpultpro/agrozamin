@@ -1,0 +1,77 @@
+// start .sInformation
+.sInformation {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		&__row{
+			flex-wrap: nowrap;
+			--bs-gutter-x:0;
+		}
+		&__col{
+			width: rem(380);
+			text-align: right;
+		}
+		.col{
+			
+			.row{
+				--bs-gutter-x: 26px;
+				--bs-gutter-y: 16px;
+				
+				}
+		}
+		&__slide{
+			height: auto;
+		}
+		&__item{
+			@include media-breakpoint-up(lg) {
+
+				padding-top: rem(12);
+				padding-left: rem(32);
+				padding-right: 0;
+				padding-bottom: rem(32);
+			}
+			padding: rem(15);
+			border-radius: 19px;
+			background: var(--slide-bg, #EFE9F2);
+			min-height: 100%;
+		}
+		.h6{
+		}
+		--top: #{rem(14)};
+		// --left: #{rem}
+		&__card{
+			background: #FFFFFF;
+			box-shadow: 4px 14px 21px rgba(0, 0, 0, 0.07);
+			border-radius: 8px;
+			height: 100%;
+			min-height: rem(113);
+			padding: var(--top) rem(20) var(--top) rem(63);
+			position: relative;
+		}
+		&__icon-wrap{
+			position: absolute;
+			top: var(--top);
+			left: rem(15);
+			text-align: center;
+		}
+		.swiper-pagination{
+			margin-top: rem(20);
+		}
+		.swiper-pagination-bullet{
+			width: rem(69);
+			border-radius: 58px;
+
+		}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {
+		.h2{
+			text-align: center;
+		}
+	}
+} // end.sInformation

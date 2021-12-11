@@ -539,6 +539,21 @@ function eventHandler() {
 		},
 	});
 
+	var sInformationswiper = new Swiper(".sInformation__slider--js", {
+		loop: true,
+		spaceBetween: 10, 
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+			// renderBullet: function (index, className) {
+			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+			// }
+		},
+	});
+
+
+
 	$('.readmore-js').readmore({
 		collapsedHeight: 50,
 		moreLink: '<a href="#" class="readmore-link-more">Батафсил </a>',
@@ -722,6 +737,16 @@ function eventHandler() {
 		$(this).next().slideToggle().parent().toggleClass("active")
 	})
 
+
+	$('.top-nav').hcSticky({
+		stickTo: $('body'),
+		responsive: {
+			768: {
+				disable: true
+			}
+		},
+		// mobileFirst: true
+	});
 
 	// $('.catalog-block__dropdown-inner ul').each(element, new SimpleBar());
 	// new SimpleBar($('.catalog-block__dropdown-inner ul')[0], { autoHide: false });

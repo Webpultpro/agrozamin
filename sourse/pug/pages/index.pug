@@ -13,6 +13,7 @@ include ../blocks/sPartners/_sPartners.pug
 include ../blocks/sHeaderBanner/_sHeaderBanner.pug
 include ../blocks/sBankProducts/_sBankProducts.pug
 include ../blocks/sProductsOnSite/_sProductsOnSite.pug
+include ../blocks/sInformation/_sInformation.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -29,15 +30,16 @@ block pagecontent
 		+topLine()
 		+top-nav()
 	+sHeaderBanner
-	//- +headerBlock
-	+sHowWorks
 	+sProductsOnSite
-	+sAdvantages
 	+sCategories
+	//- +headerBlock
+	//- +sHowWorks
+	//- +sAdvantages
+	+sInformation
 	+sPartners
 	+sBankProducts2
 	+sWantToSell
 	+sBankProducts
 	//- +sPopulars
 	//- +sAbout
-	//- +footer()
+	+footer()

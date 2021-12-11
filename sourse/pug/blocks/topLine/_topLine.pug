@@ -1,83 +1,48 @@
 mixin topLine(comp)
 	// start topLine
-	+b.topLine.section#topLine&attributes(attributes)
+	+b.topLine.section.d-none.d-lg-block#topLine&attributes(attributes)
 		.container
-			.row.d-none.d-md-flex
-				.col-auto
-					+b.swich-block
-						if !comp
-							+e.btn(href="#").active Харидорлар
-							+e.btn(href="#") Сотувчилар
-						if comp
-							+e.btn(href="#") Харидорлар
-							+e.btn(href="#").active Сотувчилар
-				if comp
-					.col-auto.d-none.d-sm-block
-						+e.name Менинг компаниям
 			.row
-				.col-auto.d-md-none
-					+b.toggle-menu-mobile--js
-						span
-				.col-md-auto.col
+				.col-lg-3.col-auto
+					ul
+						li: +e.link(href="#")  О проекте 
+						li: +e.link(href="#")  Вакансии
+						li: +e.link(href="#")  Новости
+				+e.center.col
+					ul
+						li: +e.link
+							img(src="img/svg/graf.svg", alt="") 
+							| USD 10 677.66
+							
+						li: +e.link
+							img(src="img/svg/sun.svg", alt="") 
+							| 27
+							sup °C
 
-					+b.logo(href="/")
-						.row
-							.col-auto
-								img(src="img/svg/logo-sm.svg", alt="") 
-							.col
-								+e.DIV.text
-								img(src="img/svg/logo-text.svg", alt="") 
-				.col-md.order-md-0.order-last
-					+search-block
-				.col-auto
-					+b.top-btn(href="#")
-						+e.SPAN.icon-wrap
-							+icon("user")
-						+e.SPAN.text Кириш
-				.col-auto.position-relative
-					+b.top-btn--alerts(type="button")
-						+e.SPAN.icon-wrap
-							+icon("bang")
-							+e.SPAN.count 99 
-						+e.SPAN.text Хабарнома
-					+b.dropdown-alert
-						+e.item(href='#')
-							+e.DIV.img-wrap.bg-wrap
-								+pic("prod-1.jpg",'bg',0).picture-bg
-							+e.DIV.caption
-								+e.text.fw-500.text-body Буюртмалар
-								+e.DIV.title: span.text-primary ЧП “Mega Gruop”
-								+e.text.text-secondary Буюртма “Буюртма этказилган” статусига ўзгарди
-								+e.time Кеча 14:27
-						+e.item(href='#')
-							+e.DIV.img-wrap.bg-wrap
-								+pic("prod-2.jpg",'bg',0).picture-bg
-							+e.DIV.caption
-								+e.text.fw-500.text-body Буюртмалар
-								+e.DIV.title: span.text-primary ЧП “Mega Gruop”
-								+e.text.text-secondary Буюртма “Буюртма этказилган” статусига ўзгарди
-								+e.time Кеча 14:27
-						+e.item(href='#')
-							+e.DIV.img-wrap.bg-wrap
-								+pic("prod-3.jpg",'bg',0).picture-bg
-							+e.DIV.caption
-								+e.text.fw-500.text-body Буюртмалар
-								+e.DIV.title: span.text-primary ЧП “Mega Gruop”
-								+e.text.text-secondary Буюртма “Буюртма этказилган” статусига ўзгарди
-								+e.time Кеча 14:27
-				if !comp
-					.col-auto
-						+b.top-btn(href="#")
-							+e.SPAN.icon-wrap
-								+icon("basket")
-								+e.SPAN.count 99 
-							+e.SPAN.text Саватча
-				.col-auto
-					+b.lang-choose
-						+e.current Уз
-						+e.dropdown 
-							+e.dropdown-item(href="#")  Уз1
-							+e.dropdown-item(href="#")  Уз2
-							+e.dropdown-item(href="#")  Уз3
-							+e.dropdown-item(href="#")  Уз4
+						li.has-children
+							| Ташкент
+							ul 
+								li Ташкент
+								li Ташкент
+								li Ташкент
+						li.has-children
+							| Русский
+							ul 
+								li Русский
+								li Русский
+								li Русский
+						li.has-children
+							| Валюта: Сум
+							ul 
+								li Валюта: Сум
+								li Валюта: Сум
+								li Валюта: Сум
+				+e.contacts.col-lg-3.col-auto
+					ul
+						li: +e.link(href="tel:(78)150-00-88")
+							+icon("phone-icon")
+							span.d-none.d-lg-inline (78) 150-00-88 
+						li: +e.link(href="#")
+							+icon("chat")
+							span.d-none.d-lg-inline On-line чат
 	// end topLine

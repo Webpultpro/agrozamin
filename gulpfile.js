@@ -16,10 +16,13 @@ import svgSprite  from 'gulp-svg-sprite'
 import npmDist  from 'gulp-npm-dist'
 import newer  from 'gulp-newer'
 import rename  from 'gulp-rename'  
-import gulpSass      from 'gulp-sass'
+// import gulpSass      from 'gulp-sass'
 import sassGlob  from 'gulp-sass-glob'
-import dartSass      from 'sass'
-const  sass          = gulpSass(dartSass)
+
+import sass from 'gulp-dart-sass'
+// import sass from 'gulp-sass'
+// sass.compiler = require('sass')
+// const  sass          = gulpSass(dartSass)
 import tabify  from 'gulp-tabify' 
 import gcmq  from 'postcss-sort-media-queries' 
 import bssi from 'browsersync-ssi'
@@ -32,8 +35,7 @@ import pscss  from 'postcss-scss'
 import syntax  from 'postcss-syntax'
 // )({ scss: 'postcss-scss'}),
 import plumber  from 'gulp-plumber'
-import sharpResponsive from "gulp-sharp-responsive";
-
+import sharpResponsive from "gulp-sharp-responsive" 
 
 function browsersync() {
     browserSync.init({
@@ -43,8 +45,8 @@ function browsersync() {
         },
         ghostMode: { clicks: false },
         notify: false,
-        online: true,
-        tunnel: 'layouts', // Attempt to use the URL https://layouts.loca.lt
+        online: false,
+        // tunnel: 'layouts', // Attempt to use the URL https://layouts.loca.lt
     })
 }
 function pugFiles() {
@@ -121,7 +123,10 @@ function styles() {
     ];
     return src(sourse + '/sass/main.scss')
         .pipe(sassGlob())
-        .pipe(sass({ outputStyle: 'compressed', indentedSyntax: false, errLogToConsole: true }))
+        .pipe(
+            sass.sync()
+                .on('error', sass.logError)
+        )
         // .pipe(postcss(processors, { syntax: syntax }))
         .pipe(postcss(processors, { syntax: pscss }))
         // .pipe(gcmq())

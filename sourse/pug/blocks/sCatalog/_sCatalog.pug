@@ -1,66 +1,4 @@
-mixin card-hor(i)
-	+b.card-prod
-		.row
-			.col-auto
-				+e.img-wrap.bg-wrap(href="#")
-					+pic(`prod-${i}.jpg`,'bg',0).picture-bg
-			.col
-				+e.row.row
-					.col
-						+e.price 1 999 сум
-							span килограмм
-						.h5: a.text-body(href="#")  Қизил Юсуф памидори
-						.d-none.d-md-block
-							ul
-								li 
-									span.text-secondary Каталог: 
-									|  Уруғлар
-								li 
-									span.text-secondary Категория: 
-									|  Сабзавот уруғлари
-								li 
-									span.text-secondary Субкатегория:
-									|  Помидор
-								li 
-									span.text-secondary Қолдиқ миқдори
-									|  500
-								li 
-									span.text-secondary Хусусиятлари: 
-									|  Хар доим талабга жавоб беради
-							+e.btn-more(href="#").text-info Батафсил
-								+icon("chevron-right")
-					+e.foot.col-md-auto
-				
-						.d-none.d-md-block
-							.strong МЧЖ "Green technology"
-							.text-secondary на AgroZamin с окт. 2020
-							+stars()
-							ul
-								li 
-									+e.icon-wrap: +icon("mark")
-									| Тошкент шахри
-								li 
-									+e.icon-wrap: +icon("shipping")
-									| Жойидан олиб кетиш
-								li 
-									+e.icon-wrap: +icon("pay")
-									| Жойида тўлов
-						+e.btn(type="button") Саватчага қўшиш
-				
-mixin card(i)
-	.col-xl-3.col-md-4
-		+b.card-prod--vertical
-			div
-				+e.img-wrap.bg-wrap(href="#")
-					+pic(`prod-${i}.jpg`,'bg',0).picture-bg
-			+e.caption
-				+e.price 
-					span.d-block.ms-0.pb-1 килограмм
-					
-					| 1 999 сум
-				.fw-500.mb-1: a.text-body(href="#")  Қизил Юсуф памидори
-				block
-				+e.btn(type="button") Саватчага қўшиш
+
 mixin cardf(i, h, p, u, t)
 	.col-xl-3.col-md-4
 		+b.card-prod--vertical.--favorite
@@ -183,10 +121,11 @@ mixin sCatalog3(data)
 					+icon("filter-icon")
 					| Фильтр
 		+e.row.row
-			+card(1) 
-			+card(2)
+			+card(1,'Қизил Юсуф памидори Самарқанд махсулоти')
+			+card(2,'Бинафша Шоҳ Нўхати')
 			+card(3)
-			+card(4)
+			+card(4,'Мелотрия Колибри Самарқанд махсулоти')
+				+e.btn.btn-outline-primary.disabled(type="button") Запрос оставлен
 			+card(5)
 			+card(6)
 			+card(5)

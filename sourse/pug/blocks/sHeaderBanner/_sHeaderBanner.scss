@@ -225,3 +225,31 @@
 		}
 	}
 } // end.sHeaderBanner
+.cardsHead{
+	margin-top: rem(32);
+	&__row{
+		--bs-gutter-y: var(--bs-gutter-x);
+	}
+	&__item{
+		.row{
+			flex-wrap: nowrap;
+			--bs-gutter-x: 10px;
+			min-height: rem(70);
+		}
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding: rem(15) rem(14);
+		@include rfs(24px);
+		background: #FFFFFF;
+		border: 1px solid #E6E6E6;
+		border-radius: 12px;
+		min-height: 100%;
+		font-weight: bold;
+		line-height: 107.5%;
+		.row{
+			align-items: center;
+		}
+	}
+}

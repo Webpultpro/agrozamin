@@ -2,65 +2,41 @@ mixin sProductsOnSite(data)
 	// start sProductsOnSite
 	+b.SECTION.sProductsOnSite.section#sProductsOnSite&attributes(attributes)
 		.container
-			+e.main-row.row
-				.col-lg-3.col-xl-auto.d-lg-flex.align-items-center(class="wow animate__fadeInLeft" )
-					+b.section-title
-						h1 Сайтдаги маҳсулотлар
-						p Маҳсулотларингизни бизнинг сайтимизда бепул жойлаштиринг. Тўғридан-тўғри фермер хўжаликларига сотинг
-						+e.BUTTON.btn.btn.btn-primary.heartbeat Сотувни бошлаш
-				.col-lg-9.col-xl(class="wow animate__fadeInRight" )
-					.tabs
-						.tabs__caption
-							//- .tabs__caption.d-none.d-md-flex
-							.tabs__btn.active
-								span Уруғлар
-							.tabs__btn
-								span Ўғитлар
-							.tabs__btn.d-none.d-md-block
-								span Ўсимликларни ҳимоя қилиш маҳсулотлари
-							.tabs__btn.d-none.d-xl-block
-								span Техника
-							+e.link.d-block(href="#")
-								span Барча категориялар
-								+icon('shevron-right-sm')
-						.tabs__wrap
-							.tabs__content.active
-								+e.slider--js
-									.row.swiper-wrapper
-										mixin item(i, h, p, u, t)
-											+e.col.col-lg-4.swiper-slide
-												+e.item(href='#')
-													+e.DIV.img-wrap
-														if i
-															img(src=`img/@2x/products-site-${i}.jpg` alt="")
-													+e.DIV.caption
-														+e.title!= h
-														+e.value
-															+e.price!= p
-															+e.unit.text-secondary!= u
-														p!= t
-														+e.card-btn Харид қилиш
-										+item(1, `Сабзи Рус гиганти`, `15 990 132 сум`, `Тонна`, `Европ ва осиё мамалакатларида кўп учрайдиган Россия гигант сабзилари Россия гигант сабзилари `)
-										+item(``, `Укроп Озорник`, `2 190 сум`, `Тонна`, `Орта осиёда кенг тарқалган яшил парракли укроплар`)
-										+item(2, `Яшил нохот доначалари`, `2 299 сум`, `Тонна`, `Ажойиб хухусиятларга ега бўлган яши нохот доначали`)
-							.tabs__content
-								+e.slider--js
-									.row.swiper-wrapper
-										+item(1, `Сабзи Рус гиганти`, `15 990 132 сум`, `Тонна`, `Европ ва осиё мамалакатларида кўп учрайдиган Россия гигант сабзилари Россия гигант сабзилари`)
-										+item(``, `Укроп Озорник`, `2 190 сум`, `Тонна`, `Орта осиёда кенг тарқалган яшил парракли укроплар`)
-										+item(2, `Яшил нохот доначалари`, `2 299 сум`, `Тонна`, `Ажойиб хухусиятларга ега бўлган яши нохот доначали`)
-							.tabs__content
-								+e.slider--js
-									.row.swiper-wrapper
-										+item(1, `Сабзи Рус гиганти`, `15 990 132 сум`, `Тонна`, `Европ ва осиё мамалакатларида кўп учрайдиган Россия гигант сабзилари Россия гигант сабзилари`)
-										+item(``, `Укроп Озорник`, `2 190 сум`, `Тонна`, `Орта осиёда кенг тарқалган яшил парракли укроплар`)
-										+item(2, `Яшил нохот доначалари`, `2 299 сум`, `Тонна`, `Ажойиб хухусиятларга ега бўлган яши нохот доначали`)
-							.tabs__content
-								+e.slider--js
-									.row.swiper-wrapper
-										+item(1, `Сабзи Рус гиганти`, `15 990 132 сум`, `Тонна`, `Европ ва осиё мамалакатларида кўп учрайдиган Россия гигант сабзилари Россия гигант сабзилари`)
-										+item(``, `Укроп Озорник`, `2 190 сум`, `Тонна`, `Орта осиёда кенг тарқалган яшил парракли укроплар`)
-										+item(2, `Яшил нохот доначалари`, `2 299 сум`, `Тонна`, `Ажойиб хухусиятларга ега бўлган яши нохот доначали`)
-					//- +e.footer.d-none.d-md-block
-					//- 	+e.link(href="#") Барча категориялар
+			.tabs(class="wow animate__fadeInUp" )
+				.tabs__caption
+					//- .tabs__caption.d-none.d-md-flex
+					.tabs__btn.active
+						span Уруғлар
+					.tabs__btn
+						span Ўғитлар
+					.tabs__btn.d-none.d-md-block
+						span Ўсимликларни ҳимоя қилиш маҳсулотлари
+					.tabs__btn.d-none.d-xl-block
+						span Техника
+					.tabs__btn.d-none.d-xl-block
+						span Бошқа ўғитлар
+					.tabs__btn.d-none.d-xl-block
+						span Ветеринария
+					.tabs__btn.d-none.d-xl-block
+						span Тайёр маҳсулот
+
+					+e.link.d-block(href="#")
+						span Барча категориялар
+						+icon('shevron-right-sm')
+				.tabs__wrap
+					mixin tab()
+						.tabs__content&attributes(attributes)
+							+e.slider--js
+								.swiper-wrapper
+									+card(1,'Қизил Юсуф памидори Самарқанд махсулоти','sProductsOnSite__col  swiper-slide ')
+									+card(2,'Бинафша Шоҳ Нўхати','sProductsOnSite__col  swiper-slide ')
+									+card(3,'Мелотрия Колибри Самарқанд махсулоти','sProductsOnSite__col  swiper-slide ')
+									+card(4,'Мелотрия Колибри Самарқанд махсулоти','sProductsOnSite__col  swiper-slide ')
+										+e.btn.btn-outline-primary.disabled(type="button") Запрос оставлен
+									+card(5,'Мелотрия Колибри Самарқанд махсулоти','sProductsOnSite__col  swiper-slide ')
+									//- +card(5)
+					+tab().active
+					+tab()
+					+tab()
+					+tab()
 	// end sProductsOnSite

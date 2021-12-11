@@ -41,7 +41,7 @@ mixin stars()
 mixin addblock()
 	+b.addBlock
 		+e.btn--minus(type="button")
-		input(type="text" value="1")
+		input(type="text" value="1000")
 		+e.btn--plus(type="button")
 
 mixin orderClosed(data)
@@ -56,3 +56,79 @@ mixin info-message(p)
 		img(src="img/svg/message.svg", alt="")
 		p!= p
 
+
+
+
+mixin card-hor(i)
+	+b.card-prod
+		.row
+			.col-auto
+				+e.img-wrap.bg-wrap(href="#")
+					+pic(`prod-${i}.jpg`,'bg',0).picture-bg
+			.col
+				+e.row.row
+					.col
+						+e.price 1 999 сум
+							span килограмм
+						.h5: a.text-body(href="#")  Қизил Юсуф памидори
+						.d-none.d-md-block
+							ul
+								li 
+									span.text-secondary Каталог: 
+									|  Уруғлар
+								li 
+									span.text-secondary Категория: 
+									|  Сабзавот уруғлари
+								li 
+									span.text-secondary Субкатегория:
+									|  Помидор
+								li 
+									span.text-secondary Қолдиқ миқдори
+									|  500
+								li 
+									span.text-secondary Хусусиятлари: 
+									|  Хар доим талабга жавоб беради
+							+e.btn-more(href="#").text-info Батафсил
+								+icon("chevron-right")
+					+e.foot.col-md-auto
+				
+						.d-none.d-md-block
+							.strong МЧЖ "Green technology"
+							.text-secondary на AgroZamin с окт. 2020
+							+stars()
+							ul
+								li 
+									+e.icon-wrap: +icon("mark")
+									| Тошкент шахри
+								li 
+									+e.icon-wrap: +icon("shipping")
+									| Жойидан олиб кетиш
+								li 
+									+e.icon-wrap: +icon("pay")
+									| Жойида тўлов
+						+e.btn(type="button") Саватчага қўшиш
+				
+mixin card(i,t='Қизил Юсуф памидори', cl="col-xl-3 col-md-4")
+	div(class= cl)
+		+b.card-prod--vertical
+			div
+				+e.img-wrap.bg-wrap(href="#")
+					+pic(`prod-${i}.jpg`,'bg',0).picture-bg
+			+e.caption
+				.fw-500.mb-1: a.text-body(href="#")= t
+				.text-secondary.pb-3.mb-auto МЧЖ "AvtoServisGroup"
+				+e.price.text-center
+					| 4 590 000 
+					span.d-block.ms-0.pb-1 сум / кг
+				+addblock()
+				if block
+					block
+				else
+					+e.btn.btn-outline-primary(type="button") Оставить заявку
+				+e.footer-links
+					+e.footer-link(href="#")
+						+icon("email-link")
+					+e.footer-link(href="#").activw
+						+icon("like")
+					+e.footer-link(href="#")
+						+icon("phone-link")
