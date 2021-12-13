@@ -75,3 +75,4 @@
 1. <https://webpult.github.io/agrozamin/public/29-cabinet-chats-1-empty.html> 5.8
 1. <https://webpult.github.io/agrozamin/public/29-cabinet-chats-2.html>5.9
 1. <https://webpult.github.io/agrozamin/public/29-cabinet-chats-edit.html> 6.1
+2. <https://webpult.github.io/agrozamin/public/29-cabinet-6.3.html> 6.3
