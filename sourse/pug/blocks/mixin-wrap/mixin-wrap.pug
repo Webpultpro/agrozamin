@@ -132,3 +132,9 @@ mixin card(i,t='Қизил Юсуф памидори', cl="col-xl-3 col-md-4")
 						+icon("like")
 					+e.footer-link(href="#")
 						+icon("phone-link")
+
+mixin b-c(i ,t)
+	+b.btn-with-circle
+		+e.btn(href="#")&attributes(attributes)
+			+icon(i)
+		+e.title= t

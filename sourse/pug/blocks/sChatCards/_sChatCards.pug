@@ -68,11 +68,7 @@ mixin chartCardHor2(i,p, icon)
 							
 				//- +stars()
 				//- +e.footer
-mixin b-c(i ,t)
-	+b.btn-with-circle
-		+e.btn(href="#")&attributes(attributes)
-			+icon(i)
-		+e.title= t
+
 mixin sChatCards(data)
 	// start sChatCards
 	+b.sChatCards.section#sChatCards&attributes(attributes)
@@ -209,3 +205,91 @@ mixin sChatCards-edit(data)
 	// end sChatCards
 
 
+
+	
+
+
+	
+mixin sChatCards-edit(data)
+	// start sChatCards
+	+b.sChatCards.section#sChatCards&attributes(attributes) 
+		+e.block
+			+form-wrap 
+				+b.chat-card--chor.--edit
+					.row.gx-3
+						.col-lg.col-auto
+							+e.img-wrap.bg-wrap
+								+icon('user')
+								//- if i
+								+pic(`avatar-1.png`,'bg',0).picture-bg
+						.col-lg-auto.col
+							.row.g-3
+								.col-auto
+									button.btn.btn-outline-secondary2(type="button") 
+										+icon("pen")
+										| Янги расм юклаш
+								.col-auto
+									button.btn.btn-outline-secondary2(type="button") 
+										+icon("delete")
+										| Ўчириш
+				+input("",'text','Исм *')
+				+input("",'text','Фамилия *')
+				+input("",'text','Мутаҳасислиги')
+				.text-center
+					button.btn.btn-primary(type="submit") Сақлаш
+
+	// end sChatCards
+
+
+mixin sChatCards-47(data)
+	// start sChatCards
+	+b.sChatCards.section#sChatCards&attributes(attributes) 
+		+chartCardHor(`1`,`Ветиринар`,`Александра Алиева`,'m').mb-4
+		+b.btn-w100(type="button") Мутаҳасис билан онлайн видео мулоқат ўрнатиш учун вақтни белгиланг
+		+e.block
+			+b.calendar-line
+				+e.btn
+					+icon('chevron-left')
+				+e.data 4 - 10 Январь 2022
+				+e.btn
+					+icon('chevron-right')
+			+b.week-line
+				mixin d(t,n)
+					+e.item(href="#")&attributes(attributes)  
+						+e.title= t
+						+e.date= n
+				+d("Пн",'4').active
+				+d("Вт",'5')
+				+d("Ср",'6')
+				+d("Чт",'7')
+				+d("Пт",'8')
+				+d("Сб",'9')
+				+d("Вс",'10')
+			+b.date-body
+				mixin item(t, a, i)
+					+e.line 
+						.row
+							.col 
+								.row
+									+e.time.col-md-auto= t
+									.col
+										if a
+											.alert&attributes(attributes)
+												if i
+													+icon(i)
+												= a
+							.col-auto
+								if block 
+									block 
+								else
+									a.btn.btn-outline-primary(href="#") Видео суров жонатиш
+				+item(`16:00 - 16:30`,'Видео мулоқот вақти ').alert-info
+					a.btn.btn-primary(href="#") 
+						+icon('camera')
+						| Бошлаш
+				+item(`15:30 - 16:00`,'Қолган вақти: 27 дақиқа', 'clock').alert-success
+					a.btn.btn-secondary-light(href="#")  Сўров жўнатилган
+				+item(`11:30 - 12:00`,'Қўнғироқ якунланган').alert-warning
+				+item(`12:30 - 13:00`,'Бекор қилинган').alert-danger
+				+item(`16:00 - 16:30`)
+	// end sChatCards

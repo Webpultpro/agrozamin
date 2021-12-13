@@ -737,3 +737,125 @@ iframe {
 .btn-danger{
 	color: #fff !important;
 }
+
+.btn-w100{
+	@extend .btn;
+	@extend .btn-info;
+	border-color: rgba(65, 159, 217, 0.15);
+	background: rgba(65, 159, 217, 0.15);
+	border-radius: 13px;
+	width: 100%;
+	margin-bottom: 37px;
+	font-weight: normal;
+	padding: 18px;
+}
+
+.calendar-line{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+	line-height: 28px;
+	margin-bottom: rem(40);
+	&__btn{
+		width: 34px;
+		height: 34px;
+		border-radius: 50%;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@extend .btn, .btn-outline-secondary-light;
+		.icon{
+			font-size: rem(14);
+		}
+	}
+	&__data{
+		width: rem(210 + 21 + 21);
+		text-align: center;
+	}
+}
+.week-line{
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid #EEEEEE;
+	padding-bottom: 32px;
+	margin-bottom: 32px;
+		@include media-breakpoint-up(sm) {
+
+			font-size: 24px;
+		}
+		font-size: 20px;
+	text-align: center;
+	&__item{
+		color: #999999;
+		&:hover,
+		&.active{
+			--color: #fff;
+			--bg: var(--bs-primary); 
+			--bs: 0px 9px 16px rgba(0, 0, 0, 0.1);
+
+		}
+	}
+	&__date{
+		color: var(--color, #000);
+		background: var(--bg, ' ');
+		box-shadow: var(--bs, ' ');
+			@include media-breakpoint-up(sm) {
+
+				width: 59px;
+				height: 59px;
+			}
+			width: 49px;
+			height: 49px;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 28px;
+		@include mt;
+	}
+
+}
+
+.date-body{
+	@include media-breakpoint-up(sm) {
+	}
+	font-size: rem(20);
+	.btn{
+			@include media-breakpoint-up(sm) {
+
+				font-size: rem(14);
+			}
+			font-size: 11px;
+			padding: rem(10) rem(10);
+		.icon{
+			font-size: 1em;
+			margin-right: rem(10);
+			position: relative;
+			top: rem(-1);  
+		}
+	}
+	.row{
+		--bs-gutter-y: 10px;
+		margin-bottom: rem(20);
+		align-items: center;
+	}
+	.alert{
+		display: inline-block;
+			@include media-breakpoint-up(sm) {
+
+				font-size: 14px; 
+			}
+			font-size: 11px;
+
+	}
+}
+.alert{ 
+	.icon{
+		margin-right: rem(10);
+		font-size: 14px;
+		position: relative;
+		top: rem(-2);
+	}
+}

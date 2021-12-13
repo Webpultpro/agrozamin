@@ -71,8 +71,10 @@
 3. <https://webpult.github.io/agrozamin/public/28-news-video.html>
 ## 4.5 Онлайн консултант 
 1. <https://webpult.github.io/agrozamin/public/29-cabinet-chats.html>4.5
-1. <https://webpult.github.io/agrozamin/public/29-cabinet-chats-1.html>5.7
-1. <https://webpult.github.io/agrozamin/public/29-cabinet-chats-1-empty.html> 5.8
-1. <https://webpult.github.io/agrozamin/public/29-cabinet-chats-2.html>5.9
-1. <https://webpult.github.io/agrozamin/public/29-cabinet-chats-edit.html> 6.1
-2. <https://webpult.github.io/agrozamin/public/29-cabinet-6.3.html> 6.3
+2. <https://webpult.github.io/agrozamin/public/18-messages-filled.html> 5.1-5.6, 6.1- 6.3, 4.1-4.2
+3. <https://webpult.github.io/agrozamin/public/29-cabinet-chats-1.html>5.7
+4. <https://webpult.github.io/agrozamin/public/29-cabinet-chats-1-empty.html> 5.8
+5. <https://webpult.github.io/agrozamin/public/29-cabinet-chats-2.html>5.9
+6. <https://webpult.github.io/agrozamin/public/29-cabinet-chats-edit.html> 6.1
+7. <https://webpult.github.io/agrozamin/public/29-cabinet-6.3.html> 5, 6.3
+8. <https://webpult.github.io/agrozamin/public/29-cabinet-chats-4.7.html>4.7

@@ -33,6 +33,11 @@
 		font-size: 12px;
 		line-height: math.div(14, 12);
 		color: #999999;
+		margin-bottom: 1em;
+		.icon{
+				margin-left: rem(7);
+				font-size: rem(10);
+			}
 	}
 
 	&__all-messages {
@@ -69,7 +74,7 @@
 
 	&__message-wrap {
 		margin-bottom: rem(14);
-		display: flex;
+		
 		&:last-child {
 			margin-bottom: rem(25);
 		}
@@ -77,6 +82,17 @@
 			padding: rem(12);
 			box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.04);
 			border-radius: 8px;
+			.btn{
+				.icon{
+					font-size: 1em;
+					margin-right: rem(10);
+					position: relative;
+					top: rem(-1);
+				}
+			}
+			p.small{
+				max-width: rem(240);
+			}
 			p {
 				margin-bottom: rem(8);
 			}
@@ -94,19 +110,22 @@
 				}
 			}
 		}
+	
 		&--in {
+			display: flex;
 			justify-content: flex-end;
 			.sChat__message {
-				background-color: var(--bs-primary);
+				background-color: #E6F2F8;
 				max-width: 240px;
+				text-align: right;
 				@include media-breakpoint-up(sm) {
 					max-width: 265px;
 				}
 				p {
-					color: $white;
+					// color: $white;
 				}
 				.sChat__time {
-					color: #89ffc5;
+					// color: #89ffc5;
 				}
 			}
 		}
@@ -224,6 +243,7 @@
 			font-size: 12px;
 			line-height: math.div(14, 12);
 			color: #999999;
+			
 		}
 	}
 	@include media-breakpoint-up(md) {
@@ -234,6 +254,7 @@
 			line-height: 1;
 			color: #000;
 			margin-bottom: rem(6);
+			font-weight: bold;
 		}
 
 		&__time {
@@ -243,14 +264,34 @@
 			line-height: math.div(14, 12);
 			color: #999999;
 		}
+		&__count{
+			@include mt;
+			position: absolute;
+			@include a-cent(y);
+			right: rem(5);
+
+			width: rem(16px);
+			height: rem(16px);
+			background: #ed6262;
+			border-radius: 50%;
+			color: #fff;
+			display: flex !important;
+			justify-content: center;
+			align-items: center;
+			font-size: rem(10);
+			font-weight: 500;
+			text-align: center;
+		}
 		&__user {
 			@include mt;
 			display: block;
-			padding: rem(8) rem(13);
+			padding: rem(8) rem(9);
+			padding-right: rem(25);
 			border-radius: 8px;
 			margin-bottom: rem(8);
-			width: 185px;
+			width: 201px;
 			cursor: pointer;
+			position: relative;
 			&:hover {
 				box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.04);
 				.all-users__name,
@@ -272,3 +313,65 @@
 		}
 	}
 }
+
+
+.download-media{
+	margin-top: rem(20);
+	.row{
+		--bs-gutter-x: 10px;
+		--bs-gutter-y: 10px;
+		margin-bottom: 20px;
+	}
+	&__item{
+		width: 46px;
+		@include block;
+		background: rgba(255, 255, 255, 0.3);
+		@extend .text-secondary;
+		&::after{
+			content: '';
+			@include a-cent1;
+			width: 14px;
+			height: 14px;
+			background-color: #fff;
+			border-radius: 50%;
+			z-index: 1;
+		}
+		.icon{
+			z-index: 2;
+			@include a-cent1;
+			font-size: 18px;
+		}
+		img{
+			filter: blur(7px);
+			// position: relative;
+		}
+/* Note: backdrop-filter has minimal browser support */
+		// position: relative;
+		overflow: hidden;
+		border-radius: 5px;
+	}
+}
+
+.w-100{
+	width: 100%;
+}
+
+	.sChat__message{
+		.stars{
+			justify-content: center;
+			display: flex;
+			margin-bottom: 20px;
+		}
+		.icon-star{
+			font-size: 32px;
+		}
+		.form-control{
+			margin-bottom: 1rem;
+		}
+	}
+	.sChat__message.bg-white{
+		max-width: 100% !important;
+	}
+	.sChat__message--footer{
+			margin-top: 10px;
+		}

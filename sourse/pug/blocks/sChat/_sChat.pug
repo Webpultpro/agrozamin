@@ -12,7 +12,9 @@ mixin sChat(filled)
 								+e.user&attributes(attributes)
 									+e.name!= n
 									+e.time!= t
+									
 							+user(`Шокиров Дилмурод`, `16:09 Сегодня`).active
+								+e.count 11
 							- for (var x = 0; x < 3; x++)
 								+user(`АгроФерма`, `16:09 Сегодня`)
 								+user(`ПомидорыИзТашкента`, `16:09 Сегодня`)
@@ -24,22 +26,78 @@ mixin sChat(filled)
 					.col
 						+e.all-messages
 							+e.messages-body
-								mixin message(out, p, t)
+								mixin message(out, p, t, d)
 									if out
 										+e.message-wrap--out
 											+e.message 
 												p!= p
+												if d
+													+e.time
+														| Қаҳрамонова Сетора
+														br
+														| 04.01.2022
+													p.small Ўгитлар бойича батафсил малумот олмоқчи едим
+													+b.download-media
+														.row
+															- for (var x = 0; x < 3; x++)
+																.col-auto
+																	+e.item(href="#").bg-wrap
+																		+icon('download')
+																		+pic('about-store-3.jpg','bg',0).picture-bg
 												+e.time!= t
+												block
+											if d
+												+e.message--footer
+													.row.g-3.justify-content-around
+														.col-auto
+															+b-c('close','Рад етиш').btn-outline-secondary2 
+														.col-auto
+															+b-c('check','Қабул қилиш').btn-outline-success
+
 									else
 										+e.message-wrap--in
 											+e.message 
 												p!= p
 												+e.time!= t
+													+icon("check-read") 
+													+icon("check-double-read") 
 								- for (var x = 0; x < 3; x++)
 									+message(`out`, `Ассалому алайкум. Шу юсуповиский помидор ҳақида тўлиқроқ малумот олмоқчи едим телефон орқали алоқага чиқа оласизми?`, `Кеча 16:00`)
 									+message(``, `Ассалому алайкум қандай ёрдам бера оламан?`, `Кеча 16:00`)
 									+message(`out`, `Менга шу помидордан 500 кг керак еди. Иложиси борми?`, `Бугун 12:11`)
 									+message(``, `Ха албатта`, `Бугун 13:10`)
+									+message(`out`, `Онлайн Консултация учун сўров`, `Бугун 12:11`, 'd')
+									+message(`out`, `Мутахассис сизнинг аризангизни тасдиқлади онлайн видео қўнғироқ 04.01.2022 11.00-12.00 тақдим етилади`, `Бугун 12:11`)
+										button.btn.btn-secondary-light.w-100(type="button")
+											+icon('camera')
+											| Бошлаш
+										
+									+message(`out`, `Мутахассис сизнинг аризангизни тасдиқлади онлайн видео қўнғироқ 04.01.2022 11.00-12.00 тақдим етилади`, `Бугун 12:11`)
+										button.btn.btn-primary.w-100(type="button")
+											+icon('camera')
+											| Қайта жўнатиш
+										
+									+message(`out`, `Мутахассис сизнинг аризангизни тасдиқлади онлайн видео қўнғироқ 04.01.2022 11.00-12.00 тақдим етилади`, `Бугун 12:11`)
+										button.btn.btn-primary.w-100(type="button")
+											| Қайта жўнатиш
+										
+									+e.message-wrap--in
+										+e.message.bg-white 
+											.row.align-items-center
+												.col Видео мулоқот вақти келди: 10:00
+												.col-auto
+													button.btn.btn-primary(type="button")
+														+icon('camera')
+														| Бошлаш
+									
+									+e.message-wrap--out
+										+e.message 
+											p Консултант билан алоқа якунланди
+
+											+e.time Суҳбат сиз учун манфатли бўлган бўлса, видео мутаҳассисни баҳолашингиз мумкин
+											+stars 
+											+input("Изҳингизни қолдиринг",'textarea')
+											button.btn.btn-primary.w-100(type="button") Тайёр
 								
 							+e.input-wrap.form-group
 								+e.INPUT.input.form-control(name='text' type='text' placeholder='Хабарни киритинг')
@@ -56,6 +114,7 @@ mixin sChat(filled)
 								+e.user&attributes(attributes)
 									+e.name!= n
 									+e.time!= t
+									block
 							+user(`Шокиров Дилмурод`, `16:09 Сегодня`)
 							+user(`АгроФерма`, `16:09 Сегодня`)
 							+user(`ПомидорыИзТашкента`, `16:09 Сегодня`)

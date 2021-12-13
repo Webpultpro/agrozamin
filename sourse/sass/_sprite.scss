@@ -31,6 +31,10 @@
 	font-size:math.div(22,10)*1rem;
 	width: math.div(22,22)*1em;
 }
+.icon-camera {
+	font-size:math.div(12,10)*1rem;
+	width: math.div(18,12)*1em;
+}
 .icon-chat {
 	font-size:math.div(11,10)*1rem;
 	width: math.div(10,11)*1em;
@@ -42,6 +46,14 @@
 .icon-check {
 	font-size:math.div(10,10)*1rem;
 	width: math.div(14,10)*1em;
+}
+.icon-check-double-read {
+	font-size:math.div(10,10)*1rem;
+	width: math.div(17,10)*1em;
+}
+.icon-check-read {
+	font-size:math.div(10,10)*1rem;
+	width: math.div(13,10)*1em;
 }
 .icon-chevron-double-left {
 	font-size:math.div(500,10)*1rem;
@@ -82,6 +94,10 @@
 .icon-delete {
 	font-size:math.div(18,10)*1rem;
 	width: math.div(17,18)*1em;
+}
+.icon-download {
+	font-size:math.div(18,10)*1rem;
+	width: math.div(18,18)*1em;
 }
 .icon-duty-1 {
 	font-size:math.div(58,10)*1rem;

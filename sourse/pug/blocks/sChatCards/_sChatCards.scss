@@ -178,8 +178,9 @@
 		margin-bottom: rem(7);
 		.icon{
 			font-size: rem(14);
-			margin: 0;
-			position: static;
+			margin: 0 !important; 
+			position: static !important;
+
 		}
 		@extend .btn;	
 		border-radius: 50%;
