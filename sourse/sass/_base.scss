@@ -506,17 +506,18 @@ iframe {
 .stars {
 	margin-bottom: rem(5);
 	.icon {
+		color: #e5e5e5;
 		// cursor: pointer;
 		font-size: rem(16);
 		&:not(:last-child) {
 			margin-right: rem(5);
 		}
-		stroke: currentColor;
-		fill: transparent;
+		// stroke: currentColor;
+		// fill: transparent;
 		@include mt;
 		// &:hover
 		&.active {
-			stroke: #f6c23d;
+			// stroke: #f6c23d;
 			fill: #f6c23d;
 		}
 	}
@@ -731,4 +732,8 @@ iframe {
 
 .fw-400{
 	font-weight: normal;
+}
+
+.btn-danger{
+	color: #fff !important;
 }

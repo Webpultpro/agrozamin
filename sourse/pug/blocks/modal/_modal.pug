@@ -70,4 +70,28 @@ mixin modal()
 		a.btn.btn-primary.mx-auto(href="#") Махсулотни ўчириш
 	// #modal-delte
 	
+	
+	+b.form-wrap.modal-win(id="modal-online-consultant" class=" " style="display: none" ) 
+		.h4.text-center Онлайн консултант ҳизмати 
+		form
+			+input("",'text','Исм *')
+			+input("",'text','Фамилия *')
+			+input("",'text','Мутаҳассислиги')
+			+input("",'textarea','Биография')
+			.p-4.bg-primary.text-start.mb-3(style="--bs-bg-opacity: .3;") Иш соатингиз ҳақидаги қисқача малумотни киритинг. Ҳафта кунлари ва соатларини кўрсатинг
+			+input("",'text','Иш соати')
+			.text-center
+				buton.btn.btn-primary(type="submit") Жўнатиш
+	// #modal-delte
+	
+	+b.form-wrap.modal-win(id="modal-online-consultant2" class=" " style="display: none" ) 
+		.h4.text-center.mb-3 Онлайн консултант рад етиш
+		form 
+			.p-4.bg-primary.text-start.mb-3(style="--bs-bg-opacity: .3;") Илтимос, онлайн консултант ҳизматини рад етиш сабабини кўрсатинг
+			+input("",'textarea') 
+			.text-center
+				buton.btn.btn-primary(type="submit") Жўнатиш
+	// #modal-delte
+	
+
 	// end modals

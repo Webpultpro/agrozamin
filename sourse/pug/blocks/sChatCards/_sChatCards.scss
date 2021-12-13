@@ -1,0 +1,194 @@
+// start .sChatCards
+.sChatCards {
+		// --sPT: ;
+		--sPB: 0;
+		// --sTPB: ;
+	&__row{
+		--bs-gutter-y: 24px;
+		margin-bottom: rem(50);
+	}
+	
+	&__banner{
+		padding-left: rem(35);
+		padding-right: rem(25);
+		background: rgba(var(--bs-primary-rgb), .1);
+		border-radius: 11px;
+		.col-auto{
+			align-self: flex-end;
+		}
+		h2{
+			padding-top: rem(25);
+		}
+		p{
+			margin-bottom: rem(32);
+		}
+		@include media-breakpoint-down(lg) {
+			text-align: center;
+		}
+	}
+	&__btn{
+
+		@extend .btn;
+		width: rem(149);
+		margin-bottom: rem(23);
+	}
+	&__block{
+		min-height: 60vh;
+		.form-wrap{
+			padding: 0;
+			border: none;
+			box-shadow: none;
+		}
+		.chat-card{
+			margin-bottom: rem(25);
+		}
+		&--empty{
+
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			@include rfs(24px);
+		}
+		@include media-breakpoint-up(sm) {
+			padding: rem(28);
+		}
+		padding: rem(16);
+		background: #FFFFFF;
+			border: 1px solid #EEEEEE; 
+			border-radius: 13px;
+
+		}
+		&__center{
+		.icon{
+			color: var(--bs-primary);
+			margin-bottom: rem(45);
+			font-size: rem(60);
+		}
+
+	}
+	.page-numbers{
+		justify-content: center;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sChatCards
+
+.chat-card{
+	min-height: 100%;
+	background: #FFFFFF;
+	border: 1px solid #EEEEEE;
+	box-sizing: border-box;
+	@include mt;
+	.icon{
+		font-size: rem(12);
+		margin-right: rem(10);
+		flex:  0 0 auto;
+		position: relative;
+		top: em(-2);
+	}
+	--img-size: #{rem(62)};
+	&--horizontal{
+		@include media-breakpoint-up(sm) {
+			--img-size: #{rem(81)};
+		}
+		
+	}
+	&--edit{
+		padding-left: 0;
+		padding-right: 0;
+		--img-size: #{rem(81)};
+		padding: 0;
+		box-shadow: none;
+		border: none;
+			@include media-breakpoint-up(lg) {
+
+				.row{
+					align-items: center;
+				}
+			} 
+	}
+	&:hover{
+		
+		box-shadow: 4px 12px 33px rgba(0, 0, 0, 0);
+	}
+	box-shadow: 4px 12px 33px rgba(0, 0, 0, 0.07);
+	border-radius: 13px;
+	padding: rem(14) rem(12);
+	@include media-breakpoint-up(sm) {
+	padding: rem(24) rem(18);
+	}
+	&__img-wrap{
+		width: var(--img-size);
+		height: var(--img-size);
+		border-radius: 50%;
+		background: linear-gradient(0deg, #F3F3F3, #F3F3F3);
+		background-position: center center;
+		background-repeat: no-repeat;
+		.icon{
+			@include a-cent1;
+			font-size: rem(22);
+			color: #ccc;
+			z-index: -1;
+		}
+	}
+	.col{
+		display: flex;
+		flex-direction: column;
+	}
+	&__footer{
+		margin-top: auto;
+		padding-top: rem(38);
+	}
+	&__btn{
+		@extend .btn;
+		padding: rem(10) rem(26);
+	}
+	.alert{
+		border: none;
+		padding: rem(4) rem(11);
+		display: inline-block;
+		.icon{
+			font-size: rem(15);
+			position: relative;
+			top: em(0);
+		}
+	}
+}
+
+.btn-with-circle{
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	color: #C4C4C4;	
+	font-size: rem(11);
+	&__btn{
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: rem(7);
+		.icon{
+			font-size: rem(14);
+			margin: 0;
+			position: static;
+		}
+		@extend .btn;	
+		border-radius: 50%;
+		width: rem(40);
+		height: rem(40);
+		&::before{
+			// content: '';
+			// @include a-cent;
+		}
+	}
+
+}

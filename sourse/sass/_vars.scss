@@ -72,7 +72,7 @@ $blue: #274ED6 !default;
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #d63384 !default;
-$red: #dc3545 !default;
+$red: #FF4343 !default;
 $orange: #fd7e14 !default;
 $yellow: #ffc107 !default;
 $green: #00CD69 !default;
@@ -130,6 +130,14 @@ $min-contrast-ratio: 4.5 !default;
 $color-contrast-dark: $black !default;
 $color-contrast-light: $white !default;
  
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+// $utilities-bg: map-merge(
+//   $utilities-colors,
+//   (
+//     "primary": to-rgb($primary),
+//   )
+// );
+// $utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, "$key", "bg");
 
 // Characters which are escaped by the escape-svg function
 $escaped-characters: (("<", "%3c"),

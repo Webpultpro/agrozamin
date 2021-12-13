@@ -37,6 +37,7 @@
 	<body>
 		<div class="main-wrapper">
 			<div class="section container"><a class="btn btn-primary px-3 m-3 link-modal-js" href="#modal-go-reg">Рўйхатдан ўтиш</a><a class="btn btn-primary px-3 m-3 link-modal-js" href="#modal-view-order">Буюртмани кўриш</a><a class="btn btn-primary px-3 m-3 link-modal-js" href="#modal-star">Баҳолаш мезони</a><a class="btn btn-primary px-3 m-3 link-modal-js" href="#modal-close-order">Буюртмани ёпиш</a><a class="btn btn-primary px-3 m-3 link-modal-js" href="#modal-delete">Махсулотни ўчириш</a>
+				<div class="w-100"></div><a class="btn btn-primary px-3 m-3 link-modal-js" href="#modal-online-consultant">Онлайн консултант ҳизмати </a><a class="btn btn-primary px-3 m-3 link-modal-js" href="#modal-online-consultant2">Онлайн консултант рад етиш</a>
 			</div>
 		</div>
 		<!--  start modals-->
@@ -102,6 +103,54 @@
 			<p class="small text-secondary">Ўчирилган махсулот платформадан бутунлай олиб ташланади ва&nbsp;уни&nbsp;таҳрирлашнинг имкони бўлмайди</p><br/><br/><a class="btn btn-primary mx-auto" href="#">Махсулотни ўчириш</a>
 		</div>
 		<!-- #modal-delte-->
+		<div class="form-wrap modal-win" id="modal-online-consultant" style="display: none"> 
+			<div class="h4 text-center">Онлайн консултант ҳизмати </div>
+			<form>
+				<div class="form-wrap__input-wrap form-group">
+					<label><span class="form-wrap__input-title">Исм *</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
+					</label>
+				</div>
+				<!-- +e.input-wrap-->
+				<div class="form-wrap__input-wrap form-group">
+					<label><span class="form-wrap__input-title">Фамилия *</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
+					</label>
+				</div>
+				<!-- +e.input-wrap-->
+				<div class="form-wrap__input-wrap form-group">
+					<label><span class="form-wrap__input-title">Мутаҳассислиги</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
+					</label>
+				</div>
+				<!-- +e.input-wrap-->
+				<div class="form-wrap__input-wrap form-group">
+					<label><span class="form-wrap__input-title">Биография</span><textarea class="form-wrap__input form-control" name="textarea" placeholder=""></textarea>
+					</label>
+				</div>
+				<!-- +e.input-wrap-->
+				<div class="p-4 bg-primary text-start mb-3" style="--bs-bg-opacity: .3;">Иш соатингиз ҳақидаги қисқача малумотни киритинг. Ҳафта кунлари ва соатларини кўрсатинг</div>
+				<div class="form-wrap__input-wrap form-group">
+					<label><span class="form-wrap__input-title">Иш соати</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
+					</label>
+				</div>
+				<!-- +e.input-wrap-->
+				<div class="text-center">
+					<buton class="btn btn-primary" type="submit">Жўнатиш</buton>
+				</div>
+			</form>
+		</div>
+		<!-- #modal-delte-->
+		<div class="form-wrap modal-win" id="modal-online-consultant2" style="display: none"> 
+			<div class="h4 text-center mb-3">Онлайн консултант рад етиш</div>
+			<form> 
+				<div class="p-4 bg-primary text-start mb-3" style="--bs-bg-opacity: .3;">Илтимос, онлайн консултант ҳизматини рад етиш сабабини кўрсатинг</div>
+				<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder=""></textarea> 
+				</div>
+				<!-- +e.input-wrap-->
+				<div class="text-center">
+					<buton class="btn btn-primary" type="submit">Жўнатиш</buton>
+				</div>
+			</form>
+		</div>
+		<!-- #modal-delte-->
 		<!-- end modals-->
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>
@@ -110,6 +159,9 @@
 		<!-- slider libs-->
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/wowjs/wow.min.js"> </script>
+		<script src="libs/jquery-asPieProgress/jquery-asPieProgress.min.js"> </script>
+		<script src="libs/hc-sticky/hc-sticky.js"> </script>
+		<script src="libs/typed.js/lib/typed.min.js"> </script>
 		<!-- /slider libs-->
 		<script src="libs/priority-nav/priority-nav.min.js"></script>
 		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
@@ -117,8 +169,6 @@
 		<script src="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js"> </script>
 		<script src="libs/filepond/filepond.min.js"> </script>
 		<script src="libs/jquery-filepond/filepond.jquery.js"> </script>
-		<script src="libs/jquery-asPieProgress/jquery-asPieProgress.min.js"> </script>
-		<script src="libs/typed.js/lib/typed.min.js"> </script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

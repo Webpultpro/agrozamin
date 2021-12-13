@@ -1,0 +1,211 @@
+mixin chartCard(i,t,p)
+	+b.chat-card 
+		+e.row.row
+			.col-auto
+				+e.img-wrap.bg-wrap
+					+icon('user')
+					if i
+						+pic(`avatar-${i}.png`,'bg',0).picture-bg
+			.col
+				.h6.mb-0= t
+				.text-secondary= p
+				+stars()
+				+e.footer
+					+e.btn.btn-outline-primary(href="#") Кириш
+					
+mixin chartCardHor(i,t,p, empty)
+	+b.chat-card--horizontal&attributes(attributes)
+		+e.row.row.align-items-md-center
+			.col-auto
+				+e.img-wrap.bg-wrap
+					+icon('user')
+					if i
+						+pic(`avatar-${i}.png`,'bg',0).picture-bg
+			.col
+				.row
+					
+					.col-md.mb-3
+						.h6.mb-0= t
+						.text-secondary= p
+						if empty
+							.text-info.mt-2 Онлайн
+					.col-md-auto
+						if empty
+							+e.btn.btn-outline-secondary2(href="#") 
+								+icon("pen")
+								| Таҳрирлаш
+						else
+							+e.btn.btn-primary(href="#") Батафсил
+							
+				//- +stars()
+				//- +e.footer
+mixin chartCardHor2(i,p, icon)
+	+b.chat-card--horizontal
+		+e.row.row.align-items-md-center
+			.col-auto.order-first
+				+e.img-wrap.bg-wrap
+					+icon('user')
+					if i
+						+pic(`avatar-${i}.png`,'bg',0).picture-bg
+			.col
+				.row.align-items-center.gx-2
+					
+					.col-lg-4.mb-3
+						.h6 Султонова Мадина
+						.alert.label&attributes(attributes)
+							if icon
+								+icon(icon)
+							= p
+					.col-auto
+						.text-secondary Сана
+						p 04.01.2021
+					.col
+						.text-secondary Вақти
+						p 15:30-16:00
+					.w-100.d-md-none
+					block
+					
+							
+				//- +stars()
+				//- +e.footer
+mixin b-c(i ,t)
+	+b.btn-with-circle
+		+e.btn(href="#")&attributes(attributes)
+			+icon(i)
+		+e.title= t
+mixin sChatCards(data)
+	// start sChatCards
+	+b.sChatCards.section#sChatCards&attributes(attributes)
+		+e.row.row
+			+e.col.col-xl-4.col-md-6 
+				+chartCard(`1`,`Ветиринар`,`Александра Алиева`)
+			+e.col.col-xl-4.col-md-6 
+				+chartCard(`2`,`Аграном`,`Собиров Алишер`)
+			+e.col.col-xl-4.col-md-6 
+				+chartCard(`3`,`Агротехник`,`Қаҳрамонов Рустам`)
+			+e.col.col-xl-4.col-md-6 
+				+chartCard(`1`,`Агротехник`,`Алимов Равшан`)
+			+e.col.col-xl-4.col-md-6 
+				+chartCard(``,`Зоотехник`,`Жураев Зокир`)
+		+e.banner
+			.row
+				.col
+					h2 Консултант бўлишни истайсизми?
+					p Бизга қўшилинг ва мижозлар учун ҳизмат кўрсатинг
+					+e.btn.btn-primary(href="#") Ўтиш
+				.col-auto.d-none.d-lg-block
+					+pic("chat-banner.png",'',0)
+
+	// end sChatCards
+mixin sChatCards-1(data)
+	// start sChatCards
+	+b.sChatCards.section#sChatCards&attributes(attributes)
+		+chartCardHor(`1`,`Ветиринар`,`Александра Алиева`).mb-4
+		+e.row.row
+			+e.col.col-xl-4.col-md-6 
+				+chartCard(`1`,`Ветиринар`,`Александра Алиева`)
+			+e.col.col-xl-4.col-md-6 
+				+chartCard(`2`,`Аграном`,`Собиров Алишер`)
+			+e.col.col-xl-4.col-md-6 
+				+chartCard(`3`,`Агротехник`,`Қаҳрамонов Рустам`)
+			+e.col.col-xl-4.col-md-6 
+				+chartCard(`1`,`Агротехник`,`Алимов Равшан`)
+			+e.col.col-xl-4.col-md-6 
+				+chartCard(``,`Зоотехник`,`Жураев Зокир`)
+		//- +e.banner
+		//- 	.row
+		//- 		.col
+		//- 			h2 Консултант бўлишни истайсизми?
+		//- 			p Бизга қўшилинг ва мижозлар учун ҳизмат кўрсатинг
+		//- 			+e.btn.btn-primary(href="#") Ўтиш
+		//- 		.col-auto.d-none.d-lg-block
+		//- 			+pic("chat-banner.png",'',0)
+
+	// end sChatCards
+mixin sChatCards-1-empty(data)
+	// start sChatCards
+	+b.sChatCards.section#sChatCards&attributes(attributes)
+		+chartCardHor(`1`,`Ветиринар`,`Александра Алиева`,'m').mb-4
+		+e.block--empty 
+			+e.center 
+				+icon("file")
+				+e.title Сизда ҳеч қандай <br> сўровлар мавжуд емас
+	// end sChatCards
+mixin sChatCards-2(data)
+	// start sChatCards
+	+b.sChatCards.section#sChatCards&attributes(attributes)
+		+chartCardHor(`1`,`Ветиринар`,`Александра Алиева`,'m').mb-4
+		+e.block
+			+chartCardHor2(`1`,`Видео мулоқот вақти `).alert-info
+				.col-auto 
+					+e.btn.btn-primary(href="#") 
+						+icon("video")
+						| Бошлаш
+			+chartCardHor2(`2`,`Қолган вақти: 27 дақиқа `,'clock').alert-success
+				.col-auto 
+					+b-c('email','Хабар жўнатиш').btn-primary
+				.col-auto 
+					+b-c('check','Қабул қилинган').btn-primary
+			+chartCardHor2(`3`,`Рад етилган `,'clock').alert-danger
+				.col-auto 
+					+b-c('close','Рад етилган').btn-danger
+			+chartCardHor2(`2`,`Янги сўров`,'clock').alert-success 
+				.col-auto 
+					+b-c('email','Хабар жўнатиш').btn-primary
+				.col-auto 
+					+b-c('close','Рад етиш').btn-outline-secondary2
+				.col-auto 
+					+b-c('check','Қабул қилиш').btn-outline-primary
+			+chartCardHor2(`2`,`Янги сўров`,'clock').alert-success 
+				.col-auto 
+					+b-c('email','Хабар жўнатиш').btn-primary
+				.col-auto 
+					+b-c('close','Рад етиш').btn-outline-secondary2
+				.col-auto 
+					+b-c('check','Қабул қилиш').btn-outline-primary
+			+chartCardHor2(`2`,`Янги сўров`,'clock').alert-success 
+				.col-auto 
+					+b-c('email','Хабар жўнатиш').btn-primary
+				.col-auto 
+					+b-c('close','Рад етиш').btn-outline-secondary2
+				.col-auto 
+					+b-c('check','Қабул қилиш').btn-outline-primary
+			+chartCardHor2(`2`,`Қўнғироқ якунланган`,'clock').alert-warning
+				.col-auto 
+					+b-c('delete','Ўчириш').btn-outline-secondary2
+			+pugin()
+	// end sChatCards
+
+
+	
+mixin sChatCards-edit(data)
+	// start sChatCards
+	+b.sChatCards.section#sChatCards&attributes(attributes) 
+		+e.block
+			+form-wrap 
+				+b.chat-card--chor.--edit
+					.row.gx-3
+						.col-lg.col-auto
+							+e.img-wrap.bg-wrap
+								+icon('user')
+								//- if i
+								+pic(`avatar-1.png`,'bg',0).picture-bg
+						.col-lg-auto.col
+							.row.g-3
+								.col-auto
+									button.btn.btn-outline-secondary2(type="button") 
+										+icon("pen")
+										| Янги расм юклаш
+								.col-auto
+									button.btn.btn-outline-secondary2(type="button") 
+										+icon("delete")
+										| Ўчириш
+				+input("",'text','Исм *')
+				+input("",'text','Фамилия *')
+				+input("",'text','Мутаҳасислиги')
+				.text-center
+					button.btn.btn-primary(type="submit") Сақлаш
+
+	// end sChatCards
+
+

@@ -5,6 +5,7 @@ body{
 	--bs-primary: #{$primary};
 	--bs-primary-hover: #5488D8;
 	--bs-primary-rgb: 55, 123, 225; 
+	// $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
 	--hover-color: var(--bs-primary);
 	--hover-bd: var(--bs-primary); 
 	--swiperBorderColorDefHover: var(--bs-primary);

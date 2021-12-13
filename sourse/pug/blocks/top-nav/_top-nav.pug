@@ -205,3 +205,61 @@ mixin top-nav(comp)
 							+item(`Харидор буюртмалари`)
 							+item(`Чиқиш`)
 	// end top-nav
+mixin top-nav-cabinet(comp) 
+	// start top-nav  в этом блоке   отличия
+	+b.top-nav
+		.container
+			+e.main-row.row
+				.col-auto.d-md-none.order-first
+					+b.toggle-menu-mobile--js
+						span
+					+b.catalog-block 
+						+e.toggle--mob.d-md-none 
+								span 
+								//- +e.toggle-text Каталоглар
+						+e.dropdown
+							+e.dropdown-inner
+								ul.left-menu
+									mixin liLeft(a)
+										li.menu-item-has-children
+											a(href="#")= a  
+												+icon("chevron-right")
+									+liLeft('Профил')
+									+liLeft('Махсулотлар')
+									+liLeft('Витрина')
+									+liLeft('Хабарлар')
+								.container-fluid.pt-3
+									+b.link-logout(href="#")
+										+icon("logout")
+										span Чиқиш
+				+b.contacts-top-block.col-md-4.col-auto.d-none.d-md-block
+					ul
+						li: +e.link(href="tel:(78)150-00-88")
+							+icon("phone-icon")
+							span.d-none.d-lg-inline (78) 150-00-88 
+						li: +e.link(href="#")
+							+icon("chat")
+							span.d-none.d-lg-inline On-line чат
+				.col.text-center
+
+					+b.logo(href="/")
+						.row
+							.col-auto
+								img(src="img/svg/logo-sm.svg", alt="") 
+							.col
+								+e.DIV.text
+								img(src="img/svg/logo-text.svg", alt="") 
+				
+				//- +e.col-catalog.col-auto.d-md-none
+					
+				.col-4.d-flex.justify-content-end
+					.has-children.me-4
+						| Русский
+						ul 
+							li Русский
+							li Русский
+							li Русский  
+					+b.link-logout(href="#")
+						+icon("logout")
+						span Чиқиш
+	// end top-nav
