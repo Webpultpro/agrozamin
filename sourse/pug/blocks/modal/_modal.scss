@@ -6,6 +6,10 @@
 }
 .modal-win {
 	// display: block;
+	.p-4.bg-primary{
+		border-radius: 5px;
+
+	}
 	width: 100%;
 	position: relative;
 	max-width: rem(487);
@@ -146,4 +150,36 @@ a {
 	min-height: 100%;
 	// transform: m;
 	transform: none !important;
+}
+
+.modal-avatar{
+	&__avatar{
+		--img-size: 107px;
+		width: var(--img-size);
+		height: var(--img-size);
+		border-radius: 50%;
+		background: linear-gradient(0deg, #F3F3F3, #F3F3F3);
+		background-position: center center;
+		background-repeat: no-repeat;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 14px;
+		.icon{
+			@include a-cent1;
+			font-size: rem(22);
+			color: #ccc;
+			z-index: -1;
+		}
+	}
+	.stars{
+		justify-content: center;
+		margin-bottom: 1rem;
+		display: flex;
+		.icon{
+			font-size: 35px;
+		}
+	}
+	p{
+		color: #7C7E80;
+	}
 }

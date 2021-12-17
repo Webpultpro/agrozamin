@@ -345,7 +345,7 @@ ul{
 }
 
 
-.has-children{
+.header .has-children{
 	position: relative;
 	color: #999999;
 	display: flex;
@@ -377,7 +377,7 @@ ul{
 }
 
 
-	.has-children{
+	.header .has-children{
 		padding-left: rem(9);
 		padding-right: rem(9 + 4 + 4);
 		&::after{

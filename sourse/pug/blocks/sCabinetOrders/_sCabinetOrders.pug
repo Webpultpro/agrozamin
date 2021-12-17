@@ -176,6 +176,14 @@ mixin sCabinetOrdersProducts(status)
 			+e.BUTTON.add-prod
 				+icon('plus-circle')
 				span Махсулот қўшиш
+		+e.head
+			.row 
+				+b.check-wrap.col-auto 
+					+in-c()
+				.col-auto
+					+icon("menu-i")
+				.col
+					+input("Танлаш",'select').select-with-arrows(disabled)
 		if status
 			mixin item(data)
 				+b.orders-item--products&attributes(attributes)
@@ -302,61 +310,107 @@ mixin sCabinetOrdersProducts(status)
 
 							else
 								+e.btn.btn-outline-primary(href="#") Батафсил
-			+item({
-				number: '235356751',
-				title: 'Горох пурпурный король',
-				date: '28.04.2021 16:08',
-				unit: 'Килограм',
-				sum: '4 199 сум',
-			})
-				.col-auto 
-					+e.img-wrap
-						+pic(`prod-2.jpg`,'bg',0)
-				.col-auto 
-					+e.img-wrap
-						+pic(`add-product-2.png`,'bg',0)
-				.col-auto 
-					+e.img-wrap 
-						span +2
-			+item({
-				number: '235356751',
-				title: 'Россия гигант сабзиси',
-				date: '28.04.2021 16:08',
-				unit: 'Килограм',
-				sum: '15 099 сум',
-			})
-				.col-auto 
-					+e.img-wrap
-						+pic(`prod-5.jpg`,'bg',0)
-				.col-auto 
-					+e.img-wrap 
-						span +1
+			table
 
-			+item({
-				number: '235356751',
-				title: 'Яшил нўхат',
-				date: '28.04.2021 16:08',
-				unit: 'Килограм',
-				sum: '12 099 сум',
-			})
-				.col-auto 
-					+e.img-wrap
-						+pic(`products-site-2.jpg`,'bg',0)
-				.col-auto 
-					+e.img-wrap 
-						span +2
-			+item({
-				number: '235356751',
-				title: 'Шакарли Рукола',
-				date: '28.04.2021 16:08',
-				unit: 'Килограм',
-				sum: '12 099 сум',
-			})
-				.col-auto 
-					+e.img-wrap
-						+pic(`prod-7.jpg`,'bg',0)
-				.col-auto 
-					+e.img-wrap 
-						span +2
+				mixin item2(data)
+					+b.TR.prod-line 
+							+b.TD.check-wrap.td
+								+in-c()
+							td
+								+e.img-wrap.bg-wrap(href="#")
+									+pic("prod-2.jpg",'bg',0).picture-bg
+							td
+								.small 235356751
+								.h6.strong 
+									a.text-body(href="#") Бинафша Шоҳ Нўхати
+								p.mb-0 28.04.2021
+							td
+								ul 
+									li: a(href="#") Уруғлар
+										+icon("chevron-right")
+									li: a(href="#") Сабзавот уруғлари
+										+icon("chevron-right")
+									li: a(href="#") Сабзавот уруғлари
+										+icon("chevron-right")
+									li: a(href="#") Дон уруғлари
+										+icon("chevron-right")
+							td
+								.h6.fw-400.mb-1 12 003 000 сум
+								.text-secondary2 1 Килограм
+							td
+								.d-md-none
+									.h6.fw-400.mb-1 12 003 000 сум
+									.text-secondary2 1 Килограм
+								.row.g-2
+									.col-auto
+										+e.btn-circle(type="button")
+											+icon("edit")
+											+b.tooltip 
+												+e.inner Таҳрирлаш
+							
+									.col-auto
+										+e.btn-circle(type="button")
+											+icon("delete")
+											+b.tooltip 
+												+e.inner Ўчириш
+				- for (var x = 0; x < 8; x++)
+					+item2(data)
+			+pugin
+			//- +item({
+			//- 	number: '235356751',
+			//- 	title: 'Горох пурпурный король',
+			//- 	date: '28.04.2021 16:08',
+			//- 	unit: 'Килограм',
+			//- 	sum: '4 199 сум',
+			//- })
+			//- 	.col-auto 
+			//- 		+e.img-wrap
+			//- 			+pic(`prod-2.jpg`,'bg',0)
+			//- 	.col-auto 
+			//- 		+e.img-wrap
+			//- 			+pic(`add-product-2.png`,'bg',0)
+			//- 	.col-auto 
+			//- 		+e.img-wrap 
+			//- 			span +2
+			//- +item({
+			//- 	number: '235356751',
+			//- 	title: 'Россия гигант сабзиси',
+			//- 	date: '28.04.2021 16:08',
+			//- 	unit: 'Килограм',
+			//- 	sum: '15 099 сум',
+			//- })
+			//- 	.col-auto 
+			//- 		+e.img-wrap
+			//- 			+pic(`prod-5.jpg`,'bg',0)
+			//- 	.col-auto 
+			//- 		+e.img-wrap 
+			//- 			span +1
+
+			//- +item({
+			//- 	number: '235356751',
+			//- 	title: 'Яшил нўхат',
+			//- 	date: '28.04.2021 16:08',
+			//- 	unit: 'Килограм',
+			//- 	sum: '12 099 сум',
+			//- })
+			//- 	.col-auto 
+			//- 		+e.img-wrap
+			//- 			+pic(`products-site-2.jpg`,'bg',0)
+			//- 	.col-auto 
+			//- 		+e.img-wrap 
+			//- 			span +2
+			//- +item({
+			//- 	number: '235356751',
+			//- 	title: 'Шакарли Рукола',
+			//- 	date: '28.04.2021 16:08',
+			//- 	unit: 'Килограм',
+			//- 	sum: '12 099 сум',
+			//- })
+			//- 	.col-auto 
+			//- 		+e.img-wrap
+			//- 			+pic(`prod-7.jpg`,'bg',0)
+			//- 	.col-auto 
+			//- 		+e.img-wrap 
+			//- 			span +2
 
 	// end sCabinetOrdersProducts

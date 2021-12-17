@@ -82,7 +82,7 @@ mixin modal()
 			+input("",'text','Иш соати')
 			.text-center
 				buton.btn.btn-primary(type="submit") Жўнатиш
-	// #modal-delte
+	// #modal-online-consultant
 	
 	+b.form-wrap.modal-win(id="modal-online-consultant2" class=" " style="display: none" ) 
 		.h4.text-center.mb-3 Онлайн консултант рад етиш
@@ -91,7 +91,27 @@ mixin modal()
 			+input("",'textarea') 
 			.text-center
 				buton.btn.btn-primary(type="submit") Жўнатиш
-	// #modal-delte
+	// #modal-online-consultant2
+	
+	+b.modal-avatar.form-wrap.modal-win(id="modal-online-consultant3" class=" " style="display: none" ) 
+		+e.avatar.bg-wrap
+			+icon('user') 
+			+pic(`avatar-1.png`,'bg',0).picture-bg
+		.h4.text-center.mb-3 Жамолива Гўзал
+		+stars
+		p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+	// #modal-online-consultant3
+	+b.form-wrap.modal-win(id="modal-online-consultant4" class=" " style="display: none" ) 
+		.h4.text-center.mb-3 "Ветеринар" консултацияси учун видео сўров жўнатиш
+		form 
+			.p-4.bg-primary.text-start.mb-3(style="--bs-bg-opacity: .3;") Еслатиб ўтамиз, сизнинг аризангизни мутахассис томонидан кўриб чиқилгандан сўнг қабул қилинади
+			+input("",'textarea','Илтимос, мурожаатингизнинг моҳиятини қисқача тасвирлаб беринг.') 
+			+input("",'file')
+			p.text-start Белгиланган вақт: 04.05.2021  11:30 - 12:00
+			.text-center
+				buton.btn.btn-primary(type="submit") Жўнатиш
+	// #modal-online-consultant4
+
 	
 
 	// end modals

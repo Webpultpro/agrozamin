@@ -44,3 +44,19 @@
 	}
 }
 
+
+
+.icon-like-link{
+	[fill="#00CD69"]{
+		fill: currentColor !important;
+	}
+	// fill: transparent;
+	// stroke: currentColor;
+	// stroke-width: 1px;
+	path{
+		&:nth-child(2){
+			// display: none;
+			opacity: var(--op, 0);
+		}
+	}
+}

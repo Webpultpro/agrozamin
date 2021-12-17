@@ -78,3 +78,9 @@
 6. <https://webpult.github.io/agrozamin/public/29-cabinet-chats-edit.html> 6.1
 7. <https://webpult.github.io/agrozamin/public/29-cabinet-6.3.html> 5, 6.3
 8. <https://webpult.github.io/agrozamin/public/29-cabinet-chats-4.7.html>4.7
+9. <https://webpult.github.io/agrozamin/public/16-basket-empty.html>3.7
+10. <https://webpult.github.io/agrozamin/public/13-personal-account-1.html>2.1
+11. <https://webpult.github.io/agrozamin/public/30-favorites.html>1.9
+12. <https://webpult.github.io/agrozamin/public/30-favorites-empty.html>2.
+13. <https://webpult.github.io/agrozamin/public/16-basket-final.html>3.9
+14. <https://webpult.github.io/agrozamin/public/13-personal-account-6-filled.html> 4.

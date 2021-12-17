@@ -31,7 +31,44 @@
 	&__row {
 		--bs-gutter-y: var(--bs-gutter-x);
 	}
+	&__btn-more{
+		margin-left: auto;
+		margin-right: auto;
+		@extend .btn;
+		width: 100%;
+		max-width: rem(250);
+		display: block;
+	}
+	&__filter-btn{
+		cursor: pointer;
+		.icon{
+			font-size: rem(16);
+		}
+		&.active,
+		&:hover{
+			color: var(--bs-primary);
+		}	
+	}
 
+
+		&__empty{
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(380);
+		.icon{
+			color: var(--bs-primary);
+			fill: transparent;
+			stroke: currentColor;
+			stroke-width: 4px;
+			font-size: rem(109);
+			margin-bottom: 15px;
+
+		}
+		text-align: center;
+		p{
+			color: #7C7E80;
+		}
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
@@ -394,6 +431,7 @@
 		// justify-content: space-between;
 		justify-content: space-around;
 		padding-top: 14px;
+		
 		@include media-breakpoint-up(md){
 			padding: var(--sp);
 			padding-top: 14px;
@@ -414,20 +452,103 @@
 	}
 	&__footer-link{
 		color: #AAAAAA;
-		font-size: 1rem;
 		cursor: pointer;
+		
 		&hover,
-		&active{
-			color:vavr(--bs-primary);
+		&.active{
+			color: var(--bs-primary);
+			
+			path{
+					--op: 1;
+			}
 		}
-
+		
 		.icon{
+			font-size: 1.2rem;
 			&-email-link{
 				// fill: transparent;
-				stroke:currentColor;
-				stroke-width: .2px;
+				// stroke:currentColor;
+				// stroke-width: .2px;
 				
 			}
 		}
+	}
+	&--horizontal {
+		@include media-breakpoint-down(md) {
+			p{
+				margin-bottom: 0;
+			}
+			.h5.mb-3{
+				font-size: 24px;
+			}
+		}
+		.addBlock{
+			width: 175px;
+			@include media-breakpoint-down(md) {
+				margin-left: 0;
+				margin-right: 0;
+			}
+				@include media-breakpoint-up(md) {
+
+					justify-content: center;
+					margin-bottom: 0;
+				}
+				justify-content: start;
+			input{
+				width: rem(80);
+			}
+				@include media-breakpoint-up(md) {
+
+					&__btn{
+						background: none;
+						border: none;
+					}
+				}
+		}
+	}
+	&--horizontal .card-prod{
+		&__img-wrap{
+			margin-bottom: 40px;
+		}
+		&__footer-links{
+			transform: none;
+			border: none;
+			margin-bottom: 4px;
+			@include media-breakpoint-down(md) {
+				left: 0;
+				bottom: 15px;
+				width: 140px;
+			}
+			@include media-breakpoint-up(md) {
+				
+				position: static;
+				@include roww(10px, m);
+				}
+				position: absolute;
+				// justify-content: center;
+		}
+			@include media-breakpoint-up(md) {
+
+				&__footer-link{
+					width: 32px;
+					height: 32px;
+					border: 1px solid #E0E0E0;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					border-radius: 50%;
+					.icon{
+						font-size: 14px;
+					}
+				}
+			}
+
+	}
+	.btn-sm{
+		font-weight: normal;
+	}
+	&--horizontal &__btns{
+		--bs-gutter-x: 7px !important;
+		--bs-gutter-y: var(--bs-gutter-x);
 	}
 }

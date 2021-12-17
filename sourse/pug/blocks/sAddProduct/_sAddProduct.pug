@@ -5,6 +5,7 @@ mixin sAddProduct(empty)
 			if empty
 				+b.section-title
 					h1 Махсулот қўшиш
+				
 				+e.item--small.gal-img 
 					h6 Махсулот сурати
 					+e.prompt 5 та сурат юклаш мумкин
@@ -68,6 +69,18 @@ mixin sAddProduct(empty)
 			else
 				+b.section-title
 					h1 Таҳрирлаш
+				+e.item
+					.row
+						.col-lg-8.col-md-6
+							+input(`Картошка мазали, сувли ва ўткир`, 'text', `Маҳсулот номи`)
+						.col-lg-4.col-md-6
+							+input(`Артикул`, 'text', `Артикул`)
+						.col-lg-4.col-md-6
+							+input(`Уруғлар`, 'select', `Каталог`)
+						.col-lg-4.col-md-6
+							+input(`Уруғлар`, 'select', `Категория`)
+						.col-lg-4.col-md-6
+							+input(`Нўхат`, 'select', `Субкатегория`) 
 				+e.item--small.gal-img 
 					h6 Махсулот сурати
 					+e.prompt 5 та сурат юклаш мумкин
@@ -79,54 +92,54 @@ mixin sAddProduct(empty)
 						data-max-file-size="3MB"
 						data-max-files="6")
 				+e.item--wide
-					.row
-						.col-md-6
-							+input(`Керакли махсулот каталогини танланг`, 'select', `Каталог`)
-						.col-md-6
-							+input(`Керакли махсулот категориясини танланг`, 'select', `Категория`)
-						.col-md-6
-							+input(`Керакли махсулот субкатегориясини танланг`, 'select', `Субкатегория`)
-						.col-md-6
-							+input(`Керакли махсулот турини танланг`, 'select', `Махсулот тури`)
-
+					+input(``, 'textarea', `Тавсифи`)
 				+e.item--wide
 					.row
+						.col-md-6
+							+input(`3 290`, 'text', `Ўлчов бирлиги`)
 						.col-md-6
 							+input(`Килограм`, 'select', `Ўлчов бирлиги`)
-						.col-md-6
-							.row
-								.col-6
-									+input(``, 'text', `Жорий нархи`)
-								.col-6
-									+input(`Сўм`, 'select', `Валюта`)
-						.col-md-6
-							+input(`Мавжуд емас`, 'select', `Қолдиқ ҳолати`)
-						.col-md-6
-							+input(``, 'text', `Қолдиқ миқдори`)
-						.col-md-6
-							.form-wrap__input-title Тўлов тури
-							.row
-								.col-6
-									+in-c(`radio`, `Пул ўтказиш орқали`)
-								.col-6
-									+in-c(`radio`, `Нақт пул орқали`)
-								.col-6.mt-0
-									+in-c(`radio`, `Карта орқали`)
-						.col-md-6
-							+input(`Харидор томонидан олиб кетиш`, 'select', `Этказиб бериш тури`)
+						.col-auto 
+							+in-c()
+								+e.SPAN.text Келишув асосида
+						.col-auto 
+							+in-c()
+								+e.SPAN.text Савдолашиш
 				+e.item--wide
 					.row
 						.col-md-6
-							+input(``, 'text', `Жойлашуви`)
+							.h6.mb-4 Тўлов тури
+							+in-c(): +e.SPAN.text Пул ўтказиш орқали
+							+in-c(): +e.SPAN.text Нақт пул орқали
+							+in-c(): +e.SPAN.text Карта орқали
 						.col-md-6
-							+input(``, 'text', `Хусусиятлари`)
-						.col-12
-							+input(``, 'textarea', `Тавсифи`)
-						.col-12
-							h6 Геолокация боича манзил
-							+e.prompt--lg.text-secondary 15, Бектемир тумани, Олим Оширов даҳа, Тошкент, Ўзбекистон
-							+e.map
-								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5993.788816048251!2d69.28181339826368!3d41.31116065483939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b2931f41f23%3A0x81095e06b654b845!2z0KHQutCy0LXRgCDQuNC8LiDQkNC80LjRgNCwINCi0LXQvNGD0YDQsA!5e0!3m2!1sru!2sby!4v1627060681100!5m2!1sru!2sby"   style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+							.h6.mb-4 Этказиб бериш тури
+							+in-c(): +e.SPAN.text Омборхонадан олиб кетиш
+							+in-c(): +e.SPAN.text Ўзбекистон бўйлаб етказиб бериш
+				
+				+e.item--wide
+					.mb-3
+						.h6.mb-0 Калит сўзлар / Теглар
+						.text-secondary2 Қўшимча калит сўзларни вергул билан кўрсатинг
+						+input(``, 'text') 
+					.mb-3
+						+input(``, 'text', `Тавсифи`) 
+					+e.map
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5993.788816048251!2d69.28181339826368!3d41.31116065483939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b2931f41f23%3A0x81095e06b654b845!2z0KHQutCy0LXRgCDQuNC8LiDQkNC80LjRgNCwINCi0LXQvNGD0YDQsA!5e0!3m2!1sru!2sby!4v1627060681100!5m2!1sru!2sby"   style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+					p.text-secondary2 Перетащите метку на карте или напишите ваш точный адрес.
+					+e.row.row.justify-content-between
+						.col-xl-5.col-lg-6
+							+b.LABEL.radio-color--blue
+								input(type="radio", name="color")
+								+e.block 
+									+e.title Фаол Еълон
+									+e.text Сайтда кўрсатилинади
+						.col-xl-5.col-lg-6
+							+b.LABEL.radio-color--red
+								input(type="radio", name="color")
+								+e.block 
+									+e.title Фаол бўлмаган еълон
+									+e.text Сайтда кўрсатилмайди
 				+e.btn-wrap
 					+e.BUTTON.btn.btn.btn-primary Сақлаш
 	// end sAddProduct

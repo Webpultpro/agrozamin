@@ -1,4 +1,4 @@
-mixin sBasket(order)
+mixin sBasket(e, f)
 	// start sBasket
 	+b.sBasket.section#sBasket&attributes(attributes)
 		.container
@@ -47,28 +47,86 @@ mixin sBasket(order)
 									+b.alert-btn(href="#")
 										+e.counter 4 
 										+icon("alert")
-					tbody
-						+tr("1",'Бинафша Шоҳ Нўхати')
-							li <span>Олиб кетиш:</span> 15, Бектемирский район, массив Олима Оширова, Ташкент, Узбекистан
-						+tr("2",'Қизил лавлаги') 
-						+tr("3",'Яшил парракли укроп')
-							li <span>Олиб кетиш:</span> 15, Бектемирский район, массив Олима Оширова, Ташкент, Узбекистан
-						+tr("4",'Рассия гигант сабзилари') 
-				if !order
-					+e.total
-						+e.total-price
-							span.text-secondary  Жами: 
-							| 
-							span.fw-500 31 944 889 сум
-						+e.btn(type="button") Буюртма бериш
-				else
-					+e.total.w-100.text-start
-						+e.total-price
-							.row
-								.col
-									span Жами:
-								.col-auto
-									| 31 944 889 сум
+					if !e
+						tbody
+							+tr("1",'Бинафша Шоҳ Нўхати')
+								li <span>Олиб кетиш:</span> 15, Бектемирский район, массив Олима Оширова, Ташкент, Узбекистан
+							+tr("2",'Қизил лавлаги') 
+							+tr("3",'Яшил парракли укроп')
+								li <span>Олиб кетиш:</span> 15, Бектемирский район, массив Олима Оширова, Ташкент, Узбекистан
+							+tr("4",'Рассия гигант сабзилари') 
+				if !e
+					if !order
+						+e.total
+							+e.total-price
+								span.text-secondary  Жами: 
+								| 
+								span.fw-500 31 944 889 сум
+							+e.btn(type="button") Буюртма бериш
+					else
+						+e.total.w-100.text-start
+							+e.total-price
+								.row
+									.col
+										span Жами:
+									.col-auto
+										| 31 944 889 сум
+				if e
+					+e.empty.section 
+						+icon("shopping-cart-outline")
+						.h5 Сизда танланган махсулотлар ёқ
+						p Ўзингизга керакли бўлган махсолтни сақланг ва уни ушбу саҳифадан топишингиз мумкин
 				block
+	// end sBasket
+
+mixin sBasketFinal(e, f)
+	// start sBasket
+	+b.sBasket.section#sBasket&attributes(attributes)
+		.container
+			+e.inner
+				table
+					thead 
+						tr 
+							th(colspan="2") Товар
+							th Нархи (сум)	
+							 
+							th.text-start Миқдори
+							th Суммаси 
+					mixin tr(i, t)
+						tr
+							td
+								a(href="#") 
+									+pic(`prod-${i}.jpg`,'bg',0)
+							td 
+								.strong.mb-1= t
+								ul
+									li <span>Сотувчи:</span> Ташкент АгроФерма
+									block
+
+							td.text-start 
+								.text-secondary 10 199 
+							td 
+								.text-secondary 
+									if order
+									| 1 
+									| килограмм
+							 
+							td.final-price 10 199 сум
+						 
+					if !e
+						tbody
+							+tr("1",'Бинафша Шоҳ Нўхати')
+								li <span>Олиб кетиш:</span> 15, Бектемирский район, массив Олима Оширова, Ташкент, Узбекистан
+							+tr("2",'Қизил лавлаги') 
+							+tr("3",'Яшил парракли укроп')
+								li <span>Олиб кетиш:</span> 15, Бектемирский район, массив Олима Оширова, Ташкент, Узбекистан
+							+tr("4",'Рассия гигант сабзилари') 
+				if !e
+					if !order
+						+e.total
+							+e.total-price
+								span.text-secondary  Жами: 
+								| 
+								span.fw-500 31 944 889 сум
 	// end sBasket
 

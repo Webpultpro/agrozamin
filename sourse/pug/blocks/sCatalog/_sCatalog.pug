@@ -12,41 +12,56 @@ mixin cardf(i, h, p, u, t)
 					+e.unit.text-secondary!= u
 				p!= t
 				+e.card-btn Харид қилиш
-mixin sCatalog(data)
+mixin catalog-filter()
+	.row.align-items-center.g-2.py-3
+			.col-auto Саралаш: 
+			.col
+				.row 
+					.col-auto: +e.filter-btn.active: +icon("filter-1") 
+					.col-auto: +e.filter-btn: +icon("filter-2") 
+					.col-auto: +e.filter-btn: +icon("filter-3") 
+					.col-auto: +e.filter-btn: +icon("filter-4") 
+			.col-auto.d-none.d-md-block
+				+b.btns-head
+					+e.btn-head.active(type="button")
+						+icon("horizontal")
+					+e.btn-head(type="button")
+						+icon("vertical")
+			.col-auto.d-lg-none
+				+e.toggle-filter--js 
+					+icon("filter-icon")
+					| Фильтр
+mixin sCatalog(fav)
 	// start sCatalog
 	+b.sCatalog.section.pt-0&attributes(attributes)
-		+b.banner-block(style="background: #D8E0F0")
-			.row.align-items-center
-				.col
-					+e.content
-						h3 2021йил учун екиш мавсуми бошланди
-						p Келажакда ҳосил учун уруғнинг керакли турини танланг
-						+e.btn(href="#") Батафсил
-				.col-md-auto
-					+pic("pile-black-beans1.png",'',0)
-		+e.btns.row.gy-3
-			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Полиз экини уруғлари
-			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Дуккакли уруғлар
-			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Дон уруғлари
-			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Майса уруғлари
-			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Сабзавот уруғлари
-		h2 Оммабоб махсулотлар
-		.row.align-items-center.g-2.py-3
-			.col-auto Саралаш: 
-			.col-auto
-				select.form-select.form-select-filter
-					option Рейтинг
-					option Енг қиммат
-					option Енг арзон
+		if !fav
+			+b.banner-block(style="background: #D8E0F0")
+				.row.align-items-center
+					.col
+						+e.content
+							h3 2021йил учун екиш мавсуми бошланди
+							p Келажакда ҳосил учун уруғнинг керакли турини танланг
+							+e.btn(href="#") Батафсил
+					.col-md-auto
+						+pic("pile-black-beans1.png",'',0)
+			+e.btns.row.gy-3
+				+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Полиз экини уруғлари
+				+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Дуккакли уруғлар
+				+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Дон уруғлари
+				+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Майса уруғлари
+				+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Сабзавот уруғлари
+			h2 Оммабоб махсулотлар
+			+catalog-filter()
 		div
-			+card-hor(1)
-			+card-hor(2)
-			+card-hor(3)
-			+card-hor(4)
-			+card-hor(5)
-			+card-hor(6)
-		+e.foot.text-center
-			+e.btn-footer(type="button") Кўпроқ кўриш
+			+card-hor(1,fav)
+			+card-hor(2,fav)
+			+card-hor(3,fav)
+			+card-hor(4,fav)
+			+card-hor(5,fav)
+			+card-hor(6,fav)
+		if !fav
+			+e.foot.text-center
+				+e.btn-footer(type="button") Кўпроқ кўриш
 				
 	// end sCatalog
 
@@ -60,23 +75,7 @@ mixin sCatalog2(data)
 			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Дон уруғлари
 			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Майса уруғлари
 			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Сабзавот уруғлари
-		.row.align-items-center.g-2.py-3
-			.col-auto Саралаш: 
-			.col
-				select.form-select.form-select-filter
-					option Рейтинг
-					option Енг қиммат
-					option Енг арзон
-			.col-auto.d-none.d-md-block
-				+b.btns-head
-					+e.btn-head.active(type="button")
-						+icon("horizontal")
-					+e.btn-head(type="button")
-						+icon("vertical")
-			.col-auto.d-lg-none
-				+e.toggle-filter--js 
-					+icon("filter-icon")
-					| Фильтр
+		+catalog-filter()
 		div
 			+card-hor(1)
 			+card-hor(2)
@@ -84,16 +83,19 @@ mixin sCatalog2(data)
 			+card-hor(4)
 			+card-hor(5)
 			+card-hor(6)
+		//- +e.foot
+		//- 	.row
+		//- 		.col
+		//- 			+pugin()
+		//- 		.col-auto.d-none.d-sm-block
+		//- 			.text-secondary.pt-3 211 тадан 24 таси кўрилди
 		+e.foot
-			.row
-				.col
-					+pugin()
-				.col-auto.d-none.d-sm-block
-					.text-secondary.pt-3 211 тадан 24 таси кўрилди
+			+e.btn-more(href="#").btn-outline-primary Кўпроқ кўриш
 				
 	// end sCatalog
 
-	
+
+
 mixin sCatalog3(data)
 	// start sCatalog
 	+b.sCatalog.section.pt-0&attributes(attributes)
@@ -103,23 +105,7 @@ mixin sCatalog3(data)
 			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Дон уруғлари
 			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Майса уруғлари
 			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Сабзавот уруғлари
-		.row.align-items-center.g-2.py-3
-			.col-auto Саралаш: 
-			.col
-				select.form-select.form-select-filter
-					option Рейтинг
-					option Енг қиммат
-					option Енг арзон
-			.col-auto.d-none.d-md-block
-				+b.btns-head
-					+e.btn-head.active(type="button")
-						+icon("horizontal")
-					+e.btn-head(type="button")
-						+icon("vertical")
-			.col-auto.d-lg-none
-				+e.toggle-filter--js 
-					+icon("filter-icon")
-					| Фильтр
+		+catalog-filter()
 		+e.row.row
 			+card(1,'Қизил Юсуф памидори Самарқанд махсулоти')
 			+card(2,'Бинафша Шоҳ Нўхати')
@@ -130,13 +116,14 @@ mixin sCatalog3(data)
 			+card(6)
 			+card(5)
 			+card(6)
+		//- +e.foot
+		//- 	.row
+		//- 		.col
+		//- 			+pugin()
+		//- 		.col-auto.d-none.d-sm-block
+		//- 			.text-secondary.pt-3 211 тадан 24 таси кўрилди
 		+e.foot
-			.row
-				.col
-					+pugin()
-				.col-auto.d-none.d-sm-block
-					.text-secondary.pt-3 211 тадан 24 таси кўрилди
-				
+			+e.btn-more(href="#").btn-outline-primary Кўпроқ кўриш
 	// end sCatalog
 
 mixin sCatalog15(data)
@@ -146,14 +133,14 @@ mixin sCatalog15(data)
 			.section-title.text-center
 				h2 Оммабоп маҳсулотлар
 			+e.row.row
-				+cardf(1, `Сабзи Рус гиганти`, `15 990 132 сум`, `Тонна`, `Европ ва осиё мамалакатларида кўп учрайдиган Россия гигант сабзилари Россия гигант сабзилари`)
-				+cardf(2, `Укроп Озорник`, `15 990 132 сум`, `Тонна`, `Орта осиёда кенг тарқалган яшил парракли укроплар`)
-				+cardf(3, `Яшил нохот доначалари`, `15 990 132 сум`, `Тонна`, `Ажойиб хухусиятларга ега бўлган яши нохот доначали`)
-				+cardf(4, `Яшил нохот доначалари`, `15 990 132 сум`, `Тонна`, `Ажойиб хухусиятларга ега бўлган яши нохот доначали`)
-				+cardf(5, `Сабзи Рус гиганти`, `15 990 132 сум`, `Тонна`, `Европ ва осиё мамалакатларида кўп учрайдиган Россия гигант сабзилари Россия гигант сабзилари`)
-				+cardf(6, `Укроп Озорник`, `15 990 132 сум`, `Тонна`, `Орта осиёда кенг тарқалган яшил парракли укроплар`)
-				+cardf(7, `Яшил нохот доначалари`, `15 990 132 сум`, `Тонна`, `Ажойиб хухусиятларга ега бўлган яши нохот доначали`)
-				+cardf(1, `Яшил нохот доначалари`, `15 990 132 сум`, `Тонна`, `Ажойиб хухусиятларга ега бўлган яши нохот доначали`)
-
+				+card(1,'Қизил Юсуф памидори Самарқанд махсулоти')
+				+card(2,'Бинафша Шоҳ Нўхати')
+				+card(3)
+				+card(4,'Мелотрия Колибри Самарқанд махсулоти')
+					+e.btn.btn-outline-primary.disabled(type="button") Запрос оставлен
+				+card(5)
+				+card(6)
+				+card(5)
+				+card(6)
 	// end sCatalog
 

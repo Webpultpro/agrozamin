@@ -5,6 +5,9 @@
 	// --sPT: ;
 	--sPB: 0;
 	--sTPB: #{rem(20)};
+	.custom-input{
+		margin-bottom: 1rem;
+	}
 	.form-wrap {
 		margin: 0;
 		padding: 0;
@@ -51,19 +54,20 @@
 					}
 				}
 			}
-			&--wide {
+			.row {
 				--size: #{rem(20)};
-				margin-bottom: rem(36);
-				box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
-				border-radius: 12px;
-				padding: calc(var(--size) * 1.5) var(--size);
+				--bs-gutter-x: var(--size);
+				--bs-gutter-y: var(--bs-gutter-x);
+			}
+			// padding-bottom: 30px;
+			margin-bottom: rem(36);
+			&--wide {
+				// box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+				// border-radius: 12px;
+				// padding: calc(var(--size) * 1.5) var(--size);
 				@include media-breakpoint-up(md) {
-					padding: var(--size);
+					// padding: var(--size);
 					--size: #{rem(30)};
-				}
-				.row {
-					--bs-gutter-x: var(--size);
-					--bs-gutter-y: var(--bs-gutter-x);
 				}
 			}
 
@@ -71,10 +75,11 @@
 				width: rem(16);
 				height: rem(16);
 				margin-top: 2px;
-				border-width: 2px;
-				// &[type="checkbox"] {
+				// border-width: 2px;
+				&[type="checkbox"] {
 				// 	border-radius: 0;
-				// }
+					background-size: 100%;
+				}
 				&[type="radio"] {
 					border-width: 1px;
 				}
@@ -129,8 +134,16 @@
 			min-width: 250px;
 		}
 		&__map {
-			max-width: 500px;
-			height: 200px;
+			max-width: 100%;
+			height: 211px;
+			margin-bottom: 10px;
+			iframe{
+				width: 100% !important;
+				height: 100% !important;
+				// position: absolute;
+				// left: 0;
+
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {
@@ -148,3 +161,39 @@
 	@include media-breakpoint-down(xl) {
 	}
 } // end.sAddProduct
+
+.radio-color{
+	cursor: pointer;
+	position: relative;
+	* {
+		display: block;
+	}
+	--bs-primary: #004085;
+	&__block{
+		background: var(--bg,rgba(204, 229, 255, 0.5));
+		color: var(--color, #004085);
+		border-radius: 9px;
+		display: block;
+		padding: rem(14)  rem(14) rem(14) rem(66);
+	}
+	&__title{
+		font-weight: 500;
+		font-size: 16px;
+	}
+	&__text{
+		opacity: 0.6;
+	}
+	input{
+		@extend .form-check-input;
+		position: absolute;
+		top: rem(16);
+		left: rem(29);
+		width: 20px;
+		height: 20px;
+	}
+	&--red{
+		--bg: rgba(245, 198, 203, 0.5);
+		--color: #721C24; 
+		--bs-primary: var(--color);
+	}
+}

@@ -8,7 +8,7 @@ mixin personal-info(data)
 					+e.initials ШД
 				+e.subtitle.d-none.d-lg-block Шахсий маълумотлар
 				h1 Шокиров Дилмурод
-			.row
+			+e.row.row
 				mixin item(t, v)
 					.col-6
 						+e.item
@@ -16,7 +16,12 @@ mixin personal-info(data)
 							+e.value!= v
 				+item(`Туғилган сана`, `3.04.1991`)
 				+item(`Жинси`, `Еркак`)
+
 				+item(`E-mail`, `Кўрсатилмаган`)
 				+item(`Телефон`, `+998 97 405 05 50`)
-			+e.BUTTON.btn.btn.btn-primary Маълумотларни ўзгартириш
+			.row.gy-2
+				.col-md-auto
+					+e.BUTTON.btn.btn.btn-primary Маълумотларни ўзгартириш
+				.col-md-auto
+					+e.BUTTON.btn.btn.btn-primary Паролни ўзгартириш
 	// end personal-info

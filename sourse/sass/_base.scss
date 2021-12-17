@@ -541,22 +541,25 @@ iframe {
 }
 
 .irs--round .irs-handle {
-	top: 26px;
-	width: 10px;
-	height: 10px;
+	top: 25px;
+	width: 12px;
+	height: 12px;
 	border: none;
 	background-color: var(--bs-primary) !important;
 	border-radius: 24px;
 }
 
+.irs--round .irs-bar,
 .irs--round .irs-line {
-	top: 30px;
-	height: 2px;
+	top: 28px;
+	height: 5px;
+	border-radius: 4px;
+	
+}
+.irs--round .irs-line {
 	background-color: #e7e7e7;
 }
-.irs--round .irs-bar {
-	top: 30px;
-	height: 2px;
+.irs--round .irs-bar{
 	background: #abb5be;
 }
 
@@ -858,4 +861,45 @@ iframe {
 		position: relative;
 		top: rem(-2);
 	}
+}
+
+.cabinetTab{
+	display: flex;
+	border-bottom: 1px solid #E6E6E6;
+	margin-bottom: 40px;
+	&__btn{
+		font-size: 16px;
+		font-weight: 500;
+		display: block;
+		padding-bottom: 16px;
+		color: #3E3E3E;
+		margin-right: 64px;
+		position: relative;
+		&::before{
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -2px;
+			border-radius: 10px;
+			height: 3px;
+			width: 100%;
+			background-color: var(--bs-primary);
+			@include mt;
+			transform: scaleX(var(--sc, 0));
+			transform-origin: 0 0 ;
+		}
+		&:hover,
+		&.active{
+			color: var(--bs-primary);
+			--sc:1;
+		}
+		&.active{
+		}
+	}
+}
+
+.select-with-arrows{
+	background-image: url("data:image/svg+xml,%3Csvg width='10' height='13' viewBox='0 0 10 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L5 1L9 4' stroke='%233E3E3E' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M9 9L5 12L1 9' stroke='%233E3E3E' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+	width: 222px;
+	background-size: 11px;
 }
