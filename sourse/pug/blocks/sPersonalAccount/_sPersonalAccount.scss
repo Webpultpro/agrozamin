@@ -1,5 +1,16 @@
 // start .sPersonalAccount
 .sPersonalAccount {
+	&__link{
+		@extend .text-body;
+		display: inline-block;
+		margin-bottom: 1rem;
+		.icon{
+			font-size: 16px;
+			position: relative;
+			top: em(-1);
+			margin-right: 6px;
+		}
+	}
 	--sPT: 0;
 	--sPB: #{rem(125)};
 	// --sTPB: ;
@@ -162,7 +173,8 @@
 					background-color: var(--bs-primary);
 					color: $white;
 					&:hover {
-						background-color: #26d580;
+						background-color: var(--bs-primary-hover)
+
 					}
 				}
 			}
@@ -207,21 +219,21 @@
 		z-index: 5;
 		object-fit: cover;
 	}
-	&::after {
-		content: "";
-		@include mt;
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		opacity: 0;
-		z-index: 6;
-		background-image: url(../img/svg/camera.svg);
-		background-repeat: no-repeat;
-		background-position: 50%;
-		background-color: rgba($color: #000000, $alpha: 0.58);
-	}
+	// &::after {
+	// 	content: "";
+	// 	@include mt;
+	// 	position: absolute;
+	// 	left: 0;
+	// 	top: 0;
+	// 	width: 100%;
+	// 	height: 100%;
+	// 	opacity: 0;
+	// 	z-index: 6;
+	// 	background-image: url(../img/svg/camera.svg);
+	// 	background-repeat: no-repeat;
+	// 	background-position: 50%;
+	// 	background-color: rgba($color: #000000, $alpha: 0.58);
+	// }
 	&:hover {
 		&::after {
 			opacity: 1;

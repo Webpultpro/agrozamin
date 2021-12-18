@@ -762,6 +762,10 @@ function eventHandler() {
 			$(".sCabinetOrders__input" ).attr("disabled",'disabled')
 		}
 	});
+	$(".toggle-modal-more").click(function(){
+		$(this).toggleClass("active");
+		$(this).parents(".modal-win").find(".block-more-info").slideToggle();
+	})
 	// $(' .prod-line type:checkbox').
 };
 

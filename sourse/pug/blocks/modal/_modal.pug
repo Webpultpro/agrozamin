@@ -112,6 +112,67 @@ mixin modal()
 				buton.btn.btn-primary(type="submit") Жўнатиш
 	// #modal-online-consultant4
 
-	
+	+b.form-wrap.modal-win.modal-win--status(id="modal-pa" class=" " style="display: none" ) 
+		.h1.strong.mb-5 № 210403-907701 
+		+b.modal-head.row
+			.col-auto
+				+e.img-wrap.bg-wrap(href="#")
+						+pic("prod-2.jpg",'bg',0).picture-bg
+			.col
+				.fw-500 Шокиров Дилмурод
+				div МЧЖ "Azia media"
+				.toggle-modal-more Реквизиты
+					+icon("chevron-down")
+			.col-auto
+				+e.btn-circle(href="#"): +icon("email-link")
+			.col-auto
+				+e.btn-circle(href="#"): +icon("phone-link")
+		+b.block-more-info 
+			.row
+				.col-4 
+					.text-secondary Вилоят
+					p Самарқанд вилояти
+				.col-8
+					.text-secondary Банк МФО си
+					p "Агробанк" аксиядорлик-тижорат банки»
+				.w-100
+				.col-4 
+					.text-secondary Туман
+					p Пастдарғом туман
+				.col
+					.text-secondary Хисоб рақами
+					p 2223 1238 4568 1234 9963 
+				.col-auto 
+					.text-secondary СТИР
+					p 154786022
+				.col-12 
+					.text-secondary Манзил
+					p 43 Мукимий Кўчаси, Тошкент, Ўзбекистон, 100096-уй
+		.text-secondary2.h4 Маҳсулот
+		+b.prod-order-item
+			.row
+				.col-auto
+					+e.img-wrap.bg-wrap(href="#")
+						+pic("prod-2.jpg",'bg',0).picture-bg
+				.col
+					.fw-500 Крупногабаритная шина 45/65R45(1150/65R45) BKT EARTHMAX SR 53 L-5 ** CR 245 A2 ** TL
+		table 
+			tr 
+				th Нархи (сум)	
+				th 10 199 
+			tr 
+				td Миқдори
+				td 1000 килограмм
+			tr.h6.fw-400 
+				td Жами
+				td 31 944 889 сўм
+		.row 
+			.col-6 
+				button.btn.btn-outline-primary.w-100  Бекор қилиш
+			.col-6 
+				button.btn.btn-primary.w-100  Қабул қилиш
+	// #modal-pa
+
+
 
 	// end modals

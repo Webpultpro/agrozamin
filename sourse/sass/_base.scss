@@ -867,6 +867,19 @@ iframe {
 	display: flex;
 	border-bottom: 1px solid #E6E6E6;
 	margin-bottom: 40px;
+	&__count{
+		background: #ED6262;
+		width: 16px;
+		height: 16px;
+		display: block;
+		text-align: center;
+		position: absolute;
+		top: rem(4);
+		border-radius: 50%;
+		left: calc(100% + 8px);
+		color: #fff;
+		font-size: 10px;
+	}
 	&__btn{
 		font-size: 16px;
 		font-weight: 500;
@@ -874,6 +887,7 @@ iframe {
 		padding-bottom: 16px;
 		color: #3E3E3E;
 		margin-right: 64px;
+		position: relative;
 		position: relative;
 		&::before{
 			content: '';

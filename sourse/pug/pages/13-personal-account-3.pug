@@ -23,10 +23,11 @@ block title
 block pagecontent
 
 
+	+mob-mnu()
 	+header()
-		+topLine('comp')
-		+top-nav('comp') 
-	+breadcrumb('Асосий саҳифа', 'Кабинет', title)
+		+topLine()
+		+top-nav()
+	+breadcrumb('Асосий саҳифа',title)
 	+sPersonalAccount()
 		.row.row--main
 			.col-lg.col--aside
@@ -43,8 +44,13 @@ block pagecontent
 					+e.LI.item: a(href="#") Онлайн консултант
 						+e.SPAN.item-count 59
 			.col-lg.col--main
-				+seller-legal-info()
+				+cabinetTab()
+				.row
+					.col-lg.col--aside
+						+b.avatar--empty
+							//- img(src=`img/@2x/avatar.jpg`, alt="")
+							//- +e.initials ШД
+					.col-lg.col--main
+						//- +personal-info()
+						+legal-info(`empty`)
 	+footer()
-
-
-

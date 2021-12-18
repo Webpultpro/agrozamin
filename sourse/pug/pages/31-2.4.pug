@@ -1,0 +1,59 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sAdvantages/_sAdvantages.pug
+//- include ../blocks/sCategories/_sCategories.pug
+//- include ../blocks/sPopulars/_sPopulars.pug
+//- include ../blocks/sWantToSell/_sWantToSell.pug
+//- include ../blocks/sHowWorks/_sHowWorks.pug
+include ../blocks/sPersonalAccount/_sPersonalAccount.pug
+include ../blocks/personal-info/_personal-info.pug
+include ../blocks/legal-info/_legal-info.pug
+
+block variables
+	- let  mainPage= null 
+	//- - let  bg= '13-personal-account.jpg'
+
+block title
+	- let  title= 'Кабинет'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+topLine()
+		+top-nav()
+	+breadcrumb('Асосий саҳифа',title)
+	+sPersonalAccount()
+		.mb-5
+			h1 Шахсий маълумотларни ўзгартириш
+		.row.row--main
+			.col-lg.col--aside
+				+b.avatar
+					img(src=`img/@2x/avatar.jpg`, alt="")
+					+e.initials ШД
+				.text-center
+					+e.link(href="#")
+						+icon("plus")
+						| Сурат қўшиш
+			.col-lg.col--main
+				+form-wrap.--edit 
+					.row.gx-5
+						.col-lg-6
+							+input('','text','Исм') 
+							+input('','text','Фамилияси')
+							+input('','text','Отасининг исми') 
+						.col-lg-6
+							+input('','tel','Телефон рақами') 
+							+input('','text','Тугилган сана') 
+							+input('','email','E-mail')
+					.text-end.pt-5
+						button.btn.btn-primary Сақлаш
+	+footer()
+
+
+

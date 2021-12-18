@@ -1,70 +1,43 @@
 mixin sCabinetOrders()
 	// start sCabinetOrders
-	+b.sCabinetOrders#sCabinetOrders&attributes(attributes)
-		mixin item(data)
-			+b.orders-item&attributes(attributes)
-				.row
-					.col
-						+e.title= data.title
-						+e.status(style=`--color: ${data.color}`)
-							= data.status
-						+e.number № RU210403-907701
-						ul
-							li 
-								span.text-secondary Буюртма берилган сана
-								| 27.04.2021
-							li 
-								span.text-secondary Тўлов тури:
-								| Етказиб берилади #[strong 50 380 сум] 3 та махсулот учун
-							li 
-								span.text-secondary Қабул қилиш усули:
-								| Олиб кетиш, 15, Бектемирский район, массив Олима Оширова, Ташкент
-					+e.col.col-sm-auto
-						+e.images.row
-							if data.emty
-								.col-auto
-									+e.img-wrap
-
-							else
-								.col-auto 
-									+e.img-wrap
-										+pic(`prod-1.jpg`,'bg',0)
-								.col-auto 
-									+e.img-wrap
-										+pic(`prod-1.jpg`,'bg',0)
-								block
-						if data.btn
-							+e.btn.btn-primary(href="#") Тасдиқлаш
-
-						else
-							+e.btn.btn-outline-primary(href="#") Бекор қилиш
-		+item({
-			title:'МЧЖ "Green technology"',
-			color:'#27B7D6',
-			status:'Тўлов қилинган', 
-			btn:"fgb"
-		})
-			.col-auto 
-				+e.img-wrap 
-					span +6
-		+item({
-			title:'МЧЖ "Azia media"',
-			color:'#7C7E80',
-			status:'Буюртма берилган', 
-			btn:"fgb"
-		})
-		+item({
-			title:'ЧП “Mega group”',
-			color:'#00CC69',
-			status:'Буюртма этказилган', 
-			btn:"fgb"
-		})
-		+item({
-			title:'МЧЖ "Azia media"',
-			color:' #7C7E80',
-			status:'Буюртма берилган',
-			emty:"dasd"
-		})
+	+b.sCabinetOrders--base#sCabinetOrders&attributes(attributes)
+		+e.head
+			+b.cabinetTab
+				+e.btn(href="#").active  Шахсий малумотлар
+					+e.count 3
+				+e.btn(href="#")  Юридик малумотлар
+					+e.count 3
+				//- .ms-auto
+			+input("Барчаси",'select').select-with-arrows
+		+e.body
+			mixin item2(data)
+				+b.prod-order-item(href="#modal-pa").d-block.text-body.link-modal-js 
+					+e.img-wrap.bg-wrap
+						+pic("prod-2.jpg",'bg',0).picture-bg
+					.row
+						//- .col-auto
+						.col-xl-4.col
+							div
+								.text-body Қизил лавлаги лавлагил авлаги лав лаги лавла ги лавлаги...
+							p.mb-0.text-secondary2 № RU210403-907701 
+						.col-xl-auto.order-xl-last.mb-2
+							block
+						.col
+							div Нарбеков Артур Ураловичи
+							p.mb-0.text-secondary2 Ташкент АгроФерма
+						.col-auto
+							div 12 003 000 сум
+							.text-secondary2 1 килограмм
+			+item2(): +e.status(style="--status-bg:#ED6262") Ради қилинди
+			+item2(): +e.status(style="--status-bg:#419FD9") Қабул қилинди
+			+item2(): +e.status(style="--status-bg:#55C967") Янги сўров
+			+item2(): +e.status(style="--status-bg:#419FD9") Қабул қилинди
+			+item2(): +e.status(style="--status-bg:#55C967") Янги сўров
+			+item2(): +e.status(style="--status-bg:#ED6262") Ради қилинди
+			+item2(): +e.status(style="--status-bg:#55C967") Янги сўров
+			+item2(): +e.status(style="--status-bg:#419FD9") Қабул қилинди
+			+item2(): +e.status(style="--status-bg:#419FD9") Қабул қилинди
+			+pugin
 	// end sCabinetOrders
 
 mixin sCabinetOrdersSeller()
