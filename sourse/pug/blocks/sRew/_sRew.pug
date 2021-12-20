@@ -1,0 +1,19 @@
+mixin sRew(data)
+	// start sRew
+	+b.SECTION.sRew.section#sRew&attributes(attributes)
+		//- .container
+		+b.section-title.text-center
+			h2 Изоҳлар
+			
+		+e.slider--js.swiper-container
+			.swiper-wrapper
+				+e.slide.swiper-slide 
+					+chartCard(`1`,`Жамолива Гўзал`,`Жудаям ажойиб консултант екан менга жуда ёқди`,' bb')
+				+e.slide.swiper-slide 
+					+chartCard(`2`,`Жамолива Гўзал`,`Жудаям ажойиб консултант екан менга жуда ёқди`,' bb')
+				+e.slide.swiper-slide 
+					+chartCard(`3`,`Жамолива Гўзал`,`Жудаям ажойиб консултант екан менга жуда ёқди`,' bb')
+			.swiper-pagination
+			.d-none.d-sm-block
+				+arrow
+	// end sRew

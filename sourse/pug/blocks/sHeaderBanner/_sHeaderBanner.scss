@@ -259,6 +259,11 @@
 		--bs-gutter-y: var(--bs-gutter-x);
 	}
 	&__item{
+		@extend .text-body;
+		&:hover{
+			
+			filter: drop-shadow(0px 0px 14px rgba(0, 0, 0, 0.08));
+		}
 		.row{
 			flex-wrap: nowrap;
 			--bs-gutter-x: 10px;

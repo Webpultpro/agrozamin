@@ -1,4 +1,4 @@
-mixin chartCard(i,t,p)
+mixin chartCard(i,t,p, b)
 	+b.chat-card 
 		+e.row.row
 			.col-auto
@@ -10,8 +10,9 @@ mixin chartCard(i,t,p)
 				.h6.mb-0= t
 				.text-secondary= p
 				+stars()
-				+e.footer
-					+e.btn.btn-outline-primary(href="#") Кириш
+				if !b
+					+e.footer
+						+e.btn.btn-outline-primary(href="#") Кириш
 					
 mixin chartCardHor(i,t,p, empty)
 	+b.chat-card--horizontal&attributes(attributes)
@@ -244,7 +245,27 @@ mixin sChatCards-edit(data)
 mixin sChatCards-47(data)
 	// start sChatCards
 	+b.sChatCards.section#sChatCards&attributes(attributes) 
-		+chartCardHor(`1`,`Ветиринар`,`Александра Алиева`,'m').mb-4
+		//- +chartCardHor(`1`,`Ветиринар`,`Александра Алиева`,'m').mb-4
+
+		+b.chat-card--horizontal.mb-4
+			+e.row.row
+				.col-auto
+					+e.img-wrap.bg-wrap
+						+icon('user')
+						+pic(`avatar-${1}.png`,'bg',0).picture-bg
+				.col
+					.row
+						
+						.col-lg-3.col-md-4.mb-3
+							.h3.text-primary.mb-3 Аграном
+							.h6.mb-0 Собиров Алишер
+							.text-secondary Сўнги ташриф: 22:30 
+						.col-md
+							.fw-500 Агрономнинг вазифалари қуйидагилардан иборат:
+							ul 
+								li Агрономия соҳасида илмий тадқиқотлар ўтказиш.
+								li Екиш ва екиш учун тупроқни тайёрлаш ишларини ташкил етиш.
+								li Тупроққа ўғит тайёрлаш ва киритиш бўйича чора-тадбирларни ишлаб чиқиш.
 		+b.btn-w100(type="button") Мутаҳасис билан онлайн видео мулоқат ўрнатиш учун вақтни белгиланг
 		+e.block
 			+b.calendar-line

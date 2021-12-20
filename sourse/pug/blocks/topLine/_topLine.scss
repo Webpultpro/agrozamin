@@ -409,8 +409,10 @@ ul{
 			img,
 			.icon{
 				font-size: rem(12);
-					@include media-breakpoint-up(lg) {
+					@include media-breakpoint-up(md) {
 						margin-right: rem(7);
+						position: relative;
+						top: em(1);
 					}
 				color: var(--bs-primary);
 			}

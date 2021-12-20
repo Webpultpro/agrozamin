@@ -31,11 +31,9 @@ block pagecontent
 
 	+mob-mnu()
 	+header()
-		+topLine()
-		+top-nav()
+		+top-nav-cabinet()
 	//- +breadcrumb('Асосий саҳифа', 'Кабинет', title)
-	+sOrderHead("Тасдиқлаш")
-		+e.status(style="--color:#00CD69") Буюртма этказилган
+	+sOrderHead
 	+sProdHead('sds')
 	+sBasket("order").--order
 	+b.sAboutStore.pt-0
@@ -50,14 +48,14 @@ block pagecontent
 					h5.strong Тўлов тури
 					+e.prompt--lg.text-secondary Сотувчига жойида
 				+e.item--wide.mw-100
-					h5.strong.text-primary Бошқа киши томонидан олиб кетилинади
+					h5.strong Алоқа маълумотлари
 					.row
 						+e.col-line.col-auto
 							+e.prompt--lg.text-secondary.pb-0 Сотувчига жойида 
 							+e.prompt--lg Шокиров Дилмурод 
-						//- +e.col-line.col-auto
-						//- 	+e.prompt--lg.text-secondary.pb-0 E-mail
-						//- 	+e.prompt--lg(href="mailto:shokirov.d@yandex.ru") shokirov.d@yandex.ru
+						+e.col-line.col-auto
+							+e.prompt--lg.text-secondary.pb-0 E-mail
+							+e.prompt--lg(href="mailto:shokirov.d@yandex.ru") shokirov.d@yandex.ru
 						+e.col-line.col-auto
 							+e.prompt--lg.text-secondary.pb-0 Телефон
 							+e.prompt--lg(href="tel:+998974050003") +998 97 405 00 03

@@ -474,7 +474,12 @@
 		}
 	}
 	&--horizontal {
+		@include media-breakpoint-up(md) {
+		margin-bottom: 13px;
+		}
+		margin-bottom: 0;
 		@include media-breakpoint-down(md) {
+			margin-top: -1px;
 			p{
 				margin-bottom: 0;
 			}

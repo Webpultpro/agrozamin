@@ -3,6 +3,9 @@
 	background-color: #fff;
 	z-index: 200;
 	z-index: 800;
+	ul{
+		list-style: none;
+	}
 	&__main-row{
 		--bs-gutter-y: 15px;
 		// justify-content: space-between;
@@ -241,7 +244,8 @@
 	&__dropdown-inner{
 		@include media-breakpoint-up(lg){
 
-			width: rem(336);
+			// width: rem(336);
+			width: rem(368);
 		}
 		@include media-breakpoint-up(md){
 			position: relative;
@@ -251,8 +255,17 @@
 
 	}
 	.left-menu{
+		a{
+			font-size: 15px; 
+			span{
+				max-width: rem(263);
+				line-height: 1;
+				display: block;
+			}
+		}
 		 & >li > a{
-			 font-weight: bold;
+			//  font-weight: bold;
+			
 		 }
 		// position: relative;
 		// z-index: 4;
@@ -262,8 +275,9 @@
 			margin-bottom: 0;
 		}
 		background-color: #fff;
+		border-radius: 0px 0px 12px 12px;
 		
-		border: 1px solid #E6E6E6;
+		// border: 1px solid #E6E6E6;
 		@include media-breakpoint-up(md){
 				max-height: calc(100vh - var(--header-h));
 
@@ -284,6 +298,8 @@
 			display: block !important;
 		}
 		@include media-breakpoint-up(md) {
+			
+	 
 			z-index: 1200; 
 			// min-height: 620px;
 			// width: calc(100% - var(--bs-gutter-x));
@@ -376,12 +392,13 @@
 		a{
 		position: relative;
 		z-index: 5;
-		background-color: #fff;
+		// background-color: #fff;
 		.icon{
 			position: absolute;
 			font-size: rem(12);
 			right: rem(23);
-			top: rem(18);
+			// top: rem(18);
+			@include a-cent1(y);
 			// @include mt;
 			@include media-breakpoint-down(md){
 				// right: rem(15);
@@ -410,7 +427,7 @@
 			position: absolute;
 			font-size: rem(12);
 			right: rem(25);
-			top: rem(18);
+				@include a-cent1(y);
 			// @include mt;
 			@include media-breakpoint-down(md){
 				// right: rem(15);
@@ -472,20 +489,30 @@
 		max-height: calc(100vh - var(--header-h));
 		overflow-y: auto;
 		overflow-x: hidden;
+		
+		// border-radius: 0px 0px 12px 0px;
 		@include media-breakpoint-down(md){
 			height: 100vh;
 			padding-bottom: 50px;
 		}
+		@include media-breakpoint-up(xl){
+
+			// width: rem(268);
+			width: rem(368);
+		}
+
 		@include media-breakpoint-up(lg){
 
 			width: rem(268);
+			// width: rem(368);
 		}
+		
 		@include media-breakpoint-up(md){
 			min-height: 100%;
 			width: rem(228);
 			display: none;
 		}
-		background-color: #fff;
+		// background-color: #fff;
 		.sub-menu{
 			// display: none;
 			// display: block;
@@ -527,6 +554,7 @@
 				position: absolute;
 					left: 100%;
 					min-height: 100%;
+					background-color: transparent;
 				}
 			top: 0;
 			background-color: #fff;
@@ -541,13 +569,36 @@
 			// flex-wrap: wrap;
 		// --count: 2;
 		// padding-left: calc(var(--li-w) + #{rem(30)});
-		background-color: #fff;
-		border: 1px solid #E6E6E6;
+		background-color: #fff; 
+			background: #F8FBFF;
+			border-bottom-right-radius: 12px; 
+			&::before{
+				content: '';
+				position: absolute;
+				right: 100%;
+				bottom: 0;
+				width: 14px;
+				height: 14px;
+				background-color: #fff;
+			}
+
+		// border: 1px solid #E6E6E6;
+		.active .sub-menu-wrap{
+			&::before{
+				content: '';
+				position: absolute;
+				right: 100%;
+				bottom: 0;
+				width: 14px;
+				height: 14px;
+				background-color: #F8FBFF;
+			}
+		}
 		> ul{
 			position: absolute;
 			left: 100%;
 			top: 0;
-
+			
 		}
 		}
 		> li{
@@ -582,10 +633,15 @@
 	}
 
 }
+@include media-breakpoint-down(md){
+ .sub-menu-wrap {
+		background-color: #fff;
+	}
+}
 li.active{
 	&> .sub-menu-wrap {
 		@include media-breakpoint-down(md){
-
+			
 			transform: translateX(0);
 		}
 
@@ -613,7 +669,8 @@ li.active{
 .menu__dropdown {
 	width: rem(200);
 	background: #FFFFFF;
-	border: 1px solid #DBE4EC;
+		
+	// border: 1px solid #DBE4EC;
 	border-top: none;
 	box-shadow: 0px 5px 15px rgba(45, 55, 65, 0.1);
 	
@@ -751,6 +808,7 @@ li.active{
 	background: #FFFFFF;
 	box-shadow: 0px 11px 43px rgba(0, 0, 0, 0.1);
 	display: var(--display, none);
+	min-width: rem(230);
 	&--servises{
 		border-radius: 9px;
 		padding-top: rem(15);
@@ -763,12 +821,15 @@ li.active{
 	}
 	&--servises &__item{
 
+		display: flex;
 		@include roww(1rem, m);
 	}
 	&__item{
+		display: block;
+		text-align: left;
 		padding: rem(11) rem(25);
-		display: flex;
 		margin-bottom: 0;
+		width: auto;
 	}
 	&__img-wrap{
 		picture{
@@ -785,6 +846,7 @@ li.active{
 				right: auto;
 				left: rem(-62);
 			}
+			left: auto;
 			right: 0;
 		a{
 			&:not(:last-child){

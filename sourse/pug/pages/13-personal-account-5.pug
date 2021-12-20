@@ -11,21 +11,20 @@ extends layout/main.pug
 //- include ../blocks/sHowWorks/_sHowWorks.pug
 //- include ../blocks/legal-info/_legal-info.pug
 include ../blocks/sPersonalAccount/_sPersonalAccount.pug
-include ../blocks/sChatCards/_sChatCards.pug
+include ../blocks/sAboutStore/_sAboutStore.pug
 
 block variables
 	- let  mainPage= null 
 	//- - let  bg= '13-personal-account.jpg'
 
 block title
-	- let  title= 'Хабарлар'
+	- let  title= 'Дўкон ҳақида'
 	title= title
 block pagecontent
 
 
 	+mob-mnu()
 	+header()
-		//- +topLine()
 		+top-nav-cabinet()
 	+breadcrumb('Асосий саҳифа', 'Кабинет', title)
 	+sPersonalAccount()
@@ -43,9 +42,8 @@ block pagecontent
 					+e.LI.item: a(href="#") Хабарлар
 					+e.LI.item: a(href="#") Онлайн консултант
 						+e.SPAN.item-count 59
-					
 			.col-lg.col--main
-				+sChatCards-47()
+				+sAboutStore(`empty`)
 	+footer()
 
 

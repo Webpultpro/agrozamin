@@ -18,6 +18,9 @@
 		}
 	}
 	.icon {
+		[fill="#7C7E80"] {
+			fill: currentColor !important;
+		}
 		font-size: rem(20);
 	}
 }

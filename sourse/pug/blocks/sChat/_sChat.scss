@@ -364,6 +364,10 @@
 		}
 		.icon-star{
 			font-size: 32px;
+			cursor: pointer;
+			&:hover{
+				fill: #f6c23d;
+			}
 		}
 		.form-control{
 			margin-bottom: 1rem;

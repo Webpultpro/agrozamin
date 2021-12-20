@@ -65,17 +65,20 @@ mixin top-nav(comp)
 									ul.left-menu
 										mixin liLeft(a)
 											li.menu-item-has-children
-												a(href="#")= a  
+												a(href="#")
+													span= a  
 													+icon("chevron-right")
 												.sub-menu-wrap
 													ul.sub-menu
 														mixin li(a)
 															li 
-																a(href="#")= a  
+																a(href="#")
+																	span= a  
 
 														mixin col(t, sub)
 															li(class=( sub ? "menu-item-has-children" : ""))
-																a(href="#")= t
+																a(href="#")
+																	span= t
 																	if sub
 																		+icon("chevron-right")
 																if sub
@@ -232,15 +235,15 @@ mixin top-nav-cabinet(comp)
 									+b.link-logout(href="#")
 										+icon("logout")
 										span Чиқиш
-				+b.contacts-top-block.col-md-4.col-auto.d-none.d-md-block
+				+b.contacts-top-block.col-lg-4.col-auto.d-none.d-md-block
 					ul
 						li: +e.link(href="tel:(78)150-00-88")
 							+icon("phone-icon")
-							span.d-none.d-lg-inline (78) 150-00-88 
+							span (78) 150-00-88 
 						li: +e.link(href="#")
 							+icon("chat")
-							span.d-none.d-lg-inline On-line чат
-				.col.text-center
+							span On-line чат
+				.col.text-lg-center
 
 					+b.logo(href="/")
 						.row

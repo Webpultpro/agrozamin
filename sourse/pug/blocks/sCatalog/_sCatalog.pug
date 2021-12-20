@@ -13,7 +13,7 @@ mixin cardf(i, h, p, u, t)
 				p!= t
 				+e.card-btn Харид қилиш
 mixin catalog-filter()
-	.row.align-items-center.g-2.py-3
+	.row.align-items-center.g-2.pb-3
 			.col-auto Саралаш: 
 			.col
 				.row 
@@ -45,11 +45,11 @@ mixin sCatalog(fav)
 					.col-md-auto
 						+pic("pile-black-beans1.png",'',0)
 			+e.btns.row.gy-3
-				+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Полиз экини уруғлари
-				+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Дуккакли уруғлар
-				+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Дон уруғлари
-				+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Майса уруғлари
-				+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Сабзавот уруғлари
+			//- 	+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Полиз экини уруғлари
+			//- 	+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Дуккакли уруғлар
+			//- 	+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Дон уруғлари
+			//- 	+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Майса уруғлари
+			//- 	+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Сабзавот уруғлари
 			h2 Оммабоб махсулотлар
 			+catalog-filter()
 		div
@@ -69,12 +69,12 @@ mixin sCatalog(fav)
 mixin sCatalog2(data)
 	// start sCatalog
 	+b.sCatalog.section.pt-0&attributes(attributes)
-		+e.btns.row.gy-3
-			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Полиз экини уруғлари
-			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Дуккакли уруғлар
-			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Дон уруғлари
-			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Майса уруғлари
-			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Сабзавот уруғлари
+		//- +e.btns.row.gy-3
+			//- +e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Полиз экини уруғлари
+			//- +e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Дуккакли уруғлар
+			//- +e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Дон уруғлари
+			//- +e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Майса уруғлари
+			//- +e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Сабзавот уруғлари
 		+catalog-filter()
 		div
 			+card-hor(1)

@@ -11,22 +11,21 @@ extends layout/main.pug
 //- include ../blocks/sHowWorks/_sHowWorks.pug
 //- include ../blocks/legal-info/_legal-info.pug
 include ../blocks/sPersonalAccount/_sPersonalAccount.pug
-include ../blocks/sProfile/_sProfile.pug
+include ../blocks/sCabinetOrders/_sCabinetOrders.pug
 
 block variables
 	- let  mainPage= null 
 	//- - let  bg= '13-personal-account.jpg'
 
 block title
-	- let  title= 'Профиль'
+	- let  title= 'Махсулотлар'
 	title= title
 block pagecontent
 
 
 	+mob-mnu()
 	+header()
-		+topLine('comp')
-		+top-nav('comp') 
+		+top-nav-cabinet()
 	+breadcrumb('Асосий саҳифа', 'Кабинет', title)
 	+sPersonalAccount()
 		.row.row--main
@@ -44,7 +43,7 @@ block pagecontent
 					+e.LI.item: a(href="#") Онлайн консултант
 						+e.SPAN.item-count 59
 			.col-lg.col--main
-				+sProfile()
+				+sCabinetOrdersProducts(`status`)
 	+footer()
 
 
