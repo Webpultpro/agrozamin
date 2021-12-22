@@ -29,7 +29,9 @@
 		}
 	}
 	&__row {
-		--bs-gutter-y: var(--bs-gutter-x);
+		@include media-breakpoint-up(md) {
+			--bs-gutter-y: var(--bs-gutter-x);
+		}
 	}
 	&__btn-more{
 		margin-left: auto;
@@ -149,6 +151,9 @@
 	border: 1px solid #e6e6e6;
 
 	@include mt;
+	@include media-breakpoint-down(md) {
+		margin-top: -1px;
+	}
 	@include media-breakpoint-up(md) {
 		&::before{
 			content: '';
@@ -265,7 +270,7 @@
 	}
 	&--vertical &__img-wrap {
 		flex: 0 0 auto;
-		margin-right: rem(7);
+		// margin-right: rem(7);
 		@include media-breakpoint-up(md) {
 			margin-top: 0;
 			width: 100%;
@@ -511,19 +516,34 @@
 				}
 		}
 	}
-	&--horizontal .card-prod{
-		&__img-wrap{
-			margin-bottom: 40px;
+	.addBlock{
+			width: 175px;
+			@include media-breakpoint-down(md) {
+			}
+			margin-left: 0;
+			margin-right: 0;
+			}
+	&__footer-links{
+		@include media-breakpoint-down(md) {
+			left: 0;
+			bottom: 15px;
+			width: 140px;
+			padding-top: 0;
 		}
+		position: absolute;
+	}
+	&__img-wrap{
+		margin-bottom: 40px;
+		@include media-breakpoint-down(md) {
+			margin-right: 28px;
+		}
+	}
+	&--horizontal .card-prod{
 		&__footer-links{
 			transform: none;
 			border: none;
 			margin-bottom: 4px;
-			@include media-breakpoint-down(md) {
-				left: 0;
-				bottom: 15px;
-				width: 140px;
-			}
+			
 			@include media-breakpoint-up(md) {
 				
 				position: static;
