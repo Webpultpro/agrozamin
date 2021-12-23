@@ -23,9 +23,9 @@ mixin chartCardHor(i,t,p, empty)
 					if i
 						+pic(`avatar-${i}.png`,'bg',0).picture-bg
 			.col
-				.row
+				.row.align-items-md-center
 					
-					.col-md.mb-3
+					.col-md.mb-md-0.mb-3
 						.h6.mb-0= t
 						.text-secondary= p
 						if empty

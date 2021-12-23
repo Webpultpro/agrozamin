@@ -12,7 +12,7 @@ mixin cardf(i, h, p, u, t)
 					+e.unit.text-secondary!= u
 				p!= t
 				+e.card-btn Харид қилиш
-mixin catalog-filter()
+mixin catalog-filter(f)
 	.row.align-items-center.g-2.pb-3
 			.col-auto Саралаш: 
 			.col
@@ -27,11 +27,12 @@ mixin catalog-filter()
 						+icon("horizontal")
 					+e.btn-head(type="button")
 						+icon("vertical")
-			.col-auto.d-lg-none
-				+e.toggle-filter--js 
-					+icon("filter-icon")
-					| Фильтр
-mixin sCatalog(fav)
+			if !f
+				.col-auto.d-lg-none
+					+e.toggle-filter--js 
+						+icon("filter-icon")
+						| Фильтр
+mixin sCatalog(fav, f)
 	// start sCatalog
 	+b.sCatalog.section.pt-0&attributes(attributes)
 		if !fav
@@ -51,7 +52,7 @@ mixin sCatalog(fav)
 			//- 	+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Майса уруғлари
 			//- 	+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Сабзавот уруғлари
 			h2 Оммабоб махсулотлар
-			+catalog-filter()
+			+catalog-filter(f)
 		div
 			+card-hor(1,fav)
 			+card-hor(2,fav)
@@ -99,12 +100,12 @@ mixin sCatalog2(data)
 mixin sCatalog3(data)
 	// start sCatalog
 	+b.sCatalog.section.pt-0&attributes(attributes)
-		+e.btns.row.gy-3
-			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Полиз экини уруғлари
-			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Дуккакли уруғлар
-			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Дон уруғлари
-			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Майса уруғлари
-			+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Сабзавот уруғлари
+		//- +e.btns.row.gy-3
+		//- 	+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Полиз экини уруғлари
+		//- 	+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Дуккакли уруғлар
+		//- 	+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Дон уруғлари
+		//- 	+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Майса уруғлари
+		//- 	+e.col.col-auto: a.btn.btn-sm.btn-primary(href="#") Сабзавот уруғлари
 		+catalog-filter()
 		+e.row.row
 			+card(1,'Қизил Юсуф памидори Самарқанд махсулоти')

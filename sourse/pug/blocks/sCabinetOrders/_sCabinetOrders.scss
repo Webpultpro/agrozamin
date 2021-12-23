@@ -107,7 +107,10 @@
 
 
 	&__head{
-		margin-bottom: 36px;
+		& + table{
+
+			margin-top: 36px;
+		}
 		.row{
 			align-items: center;
 		}
@@ -137,18 +140,21 @@
 			padding-left: rem(14);
 			padding-right: rem(14);
 			padding-top: 27px;
-			margin-bottom: 0;
-		}
-		.select-with-arrows{
-			// margin-top: -15px;
+			margin-bottom: 0; 
+			& + .sCabinetOrders__input-wrap{
 				@include media-breakpoint-up(lg){
-
+		
 					position: absolute;
 					right: 14px;
 					top: 14px;
 					margin: 0;
 				}
 				margin: 15px 14px;
+				
+			}
+		}
+		.select-with-arrows{
+			// margin-top: -15px;
 		}
 		margin-bottom: 0;
 	}

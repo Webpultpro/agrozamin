@@ -180,6 +180,7 @@
 	}
 }
 .all-users {
+	overflow-x: hidden;
 	padding-right: rem(15);
 	@include media-breakpoint-up(lg) {
 	margin-right: rem(-15);

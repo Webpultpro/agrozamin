@@ -471,7 +471,10 @@
 	}
 	li{}
 	.sub-menu-wrap{
-
+		@include media-breakpoint-up(md){
+		flex-direction: column;
+		display: flex;
+		}
 		@include media-breakpoint-down(md){
 			position: fixed;
 			transform: translateX(-100%);
@@ -489,6 +492,7 @@
 		max-height: calc(100vh - var(--header-h));
 		overflow-y: auto;
 		overflow-x: hidden;
+		flex-grow: 1;
 		
 		// border-radius: 0px 0px 12px 0px;
 		@include media-breakpoint-down(md){
@@ -514,6 +518,10 @@
 		}
 		// background-color: #fff;
 		.sub-menu{
+			@include media-breakpoint-up(md) {
+			background: #f8fbff;
+			flex-grow: 1;
+		}
 			// display: none;
 			// display: block;
 

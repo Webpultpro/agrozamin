@@ -32,8 +32,9 @@
 	}
 	&__slider-wrap {
 		position: relative;
+		
 	}
-	&__slider {
+	.swiper-container {
 		@include media-breakpoint-up(xl) {
 			padding: 30px;
 			margin: -30px;
