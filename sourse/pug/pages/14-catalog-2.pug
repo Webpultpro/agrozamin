@@ -30,10 +30,15 @@ block pagecontent
 	+b.page-title
 		.container
 			.row
-				.col-auto
-					h1= title
-				.col-auto.pt-lg-3.pt-2
-					.text-secondary 211 маҳсулотлари
+				.col-auto.d-none.d-sm-block
+					a.back(href="#").text-body
+						+icon("chevron-left") 
+				.col
+					.row
+						.col-sm-12.col-auto
+							h1.mb-0= title
+						.col-sm-12.col-auto
+							.text-secondary 211 маҳсулотлари
 	.container
 		.row.row--main
 			.col-lg.col--aside

@@ -127,11 +127,11 @@
 				<div class="top-nav block-with-lazy">
 					<div class="container">
 						<div class="top-nav__main-row row">
-							<div class="col-auto d-md-none order-first">
+							<div class="col-auto d-md-none order-first fixed-hide">
 								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 								</div>
 							</div>
-							<div class="col-md-auto col order-first"><a class="logo" href="/">
+							<div class="col-md-auto col order-first fixed-hide"><a class="logo" href="/">
 								<div class="row">
 									<div class="col-auto"><img src="img/svg/logo-sm.svg" alt=""/></div>
 									<div class="col">
@@ -140,7 +140,7 @@
 									</div>
 								</div></a>
 							</div>
-							<div class="col-auto d-md-none order-first">
+							<div class="col-auto d-md-none order-first fixed-hide">
 								<div class="has-children">Русский
 									<ul> 
 										<li>Русский</li>
@@ -6712,7 +6712,7 @@
 											<use xlink:href="img/svg/sprite.svg#menu"></use>
 										</svg>Сервислар
 									</button>
-									<div class="dropdown-block dropdown-block--servises"><a class="dropdown-block__item text-body" href="#"><span class="dropdown-block__img-wrap">
+									<div class="dropdown-block dropdown-block--servises"><a class="dropdown-block__item" href="#"><span class="dropdown-block__img-wrap">
 										<!-- picture-->
 										<picture> 
 											<source type="image/webp" srcset="img/@2x/webp/drop-1.webp"/><img class="object-fit-js" src="img/@2x/drop-1.png" alt="" loading="lazy"/>
@@ -6721,7 +6721,7 @@
 										<div>
 											<div class="h6 mb-1">Фермерлар Мактаби</div>
 											<div class="text-secondary">Ёш Фермерларни тайёрлаш мактаби</div>
-										</div></a><a class="dropdown-block__item text-body" href="#"><span class="dropdown-block__img-wrap">
+										</div></a><a class="dropdown-block__item" href="#"><span class="dropdown-block__img-wrap">
 										<!-- picture-->
 										<picture> 
 											<source type="image/webp" srcset="img/@2x/webp/drop-2.webp"/><img class="object-fit-js" src="img/@2x/drop-2.png" alt="" loading="lazy"/>
@@ -6730,7 +6730,7 @@
 										<div>
 											<div class="h6 mb-1">Агролаб</div>
 											<div class="text-secondary">Лобаратория билан ишлаш маҳорати</div>
-										</div></a><a class="dropdown-block__item text-body" href="#"><span class="dropdown-block__img-wrap">
+										</div></a><a class="dropdown-block__item" href="#"><span class="dropdown-block__img-wrap">
 										<!-- picture-->
 										<picture> 
 											<source type="image/webp" srcset="img/@2x/webp/drop-3.webp"/><img class="object-fit-js" src="img/@2x/drop-3.png" alt="" loading="lazy"/>
@@ -6739,7 +6739,7 @@
 										<div>
 											<div class="h6 mb-1">Агротехкарталар</div>
 											<div class="text-secondary">Ҳужжатлар билан ишлашда ёдамлаҳувчи майдон</div>
-										</div></a><a class="dropdown-block__item text-body" href="#"><span class="dropdown-block__img-wrap">
+										</div></a><a class="dropdown-block__item" href="#"><span class="dropdown-block__img-wrap">
 										<!-- picture-->
 										<picture> 
 											<source type="image/webp" srcset="img/@2x/webp/drop-4.webp"/><img class="object-fit-js" src="img/@2x/drop-4.png" alt="" loading="lazy"/>
@@ -6748,7 +6748,7 @@
 										<div>
 											<div class="h6 mb-1">Медиабиблиотека</div>
 											<div class="text-secondary">Керакли видео маҳсулотлар учун майдон</div>
-										</div></a><a class="dropdown-block__item text-body" href="#"><span class="dropdown-block__img-wrap">
+										</div></a><a class="dropdown-block__item" href="#"><span class="dropdown-block__img-wrap">
 										<!-- picture-->
 										<picture> 
 											<source type="image/webp" srcset="img/@2x/webp/drop-4.webp"/><img class="object-fit-js" src="img/@2x/drop-4.png" alt="" loading="lazy"/>
@@ -6768,7 +6768,7 @@
 											<use xlink:href="img/svg/sprite.svg#user"></use>
 										</svg>Кабинет
 									</button>
-									<div class="dropdown-block dropdown-block--cabinet"><a class="dropdown-block__item text-body h6" href="#">Профил</a><a class="dropdown-block__item text-body h6" href="#">Махсулотлар</a><a class="dropdown-block__item text-body h6" href="#">Буюртмаларим</a><a class="dropdown-block__item text-body h6" href="#">Харидор буюртмалари</a><a class="dropdown-block__item text-body h6" href="#">Чиқиш</a>
+									<div class="dropdown-block dropdown-block--cabinet"><a class="dropdown-block__item h6" href="#">Профил</a><a class="dropdown-block__item h6" href="#">Махсулотлар</a><a class="dropdown-block__item h6" href="#">Буюртмаларим</a><a class="dropdown-block__item h6" href="#">Харидор буюртмалари</a><a class="dropdown-block__item h6" href="#">Чиқиш</a>
 									</div>
 								</div>
 							</div>
@@ -7119,7 +7119,7 @@
 				</div>
 				<!-- +e.input-wrap-->
 				<div class="text-center">
-					<buton class="btn btn-primary" type="submit">Жўнатиш</buton>
+					<buton class="btn btn-primary w-190" type="submit">Жўнатиш</buton>
 				</div>
 			</form>
 		</div>
@@ -7132,7 +7132,7 @@
 				</div>
 				<!-- +e.input-wrap-->
 				<div class="text-center">
-					<buton class="btn btn-primary" type="submit">Жўнатиш</buton>
+					<buton class="btn btn-primary w-190" type="submit">Жўнатиш</buton>
 				</div>
 			</form>
 		</div>
@@ -7286,6 +7286,94 @@
 			</div>
 		</div>
 		<!-- #modal-pa-->
+		<div class="form-wrap modal-win modal-win modal-win--status" id="modal-pa2" style="display: none"> 
+			<div class="h1 strong mb-5">№ 210403-907701 </div>
+			<div class="modal-head row">
+				<div class="col-auto"><a class="modal-head__img-wrap bg-wrap" href="#">
+					<!-- picture-->
+					<picture class="picture-bg"> 
+						<source type="image/webp" srcset="img/@2x/webp/prod-2.webp"/><img class="object-fit-js" src="img/@2x/prod-2.jpg" alt="" loading="lazy"/>
+					</picture>
+					<!-- /picture--></a>
+				</div>
+				<div class="col">
+					<div class="fw-500">Шокиров Дилмурод</div>
+					<div>МЧЖ "Azia media"</div>
+					<div class="toggle-modal-more">Реквизиты
+						<svg class="icon icon-chevron-down ">
+							<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div class="block-more-info"> 
+				<div class="row">
+					<div class="col-4"> 
+						<div class="text-secondary">Вилоят</div>
+						<p>Самарқанд вилояти</p>
+					</div>
+					<div class="col-8">
+						<div class="text-secondary">Банк МФО си</div>
+						<p>"Агробанк" аксиядорлик-тижорат банки»</p>
+					</div>
+					<div class="w-100"></div>
+					<div class="col-4"> 
+						<div class="text-secondary">Туман</div>
+						<p>Пастдарғом туман</p>
+					</div>
+					<div class="col">
+						<div class="text-secondary">Хисоб рақами</div>
+						<p>2223 1238 4568 1234 9963 </p>
+					</div>
+					<div class="col-auto"> 
+						<div class="text-secondary">СТИР</div>
+						<p>154786022</p>
+					</div>
+					<div class="col-12"> 
+						<div class="text-secondary">Манзил</div>
+						<p>43 Мукимий Кўчаси, Тошкент, Ўзбекистон, 100096-уй</p>
+					</div>
+				</div>
+			</div>
+			<div class="text-secondary2 h4">Маҳсулот</div>
+			<div class="prod-order-item">
+				<div class="row">
+					<div class="col-auto"><a class="prod-order-item__img-wrap bg-wrap" href="#">
+						<!-- picture-->
+						<picture class="picture-bg"> 
+							<source type="image/webp" srcset="img/@2x/webp/prod-2.webp"/><img class="object-fit-js" src="img/@2x/prod-2.jpg" alt="" loading="lazy"/>
+						</picture>
+						<!-- /picture--></a>
+					</div>
+					<div class="col">
+						<div class="fw-500">Крупногабаритная шина 45/65R45(1150/65R45) BKT EARTHMAX SR 53 L-5 ** CR 245 A2 ** TL</div>
+					</div>
+				</div>
+			</div>
+			<table> 
+				<tr> 
+					<th>Нархи (сум)	</th>
+					<th>10 199 </th>
+				</tr>
+				<tr> 
+					<td>Миқдори</td>
+					<td>1000 килограмм</td>
+				</tr>
+				<tr class="h6 fw-400"> 
+					<td>Жами</td>
+					<td>31 944 889 сўм</td>
+				</tr>
+			</table>
+			<div class="row"> 
+				<div class="col-6"> 
+					<button class="btn btn-outline-primary w-100"> Написать сообщение</button>
+				</div>
+				<div class="col-6"> 
+					<button class="btn btn-outline-primary w-100">Позвонить</button>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-pa2-->
 		<!-- end modals-->
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>

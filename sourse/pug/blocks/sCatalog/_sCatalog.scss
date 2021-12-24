@@ -30,7 +30,7 @@
 	}
 	&__row {
 		@include media-breakpoint-up(md) {
-			--bs-gutter-y: var(--bs-gutter-x);
+			--bs-gutter-y: 50px;
 		}
 	}
 	&__btn-more{

@@ -19,10 +19,10 @@ mixin top-nav(comp)
 	+b.top-nav.block-with-lazy(class= (comp ? 'd-md-none' : null))
 		.container
 			+e.main-row.row
-				.col-auto.d-md-none.order-first
+				.col-auto.d-md-none.order-first.fixed-hide
 					+b.toggle-menu-mobile--js
 						span
-				.col-md-auto.col.order-first
+				.col-md-auto.col.order-first.fixed-hide
 
 					+b.logo(href="/")
 						.row
@@ -31,7 +31,7 @@ mixin top-nav(comp)
 							.col
 								+e.DIV.text
 								img(src="img/svg/logo-text.svg", alt="") 
-				.col-auto.d-md-none.order-first
+				.col-auto.d-md-none.order-first.fixed-hide
 					.has-children
 						| Русский
 						ul 
@@ -182,7 +182,7 @@ mixin top-nav(comp)
 							| Сервислар
 						+b.dropdown-block--servises
 							mixin item(i,t,p)
-								+e.item(href="#").text-body
+								+e.item(href="#")
 									+e.img-wrap
 										+pic(`drop-${i}.png`,'bg',0)
 									div
@@ -201,7 +201,7 @@ mixin top-nav(comp)
 							| Кабинет
 						+b.dropdown-block--cabinet
 							mixin item(t)
-								+e.item(href="#").text-body.h6= t 
+								+e.item(href="#").h6= t 
 							+item(`Профил`)
 							+item(`Махсулотлар`)
 							+item(`Буюртмаларим`)
@@ -210,7 +210,7 @@ mixin top-nav(comp)
 	// end top-nav
 mixin top-nav-cabinet(comp) 
 	// start top-nav  в этом блоке   отличия
-	+b.top-nav
+	+b.top-nav--cabinet
 		.container
 			+e.main-row.row
 				.col-auto.d-md-none.order-first

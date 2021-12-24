@@ -741,7 +741,7 @@ function eventHandler() {
 	})
 
 
-	$('.top-nav').hcSticky({
+	$('.top-nav:not(.top-nav--cabinet)').hcSticky({
 		stickTo: $('body'),
 		responsive: {
 			768: {
@@ -749,6 +749,9 @@ function eventHandler() {
 			}
 		},
 		// mobileFirst: true
+	});
+	$('.top-nav--cabinet').hcSticky({
+		stickTo: $('body'),
 	});
 
 	// $('.catalog-block__dropdown-inner ul').each(element, new SimpleBar());

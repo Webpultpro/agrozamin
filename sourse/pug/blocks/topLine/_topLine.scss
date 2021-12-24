@@ -353,7 +353,11 @@ ul{
 	ul{
 		display: block;
 		position: absolute;
-		left: 0;
+			@include media-breakpoint-up(md) {
+				left: 0;
+				right: auto;
+			}
+			right: 0;
 		top: 100%;
 		background-color: #fff;
 		background: #FFFFFF;

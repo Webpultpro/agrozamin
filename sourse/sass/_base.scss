@@ -487,6 +487,11 @@ iframe {
 // }
 
 .page-title {
+	@include media-breakpoint-down(sm) {
+		.text-secondary{
+			margin-top: rem(6);
+		}
+	}
 	margin-bottom: rem(30);
 	.back{
 		display: inline-block;
@@ -927,9 +932,9 @@ iframe {
 }
 
 .select-with-arrows{
-	background-image: url("data:image/svg+xml,%3Csvg width='10' height='13' viewBox='0 0 10 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L5 1L9 4' stroke='%233E3E3E' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M9 9L5 12L1 9' stroke='%233E3E3E' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+	background-image: url("data:image/svg+xml,%3Csvg width='9' height='18' viewBox='0 0 9 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4.28345L4.5 1L8 4.28345' stroke='%233E3E3E' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 13.7559L4.5 17.0393L1 13.7559' stroke='%233E3E3E' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 	width: 222px;
-	background-size:  7px 16px ;
+	background-size:  9px 18px ;
 }
 
 .w-190{
