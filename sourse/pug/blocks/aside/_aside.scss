@@ -228,6 +228,11 @@
 	}
 	@include media-breakpoint-down(xl) {
 	}
+	.filter-item {
+		&__title{
+			cursor: default;
+		}
+	}
 } // end.aside
 
 .filter-item {

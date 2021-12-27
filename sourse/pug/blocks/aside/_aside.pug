@@ -31,8 +31,8 @@ mixin aside2(data)
 					| Фильтр
 				mixin item(t, ...items)
 					+b.filter-item
-						+e.title--js= t
-						+e.dropdown
+						+e.title= t
+						+e.dropdown.d-block
 							if block 
 								block
 							else
@@ -61,28 +61,28 @@ mixin aside2(data)
 									.col-lg-12.col-6
 										+input('15 588 сум').input_to
 				+item('Мева ранги')
-					+in-c('checkbox','Яшил <span class="filter-count">4</span>')
-					+in-c('checkbox','Қизил   <span class="filter-count">296</span>')
-					+in-c('checkbox','Сариқ  <span class="filter-count">173</span>')
-					+in-c('checkbox','Жигарранг  <span class="filter-count">13</span>')
-					+in-c('checkbox','Қора  <span class="filter-count">61</span>')
+					+in-c('checkbox','Яшил ')
+					+in-c('checkbox','Қизил   ')
+					+in-c('checkbox','Сариқ  ')
+					+in-c('checkbox','Жигарранг ')
+					+in-c('checkbox','Қора  ')
 				+item('Экиш жойи')
-					+in-c('checkbox','Исталган жой  <span class="filter-count">4</span>')
-					+in-c('checkbox','Қисман соя/ қуёш  <span class="filter-count">6</span>')
-					+in-c('checkbox','Қуёш  <span class="filter-count">3</span>')
-					+in-c('checkbox','Қуёшли жой  <span class="filter-count">13</span>')
+					+in-c('checkbox','Исталган жой  ')
+					+in-c('checkbox','Қисман соя/ қуёш ')
+					+in-c('checkbox','Қуёш  ')
+					+in-c('checkbox','Қуёшли жой ')
 				+item('Участкага екиш  ')
-					+in-c('checkbox','Апрель  <span class="filter-count">304</span>')
-					+in-c('checkbox','Май  <span class="filter-count">296</span>')
-					+in-c('checkbox','Июнь  <span class="filter-count">173</span>')
-					+in-c('checkbox','Июль  <span class="filter-count">137</span>')
-					+in-c('checkbox','Август  <span class="filter-count">130</span>')
+					+in-c('checkbox','Апрель  ')
+					+in-c('checkbox','Май  ')
+					+in-c('checkbox','Июнь  ')
+					+in-c('checkbox','Июль ')
+					+in-c('checkbox','Август ')
 				+item('Хосил йиғиш даври')
-					+in-c('checkbox','Апрель  <span class="filter-count">304</span>')
-					+in-c('checkbox','Май  <span class="filter-count">296</span>')
-					+in-c('checkbox','Июнь  <span class="filter-count">173</span>')
-					+in-c('checkbox','Июль  <span class="filter-count">137</span>')
-					+in-c('checkbox','Август  <span class="filter-count">130</span>')
+					+in-c('checkbox','Апрель  ')
+					+in-c('checkbox','Май  ')
+					+in-c('checkbox','Июнь  ')
+					+in-c('checkbox','Июль ')
+					+in-c('checkbox','Август ')
 				.container-fluid.px-lg-0
 					button.btn.btn-primary.w-100.my-2 Қидирув
 					button.btn.btn-outline-primary.w-100.my-2 Филтрни ўчириш
