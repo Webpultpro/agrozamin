@@ -14,7 +14,7 @@ mixin mob-mnu()
 		+e.inner
 			+mnu()
 	//  мобильное меню
-mixin top-nav(comp) 
+mixin top-nav(logout) 
 	// start top-nav  в этом блоке   отличия
 	+b.top-nav.block-with-lazy(class= (comp ? 'd-md-none' : null))
 		.container
@@ -165,6 +165,12 @@ mixin top-nav(comp)
 				//- if !comp
 				+e.col.col-lg.order-lg-0.order-last
 					+search-block 
+				if logout
+					.col-auto
+						+b.top-btn(href="#")
+							+e.SPAN.icon-wrap 
+								+icon("user")
+								+e.SPAN.count 99 
 				.col-auto
 					+b.top-btn(href="#")
 						+e.SPAN.icon-wrap 
@@ -175,38 +181,39 @@ mixin top-nav(comp)
 						+e.SPAN.icon-wrap  
 							+icon("basket-new")
 							+e.SPAN.count 99 
-				.col-lg-auto.col.order-md-0.order-first
-					.drop-down-wrap
-						+e.btn.btn.btn-outline-primary(type="button") 
-							+icon("menu")
-							| Сервислар
-						+b.dropdown-block--servises
-							mixin item(i,t,p)
-								+e.item(href="#")
-									+e.img-wrap
-										+pic(`drop-${i}.png`,'bg',0)
-									div
-										.h6.mb-1= t
-										.text-secondary= p
-							+item(`1`,`Фермерлар Мактаби`,`Ёш Фермерларни тайёрлаш мактаби`)
-							+item(`2`,`Агролаб`,`Лобаратория билан ишлаш маҳорати`)
-							+item(`3`,`Агротехкарталар`,`Ҳужжатлар билан ишлашда ёдамлаҳувчи майдон`)
-							+item(`4`,`Медиабиблиотека`,`Керакли видео маҳсулотлар учун майдон`)
-							+item(`4`,`Онлайн консултант`,`Керакли видео маҳсулотлар учун майдон`)
+				if !logout
+					.col-lg-auto.col.order-md-0.order-first
+						.drop-down-wrap
+							+e.btn.btn.btn-outline-primary(type="button") 
+								+icon("menu")
+								| Сервислар
+							+b.dropdown-block--servises
+								mixin item(i,t,p)
+									+e.item(href="#")
+										+e.img-wrap
+											+pic(`drop-${i}.png`,'bg',0)
+										div
+											.h6.mb-1= t
+											.text-secondary= p
+								+item(`1`,`Фермерлар Мактаби`,`Ёш Фермерларни тайёрлаш мактаби`)
+								+item(`2`,`Агролаб`,`Лобаратория билан ишлаш маҳорати`)
+								+item(`3`,`Агротехкарталар`,`Ҳужжатлар билан ишлашда ёдамлаҳувчи майдон`)
+								+item(`4`,`Медиабиблиотека`,`Керакли видео маҳсулотлар учун майдон`)
+								+item(`4`,`Онлайн консултант`,`Керакли видео маҳсулотлар учун майдон`)
 
-				.col-lg-auto.col
-					.drop-down-wrap.text-end
-						+e.btn.btn.btn-primary(type="button")
-							+icon("user")
-							| Кабинет
-						+b.dropdown-block--cabinet
-							mixin item(t)
-								+e.item(href="#").h6= t 
-							+item(`Профил`)
-							+item(`Махсулотлар`)
-							+item(`Буюртмаларим`)
-							+item(`Харидор буюртмалари`)
-							+item(`Чиқиш`)
+					.col-lg-auto.col
+						.drop-down-wrap.text-end
+							+e.btn.btn.btn-primary(type="button")
+								+icon("user")
+								| Кабинет
+							+b.dropdown-block--cabinet
+								mixin item(t)
+									+e.item(href="#").h6= t 
+								+item(`Профил`)
+								+item(`Махсулотлар`)
+								+item(`Буюртмаларим`)
+								+item(`Харидор буюртмалари`)
+								+item(`Чиқиш`)
 	// end top-nav
 mixin top-nav-cabinet(comp) 
 	// start top-nav  в этом блоке   отличия
