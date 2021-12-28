@@ -72,7 +72,10 @@
 }
 
 .search-block {
-	max-width: rem(584);
+	@include media-breakpoint-up(lg) {
+
+		max-width: rem(584);
+	}
 	form {
 		position: relative;
 	}
