@@ -1,3 +1,23 @@
+mixin serivedroop()
+	
+	.drop-down-wrap
+		+e.btn.btn.btn-outline-primary(type="button") 
+			+icon("menu")
+			| Сервислар
+		+b.dropdown-block--servises
+			mixin item(i,t,p)
+				+e.item(href="#")
+					+e.img-wrap
+						+pic(`drop-${i}.png`,'bg',0)
+					div
+						.h6.mb-1= t
+						.text-secondary= p
+			+item(`1`,`Фермерлар Мактаби`,`Ёш Фермерларни тайёрлаш мактаби`)
+			+item(`2`,`Агролаб`,`Лобаратория билан ишлаш маҳорати`)
+			+item(`3`,`Агротехкарталар`,`Ҳужжатлар билан ишлашда ёдамлаҳувчи майдон`)
+			+item(`4`,`Медиабиблиотека`,`Керакли видео маҳсулотлар учун майдон`)
+			+item(`4`,`Онлайн консултант`,`Керакли видео маҳсулотлар учун майдон`)
+
 mixin mob-mnu()
 	-
 		//- let path = require('path');
@@ -181,26 +201,9 @@ mixin top-nav(logout)
 						+e.SPAN.icon-wrap  
 							+icon("basket-new")
 							+e.SPAN.count 99 
+				.col-lg-auto.col.order-md-0.order-first
+					+serivedroop()
 				if !logout
-					.col-lg-auto.col.order-md-0.order-first
-						.drop-down-wrap
-							+e.btn.btn.btn-outline-primary(type="button") 
-								+icon("menu")
-								| Сервислар
-							+b.dropdown-block--servises
-								mixin item(i,t,p)
-									+e.item(href="#")
-										+e.img-wrap
-											+pic(`drop-${i}.png`,'bg',0)
-										div
-											.h6.mb-1= t
-											.text-secondary= p
-								+item(`1`,`Фермерлар Мактаби`,`Ёш Фермерларни тайёрлаш мактаби`)
-								+item(`2`,`Агролаб`,`Лобаратория билан ишлаш маҳорати`)
-								+item(`3`,`Агротехкарталар`,`Ҳужжатлар билан ишлашда ёдамлаҳувчи майдон`)
-								+item(`4`,`Медиабиблиотека`,`Керакли видео маҳсулотлар учун майдон`)
-								+item(`4`,`Онлайн консултант`,`Керакли видео маҳсулотлар учун майдон`)
-
 					.col-lg-auto.col
 						.drop-down-wrap.text-end
 							+e.btn.btn.btn-primary(type="button")

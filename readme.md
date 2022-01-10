@@ -89,3 +89,7 @@
 17. <https://webpult.github.io/agrozamin/public/31-2.5.html> 2.5
 18. <https://webpult.github.io/agrozamin/public/13-personal-account-4.html> 2.6
 19. <https://webpult.github.io/agrozamin/public/13-pa-orders-1.html> 2.7
+# 00.01.2022
+20. <https://webpult.github.io/agrozamin/public/30-5.7.html> 5.7
+21. <https://webpult.github.io/agrozamin/public/31-5.7.html> 5.7
+22. <https://webpult.github.io/agrozamin/public/32-5.7.html> 5.7

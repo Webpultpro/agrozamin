@@ -105,6 +105,7 @@ $success: $green !default;
 $info: #3190FF !default;
 $warning: $yellow !default;
 $danger: $red !default;
+$orange: $orange !default;
 $light: #F2F2F2 !default;
 $dark: $gray-900 !default;
 // scss-docs-end theme-color-variables
@@ -116,6 +117,7 @@ $theme-colors: ("primary": $primary,
   "secondary": $secondary,
   "success": $success,
   "info": $info,
+  "orange": $orange,
   "warning": $warning,
   "danger": $danger,
   "light": $light,

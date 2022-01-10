@@ -7,7 +7,7 @@ body:not(.page-cabinet) {
 		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.06);
 	background-color: #fff;
 	z-index: 200;
-	z-index: 800;
+	z-index: 1000;
 		@include media-breakpoint-down(sm) {
 			&:not(.top-nav--cabinet) {
 
