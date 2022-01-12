@@ -67,3 +67,23 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 }
+
+.swiper-pagination--custom{
+		margin-top: rem(40);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: rem(14);
+		.swiper-pagination-bullet {
+			background-color: #afafaf;
+			width: rem(10);
+			height: rem(10);
+			margin-left: rem(5);
+			margin-right: rem(5);
+			&-active {
+				width: rem(14);
+				height: rem(14);
+				background-color: var(--bs-primary);
+			}
+	}
+}

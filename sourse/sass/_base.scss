@@ -864,7 +864,7 @@ iframe {
 				background-color: #EEEEEE;	
 			}
 	}
-	font-size: rem(20);
+
 	.btn{
 			@include media-breakpoint-up(sm) {
 
@@ -899,6 +899,7 @@ iframe {
 	}
 	.alert{
 		display: inline-block;
+			font-size: rem(20);
 			@include media-breakpoint-up(sm) {
 				
 				font-size: 14px; 

@@ -38,6 +38,9 @@
 			width: 11px;
 			height: 22px;
 		}
+		.swiper-pagination{
+			margin-top: rem(32);
+		}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

@@ -792,7 +792,7 @@ function eventHandler() {
 			},
 			// when window width is >= 640px
 			992: {
-				slidesPerView: 4
+				slidesPerView: 3
 			}
 		}
 	});
