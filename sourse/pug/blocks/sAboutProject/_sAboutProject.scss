@@ -18,7 +18,7 @@
 		@include media-breakpoint-up(lg) {
 			padding: rem(65);
 		}
-		picture {
+		.picture-bg {
 			width: 120%;
 			left: -8%;
 			img.object-fit-js {

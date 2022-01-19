@@ -1,0 +1,67 @@
+extends layout/main.pug
+
+
+include ../blocks/sAboutProject/_sAboutProject.pug
+include ../blocks/sOurGoal/_sOurGoal.pug
+include ../blocks/sOurDuty/_sOurDuty.pug
+include ../blocks/sServicePurpose/_sServicePurpose.pug
+
+block variables
+	- let  mainPage= 'about-project bg-white'
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Лойиҳа ҳақида'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+topLine()
+		+top-nav()
+	+breadcrumb('Асосий саҳифа', title)
+	+sServicePurpose() 
+		.row.aligin-items-center.pt-4
+			+e.col.col-lg-6.col-xl-4.text-center
+				img(src="img/svg/42-2.svg", alt="")
+				//- +pic("10638.png",'',0)
+			.col-lg-6.col-xl
+				+e.card-content
+					h1 Энтомология
+					p Ентомология-ҳашаротларни ўрганадиган зоология бўлими. Ҳашаротларнинг хилма-хиллиги жуда катта, уларнинг аҳамияти ва уларни ўрганадиган мутахассислар сони ҳам катта
+	section.section.container
+		.section-title.text-center
+			h2 Хусусий ентомология
+		ul(style="--col-size-xl: 3").custom-list
+			li Туячилик
+			li Эчкичилик
+			li Отчилик
+			li Қуёнчилик
+			li Қўйчилик
+			li Паррандачилик
+			li Балиқчилик
+			li Чўчқачилик
+	+sForm2
+		+form-wrap
+			+e.title.h4.mb-4 Рўйхатдан ўтиш
+			+input("Энтомология",'select','Таълим йўналишлари')
+			+input("Интенсив курс",'select','Ўқиш тури')
+			+input("",'text','Исм')
+			+input("",'text','Фамилия')
+			+input("",'tel','Телефон рақами')
+			+input("",'email','E-mail')
+			+e.input-wrap.form-group
+				+e.SPAN.input-title.d-block.text-start Дата рождения *
+				.row
+					.col-4
+						+input('Кун','select')
+					.col-4
+						+input('Ой','select')
+					.col-4
+						+input('Йил','select')
+			+policy().mb-4
+			button.btn.btn-primary.w-190 Рўйхатдан ўтиш
+	+footer()
+
+

@@ -15,6 +15,24 @@ mixin slidehead(i,t,p, b="Харидни бошлаш")
 				source(type=`image/webp` srcset=`img/@2x/webp/head-slider-img-mob-${i}.webp`)
 				source(type=`image/png` srcset=`img/@2x/head-slider-img-${i}.png` media=`(min-width:992px)`) 
 				img(src=`img/@2x/head-slider-img-mob-${i}.png` alt='' loading='lazy')
+mixin slidehead2(i,t,p, b="Харидни бошлаш")
+	+e.slide.swiper-slide.bg-wrap(style="background: linear-gradient(98.19deg, #72A2C6 4.76%, #7AB1DA 100%);") 
+		.container
+			if block
+				block
+			else
+				//- +pic(`head-slider-bg-${i}.jpg`,'bg').picture-bg
+			+e.content
+				+e.title!= t
+				p!= p 
+			+e.btn.heartbeat(href="#")= b
+			//- +pic(`head-slider-img-${i}.png`,'').head-slide-img
+			if i
+				picture.head-slide-img
+					source(type='image/webp' srcset=`img/@2x/webp/head-slider-img-${i}.webp` media=`(min-width:992px)`)
+					source(type=`image/webp` srcset=`img/@1x/webp/head-slider-img-${i}.webp`)
+					source(type=`image/png` srcset=`img/@2x/head-slider-img-${i}.png` media=`(min-width:992px)`) 
+					img(src=`img/@1x/head-slider-img-${i}.png` alt='' loading='lazy')
 
 mixin headcards()
 	+b.cardsHead
@@ -50,6 +68,25 @@ mixin sHeaderBannerBody(data)
 					.swiper-pagination
 			+headcards()
 	// end sHeaderBanner
+mixin sHeaderBannerBody2(data)
+	// start sHeaderBanner
+	+b.sHeaderBanner--theme.section#sHeaderBanner&attributes(attributes) 
+		+e.slider--js.swiper-container
+			.swiper-wrapper
+				block
+			+e.arrow-wrapper.d-none.d-lg-block
+				.container
+					+e.arrow-wrapper-inner
+						+arrow
+			.swiper-pagination-wrap
+				.pieProgress(role='progressbar'  aria-valuemin='0' data-step='2' aria-valuemax='100').d-none.d-lg-block
+					.progress__meter
+						span.progress__label
+
+				.swiper-pagination
+		+e.top.container 
+			+headcards()
+	// end sHeaderBanner
 mixin sHeaderBanner(data)
 	+sHeaderBannerBody
 		+slidehead(1,`Ўз аграр бизнесингизни биз билан қуринг`,`Ҳамкорлар, дилерлар, етказиб берувчилар ва улгуржи харидорларни топиш учун ягона онлайн платформа`)
@@ -78,3 +115,10 @@ mixin sHeaderBannerBlue()
 					+e.btn--theme.heartbeat(href="#") Харидни бошлаш
 			+headcards()
 	// end sHeaderBanner
+mixin sHeaderBannerBlue2(data)
+	+sHeaderBannerBody2.--theme
+		+slidehead2(4,`Керакли махсулотларни Фермерлардан харид қилинг`,`Харидни бизнинг сервис орқали амалга оширинг`,'Харидни бошлаш')
+		+slidehead2(5,`Янги харидлар амалга оширинг`,`Харидни бизнинг сервис орқали амалга оширинг`,'Харидни бошлаш')
+		+slidehead2(4,`Керакли махсулотларни Фермерлардан харид қилинг`,`Харидни бизнинг сервис орқали амалга оширинг`,'Харидни бошлаш')
+		+slidehead2(5,`Янги харидлар амалга оширинг`,`Харидни бизнинг сервис орқали амалга оширинг`,'Харидни бошлаш')
+		//- +slidehead2(4, `Маҳсулотингизни жойланг ва ўз мижозларингизга ега бўлинг`,`Махсулотингизни платформага жойлаш орқали сиз янги харидорларга ега бўласиз ва ўз бизнесингизни ривожлантирасиз`) 

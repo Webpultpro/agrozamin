@@ -1002,3 +1002,38 @@ iframe {
 		min-height: 135px;
 	}
 }
+
+.custom-list{
+	display: flex;
+	@include media-breakpoint-up(xl) {
+		--bs-gutter-x: 40px;
+	}
+	@include roww(20px, m);
+	flex-wrap: wrap;
+	list-style: none;
+	font-size: rem(18);
+	margin-top: rem(-79);
+	li{
+		padding-left: rem(33 + 19);
+		position: relative;
+		margin-top: rem(79);
+		&::before{
+			content: var(--circle-check);
+			position: absolute;
+			left: 0;
+			top: rem(-3);
+		}
+		@include media-breakpoint-up(xl) {
+			--col-size: var(--col-size-xl, 4);
+		}
+		@include media-breakpoint-up(lg) {
+			--col-size: 4
+		}
+		@include media-breakpoint-up(md) {
+			--col-size: 6
+		}
+		--col-size: 12;
+		width: calc(100% * var(--col-size) / 12 - var(--bs-gutter-x)) ;
+
+	}
+}

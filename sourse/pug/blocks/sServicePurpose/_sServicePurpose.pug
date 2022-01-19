@@ -2,8 +2,9 @@ mixin sServicePurpose(t)
 	// start sServicePurpose
 	+b.SECTION.sServicePurpose.section#sServicePurpose&attributes(attributes)
 		.container
-			+b.section-title.text-center(class="wow animate__fadeInUp" data-wow-delay=".1s")
-				h2!= t
+			if t
+				+b.section-title.text-center(class="wow animate__fadeInUp" data-wow-delay=".1s")
+					h2!= t
 			block
 
 	// end sServicePurpose
@@ -14,8 +15,10 @@ mixin cardS(h, p, i)
 		.row.aligin-items-center
 			.col-lg-6.col-xl
 				+e.card-content
-					h3!= h
-					p!= p
+					if h
+						h3!= h
+					if p
+						p!= p
 					block
 			+e.col.col-lg-6.col-xl-auto
 				+pic(`purpose-lg-${i}.png`,'', 0)(class="wow animate__fadeIn" data-wow-delay=".5s")

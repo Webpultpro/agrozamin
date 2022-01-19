@@ -27,3 +27,32 @@ mixin sContent(i)
 						+icon('share')
 					span Янгиликни бўлишиш
 	// end sContent
+mixin sContent(i)
+	// start sContent
+	+b.SECTION.sContent.section#sContent&attributes(attributes)
+		if block
+			block
+		else
+			.container
+				if i
+					+pic(`content-${i}.png`)
+				p Виса билан ҳамкорликада "Унутилмас саёҳатни ютиб олинг" аксиясини еълон қиламиз.<br>
+					| Ендиликда сиз 1000 АҚШ доллари миқдоридаги унутилмас саёҳат сертификатини ютиб олишингиз мумкин.<br>
+					| Шартлар оддий: Россиядан жўнатилган пул ўтказмасини Агробанк Виса картангизга қабул қилишингиз кифоя.<br>
+					| Ғолиблар сони 4 та.<br>
+					| Аксияда 18 ёшга тўлган Ўзбекитоннинг барча фуқаролари иштирок етишлари мумкин.<br>
+					| Аксиямиз 16 -октабргача бўлиб ўтади.<br>
+					| Батафсил маълумотга ега бўлиш учун офертани юклаб олинг!
+				+b.date-n-views
+					.row
+						.col-auto
+							+e.date 14.09.2021
+						.col-auto
+							+e.views
+								+icon('eye-2')
+								span 501
+				+b.share-btn(href="#")
+					+e.circle
+						+icon('share')
+					span Янгиликни бўлишиш
+	// end sContent

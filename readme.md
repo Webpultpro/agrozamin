@@ -59,7 +59,6 @@
 # 07.10.2021
 
 1 <https://webpult.github.io/agrozamin/public/21-about-project.html>
-1 <https://webpult.github.io/agrozamin/public/22-news.html>
 1 <https://webpult.github.io/agrozamin/public/23-news-article.html>
 1 <https://webpult.github.io/agrozamin/public/24-news-article-no-pic.html>
 1 <https://webpult.github.io/agrozamin/public/25-faq.html>
@@ -90,6 +89,27 @@
 18. <https://webpult.github.io/agrozamin/public/13-personal-account-4.html> 2.6
 19. <https://webpult.github.io/agrozamin/public/13-pa-orders-1.html> 2.7
 # 00.01.2022
-20. <https://webpult.github.io/agrozamin/public/30-5.7.html> 5.7
-21. <https://webpult.github.io/agrozamin/public/31-5.7.html> 5.7
-22. <https://webpult.github.io/agrozamin/public/32-5.7.html> 5.7
+1.  <https://webpult.github.io/agrozamin/public/30-5.7.html> 5.7
+2.  <https://webpult.github.io/agrozamin/public/31-5.7.html> 5.7
+3.  <https://webpult.github.io/agrozamin/public/32-5.7.html> 5.7
+# 17.01.2022
+1.  <https://webpult.github.io/agrozamin/public/34-news.html>
+2.  <https://webpult.github.io/agrozamin/public/35-news.html>
+3.  <https://webpult.github.io/agrozamin/public/36-files.html>
+4.  <https://webpult.github.io/agrozamin/public/37-news.html>
+5.  <https://webpult.github.io/agrozamin/public/38-news.html>
+6.  <https://webpult.github.io/agrozamin/public/39-news-artical.html>
+7.  <https://webpult.github.io/agrozamin/public/40-news-artical.html>
+8.  <https://webpult.github.io/agrozamin/public/41-artical.html>
+9.  <https://webpult.github.io/agrozamin/public/41-artical-1.html>
+10. <https://webpult.github.io/agrozamin/public/42-artical.html>
+11. <https://webpult.github.io/agrozamin/public/22-news.html>
+12. <https://webpult.github.io/agrozamin/public/34-5.7.html> 5.7
+13. <https://webpult.github.io/agrozamin/public/35-5.7.html> 5.7
+14. <https://webpult.github.io/agrozamin/public/36-5.7.html> 5.7
+15. <https://webpult.github.io/agrozamin/public/37-5.7.html> 5.7
+16. <https://webpult.github.io/agrozamin/public/38-5.7.html> 5.7
+17. <https://webpult.github.io/agrozamin/public/39-5.7.html> 5.7
+18. <https://webpult.github.io/agrozamin/public/40-5.7.html> 5.7
+19. <https://webpult.github.io/agrozamin/public/41-5.7.html> 5.7
+20. <https://webpult.github.io/agrozamin/public/42-5.7.html> 5.7

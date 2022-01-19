@@ -1,0 +1,66 @@
+extends layout/main.pug
+
+
+include ../blocks/sAboutProject/_sAboutProject.pug
+include ../blocks/sOurGoal/_sOurGoal.pug
+include ../blocks/sOurDuty/_sOurDuty.pug
+include ../blocks/sServicePurpose/_sServicePurpose.pug
+
+block variables
+	- let  mainPage= 'about-project bg-white'
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Лойиҳа ҳақида'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+topLine()
+		+top-nav()
+	+breadcrumb('Асосий саҳифа', title)
+	//- +sServicePurpose() 
+	//- 	.row.aligin-items-center.pt-4
+	//- 		+e.col.col-lg-6.col-xl-4.text-center
+	//- 			//- img(src="img/svg/img-left.svg", alt="")
+	//- 			+pic("10638.png",'',0)
+	//- 		.col-lg-6.col-xl
+	//- 			+e.card-content
+	//- 				h1 Сабзавот ва полизчилик
+	//- 				p Фермерлар мактаби - бу қишлоқ хўжалиги маҳсулотларини ишлаб чиқаришда энг замонавий инновацион технологиялардан фойдаланишни ёшларга ўргатиш, билимли ва малакали ёш фермерларни тайёрлаш ва қишлоқ хўжалиги соҳасида тадбиркорлик кўникмаларини ошириш сирларини очиб берадиган Ўзбекистондаги илк лойиҳа. 
+	section.section.container
+		.section-title.text-center
+			h1 Лобаратория хизматлари
+		ul().custom-list
+			li Тупроқ таҳлили ва агрокимёвий тадқиқотлар лабораторияси
+			li Молекуляр тадқиқотлар лабораторияси
+			li Аналитик тадқиқотлар лабораторияси
+			li Фитопатология лабораторияси
+			li Гербология лабораторияси
+
+			li Нематология лабораторияси
+			li Энтомология лабораторияси
+
+	+sForm2
+		+form-wrap
+			+e.title.h4.mb-4 Рўйхатдан ўтиш
+			+input("",'text','Исм')
+			+input("",'text','Фамилия')
+			+input("",'tel','Телефон рақами')
+			+input("",'email','E-mail')
+			+e.input-wrap.form-group
+				+e.SPAN.input-title.d-block.text-start Дата рождения *
+				.row
+					.col-4
+						+input('Кун','select')
+					.col-4
+						+input('Ой','select')
+					.col-4
+						+input('Йил','select')
+			+policy().mb-4
+			button.btn.btn-primary.w-190 Рўйхатдан ўтиш
+	+footer()
+
+

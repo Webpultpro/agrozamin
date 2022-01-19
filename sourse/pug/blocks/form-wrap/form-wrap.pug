@@ -75,6 +75,8 @@ mixin add-file(n)
 
 
 mixin policy()
-	+e.policy
+	+e.policy&attributes(attributes)
 		+in-c()(checked)
-			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+			+e.SPAN.text Шахсий маълумотлардан фойдаланиш 
+				br
+				a(href="#").text-info.tdu шартларини қабул қиламан.

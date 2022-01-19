@@ -104,6 +104,11 @@
 		right: 30px;
 		bottom: 30px;
 		z-index: 4;
+		&-inner{
+			width: rem(57.09px);
+			position: relative;
+			height: 27px;
+		}
 	}
 
 	--swiperArrowPosition: 0;
@@ -143,7 +148,10 @@
 
 	&--theme{
 		// padding-top: rem(75);
-		background-color: $body-color;
+		// background-color: $body-color;
+		padding-top: 0;
+		padding-bottom: 0;
+		color: #fff;
 		.h5{
 			max-width: rem(400);
 			margin-bottom: rem(18);
@@ -157,6 +165,64 @@
 			}
 			font-weight: bold;
 		}
+		.sHeaderBanner__slider{
+			// margin-top: calc(-1 * var(--sPT));
+			border-radius: 0;
+			width: 100%;
+		}
+		.sHeaderBanner__slide{
+			padding: 0;
+			.container{
+				position: relative;
+				padding-top: rem(60);
+				padding-bottom: rem(60);
+				@include media-breakpoint-up(lg) {
+					
+					padding-bottom: rem(230);
+					min-height: rem(560);
+				}
+			}
+			border-radius: 0;
+		}
+		.sHeaderBanner__arrow-wrapper{
+			left: 0;
+			width: 100%;
+			bottom: 164px;
+			// .continer{
+			// 	position: relative;
+			// }
+		}
+		.swiper-button-hand{
+			background: rgba(255, 255, 255, 0.2);
+			color: #fff;
+		}
+		margin-bottom: rem(40);
+		@include media-breakpoint-up(xl) {
+
+			.head-slide-img{
+				width: auto;
+				height: auto;
+				max-height: none;
+			}
+		}
+		@include media-breakpoint-up(lg) {
+			.head-slide-img{
+				width: 70%;
+				right: -10%;
+			}
+			.sHeaderBanner__title{
+				// @include rfs(45px);
+				font-size: 45px;
+			}
+		}
+	}
+	&__top{
+		@include media-breakpoint-up(lg){
+
+			margin-top: rem(-190);
+		}
+		position: relative;
+		z-index: 5;
 	}
 
 	@include media-breakpoint-up(xl) {

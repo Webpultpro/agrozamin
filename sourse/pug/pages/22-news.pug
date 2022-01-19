@@ -1,0 +1,30 @@
+extends layout/main.pug
+
+
+include ../blocks/sAboutProject/_sAboutProject.pug
+include ../blocks/sOurGoal/_sOurGoal.pug
+include ../blocks/sOurDuty/_sOurDuty.pug
+include ../blocks/sBankProducts/_sBankProducts.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Янгиликлар'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+topLine()
+		+top-nav()
+	+breadcrumb('Асосий саҳифа', title)
+	//- .text-center 
+	//- 	h1 Янгиликлар
+	+sBankProducts-22
+	+footer()
+
+
+

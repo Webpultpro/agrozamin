@@ -13,8 +13,8 @@
 		}
 	}
 	p {
-		font-size: rem(18);
-		margin-bottom: rem(18);
+		font-size: rem(16);
+		margin-bottom: rem(32);
 	}
 
 	.date-n-views {
@@ -25,7 +25,116 @@
 			margin-bottom: rem(46);
 		}
 	}
+	h1{
+		@include rfs(24px);
+		font-weight: bold;
+		margin-bottom: 1em;
+		max-width: rem(790);
+	}
+	&__head{
+		
+		margin-bottom: 1rem;
+		picture{
+			margin-bottom: 20px !important;
+			@include block(799, 352);
+			border-radius: 12px;
+			overflow: hidden;
+			img{
+				@include a-cent;
+			}
+			&::after{
+				content: '';
+				@include a-cent;
+				background: linear-gradient(359.61deg, rgba(0, 0, 0, 0.44) 0.36%, rgba(0, 0, 0, 0) 99.69%);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+	}
+	&__body{
+		h1{
+			@include media-breakpoint-up(lg) {
+			font-size: 24px !important;
+			}
 
+		}
+		padding-bottom: 37px;
+		margin-bottom: rem(47);
+		border-bottom: 1px solid #E6E6E6;
+	}
+	&__img-wrap--play{
+		position: relative;
+		display: block;
+		&::after{
+			z-index: 4;
+			content: ' ';
+			@include a-cent;
+			width: 100%;
+			height: 100%;
+			background-image: url(../img/svg/play.svg);
+			background-size: rem(90);
+			background-position: center;
+			background-repeat: no-repeat;
+			// width: 10%;
+		}
+	}
+
+	&__img-wrap{
+		position: relative;
+	}
+	&__img-wrap-caption{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.6);
+		color: #fff;
+		font-size: rem(16);
+		padding: rem(14) rem(21);
+	}
+	ul{
+		padding-left: rem(26);
+	}
+	li{
+		margin-bottom: 0.5em;
+		font-size: rem(16);
+	}
+	a.link-info{
+		border-bottom: 1px solid ;
+		&:hover{
+			border-color: transparent;
+		}
+	}
+	.ya-share2{
+
+	}
+	.ya-share2__list{
+		padding-left: 0;
+		margin-left: 0;
+	}
+	&__btns{
+		margin-top: rem(40);
+		margin-bottom: rem(20);
+		@include roww(12px, m);
+		display: flex;
+		flex-wrap: wrap;
+
+		.btn-sm{
+			margin-top: rem(8);
+			font-size: 14px;
+		}
+	}
+	--sTPB: #{rem(30)};
+	.form-wrap{
+		max-width: none;
+		box-shadow: none;
+		padding-top: 0;
+		padding-left: 0;
+		padding-right: 0;
+		border-bottom: 1px solid #E6E6E6;
+		// background-size: 0;
+		border-radius: 0;
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
@@ -127,4 +236,23 @@
 			}
 		}
 	}
+}
+
+blockquote{	
+	background: #FFFFFF;
+border: 1px solid #E3E3E3;
+border-left: 7px solid var(--bs-primary);
+box-sizing: border-box;
+border-radius: 3px;
+padding: rem(20) rem(50);
+margin-bottom: 1rem;
+h4{
+	font-weight: normal;
+}
+}
+
+
+.text-block{
+	max-width: rem(540);
+	margin-bottom: rem(40);
 }

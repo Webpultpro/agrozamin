@@ -354,6 +354,12 @@ body:not(.page-cabinet) {
 }
  
 .menu-item-has-children {
+	@include media-breakpoint-down(lg) {
+		cursor: pointer;
+		& >a {
+			// pointer-events: none;
+		}
+	}
 	// position: relative;
 	margin-bottom: -1px; 
 		// &::before {

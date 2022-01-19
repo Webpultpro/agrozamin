@@ -14,3 +14,34 @@ mixin sFaq(data)
 			+item('Қўшилган махсулот қанча вақт ичида сайтга жойланади?')
 			+item('Тизим оператори билан қандай боғланиш мумкин?')
 	// end sFaq
+mixin sFaq36(data)
+	// start sFaq
+	+b.sFaq--files.section#sFaq&attributes(attributes)
+		.container
+			mixin item(t)
+				+b.accordeon-item
+					+e.head= t
+						+icon("close")
+					+e.body
+						mixin link(t)
+							div
+								+b.file-link(href="#")
+									img(src="img/svg/file-link.svg", alt="")
+									div 
+										+e.title= t
+										.text-secondary PDF
+						+link(`Иссиқхоналарда сабзавот кўчатчилиги`)
+						+link(`Иссиқхоналарда микроиқлим шароити`)
+						+link(`Тупроқсиз екин етиштириш`)
+						+link(`Бодрингни иссиқхонада етиштириш`)
+						+link(`Помидорни иссиқхонада етиштириш`)
+			+item('Боғдорчилик')
+			+item('Деҳқончилик')
+			+item('Иссиқхона')
+			+item('Сабзавот')
+			+item('Полиз')
+			+item('Доривор ўсимликлар')
+			+item('Чорвачилик')
+			+item('Паррандачилик')
+			+item('Ҳайвон касалликлари')
+	// end sFaq

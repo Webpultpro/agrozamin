@@ -2,6 +2,19 @@
 	// start .sForm
 	.sForm {
 		margin-bottom: rem(100);
+		&--2{
+			margin: 0;
+			background: #F7F8FD;
+			border-radius: 60px 60px 0px 0px;
+			@include media-breakpoint-up(md) {
+
+				padding-top: rem(90);
+				padding-bottom: rem(90);
+			}
+			.form-wrap{
+				background-color: #fff;
+			}
+		}
 		&__inner{
 			background: #FFFFFF;
 			border: 1px solid #F0F0F0;

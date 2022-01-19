@@ -64,6 +64,109 @@
 				margin-bottom: 0;
 			}
 		}
+		&--bg,
+		&--main{
+			.mt-auto{
+				margin-top: 1rem !important;
+			}
+			picture::after{
+				content: '';
+				// z-index: -1;
+				@include a-cent;
+				z-index: 2;
+				background: linear-gradient(359.61deg, rgba(0, 0, 0, 0.74) 0.36%, rgba(0, 0, 0, 0) 99.69%);
+			}
+			height: auto;
+		}
+		&--main{
+			margin-bottom: rem(65);
+			
+			.sBankProducts__caption{
+
+				padding: 24px;
+			}
+			.sBankProducts__price{
+				@include rfs(28px);
+			}
+		}
+		&--video,
+		&--photo{
+			border: none;
+		}
+		&--text{
+			box-shadow: none !important;
+			background: none;
+		}
+	}
+	
+
+	&__item--main &__img-wrap{
+		min-height: 343px;
+	}
+	&__item--bg &__caption,
+	&__item--main &__caption{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		z-index: 21;
+		color: #fff;
+		.text-primary,
+		.text-secondary2{
+			--bs-secondary-rgb: 255 255 255;
+			--bs-primary-rgb: var(--bs-secondary-rgb);
+			// --bs-text-opacity: .44;
+			opacity: 0.44;
+		}
+		// .text-secondary,
+		* {
+			color: #fff ;
+
+		}
+	}
+	// &__item--bg &__img-wrap,
+	&__item--video &__img-wrap{
+		border-radius: 12px;
+		picture::after{
+			content: '';
+			// z-index: -1;
+			@include a-cent;
+			z-index: 2;
+			background: linear-gradient(359.61deg, rgba(0, 0, 0, 0.74) 0.36%, rgba(0, 0, 0, 0) 99.69%);
+		}
+		&::after{
+			content: url(../img/svg/play.svg);
+			@include a-cent1;
+			z-index: 2;
+		}
+	}
+	
+	
+	&__item--photo &__img-wrap{
+		border-radius: 12px;
+		picture::after{
+			content: '';
+			// z-index: -1;
+			@include a-cent;
+			z-index: 2;
+			background: linear-gradient(359.61deg, rgba(0, 0, 0, 0.74) 0.36%, rgba(0, 0, 0, 0) 99.69%);
+		}
+		&::after{
+			content: url(../img/svg/photo.svg);
+			// @include a-cent1;
+			position: absolute;
+			background: rgba(0, 0, 0, 0.6);
+			width: 34px;
+			border-radius: 5px;
+			height: 34px;
+			z-index: 2;
+			left: 8px;
+			bottom: 8px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding-top: rem(5);
+		}
 	}
 
 	&__img-wrap {
@@ -124,6 +227,13 @@
 		.swiper-slide {
 			height: auto;
 		}
+	}
+
+	&__banner{
+		@include block(281, 332);
+		border-radius: 12px;
+		overflow: hidden;
+		margin-bottom: 24px;
 	}
 	@include media-breakpoint-up(xl) {
 	}

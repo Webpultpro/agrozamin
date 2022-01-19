@@ -185,14 +185,7 @@ function eventHandler() {
 		$('.catalog-block').removeClass('active');
 		$("body, html").removeClass('fixed');
 	})
-
-	// $(" .menu-item-has-children > a").click(function (e) {
-	// 	if ($(".catalog-block").hasClass("active")) {
-	// 		e.preventDefault();
-	// 		$(this).toggleClass("active").next().slideToggle();
-	// 	}
-	// })
-
+ 
 
 	window.addEventListener('scroll', () => {
 		setFixedNav();
@@ -203,41 +196,6 @@ function eventHandler() {
 	}, { passive: true });
 
 	whenResize();
-
-
-	// let defaultSl = {
-	// 	spaceBetween: 0,
-	// 	lazy: {
-	// 		loadPrevNext: true,
-	// 	},
-	// 	watchOverflow: true,
-	// 	spaceBetween: 0,
-	// 	loop: true,
-	// 	navigation: {
-	// 		nextEl: '.swiper-button-next',
-	// 		prevEl: '.swiper-button-prev',
-	// 	},
-	// 	pagination: {
-	// 		el: ' .swiper-pagination',
-	// 		type: 'bullets',
-	// 		clickable: true,
-	// 		// renderBullet: function (index, className) {
-	// 		// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-	// 		// }
-	// 	},
-	// }
-
-	// const swiper4 = new Swiper('.sBanners__slider--js', {
-	// 	// slidesPerView: 5,
-	// 	...defaultSl,
-	// 	slidesPerView: 'auto',
-	// 	freeMode: true,
-	// 	loopFillGroupWithBlank: true,
-	// 	touchRatio: 0.2,
-	// 	slideToClickedSlide: true,
-	// 	freeModeMomentum: true,
-
-	// });
 
 	let sCategoriesSlider = new Swiper('.sCategories__slider--js', {
 		freeModeMomentum: true,
@@ -254,10 +212,29 @@ function eventHandler() {
 		freeMode: true,
 	});
 
-	let sliderWrap = document.querySelectorAll(".sBankProducts");
+	let sliderWrap = document.querySelectorAll(".sBankProducts__slider-wrap");
 	sliderWrap.forEach(el => {
 
 		let sBankProductsSlider = new Swiper(el.querySelector('.sBankProducts__slider--js'), {
+			freeModeMomentum: true,
+			watchOverflow: true,
+			slidesPerView: 'auto',
+			spaceBetween: 30,
+			freeMode: true,
+			// loop: true,
+			pauseOnMouseEnter: true,
+			navigation: {
+				nextEl: el.querySelector(' .swiper-button-next'),
+				prevEl: el.querySelector(' .swiper-button-prev')
+			},
+			autoplay: {
+				delay: 5000,
+			},
+		});
+	})
+	sliderWrap.forEach(el => {
+
+		let sBankProductsSlider = new Swiper(el.querySelector('.sBankProducts__slider--2js'), {
 			freeModeMomentum: true,
 			watchOverflow: true,
 			slidesPerView: 'auto',
@@ -272,6 +249,11 @@ function eventHandler() {
 			autoplay: {
 				delay: 5000,
 			},
+			breakpoints: { 
+				1200: {
+					slidesPerView: 3
+				}
+			}
 		});
 	})
 
@@ -286,7 +268,7 @@ function eventHandler() {
 			loop: false,
 			pauseOnMouseEnter: true,
 			slidesPerColumn: 4,
-   slidesPerColumnFill: "row",
+   		slidesPerColumnFill: "row",
 
 			// navigation: {
 			// 	nextEl: el.querySelector(' .swiper-button-next'),
@@ -595,9 +577,12 @@ function eventHandler() {
 	// $(".menu-item-has-children:first-child").addClass("active");
 	// $(".catalog-block__toggle--desctop").click(function(){
 	// })
-	$(".menu-item-has-children > a").hover(function (e) { 
+	// $().hover(function (e) { 
+	$('.catalog-block').on("click", ".menu-item-has-children > a", function(e){
+		if (!$(".catalog-block").hasClass("active")) return;
 			e.preventDefault();
-		// console.log();
+		// 	console.log(1);
+		// console.log(this);
 		let title = $(this).text();
 		$(this).parent().addClass("active").siblings('li').removeClass('active')
 		.find('li').removeClass('active');
@@ -795,6 +780,31 @@ function eventHandler() {
 				slidesPerView: 3
 			}
 		}
+	});
+
+
+	$(document).on("click", ".news-control__toggle--js", function(){
+		$(".news-control__body").slideToggle();
+	})
+
+
+
+	var contentswiper2 = new Swiper(".content-gallery__slider--thumbs-js", {
+		spaceBetween: 20,
+		// slidesPerView: 'auto',
+		slidesPerView: 'auto',
+		freeMode: true,
+		watchSlidesProgress: true,
+	});
+	var contentswiper = new Swiper(".content-gallery__slider--js", {
+		spaceBetween: 0,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		thumbs: {
+			swiper: contentswiper2,
+		},
 	});
 };
 
