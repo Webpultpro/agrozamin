@@ -112,4 +112,4 @@
 17. <https://webpult.github.io/agrozamin/public/39-5.7.html> 5.7
 18. <https://webpult.github.io/agrozamin/public/40-5.7.html> 5.7
 19. <https://webpult.github.io/agrozamin/public/41-5.7.html> 5.7
-20. <https://webpult.github.io/agrozamin/public/42-5.7.html> 5.7
+<!-- 20. <https://webpult.github.io/agrozamin/public/42-5.7.html> 5.7 -->
