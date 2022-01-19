@@ -806,6 +806,11 @@ function eventHandler() {
 			swiper: contentswiper2,
 		},
 	});
+
+
+	$('.custom-select-js').select2({
+		// dropdownParent: 
+	});
 };
 
 if (document.readyState !== 'loading') {
