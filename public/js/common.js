@@ -20,27 +20,24 @@ const JSCCommon = {
 	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
 
 	modalCall() {
-		const link = ".link-modal-js";
+		const link = '[data-fancybox="modal"], .link-modal-js';
 
 		Fancybox.bind(link, {
 			arrows: false,
-			infobar: false,
+			// infobar: false,
 			touch: false,
+			trapFocus: false,
+			placeFocusBack: false,
 			infinite: false,
 			dragToClose: false,
 			type: 'inline',
 			autoFocus: false,
+			groupAll: false,
+			groupAttr: false,
 			l10n: {
 				Escape: "Закрыть",
 				NEXT: "Вперед",
 				PREV: "Назад",
-				// PLAY_START: "Start slideshow",
-				// PLAY_STOP: "Pause slideshow",
-				// FULL_SCREEN: "Full screen",
-				// THUMBS: "Thumbnails",
-				// DOWNLOAD: "Download",
-				// SHARE: "Share",
-				// ZOOM: "Zoom"
 			},
 			// beforeLoad: function () {
 			// 	root.style.setProperty('--spacing-end', scrollWidth + 'px');
@@ -578,6 +575,16 @@ function eventHandler() {
 	// $(".catalog-block__toggle--desctop").click(function(){
 	// })
 	// $().hover(function (e) { 
+	$(".menu-item-has-children > a").hover(  function(e){
+		if ($(".catalog-block").hasClass("active")) return;
+			// e.preventDefault();
+		// 	console.log(1);
+		// console.log(this);
+		let title = $(this).text();
+		$(this).parent().addClass("active").siblings('li').removeClass('active')
+		.find('li').removeClass('active');
+	})
+
 	$('.catalog-block').on("click", ".menu-item-has-children > a", function(e){
 		if (!$(".catalog-block").hasClass("active")) return;
 			e.preventDefault();
@@ -594,6 +601,7 @@ function eventHandler() {
 
 															${title}</li>`)
 	})
+	
 
 	$(document).on("click", ".btn-back", function(){
 		$(this).parent().parent().parent().removeClass("active");

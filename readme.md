@@ -101,15 +101,19 @@
 6.  <https://webpult.github.io/agrozamin/public/39-news-artical.html>
 7.  <https://webpult.github.io/agrozamin/public/40-news-artical.html>
 8.  <https://webpult.github.io/agrozamin/public/41-artical.html>
-9.  <https://webpult.github.io/agrozamin/public/41-artical-1.html>
-10. <https://webpult.github.io/agrozamin/public/42-artical.html>
-11. <https://webpult.github.io/agrozamin/public/22-news.html>
-12. <https://webpult.github.io/agrozamin/public/34-5.7.html> 5.7
-13. <https://webpult.github.io/agrozamin/public/35-5.7.html> 5.7
-14. <https://webpult.github.io/agrozamin/public/36-5.7.html> 5.7
-15. <https://webpult.github.io/agrozamin/public/37-5.7.html> 5.7
-16. <https://webpult.github.io/agrozamin/public/38-5.7.html> 5.7
-17. <https://webpult.github.io/agrozamin/public/39-5.7.html> 5.7
-18. <https://webpult.github.io/agrozamin/public/40-5.7.html> 5.7
-19. <https://webpult.github.io/agrozamin/public/41-5.7.html> 5.7
+9.  <https://webpult.github.io/agrozamin/public/42-artical.html>
+10. <https://webpult.github.io/agrozamin/public/22-news.html>
+11. <https://webpult.github.io/agrozamin/public/34-5.7.html> 5.7
+12. <https://webpult.github.io/agrozamin/public/35-5.7.html> 5.7
+13. <https://webpult.github.io/agrozamin/public/36-5.7.html> 5.7
+14. <https://webpult.github.io/agrozamin/public/37-5.7.html> 5.7
+15. <https://webpult.github.io/agrozamin/public/38-5.7.html> 5.7
+16. <https://webpult.github.io/agrozamin/public/39-5.7.html> 5.7
+17. <https://webpult.github.io/agrozamin/public/40-5.7.html> 5.7
+18. <https://webpult.github.io/agrozamin/public/41-5.7.html> 5.7
+19. <https://webpult.github.io/agrozamin/public/41-artical-1.html>
+20. <https://webpult.github.io/agrozamin/public/41-artical-2.html>
+21. <https://webpult.github.io/agrozamin/public/42-artical-1.html>
+22. <https://webpult.github.io/agrozamin/public/42-artical-2.html>
+23. <https://webpult.github.io/agrozamin/public/42-artical-3.html>
 <!-- 20. <https://webpult.github.io/agrozamin/public/42-5.7.html> 5.7 -->

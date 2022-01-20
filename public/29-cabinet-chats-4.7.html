@@ -32,6 +32,7 @@
 		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/>
 		<link href="libs/animate.css/animate.min.css" rel="stylesheet"/>
 		<link href="libs/jquery-asPieProgress/css/asPieProgress.min.css" rel="stylesheet"/>
+		<link href="libs/select2/css/select2.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="page-cabinet">
@@ -321,7 +322,7 @@
 						<div class="sRew__slider sRew__slider--js swiper-container">
 							<div class="swiper-wrapper">
 								<div class="sRew__slide swiper-slide"> 
-									<div class="chat-card"> 
+									<div class="chat-card" data-fancybox="modal" data-src="#modal-pa2"> 
 										<div class="chat-card__row row">
 											<div class="col-auto">
 												<div class="chat-card__img-wrap bg-wrap">
@@ -360,7 +361,7 @@
 									</div>
 								</div>
 								<div class="sRew__slide swiper-slide"> 
-									<div class="chat-card"> 
+									<div class="chat-card" data-fancybox="modal" data-src="#modal-pa2"> 
 										<div class="chat-card__row row">
 											<div class="col-auto">
 												<div class="chat-card__img-wrap bg-wrap">
@@ -399,7 +400,7 @@
 									</div>
 								</div>
 								<div class="sRew__slide swiper-slide"> 
-									<div class="chat-card"> 
+									<div class="chat-card" data-fancybox="modal" data-src="#modal-pa2"> 
 										<div class="chat-card__row row">
 											<div class="col-auto">
 												<div class="chat-card__img-wrap bg-wrap">
@@ -519,7 +520,7 @@
 					<button class="form-wrap__btn btn" type="submit"> 
 					</button>
 					<div class="form-wrap__policy">
-						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__text">Шахсий маълумотлардан фойдаланиш <br/><a class="text-info tdu" href="#">шартларини қабул қиламан.</a></span>
 						</label>
 					</div>
 				</form>
@@ -852,6 +853,10 @@
 			</div>
 		</div>
 		<!-- #modal-pa2-->
+		<div class="modal-win text-center" id="modal-pa3" style="display: none"><img class="w-100px mx-auto" src="img/svg/list.svg" loading="lazy" alt=""/><br/>
+			<div class="h4 text-center">Сизнинг аризангиз қабул қилинди</div><br/>
+			<p class="text-secondary">Аризангиз moderator томонидан кўриб чиқилади</p><br/><br/><b></b><a class="btn btn-primary w-190 mx-auto" href="#">Тайёр</a>
+		</div>
 		<!-- end modals-->
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>
@@ -870,6 +875,7 @@
 		<script src="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js"> </script>
 		<script src="libs/filepond/filepond.min.js"> </script>
 		<script src="libs/jquery-filepond/filepond.jquery.js"> </script>
+		<script src="libs/select2/js/select2.min.js"> </script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

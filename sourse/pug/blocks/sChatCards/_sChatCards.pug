@@ -1,5 +1,5 @@
 mixin chartCard(i,t,p, b)
-	+b.chat-card 
+	+b.chat-card&attributes(attributes) 
 		+e.row.row
 			.col-auto
 				+e.img-wrap.bg-wrap
@@ -139,36 +139,36 @@ mixin sChatCards-2(data)
 					+e.btn.btn-primary(href="#") 
 						+icon("video")
 						| Бошлаш
-			+chartCardHor2(`2`,`Қолган вақти: 27 дақиқа `,'clock').text-success
+			+chartCardHor2(`2`,`Қолган вақти: 27 дақиқа `).text-success
 				.col-auto 
 					+b-c('email','Хабар жўнатиш').btn-primary
 				.col-auto 
 					+b-c('check','Қабул қилинган').btn-primary
-			+chartCardHor2(`3`,`Рад етилган `,'clock').text-danger
+			+chartCardHor2(`3`,`Рад етилган `).text-danger
 				.col-auto 
 					+b-c('close','Рад етилган').btn-danger
-			+chartCardHor2(`2`,`Янги сўров`,'clock').text-success 
+			+chartCardHor2(`2`,`Янги сўров`).text-success 
 				.col-auto 
 					+b-c('email','Хабар жўнатиш').btn-primary
 				.col-auto 
 					+b-c('close','Рад етиш').btn-outline-secondary2
 				.col-auto 
 					+b-c('check','Қабул қилиш').btn-outline-primary
-			+chartCardHor2(`2`,`Янги сўров`,'clock').text-success 
+			+chartCardHor2(`2`,`Янги сўров`).text-success 
 				.col-auto 
 					+b-c('email','Хабар жўнатиш').btn-primary
 				.col-auto 
 					+b-c('close','Рад етиш').btn-outline-secondary2
 				.col-auto 
 					+b-c('check','Қабул қилиш').btn-outline-primary
-			+chartCardHor2(`2`,`Янги сўров`,'clock').text-success 
+			+chartCardHor2(`2`,`Янги сўров`).text-success 
 				.col-auto 
 					+b-c('email','Хабар жўнатиш').btn-primary
 				.col-auto 
 					+b-c('close','Рад етиш').btn-outline-secondary2
 				.col-auto 
 					+b-c('check','Қабул қилиш').btn-outline-primary
-			+chartCardHor2(`2`,`Қўнғироқ якунланган`,'clock').text-warning
+			+chartCardHor2(`2`,`Қўнғироқ якунланган`).text-warning
 				.col-auto 
 					+b-c('delete','Ўчириш').btn-outline-secondary2
 			+pugin()

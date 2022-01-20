@@ -1,12 +1,16 @@
 // start .sBankProducts
+.container + .sBankProducts {
+	padding-top: 0;
+}
 .sBankProducts {
 	&__slider-wrap--all,
 	&__row-sm{
 		// --bs-gutter-x: 18px !important;
 		margin-bottom: 65px;
 	}
-	@include media-breakpoint-down(lg) {
-		&__slider--2js{
+	@include media-breakpoint-down(md) {
+		&__slider--2js,
+		&__slider--js{
 			overflow: visible;
 		}
 	}
@@ -19,11 +23,11 @@
 		} 
 
 	}
-	&__slide.col-lg-3 {
+	&__col.swiper-slide.col-lg-3 {
 		@include media-breakpoint-up(lg) {
 		}
 		flex: 0 0 auto;
-		width: 252px;
+		width: 256px;
 	}
 	.icon-eye2{
 		font-size: .66em;

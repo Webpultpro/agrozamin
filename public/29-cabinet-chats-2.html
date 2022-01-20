@@ -32,6 +32,7 @@
 		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/>
 		<link href="libs/animate.css/animate.min.css" rel="stylesheet"/>
 		<link href="libs/jquery-asPieProgress/css/asPieProgress.min.css" rel="stylesheet"/>
+		<link href="libs/select2/css/select2.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="page-cabinet">
@@ -265,10 +266,7 @@
 												<div class="row align-items-center gx-2">
 													<div class="col-lg-4 mb-3">
 														<div class="h6">Султонова Мадина</div>
-														<div class="alert label text-success">
-															<svg class="icon icon-clock ">
-																<use xlink:href="img/svg/sprite.svg#clock"></use>
-															</svg>Қолган вақти: 27 дақиқа 
+														<div class="alert label text-success">Қолган вақти: 27 дақиқа 
 														</div>
 													</div>
 													<div class="col-auto">
@@ -320,10 +318,7 @@
 												<div class="row align-items-center gx-2">
 													<div class="col-lg-4 mb-3">
 														<div class="h6">Султонова Мадина</div>
-														<div class="alert label text-danger">
-															<svg class="icon icon-clock ">
-																<use xlink:href="img/svg/sprite.svg#clock"></use>
-															</svg>Рад етилган 
+														<div class="alert label text-danger">Рад етилган 
 														</div>
 													</div>
 													<div class="col-auto">
@@ -366,10 +361,7 @@
 												<div class="row align-items-center gx-2">
 													<div class="col-lg-4 mb-3">
 														<div class="h6">Султонова Мадина</div>
-														<div class="alert label text-success">
-															<svg class="icon icon-clock ">
-																<use xlink:href="img/svg/sprite.svg#clock"></use>
-															</svg>Янги сўров
+														<div class="alert label text-success">Янги сўров
 														</div>
 													</div>
 													<div class="col-auto">
@@ -430,10 +422,7 @@
 												<div class="row align-items-center gx-2">
 													<div class="col-lg-4 mb-3">
 														<div class="h6">Султонова Мадина</div>
-														<div class="alert label text-success">
-															<svg class="icon icon-clock ">
-																<use xlink:href="img/svg/sprite.svg#clock"></use>
-															</svg>Янги сўров
+														<div class="alert label text-success">Янги сўров
 														</div>
 													</div>
 													<div class="col-auto">
@@ -494,10 +483,7 @@
 												<div class="row align-items-center gx-2">
 													<div class="col-lg-4 mb-3">
 														<div class="h6">Султонова Мадина</div>
-														<div class="alert label text-success">
-															<svg class="icon icon-clock ">
-																<use xlink:href="img/svg/sprite.svg#clock"></use>
-															</svg>Янги сўров
+														<div class="alert label text-success">Янги сўров
 														</div>
 													</div>
 													<div class="col-auto">
@@ -558,10 +544,7 @@
 												<div class="row align-items-center gx-2">
 													<div class="col-lg-4 mb-3">
 														<div class="h6">Султонова Мадина</div>
-														<div class="alert label text-warning">
-															<svg class="icon icon-clock ">
-																<use xlink:href="img/svg/sprite.svg#clock"></use>
-															</svg>Қўнғироқ якунланган
+														<div class="alert label text-warning">Қўнғироқ якунланган
 														</div>
 													</div>
 													<div class="col-auto">
@@ -676,7 +659,7 @@
 					<button class="form-wrap__btn btn" type="submit"> 
 					</button>
 					<div class="form-wrap__policy">
-						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__text">Шахсий маълумотлардан фойдаланиш <br/><a class="text-info tdu" href="#">шартларини қабул қиламан.</a></span>
 						</label>
 					</div>
 				</form>
@@ -1009,6 +992,10 @@
 			</div>
 		</div>
 		<!-- #modal-pa2-->
+		<div class="modal-win text-center" id="modal-pa3" style="display: none"><img class="w-100px mx-auto" src="img/svg/list.svg" loading="lazy" alt=""/><br/>
+			<div class="h4 text-center">Сизнинг аризангиз қабул қилинди</div><br/>
+			<p class="text-secondary">Аризангиз moderator томонидан кўриб чиқилади</p><br/><br/><b></b><a class="btn btn-primary w-190 mx-auto" href="#">Тайёр</a>
+		</div>
 		<!-- end modals-->
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>
@@ -1027,6 +1014,7 @@
 		<script src="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js"> </script>
 		<script src="libs/filepond/filepond.min.js"> </script>
 		<script src="libs/jquery-filepond/filepond.jquery.js"> </script>
+		<script src="libs/select2/js/select2.min.js"> </script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

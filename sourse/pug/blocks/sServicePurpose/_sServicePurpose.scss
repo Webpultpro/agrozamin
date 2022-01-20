@@ -37,6 +37,12 @@
 		}
 	}
 	&__col {
+		@include media-breakpoint-down(lg) {
+		& > img{
+			max-width: 100%;
+			height: auto;
+		}
+		}
 		picture {
 			margin-right: calc(-1 * var(--bs-gutter-x) / 2);
 			margin-left: calc(-1 * var(--bs-gutter-x) / 2);
@@ -77,6 +83,7 @@
 		align-items: center;
 		margin-top: rem(20);
 		max-width: 312px;
+		
 		.sServicePurpose__img-wrap {
 			position: relative;
 			width: rem(38);
@@ -108,5 +115,12 @@
 	@include media-breakpoint-only(xl) {
 	}
 	@include media-breakpoint-down(xl) {
+	}
+	@include media-breakpoint-down(lg) {
+		.btn{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 } // end.sServicePurpose

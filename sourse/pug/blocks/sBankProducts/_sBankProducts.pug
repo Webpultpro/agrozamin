@@ -12,9 +12,9 @@ mixin news-control()
 mixin catalog-aside()
 	+e.col-aside.col-lg-3.col-md-4
 					+e.col-title  Тезкор янгиликлар
-					+itemSlide('lg', `"Банкоматларда техник ишлар олиб борилмоқда!" `, ``,`c`, 'col-12').--bg
-					+itemSlide('lg', `"Банкоматларда техник ишлар олиб борилмоқда!" `, ``,`c`, 'col-12').--bg
-					+itemSlide('lg', `"Банкоматларда техник ишлар олиб борилмоқда!" `, ``,`c`, 'col-12').--bg
+					+itemSlide('lg', `"Фараҳбахш, аммо умри қисқа – қорли Тошкентдан фоторепортаж" `, ``,`c`, 'col-12').--bg
+					+itemSlide('lg', `"Фараҳбахш, аммо умри қисқа – қорли Тошкентдан фоторепортаж" `, ``,`c`, 'col-12').--bg
+					+itemSlide('lg', `"Фараҳбахш, аммо умри қисқа – қорли Тошкентдан фоторепортаж" `, ``,`c`, 'col-12').--bg
 					+e.banner.bg-wrap(href="#")
 						+pic("aside-banner.jpg",'bg',0).picture-bg
 					+e.col-title Енг кўп ўқилганлар
@@ -436,7 +436,7 @@ mixin sBankProducts-40(data)
 								h2 Изоҳлар
 							+form-wrap
 								+input('','text',"Исмингиз")
-								+input("",'textarea','Изоҳ')
+								+input("",'textarea','Изоҳ')(style="height:140px")
 								.text-end 
 									button.btn.btn-primary.w-190 Жўнатиш
 						+b.text-block

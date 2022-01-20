@@ -97,6 +97,17 @@
 	padding-bottom: 7px;
 	padding-left: rem(37);
 	padding-right: rem(37);
+	@include media-breakpoint-down(md) {
+		img{
+			max-width: 100%;
+			height: auto;
+		}
+		text-align: center;
+		padding-bottom: 30px;
+		.row{
+			justify-content: center;
+		}
+	}
 	.row{
 		align-items: center;
 	}
@@ -105,6 +116,10 @@
 		font-weight: bold;
 	}
 	p{
+		@include media-breakpoint-down(md){
+			margin-left: auto;
+			margin-right: auto;
+		}
 		@include rfs(20px);
 		max-width: rem(410);
 		margin-bottom: rem(25);
@@ -113,4 +128,8 @@
 		@extend .btn, .btn-primary;
 		width: 156px;
 	}
+}
+
+[data-fancybox="modal"]{
+	cursor: pointer;
 }

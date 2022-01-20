@@ -13,6 +13,10 @@ body:not(.main-page) .top-nav {
 	--sPT: 8px;
 	--sPB: 8px;
 	border-bottom: 1px solid #E6E6E6;
+
+	 .has-children a{ 
+    color: #999; 
+}
 	.row {
 		--bs-gutter-x: 20px;
 		align-items: center;
@@ -28,7 +32,10 @@ body:not(.main-page) .top-nav {
 		display: flex;
 		margin-bottom: 0;
 		white-space: nowrap;
-		a{
+		li.has-children a{
+			background: none !important;
+		}
+		 a{
 			&:hover{
 				background: #F2F2F2;
 			}

@@ -20,7 +20,10 @@
 				--p-x: 12px;
 				font-size: 16px;
 				.icon{
+					@include media-breakpoint-up(sm) {
 					font-size: 18px !important;
+				}
+				font-size: 14px !important;
 					margin-top: -9px;
 					right: auto;
 					left: var(--p-x);
@@ -31,7 +34,8 @@
 				@include media-breakpoint-up(sm) {
 					padding: rem(30) var(--p-x)  rem(30) calc(var(--p-x) + 23px + 59px);
 				}
-				padding: rem(10) var(--p-x)  rem(10) calc(var(--p-x) + 23px + 50px);
+				padding: rem(20) var(--p-x)  rem(20) calc(var(--p-x) + 49px);
+				// padding: rem(30) var(--p-x)  rem(30) calc(var(--p-x) + 23px + 50px);
 
 			}
 			&__body{

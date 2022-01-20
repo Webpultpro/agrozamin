@@ -18,6 +18,10 @@
 		@include media-breakpoint-up(lg) {
 			padding: rem(65);
 		}
+		img:not(.object-fit-js) {
+			max-width: 90%;
+			height: auto;
+		}
 		.picture-bg {
 			width: 120%;
 			left: -8%;
