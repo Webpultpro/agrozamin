@@ -28,6 +28,16 @@ mixin search-block()
 			input(type="text"  placeholder="Агрозамин бўйича қидирув" )
 			button 
 				+icon("search")
+		+e.dropdown
+			- for (var x = 0; x < 6; x++)
+				+e.item(href="#")
+					.row
+						.col Мини-трактор YTO-ME304
+						.col-auto.text-secondary2 Махсулотлар
+			+e.item(href="#")
+				.row
+					.col Трактор
+					.col-auto.text-secondary2 Каталог
 
 mixin stars()
 	+b.stars&attributes(attributes)

@@ -103,6 +103,30 @@
 			font-size: 14px;
 		}
 	}
+	position: relative;
+	z-index: 200;
+	&__dropdown{
+		margin-top: 8px;
+		background: #FFFFFF;
+		box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.1);
+		border-radius: 8px;
+		position: absolute;
+		left: rem(8);
+		top: 100%;
+		width: calc(100% - #{rem(16)});
+		min-width: 280px;
+		padding-top: rem(13);
+		padding-bottom: rem(13);
+	}
+	&__item{
+		display: block;
+		padding: rem(6) rem(17);
+		.row{
+			justify-content: space-between;
+			flex-wrap: nowrap;
+			align-items: flex-start !important;
+		}
+	}
 }
 
 .orderClosed {
