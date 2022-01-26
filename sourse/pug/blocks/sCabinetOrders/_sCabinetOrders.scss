@@ -423,6 +423,7 @@
 
 .prod-order-item {
 	border: 1px solid #E0E0E0;
+	min-height: rem(93);
 	@include mt;
 	&:hover{
 
