@@ -16,6 +16,9 @@
 		}
 		.section-title{
 			max-width: rem(540);
+			@include media-breakpoint-down(sm) {
+				text-align: center;
+			}
 		}
 		&__inner{
 			border-radius: 12px;
