@@ -12,29 +12,28 @@ mixin sProductsOnSite(data)
 					.tabs__btn.d-none.d-md-block
 						span Ўсимликларни ҳимоя қилиш маҳсулотлари
 					.tabs__btn.d-none.d-xl-block
-						span Техника
+						span Техника 
 					.tabs__btn.d-none.d-xl-block
-						span Бошқа ўғитлар
+						span Ёқилғи-мойлаш материаллари
 					.tabs__btn.d-none.d-xl-block
-						span Ветеринария
-					.tabs__btn.d-none.d-xl-block
-						span Тайёр маҳсулот
+						span Фермер хўжалиги ускуналари
 
-					+e.link.d-block(href="#")
-						span Барча категориялар
-						+icon('shevron-right-sm')
+					//- +e.link.d-block(href="#")
+					//- 	span Барча категориялар
+					//- 	+icon('shevron-right-sm')
 				.tabs__wrap
 					mixin tab()
 						.tabs__content&attributes(attributes)
-							+e.slider--js
-								.swiper-wrapper
-									+card(1,'Қизил Юсуф памидори Самарқанд махсулоти','sProductsOnSite__col  swiper-slide ')
-									+card(2,'Бинафша Шоҳ Нўхати','sProductsOnSite__col  swiper-slide ')
-									+card(3,'Мелотрия Колибри Самарқанд махсулоти','sProductsOnSite__col  swiper-slide ')
-									+card(4,'Мелотрия Колибри Самарқанд махсулоти','sProductsOnSite__col  swiper-slide ')
+							.row.gy-52
+								- for (var x = 0; x < 2; x++)
+									+card(1,'Қизил Юсуф памидори Самарқанд махсулоти','col-lg-3 col-md-4 col-sm-6').sProductsOnSite__col
+									+card(2,'Бинафша Шоҳ Нўхати','col-lg-3 col-md-4 col-sm-6').sProductsOnSite__col
+									+card(3,'Мелотрия Колибри Самарқанд махсулоти','col-lg-3 col-md-4 col-sm-6').sProductsOnSite__col
+									+card(4,'Мелотрия Колибри Самарқанд махсулоти','col-lg-3 col-md-4 col-sm-6').sProductsOnSite__col
 										+e.btn.btn-outline-primary.disabled(type="button") Запрос оставлен
-									+card(5,'Мелотрия Колибри Самарқанд махсулоти','sProductsOnSite__col  swiper-slide ')
-									//- +card(5)
+									+card(5,'Мелотрия Колибри Самарқанд махсулоти','col-lg-3 col-md-4 col-sm-6').sProductsOnSite__col
+								.text-center
+									button.btn.btn-primary Барча категориялар
 					+tab().active
 					+tab()
 					+tab()

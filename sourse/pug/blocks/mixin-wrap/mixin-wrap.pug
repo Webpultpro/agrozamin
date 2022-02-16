@@ -23,7 +23,7 @@ mixin ie11()
 	<!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 
 mixin search-block()
-	+b.search-block
+	+b.search-block.d-none
 		form
 			input(type="text"  placeholder="Агрозамин бўйича қидирув" )
 			button 
@@ -111,7 +111,7 @@ mixin card-hor(i, f)
 						+e.btn.btn-primary(type="button") Саватчага қўшиш
 				
 mixin card(i,t='Қизил Юсуф памидори', cl="col-xl-3 col-md-4")
-	div(class= cl)
+	div(class= cl)&attributes(attributes)
 		+b.card-prod--vertical
 			div
 				+e.img-wrap.bg-wrap(href="#")

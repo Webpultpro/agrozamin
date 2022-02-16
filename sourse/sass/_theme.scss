@@ -133,3 +133,13 @@
 [data-fancybox="modal"]{
 	cursor: pointer;
 }
+
+.gy-52{
+	--bs-gutter-y: 52px
+}
+
+.btn-white{
+	background-color: #fff;
+	border-color: #fff;
+	color: var(--bs-primary);
+}

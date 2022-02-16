@@ -1,0 +1,18 @@
+mixin sSimpleBanner(data)
+	// start sSimpleBanner
+	+b.SECTION.sSimpleBanner.section#sSimpleBanner&attributes(attributes)
+		.container
+			+e.inner.bg-wrap
+				+pic("sSimpleBanner-bg.jpg",'bg').picture-bg
+			
+				+b.section-title
+					h2 Махсулотингизни сайтга осон жойланг
+					p Янги мижозлар ва ҳамкорларга ега бўлинг
+					a.btn.btn-white(href="#") Сотувни бошлаш
+				+e.img-wrap
+					+b.site-link 
+						span
+							+icon("search2")
+							| www.uzimizniki.uz
+					+pic("simple-phone.png",'',0).phone-img
+	// end sSimpleBanner

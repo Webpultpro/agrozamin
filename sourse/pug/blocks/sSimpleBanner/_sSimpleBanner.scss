@@ -1,0 +1,123 @@
+// start .sSimpleBanner
+.sSimpleBanner {
+		// --sPT: ;
+		// --sPB: ;
+		--sTPB: 0;
+		.phone-img{
+		
+		}
+		h2{
+			@include rfs(50px);
+			font-weight: bold;
+		}
+		p{
+			@include rfs(22px);
+			line-height: 125%;
+		}
+		.section-title{
+			max-width: rem(540);
+		}
+		&__inner{
+			border-radius: 12px;
+			overflow: hidden;
+			position: relative;
+			color: #fff;
+			min-height: rem(380);
+			padding: rem(40) rem(20) 0;
+			@include media-breakpoint-up(lg) {
+				padding: rem(70) rem(40);
+
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+			}
+		}
+		.picture-bg{ 
+			&::after{ 
+				content: '';
+				@include a-cent;
+				background: rgba(55, 123, 225, 0.3);
+				backdrop-filter: blur(97px);
+				/* Note: backdrop-filter has minimal browser support */
+
+				border-radius: 12px;
+				// z-index: -1;
+			}
+		}
+
+		.btn{
+			width: rem(175);
+			@include media-breakpoint-up(lg) {
+
+				margin-top: rem(40);
+			}
+			// margin-top: rem(40);
+		}
+
+
+		&__img-wrap{
+			margin-top: 30px;
+			@include media-breakpoint-up(lg) {
+				
+				position: absolute;
+				bottom: 0;
+				margin-top: 0;
+				left: rem(16);
+			}
+			.site-link{
+				position: absolute;
+				@include media-breakpoint-up(lg) {
+				left: 75%;
+				top: -10px;
+			}
+			top: 20px;
+				left: 0px;
+			}
+			position: relative;
+			@include media-breakpoint-up(xl) {
+
+				left: rem(36);
+			}
+		}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sSimpleBanner
+
+
+
+.site-link {
+	color: #fff;
+	font-size: 13px;
+	background: rgba(255, 255, 255, 0.01);
+	box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.25), inset 0px 1px 37px rgba(62, 222, 255, 0.2), inset 0px 98px 86px -48px rgba(204, 170, 204, 0.3), inset 0px -82px 64px -64px rgba(96, 68, 144, 0.3), inset 0px 2px 5px -4px #FFFFFF;
+	backdrop-filter: blur(9px);
+	/* Note: backdrop-filter has minimal browser support */
+
+	border-radius: 10px;
+	padding: 10px 13px;
+	// display: block;
+	display: inline-block;
+
+	span{
+		padding: 8px 10px;
+		background: rgba(44, 44, 44, 0.51);
+		box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.4);
+		backdrop-filter: blur(67px);
+		/* Note: backdrop-filter has minimal browser support */
+		display: block;
+		border-radius: 48px;
+		display: block;
+		display: inline-flex;
+		align-items: center;
+	}
+	.icon{
+		font-size: 12px;
+		margin-right: 5px;
+	}
+}
