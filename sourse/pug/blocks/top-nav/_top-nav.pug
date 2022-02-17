@@ -5,7 +5,7 @@ mixin serivedroop()
 			+icon("menu")
 			| Сервислар
 		+b.dropdown-block--servises
-			mixin item(i,t,p)
+			mixin item(i,t,p,grey)
 				+e.item(href="#")
 					+e.img-wrap
 						+pic(`drop-${i}.png`,'bg',0)
@@ -14,9 +14,16 @@ mixin serivedroop()
 						.text-secondary= p
 			+item(`1`,`Фермерлар Мактаби`,`Ёш Фермерларни тайёрлаш мактаби`)
 			+item(`2`,`Агролаб`,`Лобаратория билан ишлаш маҳорати`)
-			+item(`3`,`Агротехкарталар`,`Ҳужжатлар билан ишлашда ёдамлаҳувчи майдон`)
 			+item(`4`,`Медиабиблиотека`,`Керакли видео маҳсулотлар учун майдон`)
 			+item(`4`,`Онлайн консултант`,`Керакли видео маҳсулотлар учун майдон`)
+			+e.item--grey(href="#")
+				+e.img-wrap
+					+pic(`drop-3.png`,'bg',0)
+				div
+					.h6 Агротехкарталар
+					p 
+						+icon(`clock-2`)
+						span Тез орада
 
 mixin mob-mnu()
 	-
