@@ -23,12 +23,12 @@ mixin ie11()
 	<!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 
 mixin search-block()
-	+b.search-block.d-none
+	+b.search-block
 		form
 			input(type="text"  placeholder="Агрозамин бўйича қидирув" )
 			button 
 				+icon("search")
-		+e.dropdown
+		+e.dropdown.d-none
 			- for (var x = 0; x < 6; x++)
 				+e.item(href="#")
 					.row
