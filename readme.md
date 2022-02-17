@@ -119,3 +119,5 @@
 <!-- 20. <https://webpultpro.github.io/agrozamin/public/42-5.7.html> 5.7 -->
 17.02.2022
 1.  <https://webpultpro.github.io/agrozamin/public/43-artical.html>
+2.  <https://webpultpro.github.io/agrozamin/public/41-artical.html>
+3.  <https://webpultpro.github.io/agrozamin/public/42-artical.html>
