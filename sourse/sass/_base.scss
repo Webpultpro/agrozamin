@@ -1037,3 +1037,34 @@ iframe {
 
 	}
 }
+
+.artical-3-section{
+	position: relative;
+	z-index: 3;
+	background-color: $white;
+	@include media-breakpoint-up(lg){
+		--sPT:#{rem(59)};
+	}
+	--sTPB:#{rem(20)};
+	.custom-list{
+		--bs-gutter-x:#{rem(30)};
+		margin-top: 0;
+	}
+	li{
+		border-radius: 10px;
+		border: 1px solid #D0CFCF;
+		padding-top: rem(18);
+		padding-bottom: rem(18);
+		padding-left: rem(76);
+		padding-right: rem(10);
+		display: flex;
+		align-items: center;
+		line-height: 116%;
+		margin-top: rem(23);
+		&::before{
+			top: 50%;
+			left: rem(24);
+			transform: translateY(-50%);
+		}
+	}
+}

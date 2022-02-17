@@ -69,3 +69,22 @@ mixin sForm3()
 							span.custom-input__text.form-check-label Шахсий маълумотлардан фойдаланиш <a href="#">шартларини қабул қиламан.</a>
 				.artical-form__btn-wrap
 					a.artical-form__btn(href="#") Рўйхатдан ўтиш
+mixin sForm4()
+	+b.artical-form--artical3.section
+		.container
+			+form-wrap
+				h2 Сўров жўнатиш
+				.artical-form__wrap
+					.artical-form__inputs
+						+input(`Этказиб бериш`,`select`,`Хизмат турини танланг`)
+						+input(`Agrolab`,`select`,`Ҳизматлар`)
+						+input(`Тупроқ таҳлили ва агрокимёвий тадқиқотлар лаборат...`,`select`,`Ҳизматни танланг`)
+						+input(``,`text`,`Исм`)
+						+input(``,`text`,`Фамилия`)
+						+input(``,`tel`,`Телефон рақами`)
+					.artical-form__map
+						p Етказиб бериш жойини белгиланг
+						iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8981.093516180676!2d37.61745250750734!3d55.75375308504574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5a738fa419%3A0x7c347d506b52311f!2z0JrRgNCw0YHQvdCw0Y8g0J_Qu9C-0YnQsNC00Yw!5e0!3m2!1sru!2sru!4v1645091525105!5m2!1sru!2sru' style='border:0;' allowfullscreen='' loading='lazy')
+
+				.artical-form__btn-wrap
+					a.artical-form__btn(href="#") Жўнатиш

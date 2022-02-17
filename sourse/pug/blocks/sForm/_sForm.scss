@@ -134,6 +134,47 @@
 	}
 	--sPT: #{rem(86)};
 	--sPB: #{rem(206)};
+	&--artical3 {
+		.artical-form__btn {
+			width: 190px;
+		}
+		.form-wrap__input-wrap {
+			margin-bottom: rem(13) !important;
+		}
+	}
+	&__wrap {
+		display: flex;
+		@include media-breakpoint-up(lg) {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		flex-direction: column;
+	}
+	&__inputs {
+		@include media-breakpoint-up(lg) {
+			width: 43.2%;
+			margin-bottom: 0;
+		}
+		margin-bottom: rem(24);
+	}
+	&__map {
+		@include media-breakpoint-up(lg) {
+			width: 53.4%;
+		}
+		text-align: left;
+		iframe{
+			@include media-breakpoint-up(lg){
+				height: rem(437);
+			}
+			width: 100%;
+			height: rem(250);
+		}
+		p {
+			font-size: rem(14);
+			line-height: calc(17 / 14);
+			margin-bottom: rem(7);
+		}
+	}
 	@include media-breakpoint-down(lg) {
 		background-color: #f9f9fa;
 		border-radius: 60px 60px 0px 0px;
