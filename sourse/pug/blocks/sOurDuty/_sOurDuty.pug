@@ -27,7 +27,7 @@ mixin sOurDuty2(data)
 			.row
 				mixin item(i, p)
 					.col-md-6.col-lg-4
-						+e.item--link(href="#")&attributes(attributes)
+						+e.item--link&attributes(attributes)
 							//- +icon(`duty-${i}`)
 							+pic(`card-${i}.png`,'',0)
 							p.h5.strong.mb-0!= p

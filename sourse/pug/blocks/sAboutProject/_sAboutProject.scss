@@ -10,13 +10,22 @@
 		--sPB: #{rem(95)};
 		--sTPB: 0;
 	}
+	&__btn-wrap {
+		display: flex;
+		justify-content: center;
+	}
+	&__btn {
+		@extend .btn, .btn-primary;
+	}
 	color: $white;
 	&__banner {
 		border-radius: 19px;
 		overflow: hidden;
 		padding: rem(45);
+		padding-bottom: rem(30);
 		@include media-breakpoint-up(lg) {
 			padding: rem(65);
+			padding-bottom: rem(40);
 		}
 		img:not(.object-fit-js) {
 			max-width: 90%;
@@ -39,6 +48,9 @@
 		}
 	}
 	.section-title {
+		img{
+			margin-bottom: 20px;
+		}
 		h1 {
 			line-height: calc(47 / 43);
 			margin-bottom: rem(10);
@@ -56,9 +68,10 @@
 			max-width: 12.9em;
 			margin-left: auto;
 			margin-right: auto;
+			padding-bottom: 10px;
 			@include media-breakpoint-up(sm) {
 				max-width: 18.9em;
-				padding-bottom: rem(20);
+				padding-bottom: rem(30);
 			}
 		}
 	}

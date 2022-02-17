@@ -16,9 +16,11 @@ mixin sAboutProject2(data)
 			+e.banner.bg-wrap(class="wow animate__fadeIn" data-wow-delay=".1s")
 				+pic(`about-project.jpg`,'bg', 0).picture-bg
 				+b.section-title.text-center
-					img(src="img/svg/logo-page.svg", alt="").mb-5
+					img(src="img/svg/logo-page.svg", alt="")
 					//- h1 Лойиҳа ҳақида
 					p Замонавий билим ва кўникмаларга эга&nbsp;бўлинг
+				+e.btn-wrap
+					+e.btn(href="#") Сўровнома қолдириш
 
 	// end sAboutProject
 mixin sAboutProject3(data)

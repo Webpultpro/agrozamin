@@ -38,3 +38,34 @@ mixin sForm2()
 		.container 
 			block
 	// end sForm
+
+mixin sForm3()
+	+b.artical-form.section
+		.container
+			+form-wrap
+				h2 Рўйхатдан ўтиш
+				.row
+					.col-lg-6
+						+input(``,`text`,`Исм`)
+					.col-lg-6
+						+input(``,`text`,`E-mail`)
+					.col-lg-6
+						+input(``,`text`,`Фамилия`)
+					.col-lg-6
+						.form-wrap__input-wrap.form-group
+							label
+								span.form-wrap__input-title Дата рождения *
+								.row.row-select
+									.col-4
+										+input(`Кун`,`select`)
+									.col-4
+										+input(`Ой`,`select`)
+									.col-4
+										+input(`Йил`,`select`)
+					.col-lg-6
+						+input(``,`tel`,`Телефон рақами`)
+						label.custom-input.form-check
+							input.custom-input__input.form-check-input(name='checkbox' type='checkbox')
+							span.custom-input__text.form-check-label Шахсий маълумотлардан фойдаланиш <a href="#">шартларини қабул қиламан.</a>
+				.artical-form__btn-wrap
+					a.artical-form__btn(href="#") Рўйхатдан ўтиш
