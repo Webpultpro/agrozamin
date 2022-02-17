@@ -32,6 +32,7 @@
 		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/>
 		<link href="libs/animate.css/animate.min.css" rel="stylesheet"/>
 		<link href="libs/jquery-asPieProgress/css/asPieProgress.min.css" rel="stylesheet"/>
+		<link href="libs/select2/css/select2.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="about-project bg-white">
@@ -91,9 +92,9 @@
 									</li>
 									<li class="has-children">Русский
 										<ul> 
-											<li>Русский</li>
-											<li>Русский</li>
-											<li>Русский</li>
+											<li><a href="#"> Русский</a></li>
+											<li><a href="#"> Русский</a></li>
+											<li><a href="#"> Русский</a></li>
 										</ul>
 									</li>
 									<li class="has-children">Валюта: Сум
@@ -6684,7 +6685,7 @@
 								</div>
 							</div>
 							<div class="top-nav__col col-lg order-lg-0 order-last">
-								<div class="search-block">
+								<div class="search-block d-none">
 									<form>
 										<input type="text" placeholder="Агрозамин бўйича қидирув"/>
 										<button> 
@@ -6693,6 +6694,36 @@
 											</svg>
 										</button>
 									</form>
+									<div class="search-block__dropdown"><a class="search-block__item" href="#">
+										<div class="row">
+											<div class="col">Мини-трактор YTO-ME304</div>
+											<div class="col-auto text-secondary2">Махсулотлар</div>
+										</div></a><a class="search-block__item" href="#">
+										<div class="row">
+											<div class="col">Мини-трактор YTO-ME304</div>
+											<div class="col-auto text-secondary2">Махсулотлар</div>
+										</div></a><a class="search-block__item" href="#">
+										<div class="row">
+											<div class="col">Мини-трактор YTO-ME304</div>
+											<div class="col-auto text-secondary2">Махсулотлар</div>
+										</div></a><a class="search-block__item" href="#">
+										<div class="row">
+											<div class="col">Мини-трактор YTO-ME304</div>
+											<div class="col-auto text-secondary2">Махсулотлар</div>
+										</div></a><a class="search-block__item" href="#">
+										<div class="row">
+											<div class="col">Мини-трактор YTO-ME304</div>
+											<div class="col-auto text-secondary2">Махсулотлар</div>
+										</div></a><a class="search-block__item" href="#">
+										<div class="row">
+											<div class="col">Мини-трактор YTO-ME304</div>
+											<div class="col-auto text-secondary2">Махсулотлар</div>
+										</div></a><a class="search-block__item" href="#">
+										<div class="row">
+											<div class="col">Трактор</div>
+											<div class="col-auto text-secondary2">Каталог</div>
+										</div></a>
+									</div>
 								</div>
 							</div>
 							<div class="col-auto"><a class="top-btn" href="#"><span class="top-btn__icon-wrap"> 
@@ -6799,11 +6830,13 @@
 						<!-- /picture-->
 						<div class="section-title text-center">
 							<!-- picture-->
-							<picture class="mb-5"> 
+							<picture> 
 								<source type="image/webp" srcset="img/@2x/webp/logo-page-2.webp"/><img src="img/@2x/logo-page-2.png" alt="" loading="lazy"/>
 							</picture>
 							<!-- /picture-->
 							<p>Замонавий билим ва кўникмаларга эга&nbsp;бўлинг</p>
+						</div>
+						<div class="sAboutProject__btn-wrap"><a class="sAboutProject__btn" href="#">Сўровнома қолдириш</a>
 						</div>
 					</div>
 				</div>
@@ -6820,7 +6853,7 @@
 						</div>
 						<div class="col-lg-6 col-xl">
 							<div class="sServicePurpose__card-content">
-								<p> “Ўсимликларни ҳимоя қилиш” интенсив ўқув курсларининг асосий мақсади — соҳадаги мутаҳассисларни қайта тайёрлаш ва уларга хорижий тажрибаларга асосланган энг сўнги замонавий билимларни бериш.</p><a class="btn btn-primary w-190" href="#"> Батафсил</a>
+								<p>“Ўсимликларни ҳимоя қилиш” интенсив ўқув курсларининг асосий мақсади — соҳадаги мутаҳассисларни қайта тайёрлаш ва уларга хорижий тажрибаларга асосланган энг сўнги замонавий билимларни бериш.</p><a class="btn btn-primary w-190" href="#"> Батафсил</a>
 							</div>
 						</div>
 					</div>
@@ -6906,17 +6939,90 @@
 				</div>
 			</section>
 			<!-- end sOurDuty-->
-			<div class="section">
+			<div class="artical-form section">
 				<div class="container">
-					<div class="bot-banner" style="--bg-banner: rgba(55, 123, 225, 0.25); --color-banner: #37474F;">
-						<div class="row">
-							<div class="col-auto"><img src="img/svg/banner-2.svg" alt=""></div>
-							<div class="col">
-								<div class="bot-banner__title">Лобаратория хизматлари
+					<div class="form-wrap">
+						<form>
+							<h2>Рўйхатдан ўтиш</h2>
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="form-wrap__input-wrap form-group">
+										<label><span class="form-wrap__input-title">Исм</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
+										</label>
+									</div>
+									<!-- +e.input-wrap-->
 								</div>
-								<p>Агролаб сервиси орқали сиз сифатли бўлган лобаратория хизматларидан фойдаланишингиз ва ўз тадқиқотларингизни ўтказишингиз мумкин</p><a class="bot-banner__btn" href="#">Батафсил</a>
+								<div class="col-lg-6">
+									<div class="form-wrap__input-wrap form-group">
+										<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
+										</label>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="col-lg-6">
+									<div class="form-wrap__input-wrap form-group">
+										<label><span class="form-wrap__input-title">Фамилия</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
+										</label>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="col-lg-6">
+									<div class="form-wrap__input-wrap form-group">
+										<label><span class="form-wrap__input-title">Дата рождения *</span>
+											<div class="row row-select">
+												<div class="col-4">
+													<div class="form-wrap__input-wrap form-group">
+														<select class="form-wrap__input form-select" name="select">
+															<option value="Кун">Кун</option>
+															<option value=" placeholder 1">placeholder 1</option>
+															<option value=" placeholder 2">placeholder 2</option>
+															<option value=" placeholder 3">placeholder 3</option>
+															<option value=" placeholder 4">placeholder 4</option>
+														</select>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+												<div class="col-4">
+													<div class="form-wrap__input-wrap form-group">
+														<select class="form-wrap__input form-select" name="select">
+															<option value="Ой">Ой</option>
+															<option value=" placeholder 1">placeholder 1</option>
+															<option value=" placeholder 2">placeholder 2</option>
+															<option value=" placeholder 3">placeholder 3</option>
+															<option value=" placeholder 4">placeholder 4</option>
+														</select>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+												<div class="col-4">
+													<div class="form-wrap__input-wrap form-group">
+														<select class="form-wrap__input form-select" name="select">
+															<option value="Йил">Йил</option>
+															<option value=" placeholder 1">placeholder 1</option>
+															<option value=" placeholder 2">placeholder 2</option>
+															<option value=" placeholder 3">placeholder 3</option>
+															<option value=" placeholder 4">placeholder 4</option>
+														</select>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+											</div>
+										</label>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="form-wrap__input-wrap form-group">
+										<label><span class="form-wrap__input-title">Телефон рақами</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder=""/>
+										</label>
+									</div>
+									<!-- +e.input-wrap-->
+									<label class="custom-input form-check">
+										<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Шахсий маълумотлардан фойдаланиш <a href="#">шартларини қабул қиламан.</a></span>
+									</label>
+								</div>
 							</div>
-						</div>
+							<div class="artical-form__btn-wrap"><a class="artical-form__btn" href="#">Рўйхатдан ўтиш</a></div>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -7337,6 +7443,7 @@
 		<script src="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js"> </script>
 		<script src="libs/filepond/filepond.min.js"> </script>
 		<script src="libs/jquery-filepond/filepond.jquery.js"> </script>
+		<script src="libs/select2/js/select2.min.js"> </script>
 		<script src="js/common.js"></script>
 	</body>
 </html>
