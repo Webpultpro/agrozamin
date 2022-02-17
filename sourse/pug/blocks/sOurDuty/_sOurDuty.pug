@@ -59,5 +59,28 @@ mixin sOurDuty3(data)
 				+item('1-5', `Вирология`)(class="wow animate__fadeInUp" data-wow-delay=".6s")
 				+item('1-6', `Токсикология`)(class="wow animate__fadeInUp" data-wow-delay=".7s")
 				+item('1-7', `Тупроқшунослик`)(class="wow animate__fadeInUp" data-wow-delay=".8s")
+
+mixin sOurDuty4(data)
+	// start sOurDuty
+	+b.SECTION.sOurDuty--duty4.section#sOurDuty
+		.container
+			+b.section-title.text-center(class="wow animate__fadeInUp" data-wow-delay=".1s")
+				h2 Таълим йўналишлари
+			.row
+				mixin item(p)
+					.col-md-6.col-lg-4
+						+e.item&attributes(attributes)
+							//- +icon(`duty-${i}`)
+							img(src="img/svg/our-duty-vector.svg", alt="")
+							p.mb-0!= p
+				+item(`Уруғ кўчат биалогик ўғитлар етказиб бериш`)(class="wow animate__fadeInUp" data-wow-delay=".2s")
+				+item(`Ўсимликларни ҳимоя қилиш лабораториясини ташкил этиш`)(class="wow animate__fadeInUp" data-wow-delay=".3s")
+				+item(`Хайвонлар учун озуқа ем етказиб беришни ташкил этиш`)(class="wow animate__fadeInUp" data-wow-delay=".4s")
+				+item(`Ветеринар хизматини ташкил этиш`)(class="wow animate__fadeInUp" data-wow-delay=".5s")
+				+item(`Мева-сабзавотларни сотиб олиш, саралаш, қадоқлаш ва сақлаш`)(class="wow animate__fadeInUp" data-wow-delay=".6s")
+				+item(`Агроном ва ветеринар маслаҳати хизматини ташкил этиш`)(class="wow animate__fadeInUp" data-wow-delay=".7s")
+				+item(`Музлатгичли омборхона&nbsp;ташкил&nbsp;этиш`)(class="wow animate__fadeInUp" data-wow-delay=".8s")
+				+item(`сувни тежовчи технологияларни&nbsp;жорий қилишга кўмаклашиш`)(class="wow animate__fadeInUp" data-wow-delay=".9s")
+				+item(`Автоматлаштирилган банк хизматларини жорий қилиш`)(class="wow animate__fadeInUp" data-wow-delay="1s")
 	
 	// end sOurDuty

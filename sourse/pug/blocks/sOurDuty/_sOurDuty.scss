@@ -80,4 +80,14 @@
 	}
 	@include media-breakpoint-down(xl) {
 	}
+	&--duty4{
+		img{
+			margin-right: rem(19);
+			width: 33px;
+			height: 33px;
+		}
+		p{
+			font-size: rem(18);
+		}
+	}
 } // end.sOurDuty
