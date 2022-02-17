@@ -1,4 +1,4 @@
-$default-font: 'Ubuntu';
+$default-font: 'ALSAgrofont';
 // $file-form: ($file-formats: woff2 woff ttf);
 $addr: '../fonts/';
 $file-format: woff2;
@@ -6,9 +6,9 @@ $file-format: woff2;
 
 // If font from googlefont, next lines remove
 
-@include font-face ($default-font, $addr + "Ubuntu-Regular", $file-formats: $file-format);
-@include font-face ($default-font, $addr + "Ubuntu-Bold", bold, $file-formats: $file-format);
-@include font-face ($default-font, $addr + "Ubuntu-Medium", 500, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "ALSAgrofont-Regular", $file-formats: $file-format);
+@include font-face ($default-font, $addr + "ALSAgrofont-Bold", bold, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "ALSAgrofont-Medium", 500, $file-formats: $file-format);
 // @include font-face ($default-font, $addr + "Roboto-Black/Roboto-Black", 900, $file-formats: $file-format);
 
 // font-weight helper:
