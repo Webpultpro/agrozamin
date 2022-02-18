@@ -46,10 +46,10 @@ mixin top-nav(logout)
 	+b.top-nav.block-with-lazy(class= (comp ? 'd-md-none' : null))
 		.container
 			+e.main-row.row
-				.col-auto.d-md-none.order-first.fixed-hide
+				.col-auto.d-lg-none.order-first.fixed-hide
 					+b.toggle-menu-mobile--js
 						span
-				.col-md-auto.col.order-first.fixed-hide
+				.col-lg-auto.col.order-first.fixed-hide
 
 					+b.logo(href="/")
 						.row
@@ -66,7 +66,7 @@ mixin top-nav(logout)
 							li Русский
 							li Русский
 				.w-100.d-md-none.p-0.m-0.order-first
-				+e.col-catalog.col-auto
+				+e.col-catalog.col-lg-auto.order-lg-0.order-last
 					+b.catalog-block
 							//- if comp
 							//- 	+b.swich-block
@@ -80,11 +80,11 @@ mixin top-nav(logout)
 							//- 		+b.swich-block
 							//- 			+e.btn(href="#").active Харидорлар
 							//- 			+e.btn(href="#") Сотувчилар
-							+e.toggle--mob.d-md-none 
+							+e.toggle--mob.d-lg-none 
 								span 
 								+e.toggle-text Каталоглар
 						
-							+e.toggle--desctop.d-none.d-md-block
+							+e.toggle--desctop.d-none.d-lg-block
 								span 
 								+e.toggle-text Каталоглар
 							+e.dropdown
@@ -208,10 +208,10 @@ mixin top-nav(logout)
 						+e.SPAN.icon-wrap  
 							+icon("basket-new")
 							+e.SPAN.count 99 
-				.col-lg-auto.col.order-md-0.order-first
+				.col-md-auto.col.order-md-0.order-first
 					+serivedroop()
 				if !logout
-					.col-lg-auto.col
+					.col-md-auto.col
 						.drop-down-wrap.text-end
 							+e.btn.btn.btn-primary(type="button")
 								+icon("user")
@@ -230,11 +230,11 @@ mixin top-nav-cabinet(comp)
 	+b.top-nav--cabinet
 		.container
 			+e.main-row.row
-				.col-auto.d-md-none.order-first
+				.col-auto.d-lg-none.order-first
 					+b.toggle-menu-mobile--js
 						span
-					+b.catalog-block 
-						+e.toggle--mob.d-md-none 
+					+b.catalog-block--cabinet
+						+e.toggle--mob.--cabinet.d-lg-none 
 								span 
 								//- +e.toggle-text Каталоглар
 						+e.dropdown

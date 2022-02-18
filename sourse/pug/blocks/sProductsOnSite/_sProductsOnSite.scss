@@ -138,6 +138,8 @@
 		flex-direction: column;
 		flex-grow: 1;
 		padding: rem(12) rem(12) rem(15);
+		align-items: center;
+		text-align: center;
 		@include media-breakpoint-up(lg) {
 			padding: rem(14) rem(15) rem(19);
 		}
@@ -168,6 +170,10 @@
 		font-weight: normal;
 		font-size: rem(12);
 		line-height: calc(18 / 12);
+	}
+	.card-prod__btn{
+		margin-left: auto;
+		margin-right: auto;
 	}
 	&__card-btn {
 		@extend .btn;
