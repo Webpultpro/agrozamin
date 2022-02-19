@@ -7,7 +7,6 @@
 		--bs-gutter-y: 24px;
 		margin-bottom: rem(50);
 	}
-	
 	&__banner{
 		padding-left: rem(35);
 		padding-right: rem(25);
@@ -92,6 +91,19 @@
 		position: absolute !important;
 		z-index: 2 !important;
 		border-radius: inherit;
+	}
+	&__biography-link{
+		margin-top: rem(14);
+		font-size: rem(14);
+		line-height: 116%;
+		display: inline-block;
+		.icon{
+			width: 5px;
+			height: 11px;
+			margin-left: 6px;
+			margin-right: 0 !important;
+			top: 0 !important;
+		}
 	}
 	a{
 		position: relative;
