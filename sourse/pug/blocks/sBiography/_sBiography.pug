@@ -1,0 +1,17 @@
+mixin sBiography(data)
+	// start sBiography
+	+b.sBiography.section#sBiography&attributes(attributes)
+		.container
+			+e.user
+				+pic(`avatar-${2}.png`,'bg',0)
+				+e.user-info
+					+e.user-name Собиров Алишер
+					+e.user-job Аграном
+			h4 Консултант биографияси
+			p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti mollitia, sequi voluptatum optio itaque odio quas expedita temporibus adipisci, perferendis ea cupiditate aperiam dolore quia aspernatur quae eius eaque eum nulla ipsum, accusamus fugit officia quibusdam fugiat. Quae quasi dolores asperiores, soluta doloribus velit! Ad recusandae a aperiam cum porro non expedita accusantium quibusdam, quam minus ullam id! Nisi, cupiditate ipsa deleniti id nam dolorum pariatur voluptate omnis repudiandae molestiae adipisci veritatis animi nobis libero illo! Consequatur similique nihil eveniet at esse ab beatae aperiam quaerat iusto fuga. Soluta eos omnis labore architecto consequuntur laboriosam est itaque vero, dolores animi, voluptas ea odio officia culpa praesentium illo vitae quo aliquid iusto impedit quae quis minus non voluptatum? Suscipit vitae vel quaerat qui facilis nulla id cumque ab cupiditate, quo consectetur, tempora deleniti! Libero qui voluptates ab repudiandae cumque dolor eaque adipisci sequi? Architecto expedita animi minima pariatur rem quisquam numquam eveniet ut, facere amet suscipit cum consectetur quam. Itaque ullam magnam et maxime id distinctio. Modi sunt laudantium error repellat temporibus, enim tempora illum est sint dicta sed aliquid ipsum similique eum dignissimos perspiciatis aperiam fugiat sapiente? Aspernatur ex dolor suscipit laudantium, porro enim? Doloremque voluptate pariatur veritatis hic omnis.
+			h4 Бириктирилган файллар
+			+e.file-wrap
+				- for (var x=0;x<7;x++)
+					+e.file(href="#")
+						img(src="img/svg/file-img.svg", alt="")
+	// end sBiography

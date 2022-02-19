@@ -1,0 +1,36 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sAdvantages/_sAdvantages.pug
+//- include ../blocks/sCategories/_sCategories.pug
+//- include ../blocks/sPopulars/_sPopulars.pug
+//- include ../blocks/sWantToSell/_sWantToSell.pug
+//- include ../blocks/sHowWorks/_sHowWorks.pug
+//- include ../blocks/legal-info/_legal-info.pug
+//- include ../blocks/sPersonalAccount/_sPersonalAccount.pug
+include ../blocks/sBiography/_sBiography.pug
+//- include ../blocks/sRew/_sRew.pug
+
+block variables
+	- let  mainPage= 'page-cabinet' 
+	//- - let  bg= '13-personal-account.jpg'
+
+block title
+	- let  title= 'Аграном'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		//- +topLine()
+		+top-nav-cabinet()
+	+breadcrumb('Асосий саҳифа', title)
+	+sBiography
+	+footer()
+
+
+

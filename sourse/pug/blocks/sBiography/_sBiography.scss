@@ -1,0 +1,57 @@
+// start .sBiography
+.sBiography {
+	--sPT: #{rem(53)};
+	--sPB: #{rem(92)};
+
+	&__user {
+		display: flex;
+		align-items: center;
+		picture {
+			width: rem(104);
+			height: rem(104);
+			margin-right: rem(29);
+		}
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(74);
+		}
+		margin-bottom: rem(40);
+	}
+	&__user-name {
+		font-weight: 500;
+		font-size: rem(32);
+		line-height: calc(37 / 32);
+		margin-bottom: rem(4);
+	}
+	&__user-job {
+		color: $primary;
+		font-weight: 500;
+		font-size: rem(28);
+		line-height: calc(32 / 28);
+	}
+	h4{
+		margin-bottom: rem(10);
+	}
+	p{
+		font-size: rem(20);
+		margin-bottom: rem(33);
+	}
+	&__file-wrap{
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-top: rem(20);
+	}
+	&__file{
+		max-width: rem(80);
+		max-height: rem(90);
+		margin-right: rem(16);
+		img{
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+} // end.sBiography

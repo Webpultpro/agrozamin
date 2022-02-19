@@ -121,3 +121,6 @@
 1.  <https://webpultpro.github.io/agrozamin/public/43-artical.html>
 2.  <https://webpultpro.github.io/agrozamin/public/41-artical.html>
 3.  <https://webpultpro.github.io/agrozamin/public/42-artical.html>
+19.02.2022
+1. <https://webpultpro.github.io/agrozamin/public/29-cabinet-chats-4.7.html>
+2. <https://webpultpro.github.io/agrozamin/public/44-biography-4.7.html>
