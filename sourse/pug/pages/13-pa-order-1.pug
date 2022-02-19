@@ -1,0 +1,66 @@
+
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sAdvantages/_sAdvantages.pug
+//- include ../blocks/sCategories/_sCategories.pug
+//- include ../blocks/sPopulars/_sPopulars.pug
+//- include ../blocks/sWantToSell/_sWantToSell.pug
+//- include ../blocks/sHowWorks/_sHowWorks.pug
+//- include ../blocks/legal-info/_legal-info.pug
+//- include ../blocks/sPersonalAccount/_sPersonalAccount.pug
+include ../blocks/sProdHead/_sProdHead.pug
+//- include ../blocks/sCabinetOrders/_sCabinetOrders.pug
+include ../blocks/sBasket/_sBasket.pug
+include ../blocks/sOrderHead/_sOrderHead.pug
+//- include ../blocks/sBasket/_sBasket.pug
+
+
+block variables
+	- let  mainPage= 'page-cabinet' 
+	- let  bg= '13-1.jpg'
+
+block title
+	- let  title= '№ 210403-907701'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+top-nav-cabinet()
+	//- +breadcrumb('Асосий саҳифа', 'Кабинет', title)
+	+sOrderHead("Тасдиқлаш")
+		+e.status(style="--color:#00CD69") Буюртма этказилган
+	+sProdHead('sds')
+	+sBasket("order").--order
+	+b.sAboutStore.pt-0
+		.container
+			+b.form-wrap.ps-0
+				+e.item--wide
+					h5.strong Олиб кетиш
+					+e.prompt--lg.text-secondary 15, Бектемир тумани, Олим Оширов даҳа, Тошкент, Ўзбекистон
+					+e.map--min
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5993.788816048251!2d69.28181339826368!3d41.31116065483939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b2931f41f23%3A0x81095e06b654b845!2z0KHQutCy0LXRgCDQuNC8LiDQkNC80LjRgNCwINCi0LXQvNGD0YDQsA!5e0!3m2!1sru!2sby!4v1627060681100!5m2!1sru!2sby"   style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				+e.item--wide
+					h5.strong Тўлов тури
+					+e.prompt--lg.text-secondary Сотувчига жойида
+				+e.item--wide.mw-100
+					h5.strong.text-primary Бошқа киши томонидан олиб кетилинади
+					.row
+						+e.col-line.col-auto
+							+e.prompt--lg.text-secondary.pb-0 Сотувчига жойида 
+							+e.prompt--lg Шокиров Дилмурод 
+						//- +e.col-line.col-auto
+						//- 	+e.prompt--lg.text-secondary.pb-0 E-mail
+						//- 	+e.prompt--lg(href="mailto:shokirov.d@yandex.ru") shokirov.d@yandex.ru
+						+e.col-line.col-auto
+							+e.prompt--lg.text-secondary.pb-0 Телефон
+							+e.prompt--lg(href="tel:+998974050003") +998 97 405 00 03
+	+footer()
+
+
+

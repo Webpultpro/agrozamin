@@ -107,8 +107,9 @@
 		padding-left: 0;
 	}
 	&__col-catalog {
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(lg) {
 			padding: 0;
+			margin: 0;
 		}
 	}
 }
@@ -116,7 +117,7 @@
 .scroll-menu-wrap {
 }
 .catalog-block {
-	@include media-breakpoint-down(md) {
+	@include media-breakpoint-down(lg) {
 		// display: none;
 
 		&:not(.active) {
@@ -135,12 +136,12 @@
 		padding-bottom: rem(15);
 		z-index: 1000;
 	}
-	@include media-breakpoint-up(md) {
+	@include media-breakpoint-up(lg) {
 		--h: 1px;
 	}
 	--h: 2px;
 	&__toggle {
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(lg) {
 			// padding-bottom: rem(10);
 			font-size: 20px;
 			margin-bottom: rem(15);
@@ -169,7 +170,7 @@
 		border-radius: 30px;
 		font-weight: 500;
 		padding: rem(6.5) rem(10);
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(lg) {
 			width: rem(133);
 
 			border: 1.5px solid var(--bs-primary);
@@ -187,7 +188,7 @@
 
 		span {
 			@include a-cent(y);
-			@include media-breakpoint-up(md) {
+			@include media-breakpoint-up(lg) {
 				left: rem(18);
 			}
 			left: rem(10px);
@@ -209,7 +210,7 @@
 		span:after,
 		span:before {
 			// width: 32px;
-			@include media-breakpoint-up(md) {
+			@include media-breakpoint-up(lg) {
 				width: rem(12);
 			}
 			width: rem(18);
@@ -221,7 +222,7 @@
 			transform-origin: 50% 50%;
 		}
 		span {
-			@include media-breakpoint-up(md) {
+			@include media-breakpoint-up(lg) {
 				width: rem(8);
 			}
 			width: rem(14);
@@ -261,7 +262,7 @@
 			// width: rem(336);
 			width: rem(368);
 		}
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(lg) {
 			position: relative;
 			z-index: 2;
 			width: rem(246);
@@ -290,13 +291,13 @@
 		border-radius: 0px 0px 12px 12px;
 
 		// border: 1px solid #E6E6E6;
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(lg) {
 			max-height: calc(100vh - var(--header-h));
 
 			overflow-y: auto;
 			overflow-x: hidden;
 		}
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(lg) {
 			// position: absolute;
 			// top: 0;
 			// height: 100vh;
@@ -306,10 +307,10 @@
 		// width: calc(336 /);
 	}
 	&__dropdown {
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(lg) {
 			display: block !important;
 		}
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(lg) {
 			z-index: 1200;
 			// min-height: 620px;
 			// width: calc(100% - var(--bs-gutter-x));
@@ -323,7 +324,7 @@
 		}
 		display: none;
 		// display: block;
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(lg) {
 			&::after {
 				content: "";
 				position: absolute;

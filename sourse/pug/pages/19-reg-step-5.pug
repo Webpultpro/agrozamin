@@ -1,0 +1,46 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sAdvantages/_sAdvantages.pug
+//- include ../blocks/sCategories/_sCategories.pug
+//- include ../blocks/sPopulars/_sPopulars.pug
+//- include ../blocks/sWantToSell/_sWantToSell.pug
+//- include ../blocks/sHowWorks/_sHowWorks.pug
+include ../blocks/sRegistration/_sRegistration.pug
+
+block variables
+	- let  mainPage= 'body-reg' 
+	//- - let  bg= '03-registration.jpg'
+
+block title
+	- let  title= 'Рўйхатдан ўтиш'
+	title= title
+block pagecontent
+
+
+	//- +mob-mnu()
+	//- +header()
+	//- 	+topLine()
+	//- 	+top-nav()
+	+b.SECTION.sRegistration.section.container#sRegistration&attributes(attributes)
+			+e.logo-wrap.text-center
+				a.logo(href="/")
+					img(src="img/svg/logo.svg", alt="")
+			+form-wrap
+				h1.mb-2 Юридик маълумотлар
+				p.text-secondary Компания малумотларни топиш учун <br> ИНН рақамини киритинг
+				+input(`ИНН рақамини киритинг`, 'text', `ИНН`)  
+				.row.justify-content-center
+					.col-auto
+						+e.BUTTON.btn.btn.btn-outline-primary Ўтказиб юбориш
+					.col-auto
+						+e.BUTTON.btn.btn.btn-primary.disabled Сақлаш
+				//- +e.footer 
+				//- 	.text-secondary Мен савдо майдончасидан #[a.text-info(href="#") фойдаланиш шартлари] ва  #[a.text-info(href="#") қоидаларига] розиман
+	//- +footer()
+
+
+

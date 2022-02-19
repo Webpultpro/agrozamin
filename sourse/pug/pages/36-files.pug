@@ -1,0 +1,39 @@
+extends layout/main.pug
+
+
+include ../blocks/sAboutProject/_sAboutProject.pug
+include ../blocks/sOurGoal/_sOurGoal.pug
+include ../blocks/sOurDuty/_sOurDuty.pug
+include ../blocks/sFaq/_sFaq.pug
+
+block variables
+	- let  mainPage= 'bg-only-mobile-gray'
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Оммабоп саволлар'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+topLine()
+		+top-nav()
+	+breadcrumb('Асосий саҳифа', title) 
+	.container.text-center
+		+pic("files.jpg")
+	+sFaq36
+	.container
+		+b.bot-banner
+			.row
+				.col-auto
+					+pic('chat-bot.png','',0)
+				.col
+					+e.title Агробоокс Telegram-bot
+					p Телегам бот орқали ўз&nbsp;китобларингизга ега&nbsp;бўлинг
+					+e.btn(href="#") Ўтиш
+	+footer()
+
+
+

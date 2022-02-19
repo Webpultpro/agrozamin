@@ -1,0 +1,48 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sAdvantages/_sAdvantages.pug
+//- include ../blocks/sCategories/_sCategories.pug
+//- include ../blocks/sPopulars/_sPopulars.pug
+//- include ../blocks/sWantToSell/_sWantToSell.pug
+//- include ../blocks/sHowWorks/_sHowWorks.pug
+include ../blocks/sRegistration/_sRegistration.pug
+
+block variables
+	- let  mainPage= 'body-reg' 
+	//- - let  bg= '03-registration.jpg'
+
+block title
+	- let  title= 'Рўйхатдан ўтиш'
+	title= title
+block pagecontent
+
+
+	//- +mob-mnu()
+	//- +header()
+	//- 	+topLine()
+	//- 	+top-nav()
+	+b.SECTION.sRegistration.section.container#sRegistration&attributes(attributes)
+			+e.logo-wrap.text-center
+				a.logo(href="/")
+					img(src="img/svg/logo.svg", alt="")
+			+form-wrap
+				h1 Кириш ёки рўйхатдан ўтиш
+				+input(`Телефон рақамингизни киритинг`, 'tel', `Телефон рақами`) 
+				+e.password-wrap
+					+input(` Паролни киритинг`, 'password', `Пароль`)
+					+e.btn-toggle-visible 
+						<svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
+							<path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z"    stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"   stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+				p.text-secondary.text-start Паролни исталган вақтда шахсий кабинет орқали ўзгартиришингиз мумкин
+
+				+e.BUTTON.btn.btn.btn-primary.disabled Рўйхатдан ўтиш
+	//- +footer()
+
+
+
