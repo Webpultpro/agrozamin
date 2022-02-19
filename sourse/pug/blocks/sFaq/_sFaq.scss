@@ -3,6 +3,58 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
+	
+		.accordeon-item{
+			border-radius: 0 !important;
+			border-left: none;
+			border-right: none;
+			border-color: rgba(0, 0, 0, 0.15);
+			background: none !important;
+			&.active{
+				--head-bg: rgba(0, 0, 0, 0.03);
+			}
+			&__head{
+				background: var(--head-bg, transparent);
+				@include media-breakpoint-up(sm) {
+					--p-x: 23px;
+				}
+				--p-x: 12px;
+				font-size: 16px;
+				.icon{
+					@include media-breakpoint-up(sm) {
+					font-size: 36px !important;
+				}
+				font-size: 28px !important;
+					margin-top: -17px;
+					right: auto;
+					left: var(--p-x);
+					// top: ;
+					@include mt;
+					color: var(--bs-primary) !important;
+				}
+				@include media-breakpoint-up(sm) {
+					padding: rem(30) var(--p-x)  rem(30) calc(var(--p-x) + 23px + 59px);
+				}
+				padding: rem(20) var(--p-x)  rem(20) calc(var(--p-x) + 49px);
+				// padding: rem(30) var(--p-x)  rem(30) calc(var(--p-x) + 23px + 50px);
+
+			}
+			&__body{
+				padding-top: rem(50);
+				padding-bottom: rem(30);
+				border-color: rgba(0, 0, 0, 0.15);
+				background: transparent;
+			}
+		}
+ 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+	&--files{
 		.accordeon-item{
 			border-radius: 0 !important;
 			border-left: none;
@@ -45,14 +97,7 @@
 				background: transparent;
 			}
 		}
- 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	}
 } // end.sFaq
 
 .accordeon-item{
