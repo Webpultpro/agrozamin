@@ -771,7 +771,7 @@ function eventHandler() {
 
 	var swipersRew = new Swiper(".sRew__slider--js", {
 		slidesPerView: 1,
-		loop: true,
+		// loop: true,
 		spaceBetween: 42, 
 		pagination: {
 			el: ' .swiper-pagination',

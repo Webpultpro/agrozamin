@@ -1,54 +1,38 @@
+mixin aboutbtn()
+	+e.btn-wrap
+		+e.btn(href="#form") Сўровнома қолдириш
+mixin sAboutProjectBody(bg='about-project.jpg')
+	// start sAboutProject
+	+b.SECTION.sAboutProject.section#sAboutProject&attributes(attributes)
+		.container
+			+e.banner.bg-wrap(class="wow animate__fadeIn" data-wow-delay=".1s")
+				+pic(`about-project.jpg`,'bg', 0).picture-bg
+				+b.section-title.text-center
+					block
+
+	// end sAboutProject
 mixin sAboutProject(data)
-	// start sAboutProject
-	+b.SECTION.sAboutProject.section#sAboutProject&attributes(attributes)
-		.container
-			+e.banner.bg-wrap(class="wow animate__fadeIn" data-wow-delay=".1s")
-				+pic(`about-project.jpg`,'bg', 0).picture-bg
-				+b.section-title.text-center
-					h1 Лойиҳа ҳақида
-					p Агро бизнес учун қулай бўлган ягона махсус сервис
-
-	// end sAboutProject
+	+sAboutProjectBody
+		h1 Лойиҳа ҳақида
+		p Агро бизнес учун қулай бўлган ягона махсус сервис 
+		
 mixin sAboutProject2(data)
-	// start sAboutProject
-	+b.SECTION.sAboutProject.section#sAboutProject&attributes(attributes)
-		.container
-			+e.banner.bg-wrap(class="wow animate__fadeIn" data-wow-delay=".1s")
-				+pic(`about-project.jpg`,'bg', 0).picture-bg
-				+b.section-title.text-center
-					img(src="img/svg/logo-page.svg", alt="")
-					//- h1 Лойиҳа ҳақида
-					p Замонавий билим ва кўникмаларга эга&nbsp;бўлинг
-				+e.btn-wrap
-					+e.btn(href="#") Сўровнома қолдириш
+	+sAboutProjectBody 
+		img(src="img/svg/logo-page.svg", alt="")
+		//- h1 Лойиҳа ҳақида
+		p Замонавий билим ва кўникмаларга эга&nbsp;бўлинг
+		+aboutbtn() 
 
-	// end sAboutProject
 mixin sAboutProject3(data)
-	// start sAboutProject
-	+b.SECTION.sAboutProject.section#sAboutProject&attributes(attributes)
-		.container
-			+e.banner.bg-wrap(class="wow animate__fadeIn" data-wow-delay=".1s")
-				+pic(`about-project2.jpg`,'bg', 0).picture-bg
-				+b.section-title.text-center
-					+pic("logo-page-2.png",'',0)
-					//- h1 Лойиҳа ҳақида
-					p Замонавий билим ва кўникмаларга эга&nbsp;бўлинг
-				+e.btn-wrap
-					+e.btn(href="#") Сўровнома қолдириш
-
-	// end sAboutProject
+	+sAboutProjectBody(`about-project2.jpg`) 
+		+pic("logo-page-2.png",'',0)
+		//- h1 Лойиҳа ҳақида
+		p Замонавий билим ва кўникмаларга эга&nbsp;бўлинг
+		+aboutbtn() 
 
 mixin sAboutProject4(data)
-	// start sAboutProject
-	+b.SECTION.sAboutProject.section#sAboutProject&attributes(attributes)
-		.container
-			+e.banner.bg-wrap(class="wow animate__fadeIn" data-wow-delay=".1s")
-				+pic(`about-project4.jpg`,'bg', 0).picture-bg
-				+b.section-title.text-center
-					img(src="img/svg/agromarkaz.svg", alt="")
-					//- h1 Лойиҳа ҳақида
-					p Замонавий билим ва кўникмаларга эга&nbsp;бўлинг
-				+e.btn-wrap
-					+e.btn(href="#") Сўровнома қолдириш
-
-	// end sAboutProject
+	+sAboutProjectBody(`about-project4.jpg`)
+		img(src="img/svg/agromarkaz.svg", alt="")
+		//- h1 Лойиҳа ҳақида
+		p Замонавий билим ва кўникмаларга эга&nbsp;бўлинг
+		+aboutbtn()
