@@ -17,6 +17,7 @@ body:not(.main-page) .top-nav {
 	 .has-children {
 		 position: relative;
 		 z-index: 2000;
+		 min-height: rem(23);
 	 }
 	 .has-children a{ 
     color: #999; 

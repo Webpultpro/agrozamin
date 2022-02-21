@@ -2,7 +2,7 @@
 let  publicPath = 'public',
     sourse = 'sourse',
     destSprite = '../_sprite.scss'
-
+    // let preprocessor = 'sass'
 import pkg from 'gulp'
 const { gulp, src, dest, parallel, series, watch } = pkg
 
@@ -17,12 +17,14 @@ import npmDist  from 'gulp-npm-dist'
 import newer  from 'gulp-newer'
 import rename  from 'gulp-rename'  
 // import gulpSass      from 'gulp-sass'
+// import gulpSass      from 'gulp-sass'
 import sassGlob  from 'gulp-sass-glob'
-
-import sass from 'gulp-dart-sass'
-// import sass from 'gulp-sass'
-// sass.compiler = require('sass')
+import dartSass      from 'sass'
+// import sass from 'gulp-dart-sass'
 // const  sass          = gulpSass(dartSass)
+import gulpSass from 'gulp-sass'
+// sass.compiler = require('sass')
+const  sass          = gulpSass(dartSass)
 import tabify  from 'gulp-tabify' 
 import gcmq  from 'postcss-sort-media-queries' 
 import bssi from 'browsersync-ssi'
@@ -124,10 +126,11 @@ function styles() {
     ];
     return src(sourse + '/sass/main.scss')
         .pipe(sassGlob())
-        .pipe(
-            sass.sync()
-                .on('error', sass.logError)
-        )
+    //     .pipe(
+    //         preprocessor.sync()
+    //             .on('error', preprocessor.logError)
+    // )
+    .pipe(sass({ 'include css': true }))
         // .pipe(postcss(processors, { syntax: syntax }))
         .pipe(postcss(processors, { syntax: pscss }))
         // .pipe(gcmq())
