@@ -182,6 +182,9 @@
 	.form-wrap {
 		max-width: 100%;
 		background-color: $white;
+		&__input-title {
+			margin-top: 15px;
+		}
 		@include media-breakpoint-up(lg) {
 			padding-top: rem(41);
 			padding-bottom: rem(41);
@@ -222,7 +225,7 @@
 		}
 	}
 	.form-check {
-		margin-top: 23px;
+		margin-top: 36px;
 		a {
 			text-decoration: underline;
 		}

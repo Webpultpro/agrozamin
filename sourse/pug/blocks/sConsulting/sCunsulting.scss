@@ -75,7 +75,15 @@
     --bs-gutter-y: calc(var(--bs-gutter-x) + 0.35714rem);
   }
 }
-
+.theme-blue {
+  .sServices__item {
+    picture {
+      &.blue-theme {
+        display: flex !important;
+      }
+    }
+  }
+}
 .sServices__item {
   picture {
     margin-right: 20px;
@@ -88,6 +96,7 @@
   color: #3e3e3e !important;
   display: flex;
   justify-content: center;
+  align-items: center;
   border-radius: 10px;
   padding: 10px;
   &:hover {

@@ -436,8 +436,8 @@ function eventHandler() {
 		instance = $range.data("ionRangeSlider");
 
 		function updateInputs(data) {
-			from = data.from;
-			to = data.to;
+			from = data.from + " сум";
+			to = data.to + " сум";
 			$inputFrom.prop("value", from);
 			$inputTo.prop("value", to); // InputFormat();
 		}
@@ -878,7 +878,7 @@ $(".vacancy .tablinks").on('click', function () {
 /*end Tabs*/
 
 /*start YandexMap*/
-$(document).ready(function(){
+/*$(document).ready(function(){
 	ymaps.ready(init);
 
 	function init() {
@@ -942,7 +942,7 @@ $(document).ready(function(){
 			myInput.value = localStorage.getItem('value');
 		}
 	}
-});
+});*/
 /*end YandexMap*/
 
 /*start ButtonClickOpen*/

@@ -24,6 +24,17 @@
 	.sProductsOnSite{
 		background: #EBF2FC; 
 	}
-	
-	 
+
+	.green-theme {
+		display: none;
+	}
+	.blue-theme {
+		display: block !important;
+	}
+}
+.green-theme {
+	display: block;
+}
+.blue-theme {
+	display: none !important;
 }

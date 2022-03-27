@@ -46,12 +46,19 @@ mixin sForm3()
 				h2 Рўйхатдан ўтиш
 				.row
 					.col-lg-6
+						.form-wrap__input-wrap-select.form-group
+							label
+								span.form-wrap__input-title Таълим йуналишлари
+								+input(`Энтомология`,`select`)
+						.form-wrap__input-wrap.form-group
+							label
+								span.form-wrap__input-title Укиш тури
+								+input(`Интенсив курс`,`select`)
 						+input(``,`text`,`Исм`)
-					.col-lg-6
-						+input(``,`text`,`E-mail`)
-					.col-lg-6
 						+input(``,`text`,`Фамилия`)
 					.col-lg-6
+						+input(``,`tel`,`Телефон рақами`)
+						+input(``,`text`,`E-mail`)
 						.form-wrap__input-wrap.form-group
 							label
 								span.form-wrap__input-title Дата рождения *
@@ -62,8 +69,6 @@ mixin sForm3()
 										+input(`Ой`,`select`)
 									.col-4
 										+input(`Йил`,`select`)
-					.col-lg-6
-						+input(``,`tel`,`Телефон рақами`)
 						label.custom-input.form-check
 							input.custom-input__input.form-check-input(name='checkbox' type='checkbox')
 							span.custom-input__text.form-check-label Шахсий маълумотлардан фойдаланиш <a href="#">шартларини қабул қиламан.</a>
@@ -88,3 +93,72 @@ mixin sForm4()
 
 				.artical-form__btn-wrap
 					a.artical-form__btn(href="#") Жўнатиш
+
+mixin sForm5()
+	+b.vacancy-form.section(id="form")
+		.container
+			+form-wrap
+				h2 Вакансия жойлаш
+				.row
+					.col-lg-8
+						+input(`Мутаҳассис номини киритинг`,`text`,`Мутаҳассис номи`, 'text')
+						+input(`Ташкилот номини киритинг`,`text`,`Ташкилот номи`, 'text')
+						+input(`Мисол 5 йил`,`select`,`Тажрибаси  ( йил )`)
+					.col-lg-4
+						+input(`Ойлик маошни киритинг`,`text`,`Ойлик маош(Сўм)`, 'text')
+						.form-wrap__input-wraper.form-group
+							label
+								span.form-wrap__input-title Иш соати
+								.row.row-select
+									.col-6
+										+input(`Дан`,`select`)
+									.col-6
+										+input(`Гача`,`select`)
+						+input(`Толиқ иш куни`,`select`,`Иш графиги`)
+					.form-wrap__textarea-wrap.form-group
+						label
+							span.form-wrap__input-title Батафсил тавсиф
+							textarea.form-wrap__input.form-control(name="textarea" rows="6" cols="50" placeholder='Кунига 3 марта сигирларни бевосита соғиш. Сигирларни парвариш қилиш — қўшиқ айтиш, овқатни тарқатиш, гўнгни тозалаш. Агрофирма "Ариант" - Урал вилоятида гўшт маҳсулотлари ишлаб чиқариш учун енг йирик агросаноат холдинг компанияси. Россияда саноатнинг ўнта раҳбарларидан бири. Вертикал интеграциялашган холдинг')
+					.map-wrapper
+						+input(`Тошкент, Ўзбекистон, 15, Бектемир тумани, Олим Оширов даҳа,`,`address`,`Манзил`, 'address')
+						#map
+							iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8981.093516180676!2d37.61745250750734!3d55.75375308504574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5a738fa419%3A0x7c347d506b52311f!2z0JrRgNCw0YHQvdCw0Y8g0J_Qu9C-0YnQsNC00Yw!5e0!3m2!1sru!2sru!4v1645091525105!5m2!1sru!2sru' style='border:0; width: 100%;height: 240px;' allowfullscreen='true' loading='lazy')
+						p.map-desc Перетащите метку на карте или напишите ваш точный адрес.
+					.group-radio
+						+in-c(`radio`, `Фаол`)
+						+in-c(`radio`, `Фаол эмас`)
+				.custom-form__btn-wrap
+					button.btn.btn-primary Жойлаш
+
+mixin sForm6()
+	+b.vacancy-form.section(id="form")
+		.container
+			+form-wrap
+				h2 Резуме жойлаш
+				.row
+					.col-lg-8
+						+input(`Лавозимни номини киритинг`,`text`,`Лавозимни киритинг`, 'text')
+						.row
+							.col-lg-6
+								+input(`Ташкилот номини киритинг`,`text`,`Исм`, 'text')
+							.col-lg-6
+								+input(`Ташкилот номини киритинг`,`text`,`Фамилия`)
+						+input(`Мисол 5 йил`,`select`,`Тажрибаси  ( йил )`)
+					.col-lg-4
+						+input(`Ойлик маошни киритинг`,`text`,`Ойлик маош(Сўм)`, 'text')
+						+input(`Ўрта маҳсус`,`select`,`Маълумоти`)
+						+input(`Толиқ иш куни`,`select`,`Иш графиги`)
+					.form-wrap__textarea-wrap.form-group
+						label
+							span.form-wrap__input-title Батафсил тавсиф
+							textarea.form-wrap__input.form-control(name="textarea" rows="6" cols="50" placeholder='Кунига 3 марта сигирларни бевосита соғиш. Сигирларни парвариш қилиш — қўшиқ айтиш, овқатни тарқатиш, гўнгни тозалаш. Агрофирма "Ариант" - Урал вилоятида гўшт маҳсулотлари ишлаб чиқариш учун енг йирик агросаноат холдинг компанияси. Россияда саноатнинг ўнта раҳбарларидан бири. Вертикал интеграциялашган холдинг')
+					.map-wrapper
+						+input(`Тошкент, Ўзбекистон, 15, Бектемир тумани, Олим Оширов даҳа,`,`address`,`Манзил`, 'address')
+						#map
+							iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8981.093516180676!2d37.61745250750734!3d55.75375308504574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5a738fa419%3A0x7c347d506b52311f!2z0JrRgNCw0YHQvdCw0Y8g0J_Qu9C-0YnQsNC00Yw!5e0!3m2!1sru!2sru!4v1645091525105!5m2!1sru!2sru' style='border:0; width: 100%;height: 240px;' allowfullscreen='true' loading='lazy')
+						p.map-desc Перетащите метку на карте или напишите ваш точный адрес.
+					.group-radio
+						+in-c(`radio`, `Фаол`)
+						+in-c(`radio`, `Фаол эмас`)
+				.custom-form__btn-wrap
+					button.btn.btn-primary Жойлаш

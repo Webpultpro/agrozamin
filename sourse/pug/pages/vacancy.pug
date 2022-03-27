@@ -1,0 +1,44 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sAdvantages/_sAdvantages.pug
+include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sPopulars/_sPopulars.pug
+include ../blocks/sWantToSell/_sWantToSell.pug
+include ../blocks/sHowWorks/_sHowWorks.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sHeaderBanner/_sHeaderBanner.pug
+include ../blocks/sBankProducts/_sBankProducts.pug
+include ../blocks/sProductsOnSite/_sProductsOnSite.pug
+include ../blocks/sInformation/_sInformation.pug
+include ../blocks/aside/_aside.pug
+include ../blocks/sVacancy/_sVacancy.pug
+
+block variables
+    - let  mainPage= 'main-page'
+    - let  bg= 'main.jpg'
+
+block title
+    - let  title= 'Вакансиялар'
+    title= title
+block pagecontent
+
+
+    +mob-mnu()
+    +header()
+        +topLine()
+        +top-nav()
+
+    +breadcrumb('Асосий саҳифа', title)
+
+    .container
+        .row.row--main
+            .col-lg.col--aside
+                +aside3()
+            .col-lg.col--main
+                +sVacancy()
+
+    +footer()

@@ -1,0 +1,345 @@
+mixin sVacancy(data)
+    // start sUserLegalInfo
+    +b.SECTION.vacancy.section#vacancy&attributes(attributes)
+        .container
+            .vac_content.vac.active
+                .wrap-content
+                    .row
+                        .col-md-4
+                            +pic("chair.png",'',0).logo-vacancy
+                        .col-md-8
+                            .wrapper
+                                .h2.mb-3 Ходимлар қидираётганлар учун
+                                .desc Ўзингизга керекли бўлган вакансияларни жойлштиринг ва керакли иш ходимларни топинг
+                                button.btn.btn-primary Вакансия жойлаш
+            .vac_content.res
+                .wrap-content
+                    .row
+                        .col-md-4
+                            +pic("brieafcase.png",'',0).logo-vacancy
+                        .col-md-8
+                            .wrapper
+                                .h2.mb-3 Иш қидираётганлар учун
+                                .desc Ўзингизга керекли бўлган вакансияларни жойлштиринг ва керакли иш ўтинларини топинг
+                                button.btn.btn-primary Вакансия жойлаш
+            .tabs-region
+                .tab
+                    button.tablinks.vac.active(onclick="openCity(event, 'vacancy-tab')") Вакансиялар
+                    button.tablinks.res(onclick="openCity(event, 'resume-tab')") Резумелар
+                .tabcontent.opened(id="vacancy-tab")
+                    .vac-info
+                        .head-region
+                            .col-md-10
+                                .h2 Бош ветеринар муовини
+                                .price 1 800 000 uzs
+                            .col-md-2
+                                .date 17.02.2022
+                        .desc
+                            p Непосредственное доение коров 3 раза в день.
+                            p Уход за коровами — поят, раздают корма, убирают навоз.
+                        .bottom-region
+                            .col-md-6
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-address")
+                                    .info
+                                        p
+                                            strong Манзил
+                                        p Тошкент шаҳар, Чилонзор,
+                                        p Муқумий кўчаси 4 - уй
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-clockk")
+                                    .info
+                                        p
+                                            strong Иш соати
+                                        p 9:00 - 18:00
+                            .col-md-6
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-briefcase")
+                                    .info
+                                        p
+                                            strong Иш графиги
+                                        p Толиқ иш куни
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-scale")
+                                    .info
+                                        p
+                                            strong Иш тажрибаси
+                                        p 12 йил
+                    .vac-info
+                        .head-region
+                            .col-md-10
+                                .h2 Аграном
+                                .price 5 000 000 uzs
+                            .col-md-2
+                                .date 17.02.2022
+                        .desc
+                            p Проведение научных исследований в области агрономии.
+                            p Изучение и внедрение передовых методов возделывания полевых, садовых, огородных культур
+                        .bottom-region
+                            .col-md-6
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-address")
+                                    .info
+                                        p
+                                            strong Манзил
+                                        p Тошкент шаҳар, Чилонзор,
+                                        p Муқумий кўчаси 4 - уй
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-clockk")
+                                    .info
+                                        p
+                                            strong Иш соати
+                                        p 9:00 - 18:00
+                            .col-md-6
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-briefcase")
+                                    .info
+                                        p
+                                            strong Иш графиги
+                                        p Толиқ иш куни
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-scale")
+                                    .info
+                                        p
+                                            strong Иш тажрибаси
+                                        p 12 йил
+                    .vac-info
+                        .head-region
+                            .col-md-10
+                                .h2 Ветеринар
+                                .price 1 800 000 uzs
+                            .col-md-2
+                                .date 17.02.2022
+                        .desc
+                            p Проведение научных исследований в области агрономии.
+                            p Изучение и внедрение передовых методов возделывания полевых, садовых, огородных культур
+                        .bottom-region
+                            .col-md-6
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-address")
+                                    .info
+                                        p
+                                            strong Манзил
+                                        p Тошкент шаҳар, Чилонзор,
+                                        p Муқумий кўчаси 4 - уй
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-clockk")
+                                    .info
+                                        p
+                                            strong Иш соати
+                                        p 9:00 - 18:00
+                            .col-md-6
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-briefcase")
+                                    .info
+                                        p
+                                            strong Иш графиги
+                                        p Толиқ иш куни
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-scale")
+                                    .info
+                                        p
+                                            strong Иш тажрибаси
+                                        p 12 йил
+                    .vac-info
+                        .head-region
+                            .col-md-10
+                                .h2 Зоотехник
+                                .price 1 800 000 uzs
+                            .col-md-2
+                                .date 17.02.2022
+                        .desc
+                            p Непосредственное доение коров 3 раза в день.
+                            p Уход за коровами — поят, раздают корма, убирают навоз.
+                        .bottom-region
+                            .col-md-6
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-address")
+                                    .info
+                                        p
+                                            strong Манзил
+                                        p Тошкент шаҳар, Чилонзор,
+                                        p Муқумий кўчаси 4 - уй
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-clockk")
+                                    .info
+                                        p
+                                            strong Иш соати
+                                        p 9:00 - 18:00
+                            .col-md-6
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-briefcase")
+                                    .info
+                                        p
+                                            strong Иш графиги
+                                        p Толиқ иш куни
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-scale")
+                                    .info
+                                        p
+                                            strong Иш тажрибаси
+                                        p 12 йил
+                .tabcontent(id="resume-tab")
+                    .vac-info
+                        .head-region
+                            .col-md-10
+                                .h2 Жисмоний маданият бўйича катта ўқитувчи маданият
+                                .price 1 800 000 uzs
+                            .col-md-2
+                                .date 17.02.2022
+                        .desc
+                            p Непосредственное доение коров 3 раза в день.
+                            p Уход за коровами — поят, раздают корма, убирают навоз.
+                        .bottom-region
+                            .col-md-6
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-address")
+                                    .info
+                                        p
+                                            strong Манзил
+                                        p Тошкент шаҳар, Чилонзор,
+                                        p Муқумий кўчаси 4 - уй
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-briefcase")
+                                    .info
+                                        p
+                                            strong Иш графиги
+                                        p Толиқ иш куни
+                            .col-md-6
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-scale")
+                                    .info
+                                        p
+                                            strong Иш тажрибаси
+                                        p 12 йил
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-information")
+                                    .info
+                                        p
+                                            strong Маълумоти
+                                        p Олий маълумотли
+                    .vac-info
+                        .head-region
+                            .col-md-10
+                                .h2 Лаборатория раҳбари, Краснодардаги кимёгар-експерт
+                                .price 5 000 000 uzs
+                            .col-md-2
+                                .date 17.02.2022
+                        .desc
+                            p Проведение научных исследований в области агрономии.
+                            p Изучение и внедрение передовых методов возделывания полевых, садовых, огородных культур
+                        .bottom-region
+                            .col-md-6
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-address")
+                                    .info
+                                        p
+                                            strong Манзил
+                                        p Тошкент шаҳар, Чилонзор,
+                                        p Муқумий кўчаси 4 - уй
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-briefcase")
+                                    .info
+                                        p
+                                            strong Иш графиги
+                                        p Толиқ иш куни
+                            .col-md-6
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-scale")
+                                    .info
+                                        p
+                                            strong Иш тажрибаси
+                                        p 12 йил
+                    .vac-info
+                        .head-region
+                            .col-md-10
+                                .h2 Челябинскда катта жисмоний тарбия ўқитувчиси
+                                .price Ойлик кўрсатилмаган
+                            .col-md-2
+                                .date 17.02.2022
+                        .desc
+                            p Проведение научных исследований в области агрономии.
+                            p Изучение и внедрение передовых методов возделывания полевых, садовых, огородных культур
+                        .bottom-region
+                            .col-md-6
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-address")
+                                    .info
+                                        p
+                                            strong Манзил
+                                        p Тошкент шаҳар, Чилонзор,
+                                        p Муқумий кўчаси 4 - уй
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-briefcase")
+                                    .info
+                                        p
+                                            strong Иш графиги
+                                        p Толиқ иш куни
+                            .col-md-6
+                    .vac-info
+                        .head-region
+                            .col-md-10
+                                .h2 Зоотехник
+                                .price Ойлик кўрсатилмаган
+                            .col-md-2
+                                .date 17.02.2022
+                        .desc
+                            p Проведение научных исследований в области агрономии.
+                            p Изучение и внедрение передовых методов возделывания полевых, садовых, огородных культур
+                        .bottom-region
+                            .col-md-6
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-address")
+                                    .info
+                                        p
+                                            strong Манзил
+                                        p Тошкент шаҳар, Чилонзор,
+                                        p Муқумий кўчаси 4 - уй
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-briefcase")
+                                    .info
+                                        p
+                                            strong Иш графиги
+                                        p Толиқ иш куни
+                            .col-md-6
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-scale")
+                                    .info
+                                        p
+                                            strong Иш тажрибаси
+                                        p 12 йил
+                                .wrapper
+                                    .icon-wrapper
+                                        +icon("icon-information")
+                                    .info
+                                        p
+                                            strong Маълумоти
+                                        p Олий маълумотли
