@@ -8,11 +8,11 @@
 			--bs-gutter-x:0;
 		}
 		&__col{
-			width: rem(380);
+			width: 44.5rem;
 			text-align: right;
 		}
 		.col{
-			
+			margin-top: 35px;
 			.row{
 				--bs-gutter-x: 26px;
 				--bs-gutter-y: 16px;
@@ -63,15 +63,60 @@
 
 		}
 	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(lg) {
+		.sInformation__item {
+			padding: 8px 58px;
+			.desc {
+				font-size: 18px;
+				line-height: 23px;
+				letter-spacing: 0px;
+				margin-bottom: 50px;
+			}
+		}
+		.sInformation__item {
+			.desc {
+				font-size: 18px;
+				line-height: 23px;
+				letter-spacing: 0px;
+				margin-bottom: 50px;
+			}
+			.btn {
+				font-weight: 400;
+			}
+		}
+	}
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-between(md, xl) {
+		.sInformation {
+			&__col {
+				width: 31.5rem;
+			}
+		}
+	}
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 	@include media-breakpoint-down(lg) {
 		.h2{
 			text-align: center;
+		}
+		.sInformation__row {
+			.col {
+				margin-top: 0;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+		.sInformation__item {
+			.desc {
+				font-size: 16px;
+				text-align: center;
+			}
+			button {
+				margin-top: 25px;
+				width: max-content;
+			}
 		}
 	}
 } // end.sInformation

@@ -6,6 +6,7 @@ include ../blocks/sOurGoal/_sOurGoal.pug
 include ../blocks/sOurDuty/_sOurDuty.pug
 include ../blocks/sServicePurpose/_sServicePurpose.pug
 include ../blocks/sForm/_sForm.pug
+include ../blocks/sAgrolab/_sAgrolab.pug
 
 block variables
 	- let  mainPage= 'about-project bg-white'
@@ -35,6 +36,7 @@ block pagecontent
 	+sOurGoal()
 	+sOurDuty2()
 	+sForm3
+	+sAgrolab()
 	//- +sServicePurpose(`Хизмат кимлар учун?`)
 	//- 	+cardS(`Сотувчилар учун`, `Ўз махсулотига ега бўлган, янги мижозлар орқали бизнесини ривожлантирмоқчи бўлган бизнес егалари ишлаб чиқарувчи корхоналар учун`, 1)
 	//- 		+card-item(1, `Ўзингиз ва компаниянгиз ҳақида маълумотни тўлдиринг`)

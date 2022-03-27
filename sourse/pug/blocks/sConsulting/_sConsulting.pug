@@ -1,0 +1,119 @@
+mixin sConsulting(data)
+    +b.SECTION.sConsultProject.section#sAboutProject&attributes(attributes)
+        .container
+            .sConsultProject__banner.bg-wrap.wow.animate__fadeIn(data-wow-delay=".1s")
+                +pic("consulting.jpg", 'bg', 0).picture-bg
+                .consult-title.text-center
+                    .h1 Онлайн консультант
+                    p Агро бизнес учун қулай бўлган ягона махсус сервис
+                    .text-center
+                        .btn.btn-primary.w-190(type="submit") Жўнатиш
+
+    +b.SECTION.sServices.section#sServices&attributes(attributes)
+        .container
+            .section-title.text-center.wow.animate__fadeInUp(data-wow-delay=".1s")
+                h2 Хизмат афзалликлари
+            .row
+                .col-md-6.col-lg-4
+                    a.sServices__item.sServices__item--link.wow.animate__fadeInUp(href="#" data-wow-delay=".2s")
+                        +pic("full-time-job.png", '', 0)
+                        p.h5.strong.mb-0 Исталган вақтда керакли консултант хизмати
+                .col-md-6.col-lg-4
+                    a.sServices__item.sServices__item--link.wow.animate__fadeInUp(href="#" data-wow-delay=".3s")
+                        +pic("doctor.png", '', 0)
+                        p.h5.strong.mb-0 Профессионал мутаҳасислар
+                .col-md-6.col-lg-4
+                    a.sServices__item.sServices__item--link.wow.animate__fadeInUp(href="#" data-wow-delay=".4s")
+                        +pic("customer-service.png", '', 0)
+                        p.h5.strong.mb-0 Берча саволларга керакли жавоблар
+
+    +b.SECTION.sServiceUse.section#sServiceUse&attributes(attributes)
+        .container
+            .row.aligin-items-center.pt-4
+                .sServiceUse__col.col-lg-6.text-center
+                    +pic("image-services.png", '', 0)
+                .col-lg-6.col-xl
+                    h3 Хизматдан фойдаланиш
+                    .sServiceUse__card-content
+                        p Ўзингизга керакли бўлган мутаҳассисни топинг ва керакли санани белгилаб мутахассисниннг бўш вақти учун сўров жўнатинг. Мутаҳассис албатта сиз билан алоқага чаиқади
+                        ul.group-product
+                            li
+                                span.icon-image
+                                    +icon("products")
+                                span Керакли мутаҳассисни танланг
+                            li
+                                span.icon-image
+                                    +icon("wett")
+                                span Вақтни белгиланг ва сўров жўнатинг
+                            li
+                                span.icon-image
+                                    +icon("handshake")
+                                span Мутаҳассис билан онлайн алоқа ўрнатинг
+
+    +b.SECTION.profesions.section#profesions&attributes(attributes)
+        .container
+            .section-title.text-center.wow.animate__fadeInUp(data-wow-delay=".1s")
+                h2 Бизнинг мутаҳассислари
+            .profesions__content.wow.animate__fadeInUp(data-wow-delay=".2s")
+                .field-item
+                    .avatar
+                        +pic("avatar1.jpg", '', 0)
+                    .wrapper-info
+                        .prof Ветиринар
+                        .name Александра Алиева
+                            .stars
+                                +stars
+                            button.btn.btn-outline-primary Батафсил
+                .field-item
+                    .avatar
+                        +pic("avatar2.jpg", '', 0)
+                    .wrapper-info
+                        .prof Аграном
+                        .name Собиров Алишер
+                            .stars
+                                +stars
+                            button.btn.btn-outline-primary Батафсил
+                .field-item
+                    .avatar
+                        +pic("avatar3.jpg", '', 0)
+                    .wrapper-info
+                        .prof Агротехник
+                        .name Қаҳрамонов Рустам
+                            .stars
+                                +stars
+                            button.btn.btn-outline-primary Батафсил
+                .field-item
+                    .avatar
+                        +pic("avatar1.jpg", '', 0)
+                    .wrapper-info
+                        .prof Агротехник
+                        .name Алимова Равшана
+                            .stars
+                                +stars
+                            button.btn.btn-outline-primary Батафсил
+                .field-item
+                    .avatar
+                    .wrapper-info
+                        .prof Зоотехник
+                        .name Жураев Зокир
+                            .stars
+                                +stars
+                            button.btn.btn-outline-primary Батафсил
+                .field-item
+                    .avatar
+                    .wrapper-info
+                        .prof Зоотехник
+                        .name Жураев Зокир
+                            .stars
+                                +stars
+                            button.btn.btn-outline-primary Батафсил
+
+    +b.SECTION.consultant.section#consultant&attributes(attributes)
+        .container
+            .content-box.row
+                .col
+                    .h2.mb-3 Консултант бўлишни истайсизми?
+                    .desc Бизга қўшилинг ва мижозлар учун ҳизмат кўрсатинг
+                    button.btn.btn-primary Бошлаш
+                .consultant__col.col-auto.d-none.d-lg-block
+                    +pic("consultant.png", '', 0)

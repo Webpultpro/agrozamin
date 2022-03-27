@@ -1,0 +1,132 @@
+.video-requests {
+  margin-top: 10px;
+  .user-dropdown {
+    padding: 0;
+    .category-image {
+      border-bottom: none;
+      box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+  }
+}
+.user-dropdown {
+  background: white;
+  padding: 28px 22px;
+  width: max-content;
+  .category-image {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    border-bottom: 1px solid #E9E9E9;
+    width: 464px;
+    position: relative;
+  }
+  .category-icon {
+    margin: 17px 12px;
+    color: white;
+    &.blue {
+      .icon {
+        background: #419FD9;
+      }
+    }
+    &.green {
+      .icon {
+        background: #00CD69;
+      }
+    }
+    &.red {
+      .icon {
+        background: #ED6262;
+      }
+    }
+  }
+  .category-icon .icon {
+    width: 32px;
+    height: 32px;
+    padding: 6px 5px 6px 6px;
+    border-radius: 4px;
+  }
+  .desc-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    p {
+      margin: 0;
+      padding: 0;
+    }
+    .title {
+      color: #3E3E3E;
+      font-size: 16px;
+    }
+    .desc, .date {
+      display: block;
+      color: rgba(62, 62, 62, 0.5);
+      align-items: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .date {
+      display: flex;
+      .icon {
+        width: 15px;
+        height: 15px;
+        border: 1px solid #9F9F9F;
+        border-radius: 50%;
+        padding: 2px 2px 2px 4px;
+        margin-right: 6px;
+      }
+    }
+  }
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 144px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-right: 35px;
+    .icon {
+      font-size: 12px;
+      margin-right: 13px;
+    }
+  }
+  .close {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    border: none;
+    background: transparent;
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    color: #8b8b8b;
+    .icon {
+      font-size: 9px;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .user-dropdown {
+    width: 100%;
+    .btn {
+      width: auto;
+      .icon {
+        display: none;
+      }
+    }
+    .category-image {
+      width: 100%;
+    }
+    .desc-wrapper {
+      width: 54%;
+      .title {
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+}

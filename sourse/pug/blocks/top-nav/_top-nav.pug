@@ -1,7 +1,7 @@
 mixin serivedroop()
-	
+
 	.drop-down-wrap
-		+e.btn.btn.btn-outline-primary(type="button") 
+		+e.btn.btn.btn-outline-primary(type="button")
 			+icon("menu")
 			| Сервислар
 		+b.dropdown-block--servises
@@ -21,7 +21,7 @@ mixin serivedroop()
 					+pic(`drop-3.png`,'bg',0)
 				div
 					.h6 Агротехкарталар
-					p 
+					p
 						+icon(`clock-2`)
 						span Тез орада
 
@@ -34,14 +34,14 @@ mixin mob-mnu()
 		//- request.open('GET', requestURL);
 		//- request.responseType = 'json';
 		//- let dataJson = JSON.parse(json);
-	//- h1= dataJson['lala'] 
+	//- h1= dataJson['lala']
 	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
 			+mnu()
 	//  мобильное меню
-mixin top-nav(logout) 
+mixin top-nav(logout)
 	// start top-nav  в этом блоке   отличия
 	+b.top-nav.block-with-lazy(class= (comp ? 'd-md-none' : null))
 		.container
@@ -54,14 +54,14 @@ mixin top-nav(logout)
 					+b.logo(href="/")
 						.row
 							.col-auto
-								img(src="img/svg/logo-sm.svg", alt="") 
+								img(src="img/svg/logo-sm.svg", alt="")
 							.col
 								+e.DIV.text
-								img(src="img/svg/logo-text.svg", alt="") 
+								img(src="img/svg/logo-text.svg", alt="")
 				.col-auto.d-md-none.order-first.fixed-hide
 					.has-children
 						| Русский
-						ul 
+						ul
 							li Русский
 							li Русский
 							li Русский
@@ -72,20 +72,20 @@ mixin top-nav(logout)
 							//- 	+b.swich-block
 							//- 		+e.btn(href="#") Харидорлар
 							//- 		+e.btn(href="#").active Сотувчилар
-							//- 	+e.toggle--mob 
-							//- 		span 
+							//- 	+e.toggle--mob
+							//- 		span
 							//- 		+e.toggle-text МЧЖ "Green technology"
 							//- if !comp
-								
+
 							//- 		+b.swich-block
 							//- 			+e.btn(href="#").active Харидорлар
 							//- 			+e.btn(href="#") Сотувчилар
-							+e.toggle--mob.d-lg-none 
-								span 
+							+e.toggle--mob.d-lg-none
+								span
 								+e.toggle-text Каталоглар
-						
+
 							+e.toggle--desctop.d-none.d-lg-block
-								span 
+								span
 								+e.toggle-text Каталоглар
 							+e.dropdown
 								+e.dropdown-inner
@@ -93,14 +93,14 @@ mixin top-nav(logout)
 										mixin liLeft(a)
 											li.menu-item-has-children
 												a(href="#")
-													span= a  
+													span= a
 													+icon("chevron-right")
 												.sub-menu-wrap
 													ul.sub-menu
 														mixin li(a)
-															li 
+															li
 																a(href="#")
-																	span= a  
+																	span= a
 
 														mixin col(t, sub)
 															li(class=( sub ? "menu-item-has-children" : ""))
@@ -119,18 +119,18 @@ mixin top-nav(logout)
 																			block
 
 														block
-														+col('Полиз екини уруғлари', 'sub') 
+														+col('Полиз екини уруғлари', 'sub')
 															+li('Тарвуз')
 															+li('Қовун')
 															+li('Қовоқ')
 															+li('Хандалак')
 															+li('Ошқовоқ')
-														+col('Майса уруғлари', 'sub') 
+														+col('Майса уруғлари', 'sub')
 															+li("Газон")
 															+li("Жўхори")
 															+li("Доривор ўсимликлар")
-															+li("Эм-хашак ўтлари") 
-														+col('Дуккакли уруғлар', 'sub') 
+															+li("Эм-хашак ўтлари")
+														+col('Дуккакли уруғлар', 'sub')
 															+li("Ловия")
 															+li("Нўхат")
 															+li("Люпин")
@@ -140,23 +140,23 @@ mixin top-nav(logout)
 															+li("Бодринг")
 															+li("Помидор")
 															+li("Карам")
-															+li("Сабзи") 
-														+col('Дон уруғлари', 'sub') 
+															+li("Сабзи")
+														+col('Дон уруғлари', 'sub')
 															+li("Қишки буғдой")
 															+li("Арпа")
 															+li("Жавдар")
-															+li("Юлаф") 
-														+col('Дон уруғлари', 'sub') 
+															+li("Юлаф")
+														+col('Дон уруғлари', 'sub')
 															+li("Қишки буғдой")
 															+li("Арпа")
 															+li("Жавдар")
-															+li("Юлаф") 
+															+li("Юлаф")
 														- for (var x = 0; x < 10; x++)
-															+col('Дон уруғлари', 'sub') 
+															+col('Дон уруғлари', 'sub')
 																+li("Қишки буғдой")
 																+li("Арпа")
 																+li("Жавдар")
-																+li("Юлаф") 
+																+li("Юлаф")
 
 
 
@@ -164,15 +164,15 @@ mixin top-nav(logout)
 
 
 										+liLeft('Уруғлар')
-											+col('Полиз екини уруғлари')  
+											+col('Полиз екини уруғлари')
 											+col('Майса уруғлари')
 												- for (var x = 0; x < 10; x++)
 													+li("Газон")
 													+li("Жўхори")
 													+li("Доривор ўсимликлар")
-													+li("Эм-хашак ўтлари") 
+													+li("Эм-хашак ўтлари")
 										+liLeft('Ўғитлар')
-											+col('Полиз екини уруғлари') 
+											+col('Полиз екини уруғлари')
 												+li('Тарвуз')
 												+li('Қовун')
 												+li('Қовоқ')
@@ -191,41 +191,107 @@ mixin top-nav(logout)
 											+liLeft('Тайёр маҳсулотлар')
 				//- if !comp
 				+e.col.col-lg.order-lg-0.order-last
-					+search-block 
+					+search-block
 				if logout
 					.col-auto.ms-auto
 						+b.top-btn(href="#")
-							+e.SPAN.icon-wrap 
+							+e.SPAN.icon-wrap
 								+icon("user")
-								+e.SPAN.count 99 
+								+e.SPAN.count 99
+				.col-auto
+					+b.top-btn.with-dropdown(href="#")
+						+e.SPAN.icon-wrap
+							+icon("user")
+							+e.SPAN.count 99
+					.user-dropdown
+						.scrollbar-region
+							.category-image
+								.category-icon.green
+									+icon("icon-video")
+								.desc-wrapper
+									p.title Сўровингиз қабул қилинди
+									p.date
+										+icon("icon-clock")
+										span 04.01.2022   11:00 - 11:30
+								button(close, type="button").close
+									+icon("close")
+							.category-image
+								.category-icon.blue
+									+icon("icon-video")
+								.desc-wrapper
+									p.title Видео мулоқот вақти
+									p.date
+										+icon("icon-clock")
+										span 04.01.2022   11:00 - 11:30
+								button(type="button").btn.btn-primary
+									+icon("video")
+									span Бошлаш
+								button(close, type="button").close
+									+icon("close")
+							.category-image
+								.category-icon.red
+									+icon("icon-video")
+								.desc-wrapper
+									p.title Сўровингиз қабул қилинди
+									p.date
+										+icon("icon-clock")
+										span 04.01.2022   11:00 - 11:30
+								button(close, type="button").close
+									+icon("close")
+							.category-image
+								.category-icon.green
+									+icon("icon-basket")
+								.desc-wrapper
+									p.title Сўровингиз қабул қилинди
+									p.desc Қизил лавлаги лавлаги Кабачок Аймаран Қизил лавлаги лавлаги Кабачок Аймаран
+								button(close, type="button").close
+									+icon("close")
+							.category-image
+								.category-icon.red
+									+icon("icon-basket")
+								.desc-wrapper
+									p.title Сўровингиз қабул қилинди
+									p.desc Қизил лавлаги лавлаги Кабачок Аймаран Қизил лавлаги лавлаги Кабачок Аймаран
+								button(close, type="button").close
+									+icon("close")
+							.category-image
+								.category-icon.green
+									+icon("icon-box")
+								.desc-wrapper
+									p.title Янги сўров
+									p.desc Қизил лавлаги лавлаги Кабачок Аймаран Қизил лавлаги лавлаги Кабачок Аймаран
+								button(close, type="button").close
+									+icon("close")
 				.col-auto
 					+b.top-btn(href="#")
-						+e.SPAN.icon-wrap 
+						+e.SPAN.icon-wrap
 							+icon("like")
-							+e.SPAN.count 99 
+							+e.SPAN.count 99
 				.col-auto
 					+b.top-btn(href="#")
-						+e.SPAN.icon-wrap  
+						+e.SPAN.icon-wrap
 							+icon("basket-new")
-							+e.SPAN.count 99 
+							+e.SPAN.count 99
 				.col-md-auto.col.order-md-0.order-first
 					+serivedroop()
 				if !logout
 					.col-md-auto.col
 						.drop-down-wrap.text-end
-							+e.btn.btn.btn-primary(type="button")
-								+icon("user")
-								| Кабинет
+							+e.btn.btn.btn-circle.cabinet(type="button")
+								picture
+									source(type='image/webp' srcset=`img/@1x/webp/user-avatar.webp`)
+									img.avatar(src="img/@1x/user-avatar.png", alt="")
+									+icon("icon-user-cabinet")
 							+b.dropdown-block--cabinet
 								mixin item(t)
-									+e.item(href="#").h6= t 
+									+e.item(href="#").h6= t
 								+item(`Профил`)
 								+item(`Махсулотлар`)
 								+item(`Буюртмаларим`)
 								+item(`Харидор буюртмалари`)
 								+item(`Чиқиш`)
 	// end top-nav
-mixin top-nav-cabinet(comp) 
+mixin top-nav-cabinet(comp)
 	// start top-nav  в этом блоке   отличия
 	+b.top-nav--cabinet
 		.container
@@ -234,15 +300,15 @@ mixin top-nav-cabinet(comp)
 					+b.toggle-menu-mobile--js
 						span
 					+b.catalog-block--cabinet
-						+e.toggle--mob.--cabinet.d-lg-none 
-								span 
+						+e.toggle--mob.--cabinet.d-lg-none
+								span
 								//- +e.toggle-text Каталоглар
 						+e.dropdown
 							+e.dropdown-inner
 								ul.left-menu
 									mixin liLeft(a)
 										li.menu-item-has-children
-											a(href="#")= a  
+											a(href="#")= a
 												+icon("chevron-right")
 									+liLeft('Профил')
 									+liLeft('Махсулотлар')
@@ -256,7 +322,7 @@ mixin top-nav-cabinet(comp)
 					ul
 						li: +e.link(href="tel:(78)150-00-88")
 							+icon("phone-icon")
-							span (78) 150-00-88 
+							span (78) 150-00-88
 						li: +e.link(href="#")
 							+icon("chat")
 							span On-line чат
@@ -265,20 +331,20 @@ mixin top-nav-cabinet(comp)
 					+b.logo(href="/")
 						.row
 							.col-auto
-								img(src="img/svg/logo-sm.svg", alt="") 
+								img(src="img/svg/logo-sm.svg", alt="")
 							.col
 								+e.DIV.text
-								img(src="img/svg/logo-text.svg", alt="") 
-				
+								img(src="img/svg/logo-text.svg", alt="")
+
 				//- +e.col-catalog.col-auto.d-md-none
-					
+
 				.col-4.d-flex.justify-content-end
 					.has-children.me-4
 						| Русский
-						ul 
+						ul
 							li Русский
 							li Русский
-							li Русский  
+							li Русский
 					+b.link-logout(href="#")
 						+icon("logout")
 						span Чиқиш

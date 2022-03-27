@@ -311,7 +311,7 @@ function eventHandler() {
 				spaceBetween: 20,
 			},
 			1200: {
-				slidesPerView: 3,
+				slidesPerView: 4,
 				spaceBetween: 30,
 			}
 		}
@@ -838,4 +838,123 @@ if (document.readyState !== 'loading') {
 // 	}, 500);
 // }
 
+$(document).ready(function() {
+	$(".with-dropdown").click(function() {
+		if ($(".top-btn__icon-wrap", this).children().hasClass('top-btn__count')) {
+			if ($(".user-dropdown").hasClass('open')) {
+				$('.user-dropdown').fadeOut(500).removeClass('open');
+			} else {
+				$('.user-dropdown').fadeIn(500).addClass('open');
+			}
+		}
+	});
+});
 
+/*start Tabs*/
+function openCity(evt, cityName) {
+	let i, tabcontent, tablinks;
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	}
+	tablinks = document.getElementsByClassName("tablinks");
+	for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	}
+	document.getElementById(cityName).style.display = "block";
+	evt.currentTarget.className += " active";
+}
+
+$(".vacancy .tablinks").on('click', function () {
+	if ($(this).hasClass('vac')) {
+		$(".vacancy .vac_content.vac").css("display","block");
+		$(".vacancy .vac_content.res").css("display","none");
+	}
+	if ($(this).hasClass('res')) {
+		$(".vacancy .vac_content.res").css("display","block");
+		$(".vacancy .vac_content.vac").css("display","none");
+	}
+});
+/*end Tabs*/
+
+/*start YandexMap*/
+$(document).ready(function(){
+	ymaps.ready(init);
+
+	function init() {
+		let  myInput = document.getElementById("suggest");
+		let myPlacemark,
+			myMap = new ymaps.Map('map', {
+				center: [41.295907, 69.241113],
+				zoom: 9
+			}, {
+				searchControlProvider: 'yandex#search'
+			});
+
+		myMap.events.add('click', function (e) {
+			let coords = e.get('coords');
+
+			if (myPlacemark) {
+				myPlacemark.geometry.setCoordinates(coords);
+			}
+			else {
+				myPlacemark = createPlacemark(coords);
+				myMap.geoObjects.add(myPlacemark);
+				myPlacemark.events.add('dragend', function () {
+					getAddress(myPlacemark.geometry.getCoordinates());
+				});
+			}
+			let geoButton = myMap.controls.get('geolocationControl');
+			geoButton.events.add('locationchange', function (event) {
+				let coords = event.get('position');
+				myMap.panTo(coords);
+				getAddress(coords);
+			});
+		});
+
+		function createPlacemark(coords) {
+			return new ymaps.Placemark(coords, {
+				iconCaption: 'поиск...'
+			}, {
+				preset: 'islands#violetDotIconWithCaption',
+				draggable: true
+			});
+		}
+
+		function getAddress(coords) {
+			myPlacemark.properties.set('iconCaption', 'поиск...');
+			ymaps.geocode(coords).then(function (res) {
+				var firstGeoObject = res.geoObjects.get(0);
+
+				myPlacemark.properties
+					.set({
+						iconCaption: [
+							firstGeoObject.getLocalities().length ? firstGeoObject.getLocalities() : firstGeoObject.getAdministrativeAreas(),
+							firstGeoObject.getThoroughfare() || firstGeoObject.getPremise()
+						].filter(Boolean).join(', '),
+						balloonContent: firstGeoObject.getAddressLine()
+					});
+				myInput.value = suggest;
+				localStorage.setItem('value', suggest);
+			});
+		}
+		if(localStorage.getItem('value')){
+			myInput.value = localStorage.getItem('value');
+		}
+	}
+});
+/*end YandexMap*/
+
+/*start ButtonClickOpen*/
+$(document).ready(function(){
+	$(".sProdBody__footer-link.phone-button").on('click', function () {
+		$(this).css("width", "185px");
+	});
+	$(document).mouseup(function (e) {
+		let container = $(".sProdBody__footer-link.phone-button");
+		if (container.has(e.target).length === 0){
+			container.css("width", "46px");
+		}
+	});
+});
+/*end ButtonClickOpen*/

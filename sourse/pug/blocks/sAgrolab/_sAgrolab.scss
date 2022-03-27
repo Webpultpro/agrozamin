@@ -1,0 +1,58 @@
+.agrolab {
+  .agro_content {
+    background: #D9F8E9;
+    border-radius: 11px;
+    padding: 58px 82px;
+  }
+  .col-md-5 {
+    width: 38%;
+  }
+  .col-md-7 {
+    width: 62%;
+  }
+  .logo-agrolab {
+    width: 264px;
+  }
+  .wrapper {
+    h2, .h2 {
+      font-weight: 700;
+      font-size: 40px;
+    }
+    .desc {
+      font-size: 20px;
+      line-height: 27.3px;
+      margin-bottom: 34px;
+    }
+    .btn {
+      font-weight: 400;
+      white-space: nowrap;
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .agrolab {
+    .agro_content {
+      padding: 10px 30px 40px;
+    }
+    .row {
+      flex-direction: column;
+      align-items: center;
+    }
+    .col-md-7, .col-md-5 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+    .wrapper {
+      h2, .h2 {
+        font-size: 27px;
+        margin-top: 25px;
+      }
+      .desc {
+        font-size: 16px;
+      }
+    }
+  }
+}
