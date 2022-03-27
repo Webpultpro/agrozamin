@@ -127,6 +127,35 @@ mixin sCatalog3(data)
 			+e.btn-more(href="#").btn-outline-primary Кўпроқ кўриш
 	// end sCatalog
 
+mixin sCatalog4(data)
+	// start sCatalog
+	.banner
+		h2 Боғ ва томорқа махсулотлари
+		button.btn.btn-primary.w-100.my-2 Батафсил
+		+pic("catalog-bg.jpg",'',0)
+	+b.sCatalog.categories.section.pt-0&attributes(attributes)
+		h1 Барча махсулотлар
+		+catalog-filter(f)
+		+e.row.row
+			+card(1,'Қизил Юсуф памидори Самарқанд махсулоти')
+			+card(2,'Бинафша Шоҳ Нўхати')
+			+card(3)
+			+card(4,'Мелотрия Колибри Самарқанд махсулоти')
+				+e.btn.btn-outline-primary.disabled(type="button") Запрос оставлен
+			+card(5)
+			+card(6)
+			+card(5)
+			+card(6)
+		//- +e.foot
+		//- 	.row
+		//- 		.col
+		//- 			+pugin()
+		//- 		.col-auto.d-none.d-sm-block
+		//- 			.text-secondary.pt-3 211 тадан 24 таси кўрилди
+		+e.foot
+			+e.btn-more(href="#").btn-outline-primary Кўпроқ кўриш
+	// end sCatalog
+
 mixin sCatalog15(data)
 	// start sCatalog
 	+b.sCatalog.section.pt-0&attributes(attributes)
