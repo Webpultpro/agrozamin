@@ -367,6 +367,19 @@
     z-index: 100;
   }
 }
+.personal {
+  .bottom-region {
+    button {
+      font-weight: 400;
+      min-width: 190px;
+    }
+    .col-md-3 {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+  }
+}
 
 
 
@@ -392,7 +405,7 @@
           font-size: 14px;
         }
       }
-      h2, .h2 {
+      h2 {
         white-space: normal;
         overflow: visible;
       }
@@ -434,6 +447,10 @@
     }
   }
   .vac-info {
+    h2 {
+      white-space: normal;
+      overflow: visible;
+    }
     .head-region {
       flex-direction: column;
     }
