@@ -157,6 +157,15 @@ mixin sCabinetOrdersProducts(status)
 					+icon("menu-i")
 				.col
 					+input("Танлаш",'select').select-with-arrows(disabled)
+		.archive
+			.info-wrap
+				.prod-line__img-wrap.bg-wrap
+					+icon("icon-archive").picture-bg.img-bg
+				.text
+					.title Архивланган маҳсулотлар
+					.undertitle Умумий: 4 маҳсулотлар
+			a.button(href="#") Барчаси
+				+icon("chevron-right")
 		if status
 			mixin item(data)
 				+b.orders-item--products&attributes(attributes)
@@ -287,46 +296,75 @@ mixin sCabinetOrdersProducts(status)
 
 				mixin item2(data)
 					+b.TR.prod-line 
-							+b.TD.check-wrap.td
-								+in-c()
-							td
-								+e.img-wrap.bg-wrap(href="#")
-									+pic("prod-2.jpg",'bg',0).picture-bg
-							td
-								.small 235356751
-								.h6.strong 
-									a.text-body(href="#") Бинафша Шоҳ Нўхати
-								p.mb-0 28.04.2021
-							td
-								ul 
-									li: a(href="#") Уруғлар
-										+icon("chevron-right")
-									li: a(href="#") Сабзавот уруғлари
-										+icon("chevron-right")
-									li: a(href="#") Сабзавот уруғлари
-										+icon("chevron-right")
-									li: a(href="#") Дон уруғлари
-										+icon("chevron-right")
-							td
+						+b.TD.check-wrap.td
+							+in-c()
+						td
+							+e.img-wrap.bg-wrap(href="#")
+								+pic("prod-2.jpg",'bg',0).picture-bg
+						td
+							p.mb-0 28.04.2021
+							.title
+								a.text-body(href="#") Дуккакли бинафша шох нохати самарқанд осимлиги
+							+b.tooltip-tr
+								+e.inner Модератор текширувида
+						td
+							.h6.fw-400.mb-1 12 003 000 сум
+						td
+							.h6.fw-400.mb-1 1 Килограм
+						td
+							.faol Фаол
+						td
+							.d-md-none
 								.h6.fw-400.mb-1 12 003 000 сум
 								.text-secondary2 1 Килограм
-							td
-								.d-md-none
-									.h6.fw-400.mb-1 12 003 000 сум
-									.text-secondary2 1 Килограм
-								.row.g-2
-									.col-auto
-										+e.btn-circle(type="button")
-											+icon("edit")
-											+b.tooltip 
-												+e.inner Таҳрирлаш
-							
-									.col-auto
-										+e.btn-circle(type="button")
-											+icon("delete")
-											+b.tooltip 
-												+e.inner Ўчириш
-				- for (var x = 0; x < 8; x++)
+							.row.g-2
+								.col-auto
+									+e.btn-circle(type="button")
+										+icon("edit")
+										+b.tooltip
+											+e.inner Таҳрирлаш
+
+								.col-auto
+									+e.btn-circle(type="button")
+										+icon("icon-archive")
+										+b.tooltip
+											+e.inner Ўчириш
+					+b.TR.prod-line
+						+b.TD.check-wrap.td
+							+in-c()
+						td
+							+e.img-wrap.bg-wrap(href="#")
+								+pic("prod-1.jpg",'bg',0).picture-bg
+						td
+							p.mb-0 28.04.2021
+							.title
+								a.text-body(href="#") Қизил лавлаги
+							+b.tooltip-tr
+								+e.inner Модератор текширувида
+						td
+							.h6.fw-400.mb-1 12 003 000 сум
+						td
+							.h6.fw-400.mb-1 1 Килограм
+						td
+							.no-faol Фаол эмас
+						td
+							.d-md-none
+								.h6.fw-400.mb-1 12 003 000 сум
+								.text-secondary2 1 Килограм
+							.row.g-2
+								.col-auto
+									+e.btn-circle(type="button")
+										+icon("edit")
+										+b.tooltip
+											+e.inner Таҳрирлаш
+
+								.col-auto
+									+e.btn-circle(type="button")
+										+icon("icon-archive")
+										+b.tooltip
+											+e.inner Ўчириш
+
+				- for (var x = 0; x < 4; x++)
 					+item2(data)
 			+pugin
 			//- +item({
