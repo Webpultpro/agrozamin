@@ -234,10 +234,27 @@
 		font-weight: 400;
 	}
 }
+.two-buttons {
+	button {
+		margin-left: 20px;
+		font-weight: 400;
+	}
+}
 @include media-breakpoint-down(lg) {
 	.button-wrapper {
 		button {
 			width: 190px;
+		}
+	}
+}
+@include media-breakpoint-down(md) {
+	.two-buttons {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		button {
+			margin-left: 0;
+			margin-bottom: 20px;
 		}
 	}
 }
