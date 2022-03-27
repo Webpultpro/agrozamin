@@ -209,3 +209,19 @@
 		}
 	}
 }
+
+.sProdBody__footer-link {
+	&.phone-button {
+		overflow: hidden;
+		justify-content: flex-start;
+		transition: 0.3s;
+		a {
+			font-weight: 400;
+			font-size: 17px;
+			margin-left: 11px;
+		}
+		.icon-wrapper {
+			margin-left: 14px;
+		}
+	}
+}
