@@ -264,8 +264,78 @@
     font-size: 14px;
   }
 }
+.chatsSection {
+  padding-bottom: 80px;
+  .consult-title {
+    color: white;
+    p {
+      font-size: 18px;
+    }
+    h1 {
+      font-size: 43px;
+    }
+  }
+  .sConsultProject__banner {
+    padding: 49px 15px;
+  }
+}
+
+.chatsServices {
+  padding-bottom: 113px;
+  .section-title {
+    padding-bottom: 25px;
+  }
+}
+
+.chatsServicesUse {
+  padding-bottom: 113px;
+  .sServiceUse__col {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  h3 {
+    font-size: 24px;
+  }
+  .sServiceUse__card-content {
+    p {
+      font-size: 24px;
+      margin-bottom: 35px;
+    }
+  }
+}
+.chats-profesions {
+  padding-bottom: 0;
+  .section-title {
+    padding-bottom: 25px;
+  }
+}
+.sPersonalAccount {
+  &.chats {
+    padding-bottom: 80px;
+    margin-top: 0;
+  }
+  .consultant {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    .content-box {
+      padding: 28px 35px 0;
+      .btn {
+        padding: 13px 59px;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+  }
+}
 
 @include media-breakpoint-up(xl) {
+  .chats-profesions {
+    .profesions__content {
+      width: 100%;
+    }
+  }
   .sConsultProject__banner {
     padding: 34px 15px 30px;
   }
@@ -343,6 +413,57 @@
       align-items: center;
     }
   }
+  .chats-profesions {
+    .profesions__content {
+      .field-item {
+        margin-right: 29px;
+        width: 48%;
+        &:nth-child(2n + 2) {
+          margin-right: 0;
+        }
+        &:nth-child(3n + 3) {
+          margin-right: 29px;
+        }
+      }
+    }
+  }
+  .chatsServices {
+    .col-lg-4 {
+      width: 50%;
+      margin-bottom: 15px;
+    }
+    .row {
+      justify-content: space-around;
+    }
+  }
+  .chatsServicesUse {
+    .sServiceUse__col {
+      picture {
+        width: 100%;
+      }
+    }
+    .sServiceUse__card-content {
+      .group-product {
+        display: block;
+      }
+    }
+  }
+  .sPersonalAccount {
+    .consultant {
+      h2 {
+        font-size: 30px;
+        line-height: 34px;
+      }
+      .content-box {
+        .desc {
+          margin-bottom: 25px;
+        }
+        .btn {
+          margin-bottom: 28px;
+        }
+      }
+    }
+  }
 }
 @include media-breakpoint-down(lg) {
   .sServices {
@@ -386,6 +507,28 @@
       text-align: center;
     }
   }
+  .chatsSection,
+  .chatsServices,
+  .chatsServicesUse {
+    display: none;
+  }
+  .chats-profesions {
+    .profesions__content {
+      .field-item {
+        margin-right: 26px;
+        width: 48%;
+      }
+    }
+  }
+  .chats-profesions {
+    .profesions__content {
+      .field-item {
+        &:nth-child(3n + 3) {
+          margin-right: 26px;
+        }
+      }
+    }
+  }
 }
 @include media-breakpoint-down(md) {
   .sConsultProject {
@@ -405,12 +548,39 @@
       }
     }
   }
+  .chats-profesions {
+    .profesions__content {
+      .field-item {
+        margin-right: 0;
+        width: 290px;
+        &:nth-child(3n + 3) {
+        margin-right: 0;
+      }
+      }
+    }
+  }
+  .consultant {
+    .content-box {
+      h2 {
+        font-size: 27px;
+        line-height: 30px;
+      }
+    }
+  }
 }
 @include media-breakpoint-down(sm) {
   .profesions__content {
     .field-item {
       width: 100%;
       justify-content: center;
+    }
+  }
+  .chats-profesions {
+    .profesions__content {
+      .field-item {
+        width: 100%;
+        justify-content: center;
+      }
     }
   }
 }

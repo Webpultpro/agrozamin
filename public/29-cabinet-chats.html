@@ -33,6 +33,7 @@
 		<link href="libs/animate.css/animate.min.css" rel="stylesheet"/>
 		<link href="libs/jquery-asPieProgress/css/asPieProgress.min.css" rel="stylesheet"/>
 		<link href="libs/select2/css/select2.min.css" rel="stylesheet"/>
+		<link href="libs/datepicker/css/datepicker.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="page-cabinet">
@@ -67,7 +68,7 @@
 								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 								</div>
 								<div class="catalog-block catalog-block--cabinet">
-									<div class="catalog-block__toggle catalog-block__toggle--mob catalog-block__toggle--cabinet d-lg-none"> <span> </span>
+									<div class="catalog-block__toggle catalog-block__toggle--mob catalog-block__toggle--cabinet d-lg-none"><span></span>
 									</div>
 									<div class="catalog-block__dropdown">
 										<div class="catalog-block__dropdown-inner">
@@ -103,7 +104,7 @@
 									<li><a class="contacts-top-block__link" href="tel:(78)150-00-88">
 										<svg class="icon icon-phone-icon ">
 											<use xlink:href="img/svg/sprite.svg#phone-icon"></use>
-										</svg><span>(78) 150-00-88 </span></a>
+										</svg><span>(78) 150-00-88</span></a>
 									</li>
 									<li><a class="contacts-top-block__link" href="#">
 										<svg class="icon icon-chat ">
@@ -123,10 +124,10 @@
 							</div>
 							<div class="col-4 d-flex justify-content-end">
 								<div class="has-children me-4">Русский
-									<ul> 
+									<ul>
 										<li>Русский</li>
 										<li>Русский</li>
-										<li>Русский  </li>
+										<li>Русский</li>
 									</ul>
 								</div><a class="link-logout" href="#">
 								<svg class="icon icon-logout ">
@@ -152,7 +153,7 @@
 				</nav>
 			</div>
 			<!-- start sPersonalAccount-->
-			<div class="sPersonalAccount section" id="sPersonalAccount">
+			<div class="sPersonalAccount section chats" id="sPersonalAccount">
 				<div class="container">
 					<div class="row row--main">
 						<div class="col-lg col--aside">
@@ -176,227 +177,283 @@
 							</ul>
 						</div>
 						<div class="col-lg col--main">
-							<!-- start sChatCards-->
-							<div class="sChatCards section" id="sChatCards">
-								<div class="sChatCards__row row">
-									<div class="sChatCards__col col-xl-4 col-md-6"> 
-										<div class="chat-card"> 
-											<div class="chat-card__row row">
-												<div class="col-auto">
-													<div class="chat-card__img-wrap bg-wrap">
-														<svg class="icon icon-user ">
-															<use xlink:href="img/svg/sprite.svg#user"></use>
-														</svg>
-														<!-- picture-->
-														<picture class="picture-bg"> 
-															<source type="image/webp" srcset="img/@2x/webp/avatar-1.webp"/><img class="object-fit-js" src="img/@2x/avatar-1.png" alt="" loading="lazy"/>
-														</picture>
-														<!-- /picture-->
-													</div>
-												</div>
-												<div class="col">
-													<div class="h6 mb-0">Ветиринар</div>
-													<div class="text-secondary">Александра Алиева</div>
-													<div class="stars">
-														<svg class="icon icon-star  active">
-															<use xlink:href="img/svg/sprite.svg#star"></use>
-														</svg>
-														<svg class="icon icon-star  active">
-															<use xlink:href="img/svg/sprite.svg#star"></use>
-														</svg>
-														<svg class="icon icon-star  active">
-															<use xlink:href="img/svg/sprite.svg#star"></use>
-														</svg>
-														<svg class="icon icon-star  active">
-															<use xlink:href="img/svg/sprite.svg#star"></use>
-														</svg>
-														<svg class="icon icon-star ">
-															<use xlink:href="img/svg/sprite.svg#star"></use>
-														</svg>
-													</div>
-													<div class="chat-card__footer"><a class="chat-card__btn btn-outline-primary" href="#">Кириш</a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="sChatCards__col col-xl-4 col-md-6"> 
-										<div class="chat-card"> 
-											<div class="chat-card__row row">
-												<div class="col-auto">
-													<div class="chat-card__img-wrap bg-wrap">
-														<svg class="icon icon-user ">
-															<use xlink:href="img/svg/sprite.svg#user"></use>
-														</svg>
-														<!-- picture-->
-														<picture class="picture-bg"> 
-															<source type="image/webp" srcset="img/@2x/webp/avatar-2.webp"/><img class="object-fit-js" src="img/@2x/avatar-2.png" alt="" loading="lazy"/>
-														</picture>
-														<!-- /picture-->
-													</div>
-												</div>
-												<div class="col">
-													<div class="h6 mb-0">Аграном</div>
-													<div class="text-secondary">Собиров Алишер</div>
-													<div class="stars">
-														<svg class="icon icon-star  active">
-															<use xlink:href="img/svg/sprite.svg#star"></use>
-														</svg>
-														<svg class="icon icon-star  active">
-															<use xlink:href="img/svg/sprite.svg#star"></use>
-														</svg>
-														<svg class="icon icon-star  active">
-															<use xlink:href="img/svg/sprite.svg#star"></use>
-														</svg>
-														<svg class="icon icon-star  active">
-															<use xlink:href="img/svg/sprite.svg#star"></use>
-														</svg>
-														<svg class="icon icon-star ">
-															<use xlink:href="img/svg/sprite.svg#star"></use>
-														</svg>
-													</div>
-													<div class="chat-card__footer"><a class="chat-card__btn btn-outline-primary" href="#">Кириш</a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="sChatCards__col col-xl-4 col-md-6"> 
-										<div class="chat-card"> 
-											<div class="chat-card__row row">
-												<div class="col-auto">
-													<div class="chat-card__img-wrap bg-wrap">
-														<svg class="icon icon-user ">
-															<use xlink:href="img/svg/sprite.svg#user"></use>
-														</svg>
-														<!-- picture-->
-														<picture class="picture-bg"> 
-															<source type="image/webp" srcset="img/@2x/webp/avatar-3.webp"/><img class="object-fit-js" src="img/@2x/avatar-3.png" alt="" loading="lazy"/>
-														</picture>
-														<!-- /picture-->
-													</div>
-												</div>
-												<div class="col">
-													<div class="h6 mb-0">Агротехник</div>
-													<div class="text-secondary">Қаҳрамонов Рустам</div>
-													<div class="stars">
-														<svg class="icon icon-star  active">
-															<use xlink:href="img/svg/sprite.svg#star"></use>
-														</svg>
-														<svg class="icon icon-star  active">
-															<use xlink:href="img/svg/sprite.svg#star"></use>
-														</svg>
-														<svg class="icon icon-star  active">
-															<use xlink:href="img/svg/sprite.svg#star"></use>
-														</svg>
-														<svg class="icon icon-star  active">
-															<use xlink:href="img/svg/sprite.svg#star"></use>
-														</svg>
-														<svg class="icon icon-star ">
-															<use xlink:href="img/svg/sprite.svg#star"></use>
-														</svg>
-													</div>
-													<div class="chat-card__footer"><a class="chat-card__btn btn-outline-primary" href="#">Кириш</a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="sChatCards__col col-xl-4 col-md-6"> 
-										<div class="chat-card"> 
-											<div class="chat-card__row row">
-												<div class="col-auto">
-													<div class="chat-card__img-wrap bg-wrap">
-														<svg class="icon icon-user ">
-															<use xlink:href="img/svg/sprite.svg#user"></use>
-														</svg>
-														<!-- picture-->
-														<picture class="picture-bg"> 
-															<source type="image/webp" srcset="img/@2x/webp/avatar-1.webp"/><img class="object-fit-js" src="img/@2x/avatar-1.png" alt="" loading="lazy"/>
-														</picture>
-														<!-- /picture-->
-													</div>
-												</div>
-												<div class="col">
-													<div class="h6 mb-0">Агротехник</div>
-													<div class="text-secondary">Алимов Равшан</div>
-													<div class="stars">
-														<svg class="icon icon-star  active">
-															<use xlink:href="img/svg/sprite.svg#star"></use>
-														</svg>
-														<svg class="icon icon-star  active">
-															<use xlink:href="img/svg/sprite.svg#star"></use>
-														</svg>
-														<svg class="icon icon-star  active">
-															<use xlink:href="img/svg/sprite.svg#star"></use>
-														</svg>
-														<svg class="icon icon-star  active">
-															<use xlink:href="img/svg/sprite.svg#star"></use>
-														</svg>
-														<svg class="icon icon-star ">
-															<use xlink:href="img/svg/sprite.svg#star"></use>
-														</svg>
-													</div>
-													<div class="chat-card__footer"><a class="chat-card__btn btn-outline-primary" href="#">Кириш</a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="sChatCards__col col-xl-4 col-md-6"> 
-										<div class="chat-card"> 
-											<div class="chat-card__row row">
-												<div class="col-auto">
-													<div class="chat-card__img-wrap bg-wrap">
-														<svg class="icon icon-user ">
-															<use xlink:href="img/svg/sprite.svg#user"></use>
-														</svg>
-													</div>
-												</div>
-												<div class="col">
-													<div class="h6 mb-0">Зоотехник</div>
-													<div class="text-secondary">Жураев Зокир</div>
-													<div class="stars">
-														<svg class="icon icon-star  active">
-															<use xlink:href="img/svg/sprite.svg#star"></use>
-														</svg>
-														<svg class="icon icon-star  active">
-															<use xlink:href="img/svg/sprite.svg#star"></use>
-														</svg>
-														<svg class="icon icon-star  active">
-															<use xlink:href="img/svg/sprite.svg#star"></use>
-														</svg>
-														<svg class="icon icon-star  active">
-															<use xlink:href="img/svg/sprite.svg#star"></use>
-														</svg>
-														<svg class="icon icon-star ">
-															<use xlink:href="img/svg/sprite.svg#star"></use>
-														</svg>
-													</div>
-													<div class="chat-card__footer"><a class="chat-card__btn btn-outline-primary" href="#">Кириш</a>
-													</div>
-												</div>
-											</div>
+							<section class="chatsSection section" id="chatsSection">
+								<div class="sConsultProject__banner bg-wrap wow animate__fadeIn" data-wow-delay=".1s">
+									<!-- picture-->
+									<picture class="picture-bg"> 
+										<source type="image/webp" srcset="img/@2x/webp/consulting.webp"/><img class="object-fit-js" src="img/@2x/consulting.jpg" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture-->
+									<div class="consult-title text-center">
+										<div class="h1">Онлайн консультант</div>
+										<p>Агро бизнес учун қулай бўлган ягона махсус сервис</p>
+										<div class="text-center">
+											<div class="btn btn-primary w-190" type="submit">Жўнатиш</div>
 										</div>
 									</div>
 								</div>
-								<div class="sChatCards__banner">
-									<div class="row">
-										<div class="col">
-											<h2>Консултант бўлишни истайсизми?</h2>
-											<p>Бизга қўшилинг ва мижозлар учун ҳизмат кўрсатинг</p><a class="sChatCards__btn btn-primary" href="#">Ўтиш</a>
+							</section>
+							<section class="chatsServices section" id="chatsServices">
+								<div class="section-title text-center wow animate__fadeInUp" data-wow-delay=".1s">
+									<h2>Хизмат афзалликлари</h2>
+								</div>
+								<div class="row">
+									<div class="col-md-6 col-lg-4"><a class="sServices__item sServices__item--link wow animate__fadeInUp" href="#" data-wow-delay=".2s">
+											<!-- picture-->
+											<picture class="green-theme"> 
+												<source type="image/webp" srcset="img/@2x/webp/full-time-job.webp"/><img src="img/@2x/full-time-job.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+											<!-- picture-->
+											<picture class="blue-theme"> 
+												<source type="image/webp" srcset="img/@2x/webp/full-time-job-b.webp"/><img src="img/@2x/full-time-job-b.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+											<p class="h5 strong mb-0">Исталган вақтда керакли консултант хизмати</p></a></div>
+									<div class="col-md-6 col-lg-4"><a class="sServices__item sServices__item--link wow animate__fadeInUp" href="#" data-wow-delay=".3s">
+											<!-- picture-->
+											<picture class="green-theme"> 
+												<source type="image/webp" srcset="img/@2x/webp/doctor.webp"/><img src="img/@2x/doctor.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+											<!-- picture-->
+											<picture class="blue-theme"> 
+												<source type="image/webp" srcset="img/@2x/webp/doctor-b.webp"/><img src="img/@2x/doctor-b.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+											<p class="h5 strong mb-0">Профессионал мутаҳасислар</p></a></div>
+									<div class="col-md-6 col-lg-4"><a class="sServices__item sServices__item--link wow animate__fadeInUp" href="#" data-wow-delay=".4s">
+											<!-- picture-->
+											<picture class="green-theme"> 
+												<source type="image/webp" srcset="img/@2x/webp/customer-service.webp"/><img src="img/@2x/customer-service.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+											<!-- picture-->
+											<picture class="blue-theme"> 
+												<source type="image/webp" srcset="img/@2x/webp/customer-service-b.webp"/><img src="img/@2x/customer-service-b.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+											<p class="h5 strong mb-0">Берча саволларга керакли жавоблар</p></a></div>
+								</div>
+							</section>
+							<section class="chatsServicesUse section" id="chatsServicesUse">
+								<div class="row aligin-items-center pt-4">
+									<div class="sServiceUse__col col-lg-6 text-center">
+										<!-- picture-->
+										<picture> 
+											<source type="image/webp" srcset="img/@2x/webp/image-services.webp"/><img src="img/@2x/image-services.png" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture-->
+									</div>
+									<div class="col-lg-6 col-xl">
+										<h3>Хизматдан фойдаланиш</h3>
+										<div class="sServiceUse__card-content">
+											<p>Ўзингизга керакли бўлган мутаҳассисни топинг ва керакли санани белгилаб мутахассисниннг бўш вақти учун сўров жўнатинг. Мутаҳассис албатта сиз билан алоқага чаиқади</p>
+											<ul class="group-product">
+												<li><span class="icon-image">
+														<svg class="icon icon-products ">
+															<use xlink:href="img/svg/sprite.svg#products"></use>
+														</svg></span><span>Керакли мутаҳассисни танланг</span></li>
+												<li><span class="icon-image">
+														<svg class="icon icon-wett ">
+															<use xlink:href="img/svg/sprite.svg#wett"></use>
+														</svg></span><span>Вақтни белгиланг ва сўров жўнатинг</span></li>
+												<li><span class="icon-image">
+														<svg class="icon icon-handshake ">
+															<use xlink:href="img/svg/sprite.svg#handshake"></use>
+														</svg></span><span>Мутаҳассис билан онлайн алоқа ўрнатинг</span></li>
+											</ul>
 										</div>
-										<div class="col-auto d-none d-lg-block">
+									</div>
+								</div>
+							</section>
+							<section class="chats-profesions section" id="chats-profesions">
+								<div class="section-title text-center wow animate__fadeInUp" data-wow-delay=".1s">
+									<h2>Бизнинг мутаҳассислари</h2>
+								</div>
+								<div class="profesions__content wow animate__fadeInUp" data-wow-delay=".2s">
+									<div class="field-item">
+										<div class="avatar">
 											<!-- picture-->
 											<picture> 
-												<source type="image/webp" srcset="img/@2x/webp/chat-banner.webp"/><img src="img/@2x/chat-banner.png" alt="" loading="lazy"/>
+												<source type="image/webp" srcset="img/@2x/webp/avatar1.webp"/><img src="img/@2x/avatar1.jpg" alt="" loading="lazy"/>
 											</picture>
 											<!-- /picture-->
 										</div>
+										<div class="wrapper-info">
+											<div class="prof">Ветиринар</div>
+											<div class="name">Александра Алиева
+												<div class="stars">
+													<div class="stars">
+														<svg class="icon icon-star  active">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+														<svg class="icon icon-star  active">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+														<svg class="icon icon-star  active">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+														<svg class="icon icon-star  active">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+												</div>
+												<button class="btn btn-outline-primary">Батафсил</button>
+											</div>
+										</div>
+									</div>
+									<div class="field-item">
+										<div class="avatar">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/avatar2.webp"/><img src="img/@2x/avatar2.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="wrapper-info">
+											<div class="prof">Аграном</div>
+											<div class="name">Собиров Алишер
+												<div class="stars">
+													<div class="stars">
+														<svg class="icon icon-star  active">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+														<svg class="icon icon-star  active">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+														<svg class="icon icon-star  active">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+														<svg class="icon icon-star  active">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+												</div>
+												<button class="btn btn-outline-primary">Батафсил</button>
+											</div>
+										</div>
+									</div>
+									<div class="field-item">
+										<div class="avatar">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/avatar3.webp"/><img src="img/@2x/avatar3.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="wrapper-info">
+											<div class="prof">Агротехник</div>
+											<div class="name">Қаҳрамонов Рустам
+												<div class="stars">
+													<div class="stars">
+														<svg class="icon icon-star  active">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+														<svg class="icon icon-star  active">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+														<svg class="icon icon-star  active">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+														<svg class="icon icon-star  active">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+												</div>
+												<button class="btn btn-outline-primary">Батафсил</button>
+											</div>
+										</div>
+									</div>
+									<div class="field-item">
+										<div class="avatar">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/avatar1.webp"/><img src="img/@2x/avatar1.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="wrapper-info">
+											<div class="prof">Агротехник</div>
+											<div class="name">Алимова Равшана
+												<div class="stars">
+													<div class="stars">
+														<svg class="icon icon-star  active">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+														<svg class="icon icon-star  active">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+														<svg class="icon icon-star  active">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+														<svg class="icon icon-star  active">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+												</div>
+												<button class="btn btn-outline-primary">Батафсил</button>
+											</div>
+										</div>
+									</div>
+									<div class="field-item">
+										<div class="avatar"></div>
+										<div class="wrapper-info">
+											<div class="prof">Зоотехник</div>
+											<div class="name">Жураев Зокир
+												<div class="stars">
+													<div class="stars">
+														<svg class="icon icon-star  active">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+														<svg class="icon icon-star  active">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+														<svg class="icon icon-star  active">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+														<svg class="icon icon-star  active">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+												</div>
+												<button class="btn btn-outline-primary">Батафсил</button>
+											</div>
+										</div>
 									</div>
 								</div>
-							</div>
-							<!-- end sChatCards-->
+							</section>
+							<section class="consultant section" id="consultant">
+								<div class="content-box row">
+									<div class="col">
+										<div class="h2 mb-3">Консултант бўлишни истайсизми?</div>
+										<div class="desc">Бизга қўшилинг ва мижозлар учун ҳизмат кўрсатинг</div>
+										<button class="btn btn-primary">Бошлаш</button>
+									</div>
+									<div class="consultant__col col-auto d-none d-lg-block">
+										<!-- picture-->
+										<picture> 
+											<source type="image/webp" srcset="img/@2x/webp/consultant.webp"/><img src="img/@2x/consultant.png" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture-->
+									</div>
+								</div>
+							</section>
 						</div>
 					</div>
 				</div>
@@ -801,6 +858,101 @@
 			<div class="h4 text-center">Сизнинг аризангиз қабул қилинди</div><br/>
 			<p class="text-secondary">Аризангиз moderator томонидан кўриб чиқилади</p><br/><br/><b></b><a class="btn btn-primary w-190 mx-auto" href="#">Тайёр</a>
 		</div>
+		<div class="modal-win text-center" id="modal-user" style="display: none">
+			<svg class="icon icon-modal-users  w-100px mx-auto">
+				<use xlink:href="img/svg/sprite.svg#modal-users"></use>
+			</svg><br/>
+			<div class="h4 text-center">Сиз мутаҳассис консултант сифатида рўяхатга олиндингиз</div><br/><br/><br/><br/><a class="btn btn-primary w-190 mx-auto" href="#">Кириш</a>
+		</div>
+		<div class="modal-win modal-work text-center" id="modal-work" style="display: none">
+			<div class="h4 text-center">Иш соатигнизни хафта кунлари ва соатларини кўрсатинг</div>
+			<div class="dates-wrapper">
+				<div class="title-wrapper">
+					<div class="row">
+						<div class="title col-6">Ҳафта кунлари</div>
+						<div class="title col-6">Иш соати</div>
+					</div>
+				</div>
+				<div class="date row">
+					<div class="col-6">
+						<label class="custom-input form-check">
+							<input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="check-label">Душанба</span>
+						</label>
+					</div>
+					<div class="from-to col-6">
+						<input type="text" id="mon-from" name="from" placeholder="00:00"/>
+						<input type="text" id="mon-to" name="from" placeholder="00:00"/>
+					</div>
+				</div>
+				<div class="date row">
+					<div class="col-6">
+						<label class="custom-input form-check">
+							<input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="check-label">Сешанба</span>
+						</label>
+					</div>
+					<div class="from-to col-6">
+						<input type="text" id="tue-from" name="from" placeholder="00:00"/>
+						<input type="text" id="tue-to" name="from" placeholder="00:00"/>
+					</div>
+				</div>
+				<div class="date row">
+					<div class="col-6">
+						<label class="custom-input form-check">
+							<input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="check-label">Чоршанба</span>
+						</label>
+					</div>
+					<div class="from-to col-6">
+						<input type="text" id="thu-from" name="from" placeholder="00:00"/>
+						<input type="text" id="thu-to" name="from" placeholder="00:00"/>
+					</div>
+				</div>
+				<div class="date row">
+					<div class="col-6">
+						<label class="custom-input form-check">
+							<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Пайшанба</span>
+						</label>
+					</div>
+					<div class="from-to col-6">
+						<input type="text" id="wen-from" name="from" placeholder="00:00" disabled="disabled"/>
+						<input type="text" id="wen-to" name="from" placeholder="00:00" disabled="disabled"/>
+					</div>
+				</div>
+				<div class="date row">
+					<div class="col-6">
+						<label class="custom-input form-check">
+							<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Жума</span>
+						</label>
+					</div>
+					<div class="from-to col-6">
+						<input type="text" id="fri-from" name="from" placeholder="00:00" disabled="disabled"/>
+						<input type="text" id="fri-to" name="from" placeholder="00:00" disabled="disabled"/>
+					</div>
+				</div>
+				<div class="date row">
+					<div class="col-6">
+						<label class="custom-input form-check">
+							<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Шанба</span>
+						</label>
+					</div>
+					<div class="from-to col-6">
+						<input type="text" id="sut-from" name="from" placeholder="00:00" disabled="disabled"/>
+						<input type="text" id="sut-to" name="from" placeholder="00:00" disabled="disabled"/>
+					</div>
+				</div>
+				<div class="date row">
+					<div class="col-6">
+						<label class="custom-input form-check">
+							<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Якшанба</span>
+						</label>
+					</div>
+					<div class="from-to col-6">
+						<input type="text" id="sunday-from" name="from" placeholder="00:00" disabled="disabled"/>
+						<input type="text" id="sunday-to" name="from" placeholder="00:00" disabled="disabled"/>
+					</div>
+				</div>
+			</div>
+			<div class="wrapper-links"><a class="btn btn-outline-primary w-190 mx-auto" href="#">Орқага</a><a class="btn btn-primary w-190 mx-auto" href="#">Жўнатиш</a></div>
+		</div>
 		<!-- end modals-->
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>
@@ -820,6 +972,8 @@
 		<script src="libs/filepond/filepond.min.js"> </script>
 		<script src="libs/jquery-filepond/filepond.jquery.js"> </script>
 		<script src="libs/select2/js/select2.min.js"> </script>
+		<script src="libs/datepicker/js/datepicker.min.js"></script>
+		<script src="js/maskedinput.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>
