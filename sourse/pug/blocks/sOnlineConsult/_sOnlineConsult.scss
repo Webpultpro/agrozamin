@@ -1,0 +1,59 @@
+.con-items {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  .con-item {
+    display: flex;
+    border: 1px solid #EEEEEE;
+    box-shadow: 4px 8px 32px rgba(0, 0, 0, 0.05);
+    border-radius: 13px;
+    padding: 31px 31px 72px;
+    position: relative;
+    margin-bottom: 24px;
+    width: 48.5%;
+    min-height: 198px;
+    .image {
+      width: 81px;
+      height: 81px;
+      border-radius: 50%;
+      margin-right: 13px;
+      align-items: center;
+      background: url(../img/@1x/icon-user-cabinet.png) no-repeat 50%,#edeff2;
+      background-size: 23px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      img {
+        width: 81px;
+      }
+    }
+    .name {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 31px;
+    }
+    .spec {
+      font-size: 18px;
+      color: #7C7E80;
+      line-height: 23px;
+    }
+    .btn {
+      font-weight: 400;
+      font-size: 14px;
+      padding: 11px;
+      width: 116px;
+      position: absolute;
+      bottom: 31px;
+      right: 31px;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .con-items {
+    justify-content: space-around;
+    .con-item {
+      width: 100%;
+    }
+  }
+}
