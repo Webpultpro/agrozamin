@@ -1,0 +1,44 @@
+mixin sFilesDownload(data)
+    +b.user-files.section#user-files&attributes(attributes)
+        .h3 Бириктирилган файллар
+            .files-wrapper
+                .download-item
+                    .inner-wrapper
+                        +pic("icon-png.png",'',0).icon-download
+                        .name-files
+                            .name Rezume.png
+                            .weight 153KB
+                    a(href="#" download)
+                        +icon("arrow-download")
+                .download-item
+                    .inner-wrapper
+                        +pic("icon-png.png",'',0).icon-download
+                        .name-files
+                            .name Rezume-new-2.png
+                            .weight 153KB
+                    a(href="#" download)
+                        +icon("arrow-download")
+                .download-item
+                    .inner-wrapper
+                        +pic("icon-xls.png",'',0).icon-download
+                        .name-files
+                            .name Маълумотнома.xls
+                            .weight 153KB
+                    a(href="#" download)
+                        +icon("arrow-download")
+                .download-item
+                    .inner-wrapper
+                        +pic("icon-pdf.png",'',0).icon-download
+                        .name-files
+                            .name Стаж маълумотнома.pdf
+                            .weight 153KB
+                    a(href="#" download)
+                        +icon("arrow-download")
+                .download-item
+                    .inner-wrapper
+                        +pic("icon-docs.png",'',0).icon-download
+                        .name-files
+                            .name Стаж малумотлари тўлиқ.doc
+                            .weight 153KB
+                    a(href="#" download)
+                        +icon("arrow-download")

@@ -1,0 +1,89 @@
+.user-files {
+  .h3 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 34px;
+  }
+}
+.files-wrapper {
+  margin-top: 10px;
+}
+.download-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #EEEEEE;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 13px;
+  transition: 0.3s;
+  &:hover {
+    box-shadow: 1px 1px 7px #dfdfdf;
+  }
+  .inner-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  .icon-download {
+    width: 48px;
+    height: 48px;
+    background: #F7F7F7;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+  }
+}
+.name-files {
+  .name {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  .weight {
+    color: #AAAAAA;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+  }
+}
+.files-wrapper {
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #F5F5F5;
+    transition: 0.3s;
+    &:hover {
+      background: black;
+    }
+    .icon {
+      width: 14px;
+      height: auto;
+      color: #b4b4b4;
+    }
+  }
+}
+.chat-card--consultant {
+  .user-files {
+    h3 {
+      color: #999999;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+}
+.sChatCards__block {
+  .user-files {
+    text-align: left;
+    h3 {
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+}
