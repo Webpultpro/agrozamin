@@ -270,6 +270,13 @@
 	font-size: 18px;
 	line-height: 24px;
 }
+.chat-card__biography-link {
+	font-size: 14px;
+	font-weight: 400;
+	padding: 11px;
+	width: 175px;
+	margin-top: 19px;
+}
 
 @include media-breakpoint-down(xl) {
 	.date-body__time {
@@ -286,6 +293,9 @@
 	}
 	.date-body__text {
 		width: 43%;
+	}
+	.chat-card__biography-link {
+		width: 140px;
 	}
 }
 @include media-breakpoint-down(md) {
