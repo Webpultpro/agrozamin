@@ -277,6 +277,48 @@
 	width: 175px;
 	margin-top: 19px;
 }
+.filter-date {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+	.date-field {
+		display: flex;
+		.sChatCards__input-wrap {
+			margin-right: 10px;
+			width: 281px;
+		}
+	}
+	.buttons-field {
+		.btn {
+			font-size: 14px;
+			font-weight: 400;
+			padding: 10px;
+			width: 144px;
+			margin-left: 10px;
+		}
+	}
+	input {
+		color: #7C7E80;
+		font-size: 14px;
+		padding: 7px 10px;
+		border: 1px solid #CED4DA;
+		border-radius: 4px;
+	}
+}
+.datepicker--cell.-selected-,
+.datepicker--cell.-selected-.-current- {
+	border-radius: 50px;
+}
+.datepicker--cell.-focus- {
+	border-radius: 50px;
+}
+.theme-blue .datepicker--cell.-focus- {
+	background: #5488d8;
+}
+.theme-blue .datepicker--cell.-selected-, .theme-blue .datepicker--cell.-selected-.-current- {
+	background: #5488d8;
+}
 
 @include media-breakpoint-down(xl) {
 	.date-body__time {
@@ -284,6 +326,18 @@
 	}
 	.date-body__text {
 		width: 46%;
+	}
+	.filter-date {
+		.date-field {
+			.sChatCards__input-wrap {
+				width: 210px;
+			}
+		}
+		.buttons-field {
+			.btn {
+				width: 132px;
+			}
+		}
 	}
 }
 @include media-breakpoint-down(lg) {
@@ -296,6 +350,18 @@
 	}
 	.chat-card__biography-link {
 		width: 140px;
+	}
+	.filter-date {
+		.date-field {
+			.sChatCards__input-wrap {
+				width: 200px;
+			}
+		}
+		.buttons-field {
+			.btn {
+				width: 125px;
+			}
+		}
 	}
 }
 @include media-breakpoint-down(md) {
@@ -317,5 +383,24 @@
 	.date-body__btn {
 		justify-content: center;
 		width: 100%;
+	}
+	.filter-date {
+		flex-direction: column;
+		.buttons-field {
+			.btn {
+				width: 144px;
+				margin: 0 5px;
+			}
+		}
+	}
+	.date-field {
+		width: 100%;
+		margin-bottom: 10px;
+		display: flex;
+		justify-content: center;
+		input {
+			margin-right: 5px;
+			margin-left: 5px;
+		}
 	}
 }

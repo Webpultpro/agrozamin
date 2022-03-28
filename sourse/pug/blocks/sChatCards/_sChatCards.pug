@@ -124,6 +124,7 @@ mixin sChatCards-1-empty(data)
 	// start sChatCards
 	+b.sChatCards.section#sChatCards&attributes(attributes)
 		+chartCardHor(`1`,`Ветиринар`,`Александра Алиева`,'m').mb-4
+		+sChatCardsFilter()
 		+e.block--empty 
 			+e.center 
 				+icon("file")
@@ -133,6 +134,7 @@ mixin sChatCards-2(data)
 	// start sChatCards
 	+b.sChatCards.section#sChatCards&attributes(attributes)
 		+chartCardHor(`1`,`Ветиринар`,`Александра Алиева`,'m').mb-4
+		+sChatCardsFilter()
 		+e.block
 			+chartCardHor2(`1`,`Видео мулоқот вақти `).text-info
 				.col-auto 
@@ -362,3 +364,11 @@ mixin sChatCardsPage(color='text-info')
 					div 11:30-12:00
 			block
 
+mixin sChatCardsFilter()
+	.filter-date
+		.date-field
+			+input('01.01.2000','text','').datepicker-here
+			+input('01.01.2000','text','')(data-position='bottom right').datepicker-here
+		.buttons-field
+			a.btn.btn-primary Қидирув
+			a.btn.btn-outline-primary Қайта ўрнатиш
