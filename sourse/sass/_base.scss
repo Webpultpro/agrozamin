@@ -799,7 +799,7 @@ iframe {
 	justify-content: space-between;
 	// border-bottom: 1px solid #EEEEEE;
 	// padding-bottom: 32px;
-	margin-bottom: 32px;
+	margin-bottom: 0;
 	flex-wrap: wrap;
 	&__hr{
 		width: calc(100% + 4rem);
@@ -852,9 +852,9 @@ iframe {
 
 .date-body{
 	@include media-breakpoint-up(lg) {
-			columns: 2;
+			columns: 1;
 			position: relative;
-			&::before{
+			/*&::before{
 				content: '';
 				position: absolute;
 				left: 50%;
@@ -862,7 +862,7 @@ iframe {
 				width: 1px;
 				height: calc(100% - 20px);
 				background-color: #EEEEEE;	
-			}
+			}*/
 	}
 
 	.btn{
@@ -894,7 +894,7 @@ iframe {
 	}
 	&__time{
 		@include media-breakpoint-down(sm) {
-			max-width: calc(130px + var(--bs-gutter-x));
+			//max-width: calc(130px + var(--bs-gutter-x));
 		}
 	}
 	.alert{

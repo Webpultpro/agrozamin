@@ -254,8 +254,7 @@ mixin sChatCards-47(data)
 					+e.img-wrap.bg-wrap
 						+icon('user')
 						+pic(`avatar-${1}.png`,'bg',0).picture-bg
-					+e.biography-link(href="#") Батафсил
-						+icon(`chevron-right`)
+					+e.biography-link.btn.btn-primary(href="#") Батафсил
 				.col
 					.row
 						
@@ -295,35 +294,40 @@ mixin sChatCards-47(data)
 				mixin item(t, a, i)
 					+e.line 
 						.row
-							+e.time.col= t
-							+e.col.col-md-auto.col
-								if block 
-									block 
-								else
+							+e.time.col-2= t
+							if block
+								block
+							else
+								+e.btn.col-4
 									a.btn.btn-outline-primary(href="#") Видео суров жонатиш
-				+item(`16:00 - 16:30`,'Видео мулоқот вақти ')
-					a.btn.btn-primary(href="#") 
-						+icon('camera')
-						| Видеони бошлаш
-				+item(`15:30 - 16:00`,'Қолган вақти: 27 дақиқа', 'clock')
-					.text-success Сўров жўнатилган
-					//- a.btn.btn-secondary-light(href="#")  Сўров жўнатилган
-				+item(`11:30 - 12:00`,'Қўнғироқ якунланган')
-					.text-info Қолган вақти: 27 дақиқа
-				+item(`12:30 - 13:00`,'Бекор қилинган')
-					.text-info Сўров қабул қилинди
 				+item(`16:00 - 16:30`)
-					.text-orange Қўнғироқ якунланган
-				+item(`12:30 - 13:00`,'Бекор қилинган')
-					.text-danger Бекор қилинган
-				+item(`12:30 - 13:00`,'Бекор қилинган')
-					a.btn.btn-outline-primary(href="#")  Видео суров жонатиш
-				+item(`12:30 - 13:00`,'Бекор қилинган')
-					a.btn.btn-outline-primary(href="#")  Видео суров жонатиш
-				+item(`12:30 - 13:00`,'Бекор қилинган')
-					a.btn.btn-outline-primary(href="#")  Видео суров жонатиш
-				+item(`12:30 - 13:00`,'Бекор қилинган')
-					a.btn.btn-outline-primary(href="#")  Видео суров жонатиш
+					+e.text.col-6.text-info Видео мулоқот вақти
+					+e.btn.col-4
+						a.btn.btn-primary(href="#")
+							+icon('camera')
+							| Видеони бошлаш
+				+item(`12:30 - 13:00`)
+					+e.text.col-6.text-danger Бекор қилинган
+				+item(`15:30 - 16:00`)
+					+e.text.col-6.text-success Сўров жўнатилган
+				+item(`11:30 - 12:00`)
+					+e.text.col-6.text-info Қолган вақти: 27 дақиқа
+					+e.btn.col-4
+						a.btn.btn-outline-primary(href="#")
+							+icon("icon-convert-button")
+							| Хабар жонатиш
+				+item(`12:30 - 13:00`)
+					+e.text.col-6.text-orange Қўнғироқ якунланган
+					+e.btn.col-4
+						a.btn.btn-outline-primary(href="#") Батафсил
+				+item(`16:00 - 16:30`)
+					+e.text.col-6.text-orange Қўнғироқ якунланган
+					+e.btn.col-4
+						a.btn.btn-outline-primary(href="#") Батафсил
+				+item(`12:30 - 13:00`)
+					+e.text.col-6
+					+e.btn.col-4
+						a.btn.btn-outline-primary(href="#") Видео суров жонатиш
 		+form-wrap.px-0.bsh-0.mw-100
 			+input('Изҳингизни қолдиринг','textarea')
 			.text-end
