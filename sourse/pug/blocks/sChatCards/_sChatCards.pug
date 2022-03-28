@@ -1,3 +1,4 @@
+include ../sFilesDownload/_sFilesDownload.pug
 mixin chartCard(i,t,p, b)
 	+b.chat-card&attributes(attributes) 
 		+e.row.row
@@ -184,14 +185,13 @@ mixin sChatCards-edit(data)
 		+e.block
 			+form-wrap 
 				+b.chat-card--chor.--edit
-					.row.gx-3
-						.col-lg.col-auto
+					.jc.row.gx-3
+						.avatar-area.col-lg.col-auto
 							+e.img-wrap.bg-wrap
 								+icon('user')
 								//- if i
-								+pic(`avatar-1.png`,'bg',0).picture-bg
-						.col-lg-auto.col
-							.row.g-3
+								+pic(`avatar-2.png`,'bg',0).picture-bg
+							.buttons.row.g-3
 								.col-auto
 									button.btn.btn-outline-secondary2(type="button") 
 										+icon("pen")
@@ -200,46 +200,83 @@ mixin sChatCards-edit(data)
 									button.btn.btn-outline-secondary2(type="button") 
 										+icon("delete")
 										| Ўчириш
-				+input("",'text','Исм *')
-				+input("",'text','Фамилия *')
-				+input("",'text','Мутаҳасислиги')
-				.text-center
-					button.btn.btn-primary(type="submit") Сақлаш
-
-	// end sChatCards
-
-
-
-	
-
-
-	
-mixin sChatCards-edit(data)
-	// start sChatCards
-	+b.sChatCards.section#sChatCards&attributes(attributes) 
-		+e.block
-			+form-wrap 
-				+b.chat-card--chor.--edit
-					.row.gx-3
-						.col-lg.col-auto
-							+e.img-wrap.bg-wrap
-								+icon('user')
-								//- if i
-								+pic(`avatar-1.png`,'bg',0).picture-bg
-						.col-lg-auto.col
-							.row.g-3
-								.col-auto
-									button.btn.btn-outline-secondary2(type="button") 
-										+icon("pen")
-										| Янги расм юклаш
-								.col-auto
-									button.btn.btn-outline-secondary2(type="button") 
-										+icon("delete")
-										| Ўчириш
-				+input("",'text','Исм *')
-				+input("",'text','Фамилия *')
-				+input("",'text','Мутаҳасислиги')
-				.text-center
+						.button-user.col-lg-auto.col
+							button.btn.btn-primary
+								+icon("icon-user-big")
+								| Визитка қўшиш
+				.webform-chat.row
+					.col-lg-6
+						+input("",'text','Исм *')
+						+input("",'text','Фамилия *')
+						+input("",'text','Мутаҳасислиги')
+					.col-lg-6
+						+input("","textarea","Биография")
+				.dates-wrapper
+					.title-wrapper
+						.row
+							.title.col-6 Ҳафта кунлари
+							.title.col-6 Иш соати
+					.date.row
+						.col-6
+							label.custom-input.form-check
+								input.custom-input__input.form-check-input(name="checkbox" type="checkbox" checked)
+								span.check-label Душанба
+						.from-to.col-6
+							input(type="text" id="mon-from" name="from" placeholder="00:00")
+							input(type="text" id="mon-to" name="from" placeholder="00:00")
+					.date.row
+						.col-6
+							label.custom-input.form-check
+								input.custom-input__input.form-check-input(name="checkbox" type="checkbox" checked)
+								span.check-label Сешанба
+						.from-to.col-6
+							input(type="text" id="tue-from" name="from" placeholder="00:00")
+							input(type="text" id="tue-to" name="from" placeholder="00:00")
+					.date.row
+						.col-6
+							label.custom-input.form-check
+								input.custom-input__input.form-check-input(name="checkbox" type="checkbox" checked)
+								span.check-label Чоршанба
+						.from-to.col-6
+							input(type="text" id="thu-from" name="from" placeholder="00:00")
+							input(type="text" id="thu-to" name="from" placeholder="00:00")
+					.date.row
+						.col-6
+							label.custom-input.form-check
+								input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
+								span.check-label Пайшанба
+						.from-to.col-6
+							input(type="text" id="wen-from" name="from" placeholder="00:00" disabled)
+							input(type="text" id="wen-to" name="from" placeholder="00:00" disabled)
+					.date.row
+						.col-6
+							label.custom-input.form-check
+								input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
+								span.check-label Жума
+						.from-to.col-6
+							input(type="text" id="fri-from" name="from" placeholder="00:00" disabled)
+							input(type="text" id="fri-to" name="from" placeholder="00:00" disabled)
+					.date.row
+						.col-6
+							label.custom-input.form-check
+								input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
+								span.check-label Шанба
+						.from-to.col-6
+							input(type="text" id="sut-from" name="from" placeholder="00:00" disabled)
+							input(type="text" id="sut-to" name="from" placeholder="00:00" disabled)
+					.date.row
+						.col-6
+							label.custom-input.form-check
+								input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
+								span.check-label Якшанба
+						.from-to.col-6
+							input(type="text" id="sunday-from" name="from" placeholder="00:00" disabled)
+							input(type="text" id="sunday-to" name="from" placeholder="00:00" disabled)
+				+sFilesDownloadArchive()
+				.file-download.form-wrap__input-wrap.form-group
+					label Файл бириктириш
+					input.form-wrap__input.form-control(name="file" type="file")
+				.text-right
 					button.btn.btn-primary(type="submit") Сақлаш
 
 	// end sChatCards

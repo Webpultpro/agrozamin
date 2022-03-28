@@ -326,7 +326,100 @@
 		width: 188px;
 	}
 }
+.chat-card--consultant {
+	max-width: 100%;
+}
+.sChatCards__block {
+	.dates-wrapper {
+		margin-top: 18px;
+	}
+	.title-wrapper {
+		border-bottom: 1px solid #E0E0E0;
+		padding-bottom: 13px;
+		margin-bottom: 17px;
+	}
+	.from-to {
+		justify-content: flex-end;
+		input {
+			margin-left: 10px;
+		}
+	}
+	.user-files {
+		text-align: left;
+		h3 {
+			font-weight: 500;
+			font-size: 14px;
+		}
+	}
+	.files-wrapper {
+		a {
+			margin-left: 10px;
+		}
+	}
+	.file-download {
+		margin-top: 30px;
+		label {
+			font-weight: 500;
+		}
+	}
+	.form-wrap {
+		max-width: 100%;
+	}
+	.text-right {
+		text-align: right;
+		margin-top: 85px;
+		button {
+			font-size: 14px;
+			font-weight: 400;
+			padding: 13px;
+			width: 188px;
+		}
+	}
+}
+.chat-card--edit {
+	.avatar-area {
+		display: flex;
+	}
+	.buttons  {
+		margin-left: 33px;
+		button  {
+			font-size: 14px;
+			font-weight: 400;
+		}
+	}
+	.button-user {
+		button  {
+			font-size: 14px;
+			font-weight: 400;
+			display: flex;
+			align-items: center;
+			padding: 11px 20px;
+			.icon {
+				margin-right: 10px;
+				font-size: 18px;
+				margin-top: 4px;
+			}
+		}
+	}
+}
+.webform-chat {
+	textarea {
+		height: 185px;
+	}
+}
 
+@include media-breakpoint-up(xl) {
+	.chat-card--consultant {
+		margin-left: 0;
+	}
+}
+@include media-breakpoint-up(lg) {
+	.webform-chat {
+		.form-wrap__input-wrap {
+			margin-bottom: 5px;
+		}
+	}
+}
 @include media-breakpoint-down(xl) {
 	.date-body__time {
 		width: 20%;
@@ -348,6 +441,22 @@
 	}
 }
 @include media-breakpoint-down(lg) {
+	.chat-card--edit {
+		.button-user {
+			button {
+				justify-content: center;
+				.icon {
+					display: none;
+				}
+			}
+		}
+		.avatar-area {
+			align-items: center;
+		}
+		.jc {
+			align-items: center;
+		}
+	}
 	.date-body__time {
 		width: 23%;
 		font-size: 20px;
@@ -372,6 +481,19 @@
 	}
 }
 @include media-breakpoint-down(md) {
+	.chat-card--edit {
+		.avatar-area {
+			flex-direction: column;
+			align-items: center;
+		}
+		.jc {
+			justify-content: center;
+			flex-direction: column;
+		}
+		.buttons {
+			margin: 5px 0 15px;
+		}
+	}
 	.date-body__time {
 		text-align: center;
 		width: 100%;
