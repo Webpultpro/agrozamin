@@ -319,6 +319,13 @@
 .theme-blue .datepicker--cell.-selected-, .theme-blue .datepicker--cell.-selected-.-current- {
 	background: #5488d8;
 }
+.chats-button {
+	display: flex;
+	justify-content: flex-end;
+	a {
+		width: 188px;
+	}
+}
 
 @include media-breakpoint-down(xl) {
 	.date-body__time {
