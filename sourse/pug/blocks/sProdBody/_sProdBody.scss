@@ -241,6 +241,13 @@
 		font-weight: 400;
 	}
 }
+@include media-breakpoint-down(xl) {
+	.sProdBody {
+		h1 {
+			width: 54%;
+		}
+	}
+}
 @include media-breakpoint-down(lg) {
 	.button-wrapper {
 		button {
