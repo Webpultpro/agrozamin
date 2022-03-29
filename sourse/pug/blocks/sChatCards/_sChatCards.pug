@@ -404,8 +404,8 @@ mixin sChatCardsPage(color='text-info')
 mixin sChatCardsFilter()
 	.filter-date
 		.date-field
-			+input('01.01.2000','text','').datepicker-here
-			+input('01.01.2000','text','')(data-position='bottom right').datepicker-here
+			input(type='text' placeholder="01.01.2000").datepicker-here
+			input(type='text' placeholder="01.01.2000" data-position="bottom right").datepicker-here
 		.buttons-field
 			a.btn.btn-primary Қидирув
 			a.btn.btn-outline-primary Қайта ўрнатиш

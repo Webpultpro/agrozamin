@@ -304,6 +304,8 @@
 		padding: 7px 10px;
 		border: 1px solid #CED4DA;
 		border-radius: 4px;
+		margin-right: 10px;
+		width: 281px;
 	}
 }
 .datepicker--cell.-selected-,
@@ -433,6 +435,9 @@
 				width: 210px;
 			}
 		}
+		input {
+			width: 210px;
+		}
 		.buttons-field {
 			.btn {
 				width: 132px;
@@ -472,6 +477,9 @@
 			.sChatCards__input-wrap {
 				width: 200px;
 			}
+		}
+		input {
+			width: 200px;
 		}
 		.buttons-field {
 			.btn {
