@@ -340,7 +340,7 @@
   display: flex;
   min-height: 188px;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   overflow: hidden;
   border-radius: 10px;
   padding: 19px;
@@ -361,6 +361,9 @@
     width: max-content;
     padding: 11px 40px;
     font-size: 14px;
+    position: absolute;
+    bottom: 19px;
+    left: 19px;
   }
   h2, .h2 {
     position: relative;
@@ -473,13 +476,25 @@
 @include media-breakpoint-down(md) {
   .banner {
     align-items: center;
-    text-align: center;
+    text-align: left;
+    justify-content: space-between;
+    picture {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: -156px;
+      bottom: 0;
+    }
     h2 {
       width: 100%;
+      text-align: center;
     }
     img {
       width: auto;
       height: 100%;
+    }
+    .btn {
+      position: static;
     }
   }
   .vacancy-user {

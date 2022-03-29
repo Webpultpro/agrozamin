@@ -643,14 +643,8 @@
 
 @include media-breakpoint-down(md) {
 	.banner {
-		align-items: center;
-		text-align: center;
 		h2 {
 			text-shadow: 1px 1px 3px #fff;
-		}
-		img {
-			width: auto;
-			height: 100%;
 		}
 	}
 }
