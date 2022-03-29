@@ -76,6 +76,7 @@ function copyLibs() {
             './babel*/*',
             './gulp*',
             'swiper/components',
+            'air-datepicker/',
             'swiper/angular',
             'swiper/react',
             'swiper/svelte',
