@@ -26,6 +26,10 @@
     background: #EAF3FA;
     padding: 30px 35px 0;
     border-radius: 11px;
+    position: relative;
+    > .col {
+      padding-bottom: 100px;
+    }
     h2, .h2 {
       font-weight: 500;
       font-size: 33px;
@@ -37,6 +41,9 @@
     }
     .btn {
       padding: 17px 59px;
+      position: absolute;
+      left: 45px;
+      bottom: 40px;
     }
   }
 }
@@ -410,7 +417,7 @@
     .group-product {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
     }
   }
   .chats-profesions {
@@ -433,7 +440,10 @@
       margin-bottom: 15px;
     }
     .row {
-      justify-content: space-around;
+      justify-content: flex-start;
+    }
+    picture {
+      justify-content: flex-start;
     }
   }
   .chatsServicesUse {
@@ -455,11 +465,21 @@
         line-height: 34px;
       }
       .content-box {
+        .consultant__col {
+          width: 50%;
+          position: relative;
+          picture {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+          }
+        }
         .desc {
           margin-bottom: 25px;
         }
         .btn {
-          margin-bottom: 28px;
+          margin-bottom: 0;
         }
       }
     }
@@ -468,7 +488,12 @@
 @include media-breakpoint-down(lg) {
   .sServices {
     .row {
-      justify-content: space-around;
+      justify-content: flex-start;
+    }
+  }
+  .sServices__item {
+    picture {
+      justify-content: flex-start;
     }
   }
   .sServiceUse {
@@ -482,11 +507,24 @@
       max-width: 100%;
     }
   }
+  .sPersonalAccount {
+    .consultant {
+      h2 {
+        font-size: 30px;
+        line-height: 34px;
+      }
+      .content-box {
+        .btn {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
   .sServiceUse__card-content {
     .group-product {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
     }
   }
   .profesions__content {
@@ -505,12 +543,13 @@
     .content-box {
       padding: 30px;
       text-align: center;
+      > .col {
+        padding-bottom: 0;
+      }
+      .btn {
+        position: static;
+      }
     }
-  }
-  .chatsSection,
-  .chatsServices,
-  .chatsServicesUse {
-    display: none;
   }
   .chats-profesions {
     .profesions__content {
@@ -531,6 +570,9 @@
   }
 }
 @include media-breakpoint-down(md) {
+  .sServices__item--link {
+    justify-content: flex-start;
+  }
   .sConsultProject {
     .consult-title {
       p {
@@ -581,6 +623,22 @@
         width: 100%;
         justify-content: center;
       }
+    }
+  }
+  .chatsServices {
+    .row {
+      flex-direction: column;
+    }
+    .col-lg-4 {
+      width: 100%;
+    }
+    picture {
+      width: 45px;
+    }
+  }
+  .sServices {
+    .container {
+      padding: 0;
     }
   }
 }
