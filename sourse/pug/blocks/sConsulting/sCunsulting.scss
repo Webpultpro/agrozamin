@@ -106,9 +106,6 @@
   align-items: center;
   border-radius: 10px;
   padding: 10px;
-  &:hover {
-    box-shadow: 0 11px 27px rgba(0, 0, 0, .1);
-  }
 }
 .sServices__item {
   .icon {
@@ -639,6 +636,11 @@
   .sServices {
     .container {
       padding: 0;
+    }
+  }
+  .sServices__item {
+    p {
+      width: 100%;
     }
   }
 }
