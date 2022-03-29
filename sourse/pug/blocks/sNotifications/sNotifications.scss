@@ -7,6 +7,10 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, .1);
       border-radius: 4px;
       margin-bottom: 10px;
+      transition: 0.3s;
+      &:hover {
+        background-color: #ebe8e8;
+      }
     }
   }
 }
@@ -21,6 +25,10 @@
     border-bottom: 1px solid #E9E9E9;
     width: 464px;
     position: relative;
+    transition: 0.3s;
+    &:hover {
+      background-color: #ebe8e8;
+    }
   }
   .category-icon {
     margin: 17px 12px;
