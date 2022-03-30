@@ -961,13 +961,20 @@ $(document).ready(function(){
 
 /*start checkboxOpenDate*/
 $(document).ready(function(){
-	$(".date .form-check-input").on('change', function(){
+	$(".date .form-check-input").each(function(){
 		if($(this).is(":checked")){
-			console.log();
-			$('.from-to input',$(this).parents()[2]).prop("disabled",true);
+			$('.from-to input',$(this).parents()[2]).prop("disabled",false);
 		}
 		else{
+			$('.from-to input',$(this).parents()[2]).prop("disabled",true);
+		}
+	});
+	$(".date .form-check-input").on('change', function(){
+		if($(this).is(":checked")){
 			$('.from-to input',$(this).parents()[2]).prop("disabled",false);
+		}
+		else{
+			$('.from-to input',$(this).parents()[2]).prop("disabled",true);
 		}
 	});
 });
