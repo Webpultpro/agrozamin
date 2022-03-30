@@ -92,11 +92,28 @@
   }
 }
 .sChatCards__block {
+  .download-item {
+    .inner-wrapper {
+      width: calc(100% - 115px);
+    }
+  }
+  .name-files {
+    width: calc(100% - 78px);
+  }
   .user-files {
     text-align: left;
     h3 {
       font-weight: 500;
       font-size: 14px;
+    }
+  }
+}
+@include media-breakpoint-down(sm) {
+  .sChatCards__block {
+    .download-item {
+      .inner-wrapper {
+        width: calc(100% - 57px);
+      }
     }
   }
 }
