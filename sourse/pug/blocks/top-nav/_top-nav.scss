@@ -545,11 +545,11 @@
 	li {
 	}
 	.sub-menu-wrap {
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(lg) {
 			flex-direction: column;
 			display: flex;
 		}
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(lg) {
 			position: fixed;
 			transform: translateX(-100%);
 			left: 0;
@@ -567,9 +567,10 @@
 		flex-grow: 1;
 
 		// border-radius: 0px 0px 12px 0px;
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(lg) {
 			height: 100vh;
 			padding-bottom: 50px;
+			max-height: 100vh;
 		}
 		@include media-breakpoint-up(xl) {
 			// width: rem(268);
@@ -581,14 +582,14 @@
 			// width: rem(368);
 		}
 
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(lg) {
 			min-height: 100%;
 			width: rem(228);
 			display: none;
 		}
 		// background-color: #fff;
 		.sub-menu {
-			@include media-breakpoint-up(md) {
+			@include media-breakpoint-up(lg) {
 				background: #f8fbff;
 				flex-grow: 1;
 			}
@@ -597,11 +598,11 @@
 		}
 
 		& > li > a {
-			@include media-breakpoint-up(md) {
+			@include media-breakpoint-up(lg) {
 				// border-bottom: 1px solid #E6E6E6;
 			}
 		}
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(lg) {
 			display: none;
 		}
 		a {
@@ -614,7 +615,7 @@
 		}
 
 		ul {
-			@include media-breakpoint-down(md) {
+			@include media-breakpoint-down(lg) {
 				// height: 100vh;
 				// overflow-y: auto;
 				// overflow-x: hidden;
@@ -625,7 +626,7 @@
 			@include media-breakpoint-up(lg) {
 				// width: rem(268);
 			}
-			@include media-breakpoint-up(md) {
+			@include media-breakpoint-up(lg) {
 				position: absolute;
 				left: 100%;
 				min-height: 100%;
@@ -638,7 +639,7 @@
 		@include media-breakpoint-up(lg) {
 			// --count: 3;
 		}
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(lg) {
 			// display: flex;
 			// flex-wrap: wrap;
 			// --count: 2;
@@ -675,7 +676,7 @@
 			}
 		}
 		> li {
-			@include media-breakpoint-up(md) {
+			@include media-breakpoint-up(lg) {
 				display: block;
 				width: calc(100% / var(--count));
 				// display: inline-block;
@@ -707,14 +708,14 @@
 		}
 	}
 }
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
 	.sub-menu-wrap {
 		background-color: #fff;
 	}
 }
 li.active {
 	& > .sub-menu-wrap {
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(lg) {
 			transform: translateX(0);
 		}
 	}
