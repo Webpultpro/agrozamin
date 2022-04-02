@@ -1,0 +1,59 @@
+.sMobileStore {
+  background: #F5F5F5;
+  padding: 0;
+  .row {
+    display: flex;
+    align-items: center;
+  }
+  .app-links-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 85px;
+    a {
+      margin-right: 15px;
+      filter: drop-shadow(2px 3px 4px transparent);
+      transition: 0.3s;
+      &:hover {
+        filter: drop-shadow(2px 3px 4px black);
+      }
+    }
+  }
+  h2 {
+    font-weight: 700;
+  }
+  p {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .sMobileStore {
+    .image {
+      height: 413px;
+    }
+    .info {
+      h2 {
+        font-size: 45px;
+        line-height: 44px;
+      }
+    }
+  }
+}
+@include media-breakpoint-down(lg) {
+  .sMobileStore {
+    padding: var(--sPT) 0 var(--sPB) 0;
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+    .app-links-wrapper {
+      margin-top: 30px;
+      justify-content: center;
+    }
+  }
+}

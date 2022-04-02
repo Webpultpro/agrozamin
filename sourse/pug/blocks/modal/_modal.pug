@@ -323,4 +323,19 @@ mixin modal()
 		.wrapper-links
 			a.btn.btn-outline-primary.w-190.mx-auto(href="#") Орқага
 			a.btn.btn-primary.w-190.mx-auto(href="#") Жўнатиш
+
+	+b.modal-win.modal-video.text-center(id="modal-video" class=" " style="display: none" )
+		.h4.text-center Керакли қурилмани танланг
+		.content-wrapper
+			+input('По умолчанию - Микрофон(HD pro Webcamc920','select',"")
+			.progress-wrap
+				span По умолчанию - Микрофон(HD pro Webcamc920)
+				.progress
+					.progress-bar(role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100")
+			+input('HD pro Webcam c920','select',"")
+			.video-wrapper
+				+b.item-video(href="https://www.youtube.com/watch?v=KP09uMK-tho" data-fancybox)
+					+e.DIV.img-wrap.bg-wrap
+						+pic(`speaker_webcam.jpg`,'bg',0).picture-bg
+			button.btn.btn-primary ok
 	// end modals

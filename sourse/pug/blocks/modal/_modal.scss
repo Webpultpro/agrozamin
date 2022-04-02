@@ -72,6 +72,48 @@
 
 .modal-win {
 	// display: block;
+	&.modal-video {
+		padding: 24px;
+		width: 487px;
+		h4 {
+			margin-bottom: 21px;
+		}
+		.progress, .progress-bar {
+			height: 25px;
+		}
+		.progress-wrap {
+			text-align: left;
+			margin-top: 13px;
+			margin-bottom: 21px;
+			span {
+				color: #AAAAAA;
+			}
+		}
+		select {
+			color: #AAAAAA;
+			border: 1px solid #CED4DA;
+			border-radius: 4px;
+		}
+		.video-wrapper {
+			margin-top: 21px;
+			.item-video__img-wrap {
+				border-radius: 4px;
+				background: transparent;
+				picture {
+					opacity: 1;
+				}
+				&:after {
+					content: none;
+				}
+			}
+		}
+		.btn {
+			font-weight: 400;
+			font-size: 16px;
+			width: 190px;
+			text-transform: uppercase;
+		}
+	}
 	&.modal-work {
 		padding: 24px 47px;
 	}
@@ -211,6 +253,9 @@ a {
 	.modal-win {
 		&.modal-work {
 			padding: 24px 40px;
+		}
+		&.modal-video {
+			width: 100%;
 		}
 	}
 	.dates-wrapper {

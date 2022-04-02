@@ -1,5 +1,5 @@
 mixin sConsulting(data)
-    +b.SECTION.sConsultProject.section#sAboutProject&attributes(attributes)
+    div.sConsultProject.section#sAboutProject&attributes(attributes)
         .container
             .sConsultProject__banner.bg-wrap.wow.animate__fadeIn(data-wow-delay=".1s")
                 +pic("consulting.jpg", 'bg', 0).picture-bg
@@ -15,17 +15,17 @@ mixin sConsulting(data)
                 h2 Хизмат афзалликлари
             .row
                 .col-md-6.col-lg-4
-                    .sServices__item.sServices__item--link.wow.animate__fadeInUp(href="#" data-wow-delay=".2s")
+                    .sServices__item.sServices__item--link.wow.animate__fadeInUp(data-wow-delay=".2s")
                         +pic("full-time-job.png", '', 0).green-theme
                         +pic("full-time-job-b.png", '', 0).blue-theme
                         p.h5.strong.mb-0 Исталган вақтда керакли консултант хизмати
                 .col-md-6.col-lg-4
-                    .sServices__item.sServices__item--link.wow.animate__fadeInUp(href="#" data-wow-delay=".3s")
+                    .sServices__item.sServices__item--link.wow.animate__fadeInUp(data-wow-delay=".3s")
                         +pic("doctor.png", '', 0).green-theme
                         +pic("doctor-b.png", '', 0).blue-theme
                         p.h5.strong.mb-0 Профессионал мутаҳасислар
                 .col-md-6.col-lg-4
-                    .sServices__item.sServices__item--link.wow.animate__fadeInUp(href="#" data-wow-delay=".4s")
+                    .sServices__item.sServices__item--link.wow.animate__fadeInUp(data-wow-delay=".4s")
                         +pic("customer-service.png", '', 0).green-theme
                         +pic("customer-service-b.png", '', 0).blue-theme
                         p.h5.strong.mb-0 Берча саволларга керакли жавоблар
@@ -111,7 +111,7 @@ mixin sConsulting(data)
                                 +stars
                             button.btn.btn-outline-primary Батафсил
 
-    +b.SECTION.consultant.section#consultant&attributes(attributes)
+    div.consultant.section#consultant&attributes(attributes)
         .container
             .content-box.row
                 .col
@@ -122,14 +122,14 @@ mixin sConsulting(data)
                     +pic("consultant.png", '', 0)
 
 mixin sChatsSection(data)
-    +b.SECTION.chatsSection.section#chatsSection&attributes(attributes)
+    div.SECTION.chatsSection.section#chatsSection&attributes(attributes)
         .sConsultProject__banner.bg-wrap.wow.animate__fadeIn(data-wow-delay=".1s")
             +pic("consulting.jpg", 'bg', 0).picture-bg
             .consult-title.text-center
                 .h1 Онлайн консультант
                 p Агро бизнес учун қулай бўлган ягона махсус сервис
                 .text-center
-                    .btn.btn-primary.w-190(type="submit") Жўнатиш
+                    a.btn.btn-primary.w-190 Жўнатиш
 
     +b.SECTION.chatsServices.section#chatsServices&attributes(attributes)
         .section-title.text-center.wow.animate__fadeInUp(data-wow-delay=".1s")
@@ -222,7 +222,7 @@ mixin sChatsSection(data)
                             +stars
                         button.btn.btn-outline-primary Батафсил
 
-    +b.SECTION.consultant.section#consultant&attributes(attributes)
+    div.SECTION.consultant.section#consultant&attributes(attributes)
         .content-box.row
             .col
                 .h2.mb-3 Консултант бўлишни истайсизми?

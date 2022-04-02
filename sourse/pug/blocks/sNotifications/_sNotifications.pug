@@ -1,5 +1,5 @@
 mixin sNotifications(data)
-    +b.SECTION.sNotifications.section#sNotifications&attributes(attributes)
+    div.sNotifications.section#sNotifications&attributes(attributes)
         .container
             .video-requests
                 .user-dropdown
@@ -11,7 +11,7 @@ mixin sNotifications(data)
                             p.date
                                 +icon("icon-clock")
                                 span 04.01.2022   11:00 - 11:30
-                        button(close, type="button").close
+                        span.close
                             +icon("close")
                     a(href="#").category-image
                         .category-icon.blue
@@ -24,7 +24,7 @@ mixin sNotifications(data)
                         button(type="button").btn.btn-primary
                             +icon("video")
                             span Бошлаш
-                        button(close, type="button").close
+                        span.close
                             +icon("close")
                     a(href="#").category-image
                         .category-icon.red
@@ -34,7 +34,7 @@ mixin sNotifications(data)
                             p.date
                                 +icon("icon-clock")
                                 span 04.01.2022   11:00 - 11:30
-                        button(close, type="button").close
+                        span.close
                             +icon("close")
                     a(href="#").category-image
                         .category-icon.green
@@ -42,7 +42,7 @@ mixin sNotifications(data)
                         .desc-wrapper
                             p.title Сўровингиз қабул қилинди
                             p.desc Қизил лавлаги лавлаги Кабачок Аймаран Қизил лавлаги лавлаги Кабачок Аймаран
-                        button(close, type="button").close
+                        span.close
                             +icon("close")
                     a(href="#").category-image
                         .category-icon.red
@@ -58,7 +58,7 @@ mixin sNotifications(data)
                         .desc-wrapper
                             p.title Янги сўров
                             p.desc Қизил лавлаги лавлаги Кабачок Аймаран Қизил лавлаги лавлаги Кабачок Аймаран
-                        button(close, type="button").close
+                        span.close
                             +icon("close")
                     a(href="#").category-image
                         .category-icon.green
@@ -66,7 +66,7 @@ mixin sNotifications(data)
                         .desc-wrapper
                             p.title Сўровингиз қабул қилинди
                             p.desc Онлайн консултант
-                        button(close, type="button").close
+                        span.close
                             +icon("close")
                     a(href="#").category-image
                         .category-icon.green
@@ -74,5 +74,5 @@ mixin sNotifications(data)
                         .desc-wrapper
                             p.title Сўровингиз қабул қилинди
                             p.desc Шомаҳмудов Егамберди
-                        button(close, type="button").close
+                        span.close
                             +icon("close")

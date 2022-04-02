@@ -3,7 +3,7 @@ mixin aboutbtn()
 		+e.btn(href="#form") Сўровнома қолдириш
 mixin sAboutProjectBody(bg='about-project.jpg')
 	// start sAboutProject
-	+b.SECTION.sAboutProject.section#sAboutProject&attributes(attributes)
+	div.sAboutProject.section#sAboutProject&attributes(attributes)
 		.container
 			+e.banner.bg-wrap(class="wow animate__fadeIn" data-wow-delay=".1s")
 				+pic(`about-project.jpg`,'bg', 0).picture-bg

@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="uz">
+	<head>
+		<meta charset="utf-8">
+		<title>Онлайн консултант</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=414,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no">
+		<script>
+			let viewport = document.querySelector("meta[name=viewport]");
+			var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+			if (is_safari) {
+				//- alert(navigator.userAgent);
+				function w() {
+					this.outerWidth > 414 
+						? viewport.content = "width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" 
+						:  viewport.content = "width=414,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no" 
+					//- alert(this.outerWidth + ', '+  viewport.content);
+				}
+				 w();
+				window.addEventListener('resize', () => { 
+				 w();
+				}, { passive: true });
+			}
+		</script>
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preload" href="fonts/Ubuntu-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Ubuntu-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Ubuntu-Bold.woff2" as="font" type="font/woff2" crossorigin>
+		<link href="libs/priority-nav/priority-nav-core.css" rel="stylesheet"/>
+		<link href="libs/filepond/filepond.min.css" rel="stylesheet"/>
+		<link href="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css" rel="stylesheet"/>
+		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/>
+		<link href="libs/animate.css/animate.min.css" rel="stylesheet"/>
+		<link href="libs/jquery-asPieProgress/css/asPieProgress.min.css" rel="stylesheet"/>
+		<link href="libs/select2/css/select2.min.css" rel="stylesheet"/>
+		<link href="js/datepicker/css/datepicker.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+	</head>
+	<body class="page-cabinet">
+		<div class="main-wrapper">
+			<div class="menu-mobile menu-mobile--js d-lg-none">
+				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+				</div>
+				<div class="menu-mobile__inner">
+					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Уруғлар</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Ўғитлар</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Агрокимё</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Озуқалар</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Техника</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Хом-ашё</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Ҳайвонлар</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Қишлоқ хўжалик маҳсулотлари</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Хизматлар</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Хизматлар1</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Хизматлар2</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--  мобильное меню-->
+			<!-- start header-->
+			<header class="header" id="header">
+				<!-- start top-nav  в этом блоке   отличия-->
+				<div class="top-nav top-nav--cabinet">
+					<div class="container">
+						<div class="top-nav__main-row row">
+							<div class="col-auto d-lg-none order-first">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+								</div>
+								<div class="catalog-block catalog-block--cabinet">
+									<div class="catalog-block__toggle catalog-block__toggle--mob catalog-block__toggle--cabinet d-lg-none"><span></span>
+									</div>
+									<div class="catalog-block__dropdown">
+										<div class="catalog-block__dropdown-inner">
+											<ul class="left-menu">
+													<li class="menu-item-has-children"><a href="#">Профил
+															<svg class="icon icon-chevron-right ">
+																<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+															</svg></a></li>
+													<li class="menu-item-has-children"><a href="#">Махсулотлар
+															<svg class="icon icon-chevron-right ">
+																<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+															</svg></a></li>
+													<li class="menu-item-has-children"><a href="#">Витрина
+															<svg class="icon icon-chevron-right ">
+																<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+															</svg></a></li>
+													<li class="menu-item-has-children"><a href="#">Хабарлар
+															<svg class="icon icon-chevron-right ">
+																<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+															</svg></a></li>
+											</ul>
+											<div class="container-fluid pt-3"><a class="link-logout" href="#">
+												<svg class="icon icon-logout ">
+													<use xlink:href="img/svg/sprite.svg#logout"></use>
+												</svg><span>Чиқиш</span></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="contacts-top-block col-lg-4 col-auto d-none d-md-block">
+								<ul>
+									<li><a class="contacts-top-block__link" href="tel:(78)150-00-88">
+										<svg class="icon icon-phone-icon ">
+											<use xlink:href="img/svg/sprite.svg#phone-icon"></use>
+										</svg><span>(78) 150-00-88</span></a>
+									</li>
+									<li><a class="contacts-top-block__link" href="#">
+										<svg class="icon icon-chat ">
+											<use xlink:href="img/svg/sprite.svg#chat"></use>
+										</svg><span>On-line чат</span></a>
+									</li>
+								</ul>
+							</div>
+							<div class="col text-lg-center"><a class="logo" href="/">
+								<div class="row">
+									<div class="col-auto"><img src="img/svg/logo-sm.svg" alt=""/></div>
+									<div class="col">
+										<div class="logo__text">
+										</div><img src="img/svg/logo-text.svg" alt=""/>
+									</div>
+								</div></a>
+							</div>
+							<div class="col-4 d-flex justify-content-end">
+								<div class="has-children me-4">Русский
+									<ul>
+										<li>Русский</li>
+										<li>Русский</li>
+										<li>Русский</li>
+									</ul>
+								</div><a class="link-logout" href="#">
+								<svg class="icon icon-logout ">
+									<use xlink:href="img/svg/sprite.svg#logout"></use>
+								</svg><span>Чиқиш</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end top-nav-->
+			</header>
+			<!-- end header-->
+			<div class="container">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+						<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Асосий саҳифа</span>
+								<meta itemprop="position" content="1"/></a></li>
+						<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Онлайн консултант</span>
+								<meta itemprop="position" content="2"/></a></li>
+					</ol>
+				</nav>
+			</div>
+			<div class="SECTION sConsultantVideo section" id="sConsultantVideo">
+				<div class="container">
+					<div class="field-items">
+						<div class="views-row"><a class="item-video" href="https://www.youtube.com/watch?v=KP09uMK-tho" data-fancybox="data-fancybox">
+							<div class="item-video__img-wrap bg-wrap">
+								<!-- picture-->
+								<picture class="picture-bg"> 
+									<source type="image/webp" srcset="img/@2x/webp/speaker_webcam.webp"/><img class="object-fit-js" src="img/@2x/speaker_webcam.jpg" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</div><span class="item-video__title">06cb993b1946vx6556asx21asx5321as613123213568sfsfc15gvsd65sdc2vj_0.mp4</span></a>
+							<div class="date-repost">
+								<div class="date">04.01.2022 /11:30-12:00</div><a class="btn btn-outline-primary">Поделиться
+									<svg class="icon icon-repost ">
+										<use xlink:href="img/svg/sprite.svg#repost"></use>
+									</svg></a>
+							</div>
+						</div>
+						<div class="views-row"><a class="item-video" href="https://www.youtube.com/watch?v=KP09uMK-tho" data-fancybox="data-fancybox">
+							<div class="item-video__img-wrap bg-wrap">
+								<!-- picture-->
+								<picture class="picture-bg"> 
+									<source type="image/webp" srcset="img/@2x/webp/speaker_webcam.webp"/><img class="object-fit-js" src="img/@2x/speaker_webcam.jpg" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</div><span class="item-video__title">06cb993b1946vx6556asx21asx5321as613123213568sfsfc15gvsd65sdc2vj_0.mp4</span></a>
+							<div class="date-repost">
+								<div class="date">04.01.2022 /11:30-12:00</div><a class="btn btn-outline-primary">Поделиться
+									<svg class="icon icon-repost ">
+										<use xlink:href="img/svg/sprite.svg#repost"></use>
+									</svg></a>
+							</div>
+						</div>
+						<div class="views-row"><a class="item-video" href="https://www.youtube.com/watch?v=KP09uMK-tho" data-fancybox="data-fancybox">
+							<div class="item-video__img-wrap bg-wrap">
+								<!-- picture-->
+								<picture class="picture-bg"> 
+									<source type="image/webp" srcset="img/@2x/webp/speaker_webcam.webp"/><img class="object-fit-js" src="img/@2x/speaker_webcam.jpg" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</div><span class="item-video__title">06cb993b1946vx6556asx21asx5321as613123213568sfsfc15gvsd65sdc2vj_0.mp4</span></a>
+							<div class="date-repost">
+								<div class="date">04.01.2022 /11:30-12:00</div><a class="btn btn-outline-primary">Поделиться
+									<svg class="icon icon-repost ">
+										<use xlink:href="img/svg/sprite.svg#repost"></use>
+									</svg></a>
+							</div>
+						</div>
+						<div class="views-row"><a class="item-video" href="https://www.youtube.com/watch?v=KP09uMK-tho" data-fancybox="data-fancybox">
+							<div class="item-video__img-wrap bg-wrap">
+								<!-- picture-->
+								<picture class="picture-bg"> 
+									<source type="image/webp" srcset="img/@2x/webp/speaker_webcam.webp"/><img class="object-fit-js" src="img/@2x/speaker_webcam.jpg" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</div><span class="item-video__title">06cb993b1946vx6556asx21asx5321as613123213568sfsfc15gvsd65sdc2vj_0.mp4</span></a>
+							<div class="date-repost">
+								<div class="date">04.01.2022 /11:30-12:00</div><a class="btn btn-outline-primary">Поделиться
+									<svg class="icon icon-repost ">
+										<use xlink:href="img/svg/sprite.svg#repost"></use>
+									</svg></a>
+							</div>
+						</div>
+						<div class="views-row"><a class="item-video" href="https://www.youtube.com/watch?v=KP09uMK-tho" data-fancybox="data-fancybox">
+							<div class="item-video__img-wrap bg-wrap">
+								<!-- picture-->
+								<picture class="picture-bg"> 
+									<source type="image/webp" srcset="img/@2x/webp/speaker_webcam.webp"/><img class="object-fit-js" src="img/@2x/speaker_webcam.jpg" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</div><span class="item-video__title">06cb993b1946vx6556asx21asx5321as613123213568sfsfc15gvsd65sdc2vj_0.mp4</span></a>
+							<div class="date-repost">
+								<div class="date">04.01.2022 /11:30-12:00</div><a class="btn btn-outline-primary">Поделиться
+									<svg class="icon icon-repost ">
+										<use xlink:href="img/svg/sprite.svg#repost"></use>
+									</svg></a>
+							</div>
+						</div>
+						<div class="views-row"><a class="item-video" href="https://www.youtube.com/watch?v=KP09uMK-tho" data-fancybox="data-fancybox">
+							<div class="item-video__img-wrap bg-wrap">
+								<!-- picture-->
+								<picture class="picture-bg"> 
+									<source type="image/webp" srcset="img/@2x/webp/speaker_webcam.webp"/><img class="object-fit-js" src="img/@2x/speaker_webcam.jpg" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</div><span class="item-video__title">06cb993b1946vx6556asx21asx5321as613123213568sfsfc15gvsd65sdc2vj_0.mp4</span></a>
+							<div class="date-repost">
+								<div class="date">04.01.2022 /11:30-12:00</div><a class="btn btn-outline-primary">Поделиться
+									<svg class="icon icon-repost ">
+										<use xlink:href="img/svg/sprite.svg#repost"></use>
+									</svg></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="footer">
+				<div class="container">
+					<div class="row">
+						<div class="footer__col-first col-lg pb-3"><a href="/"><img src="img/svg/footer-logo.svg" alt=""/></a>
+							<div class="footer__copyright">© 2000-2021 АО «Агробанк».  Лицензия Центрального Банка РУз №78 от 29.08.2014 г.
+							</div>
+							<div class="app-links-wrapper"><a href="#">
+									<!-- picture-->
+									<picture> 
+										<source type="image/webp" srcset="img/@2x/webp/google-play.webp"/><img src="img/@2x/google-play.png" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture--></a><a href="#">
+									<!-- picture-->
+									<picture> 
+										<source type="image/webp" srcset="img/@2x/webp/appstore.webp"/><img src="img/@2x/appstore.png" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture--></a></div>
+						</div>
+						<div class="col-sm-6 col-md-4 col-lg-3 pb-3"> 
+							<p class="text-secondary2">Фойдали ҳаволалар:</p>
+							<ul> 
+								<li><a href="#"> Хамкор булиш </a></li>
+								<li><a href="#"> Оммабоп саволлар</a></li>
+								<li><a href="#"> Хизмат қандай ишлаши </a></li>
+								<li><a href="#"> Боғланиш</a></li>
+							</ul>
+						</div>
+						<div class="col-sm-6 col-md-4 col-lg-3 pb-3"> 
+							<p class="text-secondary2">Биз ҳақимизда:</p>
+							<ul> 
+								<li><a href="#"> Агробанк ҳақида</a></li>
+								<li><a href="#"> Лойиҳа ҳақида</a></li>
+								<li><a href="#"> Янгиликлар / Блог</a></li>
+							</ul>
+						</div>
+						<div class="footer__col col-sm-6 col-md-4 col-lg-auto">
+							<p class="text-secondary2">Колл-центр:</p><a href="tel:+998781500088">+998 (78) 150-00-88 </a>
+							<p class="text-secondary2">Telegram Bot:</p><a class="footer__support" href="#">On-line Support</a>
+							<div class="soc"><a class="soc__item" href="#" target="_blank">
+								<svg class="icon icon-fb ">
+									<use xlink:href="img/svg/sprite.svg#fb"></use>
+								</svg></a><a class="soc__item" href="#" target="_blank">
+								<svg class="icon icon-instagram ">
+									<use xlink:href="img/svg/sprite.svg#instagram"></use>
+								</svg></a><a class="soc__item" href="#" target="_blank">
+								<svg class="icon icon-telegram ">
+									<use xlink:href="img/svg/sprite.svg#telegram"></use>
+								</svg></a><a class="soc__item" href="#" target="_blank"><svg class="icon icon-ok" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="#7C7E80"/>
+<path d="M9.34417 12.4265C8.31159 12.3292 7.38025 12.0983 6.58304 11.5327C6.48394 11.4622 6.38141 11.3941 6.2917 11.3157C5.94239 11.0119 5.90728 10.6631 6.18379 10.3046C6.41989 9.99714 6.81641 9.91516 7.22849 10.092C7.30809 10.1254 7.38361 10.1685 7.45713 10.2141C8.94285 11.1401 10.9843 11.1656 12.4755 10.256C12.6239 10.1527 12.7816 10.0689 12.9644 10.0263C13.3205 9.9437 13.6524 10.0622 13.8432 10.3447C14.0617 10.6668 14.059 10.9827 13.7899 11.2325C13.3779 11.6171 12.8814 11.8948 12.3305 12.0886C11.8092 12.2721 11.2379 12.3645 10.6734 12.4252C10.7584 12.5097 10.7989 12.5511 10.8522 12.5996C11.6189 13.2984 12.3898 13.9954 13.1546 14.6966C13.415 14.9359 13.4696 15.2319 13.3259 15.5102C13.1688 15.814 12.8181 16.0139 12.4735 15.9926C12.2556 15.9787 12.0857 15.8802 11.9339 15.7423C11.3552 15.2137 10.7658 14.6947 10.1986 14.1564C10.0334 13.9996 9.95379 14.0294 9.80812 14.1655C9.22609 14.7093 8.63467 15.2447 8.03845 15.7775C7.7714 16.0163 7.45304 16.0595 7.14286 15.9233C6.81369 15.7775 6.60332 15.4731 6.62015 15.1663C6.63097 14.9584 6.74361 14.8005 6.90075 14.6583C7.66012 13.9705 8.41684 13.2808 9.17421 12.5924C9.22408 12.5462 9.2713 12.4975 9.34417 12.4265Z" fill="white"/>
+<path d="M9.97805 9.99998C8.33676 9.99402 6.99103 8.63538 7.00005 6.99312C7.00964 5.333 8.35654 3.99584 10.0141 4.00001C11.6747 4.00419 13.0077 5.36161 13 7.03904C12.991 8.67773 11.6362 10.0053 9.97805 9.99998ZM11.4698 6.99669C11.4709 6.80484 11.4337 6.61461 11.3605 6.43696C11.2872 6.25938 11.1793 6.09785 11.0429 5.96174C10.9066 5.82563 10.7443 5.7176 10.5657 5.64385C10.3871 5.57011 10.1956 5.5321 10.0021 5.53203C9.80676 5.53184 9.61342 5.57025 9.43325 5.64502C9.25307 5.71979 9.08976 5.82941 8.95278 5.96749C8.8158 6.10557 8.70794 6.26931 8.6355 6.44922C8.56305 6.62907 8.52744 6.82151 8.53082 7.01517C8.53101 7.20715 8.56954 7.39718 8.64412 7.57437C8.71871 7.7515 8.82786 7.91228 8.96536 8.04745C9.1028 8.18254 9.26585 8.28936 9.44518 8.36175C9.62445 8.43413 9.81636 8.47064 10.0099 8.46915C10.2034 8.46844 10.395 8.42972 10.5733 8.35519C10.7517 8.28074 10.9134 8.17191 11.0491 8.03506C11.1849 7.89821 11.2919 7.73606 11.3641 7.5579C11.4363 7.3798 11.4722 7.18925 11.4698 6.99733V6.99669Z" fill="white"/>
+</svg></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!--  start modals-->
+		<div class="modal-win" id="modal-call" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<div class="text-center">
+						<div class="form-wrap__title form-data h3 ttu">Обратный звонок
+						</div>
+						<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+					</div><span class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> </span>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn btn" type="submit"> 
+					</button>
+					<div class="form-wrap__policy">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__text">Шахсий маълумотлардан фойдаланиш <br/><a class="text-info tdu" href="#">шартларини қабул қиламан.</a></span>
+						</label>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div class="modal-win text-center" id="modal-go-reg" style="display: none"><img class="w-100px mx-auto" src="img/svg/home-icon.svg" loading="lazy" alt=""/><br/><br/><br/>
+			<p class="text-secondary">Сотувни амалга ошириш учун тизмидан рўйхатдан ўтган болишингиз зарур</p><br/><br/><br/><a class="btn btn-primary w-190 mx-auto" href="#">Рўйхатдан ўтиш </a>
+		</div>
+		<!-- #modal-go-reg-->
+		<div class="modal-win text-center" id="modal-view-order" style="display: none"><img class="w-100px mx-auto" src="img/svg/basket-i.svg" loading="lazy" alt=""/><br/>
+			<div class="h4 text-center">Сизнинг буюртмангиз қабул қилинди</div><br/>
+			<p class="text-secondary">Мутахассис буюртмани тасдиқлаш ва маълумотларни аниқлаштириш учун сизга мурожаат қилади</p><br/><br/><br/><a class="btn btn-primary w-190 mx-auto" href="#">Буюртмани кўриш</a>
+		</div>
+		<!-- #modal-view-order-->
+		<div class="modal-win text-center" id="modal-star" style="display: none"><img class="w-100px mx-auto" src="img/svg/star-i.svg" loading="lazy" alt=""/><br/>
+			<div class="h4 text-center">Баҳолаш мезони</div><br/>
+			<p class="text-secondary">Харид сизга мақул келган бўлса ўз&nbsp;баҳоингизни қолдиришингиз мумкин. Сизнинг баҳоингиз сотувчиларнинг рейтинги учун муҳимдир</p><br/>
+			<div class="stars stars--lg">
+				<svg class="icon icon-star  active">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+				<svg class="icon icon-star  active">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+				<svg class="icon icon-star  active">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+				<svg class="icon icon-star  active">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+				<svg class="icon icon-star ">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+			</div><br/><br/><a class="btn btn-primary w-190 mx-auto" href="#">Таййор</a>
+		</div>
+		<!-- #modal-star-->
+		<div class="modal-win text-center" id="modal-close-order" style="display: none"><img class="w-100px mx-auto" src="img/svg/gift-1.svg" loading="lazy" alt=""/><br/>
+			<div class="h4 text-center">Буюртмани ёпиш</div><br/>
+			<p class="text-secondary">Буюртмани ёпиш ҳақидаги сўровингиз харидор томонидан тасдиқлаганганидан сўнг қабул қилинади ва&nbsp;&laquo;Буюртма ёпилган&raquo; статусига ўзгаради</p><br/><br/><a class="btn btn-primary w-190 mx-auto" href="#">Тайёр</a>
+		</div>
+		<!-- #modal-close-order-->
+		<div class="modal-win text-center" id="modal-delete" style="display: none"><img class="w-100px mx-auto" src="img/svg/delete.svg" loading="lazy" alt=""/><br/>
+			<div class="h4 text-center">Махсулот ўчириш хохлайсизми?</div><br/>
+			<p class="small text-secondary">Ўчирилган махсулот платформадан бутунлай олиб ташланади ва&nbsp;уни&nbsp;таҳрирлашнинг имкони бўлмайди</p><br/><br/><a class="btn btn-primary mx-auto" href="#">Махсулотни ўчириш</a>
+		</div>
+		<!-- #modal-delte-->
+		<div class="form-wrap modal-win" id="modal-online-consultant" style="display: none"> 
+			<div class="h4 text-center">Онлайн консултант ҳизмати </div>
+			<form><span class="form-wrap__input-wrap form-group">
+					<label><span class="form-wrap__input-title">Исм *</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
+					</label></span>
+				<!-- +e.input-wrap--><span class="form-wrap__input-wrap form-group">
+					<label><span class="form-wrap__input-title">Фамилия *</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
+					</label></span>
+				<!-- +e.input-wrap--><span class="form-wrap__input-wrap form-group">
+					<label><span class="form-wrap__input-title">Мутаҳассислиги</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
+					</label></span>
+				<!-- +e.input-wrap--><span class="form-wrap__input-wrap form-group">
+					<label><span class="form-wrap__input-title">Биография</span><textarea class="form-wrap__input form-control" name="textarea" placeholder=""></textarea>
+					</label></span>
+				<!-- +e.input-wrap-->
+				<div class="p-4 bg-primary text-start mb-3" style="--bs-bg-opacity: .3;">Иш соатингиз ҳақидаги қисқача малумотни киритинг. Ҳафта кунлари ва соатларини кўрсатинг</div><span class="form-wrap__input-wrap form-group">
+					<label><span class="form-wrap__input-title">Иш соати</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
+					</label></span>
+				<!-- +e.input-wrap-->
+				<div class="text-center">
+					<button class="btn btn-primary w-190" type="submit">Жўнатиш</button>
+				</div>
+			</form>
+		</div>
+		<!-- #modal-online-consultant-->
+		<div class="form-wrap modal-win" id="modal-online-consultant2" style="display: none"> 
+			<div class="h4 text-center mb-3">Онлайн консултант рад етиш</div>
+			<form> 
+				<div class="p-4 bg-primary text-start mb-3" style="--bs-bg-opacity: .3;">Илтимос, онлайн консултант ҳизматини рад етиш сабабини кўрсатинг</div><span class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder=""></textarea> </span>
+				<!-- +e.input-wrap-->
+				<div class="text-center">
+					<button class="btn btn-primary w-190" type="submit">Жўнатиш</button>
+				</div>
+			</form>
+		</div>
+		<!-- #modal-online-consultant2-->
+		<div class="modal-avatar form-wrap modal-win" id="modal-online-consultant3" style="display: none"> 
+			<div class="modal-avatar__avatar bg-wrap">
+				<svg class="icon icon-user ">
+					<use xlink:href="img/svg/sprite.svg#user"></use>
+				</svg>
+				<!-- picture-->
+				<picture class="picture-bg"> 
+					<source type="image/webp" srcset="img/@2x/webp/avatar-1.webp"/><img class="object-fit-js" src="img/@2x/avatar-1.png" alt="" loading="lazy"/>
+				</picture>
+				<!-- /picture-->
+			</div>
+			<div class="h4 text-center mb-3">Жамолива Гўзал</div>
+			<div class="stars">
+				<svg class="icon icon-star  active">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+				<svg class="icon icon-star  active">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+				<svg class="icon icon-star  active">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+				<svg class="icon icon-star  active">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+				<svg class="icon icon-star ">
+					<use xlink:href="img/svg/sprite.svg#star"></use>
+				</svg>
+			</div>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		</div>
+		<!-- #modal-online-consultant3-->
+		<div class="form-wrap modal-win" id="modal-online-consultant4" style="display: none"> 
+			<div class="h4 text-center mb-3">"Ветеринар" консултацияси учун видео сўров жўнатиш</div>
+			<form> 
+				<div class="p-4 bg-primary text-start mb-3" style="--bs-bg-opacity: .3;">Еслатиб ўтамиз, сизнинг аризангизни мутахассис томонидан кўриб чиқилгандан сўнг қабул қилинади</div><span class="form-wrap__input-wrap form-group">
+					<label><span class="form-wrap__input-title">Илтимос, мурожаатингизнинг моҳиятини қисқача тасвирлаб беринг.</span><textarea class="form-wrap__input form-control" name="textarea" placeholder=""></textarea> 
+					</label></span>
+				<!-- +e.input-wrap--><span class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="file" type="file"/></span>
+				<!-- +e.input-wrap-->
+				<p class="text-start text-secondary mb-4">Белгиланган вақт: 04.05.2021  11:30 - 12:00</p>
+				<div class="text-center">
+					<button class="btn btn-primary w-190" type="submit">Жўнатиш</button>
+				</div>
+			</form>
+		</div>
+		<!-- #modal-online-consultant4-->
+		<div class="form-wrap modal-win modal-win modal-win--status" id="modal-pa" style="display: none"> 
+			<div class="h1 strong mb-5">№ 210403-907701 </div>
+			<div class="modal-head row">
+				<div class="col-auto"><a class="modal-head__img-wrap bg-wrap" href="#">
+					<!-- picture-->
+					<picture class="picture-bg"> 
+						<source type="image/webp" srcset="img/@2x/webp/prod-2.webp"/><img class="object-fit-js" src="img/@2x/prod-2.jpg" alt="" loading="lazy"/>
+					</picture>
+					<!-- /picture--></a>
+				</div>
+				<div class="col">
+					<div class="fw-500">Шокиров Дилмурод</div>
+					<div>МЧЖ "Azia media"</div>
+					<div class="toggle-modal-more">Реквизиты
+						<svg class="icon icon-chevron-down ">
+							<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+						</svg>
+					</div>
+				</div>
+				<div class="col-auto"><a class="modal-head__btn-circle" href="#">
+					<svg class="icon icon-email-link ">
+						<use xlink:href="img/svg/sprite.svg#email-link"></use>
+					</svg></a>
+				</div>
+				<div class="col-auto"><a class="modal-head__btn-circle" href="#">
+					<svg class="icon icon-phone-link ">
+						<use xlink:href="img/svg/sprite.svg#phone-link"></use>
+					</svg></a>
+				</div>
+			</div>
+			<div class="block-more-info"> 
+				<div class="row">
+					<div class="col-4"> 
+						<div class="text-secondary">Вилоят</div>
+						<p>Самарқанд вилояти</p>
+					</div>
+					<div class="col-8">
+						<div class="text-secondary">Банк МФО си</div>
+						<p>"Агробанк" аксиядорлик-тижорат банки»</p>
+					</div>
+					<div class="w-100"></div>
+					<div class="col-4"> 
+						<div class="text-secondary">Туман</div>
+						<p>Пастдарғом туман</p>
+					</div>
+					<div class="col">
+						<div class="text-secondary">Хисоб рақами</div>
+						<p>2223 1238 4568 1234 9963 </p>
+					</div>
+					<div class="col-auto"> 
+						<div class="text-secondary">СТИР</div>
+						<p>154786022</p>
+					</div>
+					<div class="col-12"> 
+						<div class="text-secondary">Манзил</div>
+						<p>43 Мукимий Кўчаси, Тошкент, Ўзбекистон, 100096-уй</p>
+					</div>
+				</div>
+			</div>
+			<div class="text-secondary2 h4">Маҳсулот</div>
+			<div class="prod-order-item">
+				<div class="row">
+					<div class="col-auto"><a class="prod-order-item__img-wrap bg-wrap" href="#">
+						<!-- picture-->
+						<picture class="picture-bg"> 
+							<source type="image/webp" srcset="img/@2x/webp/prod-2.webp"/><img class="object-fit-js" src="img/@2x/prod-2.jpg" alt="" loading="lazy"/>
+						</picture>
+						<!-- /picture--></a>
+					</div>
+					<div class="col">
+						<div class="fw-500">Крупногабаритная шина 45/65R45(1150/65R45) BKT EARTHMAX SR 53 L-5 ** CR 245 A2 ** TL</div>
+					</div>
+				</div>
+			</div>
+			<table> 
+				<tr> 
+					<th>Нархи (сум)	</th>
+					<th>10 199 </th>
+				</tr>
+				<tr> 
+					<td>Миқдори</td>
+					<td>1000 килограмм</td>
+				</tr>
+				<tr class="h6 fw-400"> 
+					<td>Жами</td>
+					<td>31 944 889 сўм</td>
+				</tr>
+			</table>
+			<div class="row"> 
+				<div class="col-6"> 
+					<button class="btn btn-outline-primary w-100"> Бекор қилиш</button>
+				</div>
+				<div class="col-6"> 
+					<button class="btn btn-primary w-100"> Қабул қилиш</button>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-pa-->
+		<div class="form-wrap modal-win modal-win modal-win--status" id="modal-pa2" style="display: none"> 
+			<div class="h1 strong mb-5">№ 210403-907701 </div>
+			<div class="modal-head row">
+				<div class="col-auto"><a class="modal-head__img-wrap bg-wrap" href="#">
+					<!-- picture-->
+					<picture class="picture-bg"> 
+						<source type="image/webp" srcset="img/@2x/webp/prod-2.webp"/><img class="object-fit-js" src="img/@2x/prod-2.jpg" alt="" loading="lazy"/>
+					</picture>
+					<!-- /picture--></a>
+				</div>
+				<div class="col">
+					<div class="fw-500">Шокиров Дилмурод</div>
+					<div>МЧЖ "Azia media"</div>
+					<div class="toggle-modal-more">Реквизиты
+						<svg class="icon icon-chevron-down ">
+							<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div class="block-more-info"> 
+				<div class="row">
+					<div class="col-4"> 
+						<div class="text-secondary">Вилоят</div>
+						<p>Самарқанд вилояти</p>
+					</div>
+					<div class="col-8">
+						<div class="text-secondary">Банк МФО си</div>
+						<p>"Агробанк" аксиядорлик-тижорат банки»</p>
+					</div>
+					<div class="w-100"></div>
+					<div class="col-4"> 
+						<div class="text-secondary">Туман</div>
+						<p>Пастдарғом туман</p>
+					</div>
+					<div class="col">
+						<div class="text-secondary">Хисоб рақами</div>
+						<p>2223 1238 4568 1234 9963 </p>
+					</div>
+					<div class="col-auto"> 
+						<div class="text-secondary">СТИР</div>
+						<p>154786022</p>
+					</div>
+					<div class="col-12"> 
+						<div class="text-secondary">Манзил</div>
+						<p>43 Мукимий Кўчаси, Тошкент, Ўзбекистон, 100096-уй</p>
+					</div>
+				</div>
+			</div>
+			<div class="text-secondary2 h4">Маҳсулот</div>
+			<div class="prod-order-item">
+				<div class="row">
+					<div class="col-auto"><a class="prod-order-item__img-wrap bg-wrap" href="#">
+						<!-- picture-->
+						<picture class="picture-bg"> 
+							<source type="image/webp" srcset="img/@2x/webp/prod-2.webp"/><img class="object-fit-js" src="img/@2x/prod-2.jpg" alt="" loading="lazy"/>
+						</picture>
+						<!-- /picture--></a>
+					</div>
+					<div class="col">
+						<div class="fw-500">Крупногабаритная шина 45/65R45(1150/65R45) BKT EARTHMAX SR 53 L-5 ** CR 245 A2 ** TL</div>
+					</div>
+				</div>
+			</div>
+			<table> 
+				<tr> 
+					<th>Нархи (сум)	</th>
+					<th>10 199 </th>
+				</tr>
+				<tr> 
+					<td>Миқдори</td>
+					<td>1000 килограмм</td>
+				</tr>
+				<tr class="h6 fw-400"> 
+					<td>Жами</td>
+					<td>31 944 889 сўм</td>
+				</tr>
+			</table>
+			<div class="row"> 
+				<div class="col-6"> 
+					<button class="btn btn-outline-primary w-100"> Написать сообщение</button>
+				</div>
+				<div class="col-6"> 
+					<button class="btn btn-outline-primary w-100">Позвонить</button>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-pa2-->
+		<div class="modal-win text-center" id="modal-pa3" style="display: none"><img class="w-100px mx-auto" src="img/svg/list.svg" loading="lazy" alt=""/><br/>
+			<div class="h4 text-center">Сизнинг аризангиз қабул қилинди</div><br/>
+			<p class="text-secondary">Аризангиз moderator томонидан кўриб чиқилади</p><br/><br/><b></b><a class="btn btn-primary w-190 mx-auto" href="#">Тайёр</a>
+		</div>
+		<div class="modal-win text-center" id="modal-user" style="display: none">
+			<svg class="icon icon-modal-users  w-100px mx-auto">
+				<use xlink:href="img/svg/sprite.svg#modal-users"></use>
+			</svg><br/>
+			<div class="h4 text-center">Сиз мутаҳассис консултант сифатида рўяхатга олиндингиз</div><br/><br/><br/><br/><a class="btn btn-primary w-190 mx-auto" href="#">Кириш</a>
+		</div>
+		<div class="modal-win modal-work text-center" id="modal-work" style="display: none">
+			<div class="h4 text-center">Иш соатигнизни хафта кунлари ва соатларини кўрсатинг</div>
+			<div class="dates-wrapper">
+				<div class="title-wrapper">
+					<div class="row">
+						<div class="title col-6">Ҳафта кунлари</div>
+						<div class="title col-6">Иш соати</div>
+					</div>
+				</div>
+				<div class="date row">
+					<div class="week col-6">
+						<label class="custom-input form-check">
+							<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Душанба</span>
+						</label>
+					</div>
+					<div class="from-to col-6">
+						<input type="text" id="mon-from" name="from" placeholder="00:00"/>
+						<input type="text" id="mon-to" name="from" placeholder="00:00"/>
+					</div>
+				</div>
+				<div class="date row">
+					<div class="week col-6">
+						<label class="custom-input form-check">
+							<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Сешанба</span>
+						</label>
+					</div>
+					<div class="from-to col-6">
+						<input type="text" id="tue-from" name="from" placeholder="00:00"/>
+						<input type="text" id="tue-to" name="from" placeholder="00:00"/>
+					</div>
+				</div>
+				<div class="date row">
+					<div class="week col-6">
+						<label class="custom-input form-check">
+							<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Чоршанба</span>
+						</label>
+					</div>
+					<div class="from-to col-6">
+						<input type="text" id="thu-from" name="from" placeholder="00:00"/>
+						<input type="text" id="thu-to" name="from" placeholder="00:00"/>
+					</div>
+				</div>
+				<div class="date row">
+					<div class="week col-6">
+						<label class="custom-input form-check">
+							<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Пайшанба</span>
+						</label>
+					</div>
+					<div class="from-to col-6">
+						<input type="text" id="wen-from" name="from" placeholder="00:00"/>
+						<input type="text" id="wen-to" name="from" placeholder="00:00"/>
+					</div>
+				</div>
+				<div class="date row">
+					<div class="week col-6">
+						<label class="custom-input form-check">
+							<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Жума</span>
+						</label>
+					</div>
+					<div class="from-to col-6">
+						<input type="text" id="fri-from" name="from" placeholder="00:00"/>
+						<input type="text" id="fri-to" name="from" placeholder="00:00"/>
+					</div>
+				</div>
+				<div class="date row">
+					<div class="week col-6">
+						<label class="custom-input form-check">
+							<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Шанба</span>
+						</label>
+					</div>
+					<div class="from-to col-6">
+						<input type="text" id="sut-from" name="from" placeholder="00:00"/>
+						<input type="text" id="sut-to" name="from" placeholder="00:00"/>
+					</div>
+				</div>
+				<div class="date row">
+					<div class="week col-6">
+						<label class="custom-input form-check">
+							<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Якшанба</span>
+						</label>
+					</div>
+					<div class="from-to col-6">
+						<input type="text" id="sunday-from" name="from" placeholder="00:00"/>
+						<input type="text" id="sunday-to" name="from" placeholder="00:00"/>
+					</div>
+				</div>
+			</div>
+			<div class="wrapper-links"><a class="btn btn-outline-primary w-190 mx-auto" href="#">Орқага</a><a class="btn btn-primary w-190 mx-auto" href="#">Жўнатиш</a></div>
+		</div>
+		<div class="modal-win modal-video text-center" id="modal-video" style="display: none">
+			<div class="h4 text-center">Керакли қурилмани танланг</div>
+			<div class="content-wrapper"><span class="form-wrap__input-wrap form-group">
+					<select class="modal-win__input form-select" name="select">
+						<option value="По умолчанию - Микрофон(HD pro Webcamc920">По умолчанию - Микрофон(HD pro Webcamc920</option>
+						<option value=" placeholder 1">placeholder 1</option>
+						<option value=" placeholder 2">placeholder 2</option>
+						<option value=" placeholder 3">placeholder 3</option>
+						<option value=" placeholder 4">placeholder 4</option>
+					</select></span>
+				<!-- +e.input-wrap-->
+				<div class="progress-wrap"><span>По умолчанию - Микрофон(HD pro Webcamc920)</span>
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+				</div><span class="form-wrap__input-wrap form-group">
+					<select class="modal-win__input form-select" name="select">
+						<option value="HD pro Webcam c920">HD pro Webcam c920</option>
+						<option value=" placeholder 1">placeholder 1</option>
+						<option value=" placeholder 2">placeholder 2</option>
+						<option value=" placeholder 3">placeholder 3</option>
+						<option value=" placeholder 4">placeholder 4</option>
+					</select></span>
+				<!-- +e.input-wrap-->
+				<div class="video-wrapper"><a class="item-video" href="https://www.youtube.com/watch?v=KP09uMK-tho" data-fancybox="data-fancybox">
+					<div class="item-video__img-wrap bg-wrap">
+						<!-- picture-->
+						<picture class="picture-bg"> 
+							<source type="image/webp" srcset="img/@2x/webp/speaker_webcam.webp"/><img class="object-fit-js" src="img/@2x/speaker_webcam.jpg" alt="" loading="lazy"/>
+						</picture>
+						<!-- /picture-->
+					</div></a>
+				</div>
+				<button class="btn btn-primary">ok</button>
+			</div>
+		</div>
+		<!-- end modals-->
+		<!-- modal libs-->
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox.umd.js"></script>
+		<!-- modal libs-->
+		<!-- slider libs-->
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/wowjs/wow.min.js"> </script>
+		<script src="libs/jquery-asPieProgress/jquery-asPieProgress.min.js"> </script>
+		<script src="libs/hc-sticky/hc-sticky.js"> </script>
+		<script src="libs/typed.js/lib/typed.min.js"> </script>
+		<!-- /slider libs-->
+		<script src="libs/priority-nav/priority-nav.min.js"></script>
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+		<script src="libs/readmore-js/readmore.min.js"> </script>
+		<script src="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js"> </script>
+		<script src="libs/filepond/filepond.min.js"> </script>
+		<script src="libs/jquery-filepond/filepond.jquery.js"> </script>
+		<script src="libs/select2/js/select2.min.js"> </script>
+		<script src="js/datepicker/js/datepicker.min.js"></script>
+		<script src="js/maskedinput.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

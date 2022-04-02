@@ -382,13 +382,14 @@
 			right: 5px;
 			left: auto;
 			top: 100%;
-			&__inner{
+			.__inner {
 				margin-top: 5px;
 				background: #FFFFFF;
-				box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+				box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
 				padding: 5px 8px;
 				color: #3E3E3E;
 				position: relative;
+				display: block;
 				&::after,
 				&::before{
 					content: '';
@@ -402,12 +403,11 @@
 				}
 				&::before{
 					
-					box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+					box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
 					z-index: -1;
 				}
 				&::after{
 					background: #FFFFFF;
-		
 				}
 			}
 		}
@@ -426,7 +426,6 @@
 	min-height: rem(93);
 	@include mt;
 	&:hover{
-
 		box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.1);
 	}
 	border-radius: 5px;

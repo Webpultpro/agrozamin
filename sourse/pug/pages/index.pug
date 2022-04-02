@@ -14,6 +14,7 @@ include ../blocks/sHeaderBanner/_sHeaderBanner.pug
 include ../blocks/sBankProducts/_sBankProducts.pug
 include ../blocks/sProductsOnSite/_sProductsOnSite.pug
 include ../blocks/sInformation/_sInformation.pug
+include ../blocks/sCowboy/_sCowboy.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -36,6 +37,7 @@ block pagecontent
 	//- +sHowWorks
 	//- +sAdvantages
 	+sInformation
+	+sCowboy()
 	+sPartners
 	+sBankProducts2
 	+sWantToSell

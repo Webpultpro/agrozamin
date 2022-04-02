@@ -122,6 +122,10 @@
 			height: auto;
 		}
 	}
+	.btn-wrapper {
+		text-align: center;
+		margin-top: 35px;
+	}
 
 	@include media-breakpoint-up(xl) {
 	}

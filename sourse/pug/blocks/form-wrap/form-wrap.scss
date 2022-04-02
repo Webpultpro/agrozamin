@@ -35,6 +35,7 @@
 	&__input-wrap {
 		// @extend .form-group;
 		margin-bottom: rem(13);
+		display: block;
 		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(23);
 		}

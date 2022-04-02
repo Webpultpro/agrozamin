@@ -1,0 +1,62 @@
+.sCowboy {
+  overflow: hidden;
+  padding: 0;
+  margin: 40px 0;
+  position: relative;
+  h2 {
+    font-weight: 700;
+    color: white;
+  }
+  .info-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+  }
+  .btn {
+    width: 190px;
+    margin-top: 40px;
+  }
+}
+
+
+@include media-breakpoint-up(lg) {
+  .sCowboy {
+    height: 345px;
+    .info {
+      h2 {
+        font-size: 45px;
+        line-height: 44px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xl) {
+  .sCowboy {
+    picture {
+      img {
+        height: 100%;
+        width: auto;
+        max-width: unset;
+      }
+    }
+  }
+}
+@include media-breakpoint-down(lg) {
+  .sCowboy {
+    height: 280px;
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .btn {
+      margin-top: 15px;
+    }
+  }
+}

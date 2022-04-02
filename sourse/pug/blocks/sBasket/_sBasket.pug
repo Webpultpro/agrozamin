@@ -4,10 +4,10 @@ mixin sBasket(e, f,order)
 		.container
 			+e.inner
 				table
-					thead 
-						tr 
-							th(colspan="2") Товар
-							th Нархи (сум)	
+					thead
+						tr
+							th Товар
+							th Нархи (сум)
 							th Ў.б.
 							if !order
 								th Миқдори
@@ -19,33 +19,33 @@ mixin sBasket(e, f,order)
 					mixin tr(i, t)
 						tr
 							td
-								a(href="#") 
+								a(href="#")
 									+pic(`prod-${i}.jpg`,'bg',0)
-							td 
+							td
 								.strong.mb-1= t
 								ul
 									li <span>Сотувчи:</span> Ташкент АгроФерма
 									block
 
-							td 
-								.text-secondary 10 199 
-							td 
-								.text-secondary 
+							td
+								.text-secondary 10 199
+							td
+								.text-secondary
 									if order
-										| 1 
+										| 1
 									| килограмм
 							if !order
-								td 
+								td
 									+addblock()
 							td 10 199 сум
 							if !order
-								td 
+								td
 									+e.btn-delete
 										+icon("delete")
 							if order
 								td.td-alert
 									+b.alert-btn(href="#")
-										+e.counter 4 
+										+e.counter 4
 										+icon("alert")
 					if !e
 						tbody

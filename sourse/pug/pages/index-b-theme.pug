@@ -15,6 +15,7 @@ include ../blocks/sHeaderBanner/_sHeaderBanner.pug
 include ../blocks/sProductsOnSite/_sProductsOnSite.pug
 include ../blocks/sInformation/_sInformation.pug
 include ../blocks/sSimpleBanner/_sSimpleBanner.pug
+include ../blocks/sMobileStore/_sMobileStore.pug
 
 block variables
 	- let  mainPage= 'main-page theme-blue' 
@@ -39,6 +40,7 @@ block pagecontent
 	//- +headerBlock
 	//- +sHowWorks
 	//- +sAdvantages
+	+sMobileStore
 	+sSimpleBanner
 	+sWantToSell('var(--bs-primary)','want-to-sell-bl.png')
 	+sInformationB

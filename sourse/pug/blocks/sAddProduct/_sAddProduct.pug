@@ -20,26 +20,26 @@ mixin sAddProduct(empty)
 				+e.item--wide
 					.row
 						.col-md-6
-							+input(`Керакли махсулот каталогини танланг`, 'select', `Каталог`)
+							+input(`Керакли махсулот каталогини танланг`, 'select', `Каталог`).custom-select-js
 						.col-md-6
-							+input(`Керакли махсулот категориясини танланг`, 'select', `Категория`)
+							+input(`Керакли махсулот категориясини танланг`, 'select', `Категория`).custom-select-js
 						.col-md-6
-							+input(`Керакли махсулот субкатегориясини танланг`, 'select', `Субкатегория`)
+							+input(`Керакли махсулот субкатегориясини танланг`, 'select', `Субкатегория`).custom-select-js
 						.col-md-6
-							+input(`Керакли махсулот турини танланг`, 'select', `Махсулот тури`)
+							+input(`Керакли махсулот турини танланг`, 'select', `Махсулот тури`).custom-select-js
 
 				+e.item--wide
 					.row
 						.col-md-6
-							+input(`Килограм`, 'select', `Ўлчов бирлиги`)
+							+input(`Килограм`, 'select', `Ўлчов бирлиги`).custom-select-js
 						.col-md-6
 							.row
 								.col-6
 									+input(``, 'text', `Жорий нархи`)
 								.col-6
-									+input(`Сўм`, 'select', `Валюта`)
+									+input(`Сўм`, 'select', `Валюта`).custom-select-js
 						.col-md-6
-							+input(`Мавжуд емас`, 'select', `Қолдиқ ҳолати`)
+							+input(`Мавжуд емас`, 'select', `Қолдиқ ҳолати`).custom-select-js
 						.col-md-6
 							+input(``, 'text', `Қолдиқ миқдори`)
 						.col-md-6
@@ -52,7 +52,7 @@ mixin sAddProduct(empty)
 								.col-6.mt-0
 									+in-c(`radio`, `Карта орқали`)
 						.col-md-6
-							+input(`Харидор томонидан олиб кетиш`, 'select', `Этказиб бериш тури`)
+							+input(`Харидор томонидан олиб кетиш`, 'select', `Этказиб бериш тури`).custom-select-js
 
 				+e.item--wide
 					.row
@@ -76,11 +76,11 @@ mixin sAddProduct(empty)
 						.col-lg-4.col-md-6
 							+input(`Артикул`, 'text', `Артикул`)
 						.col-lg-4.col-md-6
-							+input(`Уруғлар`, 'select', `Каталог`)
+							+input(`Уруғлар`, 'select', `Каталог`).custom-select-js
 						.col-lg-4.col-md-6
-							+input(`Уруғлар`, 'select', `Категория`)
+							+input(`Уруғлар`, 'select', `Категория`).custom-select-js
 						.col-lg-4.col-md-6
-							+input(`Нўхат`, 'select', `Субкатегория`) 
+							+input(`Нўхат`, 'select', `Субкатегория`).custom-select-js
 				+e.item--small.gal-img 
 					h6 Махсулот сурати
 					+e.prompt 5 та сурат юклаш мумкин
@@ -98,7 +98,7 @@ mixin sAddProduct(empty)
 						.col-md-6
 							+input(`3 290`, 'text', `Ўлчов бирлиги`)
 						.col-md-6
-							+input(`Килограм`, 'select', `Ўлчов бирлиги`)
+							+input(`Килограм`, 'select', `Ўлчов бирлиги`).custom-select-js
 						.col-auto 
 							+in-c()
 								+e.SPAN.text Келишув асосида
@@ -121,7 +121,7 @@ mixin sAddProduct(empty)
 					.mb-3
 						.h6.mb-0 Калит сўзлар / Теглар
 						.text-secondary2 Қўшимча калит сўзларни вергул билан кўрсатинг
-						+input(``, 'select').custom-select-js(multiple)
+						+input(`Калит сўзлар / Теглар`, 'select').custom-select-js(multiple)
 					.mb-3
 						+input(`Тавсифи`, 'text', 'Тавсифи')
 					+e.map

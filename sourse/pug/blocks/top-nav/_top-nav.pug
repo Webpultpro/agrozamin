@@ -213,7 +213,7 @@ mixin top-nav(logout)
 									p.date
 										+icon("icon-clock")
 										span 04.01.2022   11:00 - 11:30
-								button(close, type="button").close
+								span.close
 									+icon("close")
 							a(href="#").category-image
 								.category-icon.blue
@@ -226,7 +226,7 @@ mixin top-nav(logout)
 								button(type="button").btn.btn-primary
 									+icon("video")
 									span Бошлаш
-								button(close, type="button").close
+								span.close
 									+icon("close")
 							a(href="#").category-image
 								.category-icon.red
@@ -236,7 +236,7 @@ mixin top-nav(logout)
 									p.date
 										+icon("icon-clock")
 										span 04.01.2022   11:00 - 11:30
-								button(close, type="button").close
+								span.close
 									+icon("close")
 							a(href="#").category-image
 								.category-icon.green
@@ -244,7 +244,7 @@ mixin top-nav(logout)
 								.desc-wrapper
 									p.title Сўровингиз қабул қилинди
 									p.desc Қизил лавлаги лавлаги Кабачок Аймаран Қизил лавлаги лавлаги Кабачок Аймаран
-								button(close, type="button").close
+								span.close
 									+icon("close")
 							a(href="#").category-image
 								.category-icon.red
@@ -252,7 +252,7 @@ mixin top-nav(logout)
 								.desc-wrapper
 									p.title Сўровингиз қабул қилинди
 									p.desc Қизил лавлаги лавлаги Кабачок Аймаран Қизил лавлаги лавлаги Кабачок Аймаран
-								button(close, type="button").close
+								span.close
 									+icon("close")
 							a(href="#").category-image
 								.category-icon.green
@@ -260,7 +260,7 @@ mixin top-nav(logout)
 								.desc-wrapper
 									p.title Янги сўров
 									p.desc Қизил лавлаги лавлаги Кабачок Аймаран Қизил лавлаги лавлаги Кабачок Аймаран
-								button(close, type="button").close
+								span.close
 									+icon("close")
 				.col-auto
 					+b.top-btn(href="#")
@@ -281,7 +281,7 @@ mixin top-nav(logout)
 								picture
 									source(type='image/webp' srcset=`img/@1x/webp/user-avatar.webp`)
 									img.avatar(src="img/@1x/user-avatar.png", alt="")
-									+icon("icon-user-cabinet")
+								+icon("icon-user-cabinet")
 							+b.dropdown-block--cabinet
 								mixin item(t)
 									+e.item(href="#").h6= t

@@ -22,7 +22,7 @@ mixin input(placeholder,  t='text', label, name= t)
 			+e.INPUT.input.form-control(name=name type=t  )&attributes(attributes)
 		else
 			+e.INPUT.input.form-control(name=name type=t placeholder=placeholder)&attributes(attributes)
-	+e.input-wrap.form-group
+	span.form-wrap__input-wrap.form-group
 		if label
 			label
 				+e.SPAN.input-title= label
@@ -33,7 +33,7 @@ mixin input(placeholder,  t='text', label, name= t)
 			block
 	// +e.input-wrap
 mixin select(label,pl,...items)
-	+e.input-wrap.form-group
+	span.form-wrap__input-wrap.form-group
 		label
 			+e.SPAN.title= label
 			+e.SELECT.input.form-control&attributes(attributes)
