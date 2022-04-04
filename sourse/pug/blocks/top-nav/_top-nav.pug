@@ -283,6 +283,13 @@ mixin top-nav(logout)
 							+e.SPAN.count 99
 				.col-md-auto.col.order-md-0.order-first
 					+serivedroop()
+				if logout
+					.col-md-auto.col
+						.drop-down-wrap.text-end
+							+e.btn.btn.btn-primary(type="button")
+								+icon('user')
+								|Войти
+
 				if !logout
 					.col-md-auto.col
 						.drop-down-wrap.text-end

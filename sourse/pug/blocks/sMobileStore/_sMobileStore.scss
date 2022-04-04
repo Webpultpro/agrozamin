@@ -11,11 +11,7 @@
     margin-top: 85px;
     a {
       margin-right: 15px;
-      filter: drop-shadow(2px 3px 4px transparent);
       transition: 0.3s;
-      &:hover {
-        filter: drop-shadow(2px 3px 4px black);
-      }
     }
   }
   h2 {
