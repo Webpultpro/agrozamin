@@ -21,9 +21,10 @@ mixin sNotifications(data)
                             p.date
                                 +icon("icon-clock")
                                 span 04.01.2022   11:00 - 11:30
-                        button(type="button").btn.btn-primary
-                            +icon("video")
-                            span Бошлаш
+                        object
+                            a(href="#").btn.btn-primary
+                                +icon("video")
+                                span Бошлаш
                         span.close
                             +icon("close")
                     a(href="#").category-image
