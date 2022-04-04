@@ -977,3 +977,11 @@ li.active {
 		}
 	}
 }
+
+@media (max-width: 430px) {
+	.top-nav__btn {
+		.icon-user {
+			display: none;
+		}
+	}
+}
