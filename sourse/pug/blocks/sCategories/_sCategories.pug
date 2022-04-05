@@ -11,7 +11,8 @@ mixin sCategories(data)
 							+e.item(href='#' )
 								+e.DIV.img-wrap
 									img(src=`img/svg/categories-${i}.svg` alt="")
-								+e.title!= t
+								.title-wrapp
+									+e.title!= t
 					+item(1, `Уруғлар`)
 					+item(2, `Агрохимия`)
 					+item(3, `Ўғитлар`)
