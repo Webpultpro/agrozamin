@@ -129,10 +129,10 @@ mixin sCatalog3(data)
 
 mixin sCatalog4(data)
 	// start sCatalog
-	.banner
+	.banner-catalog
 		h2 Боғ ва томорқа махсулотлари
 		button.btn.btn-primary.w-100.my-2 Батафсил
-		+pic("catalog-bg.jpg",'',0)
+		+pic("catalog-bg.jpg",'',0).picture-bg
 	+b.sCatalog.categories.section.pt-0&attributes(attributes)
 		h1 Барча махсулотлар
 		+catalog-filter(f)

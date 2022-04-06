@@ -593,7 +593,7 @@
 	}
 }
 
-.banner {
+.banner-catalog, .banner {
 	position: relative;
 	display: flex;
 	min-height: 188px;
@@ -634,7 +634,7 @@
 	}
 }
 @include media-breakpoint-down(lg) {
-	.banner {
+	.banner-catalog {
 		h2 {
 			font-size: 22px;
 			margin-bottom: 10px;
@@ -644,9 +644,16 @@
 }
 
 @include media-breakpoint-down(md) {
-	.banner {
+	.banner-catalog {
 		h2 {
 			text-shadow: 1px 1px 3px #fff;
+		}
+		.picture-bg {
+			img {
+				height: 100%;
+				max-width: 650px;
+				width: 650px;
+			}
 		}
 	}
 }

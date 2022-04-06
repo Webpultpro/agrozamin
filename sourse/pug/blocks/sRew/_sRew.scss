@@ -15,6 +15,12 @@
 		}
 		.text-secondary{
 			font-size: 14px;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			overflow: hidden;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			word-break: break-word;
 		}
 		&__slider{
 			@include media-breakpoint-down(sm) {
