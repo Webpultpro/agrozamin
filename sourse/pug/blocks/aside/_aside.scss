@@ -367,18 +367,18 @@
 		transition: 0.3s;
 	}
 	.icon-cat {
-		display: block;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-width: 37px;
 		width: 37px;
 		height: 37px;
 		background: #F1F1F1;
 		margin-right: 13px;
 		border-radius: 50%;
-		picture {
-			display: flex;
-			width: 37px;
-			height: 37px;
-			justify-content: center;
-			align-items: center;
+		.icon {
+			color: var(--bs-primary);
+			font-size: 1.8rem;
 		}
 	}
 }

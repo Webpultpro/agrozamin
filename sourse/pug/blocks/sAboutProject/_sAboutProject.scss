@@ -66,6 +66,9 @@
 		}
 		img{
 			margin-bottom: 20px;
+			@include media-breakpoint-down(md) {
+				width: 100%;
+			}
 		}
 		h1 {
 			line-height: calc(47 / 43);
