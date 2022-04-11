@@ -500,6 +500,9 @@ iframe {
 			font-size: rem(21);
 		}
 	}
+	h1 {
+		font-size: 28px;
+	}
 }
 
 @include media-breakpoint-up(lg) {
