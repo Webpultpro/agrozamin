@@ -3,12 +3,119 @@ mixin sBiography(data)
 	// start sBiography
 	+b.sBiography.section#sBiography&attributes(attributes)
 		.container
-			+e.user
-				+pic(`avatar-${2}.png`,'bg',0)
-				+e.user-info
-					+e.user-name Собиров Алишер
-					+e.user-job Аграном
+			.user-wrapper
+				+e.user
+					.avatar-wrapper
+						+pic(`avatar-${2}.png`,'bg',0)
+						+icon('icon-user-cabinet')
+					+e.user-info
+						+e.user-job Аграном
+						+e.user-name Собиров Алишер
+						+e.user-due Сўнги ташриф: 22:30
+				button.btn.btn-primary Хабар ёзиш
 			h4 Консултант биографияси
-			p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti mollitia, sequi voluptatum optio itaque odio quas expedita temporibus adipisci, perferendis ea cupiditate aperiam dolore quia aspernatur quae eius eaque eum nulla ipsum, accusamus fugit officia quibusdam fugiat. Quae quasi dolores asperiores, soluta doloribus velit! Ad recusandae a aperiam cum porro non expedita accusantium quibusdam, quam minus ullam id! Nisi, cupiditate ipsa deleniti id nam dolorum pariatur voluptate omnis repudiandae molestiae adipisci veritatis animi nobis libero illo! Consequatur similique nihil eveniet at esse ab beatae aperiam quaerat iusto fuga. Soluta eos omnis labore architecto consequuntur laboriosam est itaque vero, dolores animi, voluptas ea odio officia culpa praesentium illo vitae quo aliquid iusto impedit quae quis minus non voluptatum? Suscipit vitae vel quaerat qui facilis nulla id cumque ab cupiditate, quo consectetur, tempora deleniti! Libero qui voluptates ab repudiandae cumque dolor eaque adipisci sequi? Architecto expedita animi minima pariatur rem quisquam numquam eveniet ut, facere amet suscipit cum consectetur quam. Itaque ullam magnam et maxime id distinctio. Modi sunt laudantium error repellat temporibus, enim tempora illum est sint dicta sed aliquid ipsum similique eum dignissimos perspiciatis aperiam fugiat sapiente? Aspernatur ex dolor suscipit laudantium, porro enim? Doloremque voluptate pariatur veritatis hic omnis.
+			p Проведение научных исследований в области агрономии. Изучение и внедрение передовых методов возделывания полевых, садовых, огородных культур. Разработка и внедрение технологий по борьбе с вредителями, болезнями растений и сорняками. Разработка агротехнических мероприятий, направленных на повышение плодородия почв и увеличения урожайности сельскохозяйственных культур. Разработка производственных планов, видов и количества посадочных культур. Проведение научных исследований в области агрономии. Изучение и внедрение передовых методов возделывания полевых, садовых, огородных культур. Разработка и внедрение технологий по борьбе с вредителями, болезнями растений и сорняками. Разработка агротехнических мероприятий, направленных на повышение плодородия почв и увеличения урожайности сельскохозяйственных культур. Разработка производственных планов, видов и количества посадочных культур.
+
 			+sFilesDownload()
 	// end sBiography
+
+
+mixin sBiography2(data)
+	// start sBiography
+	+b.sBiography2.section#sBiography&attributes(attributes)
+		.container
+			.user-wrapper
+				+e.user
+					.avatar-wrapper
+						+pic(`user-avatar.png`,'bg',0)
+						+icon('icon-user-cabinet')
+					+e.user-info
+						+e.user-title Сўровнинг қисқача моҳияти
+						+e.user-text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+			+sFilesDownloadImages()
+	// end sBiography
+
+mixin sBiographyList(data)
+	// start sBiography
+	+b.sBiographyList.section#sBiographyList&attributes(attributes)
+		.container
+			h1 Қўнгироқлар тарихи
+			.list-wrapper
+				.head-region
+					.cols.name Мутаҳассис номи
+					.cols.prof Мутаҳассислиги
+					.cols.date Сана
+					.cols.time Вақти
+					.cols.link
+				.list-region
+					.list-item
+						.cols.name Собиров Алишер
+						.cols.prof Ўсимликлар химояси
+						.cols.date 04.04.2022
+						.cols.time 11:30 - 12:00
+						.cols.link
+							a(href="#").btn.btn-outline-primary Батафсил
+					.list-item
+						.cols.name Собиров Алишер
+						.cols.prof Ветеринар, Зоотехник, Агроном, Агротехник
+						.cols.date 04.04.2022
+						.cols.time 11:30 - 12:00
+						.cols.link
+							a(href="#").btn.btn-outline-primary Батафсил
+					.list-item
+						.cols.name Саидназиров Саидкамол
+						.cols.prof Аграном
+						.cols.date 04.04.2022
+						.cols.time 11:30 - 12:00
+						.cols.link
+							a(href="#").btn.btn-outline-primary Батафсил
+					.list-item
+						.cols.name Тўрамуротова Гулшод
+						.cols.prof Аграном
+						.cols.date 04.04.2022
+						.cols.time 11:30 - 12:00
+						.cols.link
+							a(href="#").btn.btn-outline-primary Батафсил
+					.list-item
+						.cols.name Собиров Алишер
+						.cols.prof Узумчилик
+						.cols.date 04.04.2022
+						.cols.time 11:30 - 12:00
+						.cols.link
+							a(href="#").btn.btn-outline-primary Батафсил
+					.list-item
+						.cols.name Тўрамуротова Гулшод
+						.cols.prof Аграном
+						.cols.date 04.04.2022
+						.cols.time 11:30 - 12:00
+						.cols.link
+							a(href="#").btn.btn-outline-primary Батафсил
+					.list-item
+						.cols.name Собиров Алишер
+						.cols.prof Ветеринар, Зоотехник, Агроном, Агротехник
+						.cols.date 04.04.2022
+						.cols.time 11:30 - 12:00
+						.cols.link
+							a(href="#").btn.btn-outline-primary Батафсил
+					.list-item
+						.cols.name Amirov Abdimumin
+						.cols.prof Зоотехник
+						.cols.date 04.04.2022
+						.cols.time 11:30 - 12:00
+						.cols.link
+							a(href="#").btn.btn-outline-primary Батафсил
+					.list-item
+						.cols.name Amirov Abdimumin
+						.cols.prof Зоотехник
+						.cols.date 04.04.2022
+						.cols.time 11:30 - 12:00
+						.cols.link
+							a(href="#").btn.btn-outline-primary Батафсил
+					.list-item
+						.cols.name Саидназиров Саидкамол
+						.cols.prof Аграном
+						.cols.date 04.04.2022
+						.cols.time 11:30 - 12:00
+						.cols.link
+							a(href="#").btn.btn-outline-primary Батафсил
+			+pugin

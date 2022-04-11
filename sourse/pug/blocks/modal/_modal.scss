@@ -216,6 +216,16 @@ a {
 	}
 }
 
+.modal-archive-download, .modal-archive-upload, .modal-archive-del {
+	.icon {
+		height: 120px;
+		color: var(--bs-primary);
+	}
+	.btn {
+		font-weight: 400;
+		width: 238px;
+	}
+}
 
 // 
 @include media-breakpoint-up(xl) {}
@@ -427,3 +437,4 @@ a {
 	border-radius: 50%;
 	color: var(--bs-primary);
 }
+

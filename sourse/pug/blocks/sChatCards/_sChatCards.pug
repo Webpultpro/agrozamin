@@ -172,9 +172,12 @@ mixin sChatCards-2(data)
 				.col-auto 
 					+b-c('check','Қабул қилиш').btn-outline-primary
 			+chartCardHor2(`2`,`Қўнғироқ якунланган`).text-warning
-				.col-auto 
-					+b-c('delete','Ўчириш').btn-outline-secondary2
+				.col-auto
+					+e.btn.btn-outline-primary(href="#")
+						+icon("video")
+						| Видео хаволаси
 			+pugin()
+		+linkedTime()
 	// end sChatCards
 
 
@@ -373,6 +376,19 @@ mixin sChatCards-47(data)
 				+e.btn.btn-primary.btn(type='button').w-190 Жўнатиш
 	// end sChatCards
 
+mixin linkedTime(data)
+	+b.linkedTime.section#linkedTime&attributes(attributes)
+		+b.chat-card--horizontal.mb-4
+			+e.block
+				a(href="#" target="_blank")
+					.first-side
+						.icon-wrapper
+							+icon("circle-time")
+						p Қўнгироқлар тарихи
+					.second-side
+						object(type="owo/uwu")
+							a.button(href="#") Барчаси
+								+icon("chevron-right")
 
 
 mixin sChatCardsPage(color='text-info') 

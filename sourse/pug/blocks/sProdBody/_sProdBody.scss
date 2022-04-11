@@ -111,6 +111,38 @@
 	&__caption {
 		max-width: rem(665);
 	}
+	&__wrapper {
+		margin: 40px 0 23px;
+		@include media-breakpoint-down(lg) {
+			margin: 20px 0;
+		}
+		.item-three {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			@include media-breakpoint-down(lg) {
+				align-items: flex-start;
+				flex-direction: column;
+			}
+			.items {
+				display: flex;
+				align-items: center;
+				color: var(--bs-primary);
+				@include media-breakpoint-down(lg) {
+					margin-bottom: 10px;
+				}
+				.icon {
+					margin-right: 7px;
+					@include media-breakpoint-down(lg) {
+						min-width: 32px;
+					}
+				}
+				span {
+					color: black;
+				}
+			}
+		}
+	}
 
 	@include media-breakpoint-down(md) {
 		&__slider-lg-wrap {

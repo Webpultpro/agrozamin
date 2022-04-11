@@ -153,21 +153,31 @@
 			<!-- start sBiography-->
 			<div class="sBiography section" id="sBiography">
 				<div class="container">
-					<div class="sBiography__user">
-						<!-- picture-->
-						<picture> 
-							<source type="image/webp" srcset="img/@2x/webp/avatar-2.webp"/><img class="object-fit-js" src="img/@2x/avatar-2.png" alt="" loading="lazy"/>
-						</picture>
-						<!-- /picture-->
-						<div class="sBiography__user-info">
-							<div class="sBiography__user-name">Собиров Алишер
+					<div class="user-wrapper">
+						<div class="sBiography__user">
+							<div class="avatar-wrapper">
+								<!-- picture-->
+								<picture> 
+									<source type="image/webp" srcset="img/@2x/webp/avatar-2.webp"/><img class="object-fit-js" src="img/@2x/avatar-2.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+								<svg class="icon icon-icon-user-cabinet ">
+									<use xlink:href="img/svg/sprite.svg#icon-user-cabinet"></use>
+								</svg>
 							</div>
-							<div class="sBiography__user-job">Аграном
+							<div class="sBiography__user-info">
+								<div class="sBiography__user-job">Аграном
+								</div>
+								<div class="sBiography__user-name">Собиров Алишер
+								</div>
+								<div class="sBiography__user-due">Сўнги ташриф: 22:30
+								</div>
 							</div>
 						</div>
+						<button class="btn btn-primary">Хабар ёзиш</button>
 					</div>
 					<h4>Консултант биографияси</h4>
-					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti mollitia, sequi voluptatum optio itaque odio quas expedita temporibus adipisci, perferendis ea cupiditate aperiam dolore quia aspernatur quae eius eaque eum nulla ipsum, accusamus fugit officia quibusdam fugiat. Quae quasi dolores asperiores, soluta doloribus velit! Ad recusandae a aperiam cum porro non expedita accusantium quibusdam, quam minus ullam id! Nisi, cupiditate ipsa deleniti id nam dolorum pariatur voluptate omnis repudiandae molestiae adipisci veritatis animi nobis libero illo! Consequatur similique nihil eveniet at esse ab beatae aperiam quaerat iusto fuga. Soluta eos omnis labore architecto consequuntur laboriosam est itaque vero, dolores animi, voluptas ea odio officia culpa praesentium illo vitae quo aliquid iusto impedit quae quis minus non voluptatum? Suscipit vitae vel quaerat qui facilis nulla id cumque ab cupiditate, quo consectetur, tempora deleniti! Libero qui voluptates ab repudiandae cumque dolor eaque adipisci sequi? Architecto expedita animi minima pariatur rem quisquam numquam eveniet ut, facere amet suscipit cum consectetur quam. Itaque ullam magnam et maxime id distinctio. Modi sunt laudantium error repellat temporibus, enim tempora illum est sint dicta sed aliquid ipsum similique eum dignissimos perspiciatis aperiam fugiat sapiente? Aspernatur ex dolor suscipit laudantium, porro enim? Doloremque voluptate pariatur veritatis hic omnis.</p>
+					<p>Проведение научных исследований в области агрономии. Изучение и внедрение передовых методов возделывания полевых, садовых, огородных культур. Разработка и внедрение технологий по борьбе с вредителями, болезнями растений и сорняками. Разработка агротехнических мероприятий, направленных на повышение плодородия почв и увеличения урожайности сельскохозяйственных культур. Разработка производственных планов, видов и количества посадочных культур. Проведение научных исследований в области агрономии. Изучение и внедрение передовых методов возделывания полевых, садовых, огородных культур. Разработка и внедрение технологий по борьбе с вредителями, болезнями растений и сорняками. Разработка агротехнических мероприятий, направленных на повышение плодородия почв и увеличения урожайности сельскохозяйственных культур. Разработка производственных планов, видов и количества посадочных культур.</p>
 					<div class="user-files section" id="user-files">
 						<div class="h3">Бириктирилган файллар</div>
 						<div class="files-wrapper">
@@ -778,6 +788,27 @@
 				</div>
 				<button class="btn btn-primary">ok</button>
 			</div>
+		</div>
+		<div class="modal-win modal-archive-download text-center" id="modal-archive-download" style="display: none">
+			<svg class="icon icon-download-modal  w-100px mx-auto">
+				<use xlink:href="img/svg/sprite.svg#download-modal"></use>
+			</svg><br/><br/>
+			<div class="h4 text-center">Архивга қўшиш</div><br/>
+			<p class="text-secondary">Маҳсулотингизни архивлаш орқали сиз маҳсулотингизни фаолсизлантиришингиз мумкин</p><br/><br/><b></b><a class="btn btn-primary mx-auto" href="#">Архивлаш</a>
+		</div>
+		<div class="modal-win modal-archive-upload text-center" id="modal-archive-upload" style="display: none">
+			<svg class="icon icon-upload-modal  w-100px mx-auto">
+				<use xlink:href="img/svg/sprite.svg#upload-modal"></use>
+			</svg><br/><br/>
+			<div class="h4 text-center">Архивдан чиқариш</div><br/>
+			<p class="text-secondary">Маҳсулотларни арҳивдан чиқариш орқали сиз маҳсулотларингизни фаоллаштирасиз</p><br/><br/><b></b><a class="btn btn-primary mx-auto" href="#">Арҳивдан чиқариш</a>
+		</div>
+		<div class="modal-win modal-archive-del text-center" id="modal-archive-del" style="display: none">
+			<svg class="icon icon-delete-modal  w-100px mx-auto">
+				<use xlink:href="img/svg/sprite.svg#delete-modal"></use>
+			</svg><br/><br/>
+			<div class="h4 text-center">Махсулотларни ўчириш</div><br/>
+			<p class="text-secondary">Ўчирилган махсулот платформадан бутунлай олиб ташланади ва уни таҳрирлашнинг имкони бўлмайди</p><br/><br/><b></b><a class="btn btn-primary mx-auto" href="#">Махсулотларни ўчириш</a>
 		</div>
 		<!-- end modals-->
 		<!-- modal libs-->

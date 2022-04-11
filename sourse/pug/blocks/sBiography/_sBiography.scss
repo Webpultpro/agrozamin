@@ -2,34 +2,70 @@
 .sBiography {
 	--sPT: #{rem(53)};
 	--sPB: #{rem(92)};
-
-	&__user {
+	.user-wrapper {
 		display: flex;
+		justify-content: space-between;
 		align-items: center;
-		picture {
-			width: rem(104);
-			height: rem(104);
-			margin-right: rem(29);
-		}
 		@include media-breakpoint-up(lg){
 			margin-bottom: rem(74);
 		}
+		@include media-breakpoint-down(sm) {
+			flex-direction: column;
+		}
 		margin-bottom: rem(40);
+		.btn {
+			font-size: 14px;
+			font-weight: 400;
+			padding: 11px 35px;
+		}
+	}
+	&__user {
+		display: flex;
+		align-items: center;
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 20px;
+		}
+		.avatar-wrapper {
+			background: #edeff2;
+			border-radius: 50%;
+			color: #a9a9a9;
+			height: 104px;
+			position: relative;
+			width: 104px;
+			margin-right: 35px;
+			.icon {
+				position: absolute;
+				top: calc(50% - 15px);
+				left: calc(50% - 15px);
+				font-size: 30px;
+			}
+		}
+		picture {
+			width: rem(104);
+			height: rem(104);
+			position: relative;
+			z-index: 50;
+		}
 	}
 	&__user-name {
 		font-weight: 500;
-		font-size: rem(32);
-		line-height: calc(37 / 32);
+		font-size: 20px;
+		line-height: 26px;
 		margin-bottom: rem(4);
 	}
 	&__user-job {
 		color: $primary;
 		font-weight: 500;
-		font-size: rem(28);
-		line-height: calc(32 / 28);
+		font-size: 20px;
+		line-height: 26px;
+	}
+	&__user-due {
+		color: #BFBFBF;
+		line-height: 18px;
 	}
 	h4{
 		margin-bottom: rem(10);
+		font-weight: 700;
 	}
 	p{
 		font-size: rem(20);
@@ -55,3 +91,151 @@
 	@include media-breakpoint-up(lg) {
 	}
 } // end.sBiography
+
+.sBiography2 {
+	--sPT: #{rem(53)};
+	--sPB: #{rem(92)};
+	.user-wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__user {
+		display: flex;
+		.avatar-wrapper {
+			background: #edeff2;
+			border-radius: 50%;
+			color: #a9a9a9;
+			height: 61px;
+			position: relative;
+			min-width: 61px;
+			margin-right: 25px;
+			margin-top: 5px;
+			.icon {
+				position: absolute;
+				top: calc(50% - 10px);
+				left: calc(50% - 10px);
+				font-size: 20px;
+			}
+		}
+		picture {
+			width: 61px;
+			height: 61px;
+			position: relative;
+			z-index: 50;
+		}
+	}
+	&__user-title {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 1;
+		margin-bottom: 5px;
+		color: #3E3E3E;
+	}
+	&__user-text {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 140.4%;
+		color: #7C7E80;
+	}
+}
+.sBiographyList {
+	padding-top: 15px;
+	.pagination-wrapper {
+		display: flex;
+		justify-content: center;
+	}
+	h1 {
+		text-align: center;
+	}
+	.list-wrapper {
+		margin-top: 50px;
+		margin-bottom: 65px;
+		@include media-breakpoint-down(md) {
+			overflow: scroll;
+			padding: 10px;
+			border: 1px solid #eee;
+			border-radius: 13px;
+		}
+	}
+	.cols {
+		padding: 27px 0 27px 27px;
+		width: 20%;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 20px;
+		&.prof {
+			@include media-breakpoint-down(lg) {
+				width: 30%;
+			}
+		}
+		&.date, &.time {
+			@include media-breakpoint-down(lg) {
+				width: 15%;
+			}
+		}
+	}
+	.head-region {
+		display: flex;
+		flex-flow: row nowrap;
+		@include media-breakpoint-down(md) {
+			width: 800px;
+		}
+		.cols {
+			color: #7C7E80;
+			@include media-breakpoint-down(lg) {
+				padding: 27px 0 27px 10px;
+			}
+		}
+	}
+	.list-region {
+		@include media-breakpoint-down(md) {
+			width: 800px;
+		}
+		.list-item {
+			display: flex;
+			flex-flow: row nowrap;
+			align-items: center;
+			border: 1px solid #EEEEEE;
+			box-sizing: border-box;
+			border-radius: 13px;
+			padding: 18px 0;
+			margin-bottom: 7px;
+			transition: 0.3s;
+			&:hover {
+				box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+			}
+			@include media-breakpoint-down(lg) {
+				padding: 12px 0;
+			}
+		}
+		.cols {
+			padding: 0 0 0 27px;
+			@include media-breakpoint-down(lg) {
+				padding: 0 0 0 10px;
+			}
+			&.prof {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 2;
+			}
+			&.link {
+				padding: 0 27px 0 0;
+				@include media-breakpoint-down(lg) {
+					padding: 0 10px 0 0;
+				}
+			}
+		}
+		.btn {
+			font-weight: 400;
+			padding: 10px;
+			min-width: 150px;
+			float: right;
+			@include media-breakpoint-down(lg) {
+				min-width: 100%;
+			}
+		}
+	}
+}

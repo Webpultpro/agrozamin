@@ -338,4 +338,40 @@ mixin modal()
 					+e.DIV.img-wrap.bg-wrap
 						+pic(`speaker_webcam.jpg`,'bg',0).picture-bg
 			button.btn.btn-primary ok
+
+	+b.modal-win.modal-archive-download.text-center(id="modal-archive-download" class=" " style="display: none" )
+		+icon('download-modal').w-100px.mx-auto
+		br
+		br
+		.h4.text-center Архивга қўшиш
+		br
+		p.text-secondary Маҳсулотингизни архивлаш орқали сиз маҳсулотингизни фаолсизлантиришингиз мумкин
+		br
+		br
+		b
+		a.btn.btn-primary.mx-auto(href="#") Архивлаш
+
+	+b.modal-win.modal-archive-upload.text-center(id="modal-archive-upload" class=" " style="display: none" )
+		+icon('upload-modal').w-100px.mx-auto
+		br
+		br
+		.h4.text-center Архивдан чиқариш
+		br
+		p.text-secondary Маҳсулотларни арҳивдан чиқариш орқали сиз маҳсулотларингизни фаоллаштирасиз
+		br
+		br
+		b
+		a.btn.btn-primary.mx-auto(href="#") Арҳивдан чиқариш
+
+	+b.modal-win.modal-archive-del.text-center(id="modal-archive-del" class=" " style="display: none" )
+		+icon('delete-modal').w-100px.mx-auto
+		br
+		br
+		.h4.text-center Махсулотларни ўчириш
+		br
+		p.text-secondary Ўчирилган махсулот платформадан бутунлай олиб ташланади ва уни таҳрирлашнинг имкони бўлмайди
+		br
+		br
+		b
+		a.btn.btn-primary.mx-auto(href="#") Махсулотларни ўчириш
 	// end modals
