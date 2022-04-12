@@ -136,6 +136,9 @@
 					@include media-breakpoint-down(lg) {
 						min-width: 32px;
 					}
+					&.icon-deliver-prod2 {
+						font-size: 1.6rem;
+					}
 				}
 				span {
 					color: black;
