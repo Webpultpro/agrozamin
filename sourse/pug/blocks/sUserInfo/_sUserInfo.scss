@@ -1,0 +1,33 @@
+.list-a4 {
+  border: 1px solid #EEEEEE;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 25px 50px 50px;
+  picture {
+    display: flex;
+    justify-content: center;
+  }
+  .state {
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  .state, .date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .info {
+      margin-bottom: 0;
+    }
+  }
+  .label {
+    font-size: 16px;
+    line-height: 125%;
+    color: #7C7E80;
+  }
+  .info {
+    font-size: 16px;
+    line-height: 125%;
+    color: black;
+    margin-bottom: 20px;
+  }
+}

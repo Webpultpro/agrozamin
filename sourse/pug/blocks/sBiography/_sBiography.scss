@@ -139,7 +139,7 @@
 		color: #7C7E80;
 	}
 }
-.sBiographyList {
+.sBiographyList, .sBiographyInquiries {
 	padding-top: 15px;
 	.pagination-wrapper {
 		display: flex;
@@ -233,9 +233,79 @@
 			padding: 10px;
 			min-width: 150px;
 			float: right;
+		}
+	}
+}
+.sBiographyList {
+	.list-region {
+		.btn {
 			@include media-breakpoint-down(lg) {
 				min-width: 100%;
 			}
 		}
+	}
+}
+.sBiographyInquiries {
+	padding-top: 0;
+	.head-region {
+		@include media-breakpoint-down(md) {
+			width: 500px;
+		}
+	}
+	.list-region {
+		@include media-breakpoint-down(md) {
+			width: 500px;
+		}
+	}
+	.cols {
+		width: 25%;
+		font-size: 16px;
+		&.sid {
+			@include media-breakpoint-down(lg) {
+				width: 15%;
+			}
+		}
+		&.status {
+			@include media-breakpoint-down(lg) {
+				width: 30%;
+			}
+		}
+		&.date {
+			@include media-breakpoint-down(lg) {
+				width: 20%;
+			}
+		}
+		&.link {
+			@include media-breakpoint-down(lg) {
+				width: 35%;
+			}
+		}
+	}
+	.btn {
+		font-size: 14px;
+		@include media-breakpoint-down(lg) {
+			min-width: 150px;
+		}
+		@include media-breakpoint-down(md) {
+			min-width: 140px;
+		}
+	}
+	.accepted {
+		color: #00CD69;
+	}
+	.rejected {
+		color: #ED6262;
+	}
+	.tab {
+		border-bottom: 1px solid #E6E6E6;
+		button {
+			padding: 0 0 16px;
+			@include media-breakpoint-down(sm) {
+				margin-right: 20px;
+			}
+		}
+	}
+	.list-wrapper {
+		margin-top: 0;
 	}
 }

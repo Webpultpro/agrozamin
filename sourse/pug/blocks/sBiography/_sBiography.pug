@@ -119,3 +119,183 @@ mixin sBiographyList(data)
 						.cols.link
 							a(href="#").btn.btn-outline-primary Батафсил
 			+pugin
+
+mixin sBiographyInquiries(data)
+	// start sBiography
+	+b.sBiographyInquiries.section#sBiographyInquiries&attributes(attributes)
+		.tabs-region
+			.tab
+				button.tablinks.vac.active(onclick="openCity(event, 'fermer-tab')") Fermerlar Maktabi
+				button.tablinks.res(onclick="openCity(event, 'agrolab-tab')") Agrolab
+				button.tablinks.res(onclick="openCity(event, 'agromarkaz-tab')") Agromarkaz
+			.tabcontent.opened(id="fermer-tab")
+				.list-wrapper
+					.head-region
+						.cols.sid Сўров ID си
+						.cols.status Холати
+						.cols.date Жўнатилган вақти
+						.cols.link
+					.list-region
+						.list-item
+							.cols.sid 215
+							.cols.status.accepted Қабул қилинди
+							.cols.date 04.04.2022
+							.cols.link
+								a(href="#").btn.btn-outline-primary Батафсил
+						.list-item
+							.cols.sid 154
+							.cols.status.accepted Қабул қилинди
+							.cols.date 25.03.2022
+							.cols.link
+								a(href="#").btn.btn-outline-primary Батафсил
+						.list-item
+							.cols.sid 654
+							.cols.status.rejected Рад етилди
+							.cols.date 22.03.2022
+							.cols.link
+								a(href="#").btn.btn-outline-primary Батафсил
+						.list-item
+							.cols.sid 458
+							.cols.status.accepted Қабул қилинди
+							.cols.date 18.03.2022
+							.cols.link
+								a(href="#").btn.btn-outline-primary Батафсил
+						.list-item
+							.cols.sid 125
+							.cols.status.rejected Рад етилди
+							.cols.date 15.03.2022
+							.cols.link
+								a(href="#").btn.btn-outline-primary Батафсил
+						.list-item
+							.cols.sid 778
+							.cols.status.accepted Қабул қилинди
+							.cols.date 10.03.2022
+							.cols.link
+								a(href="#").btn.btn-outline-primary Батафсил
+						.list-item
+							.cols.sid 456
+							.cols.status.rejected Рад етилди
+							.cols.date 04.03.2022
+							.cols.link
+								a(href="#").btn.btn-outline-primary Батафсил
+						.list-item
+							.cols.sid 874
+							.cols.status.rejected Рад етилди
+							.cols.date 02.03.2022
+							.cols.link
+								a(href="#").btn.btn-outline-primary Батафсил
+				+pugin
+			.tabcontent(id="agrolab-tab")
+				.list-wrapper
+					.head-region
+						.cols.sid Сўров ID си
+						.cols.status Холати
+						.cols.date Жўнатилган вақти
+						.cols.link
+					.list-region
+						.list-item
+							.cols.sid 215
+							.cols.status.accepted Қабул қилинди
+							.cols.date 04.04.2022
+							.cols.link
+								a(href="#").btn.btn-outline-primary Батафсил
+						.list-item
+							.cols.sid 154
+							.cols.status.accepted Қабул қилинди
+							.cols.date 25.03.2022
+							.cols.link
+								a(href="#").btn.btn-outline-primary Батафсил
+						.list-item
+							.cols.sid 654
+							.cols.status.rejected Рад етилди
+							.cols.date 22.03.2022
+							.cols.link
+								a(href="#").btn.btn-outline-primary Батафсил
+						.list-item
+							.cols.sid 458
+							.cols.status.accepted Қабул қилинди
+							.cols.date 18.03.2022
+							.cols.link
+								a(href="#").btn.btn-outline-primary Батафсил
+						.list-item
+							.cols.sid 125
+							.cols.status.rejected Рад етилди
+							.cols.date 15.03.2022
+							.cols.link
+								a(href="#").btn.btn-outline-primary Батафсил
+						.list-item
+							.cols.sid 778
+							.cols.status.accepted Қабул қилинди
+							.cols.date 10.03.2022
+							.cols.link
+								a(href="#").btn.btn-outline-primary Батафсил
+						.list-item
+							.cols.sid 456
+							.cols.status.rejected Рад етилди
+							.cols.date 04.03.2022
+							.cols.link
+								a(href="#").btn.btn-outline-primary Батафсил
+						.list-item
+							.cols.sid 874
+							.cols.status.rejected Рад етилди
+							.cols.date 02.03.2022
+							.cols.link
+								a(href="#").btn.btn-outline-primary Батафсил
+				+pugin
+			.tabcontent(id="agromarkaz-tab")
+				.list-wrapper
+					.head-region
+						.cols.sid Сўров ID си
+						.cols.status Холати
+						.cols.date Жўнатилган вақти
+						.cols.link
+					.list-region
+						.list-item
+							.cols.sid 215
+							.cols.status.accepted Қабул қилинди
+							.cols.date 04.04.2022
+							.cols.link
+								a(href="#").btn.btn-outline-primary Батафсил
+						.list-item
+							.cols.sid 154
+							.cols.status.accepted Қабул қилинди
+							.cols.date 25.03.2022
+							.cols.link
+								a(href="#").btn.btn-outline-primary Батафсил
+						.list-item
+							.cols.sid 654
+							.cols.status.rejected Рад етилди
+							.cols.date 22.03.2022
+							.cols.link
+								a(href="#").btn.btn-outline-primary Батафсил
+						.list-item
+							.cols.sid 458
+							.cols.status.accepted Қабул қилинди
+							.cols.date 18.03.2022
+							.cols.link
+								a(href="#").btn.btn-outline-primary Батафсил
+						.list-item
+							.cols.sid 125
+							.cols.status.rejected Рад етилди
+							.cols.date 15.03.2022
+							.cols.link
+								a(href="#").btn.btn-outline-primary Батафсил
+						.list-item
+							.cols.sid 778
+							.cols.status.accepted Қабул қилинди
+							.cols.date 10.03.2022
+							.cols.link
+								a(href="#").btn.btn-outline-primary Батафсил
+						.list-item
+							.cols.sid 456
+							.cols.status.rejected Рад етилди
+							.cols.date 04.03.2022
+							.cols.link
+								a(href="#").btn.btn-outline-primary Батафсил
+						.list-item
+							.cols.sid 874
+							.cols.status.rejected Рад етилди
+							.cols.date 02.03.2022
+							.cols.link
+								a(href="#").btn.btn-outline-primary Батафсил
+				+pugin
