@@ -139,7 +139,7 @@
 		color: #7C7E80;
 	}
 }
-.sBiographyList, .sBiographyInquiries {
+.sBiographyList, .sBiographyInquiries, .sBiographyList2 {
 	padding-top: 15px;
 	.pagination-wrapper {
 		display: flex;
@@ -242,6 +242,53 @@
 			@include media-breakpoint-down(lg) {
 				min-width: 100%;
 			}
+		}
+	}
+}
+.sBiographyList2 {
+	padding-top: 0;
+	.head-region {
+		@include media-breakpoint-down(md) {
+			width: 500px;
+		}
+	}
+	.list-region {
+		@include media-breakpoint-down(md) {
+			width: 500px;
+		}
+	}
+	.cols {
+		width: 25%;
+		font-size: 16px;
+		@include media-breakpoint-down(md) {
+			font-size: 14px;
+		}
+		&.name {
+			@include media-breakpoint-down(md) {
+				width: 26%;
+			}
+		}
+		&.date, &.time {
+			@include media-breakpoint-down(lg) {
+				width: 25%;
+			}
+			@include media-breakpoint-down(md) {
+				width: 20%;
+			}
+		}
+		&.link {
+			@include media-breakpoint-down(md) {
+				width: 34%;
+			}
+		}
+	}
+	.btn {
+		font-size: 14px;
+		@include media-breakpoint-down(lg) {
+			min-width: 150px;
+		}
+		@include media-breakpoint-down(md) {
+			min-width: 140px;
 		}
 	}
 }
