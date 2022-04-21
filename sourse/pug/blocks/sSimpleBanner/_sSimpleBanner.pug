@@ -16,3 +16,22 @@ mixin sSimpleBanner(data)
 							| www.uzimizniki.uz
 					+pic("simple-phone.png",'',0).phone-img
 	// end sSimpleBanner
+
+mixin sSimpleBannerBlue(data)
+	// start sSimpleBanner
+	+b.SECTION.sSimpleBanner.section#sSimpleBanner&attributes(attributes)
+		.container
+			+e.inner.bg-wrap
+				+pic("simple-banner-workers-group.jpg",'bg').picture-bg
+
+				+b.section-title
+					h2 O’zimizniki - қандай сервис?
+					p Кичик бизнес ва томорқа ер егалари учун маҳсус сервис
+					a.btn.btn-white(href="#") Батавсил
+				+e.img-wrap.blue
+					+b.site-link.blue
+						span
+							+icon("search2")
+							| www.uzimizniki.uz
+					+pic("workers-group.png",'',0).phone-img
+	// end sSimpleBanner

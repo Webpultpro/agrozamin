@@ -42,24 +42,23 @@ mixin sForm2()
 mixin sForm3()
 	+b.artical-form.section#form
 		.container
+			h2 Рўйхатдан ўтиш
 			+form-wrap
-				h2 Рўйхатдан ўтиш
+				.step-form
+					.step.active 1
+					.step 2
+					.step 3
+					.step 4
+					.step 5
 				.row
 					.col-lg-6
-						.form-wrap__input-wrap-select.form-group
-							.label
-								span.form-wrap__input-title Таълим йуналишлари
-								label
-									+input(`Энтомология`,`select`)
-						.form-wrap__input-wrap.form-group
-							.label
-								span.form-wrap__input-title Укиш тури
-								label
-									+input(`Интенсив курс`,`select`)
 						+input(``,`text`,`Исм`)
 						+input(``,`text`,`Фамилия`)
-					.col-lg-6
 						+input(``,`tel`,`Телефон рақами`)
+						label.custom-input.form-check
+							input.custom-input__input.form-check-input(name='checkbox' type='checkbox')
+							span.custom-input__text.form-check-label Шахсий маълумотлардан фойдаланиш <a href="#">шартларини қабул қиламан.</a>
+					.col-lg-6
 						+input(``,`text`,`E-mail`)
 						.form-wrap__input-wrap.form-group
 							.label
@@ -74,11 +73,153 @@ mixin sForm3()
 									span.col-4
 										label
 											+input(`Йил`,`select`)
-						label.custom-input.form-check
-							input.custom-input__input.form-check-input(name='checkbox' type='checkbox')
-							span.custom-input__text.form-check-label Шахсий маълумотлардан фойдаланиш <a href="#">шартларини қабул қиламан.</a>
 				.artical-form__btn-wrap
-					a.artical-form__btn(href="#") Рўйхатдан ўтиш
+					a.artical-form__btn(href="#") Кейингиси
+mixin sForm3step2()
+	+b.artical-form.section#form
+		.container
+			h2 Рўйхатдан ўтиш
+			+form-wrap
+				.step-form
+					.step.active 1
+					.step.active 2
+					.step 3
+					.step 4
+					.step 5
+				.row
+					.col-lg-6
+						.form-wrap__input-wrap-select.form-group
+							.label
+								span.form-wrap__input-title Жинсингиз *
+								label
+									+input(`Жинсингизи киритинг`,`select`)
+						.form-wrap__input-wrap.form-group
+							.label
+								span.form-wrap__input-title Маълумотингиз *
+								label
+									+input(`Маълумотингизни киритинг`,`select`)
+						.form-wrap__input-wrap.form-group
+							.label
+								span.form-wrap__input-title Паспорт маълумотлари *
+								.group-input
+									label
+										input.form-wrap__input.form-control(name="text" type="text" placeholder="Серияси")
+									label
+										input.form-wrap__input.form-control(name="text" type="text" placeholder="Рақами")
+						span.location-text Ўқишга қабул қилинган тақдирда Сиз ўқиш учун Фермерлар мактаби Андижон шахри филиалига йўналтириласиз. <a href="#">Локация</a>
+					.col-lg-6
+						.form-wrap__input-wrap.form-group
+							span.form-wrap__input-title Пасспортингизни маълумотлар қисмини илова қилинг *
+							+input("",'file')
+						.form-wrap__input-wrap.form-group
+							span.form-wrap__input-title Пасспортингизни яшаш жойи (прописка) қисмини илова қилинг *
+							+input("",'file')
+						.form-wrap__input-wrap.form-group
+							.label
+								span.form-wrap__input-title Доимий яшаш жойингиз *
+								span.row.row-select
+									span.col-4
+										label
+											+input(`Ҳудудингизн`,`select`)
+									span.col-4
+										label
+											+input(`Шаҳар/Туман`,`select`)
+									span.col-4
+										label
+											+input(`Манзил`,`text`)
+						.address-group
+							.name Вилоят:
+								span Андижон
+							.name Шаҳар / туман:
+								span Андижон
+							.name Манзил:
+								span Куйганёр
+				.artical-form__btn-wrap
+					a.artical-form__btn(href="#") Кейингиси
+mixin sForm3step3()
+	+b.artical-form.section#form
+		.container
+			h2 Рўйхатдан ўтиш
+			+form-wrap
+				.step-form
+					.step.active 1
+					.step.active 2
+					.step.active 3
+					.step 4
+					.step 5
+				.row
+					.col-lg-6
+						.form-wrap__input-wrap.form-group
+							.input-text-group
+								span.form-wrap__input-title Сиз Фермерлар мактаби ҳақида қаердан ешитдингиз? *
+								label
+									input.form-wrap__input.form-control(name="text" type="text" placeholder="Телеграмдан (Қайси канал ёки гуруҳдан)")
+								label
+									input.form-wrap__input.form-control(name="text" type="text" placeholder="Телеведениядан (Қайси каналдан)?")
+								label
+									input.form-wrap__input.form-control(name="text" type="text" placeholder="Инстаграмдан (Қайси саҳифадан)?")
+								label
+									input.form-wrap__input.form-control(name="text" type="text" placeholder="Агробанк филиалидан (Қайси филиалдан)?")
+								label
+									input.form-wrap__input.form-control(name="text" type="text" placeholder="Бошқа манбадан (масалан, дўстимдан)")
+						+input("",'text', "Диплом бўйича мутахассислигингиз: *")
+					.col-lg-6
+						+input("",'text', "Ҳозирги кунда қаерда нима иш билан шуғулланасиз? *")
+						+input("",'textarea', "Иш тажрибангиз неча йил (норасмий меҳнат фаолияти ҳам ҳисобланади)? *")(rows="6")
+						.form-wrap__input-wrap.form-group
+							span.form-wrap__input-title Аграр соҳада фаолият учун банк кредитидан фойдаланганмисиз? *
+							.group-radios
+								+in-c(`radio`, `Ҳа, фойдаланганман`)
+								+in-c(`radio`, `Йўқ, фойдаланмаганман.`)
+				.artical-form__btn-wrap
+					a.artical-form__btn(href="#") Кейингиси
+mixin sForm3step4()
+	+b.artical-form.section#form
+		.container
+			h2 Рўйхатдан ўтиш
+			+form-wrap
+				.step-form
+					.step.active 1
+					.step.active 2
+					.step.active 3
+					.step.active 4
+					.step 5
+				.row
+					.col-lg-6
+						.form-wrap__input-wrap.form-group
+							.input-text-group
+								span.form-wrap__input-title 3 та ижобий хислатингиз *
+								label
+									input.form-wrap__input.form-control(name="text" type="text" placeholder="1 - ижобий хислатингиз")
+								label
+									input.form-wrap__input.form-control(name="text" type="text" placeholder="2 - ижобий хислатингиз")
+								label
+									input.form-wrap__input.form-control(name="text" type="text" placeholder="3 - ижобий хислатингиз")
+					.col-lg-6
+						.form-wrap__input-wrap.form-group.checkboxes-group
+							span.form-wrap__input-title Қишлоқ хўжалигининг қайси соҳасига кўпроқ қизиқасиз (бир нечта жавобни танлашингиз мумкин)? *
+							+in-c('checkbox', "Чорвачилик")
+							+in-c('checkbox', "Сабзавот ва полизчилик")
+							+in-c('checkbox', "Паррандачилик")
+							+in-c('checkbox', "Иссиқхона хўжалиги")
+							+in-c('checkbox', "Узумчилик")
+				.artical-form__btn-wrap
+					a.artical-form__btn(href="#") Кейингиси
+mixin sForm3step5()
+	+b.artical-form.section#form
+		.container
+			h2 Рўйхатдан ўтиш
+			+form-wrap
+				.step-form
+					.step.active 1
+					.step.active 2
+					.step.active 3
+					.step.active 4
+					.step.active 5
+				+input("",'textarea', "Фермерлар мактабидан нималарни кутяпсиз? (фикрларингизни аниқ равишда 100-150 та сўзда ифодаланг)? *")(rows="6")
+				+input("",'textarea', "Танлаган соҳангиз бўйича қандай тажриба ва кўникмаларга эгасиз? Фермерлар мактабида ўқиш учун ўзингизни қай даражада тайёрман деб ҳисоблайсиз? Жавобингизни 100-150 та сўзда ифодаланг. *")(rows="6")
+				.artical-form__btn-wrap
+					a.artical-form__btn(href="#") Кейингиси
 mixin sForm4()
 	+b.artical-form.section#form
 		.container

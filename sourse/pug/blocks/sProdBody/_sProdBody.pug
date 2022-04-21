@@ -9,10 +9,7 @@ mixin sProdBody(data)
 						+e.slider-lg-wrap
 							+e.slider--lg.mySwiper2.swiper-container
 								.swiper-wrapper
-									+e.slide.swiper-slide
-										+e.img-wrap(href=`img/@2x/prod-slide.png` data-fancybox="gal").bg-wrap
-											img.img-bg(src="img/@2x/prod-slide.png" loading="lazy" , alt="")
-									- for (var x = 0; x < 3; x++)
+									- for (var x = 0; x < 4; x++)
 										+e.slide.swiper-slide
 											+e.img-wrap(href=`img/@2x/prod-${x+1}.jpg` data-fancybox="gal").bg-wrap
 												img.img-bg(src=`img/@2x/prod-${x+1}.jpg` loading="lazy" , alt="")
@@ -26,7 +23,7 @@ mixin sProdBody(data)
 									- for (var x = 0; x < 4; x++)
 										+e.slide.swiper-slide
 											+e.img-wrap().bg-wrap
-												img.img-bg(src="img/@2x/prod-slide.png"  loading="lazy", alt="")
+												img.img-bg(src=`img/@2x/prod-${x+1}.jpg`  loading="lazy", alt="")
 							+arrow
 							
 						+e.btn.d-none.d-md-block(href="#") Оставить заявку
@@ -38,6 +35,13 @@ mixin sProdBody(data)
 								strong 4 199 сум
 								span килограм учун
 							+e.wrapper
+								.item-three
+									.items
+										+icon('icon-user-cabinet')
+										span OOO "Irrigation Solution"
+									.items
+										+icon('icon-address')
+										span Тошкент шахри
 								.item-three
 									.items
 										+icon('handshake-prod')
@@ -96,6 +100,13 @@ mixin sProdBody2(data)
 								strong 4 199 сум
 								span килограм учун
 							+e.wrapper
+								.item-three
+									.items
+										+icon('icon-user-cabinet')
+										span OOO "Irrigation Solution"
+									.items
+										+icon('icon-address')
+										span Тошкент шахри
 								.item-three
 									.items
 										+icon('handshake-prod')

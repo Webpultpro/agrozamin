@@ -87,3 +87,73 @@ mixin sNotifications(data)
                                 p.desc Шомаҳмудов Егамберди
                         a(href="#").close
                             +icon("close")
+
+mixin sNotificationsScroll(data)
+    .user-dropdown
+        .scrollbar-region
+            .category-image
+                a(href="#").link-to
+                    .category-icon.green
+                        +icon("icon-video")
+                    .desc-wrapper
+                        p.title Сўровингиз қабул қилинди
+                        p.date
+                            span.clock-wrap
+                                +icon("icon-clock")
+                                span 04.01.2022   11:00 - 11:30
+                a(href="#").close
+                    +icon("close")
+            .category-image
+                a(href="#").link-to
+                    .category-icon.blue
+                        +icon("icon-video")
+                    .desc-wrapper
+                        p.title Видео мулоқот вақти
+                        p.date
+                            span.clock-wrap
+                                +icon("icon-clock")
+                                span 04.01.2022   11:00 - 11:30
+                a(href="#").btn.btn-primary
+                    +icon("video")
+                    span Бошлаш
+                a(href="#").close
+                    +icon("close")
+            .category-image
+                a(href="#").link-to
+                    .category-icon.red
+                        +icon("icon-video")
+                    .desc-wrapper
+                        p.title Сўровингиз қабул қилинди
+                        p.date
+                            span.clock-wrap
+                                +icon("icon-clock")
+                                span 04.01.2022   11:00 - 11:30
+                a(href="#").close
+                    +icon("close")
+            .category-image
+                a(href="#").link-to
+                    .category-icon.green
+                        +icon("icon-basket")
+                    .desc-wrapper
+                        p.title Сўровингиз қабул қилинди
+                        p.desc Қизил лавлаги лавлаги Кабачок Аймаран Қизил лавлаги лавлаги Кабачок Аймаран
+                a(href="#").close
+                    +icon("close")
+            .category-image
+                a(href="#").link-to
+                    .category-icon.red
+                        +icon("icon-basket")
+                    .desc-wrapper
+                        p.title Сўровингиз қабул қилинди
+                        p.desc Қизил лавлаги лавлаги Кабачок Аймаран Қизил лавлаги лавлаги Кабачок Аймаран
+                a(href="#").close
+                    +icon("close")
+            .category-image
+                a(href="#").link-to
+                    .category-icon.green
+                        +icon("icon-box")
+                    .desc-wrapper
+                        p.title Янги сўров
+                        p.desc Қизил лавлаги лавлаги Кабачок Аймаран Қизил лавлаги лавлаги Кабачок Аймаран
+                a(href="#").close
+                    +icon("close")

@@ -1,0 +1,51 @@
+extends layout/main.pug
+
+
+include ../blocks/sAboutProject/_sAboutProject.pug
+include ../blocks/sOurGoal/_sOurGoal.pug
+include ../blocks/sOurDuty/_sOurDuty.pug
+include ../blocks/sServicePurpose/_sServicePurpose.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sAgrolab/_sAgrolab.pug
+
+block variables
+	- let  mainPage= 'about-project bg-white'
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Лойиҳа ҳақида'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+topLine()
+		+top-nav()
+	+breadcrumb('Асосий саҳифа', title)
+	+sAboutProject2()
+	+sServicePurpose(`Биз ҳақимизда`) 
+		.row.aligin-items-center.pt-4
+			+e.col.col-lg-6.text-center
+				img(src="img/svg/img-left.svg", alt="")
+			.col-lg-6.col-xl
+				+e.card-content
+					p Фермерлар мактаби - бу қишлоқ хўжалиги маҳсулотларини ишлаб чиқаришда энг замонавий инновацион технологиялардан фойдаланишни ёшларга ўргатиш, билимли ва малакали ёш фермерларни тайёрлаш ва қишлоқ хўжалиги соҳасида тадбиркорлик кўникмаларини ошириш сирларини очиб берадиган Ўзбекистондаги илк лойиҳа.
+					a.btn.btn-primary.w-190(href="#")  Батафсил
+
+	+sOurGoal()
+	+sOurDuty2()
+	+sForm3step2
+	+sAgrolab()
+	//- +sServicePurpose(`Хизмат кимлар учун?`)
+	//- 	+cardS(`Сотувчилар учун`, `Ўз махсулотига ега бўлган, янги мижозлар орқали бизнесини ривожлантирмоқчи бўлган бизнес егалари ишлаб чиқарувчи корхоналар учун`, 1)
+	//- 		+card-item(1, `Ўзингиз ва компаниянгиз ҳақида маълумотни тўлдиринг`)
+	//- 		+card-item(2, `Маҳсулотингизни сайтга юкланг`)
+	//- 		+card-item(3, `Савдо орқли фойдага ега бўлинг`)
+	//- 	+cardS(`Харидорлар учун`, `Хар бир харидор ўзлари учун керакли бўлган махсулотни танлаб унга буюртма беришлари ва сотувчи билан ўзаро алоқа ўрнатишлари мумкин`, 2)
+	//- 		+card-item(4, `Фермерлар ўз махсулотларини жойлаштирадилар`)
+	//- 		+card-item(5, `Сиз керакли маҳсулотни танлайсиз`)
+	//- 		+card-item(6, `Етказиб бериш ва вақти ҳақида келишиб оласиз`)
+	+footer()
+
+

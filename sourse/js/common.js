@@ -484,10 +484,8 @@ function eventHandler() {
 		$('body').toggleClass("fixed")
 	})
 
-
-
 	var swiper00 = new Swiper(".mySwiper", {
-		loop: true,
+		loop: false,
 		spaceBetween: 10,
 		slidesPerView: 3,
 		freeMode: true,
@@ -979,3 +977,20 @@ $(document).ready(function(){
 	});
 });
 /*end checkboxOpenDate*/
+
+/*start favoriteButton*/
+$(document).ready(function(){
+	$(".sProdBody__footer-link.favorite").on('click', function () {
+		if ($(this).hasClass('active')) {
+			$(this).removeClass('active');
+			$('.icon-like', this).css("display", "block");
+			$('.icon-like-link', this).css("display", "none");
+		}
+		else {
+			$(this).addClass('active');
+			$('.icon-like', this).css("display", "none");
+			$('.icon-like-link', this).css("display", "block");
+		}
+	});
+});
+/*end favoriteButton*/

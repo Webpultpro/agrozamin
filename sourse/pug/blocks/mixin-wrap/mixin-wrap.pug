@@ -80,12 +80,9 @@ mixin cardlinksWithPhone(f)
 	+e.footer-links&attributes(attributes)
 		+e.footer-link(href="#")
 			+icon("email-link")
-		if f
-			+e.footer-link(href="#" class="favorite")
-				+icon("like-link")
-		if !f
-			+e.footer-link(href="#" class="notf")
-				+icon("like")
+		+e.footer-link(href="#" class="favorite")
+			+icon("like-link")
+			+icon("like")
 		.sProdBody__footer-link.phone-button
 			.icon-wrapper
 				+icon("phone-link")
