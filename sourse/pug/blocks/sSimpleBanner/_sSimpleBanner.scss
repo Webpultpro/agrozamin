@@ -46,6 +46,11 @@
 				border-radius: 12px;
 				// z-index: -1;
 			}
+			&.noblur {
+				&::after {
+                  backdrop-filter: blur(0);
+				}
+			}
 		}
 
 		.btn{

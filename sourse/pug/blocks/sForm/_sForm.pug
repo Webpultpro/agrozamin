@@ -220,6 +220,177 @@ mixin sForm3step5()
 				+input("",'textarea', "Танлаган соҳангиз бўйича қандай тажриба ва кўникмаларга эгасиз? Фермерлар мактабида ўқиш учун ўзингизни қай даражада тайёрман деб ҳисоблайсиз? Жавобингизни 100-150 та сўзда ифодаланг. *")(rows="6")
 				.artical-form__btn-wrap
 					a.artical-form__btn(href="#") Кейингиси
+mixin sForm3agrolab()
+	+b.artical-form.section#form
+		.container
+			h2 Рўйхатдан ўтиш
+			+form-wrap
+				.step-form
+					.step.active 1
+					.step 2
+					.step 3
+					.step 4
+					.step 5
+				.row
+					.col-lg-6
+						.form-wrap__input-wrap-select.form-group
+							.label
+								span.form-wrap__input-title Таълим йўналишлари
+								label
+									+input(`Энтомология`,`select`)
+						.form-wrap__input-wrap.form-group
+							.label
+								span.form-wrap__input-title Ўқиш тури
+								label
+									+input(`Интенсив курс`,`select`)
+						+input(``,`text`,`Исм`)
+						+input(``,`text`,`Фамилия`)
+					.col-lg-6
+						+input(``,`tel`,`Телефон рақами`)
+						+input(``,`text`,`E-mail`)
+						.form-wrap__input-wrap.form-group
+							.label
+								span.form-wrap__input-title Дата рождения *
+								span.row.row-select
+									span.col-4
+										label
+											+input(`Кун`,`select`)
+									span.col-4
+										label
+											+input(`Ой`,`select`)
+									span.col-4
+										label
+											+input(`Йил`,`select`)
+						label.custom-input.form-check
+							input.custom-input__input.form-check-input(name='checkbox' type='checkbox')
+							span.custom-input__text.form-check-label Шахсий маълумотлардан фойдаланиш <a href="#">шартларини қабул қиламан.</a>
+				.artical-form__btn-wrap
+					a.artical-form__btn(href="#") Кейингиси
+mixin sForm3step2agrolab()
+	+b.artical-form.section#form
+		.container
+			h2 Рўйхатдан ўтиш
+			+form-wrap
+				.step-form
+					.step.active 1
+					.step.active 2
+					.step 3
+					.step 4
+					.step 5
+				.row
+					.col-lg-6
+						.form-wrap__input-wrap-select.form-group
+							.label
+								span.form-wrap__input-title Жинсингиз *
+								label
+									+input(`Жинсингизи киритинг`,`select`)
+						.form-wrap__input-wrap.form-group
+							.label
+								span.form-wrap__input-title Маълумотингиз *
+								label
+									+input(`Маълумотингизни киритинг`,`select`)
+						.form-wrap__input-wrap.form-group
+							.label
+								span.form-wrap__input-title Паспорт маълумотлари *
+								.group-input
+									label
+										input.form-wrap__input.form-control(name="text" type="text" placeholder="Серияси")
+									label
+										input.form-wrap__input.form-control(name="text" type="text" placeholder="Рақами")
+						span.location-text Ўқишга қабул қилинган тақдирда Сиз ўқиш учун Фермерлар мактаби Андижон шахри филиалига йўналтириласиз. <a href="#">Локация</a>
+					.col-lg-6
+						.form-wrap__input-wrap.form-group
+							span.form-wrap__input-title Пасспортингизни маълумотлар қисмини илова қилинг *
+							+input("",'file')
+						.form-wrap__input-wrap.form-group
+							span.form-wrap__input-title Пасспортингизни яшаш жойи (прописка) қисмини илова қилинг *
+							+input("",'file')
+						.form-wrap__input-wrap.form-group
+							.label
+								span.form-wrap__input-title Доимий яшаш жойингиз *
+								span.row.row-select
+									span.col-4
+										label
+											+input(`Ҳудудингизни`,`select`)
+									span.col-4
+										label
+											+input(`Шаҳар/Туман`,`select`)
+									span.col-4
+										label
+											+input(`Манзил`,`text`)
+						.address-group
+							.name Вилоят:
+								span Андижон
+							.name Шаҳар / туман:
+								span Андижон
+							.name Манзил:
+								span Куйганёр
+				.artical-form__btn-wrap
+					a.artical-form__btn(href="#") Кейингиси
+mixin sForm3step3agrolab()
+	+b.artical-form.section#form
+		.container
+			h2 Рўйхатдан ўтиш
+			+form-wrap
+				.step-form
+					.step.active 1
+					.step.active 2
+					.step.active 3
+					.step 4
+					.step 5
+				+input("",'text', "Касбингиз (нима иш билан шуғулланасиз?): ")
+				+input("",'textarea', "Иш тажрибангиз (норасмий меҳнат фаолияти ҳам) *")(rows="6")
+				.artical-form__btn-wrap
+					a.artical-form__btn(href="#") Кейингиси
+mixin sForm3step4agrolab()
+	+b.artical-form.section#form
+		.container
+			h2 Рўйхатдан ўтиш
+			+form-wrap
+				.step-form
+					.step.active 1
+					.step.active 2
+					.step.active 3
+					.step.active 4
+					.step 5
+				.row
+					.col-lg-6
+						.form-wrap__input-wrap.form-group
+							.form-wrap__input-wrap.form-group.checkboxes-group
+								span.form-wrap__input-title Ўқимоқчи бўлган йўналишингизни танланг – асосий танлов:
+								+in-c('checkbox', "Энтомология")
+								+in-c('checkbox', "Фитопатология")
+								+in-c('checkbox', "Нематология")
+								+in-c('checkbox', "Вирусология")
+								+in-c('checkbox', "Гербология")
+								+in-c('checkbox', "Тупроқ ва сув таҳлили")
+								+in-c('checkbox', "Токсикология")
+					.col-lg-6
+						.form-wrap__input-wrap.form-group.checkboxes-group
+							span.form-wrap__input-title Ўқимоқчи бўлган йўналишингизни танланг – 2 чи танлов:
+							+in-c('checkbox', "Энтомология")
+							+in-c('checkbox', "Фитопатология")
+							+in-c('checkbox', "Нематология")
+							+in-c('checkbox', "Вирусология")
+							+in-c('checkbox', "Гербология")
+							+in-c('checkbox', "Тупроқ ва сув таҳлили")
+							+in-c('checkbox', "Токсикология")
+				.artical-form__btn-wrap
+					a.artical-form__btn(href="#") Кейингиси
+mixin sForm3step5agrolab()
+	+b.artical-form.section#form
+		.container
+			h2 Рўйхатдан ўтиш
+			+form-wrap
+				.step-form
+					.step.active 1
+					.step.active 2
+					.step.active 3
+					.step.active 4
+					.step.active 5
+				+input("",'textarea', "“Ўсимликларни ҳимоя қилиш” интенсив ўқув курсида айнан қандай билим ва кўникмаларни эгаллашни хоҳлардингиз ва уларни нима мақсадда қўллайсиз (фикрингизни 100-150 та сўздан иборат ҳолда ифодаланг)?")(rows="6")
+				.artical-form__btn-wrap
+					a.artical-form__btn(href="#") Кейингиси
 mixin sForm4()
 	+b.artical-form.section#form
 		.container
