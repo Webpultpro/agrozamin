@@ -229,7 +229,7 @@
     width: 32.5%;
     display: flex;
     justify-content: flex-start;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     color: #3E3E3E;
     margin-right: 11px;
     &:nth-child(3n + 3) {
