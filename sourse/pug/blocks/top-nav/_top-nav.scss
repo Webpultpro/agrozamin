@@ -347,8 +347,13 @@
 			padding: 4.5px 2.5rem 4.5px 1rem;
 			span {
 				max-width: rem(263);
-				line-height: 1;
-				display: block;
+				line-height: 1.2;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				word-wrap: break-word;
+				display: -webkit-box;
+				-webkit-line-clamp: 3;
+				-webkit-box-orient: vertical;
 			}
 		}
 		& > li > a {
