@@ -7687,6 +7687,117 @@
 			<div class="h4 text-center">Махсулотларни ўчириш</div><br/>
 			<p class="text-secondary">Ўчирилган махсулот платформадан бутунлай олиб ташланади ва уни таҳрирлашнинг имкони бўлмайди</p><br/><br/><b></b><a class="btn btn-primary mx-auto" href="#">Махсулотларни ўчириш</a>
 		</div>
+		<div class="form-wrap modal-win modal-work-time text-center" id="modal-work-time" style="display: none">
+			<form>
+				<div class="row">
+					<div class="self-info col-md-6">
+						<div class="h4">Шахсий маълумотларингизни киритинг</div><span class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">Исм *</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
+							</label></span>
+						<!-- +e.input-wrap--><span class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">Фамилия *</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
+							</label></span>
+						<!-- +e.input-wrap--><span class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">Мутаҳассислиги</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
+							</label></span>
+						<!-- +e.input-wrap--><span class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">Биография</span><textarea class="form-wrap__input form-control" name="textarea" placeholder=""></textarea>
+							</label></span>
+						<!-- +e.input-wrap--><span class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="file" type="file"/></span>
+						<!-- +e.input-wrap-->
+					</div>
+					<div class="dates col-md-6">
+						<div class="h4">Ҳафта кунлари ва иш соатингизни киритинг</div>
+						<div class="dates-wrapper">
+							<div class="title-wrapper">
+								<div class="row">
+									<div class="title col-6">Ҳафта кунлари</div>
+									<div class="title col-6">Иш соати</div>
+								</div>
+							</div>
+							<div class="date row">
+								<div class="week col-6">
+									<label class="custom-input form-check">
+										<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Душанба</span>
+									</label>
+								</div>
+								<div class="from-to col-6">
+									<input type="text" id="monday-from" name="from" placeholder="00:00"/>
+									<input type="text" id="monday-to" name="from" placeholder="00:00"/>
+								</div>
+							</div>
+							<div class="date row">
+								<div class="week col-6">
+									<label class="custom-input form-check">
+										<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Сешанба</span>
+									</label>
+								</div>
+								<div class="from-to col-6">
+									<input type="text" id="tuesday-from" name="from" placeholder="00:00"/>
+									<input type="text" id="tuesday-to" name="from" placeholder="00:00"/>
+								</div>
+							</div>
+							<div class="date row">
+								<div class="week col-6">
+									<label class="custom-input form-check">
+										<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Чоршанба</span>
+									</label>
+								</div>
+								<div class="from-to col-6">
+									<input type="text" id="thursday-from" name="from" placeholder="00:00"/>
+									<input type="text" id="thursday-to" name="from" placeholder="00:00"/>
+								</div>
+							</div>
+							<div class="date row">
+								<div class="week col-6">
+									<label class="custom-input form-check">
+										<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Пайшанба</span>
+									</label>
+								</div>
+								<div class="from-to col-6">
+									<input type="text" id="wednessday-from" name="from" placeholder="00:00"/>
+									<input type="text" id="wednessday-to" name="from" placeholder="00:00"/>
+								</div>
+							</div>
+							<div class="date row">
+								<div class="week col-6">
+									<label class="custom-input form-check">
+										<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Жума</span>
+									</label>
+								</div>
+								<div class="from-to col-6">
+									<input type="text" id="friday-from" name="from" placeholder="00:00"/>
+									<input type="text" id="friday-to" name="from" placeholder="00:00"/>
+								</div>
+							</div>
+							<div class="date row">
+								<div class="week col-6">
+									<label class="custom-input form-check">
+										<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Шанба</span>
+									</label>
+								</div>
+								<div class="from-to col-6">
+									<input type="text" id="suturday-from" name="from" placeholder="00:00"/>
+									<input type="text" id="suturday-to" name="from" placeholder="00:00"/>
+								</div>
+							</div>
+							<div class="date row">
+								<div class="week col-6">
+									<label class="custom-input form-check">
+										<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Якшанба</span>
+									</label>
+								</div>
+								<div class="from-to col-6">
+									<input type="text" id="sun-from" name="from" placeholder="00:00"/>
+									<input type="text" id="sun-to" name="from" placeholder="00:00"/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wrapper-links"><a class="btn btn-primary w-190 mx-auto" href="#">Жўнатиш</a></div>
+				</div>
+			</form>
+		</div>
 		<!-- end modals-->
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>

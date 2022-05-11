@@ -374,4 +374,80 @@ mixin modal()
 		br
 		b
 		a.btn.btn-primary.mx-auto(href="#") Махсулотларни ўчириш
+
+	+b.form-wrap.modal-win.modal-work-time.text-center(id="modal-work-time" class=" " style="display: none" )
+		form
+			.row
+				.self-info.col-md-6
+					.h4 Шахсий маълумотларингизни киритинг
+					+input("",'text','Исм *')
+					+input("",'text','Фамилия *')
+					+input("",'text','Мутаҳассислиги')
+					+input("",'textarea','Биография')
+					+input("",'file')
+				.dates.col-md-6
+					.h4 Ҳафта кунлари ва иш соатингизни киритинг
+					.dates-wrapper
+						.title-wrapper
+							.row
+								.title.col-6 Ҳафта кунлари
+								.title.col-6 Иш соати
+						.date.row
+							.week.col-6
+								label.custom-input.form-check
+									input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
+									span.check-label Душанба
+							.from-to.col-6
+								input(type="text" id="monday-from" name="from" placeholder="00:00")
+								input(type="text" id="monday-to" name="from" placeholder="00:00")
+						.date.row
+							.week.col-6
+								label.custom-input.form-check
+									input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
+									span.check-label Сешанба
+							.from-to.col-6
+								input(type="text" id="tuesday-from" name="from" placeholder="00:00")
+								input(type="text" id="tuesday-to" name="from" placeholder="00:00")
+						.date.row
+							.week.col-6
+								label.custom-input.form-check
+									input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
+									span.check-label Чоршанба
+							.from-to.col-6
+								input(type="text" id="thursday-from" name="from" placeholder="00:00")
+								input(type="text" id="thursday-to" name="from" placeholder="00:00")
+						.date.row
+							.week.col-6
+								label.custom-input.form-check
+									input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
+									span.check-label Пайшанба
+							.from-to.col-6
+								input(type="text" id="wednessday-from" name="from" placeholder="00:00")
+								input(type="text" id="wednessday-to" name="from" placeholder="00:00")
+						.date.row
+							.week.col-6
+								label.custom-input.form-check
+									input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
+									span.check-label Жума
+							.from-to.col-6
+								input(type="text" id="friday-from" name="from" placeholder="00:00")
+								input(type="text" id="friday-to" name="from" placeholder="00:00")
+						.date.row
+							.week.col-6
+								label.custom-input.form-check
+									input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
+									span.check-label Шанба
+							.from-to.col-6
+								input(type="text" id="suturday-from" name="from" placeholder="00:00")
+								input(type="text" id="suturday-to" name="from" placeholder="00:00")
+						.date.row
+							.week.col-6
+								label.custom-input.form-check
+									input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
+									span.check-label Якшанба
+							.from-to.col-6
+								input(type="text" id="sun-from" name="from" placeholder="00:00")
+								input(type="text" id="sun-to" name="from" placeholder="00:00")
+				.wrapper-links
+					a.btn.btn-primary.w-190.mx-auto(href="#") Жўнатиш
 	// end modals

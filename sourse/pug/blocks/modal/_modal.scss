@@ -71,9 +71,57 @@
 		font-weight: 400;
 	}
 }
-
+.modal-work-time {
+	max-width: 870px;
+	h4 {
+		margin-bottom: 15px;
+		text-align: left;
+		min-height: 48px;
+		@include media-breakpoint-down(md) {
+			text-align: center;
+			min-height: 0;
+		}
+	}
+	.title {
+		font-size: 16px;
+		color: #999999;
+		font-weight: 400;
+	}
+	.title-wrapper {
+		margin-bottom: 16px;
+		padding-bottom: 5px;
+		border-bottom: 1px solid #E0E0E0;
+	}
+	.dates-wrapper {
+		margin-top: 33px;
+	}
+    .dates {
+		@include media-breakpoint-down(md) {
+			margin-top: 30px;
+		}
+	}
+	textarea {
+		&.form-control {
+			min-height: 150px;
+		}
+	}
+	.dates-wrapper {
+		.date {
+			margin-bottom: 23px;
+			@include media-breakpoint-down(lg) {
+				margin-bottom: 16px;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
 .modal-win {
 	// display: block;
+	&.modal-work-time {
+		max-width: 870px;
+	}
 	&.modal-video {
 		padding: 24px;
 		width: 487px;
