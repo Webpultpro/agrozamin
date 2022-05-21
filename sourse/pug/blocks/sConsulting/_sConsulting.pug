@@ -230,3 +230,10 @@ mixin sChatsSection(data)
                 button.btn.btn-primary Бошлаш
             .consultant__col.col-auto.d-none.d-lg-block
                 +pic("consultant.png", '', 0)
+
+mixin sConsultantForm(data)
+    div.SECTION.sConsultantForm.section#sConsultantForm&attributes(attributes)
+        .container
+            +form-wrap
+                +sFormConsulting()
+                +sFormTabbedDates()

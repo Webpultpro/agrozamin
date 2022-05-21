@@ -1,0 +1,209 @@
+mixin sDatesIndividual(data)
+    +b.sDatesIndividual.section#sDatesIndividual&attributes(attributes)
+        .warning-wrapper
+            +icon("warning")
+            .date-text-info Индивидуал созламада сиз танланган кун давомидаги барча оралиқ инетрвалларни ўзингиз истаган ҳолда қўйиб чиқишингиз мумкин. Бунда сиз ҳар битта конференсия вақтини давомийлигини кўрсатишингиз керак бўлади
+        .dates-wrapper
+            .date.row
+                .week
+                    label.custom-input.form-check
+                        input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
+                        span.check-label Душанба
+                .inner-date-wrapper
+                    .from-to
+                        div(id="groupInput-1" data-day="monday").groupInputs
+                            input(type="text" name="groupInputs[monday][1][from]" placeholder="00:00")
+                            input(type="text" name="groupInputs[monday][1][to]" placeholder="00:00")
+                    button(type="button" onclick="addGroup(this)" data-limit="1" data-day="monday" data-target="groupInput").add-button.btn
+                        +icon("plus-nocircle")
+                        | Добавить
+            .date.row
+                .week
+                    label.custom-input.form-check
+                        input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
+                        span.check-label Сешанба
+                .inner-date-wrapper
+                    .from-to
+                        div(id="groupInput-1" data-day="tuesday").groupInputs
+                            input(type="text" name="groupInputs[tuesday][1][from]" placeholder="00:00")
+                            input(type="text" name="groupInputs[tuesday][1][to]" placeholder="00:00")
+                    button(type="button" onclick="addGroup(this)" data-limit="1" data-day="tuesday" data-target="groupInput").add-button.btn
+                        +icon("plus-nocircle")
+                        | Добавить
+            .date.row
+                .week
+                    label.custom-input.form-check
+                        input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
+                        span.check-label Чоршанба
+                .inner-date-wrapper
+                    .from-to
+                        div(id="groupInput-1" data-day="thursday").groupInputs
+                            input(type="text" name="groupInputs[thursday][1][from]" placeholder="00:00")
+                            input(type="text" name="groupInputs[thursday][1][to]" placeholder="00:00")
+                    button(type="button" onclick="addGroup(this)" data-limit="1" data-day="thursday" data-target="groupInput").add-button.btn
+                        +icon("plus-nocircle")
+                        | Добавить
+            .date.row
+                .week
+                    label.custom-input.form-check
+                        input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
+                        span.check-label Пайшанба
+                .inner-date-wrapper
+                    .from-to
+                        div(id="groupInput-1" data-day="wednessday").groupInputs
+                            input(type="text" name="groupInputs[wednessday][1][from]" placeholder="00:00")
+                            input(type="text" name="groupInputs[wednessday][1][to]" placeholder="00:00")
+                    button(type="button" onclick="addGroup(this)" data-limit="1" data-day="wednessday" data-target="groupInput").add-button.btn
+                        +icon("plus-nocircle")
+                        | Добавить
+            .date.row
+                .week
+                    label.custom-input.form-check
+                        input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
+                        span.check-label Жума
+                .inner-date-wrapper
+                    .from-to
+                        div(id="groupInput-1" data-day="friday").groupInputs
+                            input(type="text" name="groupInputs[friday][1][from]" placeholder="00:00")
+                            input(type="text" name="groupInputs[friday][1][to]" placeholder="00:00")
+                    button(type="button" onclick="addGroup(this)" data-limit="1" data-day="friday" data-target="groupInput").add-button.btn
+                        +icon("plus-nocircle")
+                        | Добавить
+            .date.row
+                .week
+                    label.custom-input.form-check
+                        input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
+                        span.check-label Шанба
+                .inner-date-wrapper
+                    .from-to
+                        div(id="groupInput-1" data-day="saturday").groupInputs
+                            input(type="text" name="groupInputs[saturday][1][from]" placeholder="00:00")
+                            input(type="text" name="groupInputs[saturday][1][to]" placeholder="00:00")
+                    button(type="button" onclick="addGroup(this)" data-limit="1" data-day="saturday" data-target="groupInput").add-button.btn
+                        +icon("plus-nocircle")
+                        | Добавить
+            .date.row
+                .week
+                    label.custom-input.form-check
+                        input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
+                        span.check-label Якшанба
+                .inner-date-wrapper
+                    .from-to
+                        div(id="groupInput-1" data-day="sunday").groupInputs
+                            input(type="text" name="groupInputs[sunday][1][from]" placeholder="00:00")
+                            input(type="text" name="groupInputs[sunday][1][to]" placeholder="00:00")
+                    button(type="button" onclick="addGroup(this)" data-limit="1" data-day="sunday" data-target="groupInput").add-button.btn
+                        +icon("plus-nocircle")
+                        | Добавить
+
+mixin sDatesSchdule(data)
+    +b.sDatesSchdule.section#sDatesSchdule&attributes(attributes)
+        .warning-wrapper
+            +icon("warning")
+            .date-text-info Тизимли созламада сиз 2 та гача оралиқ вақт қўшишингиз мумкин. Бунда сиз тушликгача ва тушликдан сўнг бўлган вақт оралиғини киритишингиз керак бўлади. Ушбу берилган вақт оралиғида тизим автоматик равишда белгиланган вақтларни бўлиб беради
+        .dates-wrapper
+            .date.row
+                .week
+                    label.custom-input.form-check
+                        input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
+                        span.check-label Душанба
+                .inner-date-wrapper
+                    .from-to
+                        div(id="innerInput-1" data-day="monday").innerInputs
+                            input(type="text" name="innerInputs[monday][1][from]" placeholder="00:00")
+                            input(type="text" name="innerInputs[monday][1][to]" placeholder="00:00")
+                            button(type="button" onclick="remove(this)" data-day="monday" data-target="innerInput" data-id="1").btn.remove-element
+                                +icon("plus-nocircle")
+                    button(type="button" onclick="addGroup(this)" data-day="monday" data-target="innerInput").add-button.btn
+                        +icon("plus-nocircle")
+                        | Добавить
+            .date.row
+                .week
+                    label.custom-input.form-check
+                        input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
+                        span.check-label Сешанба
+                .inner-date-wrapper
+                    .from-to
+                        div(id="innerInput-1" data-day="tuesday").innerInputs
+                            input(type="text" name="innerInputs[tuesday][1][from]" placeholder="00:00")
+                            input(type="text" name="innerInputs[tuesday][1][to]" placeholder="00:00")
+                            button(type="button" onclick="remove(this)" data-day="tuesday" data-target="innerInput" data-id="1").btn.remove-element
+                                +icon("plus-nocircle")
+                    button(type="button" onclick="addGroup(this)" data-day="tuesday" data-target="innerInput").add-button.btn
+                        +icon("plus-nocircle")
+                        | Добавить
+            .date.row
+                .week
+                    label.custom-input.form-check
+                        input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
+                        span.check-label Чоршанба
+                .inner-date-wrapper
+                    .from-to
+                        div(id="innerInput-1" data-day="thursday").innerInputs
+                            input(type="text" name="innerInputs[thursday][1][from]" placeholder="00:00")
+                            input(type="text" name="innerInputs[thursday][1][to]" placeholder="00:00")
+                            button(type="button" onclick="remove(this)" data-day="thursday" data-target="innerInput" data-id="1").btn.remove-element
+                                +icon("plus-nocircle")
+                    button(type="button" onclick="addGroup(this)" data-day="thursday" data-target="innerInput").add-button.btn
+                        +icon("plus-nocircle")
+                        | Добавить
+            .date.row
+                .week
+                    label.custom-input.form-check
+                        input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
+                        span.check-label Пайшанба
+                .inner-date-wrapper
+                    .from-to
+                        div(id="innerInput-1" data-day="wednessday").innerInputs
+                            input(type="text" name="innerInputs[wednessday][1][from]" placeholder="00:00")
+                            input(type="text" name="innerInputs[wednessday][1][to]" placeholder="00:00")
+                            button(type="button" onclick="remove(this)" data-day="wednessday" data-target="innerInput" data-id="1").btn.remove-element
+                                +icon("plus-nocircle")
+                    button(type="button" onclick="addGroup(this)" data-day="wednessday" data-target="innerInput").add-button.btn
+                        +icon("plus-nocircle")
+                        | Добавить
+            .date.row
+                .week
+                    label.custom-input.form-check
+                        input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
+                        span.check-label Жума
+                .inner-date-wrapper
+                    .from-to
+                        div(id="innerInput-1" data-day="friday").innerInputs
+                            input(type="text" name="innerInputs[friday][1][from]" placeholder="00:00")
+                            input(type="text" name="innerInputs[friday][1][to]" placeholder="00:00")
+                            button(type="button" onclick="remove(this)" data-day="friday" data-target="innerInput" data-id="1").btn.remove-element
+                                +icon("plus-nocircle")
+                    button(type="button" onclick="addGroup(this)" data-day="friday" data-target="innerInput").add-button.btn
+                        +icon("plus-nocircle")
+                        | Добавить
+            .date.row
+                .week
+                    label.custom-input.form-check
+                        input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
+                        span.check-label Шанба
+                .inner-date-wrapper
+                    .from-to
+                        div(id="innerInput-1" data-day="saturday").innerInputs
+                            input(type="text" name="innerInputs[saturday][1][from]" placeholder="00:00")
+                            input(type="text" name="innerInputs[saturday][1][to]" placeholder="00:00")
+                            button(type="button" onclick="remove(this)" data-day="saturday" data-target="innerInput" data-id="1").btn.remove-element
+                                +icon("plus-nocircle")
+                    button(type="button" onclick="addGroup(this)" data-day="saturday" data-target="innerInput").add-button.btn
+                        +icon("plus-nocircle")
+                        | Добавить
+            .date.row
+                .week
+                    label.custom-input.form-check
+                        input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
+                        span.check-label Якшанба
+                .inner-date-wrapper
+                    .from-to
+                        div(id="innerInput-1" data-day="sunday").innerInputs
+                            input(type="text" name="innerInputs[sunday][1][from]" placeholder="00:00")
+                            input(type="text" name="innerInputs[sunday][1][to]" placeholder="00:00")
+                            button(type="button" onclick="remove(this)" data-day="sunday" data-target="innerInput" data-id="1").btn.remove-element
+                                +icon("plus-nocircle")
+                    button(type="button" onclick="addGroup(this)" data-day="sunday" data-target="innerInput").add-button.btn
+                        +icon("plus-nocircle")
+                        | Добавить

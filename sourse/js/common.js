@@ -873,6 +873,16 @@ $(".vacancy .tablinks").on('click', function () {
 		$(".vacancy .vac_content.vac").css("display","none");
 	}
 });
+$(".date-tabs .form-check").on('click', function () {
+	if($('#tab-btn-individual').is(':checked')) {
+		$('.tab-content-individual').addClass("active");
+		$('.tab-content-schedule').removeClass("active");
+	}
+	if($('#tab-btn-schedule').is(':checked')) {
+		$('.tab-content-schedule').addClass("active");
+		$('.tab-content-individual').removeClass("active");
+	}
+});
 /*end Tabs*/
 
 /*start YandexMap*/
@@ -962,17 +972,22 @@ $(document).ready(function(){
 	$(".date .form-check-input").each(function(){
 		if($(this).is(":checked")){
 			$('.from-to input',$(this).parents()[2]).prop("disabled",false);
+			$('.inner-date-wrapper .add-button',$(this).parents()[2]).prop("disabled",false);
 		}
 		else{
 			$('.from-to input',$(this).parents()[2]).prop("disabled",true);
+			$('.inner-date-wrapper .add-button',$(this).parents()[2]).prop("disabled",true);
 		}
 	});
 	$(".date .form-check-input").on('change', function(){
 		if($(this).is(":checked")){
 			$('.from-to input',$(this).parents()[2]).prop("disabled",false);
+			$('.inner-date-wrapper .add-button',$(this).parents()[2]).prop("disabled",false);
 		}
 		else{
 			$('.from-to input',$(this).parents()[2]).prop("disabled",true);
+			$('.inner-date-wrapper .add-button',$(this).parents()[2]).prop("disabled",true);
+			$('.innerInputs .remove-element:not([data-id=1]), .inner-date-wrapper .add-button.opened', $(this).parents()[2]).trigger("click");
 		}
 	});
 });
@@ -992,5 +1007,52 @@ $(document).ready(function(){
 			$('.icon-like-link', this).css("display", "block");
 		}
 	});
+	$(".from-to input").mask("55:55");
 });
 /*end favoriteButton*/
+
+window.addGroup = function (element) {
+	let target = $(element).data('target');
+	if (target) {
+		let day = $(element).data('day');
+		let groups = $('.' + target + 's[data-day='+day+']').toArray();
+		let limit = $(element).data('limit');
+		let id = $(groups[groups.length - 1]).attr('id').split('-',2);
+		let index = parseInt(id[1]),
+			newIndex = index + 1
+		let lastGroup = $(groups[groups.length - 1]);
+		let newGroup = lastGroup.clone(true).attr('id', target + '-' + newIndex);
+		let newGroupText = newGroup.html().replaceAll(target + 's['+ day +'][' + index + ']', target + 's['+ day +'][' + newIndex + ']');
+		if (limit){
+			$(element).attr('onclick', 'remove(this)').data('id',newIndex).addClass("opened");
+		}
+		newGroup.html(newGroupText).hide();
+		lastGroup.after(newGroup);
+		newGroup.show(500);
+		$("input",newGroup).mask("55:55");
+		$('.remove-element', newGroup).attr('data-id', newIndex);
+	}
+}
+window.remove = function (button) {
+	let $self = $(button),
+		day = $(button).data('day'),
+		target = $self.data('target'),
+		limit = $(button).data('limit'),
+		index = $self.data('id'),
+		groups =  $('.' + target + 's[data-day='+day+']').length,
+		parent = $(button).closest('#' + target + '-' + index);
+	if (limit){
+		$(button).attr('onclick', 'addGroup(this)').data('id',"").removeClass("opened");
+	}
+	if (target) {
+		if (groups > 1) {
+			let $target =  $('#' + target + '-' + index+'[data-day='+day+']');
+			$target.hide('slow', function(){
+				$target.remove();
+			});
+		} else {
+			$('input, select, textarea', parent).val('');
+		}
+	}
+	return false;
+}

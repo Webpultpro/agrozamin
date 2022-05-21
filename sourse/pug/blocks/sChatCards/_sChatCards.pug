@@ -1,4 +1,5 @@
 include ../sFilesDownload/_sFilesDownload.pug
+include ../sDates/_sDates.pug
 mixin chartCard(i,t,p, b)
 	+b.chat-card&attributes(attributes) 
 		+e.row.row
@@ -214,72 +215,23 @@ mixin sChatCards-edit(data)
 						+input("",'text','Мутаҳасислиги')
 					.col-lg-6
 						+input("","textarea","Биография")
-				.dates-wrapper
-					.title-wrapper
-						.row
-							.title.col-6 Ҳафта кунлари
-							.title.col-6 Иш соати
-					.date.row
-						.col-6
-							label.custom-input.form-check
-								input.custom-input__input.form-check-input(name="checkbox" type="checkbox" checked)
-								span.check-label Душанба
-						.from-to.col-6
-							input(type="text" id="mon-from-edit" name="from" placeholder="00:00")
-							input(type="text" id="mon-to-edit" name="from" placeholder="00:00")
-					.date.row
-						.col-6
-							label.custom-input.form-check
-								input.custom-input__input.form-check-input(name="checkbox" type="checkbox" checked)
-								span.check-label Сешанба
-						.from-to.col-6
-							input(type="text" id="tue-from-edit" name="from" placeholder="00:00")
-							input(type="text" id="tue-to-edit" name="from" placeholder="00:00")
-					.date.row
-						.col-6
-							label.custom-input.form-check
-								input.custom-input__input.form-check-input(name="checkbox" type="checkbox" checked)
-								span.check-label Чоршанба
-						.from-to.col-6
-							input(type="text" id="thu-from-edit" name="from" placeholder="00:00")
-							input(type="text" id="thu-to-edit" name="from" placeholder="00:00")
-					.date.row
-						.col-6
-							label.custom-input.form-check
-								input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
-								span.check-label Пайшанба
-						.from-to.col-6
-							input(type="text" id="wen-from-edit" name="from" placeholder="00:00" disabled)
-							input(type="text" id="wen-to-edit" name="from" placeholder="00:00" disabled)
-					.date.row
-						.col-6
-							label.custom-input.form-check
-								input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
-								span.check-label Жума
-						.from-to.col-6
-							input(type="text" id="fri-from-edit" name="from" placeholder="00:00" disabled)
-							input(type="text" id="fri-to-edit" name="from" placeholder="00:00" disabled)
-					.date.row
-						.col-6
-							label.custom-input.form-check
-								input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
-								span.check-label Шанба
-						.from-to.col-6
-							input(type="text" id="sut-from-edit" name="from" placeholder="00:00" disabled)
-							input(type="text" id="sut-to-edit" name="from" placeholder="00:00" disabled)
-					.date.row
-						.col-6
-							label.custom-input.form-check
-								input.custom-input__input.form-check-input(name="checkbox" type="checkbox")
-								span.check-label Якшанба
-						.from-to.col-6
-							input(type="text" id="sunday-from-edit" name="from" placeholder="00:00" disabled)
-							input(type="text" id="sunday-to-edit" name="from" placeholder="00:00" disabled)
 				+sFilesDownloadArchive()
 				.file-download.form-wrap__input-wrap.form-group
 					label Файл бириктириш
 					input.form-wrap__input.form-control(name="file" type="file")
-				.text-right
+				.tabs-region
+					.date-tabs
+						label(for="tab-btn-individual").custom-input.form-check
+							input(type="radio" name="tab-btn" id="tab-btn-individual" value="" checked).custom-input__input.form-check-input
+							span.custom-input__text.form-check-label Индивидуал созлама
+						label(for="tab-btn-schedule").custom-input.form-check
+							input(type="radio" name="tab-btn" id="tab-btn-schedule" value="").custom-input__input.form-check-input
+							span.custom-input__text.form-check-label Тизмли созлама
+					.tab-content-individual.active
+						+sDatesIndividual()
+					.tab-content-schedule
+						+sDatesSchdule()
+				.text-center
 					button.btn.btn-primary(type="submit") Сақлаш
 
 	// end sChatCards

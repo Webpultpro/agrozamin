@@ -334,3 +334,9 @@
 		}
 	}
 }
+.dates-form-region {
+	margin-top: 25px;
+	@include media-breakpoint-up(lg) {
+		margin-top: 55px;
+	}
+}

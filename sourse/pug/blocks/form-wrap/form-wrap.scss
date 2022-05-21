@@ -31,13 +31,21 @@
 			font-size: 22px;
 		}
 	}
+	h4 {
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 25px;
+			font-size: 22px;
+			text-align: left;
+			line-height: 28px;
+		}
+	}
 
 	&__input-wrap {
 		// @extend .form-group;
 		margin-bottom: rem(13);
 		display: block;
 		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(23);
+			margin-bottom: 20px;
 		}
 	}
 	&__input {

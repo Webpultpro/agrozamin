@@ -1,3 +1,5 @@
+include ../sDates/_sDates.pug
+
 mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
@@ -481,3 +483,32 @@ mixin sForm6()
 						+in-c(`radio`, `Фаол эмас`)
 				.custom-form__btn-wrap
 					button.btn.btn-primary Жойлаш
+
+mixin sFormConsulting()
+	.webform-consulting.row
+		h4 Шахсий маълумотларингизни киритинг
+		.col-lg-6
+			+input("",'text','Исм *')
+			+input("",'text','Фамилия *')
+			+input("",'text','Мутаҳасислиги')
+			.file-download.form-wrap__input-wrap.form-group
+				label Файл бириктириш
+				input.form-wrap__input.form-control(name="file" type="file")
+		.col-lg-6
+			+input("","textarea","Хизматлар рўйхати (Бошқа хизматларни киритинг)")
+
+mixin sFormTabbedDates()
+	.dates-form-region
+		h4 Ҳафта кунлари ва иш соатингизни киритинг
+		.tabs-region
+			.date-tabs
+				label(for="tab-btn-individual").custom-input.form-check
+					input(type="radio" name="tab-btn" id="tab-btn-individual" value="" checked).custom-input__input.form-check-input
+					span.custom-input__text.form-check-label Индивидуал созлама
+				label(for="tab-btn-schedule").custom-input.form-check
+					input(type="radio" name="tab-btn" id="tab-btn-schedule" value="").custom-input__input.form-check-input
+					span.custom-input__text.form-check-label Тизмли созлама
+			.tab-content-individual.active
+				+sDatesIndividual()
+			.tab-content-schedule
+				+sDatesSchdule()

@@ -655,3 +655,25 @@
     }
   }
 }
+.sConsultantForm {
+  .form-wrap {
+    max-width: 100%;
+    box-shadow: none;
+    padding: 0;
+  }
+}
+.webform-consulting {
+  textarea {
+    &.form-control {
+      @include media-breakpoint-up(lg) {
+        min-height: calc(20em + 20px);
+      }
+    }
+  }
+}
+.text-center {
+  .btn {
+    width: 188px;
+    font-weight: 400;
+  }
+}
