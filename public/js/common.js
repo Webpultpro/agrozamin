@@ -1028,7 +1028,7 @@ window.addGroup = function (element) {
 		}
 		newGroup.html(newGroupText).hide();
 		lastGroup.after(newGroup);
-		newGroup.show(500);
+		newGroup.show(200);
 		$("input",newGroup).mask("55:55");
 		$('.remove-element', newGroup).attr('data-id', newIndex);
 	}
@@ -1047,7 +1047,7 @@ window.remove = function (button) {
 	if (target) {
 		if (groups > 1) {
 			let $target =  $('#' + target + '-' + index+'[data-day='+day+']');
-			$target.hide('slow', function(){
+			$target.hide('fast', function(){
 				$target.remove();
 			});
 		} else {
