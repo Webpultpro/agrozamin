@@ -1028,7 +1028,11 @@ window.addGroup = function (element) {
 		}
 		newGroup.html(newGroupText).hide();
 		lastGroup.after(newGroup);
-		newGroup.show(200);
+		setTimeout(
+			function() {
+				newGroup.show(200);
+			},
+		400)
 		$("input",newGroup).mask("55:55");
 		$('.remove-element', newGroup).attr('data-id', newIndex);
 	}
