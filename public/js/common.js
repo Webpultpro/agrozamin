@@ -987,7 +987,7 @@ $(document).ready(function(){
 		else{
 			$('.from-to input',$(this).parents()[2]).prop("disabled",true);
 			$('.inner-date-wrapper .add-button',$(this).parents()[2]).prop("disabled",true);
-			$('.innerInputs .remove-element:not([data-id=1]), .inner-date-wrapper .add-button.opened', $(this).parents()[2]).trigger("click");
+			/*$('.innerInputs .remove-element:not([data-id=1]), .inner-date-wrapper .add-button.opened', $(this).parents()[2]).trigger("click");*/
 		}
 	});
 });
