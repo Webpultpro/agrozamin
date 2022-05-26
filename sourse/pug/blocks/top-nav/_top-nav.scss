@@ -523,6 +523,9 @@
 			margin-right: 13px;
 			min-width: 37px;
 			width: 37px;
+			svg {
+				fill: var(--bs-primary);
+			}
 			.icon {
 				position: static;
 				color: var(--bs-primary);
