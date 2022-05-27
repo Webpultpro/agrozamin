@@ -523,8 +523,16 @@
 			margin-right: 13px;
 			min-width: 37px;
 			width: 37px;
-			svg {
-				fill: var(--bs-primary);
+			img, svg {
+				[stroke="#00CD69"] {
+					stroke: var(--bs-primary) !important;
+				}
+				.cls-1,
+				[fill="#00cd69"],
+				[fill="#00CD69"] {
+					@include mt;
+					fill: var(--bs-primary) !important;
+				}
 			}
 			.icon {
 				position: static;

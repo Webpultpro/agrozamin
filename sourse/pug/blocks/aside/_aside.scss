@@ -377,10 +377,18 @@
 		background: #F1F1F1;
 		margin-right: 13px;
 		border-radius: 50%;
-		svg, .icon {
+		img, svg, .icon {
 			color: var(--bs-primary);
 			font-size: 1.8rem;
-			fill: var(--bs-primary);
+			[stroke="#00CD69"] {
+				stroke: var(--bs-primary) !important;
+			}
+			.cls-1,
+			[fill="#00cd69"],
+			[fill="#00CD69"] {
+				@include mt;
+				fill: var(--bs-primary) !important;
+			}
 		}
 	}
 }
