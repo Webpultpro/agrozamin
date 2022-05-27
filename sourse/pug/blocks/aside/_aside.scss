@@ -377,9 +377,10 @@
 		background: #F1F1F1;
 		margin-right: 13px;
 		border-radius: 50%;
-		.icon {
+		svg, .icon {
 			color: var(--bs-primary);
 			font-size: 1.8rem;
+			fill: var(--bs-primary);
 		}
 	}
 }

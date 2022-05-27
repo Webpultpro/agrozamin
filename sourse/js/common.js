@@ -668,7 +668,7 @@ function eventHandler() {
 
 
 	//img-svg
-	$('img.img-svg-js, .icon-menu-cat img, .sCategories__img-wrap img, .sHowWorks__img-wrap img, .sAdvantages__img-wrap img, .modal-win img.w-100px.mx-auto, .sWarning__img-wrap img, .sServicePurpose__img-wrap img').each(function () {
+	$('img.img-svg-js, .icon-menu-cat img, .catalog-items .icon-cat img, .sCategories__img-wrap img, .sHowWorks__img-wrap img, .sAdvantages__img-wrap img, .modal-win img.w-100px.mx-auto, .sWarning__img-wrap img, .sServicePurpose__img-wrap img').each(function () {
 		var $img = $(this);
 		var imgClass = $img.attr('class');
 		var imgURL = $img.attr('src');
