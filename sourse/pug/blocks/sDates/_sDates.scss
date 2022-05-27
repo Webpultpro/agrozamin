@@ -24,6 +24,12 @@
 }
 .sDatesSchdule {
   .inner-date-wrapper {
+    button {
+      &.add-button {
+        margin-left: -44px;
+        transition: 0.3s;
+      }
+    }
     .from-to {
       @include media-breakpoint-down(sm) {
         width: 235px;

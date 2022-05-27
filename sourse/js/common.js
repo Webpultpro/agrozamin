@@ -1026,6 +1026,12 @@ window.addGroup = function (element) {
 		if (limit){
 			$(element).attr('onclick', 'remove(this)').data('id',newIndex).addClass("opened");
 		}
+		console.log(groups[0]);
+		let parentGroup = $(groups[0]).parents();
+		if (groups.length > 0) {
+			$('.remove-element', groups[0]).css('display','block')
+			$('.add-button',parentGroup[1]).css('margin-left', '25px')
+		}
 		newGroup.html(newGroupText).hide();
 		lastGroup.after(newGroup);
 		setTimeout(
@@ -1043,18 +1049,25 @@ window.remove = function (button) {
 		target = $self.data('target'),
 		limit = $(button).data('limit'),
 		index = $self.data('id'),
-		groups =  $('.' + target + 's[data-day='+day+']').length,
+		groupsLength =  $('.' + target + 's[data-day='+day+']').length,
 		parent = $(button).closest('#' + target + '-' + index);
 	if (limit){
 		$(button).attr('onclick', 'addGroup(this)').data('id',"").removeClass("opened");
 	}
+
 	if (target) {
-		if (groups > 1) {
+		if (groupsLength > 1) {
 			let $target =  $('#' + target + '-' + index+'[data-day='+day+']');
 			$target.hide('fast', function(){
 				$target.remove();
+				let groups =  $('.' + target + 's[data-day='+day+']').toArray()
+				let parentGroup = $(groups[0]).parents();
+				if(groups.length === 1) {
+					$('.remove-element', groups[0]).removeAttr('style')
+					$('.add-button',parentGroup[1]).removeAttr('style')
+				}
 			});
-		} else {
+		}else {
 			$('input, select, textarea', parent).val('');
 		}
 	}
