@@ -573,7 +573,7 @@ function eventHandler() {
 	// $(".catalog-block__toggle--desctop").click(function(){
 	// })
 	// $().hover(function (e) { 
-	$(".menu-item-has-children > a").hover(  function(e){
+	$(".catalog-block__dropdown li > a").hover(  function(e){
 		if ($(".catalog-block").hasClass("active")) return;
 			// e.preventDefault();
 		// 	console.log(1);
