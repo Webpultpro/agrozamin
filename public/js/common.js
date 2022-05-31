@@ -890,36 +890,34 @@ $(".date-tabs .form-check").on('click', function () {
 	ymaps.ready(init);
 
 	function init() {
-		let  myInput = document.getElementById("suggest");
-		let myPlacemark,
+		let  myInput = document.getElementById("mapCoordinates");
+		var myPlacemark,
 			myMap = new ymaps.Map('map', {
-				center: [41.295907, 69.241113],
-				zoom: 9
+				center: [41.315907, 69.280000],
+				zoom: 12
 			}, {
 				searchControlProvider: 'yandex#search'
 			});
-
+		// Слушаем клик на карте.
 		myMap.events.add('click', function (e) {
-			let coords = e.get('coords');
+			var coords = e.get('coords');
 
+			// Если метка уже создана – просто передвигаем ее.
 			if (myPlacemark) {
 				myPlacemark.geometry.setCoordinates(coords);
 			}
+			// Если нет – создаем.
 			else {
 				myPlacemark = createPlacemark(coords);
 				myMap.geoObjects.add(myPlacemark);
+				// Слушаем событие окончания перетаскивания на метке.
 				myPlacemark.events.add('dragend', function () {
 					getAddress(myPlacemark.geometry.getCoordinates());
 				});
 			}
-			let geoButton = myMap.controls.get('geolocationControl');
-			geoButton.events.add('locationchange', function (event) {
-				let coords = event.get('position');
-				myMap.panTo(coords);
-				getAddress(coords);
-			});
+			getAddress(coords);
 		});
-
+		// Создание метки.
 		function createPlacemark(coords) {
 			return new ymaps.Placemark(coords, {
 				iconCaption: 'поиск...'
@@ -928,26 +926,24 @@ $(".date-tabs .form-check").on('click', function () {
 				draggable: true
 			});
 		}
-
+		// Определяем адрес по координатам (обратное геокодирование).
 		function getAddress(coords) {
 			myPlacemark.properties.set('iconCaption', 'поиск...');
 			ymaps.geocode(coords).then(function (res) {
 				var firstGeoObject = res.geoObjects.get(0);
-
 				myPlacemark.properties
 					.set({
+						// Формируем строку с данными об объекте.
 						iconCaption: [
+							// Название населенного пункта или вышестоящее административно-территориальное образование.
 							firstGeoObject.getLocalities().length ? firstGeoObject.getLocalities() : firstGeoObject.getAdministrativeAreas(),
+							// Получаем путь до топонима, если метод вернул null, запрашиваем наименование здания.
 							firstGeoObject.getThoroughfare() || firstGeoObject.getPremise()
 						].filter(Boolean).join(', '),
-						balloonContent: firstGeoObject.getAddressLine()
+						// В качестве контента балуна задаем строку с адресом объекта.
+						balloonContent: firstGeoObject.getAddressLine(),
 					});
-				myInput.value = suggest;
-				localStorage.setItem('value', suggest);
 			});
-		}
-		if(localStorage.getItem('value')){
-			myInput.value = localStorage.getItem('value');
 		}
 	}
 });*/
@@ -1030,7 +1026,7 @@ window.addGroup = function (element) {
 		let parentGroup = $(groups[0]).parents();
 		if (groups.length > 0) {
 			$('.remove-element', groups[0]).css('display','block')
-			$('.add-button',parentGroup[1]).css('margin-left', '25px')
+			$('.add-button', parentGroup[1]).css('margin-left', '25px')
 		}
 		newGroup.html(newGroupText).hide();
 		lastGroup.after(newGroup);
@@ -1040,7 +1036,7 @@ window.addGroup = function (element) {
 			},
 		400)
 		$("input",newGroup).mask("55:55");
-		$('.remove-element', newGroup).attr('data-id', newIndex);
+		$('.remove-element', newGroup).attr('data-id', newIndex).css('display','block');
 	}
 }
 window.remove = function (button) {
@@ -1058,16 +1054,17 @@ window.remove = function (button) {
 	if (target) {
 		if (groupsLength > 1) {
 			let $target =  $('#' + target + '-' + index+'[data-day='+day+']');
-			$target.hide('fast', function(){
-				$target.remove();
-				let groups =  $('.' + target + 's[data-day='+day+']').toArray()
-				let parentGroup = $(groups[0]).parents();
-				if(groups.length === 1) {
-					$('.remove-element', groups[0]).removeAttr('style')
-					$('.add-button',parentGroup[1]).removeAttr('style')
-				}
-			});
-		}else {
+				$target.hide('fast', function(){
+					$target.remove();
+					let groups =  $('.' + target + 's[data-day='+day+']').toArray()
+					let parentGroup = $(groups[0]).parents();
+					if(groups.length === 1) {
+						console.log(groups.length);
+						$('.remove-element', groups[0]).removeAttr('style')
+						$('.add-button',parentGroup[1]).removeAttr('style')
+					}
+				});
+		} else {
 			$('input, select, textarea', parent).val('');
 		}
 	}
