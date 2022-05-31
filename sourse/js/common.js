@@ -1028,6 +1028,7 @@ window.addGroup = function (element) {
 			$('.remove-element', groups[0]).css('display','block')
 			$('.add-button', parentGroup[1]).css('margin-left', '25px')
 		}
+		$('input, select, textarea', newGroup).val('')
 		newGroup.html(newGroupText).hide();
 		lastGroup.after(newGroup);
 		setTimeout(
