@@ -969,6 +969,8 @@ $(document).ready(function(){
 		if($(this).is(":checked")){
 			$('.from-to input',$(this).parents()[2]).prop("disabled",false);
 			$('.inner-date-wrapper .add-button',$(this).parents()[2]).prop("disabled",false);
+			$('.inner-date-wrapper .from-to .innerInputs:first-child .remove-element',$(this).parents()[2]).css('display','block');
+			$('.inner-date-wrapper button.add-button',$(this).parents()[2]).css('margin-left', '25px');
 		}
 		else{
 			$('.from-to input',$(this).parents()[2]).prop("disabled",true);
