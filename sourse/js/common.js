@@ -890,6 +890,8 @@ $(document).ready(function(){
 	ymaps.ready(init);
 	function init() {
 		var myInput = document.getElementById('myCoordinates'),
+			myInputLatitude = document.getElementById('myLatitude'),
+			myInputLongitude = document.getElementById('myLongitude'),
 			myPlacemark,
 			myMap = new ymaps.Map('map', {
 				center: [41.315907, 69.280000],
@@ -921,7 +923,6 @@ $(document).ready(function(){
 		}
 		function getAddress(coords) {
 			myPlacemark.properties.set('iconCaption', 'поиск...');
-			console.log(myPlacemark.properties);
 			ymaps.geocode(coords).then(function (res) {
 				var firstGeoObject = res.geoObjects.get(0);
 
@@ -931,14 +932,27 @@ $(document).ready(function(){
 							firstGeoObject.getLocalities().length ? firstGeoObject.getLocalities() : firstGeoObject.getAdministrativeAreas(),
 							firstGeoObject.getThoroughfare() || firstGeoObject.getPremise()
 						].filter(Boolean).join(', '),
-						balloonContent: firstGeoObject.getAddressLine()
+						balloonContent: firstGeoObject.getAddressLine(),
+
 					});
 				myInput.value = firstGeoObject.getAddressLine();
 				localStorage.setItem('value', firstGeoObject.getAddressLine());
+
+				myInputLatitude.value = firstGeoObject.properties.get('boundedBy.0.0');
+				localStorage.setItem('value2', firstGeoObject.properties.get('boundedBy.0.0'));
+
+				myInputLongitude.value = firstGeoObject.properties.get('boundedBy.0.1');
+				localStorage.setItem('value3', firstGeoObject.properties.get('boundedBy.0.1'));
 			});
 		}
 		if(localStorage.getItem('value')){
 			myInput.value = localStorage.getItem('value');
+		}
+		if(localStorage.getItem('value2')){
+			myInputLatitude.value = localStorage.getItem('value2');
+		}
+		if(localStorage.getItem('value3')){
+			myInputLongitude.value = localStorage.getItem('value3');
 		}
 	}
 });
