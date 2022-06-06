@@ -1033,13 +1033,12 @@ window.addGroup = function (element) {
 		if (limit){
 			$(element).attr('onclick', 'remove(this)').data('id',newIndex).addClass("opened");
 		}
-		console.log(groups[0]);
 		let parentGroup = $(groups[0]).parents();
 		if (groups.length > 0) {
-			$('.remove-element', groups[0]).css('display','block')
-			$('.add-button', parentGroup[1]).css('margin-left', '25px')
+			$('.remove-element', groups[0]).css('display','block');
+			$('.add-button', parentGroup[1]).css('margin-left', '25px');
 		}
-		$('input, select, textarea', newGroup).val('')
+		$('input, select, textarea', newGroup).val('');
 		newGroup.html(newGroupText).hide();
 		lastGroup.after(newGroup);
 		setTimeout(
