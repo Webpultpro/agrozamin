@@ -1038,7 +1038,6 @@ window.addGroup = function (element) {
 			$('.remove-element', groups[0]).css('display','block');
 			$('.add-button', parentGroup[1]).css('margin-left', '25px');
 		}
-		$('input, select, textarea', newGroup).val('');
 		newGroup.html(newGroupText).hide();
 		lastGroup.after(newGroup);
 		setTimeout(
@@ -1046,6 +1045,7 @@ window.addGroup = function (element) {
 				newGroup.show(200);
 			},
 		400)
+		$('input, select, textarea', newGroup).val('');
 		$("input",newGroup).mask("55:55");
 		$('.remove-element', newGroup).attr('data-id', newIndex).css('display','block');
 	}
