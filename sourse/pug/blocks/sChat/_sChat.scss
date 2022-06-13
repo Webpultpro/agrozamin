@@ -102,6 +102,7 @@
 			.sChat__message {
 				background-color: $white;
 				max-width: 305px;
+				word-break: break-word;
 				@include media-breakpoint-up(sm) {
 					max-width: 340px;
 				}
@@ -118,6 +119,7 @@
 				background-color: #E6F2F8;
 				max-width: 240px;
 				text-align: right;
+				word-break: break-word;
 				@include media-breakpoint-up(sm) {
 					max-width: 265px;
 				}
