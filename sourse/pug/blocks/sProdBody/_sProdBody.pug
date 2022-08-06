@@ -2,6 +2,16 @@ mixin sProdBody(data)
 	// start sProdBody
 	+b.sProdBody.section#sProdBody&attributes(attributes)
 		.container
+			+e.provider-region
+				a(href="#" target="_blank")
+					+e.provider
+						.icon-wrapper
+							+icon('shop')
+						+e.title-wrapper
+							h3 OOO "Irrigation Solution"
+							p Умумий маҳсулотлар: &nbsp;
+								span 125
+				+cardlinksWithPhoneNoLike()
 			+e.inner
 				//- +info-message(`Сотув жараёнида махсулотнинг умумий миқдори ўзгарган тақдирда "Ўзгартириш киритиш" орқали махсулотнинг умумий миқдорини ўзгартиришингиз мумкин`).mb-4
 				.row
@@ -25,42 +35,66 @@ mixin sProdBody(data)
 											+e.img-wrap().bg-wrap
 												img.img-bg(src=`img/@2x/prod-${x+1}.jpg`  loading="lazy", alt="")
 							+arrow
-							
-						+e.btn.d-none.d-md-block(href="#") Оставить заявку
+						.button-wrapper
+							+cardlinksLike()
+							+e.btn(href="#") Оставить заявку
 					+e.col-right.col-md
 						+e.caption
+							.date.d-none.d-md-block Жойланган сана: &nbsp;
+								span 02.07.2022
 							.text-secondary.d-md-none Арт. 12757510
 							h1 Горох пурпурный король
 							+e.price 
 								strong 4 199 сум
 								span килограм учун
 							+e.wrapper
+								.item-one
+									.items
+										.icon-wrapper
+											+icon('deliver-prod2')
+										span Андижон,  Бухоро,  Жиззах, Қашқадарё, Навоий, Наманган, Самарқанд
 								.item-three
 									.items
-										+icon('icon-user-cabinet')
-										span OOO "Irrigation Solution"
-									.items
-										+icon('icon-address')
-										span Тошкент шахри
-								.item-three
-									.items
-										+icon('handshake-prod')
+										.icon-wrapper
+											+icon('handshake-prod')
 										span Келишув асосида
 									.items
-										+icon('pocket-prod')
+										.icon-wrapper
+											+icon('pocket-prod')
 										span Пул ўтказиш орқали
-									.items
-										+icon('deliver-prod2')
-										span Омборхонадан олиб кетиш
+
 							.h6 Тавсифи
 							+e.content
 								p Ўсимликнинг баландлиги 1 метрга етади, екиш пайтида уни зарур ишларни амалга ошириш керак. Озиқ-овқат маҳсулотларидан ташқари, нўхат жуда декоратив кўриришга ега бўлади. Узлуксиз ҳосилдорликни олиш учун тавсия етилади. Озиқ-овқат маҳсулотларидан ташқари, нўхат жуда декоратив кўриришга ега бўлади. Узлуксиз ҳосилдорликни олиш учун тавсия етилади, екиш пайтида уни зарур ишларни амалга ошириш керак.
-								//- +e.btn-more(href="#") Батафсил 
+								+e.btn-more(href="#") Батафсил
 						+cardlinksWithPhone()
 						+e.btn.d-md-none(href="#") Оставить заявку
-						.text-end.mt-5
-							a(href="#").ttu Кейингиси
-								+icon("chevron-right")
+					+e.map-col.d-none.d-md-block
+						+e.map-description Маҳсулот манзилини харита орқали кўришингиз мумкин
+						div(id="productLocation").product-location
+			+e.performance-wrapper
+				+e.performance
+					.item-perform
+						.icon-wrapper
+							+icon('eye-prod')
+						+e.title-wrapper
+							.title Кўрилди:
+							p 564 марта
+					.item-perform
+						.icon-wrapper
+							+icon('convert-prod')
+						+e.title-wrapper
+							.title Хабар жўнатилди:
+							p 12 марта
+					.item-perform
+						.icon-wrapper
+							+icon('phone-prod')
+						+e.title-wrapper
+							.title Қўнғироқлар:
+							p 53 марта
+				.text-end
+					a(href="#").ttu Кейингиси
+						+icon("chevron-right")
 	// end sProdBody
 
 mixin sProdBody2(data)
@@ -91,38 +125,44 @@ mixin sProdBody2(data)
 									+e.slide.swiper-slide
 										+e.img-wrap().bg-wrap
 											img.img-bg(src="img/@2x/prod-slide.png"  loading="lazy", alt="")
+						.button-wrapper__vertical
+							button.card-prod__btn.btn-outline-primary Ўчириш
+							button.card-prod__btn.btn-primary Арҳивдан чиқариш
 							+arrow
 					+e.col-right.col-md
 						+e.caption
+							.date.d-none.d-md-block Жойланган сана: &nbsp;
+								span 02.07.2022
 							.text-secondary.d-md-none Арт. 12757510
 							h1 Горох пурпурный король
 							+e.price
 								strong 4 199 сум
 								span килограм учун
 							+e.wrapper
+								.item-one
+									.items
+										.icon-wrapper
+											+icon('deliver-prod2')
+										span Андижон,  Бухоро,  Жиззах, Қашқадарё, Навоий, Наманган, Самарқанд, Андижон,  Бухоро,  Жиззах
 								.item-three
 									.items
-										+icon('icon-user-cabinet')
-										span OOO "Irrigation Solution"
-									.items
-										+icon('icon-address')
-										span Тошкент шахри
-								.item-three
-									.items
-										+icon('handshake-prod')
+										.icon-wrapper
+											+icon('handshake-prod')
 										span Келишув асосида
 									.items
-										+icon('pocket-prod')
+										.icon-wrapper
+											+icon('pocket-prod')
 										span Пул ўтказиш орқали
-									.items
-										+icon('deliver-prod2')
-										span Омборхонадан олиб кетиш
 							.h6 Тавсифи
 							+e.content
 								p Ўсимликнинг баландлиги 1 метрга етади, екиш пайтида уни зарур ишларни амалга ошириш керак. Озиқ-овқат маҳсулотларидан ташқари, нўхат жуда декоратив кўриришга ега бўлади. Узлуксиз ҳосилдорликни олиш учун тавсия етилади. Озиқ-овқат маҳсулотларидан ташқари, нўхат жуда декоратив кўриришга ега бўлади. Узлуксиз ҳосилдорликни олиш учун тавсия етилади, екиш пайтида уни зарур ишларни амалга ошириш керак.
-							.button-wrapper
-								button.card-prod__btn.btn-outline-primary Ўчириш
-								button.card-prod__btn.btn-primary Арҳивдан чиқариш
+								+e.btn-more(href="#") Батафсил
+						.button-wrapper__vertical.d-md-none
+							button.card-prod__btn.btn-outline-primary Ўчириш
+							button.card-prod__btn.btn-primary Арҳивдан чиқариш
+					+e.map-col.d-none.d-md-block
+						+e.map-description Маҳсулот манзилини харита орқали кўришингиз мумкин
+						div(id="productLocation").product-location
 
 	// end sProdBody
 
@@ -178,3 +218,102 @@ mixin sProdBodySeller(data)
 				a(href="#").ttu Кейингиси
 					+icon("chevron-right")
 	// end sProdBodySeller
+
+mixin sProvider(data)
+	// start sProdBody
+	+b.sProdBody.section#sProdBody&attributes(attributes)
+		.container
+			+e.provider-region
+				a(href="#" target="_blank")
+					+e.provider
+						.icon-wrapper
+							+pic('agriculture-logo','','')
+						+e.title-wrapper
+							h3 OOO "Irrigation Solution"
+							p Сўнги ташриф: &nbsp;
+								span 22:30
+				+cardlinksWithPhoneNoLike()
+			+e.inner
+				//- +info-message(`Сотув жараёнида махсулотнинг умумий миқдори ўзгарган тақдирда "Ўзгартириш киритиш" орқали махсулотнинг умумий миқдорини ўзгартиришингиз мумкин`).mb-4
+				.row
+					+e.col.col-md-auto
+						+e.slider-lg-wrap
+							+e.slider--lg.mySwiper2.swiper-container
+								.swiper-wrapper
+									- for (var x = 0; x < 4; x++)
+									+e.slide.swiper-slide
+										+e.img-wrap(href=`img/@2x/prod-${x+1}.jpg` data-fancybox="gal").bg-wrap
+											img.img-bg(src=`img/@2x/prod-${x+1}.jpg` loading="lazy" , alt="")
+								.d-md-none
+									.swiper-pagination
+							.d-md-none
+								+arrow
+						+e.slider-sm-wrap.d-none.d-md-block
+							+e.slider--sm.mySwiper.swiper-container
+								.swiper-wrapper
+									- for (var x = 0; x < 4; x++)
+									+e.slide.swiper-slide
+										+e.img-wrap().bg-wrap
+											img.img-bg(src=`img/@2x/prod-${x+1}.jpg`  loading="lazy", alt="")
+							+arrow
+						.button-wrapper
+							+cardlinksLike()
+							+e.btn(href="#") Оставить заявку
+					+e.col-right.col-md
+						+e.caption
+							.date.d-none.d-md-block Жойланган сана: &nbsp;
+								span 02.07.2022
+							.text-secondary.d-md-none Арт. 12757510
+							h1 Горох пурпурный король
+							+e.price
+								strong 4 199 сум
+								span килограм учун
+							+e.wrapper
+								.item-one
+									.items
+										.icon-wrapper
+											+icon('deliver-prod2')
+										span Андижон,  Бухоро,  Жиззах, Қашқадарё, Навоий, Наманган, Самарқанд
+								.item-three
+									.items
+										.icon-wrapper
+											+icon('handshake-prod')
+										span Келишув асосида
+									.items
+										.icon-wrapper
+											+icon('pocket-prod')
+										span Пул ўтказиш орқали
+
+							.h6 Тавсифи
+							+e.content
+								p Ўсимликнинг баландлиги 1 метрга етади, екиш пайтида уни зарур ишларни амалга ошириш керак. Озиқ-овқат маҳсулотларидан ташқари, нўхат жуда декоратив кўриришга ега бўлади. Узлуксиз ҳосилдорликни олиш учун тавсия етилади. Озиқ-овқат маҳсулотларидан ташқари, нўхат жуда декоратив кўриришга ега бўлади. Узлуксиз ҳосилдорликни олиш учун тавсия етилади, екиш пайтида уни зарур ишларни амалга ошириш керак.
+								+e.btn-more(href="#") Батафсил
+						+cardlinksWithPhone()
+						+e.btn.d-md-none(href="#") Оставить заявку
+					+e.map-col.d-none.d-md-block
+						+e.map-description Маҳсулот манзилини харита орқали кўришингиз мумкин
+						div(id="productLocation").product-location
+			+e.performance-wrapper
+				+e.performance
+					.item-perform
+						.icon-wrapper
+							+icon('eye-prod')
+						+e.title-wrapper
+							.title Кўрилди:
+							p 564 марта
+					.item-perform
+						.icon-wrapper
+							+icon('convert-prod')
+						+e.title-wrapper
+							.title Хабар жўнатилди:
+							p 12 марта
+					.item-perform
+						.icon-wrapper
+							+icon('phone-prod')
+						+e.title-wrapper
+							.title Қўнғироқлар:
+							p 53 марта
+				.text-end
+					a(href="#").ttu Кейингиси
+						+icon("chevron-right")
+	// end sProvider

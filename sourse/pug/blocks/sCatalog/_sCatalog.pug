@@ -161,7 +161,27 @@ mixin sCatalog15(data)
 	+b.sCatalog.section.pt-0&attributes(attributes)
 		.container 
 			.section-title.text-center
-				h2 Оммабоп маҳсулотлар
+				h2 Охшаш маҳсулотларлари
+			+e.row.row
+				+card(1,'Қизил Юсуф памидори Самарқанд махсулоти')
+				+card(2,'Бинафша Шоҳ Нўхати')
+				+card(3)
+				+card(4,'Мелотрия Колибри Самарқанд махсулоти')
+					+e.btn.btn-outline-primary.disabled(type="button") Запрос оставлен
+				+card(5)
+				+card(6)
+				+card(5)
+				+card(6)
+	// end sCatalog
+
+mixin sCatalogProvider(data)
+	// start sCatalog
+	+b.sCatalogProvider.section.pt-0&attributes(attributes)
+		.container
+			.section-title
+				h2 Охшаш маҳсулотларлари
+				.total-goods Умумий маҳсулотлар: &nbsp;
+					span 125
 			+e.row.row
 				+card(1,'Қизил Юсуф памидори Самарқанд махсулоти')
 				+card(2,'Бинафша Шоҳ Нўхати')

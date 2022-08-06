@@ -954,6 +954,32 @@ $(document).ready(function(){
 		if(localStorage.getItem('value3')){
 			myInputLongitude.value = localStorage.getItem('value3');
 		}
+	};
+
+	if($('#productLocation').length>0) {
+		ymaps.ready(product);
+		function product() {
+			var productMap = new ymaps.Map('productLocation', {
+				center: [41.315907, 69.280000],
+				zoom: 13,
+				controls: []
+			}, {
+				searchControlProvider: 'yandex#search'
+			});
+
+			var placemark = new ymaps.Placemark(productMap.getCenter(), {
+				balloonContentHeader: '<div class="title">Бинафша Шоҳ Нўхати</div><div class="price">4 199 сум килограм учун</div>',
+				balloonContentBody: '<div class="image"><img src="img/@2x/prod-1.jpg" height="184" width="184"></div> ' +
+					'<div class="desc">Ўсимликнинг баландлиги 1 метрга етади, екиш пайтида уни зарур ишларни амалга ошириш керак. ' +
+					'Озиқ-овқат маҳсулотларидан ташқари, нўхат жуда декоратив кўриришга ега бўлади. ' +
+					'Узлуксиз ҳосилдорликни олиш учун тавсия етилади Ўсимликнинг баландлиги 1 метрга етади, екиш пайтида уни зарур ишларни амалга ошириш керак. ' +
+					'Озиқ-овқат маҳсулотларидан ташқари, нўхат жуда декоратив кўриришга ега бўлади. ' +
+					'Узлуксиз ҳосилдорликни олиш учун тавсия етилади</div>',
+				hintContent: 'Бинафша Шоҳ Нўхати'
+			});
+
+			productMap.geoObjects.add(placemark);
+		}
 	}
 });
 /*end YandexMap*/

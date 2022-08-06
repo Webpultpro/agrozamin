@@ -7,6 +7,55 @@
 .this-is-test {
 	color: white;
 }
+.modal-product {
+	padding: 25px !important;
+	.head-sector {
+		display: flex;
+		gap: 14px;
+	}
+	.image-wrapper {
+		width: 94px;
+		height: 94px;
+		overflow: hidden;
+		border-radius: 12px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.title-wrapper {
+		font-weight: 500;
+		text-align: left;
+		h3 {
+			font-size: 24px;
+			line-height: 24.5px;
+		}
+		.modal-win__price {
+			font-size: 24px;
+			line-height: 22px;
+			strong {
+				font-weight: 500;
+				margin-right: 8px;
+			}
+			span {
+				font-weight: 400;
+				font-size: 12px;
+				line-height: 15px;
+			}
+		}
+	}
+	.bottom-sector {
+		text-align: left;
+		margin-top: 20px;
+		.label {
+			font-weight: 500;
+			font-size: 16px;
+		}
+	}
+}
 .modal-work {
 	padding: 24px 47px;
 	h4, .h4 {
