@@ -1,0 +1,63 @@
+extends ../layout/main
+
+
+include ../../blocks/sAboutProject/_sAboutProject
+include ../../blocks/sOurGoal/_sOurGoal
+include ../../blocks/sOurDuty/_sOurDuty
+include ../../blocks/sServicePurpose/_sServicePurpose
+
+block variables
+	- let  mainPage= 'about-project bg-white'
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Лойиҳа ҳақида'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+topLine()
+		+top-nav()
+	+breadcrumb('Асосий саҳифа', title)
+	+sAboutProject4()
+	+sOurGoal()
+	section.section.artical-3-section
+		.container
+			.section-title.text-center
+				h1 Хизматларимиз
+			ul().custom-list
+				li Уруғ кўчат биалогик ўғитлар етказиб бериш
+				li Ўсимликларни ҳимоя қилиш лабораториясини ташкил этиш
+				li Хайвонлар учун озуқа ем етказиб беришни ташкил этиш
+				li Ветеринар хизматини ташкил этиш
+				li Мева-сабзавотларни сотиб олиш, саралаш, қадоқлаш ва сақлаш
+				li Агроном ва ветеринар маслаҳати хизматини ташкил этиш
+				li Музлатгичли омборхона&nbsp;ташкил&nbsp;этиш
+				li сувни тежовчи технологияларни жорий қилишга кўмаклашиш
+				li Автоматлаштирилган банк хизматларини жорий қилиш
+	.section
+		.container
+			+b.bot-banner--agrolab(style="--bg-banner: rgba(55, 123, 225, 0.25); --color-banner: #37474F;")
+				.row
+					.col-auto
+						+pic(`agrolab-logo.png`,``,0)
+					+e.col.col-lg.col-12
+						+e.title Агролаб интенсив курслари
+						p Агролаб сервиси орқали сиз сифатли бўлган лобаратория хизматларидан фойдаланишингиз ва ўз тадқиқотларингизни ўтказишингиз мумкин
+						+e.btn(href="#") Сўровнома қолдириш
+	+sForm4
+	//- +sServicePurpose(`Хизмат кимлар учун?`)
+	//- 	+cardS(`Сотувчилар учун`, `Ўз махсулотига ега бўлган, янги мижозлар орқали бизнесини ривожлантирмоқчи бўлган бизнес егалари ишлаб чиқарувчи корхоналар учун`, 1)
+	//- 		+card-item(1, `Ўзингиз ва компаниянгиз ҳақида маълумотни тўлдиринг`)
+	//- 		+card-item(2, `Маҳсулотингизни сайтга юкланг`)
+	//- 		+card-item(3, `Савдо орқли фойдага ега бўлинг`)
+	//- 	+cardS(`Харидорлар учун`, `Хар бир харидор ўзлари учун керакли бўлган махсулотни танлаб унга буюртма беришлари ва сотувчи билан ўзаро алоқа ўрнатишлари мумкин`, 2)
+	//- 		+card-item(4, `Фермерлар ўз махсулотларини жойлаштирадилар`)
+	//- 		+card-item(5, `Сиз керакли маҳсулотни танлайсиз`)
+	//- 		+card-item(6, `Етказиб бериш ва вақти ҳақида келишиб оласиз`)
+	+footer()
+
+
+

@@ -1,0 +1,304 @@
+.servicesList {
+  &__list-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  &__list-item {
+    background: #FFFFFF;
+    border: 1px solid #E6E6E6;
+    border-radius: 12px;
+    padding: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(25% - 23px);
+    transition: 0.3s;
+    @include media-breakpoint-down(lg) {
+      width: calc(33% - 18px);
+    }
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+    &:hover {
+      border-color: transparent;
+      box-shadow: 4px 12px 33px rgba(0, 0, 0, 0.07);
+    }
+    .servicesList {
+      &__image-wrapper {
+        margin-bottom: 15px;
+      }
+      &__logo {
+        picture {
+          margin-bottom: 5px;
+        }
+      }
+      &__title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 19px;
+      }
+    }
+  }
+  &__btn {
+    margin-top: 24px;
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+.agroServiceTabs {
+  margin-bottom: 50px;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 90px;
+  }
+}
+
+.agroServicesAbout {
+  margin-bottom: 50px;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 90px;
+  }
+  .col-md-6 {
+    padding: 0 15px;
+    @include media-breakpoint-up(md) {
+      width: 50%;
+    }
+  }
+  .row {
+    display: flex;
+    align-items: center;
+  }
+  &__image {
+    padding: 0 62px 0 120px !important;
+    @include media-breakpoint-down(xl) {
+      padding: 0 62px 0 70px !important;
+    }
+    @include media-breakpoint-down(lg) {
+      padding: 0 15px !important;
+    }
+  }
+  &__info {
+
+  }
+  &__description {
+    font-size: 24px;
+    color: #8B8B8B;
+    line-height: 27px;
+    margin-bottom: 30px;
+    @include media-breakpoint-down(md) {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+  &__list {
+    ul {
+      li {
+        font-size: 18px;
+        color: #3E3E3E;
+        list-style: none;
+        padding-left: 52px;
+        position: relative;
+        margin-bottom: 15px;
+        @include media-breakpoint-up(md) {
+          margin-bottom: 30px;
+        }
+        .list-icon {
+          position: absolute;
+          left: 0;
+          top: calc(50% - 15.5px);
+          width: 33px;
+          height: 33px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 25px;
+          background: var(--bs-primary);
+          .icon {
+            color: white;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.agroServiceTabsForm {
+  .tab {
+    border-bottom: 1px solid #E6E6E6;
+    button {
+      margin-bottom: -1px;
+    }
+  }
+}
+
+.serviceAboutForm {
+  margin-bottom: 40px;
+  @include media-breakpoint-up(md) {
+    margin-top: 40px;
+  }
+  &__wrapper {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  &__image {
+    width: 100%;
+    @include media-breakpoint-up(md) {
+      width: 372px;
+    }
+  }
+  &__info {
+    @include media-breakpoint-up(md) {
+      width: calc(100% - 372px);
+    }
+    h1 {
+      color: #3E3E3E;
+    }
+  }
+  &__description {
+    color: #8B8B8B;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: justify;
+    @include media-breakpoint-down(lg) {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+}
+
+.serviceOptions {
+  margin-bottom: 80px;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 40px;
+  }
+  &__option-list {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 30px;
+    margin-top: 35px;
+  }
+  &__list-item {
+    background: white;
+    border: 1px solid #D0CFCF;
+    border-radius: 10px;
+    padding: 20px 30px;
+    min-height: 97px;
+    width: calc(33% - 17px);
+    display: flex;
+    align-items: center;
+    @include media-breakpoint-down(lg) {
+      width: calc(50% - 15px);
+    }
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+  &__image {
+    width: 33px;
+    min-width: 33px;
+    height: 33px;
+    background-color: var(--bs-primary);
+    margin-right: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    .icon {
+      font-size: 12px;
+      color: white;
+    }
+  }
+  &__text {
+    font-size: 18px;
+    line-height: 20px;
+    color: #3E3E3E;
+  }
+}
+
+.serviceTariffs {
+  margin-bottom: 50px;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 80px;
+  }
+  &__tarrifs-list {
+    display: flex;
+    gap: 34px;
+    margin-top: 40px;
+    @include media-breakpoint-up(lg) {
+      width: 923px;
+      margin: 40px auto 0;
+    }
+    @include media-breakpoint-down(md) {
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  }
+  &__list-item {
+    background: white;
+    border: 1px solid #E6E6E6;
+    border-radius: 14px;
+    padding: 20px;
+    transition: 0.3s;
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+    &:hover {
+      border-color: transparent;
+      box-shadow: 4px 12px 33px rgba(0, 0, 0, 0.07);
+    }
+  }
+  &__top-sector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__name {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--bs-primary);
+    margin-bottom: 25px;
+  }
+  &__price {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 22px;
+    color: #3E3E3E;
+    margin-bottom: 18px;
+    span {
+      display: block;
+      font-weight: 400;
+      font-size: 18px;
+      margin-top: 2px;
+      text-align: center;
+    }
+  }
+  &__advantages {
+    ul {
+      li {
+        list-style: none;
+        padding-left: 22px;
+        color: #7C7E81;
+        line-height: 16px;
+        position: relative;
+        margin-bottom: 15px;
+        .icon {
+          color: var(--bs-primary);
+          font-size: 8px;
+          position: absolute;
+          top: 3px;
+          left: 0;
+        }
+      }
+    }
+  }
+  &__bottom-sector {
+    margin-top: 30px;
+  }
+  &__btn {
+    font-size: 14px;
+    width: 100%;
+  }
+}

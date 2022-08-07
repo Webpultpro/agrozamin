@@ -1,0 +1,41 @@
+extends ../layout/main
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sAbout/_sAbout.pug
+include ../../blocks/sAdvantages/_sAdvantages
+include ../../blocks/sCategories/_sCategories
+include ../../blocks/sPopulars/_sPopulars
+include ../../blocks/sWantToSell/_sWantToSell
+include ../../blocks/sHowWorks/_sHowWorks
+include ../../blocks/sPartners/_sPartners
+include ../../blocks/sHeaderBanner/_sHeaderBanner
+include ../../blocks/sBankProducts/_sBankProducts
+include ../../blocks/sProductsOnSite/_sProductsOnSite
+include ../../blocks/sInformation/_sInformation
+include ../../blocks/sForm/_sForm
+
+block variables
+    - let  mainPage= 'vacancy-page'
+    - let  bg= 'main.jpg'
+
+block title
+    - let  title= 'Резуме жойлаш'
+    title= title
+block pagecontent
+
+
+    +mob-mnu()
+    +header()
+        +topLine()
+        +top-nav()
+
+    +breadcrumb('Асосий саҳифа', 'Вакансиялар', title)
+
+    .container
+        .row.row--main
+            .col-lg
+                +sForm6()
+
+    +footer()

@@ -33,6 +33,23 @@ mixin slidehead2(i,t,p, b="Харидни бошлаш")
 					source(type=`image/webp` srcset=`img/@1x/webp/head-slider-img-${i}.webp`)
 					source(type=`image/png` srcset=`img/@2x/head-slider-img-${i}.png` media=`(min-width:992px)`) 
 					img(src=`img/@1x/head-slider-img-${i}.png` alt='' loading='lazy')
+mixin slideheadService(i,t,p, b="Ўтиш")
+	+e.slide.swiper-slide.bg-wrap
+		if block
+			block
+		else
+			+pic(`service-slider-bg-${i}.jpg`,'bg').picture-bg
+		+e.content
+			+e.title!= t
+			p!= p
+		+e.btn.heartbeat(href="#")= b
+		//- +pic(`head-slider-img-${i}.png`,'').head-slide-img
+		if i
+			picture.head-slide-img
+				source(type='image/webp' srcset=`img/@2x/webp/service-slider-img-${i}.webp` media=`(min-width:992px)`)
+				source(type=`image/webp` srcset=`img/@2x/webp/service-slider-img-mob-${i}.webp`)
+				source(type=`image/png` srcset=`img/@2x/service-slider-img-${i}.png` media=`(min-width:992px)`)
+				img(src=`img/@2x/service-slider-img-mob-${i}.png` alt='')
 
 mixin headcards()
 	+b.cardsHead
@@ -87,6 +104,21 @@ mixin sHeaderBannerBody2(data)
 		+e.top.container 
 			+headcards()
 	// end sHeaderBanner
+mixin sHeaderBannerBodyService(data)
+	// start sHeaderBanner
+	+b.sHeaderBanner.section#sHeaderBanner&attributes(attributes).servicesBanner
+		.container
+			+e.slider--js.swiper-container
+				.swiper-wrapper
+					block
+				+e.arrow-wrapper.d-none.d-lg-block
+					+arrow
+				.swiper-pagination-wrap
+					.pieProgress(role='progressbar'  aria-valuemin='0' data-step='2' aria-valuemax='100').d-none.d-lg-block
+						.progress__meter
+							span.progress__label
+					.swiper-pagination
+	// end sHeaderBanner
 mixin sHeaderBanner(data)
 	+sHeaderBannerBody
 		+slidehead(1,`Ўз аграр бизнесингизни биз билан қуринг`,`Ҳамкорлар, дилерлар, етказиб берувчилар ва улгуржи харидорларни топиш учун ягона онлайн платформа`)
@@ -102,6 +134,13 @@ mixin sHeaderBanner2(data)
 				source(type=`image/webp` srcset=`img/@2x/webp/head-slider-bg-mob-2-2.webp`)
 				source(type=`image/png` srcset=`img/@2x/head-slider-bg-2-2.png` media=`(min-width:992px)`) 
 				img.object-fit-js(src=`img/@2x/head-slider-bg-mob-2-2.png` alt='' loading='lazy')
+
+mixin sHeaderBannerService(data)
+	+sHeaderBannerBodyService
+		+slideheadService(1,`Агробизнес учун сервислар`,`Бизнинг онлайн хизматлар сизга вақт ва ресурсларни тежаш учун ишлайди.`)
+		+slideheadService(2,`Агробизнес учун сервислар`,`Бизнинг онлайн хизматлар сизга вақт ва ресурсларни тежаш учун ишлайди.`)
+		+slideheadService(3,`Агробизнес учун сервислар`,`Бизнинг онлайн хизматлар сизга вақт ва ресурсларни тежаш учун ишлайди.`)
+
 
 mixin sHeaderBannerBlue()
 	// start sHeaderBanner

@@ -33,6 +33,7 @@
 		<link href="libs/animate.css/animate.min.css" rel="stylesheet"/>
 		<link href="libs/jquery-asPieProgress/css/asPieProgress.min.css" rel="stylesheet"/>
 		<link href="libs/select2/css/select2.min.css" rel="stylesheet"/>
+		<link href="js/multiselect/multiselect.css" rel="stylesheet"/>
 		<link href="js/datepicker/css/datepicker.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
@@ -7026,6 +7027,8 @@
 									<div class="filter-item__title d-lg-none">Каталог
 									</div>
 									<div class="filter-item__dropdown">
+										<div class="filter-item__all-products">Барча маҳсулотлар: &nbsp;<span>21 235</span>
+										</div>
 										<ul class="catalog-items">
 											<li><a href="#"><span class="icon-cat">
 														<svg class="icon icon-sosiska ">
@@ -7234,6 +7237,21 @@
 										</label>
 										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Ўзбекистон бўйлаб етказиб бериш</span>
 										</label>
+									</div>
+								</div>
+								<div class="filter-item">
+									<div class="filter-item__title lg-up-hidden">Этказиб бериш жойлари
+									</div>
+									<div class="filter-item__dropdown">
+										<select id="regionsFilter" name="regionsFilter" multiple="multiple">
+											<option value="Андижанская область">Андижанская область</option>
+											<option value="Бухарская область">Бухарская область</option>
+											<option value="Джизакская область">Джизакская область</option>
+											<option value="Кашкадарьинская область">Кашкадарьинская область</option>
+											<option value="Навоийская область">Навоийская область</option>
+											<option value="Наманганская область">Наманганская область</option>
+											<option value="Самаркандская область">Самаркандская область</option>
+										</select>
 									</div>
 								</div>
 								<div class="filter-item">
@@ -8417,6 +8435,7 @@
 		<script src="libs/jquery-filepond/filepond.jquery.js"> </script>
 		<script src="libs/select2/js/select2.min.js"> </script>
 		<script src="js/datepicker/js/datepicker.min.js"></script>
+		<script src="js/multiselect/jquery.multi-select.min.js"></script>
 		<script src="js/maskedinput.js"></script>
 		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=7f9b4650-9dc4-4319-92f6-caab041f0ba5" type="text/javascript"></script>
 		<!-- script(  src="event_reverse_geocode.js" type="text/javascript")-->

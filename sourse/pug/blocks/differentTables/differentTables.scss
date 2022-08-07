@@ -1,0 +1,55 @@
+.information-table {
+  margin-top: 40px;
+  margin-top: 40px;
+  display: flex;
+  flex-flow: row wrap;
+  row-gap: 15px;
+  .item-view {
+    display: flex;
+    width: 50%;
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+    .icon-wrapper {
+      min-width: 20px;
+      margin-right: 12px;
+      .icon {
+        color: var(--bs-primary);
+        font-size: 25px;
+      }
+    }
+    .wrapper-info {
+      .label {
+        color: #7C7E80;
+      }
+      .name {
+        color: black;
+      }
+    }
+  }
+}
+
+.trusted-seller {
+  background: white;
+  border: 1px solid #E9E7E7;
+  border-radius: 12px;
+  padding: 15px 15px 5px;
+  @include media-breakpoint-down(lg) {
+    margin-top: 40px;
+  }
+  .title {
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    .icon-wrapper {
+      min-width: 25px;
+      margin-right: 12px;
+      .icon {
+        color: #419FD9;
+        font-size: 25px;
+      }
+    }
+  }
+}

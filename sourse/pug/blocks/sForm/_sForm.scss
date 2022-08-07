@@ -351,3 +351,160 @@
 		height: 350px;
 	}
 }
+
+.agroservice-form {
+	margin-bottom: 40px;
+	@include media-breakpoint-up(md) {
+		margin-bottom: 80px;
+	}
+	.form-wrap {
+		border-radius: 0;
+		box-shadow: none;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: unset;
+		padding: 0;
+		&__step-wrapper {
+			background: #F7F8FD;
+			padding: 40px 0;
+			position: relative;
+			margin-bottom: 80px;
+			@include media-breakpoint-down(md) {
+				margin-bottom: 40px;
+			}
+			&:before {
+				content: '';
+				width: 5555px;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 100%;
+				background: #F7F8FD;
+			}
+			&:after {
+				content: '';
+				width: 5555px;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 100%;
+				background: #F7F8FD;
+			}
+			h2 {
+				margin-bottom: 27px;
+			}
+		}
+		&__step-form {
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+			.step {
+				display: none;
+				flex-direction: column;
+				align-items: center;
+				position: relative;
+				padding: 0 15px;
+				&.active {
+					display: flex;
+				}
+				&.last {
+					&:before {
+						right: 50%;
+						width: 50%;
+					}
+				}
+				&:before {
+					content: '';
+					display: block;
+					position: absolute;
+					top: 52px;
+					left: 0;
+					right: 0;
+					width: 100%;
+					border-bottom: 3px dashed #ced4da;
+					z-index: 5;
+					@include media-breakpoint-down(sm) {
+						top: 36px;
+					}
+				}
+				&:first-child {
+					&:before {
+						left: 50%;
+						width: 50%;
+					}
+				}
+			}
+			.count {
+				font-size: 32px;
+				color: var(--bs-primary);
+				width: 105px;
+				height: 105px;
+				background: white;
+				border-radius: 50%;
+				border: 3px dashed #CED4DA;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-bottom: 35px;
+				position: relative;
+				z-index: 10;
+				@include media-breakpoint-down(md) {
+					margin-bottom: 10px;
+				}
+				@include media-breakpoint-down(sm) {
+					width: 75px;
+					height: 75px;
+				}
+			}
+			.desc {
+				font-size: 18px;
+				color: #3e3e3e;
+				line-height: 20px;
+				max-width: 255px;
+				@include media-breakpoint-down(md) {
+					display: none;
+				}
+			}
+		}
+		&__form-sector {
+			.name {
+				font-weight: 500;
+				font-size: 32px;
+				color: #3E3E3E;
+				line-height: 37px;
+				margin-bottom: 6px;
+			}
+			.text {
+				font-size: 18px;
+				color: #3E3E3E;
+				line-height: 20px;
+				@include media-breakpoint-up(lg) {
+					width: 68%;
+					margin: 0 auto;
+				}
+			}
+		}
+		&__webform-wrapper {
+			background: #FFFFFF;
+			box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+			border-radius: 12px;
+			padding: 40px;
+			margin-top: 35px;
+			@include media-breakpoint-up(xl) {
+				width: 1050px;
+				margin: 35px auto 0;
+			}
+			@include media-breakpoint-down(md) {
+				padding: 20px;
+			}
+		}
+		&__btn-wrap {
+			margin-top: 55px;
+			.btn {
+				min-width: 190px;
+			}
+		}
+	}
+}

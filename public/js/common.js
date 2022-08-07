@@ -887,74 +887,78 @@ $(".date-tabs .form-check").on('click', function () {
 
 /*start YandexMap*/
 $(document).ready(function(){
-	ymaps.ready(init);
-	function init() {
-		var myInput = document.getElementById('myCoordinates'),
-			myInputLatitude = document.getElementById('myLatitude'),
-			myInputLongitude = document.getElementById('myLongitude'),
-			myPlacemark,
-			myMap = new ymaps.Map('map', {
-				center: [41.315907, 69.280000],
-				zoom: 12
-			}, {
-				searchControlProvider: 'yandex#search'
+	if($('#map').length>0) {
+		ymaps.ready(init);
+		function init() {
+			var myInput = document.getElementById('myCoordinates'),
+				myInputLatitude = document.getElementById('myLatitude'),
+				myInputLongitude = document.getElementById('myLongitude'),
+				myPlacemark,
+				myMap = new ymaps.Map('map', {
+					center: [41.315907, 69.280000],
+					zoom: 12
+				}, {
+					searchControlProvider: 'yandex#search'
+				});
+			myMap.events.add('click', function (e) {
+				var coords = e.get('coords');
+				if (myPlacemark) {
+					myPlacemark.geometry.setCoordinates(coords);
+				} else {
+					myPlacemark = createPlacemark(coords);
+					myMap.geoObjects.add(myPlacemark);
+					myPlacemark.events.add('dragend', function () {
+						getAddress(myPlacemark.geometry.getCoordinates());
+					});
+				}
+				getAddress(coords);
 			});
-		myMap.events.add('click', function (e) {
-			var coords = e.get('coords');
-			if (myPlacemark) {
-				myPlacemark.geometry.setCoordinates(coords);
-			}
-			else {
-				myPlacemark = createPlacemark(coords);
-				myMap.geoObjects.add(myPlacemark);
-				myPlacemark.events.add('dragend', function () {
-					getAddress(myPlacemark.geometry.getCoordinates());
+
+			function createPlacemark(coords) {
+				return new ymaps.Placemark(coords, {
+					iconCaption: 'поиск...'
+				}, {
+					preset: 'islands#violetDotIconWithCaption',
+					draggable: true
 				});
 			}
-			getAddress(coords);
-		});
-		function createPlacemark(coords) {
-			return new ymaps.Placemark(coords, {
-				iconCaption: 'поиск...'
-			}, {
-				preset: 'islands#violetDotIconWithCaption',
-				draggable: true
-			});
-		}
-		function getAddress(coords) {
-			myPlacemark.properties.set('iconCaption', 'поиск...');
-			ymaps.geocode(coords).then(function (res) {
-				var firstGeoObject = res.geoObjects.get(0);
 
-				myPlacemark.properties
-					.set({
-						iconCaption: [
-							firstGeoObject.getLocalities().length ? firstGeoObject.getLocalities() : firstGeoObject.getAdministrativeAreas(),
-							firstGeoObject.getThoroughfare() || firstGeoObject.getPremise()
-						].filter(Boolean).join(', '),
-						balloonContent: firstGeoObject.getAddressLine(),
+			function getAddress(coords) {
+				myPlacemark.properties.set('iconCaption', 'поиск...');
+				ymaps.geocode(coords).then(function (res) {
+					var firstGeoObject = res.geoObjects.get(0);
 
-					});
-				myInput.value = firstGeoObject.getAddressLine();
-				localStorage.setItem('value', firstGeoObject.getAddressLine());
+					myPlacemark.properties
+						.set({
+							iconCaption: [
+								firstGeoObject.getLocalities().length ? firstGeoObject.getLocalities() : firstGeoObject.getAdministrativeAreas(),
+								firstGeoObject.getThoroughfare() || firstGeoObject.getPremise()
+							].filter(Boolean).join(', '),
+							balloonContent: firstGeoObject.getAddressLine(),
 
-				myInputLatitude.value = firstGeoObject.properties.get('boundedBy.0.0');
-				localStorage.setItem('value2', firstGeoObject.properties.get('boundedBy.0.0'));
+						});
+					myInput.value = firstGeoObject.getAddressLine();
+					localStorage.setItem('value', firstGeoObject.getAddressLine());
 
-				myInputLongitude.value = firstGeoObject.properties.get('boundedBy.0.1');
-				localStorage.setItem('value3', firstGeoObject.properties.get('boundedBy.0.1'));
-			});
+					myInputLatitude.value = firstGeoObject.properties.get('boundedBy.0.0');
+					localStorage.setItem('value2', firstGeoObject.properties.get('boundedBy.0.0'));
+
+					myInputLongitude.value = firstGeoObject.properties.get('boundedBy.0.1');
+					localStorage.setItem('value3', firstGeoObject.properties.get('boundedBy.0.1'));
+				});
+			}
+
+			if (localStorage.getItem('value')) {
+				myInput.value = localStorage.getItem('value');
+			}
+			if (localStorage.getItem('value2')) {
+				myInputLatitude.value = localStorage.getItem('value2');
+			}
+			if (localStorage.getItem('value3')) {
+				myInputLongitude.value = localStorage.getItem('value3');
+			}
 		}
-		if(localStorage.getItem('value')){
-			myInput.value = localStorage.getItem('value');
-		}
-		if(localStorage.getItem('value2')){
-			myInputLatitude.value = localStorage.getItem('value2');
-		}
-		if(localStorage.getItem('value3')){
-			myInputLongitude.value = localStorage.getItem('value3');
-		}
-	};
+	}
 
 	if($('#productLocation').length>0) {
 		ymaps.ready(product);
@@ -997,6 +1001,15 @@ $(document).ready(function(){
 	});
 });
 /*end ButtonClickOpen*/
+
+/*start multipleSelect*/
+$(document).ready(function(){
+	$('#regionsFilter').multiSelect({
+		'noneText':'Этказиб бериш жойлари',
+		'allText': 'Все рагионы выбраны',
+	});
+});
+/*end multipleSelect*/
 
 /*start checkboxOpenDate*/
 $(document).ready(function(){

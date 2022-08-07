@@ -1,0 +1,22 @@
+extends layout/main.pug
+
+include ../blocks/sAgrolab/_sAgrolab.pug
+include ../blocks/sAgroServices/_sAgroServices.pug
+
+block variables
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Ишлаб чиқариш санитария назорати'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+topLine()
+		+top-nav('logout')
+	+breadcrumbFullWidth('Асосий саҳифа', 'Агрохизматлар', title)
+	+sAgroServiceBanner()
+	+agroServicesTabsForm3()
+	+footer()

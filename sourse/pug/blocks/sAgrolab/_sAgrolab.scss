@@ -56,3 +56,107 @@
     }
   }
 }
+.agroservice {
+  .agro_content {
+    background: linear-gradient(276.34deg, #E9FBFF 0%, #C5F4FF 100%);
+    border-radius: 19px;
+    padding: 55px 0 0 55px;
+    overflow: hidden;
+    @include media-breakpoint-down(lg) {
+      padding: 30px;
+    }
+  }
+  .wrapper {
+    padding-bottom: 55px;
+    @include media-breakpoint-down(lg) {
+      padding-bottom: 0;
+      text-align: center;
+    }
+    h2, .h2 {
+      font-weight: 700;
+      font-size: 45px;
+      line-height: 44.5px;
+      @include media-breakpoint-down(md) {
+        font-size: 27px;
+        line-height: 25px;
+      }
+    }
+    .desc {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 19.5px;
+      margin-bottom: 50px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 20px;
+      }
+    }
+    .btn {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 18px;
+      min-width: 188px;
+    }
+  }
+  .picture {
+    align-items: flex-end;
+    display: flex;
+  }
+}
+.breadcrumbSection {
+  background: rgba(62, 62, 62, 0.03);
+  .breadcrumb {
+    background: transparent;
+    margin-bottom: 0;
+  }
+}
+.agroserviceBanner {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  background: rgba(62, 62, 62, 0.03);
+  .agro_content {
+    padding: 0 1.2rem 55px;
+    @include media-breakpoint-down(xl) {
+      padding: 10px 1.2rem 55px;
+    }
+    @include media-breakpoint-down(lg) {
+      padding: 10px 1.2rem 30px;
+    }
+    .row {
+      align-items: flex-end;
+    }
+  }
+  .wrapper {
+    @include media-breakpoint-down(lg) {
+      text-align: center;
+    }
+    h2, .h2 {
+      font-weight: 700;
+      font-size: 43px;
+      line-height: 42px;
+      @include media-breakpoint-down(md) {
+        font-size: 27px;
+        line-height: 25px;
+      }
+    }
+    .desc {
+      font-size: 18px;
+      color: #393939;
+      line-height: 22px;
+      margin-bottom: 25px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 20px;
+      }
+    }
+    .btn {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 18px;
+      min-width: 188px;
+    }
+  }
+  picture {
+    width: 72%;
+    float: right;
+  }
+}

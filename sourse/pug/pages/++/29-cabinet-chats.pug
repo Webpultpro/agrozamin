@@ -1,4 +1,4 @@
-extends layout/main.pug
+extends ../layout/main
 
 
 //- include ../blocks/sContent/_sContent.pug
@@ -10,8 +10,8 @@ extends layout/main.pug
 //- include ../blocks/sWantToSell/_sWantToSell.pug
 //- include ../blocks/sHowWorks/_sHowWorks.pug
 //- include ../blocks/legal-info/_legal-info.pug
-include ../blocks/sPersonalAccount/_sPersonalAccount.pug
-include ../blocks/sChatCards/_sChatCards.pug
+include ../../blocks/sPersonalAccount/_sPersonalAccount
+include ../../blocks/sConsulting/_sConsulting
 
 block variables
 	- let  mainPage= 'page-cabinet' 
@@ -28,7 +28,7 @@ block pagecontent
 		//- +topLine()
 		+top-nav-cabinet()
 	+breadcrumb('Асосий саҳифа', 'Кабинет', title)
-	+sPersonalAccount()
+	+sPersonalAccount().chats
 		.row.row--main
 			.col-lg.col--aside
 				+b.UL.navigation.d-none.d-lg-block
@@ -45,7 +45,7 @@ block pagecontent
 						+e.SPAN.item-count 59
 					
 			.col-lg.col--main
-				+sChatCards()
+				+sChatsSection()
 	+footer()
 
 

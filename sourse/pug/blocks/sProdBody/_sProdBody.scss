@@ -6,7 +6,42 @@
 	width: 100%;
 	height: 327px;
 }
-
+.registration-date {
+	font-size: 18px;
+	color: #7C7E80;
+	margin-top: 15px;
+}
+#sProvider {
+	h1 {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 28px;
+	}
+	.sProdBody {
+		&__provider-region {
+			border-bottom: none;
+			margin-bottom: 15px;
+			@include media-breakpoint-down(md) {
+				display: block;
+				margin-bottom: 0;
+			}
+			.sProdBody {
+				&__footer-links {
+					@include media-breakpoint-down(md) {
+						justify-content: flex-start;
+						margin-top: 15px;
+						gap: 20px;
+					}
+				}
+				&__footer-link {
+					@include media-breakpoint-down(md) {
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+}
 .sProdBody {
 	--sPT: 28px;
 	--sPB: #{rem(90)};
@@ -41,6 +76,9 @@
 						p {
 							color: #7C7E80;
 							margin: 0;
+							&.online {
+								color: #4AABF2;
+							}
 						}
 					}
 				}
@@ -163,7 +201,6 @@
 		padding-left: rem(26);
 		padding-right: rem(26);
 	}
-
 	&__btn {
 		@extend .btn;
 		@extend .btn-primary;
@@ -195,7 +232,6 @@
 			font-size: 12px;
 		}
 	}
-
 	p {
 		line-height: 125%;
 	}
@@ -212,11 +248,9 @@
 		overflow: hidden;
 		margin-bottom: rem(15);
 	}
-
 	.readmore-link-more {
 		margin-bottom: rem(11)
 	}
-
 	&__col {
 		@include media-breakpoint-up(md) {
 			width: calc(250px + var(--bs-gutter-x));
@@ -317,7 +351,6 @@
 			}
 		}
 	}
-
 	@include media-breakpoint-down(md) {
 		&__slider-lg-wrap {
 			position: relative;
@@ -337,7 +370,6 @@
 			min-height: 695px;
 		}
 	}
-
 	.text-end {
 		a.ttu {
 			font-weight: 500;
@@ -345,7 +377,6 @@
 			align-items: center;
 		}
 	}
-
 	&__col-right{
 		position: relative;
 		@include media-breakpoint-down(md) {
@@ -362,6 +393,12 @@
 	}
 	&__map-col {
 		width: calc(250px + var(--bs-gutter-x));
+		@include media-breakpoint-down(lg) {
+			width: 100%;
+		}
+	}
+	&__trust-seller-col {
+		width: calc(264px + var(--bs-gutter-x));
 		@include media-breakpoint-down(lg) {
 			width: 100%;
 		}

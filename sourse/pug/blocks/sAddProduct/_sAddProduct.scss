@@ -197,3 +197,29 @@
 		--bs-primary: var(--color);
 	}
 }
+
+.faq-section {
+	margin-bottom: 30px;
+	&__wrapper {
+		background: #F8F9FA;
+		border-radius: 8px;
+      	padding: 20px;
+		display: flex;
+	}
+	&__icon {
+		background: #419FD9;
+		min-width: 24px;
+		width: 24px;
+		height: 24px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: white;
+		font-weight: 600;
+		border-radius: 50%;
+		margin-right: 18px;
+	}
+	&__text {
+		color: #3E3E3E;
+	}
+}

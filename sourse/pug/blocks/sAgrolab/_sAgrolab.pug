@@ -11,3 +11,31 @@ mixin sAgrolab(data)
                             .h2.mb-3 Агролаб интенсив курслари
                             .desc Агролаб сервиси орқали сиз сифатли бўлган лобаратория хизматларидан фойдаланишингиз ва ўз тадқиқотларингизни ўтказишингиз мумкин
                             button.btn.btn-primary Сўровнома қолдириш
+
+mixin sAgroService(data)
+    // start sOurGoal
+    div.agroservice.section#agrolab&attributes(attributes)
+        .container
+            .agro_content.wow.animate__fadeInUp
+                .row
+                    .content.col-lg-5
+                        .wrapper
+                            .h2.mb-3 Агрохизматлардан фойдаланинг
+                            .desc Барча турдаги агро хизматлар фермер ва деҳқонлар учун
+                            button.btn.btn-primary Ўтиш
+                    .picture.col-lg-7
+                        +pic("argo-service.png",'bg',0).logo-agroservice.d-none.d-lg-block
+
+mixin sAgroServiceBanner(data)
+    // start sOurGoal
+    div.agroserviceBanner.section#agrolab&attributes(attributes)
+        .container
+            .agro_content
+                .row
+                    .content.col-lg-6
+                        .wrapper
+                            .h2.mb-3 Ишлаб чиқариш санитария назорати
+                            .desc Хизмат қўлларни санитаризация қилишни кафолатлайди ва барча ходимлар учун иш кийимлари мавжудлигини текширади. Тизим ишлаб чиқаришдаги маҳсулотларни биологик ифлосланишдан ҳимоя қилади
+                            button.btn.btn-primary Сўровнома қолдириш
+                    .picture.col-lg-6
+                        +pic("service-banner-photo.png",'bg',0).logo-agroservice.d-none.d-lg-block

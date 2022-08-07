@@ -127,6 +127,11 @@
 			flex-direction: column;
 		}
 	}
+	&__row {
+		@include media-breakpoint-up(md) {
+			--bs-gutter-y: 50px;
+		}
+	}
 }
 .btns-head {
 	&__btn-head {
@@ -737,19 +742,21 @@
 		top: 5px;
 		right: 5px;
 		cursor: pointer;
-	}
-	&__input {
-		visibility: hidden;
-		width: 39px;
-		height: 39px;
-		position: relative;
-		z-index: 10;
-		+ .custom-input__checked-image {
-			display: none;
-		}
-		&:checked {
-			+ .custom-input__checked-image {
-				display: block;
+		.custom-input {
+			&__input {
+				visibility: hidden;
+				width: 39px;
+				height: 39px;
+				position: relative;
+				z-index: 10;
+				+ .custom-input__checked-image {
+					display: none;
+				}
+				&:checked {
+					+ .custom-input__checked-image {
+						display: block;
+					}
+				}
 			}
 		}
 	}

@@ -1,4 +1,4 @@
-extends layout/main.pug
+extends ../layout/main
 
 
 //- include ../blocks/sContent/_sContent.pug
@@ -10,8 +10,9 @@ extends layout/main.pug
 //- include ../blocks/sWantToSell/_sWantToSell.pug
 //- include ../blocks/sHowWorks/_sHowWorks.pug
 //- include ../blocks/legal-info/_legal-info.pug
-include ../blocks/sPersonalAccount/_sPersonalAccount.pug
-include ../blocks/sChat/_sChat.pug
+include ../../blocks/sPersonalAccount/_sPersonalAccount
+include ../../blocks/sChat/_sChat
+include ../../blocks/sNotifications/_sNotifications
 
 block variables
 	- let  mainPage= 'page-cabinet' 
@@ -31,18 +32,20 @@ block pagecontent
 	+b.alert-block
 		mixin item(t,c)
 			+b.alert-item(href="#" style=`--alert-color:${c}`)
-				+e.title= t 
+				+e.title= t
 				+e.text Учрашув вақти: 04.01.2022  11:00 - 11:30
 		+item("Сизнинг соровингиз қабул қилинди",'rgba(0, 205, 105, 0.5)')
 		+item("Видео мулоқот вақти",'rgba(0, 111, 249, 0.5)')
 		+item("Сизнинг соровингиз рад этилди",'rgba(237, 98, 98, 0.5)')
 	+sPersonalAccount()
 		.sChat__message.sChat__message--lg
-			.h4 Консултант билан алоқа якунланди 
+			.h4 Консултант билан алоқа якунланди
 			.sChat__message__time Суҳбат сиз учун манфатли бўлган бўлса, мутаҳассисни баҳолашингиз мумкин
-			+stars 
+			+stars
 			+input("Изҳингизни қолдиринг",'textarea')
 			button.btn.btn-primary(type="button") Оркага
+	+sNotificationsScroll()
+	+sNotifications()
 	+footer()
 
 

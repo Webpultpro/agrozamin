@@ -69,6 +69,10 @@ mixin sAddProduct(empty)
 			else
 				+b.section-title
 					h1 Таҳрирлаш
+				+b.faq-section
+					+e.wrapper
+						+e.icon !
+						+e.text Маҳсулот жойланганидан сўнг 30 кун давомида фаол ҳолатда туради. 30 кундан сўнг маҳсулотни қайта фаоллаштириш талаб қилинади
 				+e.item
 					.row
 						.col-lg-8.col-md-6
@@ -116,6 +120,14 @@ mixin sAddProduct(empty)
 							.h6.mb-4 Этказиб бериш тури
 							+in-c(): +e.SPAN.text Омборхонадан олиб кетиш
 							+in-c(): +e.SPAN.text Ўзбекистон бўйлаб етказиб бериш
+							select(id="regionsFilter" name="regionsFilter" multiple="multiple")
+								option(value="Андижанская область") Андижанская область
+								option(value="Бухарская область") Бухарская область
+								option(value="Джизакская область") Джизакская область
+								option(value="Кашкадарьинская область") Кашкадарьинская область
+								option(value="Навоийская область") Навоийская область
+								option(value="Наманганская область") Наманганская область
+								option(value="Самаркандская область") Самаркандская область
 				
 				+e.item--wide
 					.mb-3

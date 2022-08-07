@@ -127,6 +127,8 @@ mixin aside4(data)
 			+b.filter-item
 				+e.title.d-lg-none Каталог
 				+e.dropdown
+					+e.all-products Барча маҳсулотлар: &nbsp;
+						span 21 235
 					ul.catalog-items
 						li
 							a(href="#")
@@ -317,6 +319,17 @@ mixin aside4(data)
 				+e.dropdown
 					+in-c('checkbox', 'Омборхонадан олиб кетиш')
 					+in-c('checkbox', 'Ўзбекистон бўйлаб етказиб бериш')
+			+b.filter-item
+				+e.title.lg-up-hidden Этказиб бериш жойлари
+				+e.dropdown
+					select(id="regionsFilter" name="regionsFilter" multiple="multiple")
+						option(value="Андижанская область") Андижанская область
+						option(value="Бухарская область") Бухарская область
+						option(value="Джизакская область") Джизакская область
+						option(value="Кашкадарьинская область") Кашкадарьинская область
+						option(value="Навоийская область") Навоийская область
+						option(value="Наманганская область") Наманганская область
+						option(value="Самаркандская область") Самаркандская область
 			+b.filter-item
 				+e.title Савдолашиш
 				+e.dropdown

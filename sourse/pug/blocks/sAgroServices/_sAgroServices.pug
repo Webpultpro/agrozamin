@@ -1,0 +1,304 @@
+include ../sForm/_sForm
+
+mixin servicesList(data)
+    +b.servicesList
+        +e.list-wrapper
+            +e.list-item
+                +e.top-cestor
+                    +e.image-wrapper
+                        +pic('service1.jpg','bg',0)
+                    +e.logo
+                        +pic('service-logo1','',0)
+                    +e.title Ишлаб чиқариш санитария назорати
+                +e.bottom-cestor
+                    +btn('Батафсил').btn.btn-primary
+            +e.list-item
+                +e.top-cestor
+                    +e.image-wrapper
+                        +pic('service2.jpg','bg',0)
+                    +e.logo
+                        +pic('service-logo2','',0)
+                    +e.title Қишлоқ хўжалигида ишлаш
+                +e.bottom-cestor
+                    +btn('Батафсил').btn.btn-primary
+            +e.list-item
+                +e.top-cestor
+                    +e.image-wrapper
+                        +pic('service3.jpg','bg',0)
+                    +e.logo
+                    +e.title Маҳсулотлар ва қишлоқ хўжалик маҳсулотларини он-лине тарзда сотиш
+                +e.bottom-cestor
+                    +btn('Батафсил').btn.btn-primary
+            +e.list-item
+                +e.top-cestor
+                    +e.image-wrapper
+                        +pic('service4.jpg','bg',0)
+                    +e.logo
+                        +pic('service-logo1','',0)
+                    +e.title Ишлаб чиқариш санитария назорати
+                +e.bottom-cestor
+                    +btn('Батафсил').btn.btn-primary
+            +e.list-item
+                +e.top-cestor
+                    +e.image-wrapper
+                        +pic('service5.jpg','bg',0)
+                    +e.logo
+                        +pic('service-logo3','',0)
+                    +e.title Карта агротехнологий
+                +e.bottom-cestor
+                    +btn('Батафсил').btn.btn-primary
+            +e.list-item
+                +e.top-cestor
+                    +e.image-wrapper
+                        +pic('service1.jpg','bg',0)
+                    +e.logo
+                    +e.title Органик ишлаб чиқариш
+                +e.bottom-cestor
+                    +btn('Батафсил').btn.btn-primary
+            +e.list-item
+                +e.top-cestor
+                    +e.image-wrapper
+                        +pic('service2.jpg','bg',0)
+                    +e.logo
+                    +e.title Қорамолларни ҳисобга олиш ва кузатиш
+                +e.bottom-cestor
+                    +btn('Батафсил').btn.btn-primary
+            +e.list-item
+                +e.top-cestor
+                    +e.image-wrapper
+                        +pic('service3.jpg','bg',0)
+                    +e.logo
+                        +pic('service-logo4','',0)
+                    +e.title Ишлаб чиқариш санитария назорати
+                +e.bottom-cestor
+                    +btn('Батафсил').btn.btn-primary
+
+mixin serviceAboutForm(data)
+    +b.serviceAboutForm
+        .container
+            +e.wrapper
+                +e.image
+                    +pic('about-form.png','bg',0)
+                +e.info
+                    h1 Хизмат ҳақида
+                    +e.description
+                        p Шахсий гигиена қоидаларига риоя қилмаслик ва ходимлар томонидан ишда қабул қилинган қоидаларни бузиш ҳайвонлар ёки маҳсулотларнинг бактериялар, вируслар, замбуруғлар ва бошқа патоген микроорганизмлар билан биологик ифлосланишига олиб келиши мумкин.
+                        p Одамлар, роботлардан фарқли ўлароқ, ЖССТ стандартларига мувофиқ қўлларни ювиш каби мунтазам такрорланадиган ҳаракатларни узоқ вақт давомида бир хил сифат билан бажара олмайдилар.
+
+mixin serviceOptions(data)
+    +b.serviceOptions
+        .container
+            h2.text-center Хизмат имкониятлари
+            +e.option-list
+                +e.list-item
+                    +e.image
+                        +icon('check')
+                    +e.text Кириш пайтида ходимни аниқлайди
+                +e.list-item
+                    +e.image
+                        +icon('check')
+                    +e.text Совундан фойдаланишни текширади
+                +e.list-item
+                    +e.image
+                        +icon('check')
+                    +e.text Қўл ювиш вақти ва сифатини белгилайди
+                +e.list-item
+                    +e.image
+                        +icon('check')
+                    +e.text Дезинфекцияловчи восита қўлланилганлигини текширади
+                +e.list-item
+                    +e.image
+                        +icon('check')
+                    +e.text Турникетни ва корхонага киришни бошқаради
+                +e.list-item
+                    +e.image
+                        +icon('check')
+                    +e.text Ходимларни интерактив екранда ўқитади
+
+mixin serviceTariffs(data)
+    +b.serviceTariffs
+        .container
+            h2.text-center Тарифлар
+            +e.tarrifs-list
+                +e.list-item
+                    +e.top-sector
+                        +e.name Стандарт
+                        +e.price 550 990
+                            span uzs/йилига
+                        +e.advantages
+                            ul
+                                li Барча хизматлар бўйича маҳсус ходимлар тескшируви
+                                    +icon('check')
+                                li Тозалаш санитария хизмати
+                                    +icon('check')
+                                li Санитария епидемиология хизмати
+                                    +icon('check')
+                                li Санитар ходимлар хизмати
+                                    +icon('check')
+                    +e.bottom-sector
+                        +btn('Бошлаш').btn.btn-outline-primary
+                +e.list-item
+                    +e.top-sector
+                        +e.name Оптимал
+                        +e.price 760 990
+                            span uzs/йилига
+                        +e.advantages
+                            ul
+                                li Барча хизматлар бўйича маҳсус ходимлар тескшируви
+                                    +icon('check')
+                                li Тозалаш санитария хизмати
+                                    +icon('check')
+                                li Санитария епидемиология хизмати
+                                    +icon('check')
+                                li Санитар ходимлар хизмати
+                                    +icon('check')
+                    +e.bottom-sector
+                        +btn('Бошлаш').btn.btn-outline-primary
+                +e.list-item
+                    +e.top-sector
+                        +e.name Максимум
+                        +e.price 880 990
+                            span uzs/йилига
+                        +e.advantages
+                            ul
+                                li Барча хизматлар бўйича маҳсус ходимлар тескшируви
+                                    +icon('check')
+                                li Тозалаш санитария хизмати
+                                    +icon('check')
+                                li Санитария епидемиология хизмати
+                                    +icon('check')
+                                li Санитар ходимлар хизмати
+                                    +icon('check')
+                    +e.bottom-sector
+                        +btn('Бошлаш').btn.btn-outline-primary
+mixin agroServicesTabs(data)
+    .agroServiceTabs
+        .container
+            .tabs-region
+                .tab
+                    button.tablinks.active(onclick="openCity(event, 'agricultural')") Агрохизматлар
+                    button.tablinks(onclick="openCity(event, 'business')") Бизнес хизматлар
+                    button.tablinks(onclick="openCity(event, 'industry')") Агросаноат
+                    button.tablinks(onclick="openCity(event, 'chemistry')") Агрокимё
+                .tabcontent.opened(id="agricultural")
+                    +servicesList()
+                .tabcontent(id="business")
+                    +servicesList()
+                .tabcontent(id="industry")
+                    +servicesList()
+                .tabcontent(id="chemistry")
+                    +servicesList()
+
+mixin agroServicesTabsForm(data)
+    .agroServiceTabsForm
+        .container
+            .tabs-region
+                .tab
+                    button.tablinks.active(onclick="openCity(event, 'agricultural')") Агрохизматлар
+                    button.tablinks(onclick="openCity(event, 'business')") Бизнес хизматлар
+                    button.tablinks(onclick="openCity(event, 'industry')") Агросаноат
+                    button.tablinks(onclick="openCity(event, 'chemistry')") Агрокимё
+                .tabcontent.opened(id="agricultural")
+                    +serviceAboutForm()
+                    +serviceOptions()
+                    +serviceTariffs()
+                    +sFormAgroservice()
+                .tabcontent(id="business")
+                    +serviceAboutForm()
+                    +serviceOptions()
+                    +serviceTariffs()
+                    +sFormAgroservice()
+                .tabcontent(id="industry")
+                    +serviceAboutForm()
+                    +serviceOptions()
+                    +serviceTariffs()
+                    +sFormAgroservice()
+                .tabcontent(id="chemistry")
+                    +serviceAboutForm()
+                    +serviceOptions()
+                    +serviceTariffs()
+                    +sFormAgroservice()
+
+mixin agroServicesTabsForm2(data)
+    .agroServiceTabsForm
+        .container
+            .tabs-region
+                .tab
+                    button.tablinks.active(onclick="openCity(event, 'agricultural')") Агрохизматлар
+                    button.tablinks(onclick="openCity(event, 'business')") Бизнес хизматлар
+                    button.tablinks(onclick="openCity(event, 'industry')") Агросаноат
+                    button.tablinks(onclick="openCity(event, 'chemistry')") Агрокимё
+                .tabcontent.opened(id="agricultural")
+                    +serviceAboutForm()
+                    +serviceOptions()
+                    +serviceTariffs()
+                    +sFormAgroservice2()
+                .tabcontent(id="business")
+                    +serviceAboutForm()
+                    +serviceOptions()
+                    +serviceTariffs()
+                    +sFormAgroservice2()
+                .tabcontent(id="industry")
+                    +serviceAboutForm()
+                    +serviceOptions()
+                    +serviceTariffs()
+                    +sFormAgroservice2()
+                .tabcontent(id="chemistry")
+                    +serviceAboutForm()
+                    +serviceOptions()
+                    +serviceTariffs()
+                    +sFormAgroservice2()
+
+mixin agroServicesTabsForm3(data)
+    .agroServiceTabsForm
+        .container
+            .tabs-region
+                .tab
+                    button.tablinks.active(onclick="openCity(event, 'agricultural')") Агрохизматлар
+                    button.tablinks(onclick="openCity(event, 'business')") Бизнес хизматлар
+                    button.tablinks(onclick="openCity(event, 'industry')") Агросаноат
+                    button.tablinks(onclick="openCity(event, 'chemistry')") Агрокимё
+                .tabcontent.opened(id="agricultural")
+                    +serviceAboutForm()
+                    +serviceOptions()
+                    +serviceTariffs()
+                    +sFormAgroservice3()
+                .tabcontent(id="business")
+                    +serviceAboutForm()
+                    +serviceOptions()
+                    +serviceTariffs()
+                    +sFormAgroservice3()
+                .tabcontent(id="industry")
+                    +serviceAboutForm()
+                    +serviceOptions()
+                    +serviceTariffs()
+                    +sFormAgroservice3()
+                .tabcontent(id="chemistry")
+                    +serviceAboutForm()
+                    +serviceOptions()
+                    +serviceTariffs()
+                    +sFormAgroservice3()
+
+
+mixin agroServicesAbout(data)
+    +b.agroServicesAbout
+        .container
+            +e.content-wrapper
+                .row
+                    +e.image.col-md-6
+                        +pic('about-services.png','bg',0)
+                    +e.info.col-md-6
+                        h1 Агрохизмат ҳақида
+                        +e.description
+                            p Агрохизмат бу Агрозамин ва бошқа қошма корхоналарнинг мижозларларга хизмат кўрсатиш сервисидир. Ушбу хизмат сиз озингизх учун керакли болган барча хизматларга сўров қолдиришингиз мумкин
+                        +e.list
+                            ul
+                                li Ишончли компаниялардан ишончли хизматлар
+                                    span.list-icon
+                                        +icon('check')
+                                li Кенг қамровли хизматлар кетма кетлиги
+                                    span.list-icon
+                                        +icon('check')
+                                li Ортиқча вақтниннг тежалиши
+                                    span.list-icon
+                                        +icon('check')

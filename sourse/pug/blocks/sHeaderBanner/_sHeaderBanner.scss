@@ -332,6 +332,40 @@
 			top: -40px;
 		}
 	}
+	&.servicesBanner {
+		padding-top: 5px;
+		.sHeaderBanner {
+			&__content {
+				@include media-breakpoint-up(lg) {
+					max-width: 24rem;
+					margin-bottom: 10px;
+				}
+			}
+			&__slide {
+				@include media-breakpoint-up(lg) {
+					min-height: 19.214286rem;
+					.head-slide-img {
+						display: flex;
+						align-items: flex-end;
+					}
+				}
+			}
+			&__title {
+				@include media-breakpoint-up(lg) {
+					font-size: 43px;
+					line-height: 42px;
+				}
+			}
+			p {
+				@include media-breakpoint-up(lg) {
+					line-height: 22px;
+				}
+			}
+			&__btn {
+				min-width: 188px;
+			}
+		}
+	}
 } // end.sHeaderBanner
 .cardsHead{
 	margin-top: rem(32);
