@@ -263,6 +263,7 @@
 	&__caption {
 		display: flex;
 		flex-direction: column;
+		align-items: flex-start;
 		@include media-breakpoint-up(md) {
 			padding-top: rem(8);
 		}
@@ -302,6 +303,19 @@
 			display: -webkit-box;
 			-webkit-line-clamp: 2;
 			-webkit-box-orient: vertical;
+			text-align: left;
+		}
+		.card-prod {
+			&__img-wrap {
+				@include media-breakpoint-down(md) {
+					margin-bottom: 80px;
+				}
+			}
+			&__footer-links {
+				@include media-breakpoint-down(md) {
+					flex-direction: column;
+				}
+			}
 		}
 	}
 	@include media-breakpoint-up(md) {
@@ -555,10 +569,9 @@
 		span {
 			margin-left: 8px;
 		}
-		&hover,
+		&:hover,
 		&.active{
-			color: var(--bs-primary);
-			
+			color: #AAAAAA;
 			path{
 					--op: 1;
 			}
@@ -652,9 +665,18 @@
 				@include media-breakpoint-down(md) {
 					justify-content: flex-start;
 				}
+				.date {
+					color: #7C7E80;
+					line-height: 1;
+				}
 				.description {
 					p {
 						line-height: 17.5px;
+						text-overflow: ellipsis;
+						display: -webkit-box;
+						overflow: hidden;
+						-webkit-box-orient: vertical;
+						-webkit-line-clamp: 3;
 					}
 				}
 				.col {
