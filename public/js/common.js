@@ -1119,4 +1119,14 @@ window.remove = function (button) {
 		}
 	}
 	return false;
-}
+};
+
+/* start productQty */
+document.addEventListener('click', function (e) {
+	if (e.target.classList.contains("addBlock__btn--minus")) {
+		--e.target.parentElement.querySelector("input").value;
+	} else if (e.target.classList.contains("addBlock__btn--plus")) {
+		++e.target.parentElement.querySelector("input").value;
+	}
+});
+/* end productQty */
