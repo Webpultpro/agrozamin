@@ -219,6 +219,7 @@
 			@include mt;
 			z-index: -1;
 		}
+		--scale: 1;
 		&:hover {
 			&::before{
 				opacity: 1;
