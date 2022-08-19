@@ -39,3 +39,16 @@ mixin sAgroServiceBanner(data)
                             button.btn.btn-primary Сўровнома қолдириш
                     .picture.col-lg-6
                         +pic("service-banner-photo.png",'bg',0).logo-agroservice.d-none.d-lg-block
+
+mixin sLibraryBanner(data)
+    // start sLibraryBanner
+    div.sLibraryBanner.section#sLibraryBanner&attributes(attributes)
+        .container
+            .library_content
+                +pic("library-banner-bg.jpg",'bg',0)
+                .row
+                    .content.col-xl-6.col-lg-7
+                        .wrapper
+                            .h2.mb-5 Ўз мақола ва фойдали малумотингизни бизга юборинг
+                            button.btn.btn-primary Юбориш
+                    .picture.col-lg-6

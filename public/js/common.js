@@ -1130,3 +1130,19 @@ document.addEventListener('click', function (e) {
 	}
 });
 /* end productQty */
+
+/* start inputCheckedByClickingButtonPrice */
+$(document).ready(function(){
+	$('.serviceTariffs__btn').on('click', function (){
+		let tarif = $(this).data('check');
+		let checkbox = $('.agroservice-form form');
+		if (tarif == 'standart') {
+			$('#standart',checkbox[0]).prop("checked",true);
+		} else if (tarif == 'optimal') {
+			$('#optimal',checkbox[0]).prop("checked",true);
+		} else if (tarif == 'maximum') {
+			$('#maximum',checkbox[0]).prop("checked",true);
+		}
+	});
+});
+/* end inputCheckedByClickingButtonPrice */

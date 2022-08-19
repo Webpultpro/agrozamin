@@ -1,0 +1,119 @@
+include ../sVideos/_sVideos.pug
+
+mixin sLibraryViews(data)
+    // start sLibraryViews
+    +b.sLibraryViews.section#sLibraryViews&attributes(attributes)
+        .container
+            +e.wrapper-items
+                +e.item
+                    +e.info
+                        +e.title Фан ва технология
+                        +e.desc Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        +btn('Батафсил').btn.btn-outline-primary
+                    +e.image
+                        +pic('library-views-1','bg',0)
+                +e.item
+                    +e.info
+                        +e.title Мутахассис фикри
+                        +e.desc Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        +btn('Батафсил').btn.btn-outline-primary
+                    +e.image
+                        +pic('library-views-2','bg',0)
+                +e.item
+                    +e.info
+                        +e.title Култивация технологиялари
+                        +e.desc Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        +btn('Батафсил').btn.btn-outline-primary
+                    +e.image
+                        +pic('library-views-3','bg',0)
+                +e.item
+                    +e.info
+                        +e.title Менинг томорқам
+                        +e.desc Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        +btn('Батафсил').btn.btn-outline-primary
+                    +e.image
+                        +pic('library-views-4','bg',0)
+                +e.item
+                    +e.info
+                        +e.title Мутаҳассис билан савол жавоблар
+                        +e.desc Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        +btn('Батафсил').btn.btn-outline-primary
+                    +e.image
+                        +pic('library-views-5','bg',0)
+
+
+mixin mediaLibraryTabs(data)
+    .mediaLibraryTabs
+        .container
+            .tabs-region
+                .tab
+                    button.tablinks.active(onclick="openCity(event, 'video')") Видео малумотлар
+                    button.tablinks(onclick="openCity(event, 'articles')") Мақолалар
+                .tabcontent.opened(id="video")
+                    .buttonListFilter
+                        +btn('Фан ва технология').btn.btn-dark-green
+                        +btn('Мутахассис фикри').btn.btn-dark-green
+                        +btn('Култивация технологиялари').btn.btn-dark-green
+                        +btn('Менинг томорқам').btn.btn-dark-green
+                        +btn('Мутаҳассис билан савол жавоблар').btn.btn-dark-green
+                        +btn('Мутахассис фикри').btn.btn-dark-green
+                        +btn('Култивация технологиялари').btn.btn-dark-green
+                    +sLibraryVideos()
+                .tabcontent(id="articles")
+                    .buttonListFilter
+                        +btn('Фан ва технология').btn.btn-dark-green
+                        +btn('Мутахассис фикри').btn.btn-dark-green
+                        +btn('Култивация технологиялари').btn.btn-dark-green
+                        +btn('Менинг томорқам').btn.btn-dark-green
+                        +btn('Мутаҳассис билан савол жавоблар').btn.btn-dark-green
+                        +btn('Мутахассис фикри').btn.btn-dark-green
+                        +btn('Култивация технологиялари').btn.btn-dark-green
+                    +sLibraryArticles()
+
+
+mixin mediaLibraryPage(data)
+    +b.mediaLibraryPage
+        +b.item-video(href="https://www.youtube.com/watch?v=KP09uMK-tho" data-fancybox="page-media")
+            +e.DIV.img-wrap.bg-wrap
+                +pic(`mediaview-1.jpg`,'bg',0).picture-bg
+        +e.info-panel
+            +e.left-side
+                +e.name Муаллиф: Адҳам Маликов
+                +e.date 1 декабр 2021
+                +e.visitors
+                    +icon('eye-brows')
+                    span 1248
+                +e.likes
+                    +icon('heart')
+                    span 56
+            +e.right-side
+                +in-c('checkbox','Menga yoqdi','thumb-up')
+        +e.content-region
+            h1 Пахта далаларида терим авжида. Ғарамлар нега дўппи шаклида? Теримчилар мазмунли ҳордиқ чиқаришди
+            +e.content-body
+                p Ўзбекистон Республикаси Президентининг «Қишлоқ хўжалиги маҳсулотларининг сифат ва хавфсизлик кўрсаткичлари халқаро стандартларга мувофиқлигини таъминлашга доир қўшимча чора-тадбирлар тўғрисида» 2020 йил 18 майдаги ПФ-5995-сон Фармони ижроси юзасидан Вазирлар Маҳкамаси қарор қилади:
+                p Қуйидагиларни назарда тутувчи Органик қишлоқ хўжалиги ва озиқ-овқат маҳсулотлари ишлаб чиқаришни ихтиёрий сертификатлаштиришдан ўтказиш тартиби тўғрисидаги низом иловага мувофиқ тасдиқлансин: органик қишлоқ хўжалиги ва озиқ-овқат маҳсулотлари ишлаб чиқаришни ихтиёрий сертификатлашни ташкил этиш; органик қишлоқ хўжалиги ва озиқ-овқат маҳсулотлари ишлаб чиқаришни ихтиёрий сертификатлашда ўтиш даври тартиб-таомиллари; мувофиқликни баҳолаш органи томонидан инспекция назоратини амалга ошириш; органик мувофиқлик сертификатини расмийлаштириш, амал қилишини тўхтатиб туриш, тугатиш ва бекор қилиш, органик мувофиқлик сертификатини қайта расмийлаштириш тартиби. Белгилаб қўйилсинки, органик қишлоқ хўжалиги ва озиқ-овқат маҳсулотлари ишлаб чиқаришни ихтиёрий сертификатлаштириш қуйидагиларга нисбатан татбиқ этилади: қайта ишланмаган қишлоқ хўжалиги экинлари;  тирик ҳайвонлар, паррандалар ва улардан олинган маҳсулотлар (қайта ишланган маҳсулотлар бундан мустасно); қайта ишланган қишлоқ хўжалиги ва озиқ-овқат маҳсулотлари; ҳайвонларнинг озуқа еми сифатида қайта ишланган қишлоқ хўжалиги маҳсулотлари; ўсимлик уруғлари ва экиш материаллари; қўлланиладиган ўғитлар ва ўсимликларни ҳимоя қилиш воситалари ҳамда препаратлар.
+                p Ўзбекистон Республикаси Қишлоқ хўжалиги вазирлиги манфаатдор вазирлик ва идоралар билан биргаликда ўзлари қабул қилган норматив-ҳуқуқий ҳужжатларни икки ой муддатда ушбу қарорга мувофиқлаштирсин. Мазкур қарорнинг бажарилишини назорат қилиш Ўзбекистон Республикаси Бош вазирининг аграр ва озиқ-овқат соҳаларини ривожлантириш масалалари бўйича ўринбосари Ш.М. Ғаниев ва Ўзбекистон Республикаси қишлоқ хўжалиги вазири Ж.А. Ходжаев зиммасига юклансин.
+
+mixin mediaLibraryPageImage(data)
+    +b.mediaLibraryPage
+        +e.DIV.img-wrap.bg-wrap
+            +pic(`library-page.jpg`,'bg',0)
+        +e.info-panel
+            +e.left-side
+                +e.name Муаллиф: Адҳам Маликов
+                +e.date 1 декабр 2021
+                +e.visitors
+                    +icon('eye-brows')
+                    span 1248
+                +e.likes
+                    +icon('heart')
+                    span 56
+            +e.right-side
+                +in-c('checkbox','Menga yoqdi','thumb-up')
+        +e.content-region
+            h1 Фермер учун шошилинч харидлар: йил охиригача нима тўланади?
+            +e.content-body
+                p Ўзбекистон Республикаси Президентининг «Қишлоқ хўжалиги маҳсулотларининг сифат ва хавфсизлик кўрсаткичлари халқаро стандартларга мувофиқлигини таъминлашга доир қўшимча чора-тадбирлар тўғрисида» 2020 йил 18 майдаги ПФ-5995-сон Фармони ижроси юзасидан Вазирлар Маҳкамаси қарор қилади:
+                p Қуйидагиларни назарда тутувчи Органик қишлоқ хўжалиги ва озиқ-овқат маҳсулотлари ишлаб чиқаришни ихтиёрий сертификатлаштиришдан ўтказиш тартиби тўғрисидаги низом иловага мувофиқ тасдиқлансин: органик қишлоқ хўжалиги ва озиқ-овқат маҳсулотлари ишлаб чиқаришни ихтиёрий сертификатлашни ташкил этиш; органик қишлоқ хўжалиги ва озиқ-овқат маҳсулотлари ишлаб чиқаришни ихтиёрий сертификатлашда ўтиш даври тартиб-таомиллари; мувофиқликни баҳолаш органи томонидан инспекция назоратини амалга ошириш; органик мувофиқлик сертификатини расмийлаштириш, амал қилишини тўхтатиб туриш, тугатиш ва бекор қилиш, органик мувофиқлик сертификатини қайта расмийлаштириш тартиби. Белгилаб қўйилсинки, органик қишлоқ хўжалиги ва озиқ-овқат маҳсулотлари ишлаб чиқаришни ихтиёрий сертификатлаштириш қуйидагиларга нисбатан татбиқ этилади: қайта ишланмаган қишлоқ хўжалиги экинлари;  тирик ҳайвонлар, паррандалар ва улардан олинган маҳсулотлар (қайта ишланган маҳсулотлар бундан мустасно); қайта ишланган қишлоқ хўжалиги ва озиқ-овқат маҳсулотлари; ҳайвонларнинг озуқа еми сифатида қайта ишланган қишлоқ хўжалиги маҳсулотлари; ўсимлик уруғлари ва экиш материаллари; қўлланиладиган ўғитлар ва ўсимликларни ҳимоя қилиш воситалари ҳамда препаратлар.
+                p Ўзбекистон Республикаси Қишлоқ хўжалиги вазирлиги манфаатдор вазирлик ва идоралар билан биргаликда ўзлари қабул қилган норматив-ҳуқуқий ҳужжатларни икки ой муддатда ушбу қарорга мувофиқлаштирсин. Мазкур қарорнинг бажарилишини назорат қилиш Ўзбекистон Республикаси Бош вазирининг аграр ва озиқ-овқат соҳаларини ривожлантириш масалалари бўйича ўринбосари Ш.М. Ғаниев ва Ўзбекистон Республикаси қишлоқ хўжалиги вазири Ж.А. Ходжаев зиммасига юклансин.

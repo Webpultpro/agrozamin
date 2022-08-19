@@ -33,6 +33,8 @@
 		<link href="libs/animate.css/animate.min.css" rel="stylesheet"/>
 		<link href="libs/jquery-asPieProgress/css/asPieProgress.min.css" rel="stylesheet"/>
 		<link href="libs/select2/css/select2.min.css" rel="stylesheet"/>
+		<link href="js/multiselect/multiselect.css" rel="stylesheet"/>
+		<link href="js/datepicker/css/datepicker.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="page-cabinet">
@@ -67,7 +69,7 @@
 								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 								</div>
 								<div class="catalog-block catalog-block--cabinet">
-									<div class="catalog-block__toggle catalog-block__toggle--mob catalog-block__toggle--cabinet d-lg-none"> <span> </span>
+									<div class="catalog-block__toggle catalog-block__toggle--mob catalog-block__toggle--cabinet d-lg-none"><span></span>
 									</div>
 									<div class="catalog-block__dropdown">
 										<div class="catalog-block__dropdown-inner">
@@ -103,7 +105,7 @@
 									<li><a class="contacts-top-block__link" href="tel:(78)150-00-88">
 										<svg class="icon icon-phone-icon ">
 											<use xlink:href="img/svg/sprite.svg#phone-icon"></use>
-										</svg><span>(78) 150-00-88 </span></a>
+										</svg><span>(78) 150-00-88</span></a>
 									</li>
 									<li><a class="contacts-top-block__link" href="#">
 										<svg class="icon icon-chat ">
@@ -123,15 +125,194 @@
 							</div>
 							<div class="col-4 d-flex justify-content-end">
 								<div class="has-children me-4">Русский
-									<ul> 
+									<ul>
 										<li>Русский</li>
 										<li>Русский</li>
-										<li>Русский  </li>
+										<li>Русский</li>
 									</ul>
 								</div><a class="link-logout" href="#">
 								<svg class="icon icon-logout ">
 									<use xlink:href="img/svg/sprite.svg#logout"></use>
 								</svg><span>Чиқиш</span></a>
+							</div>
+						</div>
+						<div class="second-row row d-md-none">
+							<div class="col-4"><a class="button--mobile" href="#"><span></span>
+									<div class="second-row__button-text">Каталоглар
+									</div></a></div>
+							<div class="second-row__notifications col-4">
+								<div class="col-auto"><a class="top-btn with-dropdown" href="#"><span class="top-btn__icon-wrap">
+									<svg class="icon icon-bell ">
+										<use xlink:href="img/svg/sprite.svg#bell"></use>
+									</svg>
+									<!--+e.SPAN.count 99--></span></a>
+									<div class="user-dropdown">
+										<div class="scrollbar-region">
+											<div class="category-image"><a class="link-to" href="#">
+													<div class="category-icon green">
+														<svg class="icon icon-icon-video ">
+															<use xlink:href="img/svg/sprite.svg#icon-video"></use>
+														</svg>
+													</div>
+													<div class="desc-wrapper">
+														<p class="title">Сўровингиз қабул қилинди</p>
+														<p class="date"><span class="clock-wrap">
+																<svg class="icon icon-icon-clock ">
+																	<use xlink:href="img/svg/sprite.svg#icon-clock"></use>
+																</svg><span>04.01.2022   11:00 - 11:30</span></span></p>
+													</div></a><a class="close" href="#">
+													<svg class="icon icon-close ">
+														<use xlink:href="img/svg/sprite.svg#close"></use>
+													</svg></a></div>
+											<div class="category-image"><a class="link-to" href="#">
+													<div class="category-icon blue">
+														<svg class="icon icon-icon-video ">
+															<use xlink:href="img/svg/sprite.svg#icon-video"></use>
+														</svg>
+													</div>
+													<div class="desc-wrapper">
+														<p class="title">Видео мулоқот вақти</p>
+														<p class="date"><span class="clock-wrap">
+																<svg class="icon icon-icon-clock ">
+																	<use xlink:href="img/svg/sprite.svg#icon-clock"></use>
+																</svg><span>04.01.2022   11:00 - 11:30</span></span></p>
+													</div></a><a class="btn btn-primary" href="#">
+													<svg class="icon icon-video ">
+														<use xlink:href="img/svg/sprite.svg#video"></use>
+													</svg><span>Бошлаш</span></a><a class="close" href="#">
+													<svg class="icon icon-close ">
+														<use xlink:href="img/svg/sprite.svg#close"></use>
+													</svg></a></div>
+											<div class="category-image"><a class="link-to" href="#">
+													<div class="category-icon red">
+														<svg class="icon icon-icon-video ">
+															<use xlink:href="img/svg/sprite.svg#icon-video"></use>
+														</svg>
+													</div>
+													<div class="desc-wrapper">
+														<p class="title">Сўровингиз қабул қилинди</p>
+														<p class="date"><span class="clock-wrap">
+																<svg class="icon icon-icon-clock ">
+																	<use xlink:href="img/svg/sprite.svg#icon-clock"></use>
+																</svg><span>04.01.2022   11:00 - 11:30</span></span></p>
+													</div></a><a class="close" href="#">
+													<svg class="icon icon-close ">
+														<use xlink:href="img/svg/sprite.svg#close"></use>
+													</svg></a></div>
+											<div class="category-image"><a class="link-to" href="#">
+													<div class="category-icon green">
+														<svg class="icon icon-icon-basket ">
+															<use xlink:href="img/svg/sprite.svg#icon-basket"></use>
+														</svg>
+													</div>
+													<div class="desc-wrapper">
+														<p class="title">Сўровингиз қабул қилинди</p>
+														<p class="desc">Қизил лавлаги лавлаги Кабачок Аймаран Қизил лавлаги лавлаги Кабачок Аймаран</p>
+													</div></a><a class="close" href="#">
+													<svg class="icon icon-close ">
+														<use xlink:href="img/svg/sprite.svg#close"></use>
+													</svg></a></div>
+											<div class="category-image"><a class="link-to" href="#">
+													<div class="category-icon red">
+														<svg class="icon icon-icon-basket ">
+															<use xlink:href="img/svg/sprite.svg#icon-basket"></use>
+														</svg>
+													</div>
+													<div class="desc-wrapper">
+														<p class="title">Сўровингиз қабул қилинди</p>
+														<p class="desc">Қизил лавлаги лавлаги Кабачок Аймаран Қизил лавлаги лавлаги Кабачок Аймаран</p>
+													</div></a><a class="close" href="#">
+													<svg class="icon icon-close ">
+														<use xlink:href="img/svg/sprite.svg#close"></use>
+													</svg></a></div>
+											<div class="category-image"><a class="link-to" href="#">
+													<div class="category-icon green">
+														<svg class="icon icon-icon-box ">
+															<use xlink:href="img/svg/sprite.svg#icon-box"></use>
+														</svg>
+													</div>
+													<div class="desc-wrapper">
+														<p class="title">Янги сўров</p>
+														<p class="desc">Қизил лавлаги лавлаги Кабачок Аймаран Қизил лавлаги лавлаги Кабачок Аймаран</p>
+													</div></a><a class="close" href="#">
+													<svg class="icon icon-close ">
+														<use xlink:href="img/svg/sprite.svg#close"></use>
+													</svg></a></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-auto"><a class="top-btn" href="#"><span class="top-btn__icon-wrap">
+									<svg class="icon icon-like ">
+										<use xlink:href="img/svg/sprite.svg#like"></use>
+									</svg>
+									<!--+e.SPAN.count 99--></span></a>
+								</div>
+								<div class="col-auto"><a class="top-btn" href="#"><span class="top-btn__icon-wrap">
+									<svg class="icon icon-basket-new ">
+										<use xlink:href="img/svg/sprite.svg#basket-new"></use>
+									</svg>
+									<!--+e.SPAN.count 99--></span></a>
+								</div>
+							</div>
+							<div class="col-4">
+								<div class="drop-down-wrap">
+									<button class="second-row__btn btn btn-outline-primary" type="button">
+										<svg class="icon icon-menu ">
+											<use xlink:href="img/svg/sprite.svg#menu"></use>
+										</svg>Сервислар
+									</button>
+									<div class="dropdown-block dropdown-block--servises"><a class="dropdown-block__item" href="#"><span class="dropdown-block__img-wrap">
+										<!-- picture-->
+										<picture> 
+											<source type="image/webp" srcset="img/@2x/webp/drop-1.webp"/><img class="object-fit-js" src="img/@2x/drop-1.png" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture--></span>
+										<div>
+											<div class="h6 mb-1">Фермерлар Мактаби</div>
+											<div class="text-secondary">Ёш Фермерларни тайёрлаш мактаби</div>
+										</div></a><a class="dropdown-block__item" href="#"><span class="dropdown-block__img-wrap">
+										<!-- picture-->
+										<picture> 
+											<source type="image/webp" srcset="img/@2x/webp/drop-2.webp"/><img class="object-fit-js" src="img/@2x/drop-2.png" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture--></span>
+										<div>
+											<div class="h6 mb-1">Агролаб</div>
+											<div class="text-secondary">Лобаратория билан ишлаш маҳорати</div>
+										</div></a><a class="dropdown-block__item" href="#"><span class="dropdown-block__img-wrap">
+										<!-- picture-->
+										<picture> 
+											<source type="image/webp" srcset="img/@2x/webp/drop-4.webp"/><img class="object-fit-js" src="img/@2x/drop-4.png" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture--></span>
+										<div>
+											<div class="h6 mb-1">Медиабиблиотека</div>
+											<div class="text-secondary">Керакли видео маҳсулотлар учун майдон</div>
+										</div></a><a class="dropdown-block__item" href="#"><span class="dropdown-block__img-wrap">
+										<!-- picture-->
+										<picture> 
+											<source type="image/webp" srcset="img/@2x/webp/drop-4.webp"/><img class="object-fit-js" src="img/@2x/drop-4.png" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture--></span>
+										<div>
+											<div class="h6 mb-1">Онлайн консултант</div>
+											<div class="text-secondary">Керакли видео маҳсулотлар учун майдон</div>
+										</div></a><a class="dropdown-block__item dropdown-block__item--grey" href="#"><span class="dropdown-block__img-wrap">
+										<!-- picture-->
+										<picture> 
+											<source type="image/webp" srcset="img/@2x/webp/drop-3.webp"/><img class="object-fit-js" src="img/@2x/drop-3.png" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture--></span>
+										<div>
+											<div class="h6">Агротехкарталар</div>
+											<p>
+												<svg class="icon icon-clock-2 ">
+													<use xlink:href="img/svg/sprite.svg#clock-2"></use>
+												</svg><span>Тез орада</span>
+											</p>
+										</div></a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -254,8 +435,19 @@
 				<div class="container">
 					<div class="row">
 						<div class="footer__col-first col-lg pb-3"><a href="/"><img src="img/svg/footer-logo.svg" alt=""/></a>
-							<div class="footer__copyright">© 2000-2021 АО «Агробанк».  Лицензия Центрального Банка РУз №78 от 29.08.2014 г. 
+							<div class="footer__copyright">© 2000-2021 АО «Агробанк».  Лицензия Центрального Банка РУз №78 от 29.08.2014 г.
 							</div>
+							<div class="app-links-wrapper"><a href="#">
+									<!-- picture-->
+									<picture> 
+										<source type="image/webp" srcset="img/@2x/webp/google-play.webp"/><img src="img/@2x/google-play.png" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture--></a><a href="#">
+									<!-- picture-->
+									<picture> 
+										<source type="image/webp" srcset="img/@2x/webp/appstore.webp"/><img src="img/@2x/appstore.png" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture--></a></div>
 						</div>
 						<div class="col-sm-6 col-md-4 col-lg-3 pb-3"> 
 							<p class="text-secondary2">Фойдали ҳаволалар:</p>
@@ -305,14 +497,12 @@
 						<div class="form-wrap__title form-data h3 ttu">Обратный звонок
 						</div>
 						<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
-					</div>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
-					</div>
+					</div><span class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> </span>
 					<!-- +e.input-wrap-->
 					<button class="form-wrap__btn btn" type="submit"> 
 					</button>
 					<div class="form-wrap__policy">
-						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__text">Шахсий маълумотлардан фойдаланиш <br/><a class="text-info tdu" href="#">шартларини қабул қиламан.</a></span>
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__text">Шахсий маълумотлардан фойдаланиш<br/><a class="text-info tdu" href="#">шартларини қабул қиламан.</a></span>
 						</label>
 					</div>
 				</form>
@@ -362,32 +552,22 @@
 		<!-- #modal-delte-->
 		<div class="form-wrap modal-win" id="modal-online-consultant" style="display: none"> 
 			<div class="h4 text-center">Онлайн консултант ҳизмати </div>
-			<form>
-				<div class="form-wrap__input-wrap form-group">
+			<form><span class="form-wrap__input-wrap form-group">
 					<label><span class="form-wrap__input-title">Исм *</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
-					</label>
-				</div>
-				<!-- +e.input-wrap-->
-				<div class="form-wrap__input-wrap form-group">
+					</label></span>
+				<!-- +e.input-wrap--><span class="form-wrap__input-wrap form-group">
 					<label><span class="form-wrap__input-title">Фамилия *</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
-					</label>
-				</div>
-				<!-- +e.input-wrap-->
-				<div class="form-wrap__input-wrap form-group">
+					</label></span>
+				<!-- +e.input-wrap--><span class="form-wrap__input-wrap form-group">
 					<label><span class="form-wrap__input-title">Мутаҳассислиги</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
-					</label>
-				</div>
-				<!-- +e.input-wrap-->
-				<div class="form-wrap__input-wrap form-group">
+					</label></span>
+				<!-- +e.input-wrap--><span class="form-wrap__input-wrap form-group">
 					<label><span class="form-wrap__input-title">Биография</span><textarea class="form-wrap__input form-control" name="textarea" placeholder=""></textarea>
-					</label>
-				</div>
+					</label></span>
 				<!-- +e.input-wrap-->
-				<div class="p-4 bg-primary text-start mb-3" style="--bs-bg-opacity: .3;">Иш соатингиз ҳақидаги қисқача малумотни киритинг. Ҳафта кунлари ва соатларини кўрсатинг</div>
-				<div class="form-wrap__input-wrap form-group">
+				<div class="p-4 bg-primary text-start mb-3" style="--bs-bg-opacity: .3;">Иш соатингиз ҳақидаги қисқача малумотни киритинг. Ҳафта кунлари ва соатларини кўрсатинг</div><span class="form-wrap__input-wrap form-group">
 					<label><span class="form-wrap__input-title">Иш соати</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
-					</label>
-				</div>
+					</label></span>
 				<!-- +e.input-wrap-->
 				<div class="text-center">
 					<button class="btn btn-primary w-190" type="submit">Жўнатиш</button>
@@ -398,9 +578,7 @@
 		<div class="form-wrap modal-win" id="modal-online-consultant2" style="display: none"> 
 			<div class="h4 text-center mb-3">Онлайн консултант рад етиш</div>
 			<form> 
-				<div class="p-4 bg-primary text-start mb-3" style="--bs-bg-opacity: .3;">Илтимос, онлайн консултант ҳизматини рад етиш сабабини кўрсатинг</div>
-				<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder=""></textarea> 
-				</div>
+				<div class="p-4 bg-primary text-start mb-3" style="--bs-bg-opacity: .3;">Илтимос, онлайн консултант ҳизматини рад етиш сабабини кўрсатинг</div><span class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder=""></textarea> </span>
 				<!-- +e.input-wrap-->
 				<div class="text-center">
 					<button class="btn btn-primary w-190" type="submit">Жўнатиш</button>
@@ -443,14 +621,10 @@
 		<div class="form-wrap modal-win" id="modal-online-consultant4" style="display: none"> 
 			<div class="h4 text-center mb-3">"Ветеринар" консултацияси учун видео сўров жўнатиш</div>
 			<form> 
-				<div class="p-4 bg-primary text-start mb-3" style="--bs-bg-opacity: .3;">Еслатиб ўтамиз, сизнинг аризангизни мутахассис томонидан кўриб чиқилгандан сўнг қабул қилинади</div>
-				<div class="form-wrap__input-wrap form-group">
+				<div class="p-4 bg-primary text-start mb-3" style="--bs-bg-opacity: .3;">Еслатиб ўтамиз, сизнинг аризангизни мутахассис томонидан кўриб чиқилгандан сўнг қабул қилинади</div><span class="form-wrap__input-wrap form-group">
 					<label><span class="form-wrap__input-title">Илтимос, мурожаатингизнинг моҳиятини қисқача тасвирлаб беринг.</span><textarea class="form-wrap__input form-control" name="textarea" placeholder=""></textarea> 
-					</label>
-				</div>
-				<!-- +e.input-wrap-->
-				<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="file" type="file"/>
-				</div>
+					</label></span>
+				<!-- +e.input-wrap--><span class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="file" type="file"/></span>
 				<!-- +e.input-wrap-->
 				<p class="text-start text-secondary mb-4">Белгиланган вақт: 04.05.2021  11:30 - 12:00</p>
 				<div class="text-center">
@@ -649,7 +823,326 @@
 			<div class="h4 text-center">Сизнинг аризангиз қабул қилинди</div><br/>
 			<p class="text-secondary">Аризангиз moderator томонидан кўриб чиқилади</p><br/><br/><b></b><a class="btn btn-primary w-190 mx-auto" href="#">Тайёр</a>
 		</div>
+		<div class="modal-win text-center" id="modal-user" style="display: none">
+			<svg class="icon icon-modal-users  w-100px mx-auto">
+				<use xlink:href="img/svg/sprite.svg#modal-users"></use>
+			</svg><br/>
+			<div class="h4 text-center">Сиз мутаҳассис консултант сифатида рўяхатга олиндингиз</div><br/><br/><br/><br/><a class="btn btn-primary w-190 mx-auto" href="#">Кириш</a>
+		</div>
+		<div class="modal-win modal-work text-center" id="modal-work" style="display: none">
+			<div class="h4 text-center">Иш соатигнизни хафта кунлари ва соатларини кўрсатинг</div>
+			<div class="dates-wrapper">
+				<div class="title-wrapper">
+					<div class="row">
+						<div class="title col-6">Ҳафта кунлари</div>
+						<div class="title col-6">Иш соати</div>
+					</div>
+				</div>
+				<div class="date row">
+					<div class="week col-6">
+						<label class="custom-input form-check">
+							<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Душанба</span>
+						</label>
+					</div>
+					<div class="from-to col-6">
+						<input type="text" id="mon-from" name="from" placeholder="00:00"/>
+						<input type="text" id="mon-to" name="from" placeholder="00:00"/>
+					</div>
+				</div>
+				<div class="date row">
+					<div class="week col-6">
+						<label class="custom-input form-check">
+							<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Сешанба</span>
+						</label>
+					</div>
+					<div class="from-to col-6">
+						<input type="text" id="tue-from" name="from" placeholder="00:00"/>
+						<input type="text" id="tue-to" name="from" placeholder="00:00"/>
+					</div>
+				</div>
+				<div class="date row">
+					<div class="week col-6">
+						<label class="custom-input form-check">
+							<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Чоршанба</span>
+						</label>
+					</div>
+					<div class="from-to col-6">
+						<input type="text" id="thu-from" name="from" placeholder="00:00"/>
+						<input type="text" id="thu-to" name="from" placeholder="00:00"/>
+					</div>
+				</div>
+				<div class="date row">
+					<div class="week col-6">
+						<label class="custom-input form-check">
+							<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Пайшанба</span>
+						</label>
+					</div>
+					<div class="from-to col-6">
+						<input type="text" id="wen-from" name="from" placeholder="00:00"/>
+						<input type="text" id="wen-to" name="from" placeholder="00:00"/>
+					</div>
+				</div>
+				<div class="date row">
+					<div class="week col-6">
+						<label class="custom-input form-check">
+							<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Жума</span>
+						</label>
+					</div>
+					<div class="from-to col-6">
+						<input type="text" id="fri-from" name="from" placeholder="00:00"/>
+						<input type="text" id="fri-to" name="from" placeholder="00:00"/>
+					</div>
+				</div>
+				<div class="date row">
+					<div class="week col-6">
+						<label class="custom-input form-check">
+							<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Шанба</span>
+						</label>
+					</div>
+					<div class="from-to col-6">
+						<input type="text" id="sut-from" name="from" placeholder="00:00"/>
+						<input type="text" id="sut-to" name="from" placeholder="00:00"/>
+					</div>
+				</div>
+				<div class="date row">
+					<div class="week col-6">
+						<label class="custom-input form-check">
+							<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Якшанба</span>
+						</label>
+					</div>
+					<div class="from-to col-6">
+						<input type="text" id="sunday-from" name="from" placeholder="00:00"/>
+						<input type="text" id="sunday-to" name="from" placeholder="00:00"/>
+					</div>
+				</div>
+			</div>
+			<div class="wrapper-links"><a class="btn btn-outline-primary w-190 mx-auto" href="#">Орқага</a><a class="btn btn-primary w-190 mx-auto" href="#">Жўнатиш</a></div>
+		</div>
+		<div class="modal-win modal-video text-center" id="modal-video" style="display: none">
+			<div class="h4 text-center">Керакли қурилмани танланг</div>
+			<div class="content-wrapper"><span class="form-wrap__input-wrap form-group">
+					<select class="modal-win__input form-select" name="select">
+						<option value="По умолчанию - Микрофон(HD pro Webcamc920">По умолчанию - Микрофон(HD pro Webcamc920</option>
+						<option value=" placeholder 5">placeholder 5</option>
+					</select></span>
+				<!-- +e.input-wrap-->
+				<div class="progress-wrap"><span>По умолчанию - Микрофон(HD pro Webcamc920)</span>
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+				</div><span class="form-wrap__input-wrap form-group">
+					<select class="modal-win__input form-select" name="select">
+						<option value="HD pro Webcam c920">HD pro Webcam c920</option>
+						<option value=" placeholder 5">placeholder 5</option>
+					</select></span>
+				<!-- +e.input-wrap-->
+				<div class="video-wrapper"><a class="item-video" href="https://www.youtube.com/watch?v=KP09uMK-tho" data-fancybox="data-fancybox">
+					<div class="item-video__img-wrap bg-wrap">
+						<!-- picture-->
+						<picture class="picture-bg"> 
+							<source type="image/webp" srcset="img/@2x/webp/speaker_webcam.webp"/><img class="object-fit-js" src="img/@2x/speaker_webcam.jpg" alt="" loading="lazy"/>
+						</picture>
+						<!-- /picture-->
+					</div></a>
+				</div>
+				<button class="btn btn-primary">ok</button>
+			</div>
+		</div>
+		<div class="modal-win modal-archive-download text-center" id="modal-archive-download" style="display: none">
+			<svg class="icon icon-download-modal  w-100px mx-auto">
+				<use xlink:href="img/svg/sprite.svg#download-modal"></use>
+			</svg><br/><br/>
+			<div class="h4 text-center">Архивга қўшиш</div><br/>
+			<p class="text-secondary">Маҳсулотингизни архивлаш орқали сиз маҳсулотингизни фаолсизлантиришингиз мумкин</p><br/><br/><b></b><a class="btn btn-primary mx-auto" href="#">Архивлаш</a>
+		</div>
+		<div class="modal-win modal-archive-upload text-center" id="modal-archive-upload" style="display: none">
+			<svg class="icon icon-upload-modal  w-100px mx-auto">
+				<use xlink:href="img/svg/sprite.svg#upload-modal"></use>
+			</svg><br/><br/>
+			<div class="h4 text-center">Архивдан чиқариш</div><br/>
+			<p class="text-secondary">Маҳсулотларни арҳивдан чиқариш орқали сиз маҳсулотларингизни фаоллаштирасиз</p><br/><br/><b></b><a class="btn btn-primary mx-auto" href="#">Арҳивдан чиқариш</a>
+		</div>
+		<div class="modal-win modal-archive-del text-center" id="modal-archive-del" style="display: none">
+			<svg class="icon icon-delete-modal  w-100px mx-auto">
+				<use xlink:href="img/svg/sprite.svg#delete-modal"></use>
+			</svg><br/><br/>
+			<div class="h4 text-center">Махсулотларни ўчириш</div><br/>
+			<p class="text-secondary">Ўчирилган махсулот платформадан бутунлай олиб ташланади ва уни таҳрирлашнинг имкони бўлмайди</p><br/><br/><b></b><a class="btn btn-primary mx-auto" href="#">Махсулотларни ўчириш</a>
+		</div>
+		<div class="form-wrap modal-win modal-work-time text-center" id="modal-work-time" style="display: none">
+			<form>
+				<div class="row">
+					<div class="self-info col-md-6">
+						<div class="h4">Шахсий маълумотларингизни киритинг</div><span class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">Исм *</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
+							</label></span>
+						<!-- +e.input-wrap--><span class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">Фамилия *</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
+							</label></span>
+						<!-- +e.input-wrap--><span class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">Мутаҳассислиги</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
+							</label></span>
+						<!-- +e.input-wrap--><span class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">Биография</span><textarea class="form-wrap__input form-control" name="textarea" placeholder=""></textarea>
+							</label></span>
+						<!-- +e.input-wrap--><span class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="file" type="file"/></span>
+						<!-- +e.input-wrap-->
+					</div>
+					<div class="dates col-md-6">
+						<div class="h4">Ҳафта кунлари ва иш соатингизни киритинг</div>
+						<div class="dates-wrapper">
+							<div class="title-wrapper">
+								<div class="row">
+									<div class="title col-6">Ҳафта кунлари</div>
+									<div class="title col-6">Иш соати</div>
+								</div>
+							</div>
+							<div class="date row">
+								<div class="week col-6">
+									<label class="custom-input form-check">
+										<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Душанба</span>
+									</label>
+								</div>
+								<div class="from-to col-6">
+									<input type="text" id="monday-from" name="from" placeholder="00:00"/>
+									<input type="text" id="monday-to" name="from" placeholder="00:00"/>
+								</div>
+							</div>
+							<div class="date row">
+								<div class="week col-6">
+									<label class="custom-input form-check">
+										<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Сешанба</span>
+									</label>
+								</div>
+								<div class="from-to col-6">
+									<input type="text" id="tuesday-from" name="from" placeholder="00:00"/>
+									<input type="text" id="tuesday-to" name="from" placeholder="00:00"/>
+								</div>
+							</div>
+							<div class="date row">
+								<div class="week col-6">
+									<label class="custom-input form-check">
+										<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Чоршанба</span>
+									</label>
+								</div>
+								<div class="from-to col-6">
+									<input type="text" id="thursday-from" name="from" placeholder="00:00"/>
+									<input type="text" id="thursday-to" name="from" placeholder="00:00"/>
+								</div>
+							</div>
+							<div class="date row">
+								<div class="week col-6">
+									<label class="custom-input form-check">
+										<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Пайшанба</span>
+									</label>
+								</div>
+								<div class="from-to col-6">
+									<input type="text" id="wednessday-from" name="from" placeholder="00:00"/>
+									<input type="text" id="wednessday-to" name="from" placeholder="00:00"/>
+								</div>
+							</div>
+							<div class="date row">
+								<div class="week col-6">
+									<label class="custom-input form-check">
+										<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Жума</span>
+									</label>
+								</div>
+								<div class="from-to col-6">
+									<input type="text" id="friday-from" name="from" placeholder="00:00"/>
+									<input type="text" id="friday-to" name="from" placeholder="00:00"/>
+								</div>
+							</div>
+							<div class="date row">
+								<div class="week col-6">
+									<label class="custom-input form-check">
+										<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Шанба</span>
+									</label>
+								</div>
+								<div class="from-to col-6">
+									<input type="text" id="suturday-from" name="from" placeholder="00:00"/>
+									<input type="text" id="suturday-to" name="from" placeholder="00:00"/>
+								</div>
+							</div>
+							<div class="date row">
+								<div class="week col-6">
+									<label class="custom-input form-check">
+										<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="check-label">Якшанба</span>
+									</label>
+								</div>
+								<div class="from-to col-6">
+									<input type="text" id="sun-from" name="from" placeholder="00:00"/>
+									<input type="text" id="sun-to" name="from" placeholder="00:00"/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wrapper-links"><a class="btn btn-primary w-190 mx-auto" href="#">Жўнатиш</a></div>
+				</div>
+			</form>
+		</div>
+		<div class="modal-win text-center modal-product" id="modal-product" style="display: none">
+			<div class="head-sector">
+				<div class="image-wrapper"><img src="img/@2x/prod-slide.png" loading="lazy" alt=""/></div>
+				<div class="title-wrapper">
+					<h3>Бинафша Шоҳ Нўхати</h3>
+					<div class="modal-win__price"><strong>3 290 сум</strong><span>килограм</span>
+					</div>
+				</div>
+			</div>
+			<div class="bottom-sector">
+				<div class="label">Тавсифи</div>
+				<div class="description">
+					<p>Ўсимликнинг баландлиги 1 метрга етади, екиш пайтида уни зарур ишларни амалга ошириш керак.Озиқ-овқат маҳсулотларидан ташқари, нўхат жуда декоратив кўриришга ега бўлади. Узлуксиз ҳосилдорликни олиш учун тавсия етилади Ўсимликнинг баландлиги 1 метрга етади, екиш пайтида уни зарур ишларни амалга ошириш керак. Озиқ-овқат маҳсулотларидан ташқари, нўхат жуда декоратив кўриришга ега бўлади. Узлуксиз ҳосилдорликни олиш учун тавсия етилади. Озиқ-овқат маҳсулотларидан ташқари, нўхат жуда декоратив кўриришга ега бўлади. Узлуксиз ҳосилдорликни олиш учун тавсия етилади Ўсимликнинг баландлиги 1 метрга етади, екиш пайтида уни зарур ишларни амалга ошириш керак. Озиқ-овқат маҳсулотларидан ташқари, нўхат жуда декоратив кўриришга ега бўлади. Узлуксиз ҳосилдорликни олиш учун тавсия етилади Ўсимликнинг баландлиги 1 метрга етади, екиш пайтида уни зарур ишларни амалга ошириш керак.</p>
+				</div>
+			</div><a class="btn btn-primary w-190 mx-auto" href="#">Ёпиш</a>
+		</div>
 		<!-- end modals-->
+		<div class="form-wrap modal-win" id="modal-video-content" style="display: none">
+			<div class="h4 text-center">Онлайн консултант ҳизмати</div>
+			<form><span class="form-wrap__input-wrap form-group">
+					<label><span class="form-wrap__input-title">Исм *</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
+					</label></span>
+				<!-- +e.input-wrap--><span class="form-wrap__input-wrap form-group">
+					<label><span class="form-wrap__input-title">Фамилия *</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
+					</label></span>
+				<!-- +e.input-wrap--><span class="form-wrap__input-wrap form-group">
+					<label><span class="form-wrap__input-title">Мавзу</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
+					</label></span>
+				<!-- +e.input-wrap--><span class="form-wrap__input-wrap form-group">
+					<label><span class="form-wrap__input-title">Видео файл юклаш</span><input class="form-wrap__input form-control" name="file" type="file"/>
+					</label></span>
+				<!-- +e.input-wrap--><span class="form-wrap__input-wrap form-group">
+					<label><span class="form-wrap__input-title">Пост учун матн юклаш</span><input class="form-wrap__input form-control" name="file" type="file"/>
+					</label></span>
+				<!-- +e.input-wrap-->
+				<div class="text-center">
+					<button class="btn btn-primary w-190" type="submit">Кейингиси</button>
+				</div>
+			</form>
+		</div>
+		<div class="form-wrap modal-win" id="modal-video-content2" style="display: none">
+			<div class="h4 text-center">Видео контант жойлаш</div>
+			<form><span class="form-wrap__input-wrap form-group">
+					<label><span class="form-wrap__input-title">Исм *</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
+					</label></span>
+				<!-- +e.input-wrap--><span class="form-wrap__input-wrap form-group">
+					<label><span class="form-wrap__input-title">Фамилия *</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
+					</label></span>
+				<!-- +e.input-wrap--><span class="form-wrap__input-wrap form-group">
+					<label><span class="form-wrap__input-title">Мавзу</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
+					</label></span>
+				<!-- +e.input-wrap--><span class="form-wrap__input-wrap form-group">
+					<label><span class="form-wrap__input-title">Пост матнини юклаш</span><input class="form-wrap__input form-control" name="file" type="file"/>
+					</label></span>
+				<!-- +e.input-wrap--><span class="form-wrap__input-wrap form-group">
+					<label><span class="form-wrap__input-title">Пост учун матн юклаш</span><input class="form-wrap__input form-control" name="file" type="file"/>
+					</label></span>
+				<!-- +e.input-wrap-->
+				<div class="text-center">
+					<button class="btn btn-primary w-190" type="submit">Кейингиси</button>
+				</div>
+			</form>
+		</div>
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"></script>
@@ -668,6 +1161,11 @@
 		<script src="libs/filepond/filepond.min.js"> </script>
 		<script src="libs/jquery-filepond/filepond.jquery.js"> </script>
 		<script src="libs/select2/js/select2.min.js"> </script>
+		<script src="js/datepicker/js/datepicker.min.js"></script>
+		<script src="js/multiselect/jquery.multi-select.min.js"></script>
+		<script src="js/maskedinput.js"></script>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=7f9b4650-9dc4-4319-92f6-caab041f0ba5" type="text/javascript"></script>
+		<!-- script(  src="event_reverse_geocode.js" type="text/javascript")-->
 		<script src="js/common.js"></script>
 	</body>
 </html>

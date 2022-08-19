@@ -1,3 +1,5 @@
+include ../sVideos/_sVideos.pug
+
 mixin aside(data)
 	// start aside
 	+b.ASIDE.aside.section.pt-0&attributes(attributes)
@@ -351,3 +353,15 @@ mixin aside4(data)
 					+in-c('checkbox', 'Сурхондарё')
 					+in-c('checkbox', 'Тошкент')
 	// end aside
+
+mixin aside5(data)
+	// start aside5
+	+b.ASIDE.aside.section.pt-0.w-255&attributes(attributes)
+		h2 Бошқа видеолар
+		+sLibraryVideosVertical()
+
+mixin aside6(data)
+	// start aside5
+	+b.ASIDE.aside.section.pt-0.w-255&attributes(attributes)
+		h2 Бошқа мақолалар
+		+sLibraryArticlesVertical()

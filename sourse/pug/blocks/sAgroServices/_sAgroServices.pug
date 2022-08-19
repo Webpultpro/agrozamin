@@ -136,7 +136,7 @@ mixin serviceTariffs(data)
                                 li Санитар ходимлар хизмати
                                     +icon('check')
                     +e.bottom-sector
-                        +btn('Бошлаш').btn.btn-outline-primary
+                        a(href="#formSector" data-check="standart").serviceTariffs__btn.btn.btn-outline-primary Бошлаш
                 +e.list-item
                     +e.top-sector
                         +e.name Оптимал
@@ -153,7 +153,7 @@ mixin serviceTariffs(data)
                                 li Санитар ходимлар хизмати
                                     +icon('check')
                     +e.bottom-sector
-                        +btn('Бошлаш').btn.btn-outline-primary
+                        a(href="#formSector" data-check="optimal").serviceTariffs__btn.btn.btn-outline-primary Бошлаш
                 +e.list-item
                     +e.top-sector
                         +e.name Максимум
@@ -170,7 +170,7 @@ mixin serviceTariffs(data)
                                 li Санитар ходимлар хизмати
                                     +icon('check')
                     +e.bottom-sector
-                        +btn('Бошлаш').btn.btn-outline-primary
+                        a(href="#formSector" data-check="maximum").serviceTariffs__btn.btn.btn-outline-primary Бошлаш
 mixin agroServicesTabs(data)
     .agroServiceTabs
         .container

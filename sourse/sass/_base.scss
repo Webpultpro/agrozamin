@@ -477,6 +477,20 @@ iframe {
 		color: $white;
 	}
 }
+.btn-dark-green {
+	color: $white;
+	border-radius: 5px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 16px;
+	padding: 11px 12px;
+	&:hover,
+	&:active {
+		color: black;
+		background-color: #EEEEEE;
+		border-color: #EEEEEE;
+	}
+}
 
 // }
 // .btn-primary {
@@ -1070,5 +1084,23 @@ iframe {
 			left: rem(24);
 			transform: translateY(-50%);
 		}
+	}
+}
+
+.page-with-aside {
+	display: flex;
+	justify-content: space-between;
+	gap: 55px;
+	@include media-breakpoint-down(lg) {
+		gap: 30px;
+		flex-direction: column;
+	}
+}
+
+.w-255 {
+	width: 100%;
+	@include media-breakpoint-up(lg) {
+		min-width: 255px;
+		width: 255px;
 	}
 }

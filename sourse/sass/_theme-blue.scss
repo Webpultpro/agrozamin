@@ -2,7 +2,9 @@
 .theme-blue{
 // body{
 	$primary: #377BE1;
+	$dark-green: #377BE1;
 	--bs-primary: #{$primary};
+	--bs-dark-green: #{$dark-green};
 	--bs-primary-hover: #5488D8;
 	--bs-primary-rgb: 55, 123, 225; 
 	// $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");

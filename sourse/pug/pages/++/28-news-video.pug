@@ -1,17 +1,17 @@
-extends ../layout/main
+extends layout/main
 
 
-include ../../blocks/sAboutProject/_sAboutProject
-include ../../blocks/sOurGoal/_sOurGoal
-include ../../blocks/sOurDuty/_sOurDuty
-include ../../blocks/sVideos/_sVideos
+include ../blocks/sAboutProject/_sAboutProject
+include ../blocks/sOurGoal/_sOurGoal
+include ../blocks/sOurDuty/_sOurDuty
+include ../blocks/sVideos/_sVideos
 
 block variables
 	- let  mainPage= null
 	- let  bg= 'main.jpg'
 
 block title
-	- let  title= 'Медиабиблиотека'
+	- let  title= 'Фан ва технология'
 	title= title
 block pagecontent
 
@@ -20,7 +20,7 @@ block pagecontent
 	+header()
 		+topLine()
 		+top-nav()
-	+breadcrumb('Асосий саҳифа', title)
+	+breadcrumb('Асосий саҳифа', 'Медиабиблиотека', title)
 	//- .text-center 
 	//- 	h1 Янгиликлар
 	+sVideos

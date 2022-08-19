@@ -300,4 +300,28 @@ mixin top-nav-cabinet(comp)
 					+b.link-logout(href="#")
 						+icon("logout")
 						span Чиқиш
+			+b.second-row.row.d-md-none
+				.col-4
+					a(href='#').button--mobile
+						span
+						+e.button-text Каталоглар
+				+e.notifications.col-4
+					.col-auto
+						+b.top-btn.with-dropdown(href="#")
+							+e.SPAN.icon-wrap
+								+icon("bell")
+								//+e.SPAN.count 99
+						+sNotificationsScroll()
+					.col-auto
+						+b.top-btn(href="#")
+							+e.SPAN.icon-wrap
+								+icon("like")
+								//+e.SPAN.count 99
+					.col-auto
+						+b.top-btn(href="#")
+							+e.SPAN.icon-wrap
+								+icon("basket-new")
+								//+e.SPAN.count 99
+				.col-4
+					+serivedroop()
 	// end top-nav

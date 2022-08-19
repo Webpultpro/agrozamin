@@ -1,0 +1,28 @@
+extends layout/main
+
+
+include ../blocks/sAboutProject/_sAboutProject
+include ../blocks/sOurGoal/_sOurGoal
+include ../blocks/sOurDuty/_sOurDuty
+include ../blocks/sVideos/_sVideos
+
+block variables
+	- let  mainPage= null
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Фан ва технология'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+topLine()
+		+top-nav()
+	+breadcrumb('Асосий саҳифа', 'Медиабиблиотека', title)
+	+sVideos2()
+	+footer()
+
+
+

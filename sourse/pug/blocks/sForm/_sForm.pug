@@ -533,7 +533,7 @@ mixin sFormAgroservice()
 					.step
 						.count 4
 						.desc С вами свяжется менеджер для подключения
-			+e.form-sector
+			+e.form-sector(id="formSector")
 				.name Уланиш учун сўров қолдиринг
 				.text Барча савол ва мурожаатлар бўйича сўровингизни қолдиринг ва бизнинг мутаҳасислар сиз билан алоқага чиқишади
 				+e.webform-wrapper
@@ -541,6 +541,9 @@ mixin sFormAgroservice()
 						.image.col-lg-6
 							+pic('service-webform-image.png','bg',0)
 						.form-group.col-lg-6
+							+in-c('radio','Стандарт',name="tarif")(id="standart")
+							+in-c('radio','Оптимал',name="tarif")(id="optimal")
+							+in-c('radio','Максимум',name="tarif")(id="maximum")
 							+input(``,`text`,`Тариф`)
 							+input(``,`text`,`Исм`)
 							+input(``,`text`,`Фамилия`)
@@ -567,7 +570,7 @@ mixin sFormAgroservice2()
 					.step
 						.count 4
 						.desc С вами свяжется менеджер для подключения
-			+e.form-sector
+			+e.form-sector(id="formSector")
 				.name Уланиш учун сўров қолдиринг
 				.text Барча савол ва мурожаатлар бўйича сўровингизни қолдиринг ва бизнинг мутаҳасислар сиз билан алоқага чиқишади
 				+e.webform-wrapper
@@ -575,6 +578,9 @@ mixin sFormAgroservice2()
 						.image.col-lg-6
 							+pic('service-webform-image.png','bg',0)
 						.form-group.col-lg-6
+							+in-c('radio','Стандарт',name="tarif")(data-id="standart")
+							+in-c('radio','Оптимал',name="tarif")(data-id="optimal")
+							+in-c('radio','Максимум',name="tarif")(data-id="maximum")
 							+input(``,`text`,`Тариф`)
 							+input(``,`text`,`Исм`)
 							+input(``,`text`,`Фамилия`)
@@ -601,7 +607,7 @@ mixin sFormAgroservice3()
 					.step.active.last
 						.count 4
 						.desc С вами свяжется менеджер для подключения
-			+e.form-sector
+			+e.form-sector(id="formSector")
 				.name Уланиш учун сўров қолдиринг
 				.text Барча савол ва мурожаатлар бўйича сўровингизни қолдиринг ва бизнинг мутаҳасислар сиз билан алоқага чиқишади
 				+e.webform-wrapper
@@ -609,6 +615,9 @@ mixin sFormAgroservice3()
 						.image.col-lg-6
 							+pic('service-webform-image.png','bg',0)
 						.form-group.col-lg-6
+							+in-c('radio','Стандарт',name="tarif")(data-id="standart")
+							+in-c('radio','Оптимал',name="tarif")(data-id="optimal")
+							+in-c('radio','Максимум',name="tarif")(data-id="maximum")
 							+input(``,`text`,`Исм`)
 							+input(``,`text`,`Фамилия`)
 							+input(``,`text`,`E-mail`)

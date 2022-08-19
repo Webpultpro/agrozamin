@@ -332,7 +332,7 @@
 			top: -40px;
 		}
 	}
-	&.servicesBanner {
+	&.servicesBanner, &.libraryBanner {
 		padding-top: 5px;
 		.sHeaderBanner {
 			&__content {
@@ -363,6 +363,18 @@
 			}
 			&__btn {
 				min-width: 188px;
+			}
+		}
+	}
+	&.libraryBanner {
+		.head-slide-img {
+			width: 70%;
+		}
+		.sHeaderBanner {
+			&__content {
+				@include media-breakpoint-up(lg) {
+					max-width: 35rem;
+				}
 			}
 		}
 	}

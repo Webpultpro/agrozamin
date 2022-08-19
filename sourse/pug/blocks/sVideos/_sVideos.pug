@@ -4,6 +4,94 @@ mixin videoItem(i,t)
 			+e.DIV.img-wrap.bg-wrap 
 				+pic(`bank-${i}.jpg`,'bg',0).picture-bg
 			+e.title!= t
+
+mixin videoItem2(i,t="")
+	+e.col.col-lg-4.col-sm-6
+		+b.item-video(href="https://www.youtube.com/watch?v=KP09uMK-tho" data-fancybox)
+			+e.DIV.img-wrap.bg-wrap
+				+pic(`mediaview-${i}.jpg`,'bg',0).picture-bg
+		+btn(t)
+
+mixin videoLibraryItem(i,t,n,d="22 август 2022")
+	+e.col.col-lg-3.col-md-4.col-sm-6
+		+e.top-sector
+			+b.item-video(href="https://www.youtube.com/watch?v=KP09uMK-tho" data-fancybox="videolib-" + i + "'")
+				+e.DIV.img-wrap.bg-wrap
+					+pic(`videolib-${i}.jpg`,'bg',0).picture-bg
+			+b.item-desc(href="#")
+					+e.name!= n
+					+e.title!= t
+		+e.bottom-sector
+			+e.date!= d
+			+e.visitors
+				+icon('eye-brows')
+				span 1248
+
+mixin articleLibraryItem(i,t,n,d="22 август 2022")
+	+e.col.col-lg-3.col-md-4.col-sm-6
+		+b.item-library(href="#")
+			+e.top-sector
+				+pic(`article-img-${i}.jpg`,'',0)
+				+e.name!= n
+				+e.title!= t
+			+e.bottom-sector
+				+e.date!= d
+				+e.visitors
+					+icon('eye-brows')
+					span 1248
+
+mixin sLibraryArticles(data)
+	// start sLibraryVideos
+	+b.sLibraryArticles.section#sLibraryArticles&attributes(attributes)
+		.container
+			+e.row.row
+				+articleLibraryItem("1", `Фермер учун шошилинч харидлар: йил охиригача нима тўланади?`, `Муаллиф: Адҳам Маликов`)
+				+articleLibraryItem("2", `Нўхат етиштириш ва мавсумда бир нечта екинларни йиғишнинг 7 сирлари`, `Муаллиф: Адҳам Маликов`)
+				+articleLibraryItem("1", `Фермер учун шошилинч харидлар: йил охиригача нима тўланади?`, `Муаллиф: Адҳам Маликов`)
+				+articleLibraryItem("2", `Нўхат етиштириш ва мавсумда бир нечта екинларни йиғишнинг 7 сирлари`, `Муаллиф: Адҳам Маликов`)
+				+articleLibraryItem("1", `Фермер учун шошилинч харидлар: йил охиригача нима тўланади?`, `Муаллиф: Адҳам Маликов`)
+				+articleLibraryItem("2", `Нўхат етиштириш ва мавсумда бир нечта екинларни йиғишнинг 7 сирлари`, `Муаллиф: Адҳам Маликов`)
+				+articleLibraryItem("1", `Фермер учун шошилинч харидлар: йил охиригача нима тўланади?`, `Муаллиф: Адҳам Маликов`)
+				+articleLibraryItem("2", `Нўхат етиштириш ва мавсумда бир нечта екинларни йиғишнинг 7 сирлари`, `Муаллиф: Адҳам Маликов`)
+				+articleLibraryItem("1", `Фермер учун шошилинч харидлар: йил охиригача нима тўланади?`, `Муаллиф: Адҳам Маликов`)
+				+articleLibraryItem("2", `Нўхат етиштириш ва мавсумда бир нечта екинларни йиғишнинг 7 сирлари`, `Муаллиф: Адҳам Маликов`)
+				+articleLibraryItem("1", `Фермер учун шошилинч харидлар: йил охиригача нима тўланади?`, `Муаллиф: Адҳам Маликов`)
+				+articleLibraryItem("2", `Нўхат етиштириш ва мавсумда бир нечта екинларни йиғишнинг 7 сирлари`, `Муаллиф: Адҳам Маликов`)
+
+mixin sLibraryArticlesVertical(data)
+	// start sLibraryVideos
+	+b.sLibraryArticlesVertical.section#sLibraryArticlesVertical&attributes(attributes)
+		+articleLibraryItem("1", `Фермер учун шошилинч харидлар: йил охиригача нима тўланади?`, `Муаллиф: Адҳам Маликов`)
+		+articleLibraryItem("2", `Нўхат етиштириш ва мавсумда бир нечта екинларни йиғишнинг 7 сирлари`, `Муаллиф: Адҳам Маликов`)
+		+articleLibraryItem("1", `Фермер учун шошилинч харидлар: йил охиригача нима тўланади?`, `Муаллиф: Адҳам Маликов`)
+		+articleLibraryItem("2", `Нўхат етиштириш ва мавсумда бир нечта екинларни йиғишнинг 7 сирлари`, `Муаллиф: Адҳам Маликов`)
+
+mixin sLibraryVideos(data)
+	// start sLibraryVideos
+	+b.sLibraryVideos.section#sLibraryVideos&attributes(attributes)
+		.container
+			+e.row.row
+				+videoLibraryItem("1", `Мутаҳассис билан жонли мулоқот: Ўғтилар бўйича тўлиқ маълумотлар ва уларга ишлов бериш`, `Муаллиф: Адҳам Маликов`)
+				+videoLibraryItem("2", `Боғдорчилик ҳақида тўлиқ маълумот`, `Муаллиф: Адҳам Маликов`)
+				+videoLibraryItem("3", `Иссиқхона хўжалиги ва боғдорчилик бўйича малумотлар`)
+				+videoLibraryItem("2", `Боғдорчилик ҳақида тўлиқ маълумот`, `Муаллиф: Адҳам Маликов`)
+				+videoLibraryItem("1", `Мутаҳассис билан жонли мулоқот: Ўғтилар бўйича тўлиқ маълумотлар ва уларга ишлов бериш`, `Муаллиф: Адҳам Маликов`)
+				+videoLibraryItem("2", `Боғдорчилик ҳақида тўлиқ маълумот`, `Муаллиф: Адҳам Маликов`)
+				+videoLibraryItem("3", `Иссиқхона хўжалиги ва боғдорчилик бўйича малумотлар`)
+				+videoLibraryItem("2", `Боғдорчилик ҳақида тўлиқ маълумот`, `Муаллиф: Адҳам Маликов`)
+				+videoLibraryItem("1", `Мутаҳассис билан жонли мулоқот: Ўғтилар бўйича тўлиқ маълумотлар ва уларга ишлов бериш`, `Муаллиф: Адҳам Маликов`)
+				+videoLibraryItem("2", `Боғдорчилик ҳақида тўлиқ маълумот`, `Муаллиф: Адҳам Маликов`)
+				+videoLibraryItem("3", `Иссиқхона хўжалиги ва боғдорчилик бўйича малумотлар`)
+				+videoLibraryItem("2", `Боғдорчилик ҳақида тўлиқ маълумот`, `Муаллиф: Адҳам Маликов`)
+
+mixin sLibraryVideosVertical(data)
+	// start sLibraryVideos
+	+b.sLibraryVideosVertical.section#sLibraryVideosVertical&attributes(attributes)
+		+videoLibraryItem("1", `Мутаҳассис билан жонли мулоқот: Ўғтилар бўйича тўлиқ маълумотлар ва уларга ишлов бериш`, `Муаллиф: Адҳам Маликов`)
+		+videoLibraryItem("2", `Боғдорчилик ҳақида тўлиқ маълумот`, `Муаллиф: Адҳам Маликов`)
+		+videoLibraryItem("3", `Иссиқхона хўжалиги ва боғдорчилик бўйича малумотлар`)
+		+videoLibraryItem("2", `Боғдорчилик ҳақида тўлиқ маълумот`, `Муаллиф: Адҳам Маликов`)
+
 mixin sVideos(data)
 	// start sVideos
 	+b.sVideos.section#sVideos&attributes(attributes)
@@ -52,5 +140,59 @@ mixin sVideos(data)
 						+videoItem("1-1", `"Фермерлар мактабида" курслар бошланди`, `"Фермерлар мактабида" ўсимликларни ҳимоя қилиш `)
 						+videoItem(`2`, `Банкоматларда техник ишлар олиб борилмоқда!`, `Барча учун керакли бўлган фойдали китобларнинг електрон топлами`)
 						+videoItem('1-3', `"Унутилмас саёҳатни ютиб олинг" `, `Виса билан ҳамкорликада "Унутилмас саёҳатни ютиб олинг" аксиясини еълон қиламиз.`)
+					+pugin
+	// end sVideos
+
+mixin sVideos2(data)
+	// start sVideos
+	+b.sVideos.section#sVideos&attributes(attributes)
+		.container
+			.tabs-region
+				.tab
+					button.tablinks.vac.active(onclick="openCity(event, 'kitob-tab')") 100 китоб
+					button.tablinks.res(onclick="openCity(event, 'bog-tab')") Боғдорчилик
+					button.tablinks.res(onclick="openCity(event, 'chor-tab')") Чорвачилик ва йилқичилик
+					button.tablinks.res(onclick="openCity(event, 'deh-tab')") Деҳқончилик
+					button.tablinks.res(onclick="openCity(event, 'chorbog-tab')") Чорвачилик ва боғдорчилик
+				.tabcontent.opened(id="kitob-tab")
+					+e.row.row
+						+videoItem2("1", `Комбаинлардан фойдаланиш боича қўлланмалар`)
+						+videoItem2(`2`, `Пахта учун ўғитлар билан ишлаш қўлланмаси`)
+						+videoItem2('3', `Эр хўжалиги ишлаш боича Аграномдан маслахатлар`)
+						+videoItem2('3', `Эр хўжалиги ишлаш боича Аграномдан маслахатлар`)
+						+videoItem2("1", `Комбаинлардан фойдаланиш боича қўлланмалар`)
+						+videoItem2(`2`, `Пахта учун ўғитлар билан ишлаш қўлланмаси`)
+						+videoItem2("1", `Комбаинлардан фойдаланиш боича қўлланмалар`)
+						+videoItem2(`2`, `Пахта учун ўғитлар билан ишлаш қўлланмаси`)
+						+videoItem2('3', `Эр хўжалиги ишлаш боича Аграномдан маслахатлар`)
+					+pugin
+				.tabcontent(id="bog-tab")
+					+e.row.row
+						+videoItem2("1", `Комбаинлардан фойдаланиш боича қўлланмалар`)
+						+videoItem2(`2`, `Пахта учун ўғитлар билан ишлаш қўлланмаси`)
+						+videoItem2('3', `Эр хўжалиги ишлаш боича Аграномдан маслахатлар`)
+						+videoItem2('3', `Эр хўжалиги ишлаш боича Аграномдан маслахатлар`)
+						+videoItem2("1", `Комбаинлардан фойдаланиш боича қўлланмалар`)
+					+pugin
+				.tabcontent(id="chor-tab")
+					+e.row.row
+						- for (var x = 0; x < 2; x++)
+						+videoItem2("1", `Комбаинлардан фойдаланиш боича қўлланмалар`)
+						+videoItem2(`2`, `Пахта учун ўғитлар билан ишлаш қўлланмаси`)
+						+videoItem2('3', `Эр хўжалиги ишлаш боича Аграномдан маслахатлар`)
+					+pugin
+				.tabcontent(id="deh-tab")
+					+e.row.row
+						- for (var x = 0; x < 2; x++)
+						+videoItem2("1", `Комбаинлардан фойдаланиш боича қўлланмалар`)
+						+videoItem2(`2`, `Пахта учун ўғитлар билан ишлаш қўлланмаси`)
+						+videoItem2('3', `Эр хўжалиги ишлаш боича Аграномдан маслахатлар`)
+					+pugin
+				.tabcontent(id="chorbog-tab")
+					+e.row.row
+						- for (var x = 0; x < 2; x++)
+						+videoItem2("1", `Комбаинлардан фойдаланиш боича қўлланмалар`)
+						+videoItem2(`2`, `Пахта учун ўғитлар билан ишлаш қўлланмаси`)
+						+videoItem2('3', `Эр хўжалиги ишлаш боича Аграномдан маслахатлар`)
 					+pugin
 	// end sVideos

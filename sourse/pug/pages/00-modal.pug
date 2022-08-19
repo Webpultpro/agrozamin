@@ -1,0 +1,52 @@
+
+extends layout/main
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/aside/_aside.pug
+//- include ../blocks/sOrder/_sOrder.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sAdvantages/_sAdvantages.pug
+//- include ../blocks/sCategories/_sCategories.pug
+//- include ../blocks/sPopulars/_sPopulars.pug
+//- include ../blocks/sWantToSell/_sWantToSell.pug
+//- include ../blocks/sHowWorks/_sHowWorks.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= '15.jpg'
+
+block title
+	- let  title= ' Модалки'
+	title= title
+block pagecontent
+
+
+	.section.container
+		mixin btn(a,t)
+			a.btn.btn-primary.px-3.m-3.link-modal-js(href= a   )= t
+		+btn('#modal-go-reg','Рўйхатдан ўтиш')
+		+btn('#modal-view-order','Буюртмани кўриш')
+		+btn('#modal-star','Баҳолаш мезони')
+		+btn('#modal-close-order','Буюртмани ёпиш')
+		+btn('#modal-delete','Махсулотни ўчириш')
+		.w-100
+		+btn('#modal-online-consultant','Онлайн консултант ҳизмати ')
+		+btn('#modal-online-consultant2','Онлайн консултант рад етиш')
+		+btn('#modal-online-consultant3','Жамолива Гўзал')
+		+btn('#modal-online-consultant4','"Ветеринар" консултацияси учун видео сўров жўнатиш')
+		+btn('#modal-pa','№ 210403-907701')
+		+btn('#modal-pa2','№ 210403-907701-2')
+		+btn('#modal-pa3','Тайёр')
+		+btn('#modal-user','Сиз мутаҳассис')
+		+btn('#modal-work','Иш соатигнизни')
+		+btn('#modal-video','Керакли қурилмани танланг')
+		+btn('#modal-archive-download','Архивга қўшиш')
+		+btn('#modal-archive-upload','Архивдан чиқариш')
+		+btn('#modal-archive-del','Махсулотларни ўчириш')
+		+btn('#modal-work-time','Объединённая модалка')
+		+btn('#modal-product','Продуктовая модалка')
+		+btn('#modal-video-content','Видео контант жойлаш')
+		+btn('#modal-video-content2','Видео контант жойлаш 2')
+

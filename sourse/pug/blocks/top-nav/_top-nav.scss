@@ -1005,3 +1005,84 @@ li.active {
 		}
 	}
 }
+
+.second-row {
+	margin-top: 20px;
+	.button--mobile {
+		border: 1.5px solid var(--bs-primary);
+		width: 109px;
+		display: block;
+		border-radius: 30px;
+		box-sizing: border-box;
+		cursor: pointer;
+		font-weight: 500;
+		padding: 5px 5px 5px 23px;
+		position: relative;
+		transition: 0.3s;
+		&:hover {
+			background-color: var(--bs-primary);
+			span {
+				background: white;
+				&:before, &:after {
+					background: white;
+				}
+			}
+		}
+		span {
+			position: absolute;
+			width: 5px;
+			height: 1px;
+			background: black;
+			top: calc(50% - 1px);
+			left: 10px;
+			&:before, &:after {
+				content: "";
+				position: absolute;
+				width: 7.5px;
+				height: 1px;
+				background: black;
+				left: 0;
+				transition: 0.3s;
+			}
+			&:before {
+				top: 4px;
+			}
+			&:after {
+				bottom: 4px;
+			}
+		}
+	}
+	&__button-text {
+		color: black;
+		font-weight: 400;
+		transition: 0.3s;
+		&:hover {
+			color: white;
+		}
+	}
+	&__notifications {
+		display: flex;
+		justify-content: center;
+		gap: 15px;
+	}
+	&__btn {
+		padding: 8px 5px 8px 23px;
+		color: black;
+		font-size: 14px;
+		font-weight: 400;
+		width: 109px;
+		position: relative;
+		float: right;
+		.icon {
+			font-size: 9px;
+			position: absolute;
+			left: 11px;
+			top: 11px;
+		}
+	}
+	.dropdown-block {
+		left: inherit;
+		right: 0;
+		top: 50px;
+	}
+}
