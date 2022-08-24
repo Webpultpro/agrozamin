@@ -14,18 +14,17 @@ mixin videoItem2(i,t="")
 
 mixin videoLibraryItem(i,t,n,d="22 август 2022")
 	+e.col.col-lg-3.col-md-4.col-sm-6
-		+e.top-sector
-			+b.item-video(href="https://www.youtube.com/watch?v=KP09uMK-tho" data-fancybox="videolib-" + i + "'")
-				+e.DIV.img-wrap.bg-wrap
-					+pic(`videolib-${i}.jpg`,'bg',0).picture-bg
-			+b.item-desc(href="#")
-					+e.name!= n
-					+e.title!= t
-		+e.bottom-sector
-			+e.date!= d
-			+e.visitors
-				+icon('eye-brows')
-				span 1248
+		+b.item-video(href="#")
+			+e.top-sector
+				+e.img-wrap
+					+pic(`videolib-${i}.jpg`,'',0)
+				+e.name!= n
+				+e.title!= t
+			+e.bottom-sector
+				+e.date!= d
+				+e.visitors
+					+icon('eye-brows')
+					span 1248
 
 mixin articleLibraryItem(i,t,n,d="22 август 2022")
 	+e.col.col-lg-3.col-md-4.col-sm-6
