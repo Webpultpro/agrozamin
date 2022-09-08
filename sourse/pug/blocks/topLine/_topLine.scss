@@ -44,6 +44,9 @@ body:not(.main-page) .top-nav {
 			&:hover{
 				background: #F2F2F2;
 			}
+			 &.active, &:active {
+				 background: #F2F2F2;
+			 }
 		}
 	}
 	sup{

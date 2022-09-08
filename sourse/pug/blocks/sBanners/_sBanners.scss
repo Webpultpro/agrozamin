@@ -1,0 +1,126 @@
+.vacancy {
+  margin-top: 18px;
+  padding-top: 0;
+  .container {
+    padding-right: 0;
+    @include media-breakpoint-down(lg) {
+      padding-left: 0;
+    }
+  }
+  .vac_content {
+    background: #F1F4F9;
+    border-radius: 11px;
+    padding: 28px 38px;
+    display: none;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 22px;
+      .col-md-4, .col-md-8 {
+        width: 100%;
+      }
+      .col-md-8 {
+        .wrapper {
+          text-align: center;
+        }
+      }
+    }
+    @include media-breakpoint-down(md) {
+      padding: 24px;
+    }
+    &.active {
+      display: block;
+    }
+    .wrap-content {
+      min-height: 272px;
+      display: flex;
+      align-items: center;
+    }
+    .row {
+      align-items: center;
+    }
+  }
+  .logo-vacancy {
+    width: 100%;
+    @include media-breakpoint-down(lg) {
+      width: 250px;
+      margin: 0 auto;
+    }
+  }
+  .wrapper {
+    h2, .h2 {
+      font-weight: 700;
+      font-size: 32px;
+    }
+    .desc {
+      font-size: 20px;
+      line-height: 27.3px;
+      margin-bottom: 34px;
+    }
+    .btn {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 18px;
+      white-space: nowrap;
+    }
+  }
+}
+.agrojobsBanner {
+  .vacancy {
+    .vac_content {
+      display: block;
+      .row {
+        @include media-breakpoint-down(md) {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          .wrapper {
+            text-align: center;
+          }
+        }
+      }
+    }
+    .logo-vacancy {
+      display: flex;
+      justify-content: flex-end;
+      img {
+        width: 287px;
+      }
+    }
+    .wrapper {
+      h2, .h2 {
+        font-size: 43px;
+        @include media-breakpoint-down(md) {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@include media-breakpoint-down(lg) {
+  .vacancy {
+    .vac-info {
+      .col-md-7 {
+        text-align: left;
+      }
+    }
+    .col-md-10, .col-md-2 {
+      width: 100%;
+    }
+    .col-md-7 {
+      flex-direction: column;
+    }
+  }
+}

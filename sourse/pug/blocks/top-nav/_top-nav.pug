@@ -244,7 +244,7 @@ mixin top-nav(logout)
 								+item(`Чиқиш`)
 	// end top-nav
 mixin top-nav-cabinet(comp)
-	// start top-nav  в этом блоке   отличия
+	// start top-nav  в этом блоке отличия
 	+b.top-nav--cabinet
 		.container
 			+e.main-row.row
@@ -325,3 +325,113 @@ mixin top-nav-cabinet(comp)
 				.col-4
 					+serivedroop()
 	// end top-nav
+
+mixin serivedroop()
+
+	.drop-down-wrap
+		+e.btn.btn.btn-outline-primary(type="button")
+			+icon("menu")
+			| Сервислар
+		+b.dropdown-block--servises
+			mixin item(i,t,p,grey)
+				+e.item(href="#")
+					+e.img-wrap
+						+pic(`drop-${i}.png`,'bg',0)
+					div
+						.h6.mb-1= t
+						.text-secondary= p
+			+item(`1`,`Фермерлар Мактаби`,`Ёш Фермерларни тайёрлаш мактаби`)
+			+item(`2`,`Агролаб`,`Лобаратория билан ишлаш маҳорати`)
+			+item(`4`,`Медиабиблиотека`,`Керакли видео маҳсулотлар учун майдон`)
+			+item(`4`,`Онлайн консултант`,`Керакли видео маҳсулотлар учун майдон`)
+			+e.item--grey(href="#")
+				+e.img-wrap
+					+pic(`drop-3.png`,'bg',0)
+				div
+					.h6 Агротехкарталар
+					p
+						+icon(`clock-2`)
+						span Тез орада
+
+mixin mob-mnu()
+	-
+	//- let path = require('path');
+	//- let fs = require('fs');
+	//- var requestURL = 'top-nav.json';
+	//- var request = new XMLHttpRequest();
+	//- request.open('GET', requestURL);
+	//- request.responseType = 'json';
+	//- let dataJson = JSON.parse(json);
+	//- h1= dataJson['lala']
+	+b.menu-mobile--js.d-lg-none
+		+b.toggle-menu-mobile--js
+			span
+		+e.inner
+			+mnu()
+	//  мобильное меню
+
+mixin topNavAgrojobs(logout)
+	// start top-nav-agrojobs
+	+b.top-nav.block-with-lazy(class= (comp ? 'd-md-none' : null))
+		.container
+			+e.main-row.row
+				.col-lg-auto.col.order-first.fixed-hide
+					+b.logo(href="/")
+						.row
+							.col-auto
+								img(src="img/svg/agrojobs-logo.svg", alt="")
+				.col-auto.d-md-none.order-first.fixed-hide
+					.has-children
+						| Русский
+						ul
+							li Русский
+							li Русский
+							li Русский
+				.w-100.d-md-none.p-0.m-0.order-first
+				+e.col.col-lg.order-lg-0.order-last
+					+search-block-agrojobs
+				+e.col.col-auto.col-location
+					select(id="location" name="location").custom-select-location.js-states.form-control
+						option()
+						option(value="Тошкент") Тошкент
+						option(value="Андижон") Андижон
+						option(value="Бухоро") Бухоро
+						option(value="Жиззах") Жиззах
+						option(value="Қашқадарё") Қашқадарё
+						option(value="Навоий") Навоий
+						option(value="Наманган") Наманган
+						option(value="Самарқанд") Самарқанд
+						option(value="Сурхондарё") Сурхондарё
+						option(value="Сирдарё") Сирдарё
+						option(value="Хоразм") Хоразм
+						option(value="Қорақалпоғистон") Қорақалпоғистон
+				.col-auto
+					+b.top-btn.with-dropdown(href="#")
+						+e.SPAN.icon-wrap
+							+icon("bell")
+							+e.SPAN.count 99
+					+sNotificationsScroll()
+				if logout
+					.col-md-auto.col
+						.drop-down-wrap.text-end
+							+e.btn.btn.btn-primary(type="button")
+								+icon('user')
+								| Войти
+
+				if !logout
+					.col-md-auto.col
+						.drop-down-wrap.text-end
+							+e.btn.btn.btn-circle.cabinet(type="button")
+								picture
+									source(type='image/webp' srcset=`img/@1x/webp/user-avatar.webp`)
+									img.avatar(src="img/@1x/user-avatar.png", alt="")
+								+icon("icon-user-cabinet")
+							+b.dropdown-block--cabinet
+								mixin item(t)
+									+e.item(href="#").h6= t
+								+item(`Профил`)
+								+item(`Махсулотлар`)
+								+item(`Буюртмаларим`)
+								+item(`Харидор буюртмалари`)
+								+item(`Чиқиш`)
+	// end top-nav-agrojobs

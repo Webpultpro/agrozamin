@@ -49,6 +49,90 @@ mixin infoTable(data)
                 .label Хисоб рақами
                 .name 2223 1238 4568 1234 9963
 
+mixin statisticCount(data)
+    +b.performance-wrapper
+        +e.performance
+            .item-perform
+                .icon-wrapper
+                    +icon('eye-prod')
+                +e.title-wrapper
+                    .title Кўрилди:
+                    p 564 марта
+            .item-perform
+                .icon-wrapper
+                    +icon('convert-prod')
+                +e.title-wrapper
+                    .title Хабар жўнатилди:
+                    p 12 марта
+            .item-perform
+                .icon-wrapper
+                    +icon('phone-prod')
+                +e.title-wrapper
+                    .title Қўнғироқлар:
+                    p 53 марта
+
+mixin dashBoard(data)
+    .dashBoard
+        .wrapper
+            .icon-wrapper
+                +icon("icon-scale")
+            .info
+                p
+                    strong Иш тажрибаси
+                p 12 йил
+        .wrapper
+            .icon-wrapper
+                +icon("icon-clockk")
+            .info
+                p
+                    strong Иш соати
+                p 9:00 - 18:00
+        .wrapper
+            .icon-wrapper
+                +icon("icon-briefcase")
+            .info
+                p
+                    strong Иш графиги
+                p Толиқ иш куни, 7 кунлик иш
+        .wrapper
+            .icon-wrapper
+                +icon("icon-address")
+            .info
+                p
+                    strong Манзил
+                p Тошкент шаҳар, Чилонзор, Муқумий кўчаси 4 - уй
+
+mixin dashBoard2(data)
+    .dashBoard
+        .wrapper
+            .icon-wrapper
+                +icon("icon-scale")
+            .info
+                p
+                    strong Тажрибаси
+                p 12 йил
+        .wrapper
+            .icon-wrapper
+                +icon("icon-briefcase")
+            .info
+                p
+                    strong Иш графиги
+                p Толиқ иш куни, Толиқ иш куни Қисман иш куни, Мавсумий, Амалиёт
+        .wrapper
+            .icon-wrapper
+                +icon("icon-information")
+            .info
+                p
+                    strong Маълумоти
+                p Олий маълумотли
+        .wrapper
+            .icon-wrapper
+                +icon("icon-address")
+            .info
+                p
+                    strong Манзил
+                p Тошкент шаҳар, Чилонзор, Муқумий кўчаси 4 - уй
+
 mixin trustedSeller(data)
     .trusted-seller
         .title
@@ -57,3 +141,16 @@ mixin trustedSeller(data)
             span Ишончли сотувчи
         .desc
             p Компанияга Агрозамин томонидан ишонч билдирилган
+
+mixin workExperience(data)
+    +b.workExperience
+        +e.title Иш тажрибаси
+        +e.wrapper
+            +e.item
+                +e.date июль 2020 - Хозирги вақтгача
+                +e.company-name ООО "АГРОФИРМА АРИАНТ"
+                +e.prof Аграном
+            +e.item
+                +e.date июль 2019 - август 2020
+                +e.company-name ООО "АГРОФИРМА АРИАНТ"
+                +e.prof Аграном

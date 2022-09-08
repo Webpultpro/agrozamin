@@ -185,6 +185,9 @@ body {
 .fw-100 {
 	font-weight: 100;
 }
+.w-75 {
+	width: 75px;
+}
 
 .row--sm {
 	--bg-gutter-x: #{rem(20)};
@@ -475,6 +478,47 @@ iframe {
 	&:hover,
 	&:active {
 		color: $white;
+	}
+}
+.btn-with-arrow-left {
+	font-weight: 400;
+	font-size: 14px;
+	background: #F7F8FD;
+	border-radius: 25px;
+	padding: 5px 15px 5px 32px;
+	position: relative;
+	display: inline-block;
+	transition: 0.3s;
+	&:hover {
+		color: var(--bs-primary);
+		&:after {
+			border: solid var(--bs-primary);
+			border-width: 2px 0 0 2px;
+		}
+	}
+	&:before {
+		content: '';
+		display: block;
+		width: 24px;
+		height: 24px;
+		background: white;
+		border-radius: 50%;
+		position: absolute;
+		top: calc(50% - 12px);
+		left: 2px;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		top: calc(50% - 3.5px);
+		display: inline-block;
+		height: 7px;
+		left: 12px;
+		width: 7px;
+		transform: rotate(-45deg);
+		border: solid #3e3e3e;
+		border-width: 2px 0 0 2px;
+		transition: 0.3s;
 	}
 }
 .btn-dark-green {

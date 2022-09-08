@@ -365,3 +365,33 @@ mixin aside6(data)
 	+b.ASIDE.aside.section.pt-0.w-255&attributes(attributes)
 		h2 Бошқа мақолалар
 		+sLibraryArticlesVertical()
+
+mixin aside7(data)
+	// start aside
+	+b.ASIDE.aside.section.pt-0&attributes(attributes)
+		.form-filter
+			+e.toggle-btn--js.btn.btn-outline-success.mb-3.w-100.d-lg-none Показать меню
+				span
+			+e.toggle-block.d-lg-block
+				mixin item(t, ...items)
+					ul
+						li: strong= t
+						li.has-children
+							ul
+								each item in items
+									li: +in-c('checkbox', item)
+				+item("Категория","Агроном","Трактирчик","Ветеринар","Агрохимик","Зоотехник","Сут соғиш мутаҳассиси")
+				+b.filter-item
+					+e.title Ойлик
+					+e.dropdown
+						.range-wrap
+							.row
+								.col-lg-12.col-6
+									+input('4 566 сум').input_from
+								.col-lg-12.col-6
+									+input('15 588 сум').input_to
+
+				+item("Регион","Тошкент ","Андижон  ","Бухоро  ","Жиззах ","Қашқадарё","Навоий","Наманган","Самарқанд","Сурхондарё","Сирдарё","Хоразм","Қорақалпоғистон")
+				+item("Иш графиги","Толиқ иш куни","Қисман иш куни","Мавсумий ","Амалиёт")
+				+item("Иш тажрибаси","Муҳим емас","Ёш мутахассис (1-3 йил)","Мутахассис (3-6 йил)","Профессионал (6 йилдан ортиқ)")
+				+item("Маълумоти","Орта маҳсус","Тугалланмаган олий","Олий маълумотли","Магистр")

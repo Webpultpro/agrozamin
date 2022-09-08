@@ -253,3 +253,29 @@ mixin sProvider(online)
 						.registration-date Рўйхатга олинган сана: &nbsp;
 							span 10.06.2022
 	// end sProvider
+
+mixin irrigationSolution()
+	// start irrigationSolution
+	+b.sProdBody
+		+e.provider-region
+			a(href="#" target="_blank")
+				+e.provider
+					.icon-wrapper
+						+pic('agriculture-logo','','')
+					+e.title-wrapper
+						h3 OOO "Irrigation Solution"
+						p Рўйхатга олинган сана: 10.06.2022
+			+cardlinksWithPhoneNoLike()
+
+mixin irrigationSolution2()
+	// start irrigationSolution2
+	+b.sProdBody
+		+e.provider-region
+			a(href="#" target="_blank")
+				+e.provider
+					.icon-wrapper
+						+pic('azimov','','')
+					+e.title-wrapper
+						h3 Азимов Сайфиддин
+						p Рўйхатга олинган сана: 10.06.2022
+			+cardlinksWithPhoneNoLike()

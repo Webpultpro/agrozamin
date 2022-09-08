@@ -201,6 +201,7 @@ function eventHandler() {
 		spaceBetween: 0,
 		freeMode: true,
 	});
+
 	let sPopularsSlider = new Swiper('.sPopulars__slider--js', {
 		freeModeMomentum: true,
 		watchOverflow: true,
@@ -349,6 +350,65 @@ function eventHandler() {
 		}
 	});
 
+	let agrojobsResume = new Swiper('.agrojobsResume__slider--js', {
+		freeModeMomentum: true,
+		slidesPerView: 3,
+		spaceBetween: 30,
+		freeMode: false,
+		autoplay: false,
+		navigation: {
+			nextEl: '.agrojobsResume .swiper-button-next',
+			prevEl: '.agrojobsResume .swiper-button-prev'
+		},
+		breakpoints: {
+			319: {
+				slidesPerView: 1,
+				spaceBetween: 0,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 30,
+			}
+		}
+	});
+	let agrojobsCompanies = new Swiper('.agrojobsCompanies__slider--js', {
+		freeModeMomentum: true,
+		slidesPerView: 3,
+		spaceBetween: 30,
+		freeMode: false,
+		autoplay: false,
+		navigation: {
+			nextEl: '.agrojobsCompanies .swiper-button-next',
+			prevEl: '.agrojobsCompanies .swiper-button-prev'
+		},
+		pagination: {
+			el: ".agrojobsCompanies .swiper-pagination",
+			type: 'bullets',
+			clickable: true,
+		},
+		breakpoints: {
+			319: {
+				slidesPerView: 1,
+				spaceBetween: 0,
+			},
+			578: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			}
+		}
+	});
 
 	$('.pieProgress').asPieProgress({
 		namespace: 'pieProgress',
@@ -820,6 +880,9 @@ function eventHandler() {
 	$('.custom-select-js').select2({
 		// dropdownParent: 
 	});
+	$('.custom-select-location').select2({
+		placeholder: "Сизнинг жойлашувингиз",
+	});
 };
 
 if (document.readyState !== 'loading') {
@@ -882,6 +945,67 @@ $(".date-tabs .form-check").on('click', function () {
 		$('.tab-content-schedule').addClass("active");
 		$('.tab-content-individual').removeClass("active");
 	}
+});
+$('.vacancyAgroJob .tablinks').on('click', function () {
+	let agrojobsResume = new Swiper('.agrojobsResume__slider--js', {
+		freeModeMomentum: true,
+		slidesPerView: 3,
+		spaceBetween: 30,
+		freeMode: false,
+		autoplay: false,
+		navigation: {
+			nextEl: '.agrojobsResume .swiper-button-next',
+			prevEl: '.agrojobsResume .swiper-button-prev'
+		},
+		breakpoints: {
+			319: {
+				slidesPerView: 1,
+				spaceBetween: 0,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 30,
+			}
+		}
+	});
+	let agrojobsCompanies = new Swiper('.agrojobsCompanies__slider--js', {
+		freeModeMomentum: true,
+		slidesPerView: 3,
+		spaceBetween: 30,
+		freeMode: false,
+		autoplay: false,
+		navigation: {
+			nextEl: '.agrojobsCompanies .swiper-button-next',
+			prevEl: '.agrojobsCompanies .swiper-button-prev'
+		},
+		pagination: {
+			el: ".agrojobsCompanies .swiper-pagination",
+			type: 'bullets',
+			clickable: true,
+		},
+		breakpoints: {
+			319: {
+				slidesPerView: 1,
+				spaceBetween: 0,
+			},
+			578: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			}
+		}
+	});
 });
 /*end Tabs*/
 
@@ -1061,20 +1185,30 @@ window.addGroup = function (element) {
 	let target = $(element).data('target');
 	if (target) {
 		let day = $(element).data('day');
-		let groups = $('.' + target + 's[data-day='+day+']').toArray();
+		let groups;
+		let newGroupText;
+		if (day){
+		 groups = $('.' + target + 's[data-day='+day+']').toArray();
+		}else {
+			groups = $('.' + target+'s');
+		}
 		let limit = $(element).data('limit');
 		let id = $(groups[groups.length - 1]).attr('id').split('-',2);
 		let index = parseInt(id[1]),
 			newIndex = index + 1
 		let lastGroup = $(groups[groups.length - 1]);
 		let newGroup = lastGroup.clone(true).attr('id', target + '-' + newIndex);
-		let newGroupText = newGroup.html().replaceAll(target + 's['+ day +'][' + index + ']', target + 's['+ day +'][' + newIndex + ']');
+		if (day){
+			newGroupText = newGroup.html().replaceAll(target + 's['+ day +'][' + index + ']', target + 's['+ day +'][' + newIndex + ']');
+			}else {
+			newGroupText = newGroup.html().replaceAll(target + 's[' + index + ']', target + 's[' + newIndex + ']');
+		}
 		if (limit){
 			$(element).attr('onclick', 'remove(this)').data('id',newIndex).addClass("opened");
 		}
 		let parentGroup = $(groups[0]).parents();
 		if (groups.length > 0) {
-			$('.remove-element', groups[0]).css('display','block');
+			$('.remove-element', groups[0]).css('display','flex');
 			$('.add-button', parentGroup[1]).css('margin-left', '25px');
 		}
 		newGroup.html(newGroupText).hide();
@@ -1085,8 +1219,8 @@ window.addGroup = function (element) {
 			},
 		400)
 		$('input, select, textarea', newGroup).val('');
-		$("input",newGroup).mask("55:55");
-		$('.remove-element', newGroup).attr('data-id', newIndex).css('display','block');
+		$(".inner-date-wrapper input",newGroup).mask("55:55");
+		$('.remove-element', newGroup).attr('data-id', newIndex).css('display','flex');
 	}
 }
 window.remove = function (button) {
@@ -1095,7 +1229,7 @@ window.remove = function (button) {
 		target = $self.data('target'),
 		limit = $(button).data('limit'),
 		index = $self.data('id'),
-		groupsLength =  $('.' + target + 's[data-day='+day+']').length,
+		groupsLength =  $('.' + target + (day? 's[data-day='+day+']':'s')).length,
 		parent = $(button).closest('#' + target + '-' + index);
 	if (limit){
 		$(button).attr('onclick', 'addGroup(this)').data('id',"").removeClass("opened");
@@ -1103,13 +1237,12 @@ window.remove = function (button) {
 
 	if (target) {
 		if (groupsLength > 1) {
-			let $target =  $('#' + target + '-' + index+'[data-day='+day+']');
+			let $target =  $('#' + target + '-' + index+(day? '[data-day='+day+']':''));
 				$target.hide('fast', function(){
 					$target.remove();
-					let groups =  $('.' + target + 's[data-day='+day+']').toArray()
+					let groups =  $('.' + target + (day? 's[data-day='+day+']':'s')).toArray()
 					let parentGroup = $(groups[0]).parents();
 					if(groups.length === 1) {
-						console.log(groups.length);
 						$('.remove-element', groups[0]).removeAttr('style')
 						$('.add-button',parentGroup[1]).removeAttr('style')
 					}

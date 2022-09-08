@@ -1,0 +1,27 @@
+extends layout/main
+
+
+include ../blocks/sVacancy/_sVacancy.pug
+include ../blocks/sProdBody/_sProdBody.pug
+
+block variables
+    - let  mainPage= 'vacancy-page'
+    - let  bg= 'main.jpg'
+
+block title
+    - let  title= 'OOO "Irrigation Solution"'
+    title= title
+block pagecontent
+
+
+    +mob-mnu()
+    +header()
+        +topLineAgrojobs()
+        +topNavAgrojobs()
+
+    +breadcrumb('Асосий саҳифа', 'Вакансиялар', 'Зоотехник', title)
+
+    +sProvider('online')
+    +companyVacancy()
+
+    +footer()

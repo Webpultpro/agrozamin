@@ -1,0 +1,27 @@
+mixin agrojobsBanner(data)
+    +b.agrojobsBanner.section#agrojobsBanner&attributes(attributes)
+        .vacancy
+            .vac_content
+                .wrap-content
+                    .row
+                        .col-md-6
+                            .wrapper
+                                .h2.mb-3 Ходимлар қидираётганлар учун
+                                .desc Ўзингизга керекли бўлган вакансияларни жойлштиринг ва керакли иш ходимларни топинг
+                                button.btn.btn-primary Вакансия жойлаш
+                        .col-md-6
+                            +pic("chair.png",'',0).logo-vacancy
+
+mixin agrojobsBanner2(data)
+    +b.agrojobsBanner.section#agrojobsBanner&attributes(attributes)
+        .vacancy
+            .vac_content
+                .wrap-content
+                    .row
+                        .col-md-6
+                            .wrapper
+                                .h2.mb-3 Иш қидираётганлар учун
+                                .desc Ўзингизга керекли бўлган резумеларни жойлштиринг ва керакли иш ўтинларини топинг
+                                button.btn.btn-primary Резуме жойлаш
+                        .col-md-6
+                            +pic("brieafcase.png",'',0).logo-vacancy

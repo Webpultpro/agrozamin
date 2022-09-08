@@ -1,0 +1,50 @@
+extends layout/main
+
+
+include ../blocks/sVacancy/_sVacancy.pug
+include ../blocks/sProdBody/_sProdBody.pug
+include ../blocks/differentTables/differentTables.pug
+
+block variables
+    - let  mainPage= 'vacancy-page'
+    - let  bg= 'main.jpg'
+
+block title
+    - let  title= 'Зоотехник'
+    title= title
+block pagecontent
+
+
+    +mob-mnu()
+    +header()
+        +topLineAgrojobs()
+        +topNavAgrojobs()
+
+    +breadcrumb('Асосий саҳифа', 'Вакансиялар', title)
+
+    .agroJobsUserCabinet.section
+        .container
+            +irrigationSolution()
+            .head-region
+                .h2 Бош ветеринар муовини
+                .price 1 800 000 uzs
+                .company ООО "АГРОФИРМА АРИАНТ"
+            .bottom-region
+                +dashBoard()
+            .description
+                .desc-title Батафсил тавсиф
+                .text
+                    p Кунига 3 марта сигирларни бевосита соғиш. Сигирларни парвариш қилиш — қўшиқ айтиш, овқатни тарқатиш, гўнгни тозалаш. Агрофирма "Ариант" - Урал вилоятида гўшт маҳсулотлари ишлаб чиқариш учун енг йирик агросаноат холдинг компанияси. Россияда саноатнинг ўнта раҳбарларидан бири. Вертикал интеграциялашган холдинг таркибига қишлоқ хўжалиги ва ишлаб чиқариш майдончалари, шунингдек, маркали савдо тармоғи киради.
+                    p Вазифалари:
+                    ul
+                        li Ветеринария ва санитария талабларига риоя етилишини назорат қилиш;
+                        li Назорат ва назорат органлари билан ўзаро ҳамкорлик;
+                        li Норматив ҳужжатларни ишлаб чиқишда иштирок етиш;
+                        li Чорвачилик ходимлари учун тренинглар ва брифинглар ўтказиш.
+                        li Антиепизоотик, профилактик ва терапевтик чора-тадбирлар режасини тузиш ва назорат қилиш;
+                        li Лаборатория ишлари;
+                        li Корхонанинг биологик хавфсизлигини назорат қилиш;
+                        li Ветеринария ҳисоботлари ва бухгалтерия ҳисоби.
+            +statisticCount()
+
+    +footer()

@@ -39,6 +39,23 @@ mixin search-block()
 					.col Трактор
 					.col-auto.text-secondary2 Каталог
 
+mixin search-block-agrojobs()
+	+b.search-block
+		form
+			input(type="text"  placeholder="Agrojobs бўйича қидирув")
+			button
+				+icon("search")
+		+e.dropdown.d-none
+			- for (var x = 0; x < 6; x++)
+			+e.item(href="#")
+				.row
+					.col Мини-трактор YTO-ME304
+					.col-auto.text-secondary2 Махсулотлар
+			+e.item(href="#")
+				.row
+					.col Трактор
+					.col-auto.text-secondary2 Каталог
+
 mixin stars()
 	+b.stars&attributes(attributes)
 		+icon("star").active

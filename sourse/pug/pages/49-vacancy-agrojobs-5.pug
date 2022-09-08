@@ -1,0 +1,25 @@
+extends layout/main
+
+
+include ../blocks/sForm/_sForm.pug
+
+block variables
+    - let  mainPage= 'vacancy-page'
+    - let  bg= 'main.jpg'
+
+block title
+    - let  title= 'Вакансия жойлаш'
+    title= title
+block pagecontent
+
+
+    +mob-mnu()
+    +header()
+        +topLineAgrojobs()
+        +topNavAgrojobs()
+
+    +breadcrumb('Асосий саҳифа', 'Вакансиялар', title)
+
+    +sForm7()
+
+    +footer()

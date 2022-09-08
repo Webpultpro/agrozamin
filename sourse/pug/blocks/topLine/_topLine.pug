@@ -49,3 +49,54 @@ mixin topLine(comp)
 							+icon("chat")
 							span.d-none.d-lg-inline On-line чат
 	// end topLine
+
+mixin topLineAgrojobs(comp)
+	// start topLineAgrojobs
+	+b.topLine.section.d-none.d-lg-block#topLine&attributes(attributes)
+		.container
+			.row
+				.col-lg-3.col-auto
+					ul
+						li: +e.link(href="#")  Agrozamin
+						li: +e.link(href="#").active  Agrojobs
+				+e.center.col
+					ul
+						li: +e.link
+							img(src="img/svg/graf.svg", alt="")
+							| USD 10 677.66
+
+						li: +e.link
+							img(src="img/svg/sun.svg", alt="")
+							| 27
+							sup °C
+
+						li.has-children
+							| Ташкент
+							ul
+								li Ташкент
+								li Ташкент
+								li Ташкент
+						li.has-children
+							| Русский
+							ul
+								li
+									a(href="#")  Русский
+								li
+									a(href="#")  Русский
+								li
+									a(href="#")  Русский
+						li.has-children
+							| Валюта: Сум
+							ul
+								li Валюта: Сум
+								li Валюта: Сум
+								li Валюта: Сум
+				+b.contacts-top-block.col-lg-3.col-auto
+					ul
+						li: +e.link(href="tel:(78)150-00-88")
+							+icon("phone-icon")
+							span.d-none.d-lg-inline (78) 150-00-88
+						li: +e.link(href="#")
+							+icon("chat")
+							span.d-none.d-lg-inline On-line чат
+	// end topLineAgrojobs

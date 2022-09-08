@@ -1,0 +1,24 @@
+extends layout/main
+
+
+include ../blocks/sVacancy/_sVacancy
+
+block variables
+    - let  mainPage= 'vacancy-page'
+    - let  bg= 'main.jpg'
+
+block title
+    - let  title= 'Вакансиялар'
+    title= title
+block pagecontent
+
+
+    +mob-mnu()
+    +header()
+        +topLineAgrojobs()
+        +topNavAgrojobs()
+
+    .container
+        +sVacancyAgrojobs()
+
+    +footer()

@@ -1,0 +1,30 @@
+extends layout/main
+
+include ../blocks/aside/_aside.pug
+include ../blocks/sVacancy/_sVacancy.pug
+
+block variables
+    - let  mainPage= 'vacancy-page'
+    - let  bg= 'main.jpg'
+
+block title
+    - let  title= 'Вакансиялар'
+    title= title
+block pagecontent
+
+
+    +mob-mnu()
+    +header()
+        +topLineAgrojobs()
+        +topNavAgrojobs()
+
+    +breadcrumb('Асосий саҳифа', title)
+
+    .container
+        .row.row--main
+            .col-lg.col--aside
+                +aside7()
+            .col-lg.col--main
+                +sVacancy2()
+
+    +footer()

@@ -1,3 +1,9 @@
+include ../sBanners/_sBanners.pug
+include ../sProfessions/_sProfessions.pug
+include ../sSliders/_sSliders.pug
+include ../sForm/_sForm.pug
+
+
 mixin sVacancy(data)
     // start sUserLegalInfo
     div.vacancy.section#vacancy&attributes(attributes)
@@ -344,6 +350,363 @@ mixin sVacancy(data)
                                             strong Маълумоти
                                         p Олий маълумотли
 
+mixin sVacancy2(data)
+    // start sUserLegalInfo
+    div.vacancy.section#vacancy&attributes(attributes)
+        .container
+            .vac_content.vac.active
+                .wrap-content
+                    .row
+                        .col-md-4
+                            +pic("chair.png",'',0).logo-vacancy
+                        .col-md-8
+                            .wrapper
+                                .h2.mb-3 Ходимлар қидираётганлар учун
+                                .desc Ўзингизга керекли бўлган вакансияларни жойлштиринг ва керакли иш ходимларни топинг
+                                button.btn.btn-primary Вакансия жойлаш
+            .vac_content.res
+                .wrap-content
+                    .row
+                        .col-md-4
+                            +pic("brieafcase.png",'',0).logo-vacancy
+                        .col-md-8
+                            .wrapper
+                                .h2.mb-3 Иш қидираётганлар учун
+                                .desc Ўзингизга керекли бўлган вакансияларни жойлштиринг ва керакли иш ўтинларини топинг
+                                button.btn.btn-primary Вакансия жойлаш
+            .tabs-region
+                .tab
+                    button.tablinks.vac.active(onclick="openCity(event, 'vacancy-tab')") Вакансиялар
+                    button.tablinks.res(onclick="openCity(event, 'resume-tab')") Резумелар
+                .tabcontent.opened(id="vacancy-tab")
+                    .vac-info.agroJobs
+                        .head-region
+                            .col-md-10
+                                .user
+                                    .avatar
+                                        +pic('azimov','',0)
+                                        +icon('icon-user')
+                                    +e.name Азимов Сайфиддин
+                                .h2 Жисмоний маданият бўйича катта ўқитувчи маданият
+                                .price 1 800 000 uzs
+                            .col-md-2
+                                .date 17.02.2022
+                        .desc
+                            p Жисмоний тарбия ва sport факултетини тамомлаган. Мутахассислиги: жисмоний тарбия ўқитувчиси. Алоқа қўнғироқдан яхшироқ, почтани томоша қилишнинг ҳеч қандай усули йўқ Жисмоний тарбия ва sport факултетини тамомлаган. Мутахассислиги: жисмоний тарбия ўқитувчиси. Алоқа қўнғироқдан яхшироқ, почтани томоша қилишнинг ҳеч қандай усули йўқ
+                        .bottom-region
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-briefcase")
+                                .info
+                                    p
+                                        strong Иш графиги
+                                    p Толиқ иш куни
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-scale")
+                                .info
+                                    p
+                                        strong Иш тажрибаси
+                                    p 12 йил
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-information")
+                                .info
+                                    p
+                                        strong Маълумоти
+                                    p Олий маълумотли
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-address")
+                                .info
+                                    p
+                                        strong Манзил
+                                    p Тошкент шаҳар, Чилонзор, Муқумий кўчаси 4 - уй
+                    .vac-info.agroJobs
+                        .head-region
+                            .col-md-10
+                                .user
+                                    .avatar
+                                        +icon('icon-user')
+                                    +e.name Азимов Сайфиддин
+                                .h2 Жисмоний маданият бўйича катта ўқитувчи маданият
+                                .price 1 800 000 uzs
+                            .col-md-2
+                                .date 17.02.2022
+                        .desc
+                            p Жисмоний тарбия ва sport факултетини тамомлаган. Мутахассислиги: жисмоний тарбия ўқитувчиси. Алоқа қўнғироқдан яхшироқ, почтани томоша қилишнинг ҳеч қандай усули йўқ Жисмоний тарбия ва sport факултетини тамомлаган. Мутахассислиги: жисмоний тарбия ўқитувчиси. Алоқа қўнғироқдан яхшироқ, почтани томоша қилишнинг ҳеч қандай усули йўқ
+                        .bottom-region
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-briefcase")
+                                .info
+                                    p
+                                        strong Иш графиги
+                                    p Толиқ иш куни
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-scale")
+                                .info
+                                    p
+                                        strong Иш тажрибаси
+                                    p 12 йил
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-information")
+                                .info
+                                    p
+                                        strong Маълумоти
+                                    p Олий маълумотли
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-address")
+                                .info
+                                    p
+                                        strong Манзил
+                                    p Тошкент шаҳар, Чилонзор, Муқумий кўчаси 4 - уй
+                    .vac-info.agroJobs
+                        .head-region
+                            .col-md-10
+                                .user
+                                    .avatar
+                                        +pic('azimov','',0)
+                                        +icon('icon-user')
+                                    +e.name Азимов Сайфиддин
+                                .h2 Жисмоний маданият бўйича катта ўқитувчи маданият
+                                .price 1 800 000 uzs
+                            .col-md-2
+                                .date 17.02.2022
+                        .desc
+                            p Жисмоний тарбия ва sport факултетини тамомлаган. Мутахассислиги: жисмоний тарбия ўқитувчиси. Алоқа қўнғироқдан яхшироқ, почтани томоша қилишнинг ҳеч қандай усули йўқ Жисмоний тарбия ва sport факултетини тамомлаган. Мутахассислиги: жисмоний тарбия ўқитувчиси. Алоқа қўнғироқдан яхшироқ, почтани томоша қилишнинг ҳеч қандай усули йўқ
+                        .bottom-region
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-briefcase")
+                                .info
+                                    p
+                                        strong Иш графиги
+                                    p Толиқ иш куни
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-scale")
+                                .info
+                                    p
+                                        strong Иш тажрибаси
+                                    p 12 йил
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-information")
+                                .info
+                                    p
+                                        strong Маълумоти
+                                    p Олий маълумотли
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-address")
+                                .info
+                                    p
+                                        strong Манзил
+                                    p Тошкент шаҳар, Чилонзор, Муқумий кўчаси 4 - уй
+                    .vac-info.agroJobs
+                        .head-region
+                            .col-md-10
+                                .user
+                                    .avatar
+                                        +icon('icon-user')
+                                    +e.name Азимов Сайфиддин
+                                .h2 Жисмоний маданият бўйича катта ўқитувчи маданият
+                                .price 1 800 000 uzs
+                            .col-md-2
+                                .date 17.02.2022
+                        .desc
+                            p Жисмоний тарбия ва sport факултетини тамомлаган. Мутахассислиги: жисмоний тарбия ўқитувчиси. Алоқа қўнғироқдан яхшироқ, почтани томоша қилишнинг ҳеч қандай усули йўқ Жисмоний тарбия ва sport факултетини тамомлаган. Мутахассислиги: жисмоний тарбия ўқитувчиси. Алоқа қўнғироқдан яхшироқ, почтани томоша қилишнинг ҳеч қандай усули йўқ
+                        .bottom-region
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-briefcase")
+                                .info
+                                    p
+                                        strong Иш графиги
+                                    p Толиқ иш куни
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-scale")
+                                .info
+                                    p
+                                        strong Иш тажрибаси
+                                    p 12 йил
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-information")
+                                .info
+                                    p
+                                        strong Маълумоти
+                                    p Олий маълумотли
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-address")
+                                .info
+                                    p
+                                        strong Манзил
+                                    p Тошкент шаҳар, Чилонзор, Муқумий кўчаси 4 - уй
+                .tabcontent(id="resume-tab")
+                    .vac-info.agroJobs
+                        .head-region
+                            .col-md-10
+                                .company ООО "Агрофирма АРИАНТ"
+                                .h2 Жисмоний маданият бўйича катта ўқитувчи маданият
+                                .price 1 800 000 uzs
+                            .col-md-2
+                                .date 17.02.2022
+                        .desc
+                            p Жисмоний тарбия ва sport факултетини тамомлаган. Мутахассислиги: жисмоний тарбия ўқитувчиси. Алоқа қўнғироқдан яхшироқ, почтани томоша қилишнинг ҳеч қандай усули йўқ Жисмоний тарбия ва sport факултетини тамомлаган. Мутахассислиги: жисмоний тарбия ўқитувчиси. Алоқа қўнғироқдан яхшироқ, почтани томоша қилишнинг ҳеч қандай усули йўқ
+                        .bottom-region
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-briefcase")
+                                .info
+                                    p
+                                        strong Иш графиги
+                                    p Толиқ иш куни
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-scale")
+                                .info
+                                    p
+                                        strong Иш тажрибаси
+                                    p 12 йил
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-information")
+                                .info
+                                    p
+                                        strong Маълумоти
+                                    p Олий маълумотли
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-address")
+                                .info
+                                    p
+                                        strong Манзил
+                                    p Тошкент шаҳар, Чилонзор, Муқумий кўчаси 4 - уй
+                    .vac-info.agroJobs
+                        .head-region
+                            .col-md-10
+                                .company ООО "Агрофирма АРИАНТ"
+                                .h2 Жисмоний маданият бўйича катта ўқитувчи маданият
+                                .price 1 800 000 uzs
+                            .col-md-2
+                                .date 17.02.2022
+                        .desc
+                            p Жисмоний тарбия ва sport факултетини тамомлаган. Мутахассислиги: жисмоний тарбия ўқитувчиси. Алоқа қўнғироқдан яхшироқ, почтани томоша қилишнинг ҳеч қандай усули йўқ Жисмоний тарбия ва sport факултетини тамомлаган. Мутахассислиги: жисмоний тарбия ўқитувчиси. Алоқа қўнғироқдан яхшироқ, почтани томоша қилишнинг ҳеч қандай усули йўқ
+                        .bottom-region
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-briefcase")
+                                .info
+                                    p
+                                        strong Иш графиги
+                                    p Толиқ иш куни
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-scale")
+                                .info
+                                    p
+                                        strong Иш тажрибаси
+                                    p 12 йил
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-information")
+                                .info
+                                    p
+                                        strong Маълумоти
+                                    p Олий маълумотли
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-address")
+                                .info
+                                    p
+                                        strong Манзил
+                                    p Тошкент шаҳар, Чилонзор, Муқумий кўчаси 4 - уй
+                    .vac-info.agroJobs
+                        .head-region
+                            .col-md-10
+                                .company ООО "Агрофирма АРИАНТ"
+                                .h2 Жисмоний маданият бўйича катта ўқитувчи маданият
+                                .price 1 800 000 uzs
+                            .col-md-2
+                                .date 17.02.2022
+                        .desc
+                            p Жисмоний тарбия ва sport факултетини тамомлаган. Мутахассислиги: жисмоний тарбия ўқитувчиси. Алоқа қўнғироқдан яхшироқ, почтани томоша қилишнинг ҳеч қандай усули йўқ Жисмоний тарбия ва sport факултетини тамомлаган. Мутахассислиги: жисмоний тарбия ўқитувчиси. Алоқа қўнғироқдан яхшироқ, почтани томоша қилишнинг ҳеч қандай усули йўқ
+                        .bottom-region
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-briefcase")
+                                .info
+                                    p
+                                        strong Иш графиги
+                                    p Толиқ иш куни
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-scale")
+                                .info
+                                    p
+                                        strong Иш тажрибаси
+                                    p 12 йил
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-information")
+                                .info
+                                    p
+                                        strong Маълумоти
+                                    p Олий маълумотли
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-address")
+                                .info
+                                    p
+                                        strong Манзил
+                                    p Тошкент шаҳар, Чилонзор, Муқумий кўчаси 4 - уй
+                    .vac-info.agroJobs
+                        .head-region
+                            .col-md-10
+                                .company ООО "Агрофирма АРИАНТ"
+                                .h2 Жисмоний маданият бўйича катта ўқитувчи маданият
+                                .price 1 800 000 uzs
+                            .col-md-2
+                                .date 17.02.2022
+                        .desc
+                            p Жисмоний тарбия ва sport факултетини тамомлаган. Мутахассислиги: жисмоний тарбия ўқитувчиси. Алоқа қўнғироқдан яхшироқ, почтани томоша қилишнинг ҳеч қандай усули йўқ Жисмоний тарбия ва sport факултетини тамомлаган. Мутахассислиги: жисмоний тарбия ўқитувчиси. Алоқа қўнғироқдан яхшироқ, почтани томоша қилишнинг ҳеч қандай усули йўқ
+                        .bottom-region
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-briefcase")
+                                .info
+                                    p
+                                        strong Иш графиги
+                                    p Толиқ иш куни
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-scale")
+                                .info
+                                    p
+                                        strong Иш тажрибаси
+                                    p 12 йил
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-information")
+                                .info
+                                    p
+                                        strong Маълумоти
+                                    p Олий маълумотли
+                            .wrapper
+                                .icon-wrapper
+                                    +icon("icon-address")
+                                .info
+                                    p
+                                        strong Манзил
+                                    p Тошкент шаҳар, Чилонзор, Муқумий кўчаси 4 - уй
+
 mixin sVacancyCabinet(data)
     // start sVacancyCabinet
     .tabs-region.personal
@@ -521,3 +884,258 @@ mixin sVacancyCabinet(data)
                                 p 12 йил
                     .col-md-3
                         button.personal-info__btn.btn.btn-primary Таҳрирлаш
+
+mixin sVacancyAgrojobs(data)
+    // start sUserLegalInfo
+    +b.vacancyAgroJob.section#vacancyAgroJob&attributes(attributes)
+        +btn('Орқага', href).btn.btn-with-arrow-left
+        .tabs-region
+            .tab
+                button.tablinks.employers.active(onclick="openCity(event, 'employers-tab')") Иш берувчилар
+                button.tablinks.seekers(onclick="openCity(event, 'seekers-tab')") Иш изловчилар
+            .tabcontent.opened(id="employers-tab")
+                +agrojobsBanner()
+                +blockProfessions()
+                +agrojobsResume()
+                +stepBlockWithoutForm()
+                +agrojobsCompanies()
+            .tabcontent(id="seekers-tab")
+                +agrojobsBanner2()
+                +agrojobsResume2()
+                +blockProfessions2()
+                +stepBlockWithoutForm()
+                +agrojobsCompanies()
+
+mixin companyVacancy(data)
+    // start companyVacancy
+    +b.companyVacancy.section#companyVacancy&attributes(attributes)
+        .container
+            .section-title.wow.animate__fadeInUp
+                h2 Компаниянинг барча вакансиялари
+                .total-goods Умумий вакансиялар: &nbsp;
+                    span 125
+            +e.vacancy-items.wow.animate__fadeInUp
+                +e.item
+                    +e.title-price
+                        +e.prof Аграном
+                        +e.price 5 000 000 uzs
+                    +e.user
+                        +pic('agriculture-logo','',0)
+                        +e.name ООО "АГРОФИРМА АРИАНТ"
+                    +e.options
+                        .wrapper
+                            .icon-wrapper
+                                +icon("icon-clockk")
+                            .info
+                                p
+                                    strong Иш соати
+                                p 9:00 - 18:00
+                        .wrapper
+                            .icon-wrapper
+                                +icon("icon-scale")
+                            .info
+                                p
+                                    strong Тажрибаси
+                                p 12 йил
+                        .wrapper
+                            .icon-wrapper
+                                +icon("icon-briefcase")
+                            .info
+                                p
+                                    strong Иш графиги
+                                p Толиқ иш куни
+                        .wrapper
+                            .icon-wrapper
+                                +icon("icon-address")
+                            .info
+                                p
+                                    strong Манзил
+                                p Тошкент шаҳар, Чилонзор,
+                                p Муқумий кўчаси 4 - уй
+                +e.item
+                    +e.title-price
+                        +e.prof Зоотехник
+                        +e.price Ойлик кўрсатилмаган
+                    +e.user
+                        +pic('agriculture-logo','',0)
+                        +e.name ООО "АГРОФИРМА АРИАНТ"
+                    +e.options
+                        .wrapper
+                            .icon-wrapper
+                                +icon("icon-clockk")
+                            .info
+                                p
+                                    strong Иш соати
+                                p 9:00 - 18:00
+                        .wrapper
+                            .icon-wrapper
+                                +icon("icon-scale")
+                            .info
+                                p
+                                    strong Тажрибаси
+                                p 12 йил
+                        .wrapper
+                            .icon-wrapper
+                                +icon("icon-briefcase")
+                            .info
+                                p
+                                    strong Иш графиги
+                                p Толиқ иш куни
+                        .wrapper
+                            .icon-wrapper
+                                +icon("icon-address")
+                            .info
+                                p
+                                    strong Манзил
+                                p Тошкент шаҳар, Чилонзор,
+                                p Муқумий кўчаси 4 - уй
+                +e.item
+                    +e.title-price
+                        +e.prof Бош ветеринар муовини
+                        +e.price 12 000 000 uzs
+                    +e.user
+                        +pic('agriculture-logo','',0)
+                        +e.name ООО "АГРОФИРМА АРИАНТ"
+                    +e.options
+                        .wrapper
+                            .icon-wrapper
+                                +icon("icon-clockk")
+                            .info
+                                p
+                                    strong Иш соати
+                                p 9:00 - 18:00
+                        .wrapper
+                            .icon-wrapper
+                                +icon("icon-scale")
+                            .info
+                                p
+                                    strong Тажрибаси
+                                p 12 йил
+                        .wrapper
+                            .icon-wrapper
+                                +icon("icon-briefcase")
+                            .info
+                                p
+                                    strong Иш графиги
+                                p Толиқ иш куни
+                        .wrapper
+                            .icon-wrapper
+                                +icon("icon-address")
+                            .info
+                                p
+                                    strong Манзил
+                                p Тошкент шаҳар, Чилонзор,
+                                p Муқумий кўчаси 4 - уй
+                +e.item
+                    +e.title-price
+                        +e.prof Аграном
+                        +e.price 5 000 000 uzs
+                    +e.user
+                        +pic('agriculture-logo','',0)
+                        +e.name ООО "АГРОФИРМА АРИАНТ"
+                    +e.options
+                        .wrapper
+                            .icon-wrapper
+                                +icon("icon-clockk")
+                            .info
+                                p
+                                    strong Иш соати
+                                p 9:00 - 18:00
+                        .wrapper
+                            .icon-wrapper
+                                +icon("icon-scale")
+                            .info
+                                p
+                                    strong Тажрибаси
+                                p 12 йил
+                        .wrapper
+                            .icon-wrapper
+                                +icon("icon-briefcase")
+                            .info
+                                p
+                                    strong Иш графиги
+                                p Толиқ иш куни
+                        .wrapper
+                            .icon-wrapper
+                                +icon("icon-address")
+                            .info
+                                p
+                                    strong Манзил
+                                p Тошкент шаҳар, Чилонзор,
+                                p Муқумий кўчаси 4 - уй
+                +e.item
+                    +e.title-price
+                        +e.prof Зоотехник
+                        +e.price Ойлик кўрсатилмаган
+                    +e.user
+                        +pic('agriculture-logo','',0)
+                        +e.name ООО "АГРОФИРМА АРИАНТ"
+                    +e.options
+                        .wrapper
+                            .icon-wrapper
+                                +icon("icon-clockk")
+                            .info
+                                p
+                                    strong Иш соати
+                                p 9:00 - 18:00
+                        .wrapper
+                            .icon-wrapper
+                                +icon("icon-scale")
+                            .info
+                                p
+                                    strong Тажрибаси
+                                p 12 йил
+                        .wrapper
+                            .icon-wrapper
+                                +icon("icon-briefcase")
+                            .info
+                                p
+                                    strong Иш графиги
+                                p Толиқ иш куни
+                        .wrapper
+                            .icon-wrapper
+                                +icon("icon-address")
+                            .info
+                                p
+                                    strong Манзил
+                                p Тошкент шаҳар, Чилонзор,
+                                p Муқумий кўчаси 4 - уй
+                +e.item
+                    +e.title-price
+                        +e.prof Бош ветеринар муовини
+                        +e.price 12 000 000 uzs
+                    +e.user
+                        +pic('agriculture-logo','',0)
+                        +e.name ООО "АГРОФИРМА АРИАНТ"
+                    +e.options
+                        .wrapper
+                            .icon-wrapper
+                                +icon("icon-clockk")
+                            .info
+                                p
+                                    strong Иш соати
+                                p 9:00 - 18:00
+                        .wrapper
+                            .icon-wrapper
+                                +icon("icon-scale")
+                            .info
+                                p
+                                    strong Тажрибаси
+                                p 12 йил
+                        .wrapper
+                            .icon-wrapper
+                                +icon("icon-briefcase")
+                            .info
+                                p
+                                    strong Иш графиги
+                                p Толиқ иш куни
+                        .wrapper
+                            .icon-wrapper
+                                +icon("icon-address")
+                            .info
+                                p
+                                    strong Манзил
+                                p Тошкент шаҳар, Чилонзор,
+                                p Муқумий кўчаси 4 - уй
+
+    // start companyVacancy

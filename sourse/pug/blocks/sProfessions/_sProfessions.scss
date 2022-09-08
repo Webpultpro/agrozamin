@@ -1,0 +1,61 @@
+.blockProfessions {
+  .section-title {
+    padding-bottom: 37px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  &__item {
+    background: #FFFFFF;
+    border: 1px solid #E6E6E6;
+    border-radius: 10px;
+    width: calc(25% - 22.5px);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    @include media-breakpoint-down(xl) {
+      width: calc(34% - 27px);
+    }
+    @include media-breakpoint-down(lg) {
+      width: calc(50% - 15px);
+    }
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+  &__icon-wrapper {
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+    display: flex;
+    background: #F5F5F5;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    .icon {
+      font-size: 3.2rem;
+      color: var(--bs-primary);
+    }
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 18px;
+    color: #3e3e3e;
+    line-height: 19px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    min-height: 25px;
+  }
+  &__count {
+    color: rgba(62, 62, 62, 0.6);
+    line-height: 15px;
+  }
+}

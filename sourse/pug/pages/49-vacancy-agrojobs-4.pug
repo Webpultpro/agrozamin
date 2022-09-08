@@ -1,0 +1,40 @@
+extends layout/main
+
+
+include ../blocks/sVacancy/_sVacancy.pug
+include ../blocks/sProdBody/_sProdBody.pug
+include ../blocks/differentTables/differentTables.pug
+
+block variables
+    - let  mainPage= 'vacancy-page'
+    - let  bg= 'main.jpg'
+
+block title
+    - let  title= 'Бош ветеринар муовини'
+    title= title
+block pagecontent
+
+
+    +mob-mnu()
+    +header()
+        +topLineAgrojobs()
+        +topNavAgrojobs()
+
+    +breadcrumb('Асосий саҳифа', 'Резумелар', title)
+
+    .agroJobsUserCabinet.section
+        .container
+            +irrigationSolution2()
+            .head-region
+                .h2 Бош ветеринар муовини
+                .price 1 800 000 uzs
+            .bottom-region
+                +dashBoard2()
+                +workExperience()
+            .description
+                .desc-title Ози ҳақида
+                .text
+                    p Жисмоний тарбия ва sport факултетини тамомлаган. Мутахассислиги: жисмоний тарбия ўқитувчиси. Алоқа қўнғироқдан яхшироқ, почтани томоша қилишнинг ҳеч қандай усули йўқ.
+            +statisticCount()
+
+    +footer()
