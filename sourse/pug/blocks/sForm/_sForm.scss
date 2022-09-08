@@ -344,6 +344,42 @@
 		margin-top: 55px;
 	}
 }
+.likeinput-checkbox-wrapper {
+	li {
+		list-style: none;
+		strong {
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 18px;
+			color: #7C7E80;
+			border: 1px solid #CED4DA;
+			border-radius: 4px;
+			padding: 10px 30px 10px 10px;
+			min-height: 39px;
+			width: 100%;
+			display: block;
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 13px;
+				right: 15px;
+				border: solid #343a40;
+				border-width: 0 2px 2px 0;
+				display: inline-block;
+				padding: 3px;
+				transform: rotate(45deg);
+				-webkit-transform: rotate(45deg);
+			}
+		}
+		&.has-children {
+			display: none;
+			border: 1px solid #CED4DA;
+			border-radius: 4px;
+			padding: 10px;
+		}
+	}
+}
 .inner-position-wrapper {
 	.dublicated-field {
 		margin-bottom: 20px;

@@ -82,3 +82,43 @@ mixin policy()
             +e.SPAN.text Шахсий маълумотлардан фойдаланиш
                 br
                 a(href="#").text-info.tdu шартларини қабул қиламан.
+
+mixin liwCheckBox(title,option1,option2,option3,option4,option5,option6,option7,option8,option9,option10)
+    span.form-wrap__input-wrap.form-group
+        label
+            span.form-wrap__input-title= title
+            ul.likeinput-checkbox-wrapper
+                li
+                    strong Категория
+                li.has-children
+                    ul
+                        if option1
+                            li
+                                +in-c('checkbox',option1)
+                        if option2
+                            li
+                                +in-c('checkbox',option2)
+                        if option3
+                            li
+                                +in-c('checkbox',option3)
+                        if option4
+                            li
+                                +in-c('checkbox',option4)
+                        if option5
+                            li
+                                +in-c('checkbox',option5)
+                        if option6
+                            li
+                                +in-c('checkbox',option6)
+                        if option7
+                            li
+                                +in-c('checkbox',option7)
+                        if option8
+                            li
+                                +in-c('checkbox',option8)
+                        if option9
+                            li
+                                +in-c('checkbox',option9)
+                        if option10
+                            li
+                                +in-c('checkbox',option10)

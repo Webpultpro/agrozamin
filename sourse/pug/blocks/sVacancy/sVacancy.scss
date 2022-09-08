@@ -477,6 +477,15 @@
       }
     }
   }
+  .select2-container--default {
+    .select2-selection--single {
+      min-height: 39px;
+      padding: 10px 30px 10px 10px;
+      .select2-selection__rendered {
+        color: #7C7E80;
+      }
+    }
+  }
 }
 .form-group {
   .label {

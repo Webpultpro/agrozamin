@@ -523,7 +523,15 @@ mixin sForm7()
 					.col-lg-8
 						+input(`Мисол 5 йил`,`select`,`Тажрибаси  ( йил )`)
 					.col-lg-4
-						+input(`Толиқ иш куни`,`select`,`Иш графиги`)
+						span.form-wrap__input-wrap.form-group
+							label
+								span.form-wrap__input-title Иш графиги
+								select(name="Қисман иш куни").form-wrap__input.form-select.custom-select-js
+									option(value="Толиқ иш куни") Толиқ иш куни
+									option(value="Қисман иш куни ") Қисман иш куни
+									option(value="Джизакская область") Джизакская область
+									option(value="Мавсумий") Мавсумий
+									option(value="Амалиёт") Амалиёт
 					.form-wrap__textarea-wrap.form-group
 						label
 							span.form-wrap__input-title Батафсил тавсиф
@@ -562,13 +570,34 @@ mixin sForm8()
 							.form-wrap__input-title Туғилган куни
 							.group-input.with-select-date-three
 								+input(`Кун`,`text`)
-								+input(`Ой`,`select`)
+								span.form-wrap__input-wrap.form-group
+									label
+										select(name="Ой").form-wrap__input.form-select.custom-select-js
+											option(value="Январь") Январь
+											option(value="Февраль") Февраль
+											option(value="Март") Март
+											option(value="Апрель") Апрель
+											option(value="Май") Май
+											option(value="Июнь") Июнь
+											option(value="Июль") Июль
+											option(value="Аугуст") Аугуст
+											option(value="Сентябрь") Сентябрь
+											option(value="Октябрь") Октябрь
+											option(value="Ноябрь") Ноябрь
+											option(value="Декабрь") Декабрь
 								+input(`Йил`,`text`)
 				.row
 					.col-lg-8
 						.row
 							.col-lg-6
-								+input(`Ўрта маҳсус`,`select`,`Маълумоти`)
+								span.form-wrap__input-wrap.form-group
+									label
+										span.form-wrap__input-title Маълумоти
+										select(name="Ўрта маҳсус").form-wrap__input.form-select.custom-select-js
+											option(value="Орта маҳсус") Орта маҳсус
+											option(value="Тугалланмаган олий") Тугалланмаган олий
+											option(value="Олий маълумотли") Олий маълумотли
+											option(value="Магистр") Магистр
 							.col-lg-6
 								.form-group
 									.form-wrap__input-title Жинси
@@ -582,7 +611,7 @@ mixin sForm8()
 						+input(`Мисол 5 йил`,`select`,`Тажрибаси  ( йил )`)
 					.col-lg-4
 						+input(`Ойлик маошни киритинг`,`text`,`Ойлик маош(Сўм)`)
-						+input(`Толиқ иш куни`,`select`,`Иш графиги`)
+						+liwCheckBox('Иш графиги','Толиқ иш куни','Қисман иш куни','Джизакская область','Мавсумий','Амалиёт')
 					span.form-wrap__input-wrap.form-group.add-work-experience
 						input(class="form-wrap__input form-control " name="text" type="text" placeholder="Иш тажрибасини қўшиш")
 					.form-wrap__textarea-wrap.form-group
@@ -623,7 +652,22 @@ mixin sForm9()
 									+input(`Ой`,`select`)
 									+input(`Йил`,`text`)
 									+in-c(`checkbox`, `Ҳозирги вақтга қадар`)
-					+input(`Иш жойини танланг`,`select`,`Иш жойи`)
+					span.form-wrap__input-wrap.form-group
+						label
+							span.form-wrap__input-title Иш жойи
+							select(name="Иш жойини танланг").form-wrap__input.form-select.custom-select-js
+								option(value="Тошкент") Тошкент
+								option(value="Андижон") Андижон
+								option(value="Бухоро") Бухоро
+								option(value="Жиззах") Жиззах
+								option(value="Қашқадарё") Қашқадарё
+								option(value="Навоий") Навоий
+								option(value="Наманган") Наманган
+								option(value="Самарқанд") Самарқанд
+								option(value="Сурхондарё") Сурхондарё
+								option(value="Сирдарё") Сирдарё
+								option(value="Хоразм") Хоразм
+								option(value="Қорақалпоғистон") Қорақалпоғистон
 					.inner-position-wrapper
 						.position
 							div(id="positionInput-1").positionInputs.dublicated-field
@@ -651,7 +695,22 @@ mixin sForm9()
 									+input(`Ой`,`select`)
 									+input(`Йил`,`text`)
 									+in-c(`checkbox`, `Ҳозирги вақтга қадар`)
-					+input(`Иш жойини танланг`,`select`,`Иш жойи`)
+					span.form-wrap__input-wrap.form-group
+						label
+							span.form-wrap__input-title Иш жойи
+							select(name="Иш жойини танланг").form-wrap__input.form-select.custom-select-js
+								option(value="Тошкент") Тошкент
+								option(value="Андижон") Андижон
+								option(value="Бухоро") Бухоро
+								option(value="Жиззах") Жиззах
+								option(value="Қашқадарё") Қашқадарё
+								option(value="Навоий") Навоий
+								option(value="Наманган") Наманган
+								option(value="Самарқанд") Самарқанд
+								option(value="Сурхондарё") Сурхондарё
+								option(value="Сирдарё") Сирдарё
+								option(value="Хоразм") Хоразм
+								option(value="Қорақалпоғистон") Қорақалпоғистон
 					.inner-position-wrapper
 						.position
 							div(id="positionInput2-1").positionInput2s.dublicated-field

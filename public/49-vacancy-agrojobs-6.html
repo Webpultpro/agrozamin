@@ -347,11 +347,22 @@
 										<div class="form-wrap__input-title">Туғилган куни</div>
 										<div class="group-input with-select-date-three"><span class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Кун"/></span>
 											<!-- +e.input-wrap--><span class="form-wrap__input-wrap form-group">
-												<select class="form-wrap__input form-select" name="select">
-													<option value="Ой">Ой</option>
-													<option value=" placeholder 5">placeholder 5</option>
-												</select></span>
-											<!-- +e.input-wrap--><span class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Йил"/></span>
+												<label>
+													<select class="form-wrap__input form-select custom-select-js" name="Ой">
+														<option value="Январь">Январь</option>
+														<option value="Февраль">Февраль</option>
+														<option value="Март">Март</option>
+														<option value="Апрель">Апрель</option>
+														<option value="Май">Май</option>
+														<option value="Июнь">Июнь</option>
+														<option value="Июль">Июль</option>
+														<option value="Аугуст">Аугуст</option>
+														<option value="Сентябрь">Сентябрь</option>
+														<option value="Октябрь">Октябрь</option>
+														<option value="Ноябрь">Ноябрь</option>
+														<option value="Декабрь">Декабрь</option>
+													</select>
+												</label></span><span class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Йил"/></span>
 											<!-- +e.input-wrap-->
 										</div>
 									</div>
@@ -362,13 +373,13 @@
 									<div class="row">
 										<div class="col-lg-6"><span class="form-wrap__input-wrap form-group">
 												<label><span class="form-wrap__input-title">Маълумоти</span>
-													<select class="form-wrap__input form-select" name="select">
-														<option value="Ўрта маҳсус">Ўрта маҳсус</option>
-														<option value=" placeholder 5">placeholder 5</option>
+													<select class="form-wrap__input form-select custom-select-js" name="Ўрта маҳсус">
+														<option value="Орта маҳсус">Орта маҳсус</option>
+														<option value="Тугалланмаган олий">Тугалланмаган олий</option>
+														<option value="Олий маълумотли">Олий маълумотли</option>
+														<option value="Магистр">Магистр</option>
 													</select>
-												</label></span>
-											<!-- +e.input-wrap-->
-										</div>
+												</label></span></div>
 										<div class="col-lg-6">
 											<div class="form-group">
 												<div class="form-wrap__input-title">Жинси</div>
@@ -402,12 +413,34 @@
 										</label></span>
 									<!-- +e.input-wrap--><span class="form-wrap__input-wrap form-group">
 										<label><span class="form-wrap__input-title">Иш графиги</span>
-											<select class="form-wrap__input form-select" name="select">
-												<option value="Толиқ иш куни">Толиқ иш куни</option>
-												<option value=" placeholder 5">placeholder 5</option>
-											</select>
+											<ul class="likeinput-checkbox-wrapper">
+												<li><strong>Категория</strong></li>
+												<li class="has-children">
+													<ul>
+														<li>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Толиқ иш куни</span>
+															</label>
+														</li>
+														<li>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Қисман иш куни</span>
+															</label>
+														</li>
+														<li>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Джизакская область</span>
+															</label>
+														</li>
+														<li>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Мавсумий</span>
+															</label>
+														</li>
+														<li>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Амалиёт</span>
+															</label>
+														</li>
+													</ul>
+												</li>
+											</ul>
 										</label></span>
-									<!-- +e.input-wrap-->
 								</div><span class="form-wrap__input-wrap form-group add-work-experience">
 									<input class="form-wrap__input form-control " name="text" type="text" placeholder="Иш тажрибасини қўшиш"/></span>
 								<div class="form-wrap__textarea-wrap form-group">
