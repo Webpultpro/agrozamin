@@ -880,6 +880,9 @@ function eventHandler() {
 	$('.custom-select-js').select2({
 		// dropdownParent: 
 	});
+	$('.authorisation-select-js').select2({
+		minimumResultsForSearch: -1
+	});
 	$('.custom-select-location').select2({
 		placeholder: "Сизнинг жойлашувингиз",
 	});
@@ -1279,3 +1282,25 @@ $(document).ready(function(){
 	});
 });
 /* end inputCheckedByClickingButtonPrice */
+
+/* start input masks */
+$(document).ready(function () {
+	$("form .phone-number").mask("+(998)55555 55 55");
+	$("form .phone-number2").mask("+998 55 555 55 55");
+});
+/* end input masks */
+
+/* start input pass */
+$(document).ready(function () {
+	$('body').on('click', '.password-control', function(){
+		if ($(this).prev().attr('type') === 'password'){
+			$(this).addClass('view');
+			$(this).prev().attr('type', 'text');
+		} else {
+			$(this).removeClass('view');
+			$(this).prev().attr('type', 'password');
+		}
+		return false;
+	});
+});
+/* end input pass */

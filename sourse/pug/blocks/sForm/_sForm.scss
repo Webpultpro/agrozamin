@@ -126,7 +126,21 @@
 	@include media-breakpoint-down(xs) {
 	}
 } // end.sForm
-
+.btn-gray {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: center;
+	color: #343A40;
+	background: #E6E6E6;
+	border-radius: 60px;
+	padding: 12px 35px;
+	transition: 0.3s;
+	&:hover {
+		background: var(--bs-primary);
+		color: white;
+	}
+}
 .artical-form {
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(44.5)};
@@ -377,6 +391,17 @@
 			border: 1px solid #CED4DA;
 			border-radius: 4px;
 			padding: 10px;
+		}
+	}
+}
+.authorisation-select-js {
+	+.select2-container--default {
+		.select2-selection--single {
+			min-height: 34px;
+			padding: 8px 30px 7px 10px;
+			.select2-selection__rendered {
+				color: #aaaaaa;
+			}
 		}
 	}
 }
@@ -805,6 +830,95 @@
 			margin-top: 55px;
 			.btn {
 				min-width: 190px;
+			}
+		}
+	}
+}
+.authorisationForm {
+	h2 {
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 28px;
+		margin-bottom: 20px;
+	}
+	.desc-title {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 18px;
+		text-align: center;
+		color: #7C7E80;
+		max-width: 360px;
+		margin: -15px auto 15px;
+		a {
+			color: #27B7D6;
+		}
+	}
+	.to-register {
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 17px;
+		color: #3E3E3E;
+		text-align: left;
+		margin-top: 20px;
+		a {
+			color: #27B7D6;
+		}
+	}
+	.form-wrap__btn-wrap {
+		margin-top: 20px;
+	}
+	.btn {
+		min-width: 190px;
+	}
+}
+.authorisation {
+	@include media-breakpoint-down(sm) {
+		margin-top: 0 !important;
+	}
+	.logotype {
+		text-align: center;
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+	}
+}
+.sPersonalAccount {
+	.form-wrap {
+		margin-right: 300px;
+		border: none;
+		box-shadow: none;
+		padding: 0;
+		@include media-breakpoint-down(xl) {
+			margin-right: 220px;
+		}
+		@include media-breakpoint-down(lg) {
+			margin-right: auto;
+		}
+		.btn {
+			min-width: 190px;
+		}
+	}
+}
+label {
+	&.with-icon {
+		position: relative;
+		.password-control {
+			position: absolute;
+			top: 33px;
+			right: 10px;
+			&.view {
+				.icon-eye-prod {
+					display: block;
+					margin-top: 4px;
+				}
+				.icon-eye-hide {
+					display: none;
+				}
+			}
+			.icon-eye-prod {
+				display: none;
+			}
+			.icon-eye-hide {
+				font-size: 1.3rem;
 			}
 		}
 	}

@@ -882,3 +882,91 @@ mixin stepBlockWithoutForm(data)
 					.count
 						+icon('step3')
 					.desc Керакли ходимга ега бўлинг
+
+mixin authorisationForm(data)
+	+b.authorisationForm.section#authorisationForm
+		.container
+			+form-wrap
+				h2 Рўйхатдан ўтиш
+				+input(`Телефон рақамингизни киритинг`,`text`,`Телефон рақами *`)(required).phone-number
+				span.form-wrap__input-wrap.form-group
+					label.with-icon
+						span.form-wrap__input-title Пароль *
+						input.form-wrap__input.form-control(name="text" type="password" placeholder="Паролни киритинг" required="required")
+						span.password-control
+							+icon("eye-prod")
+							+icon("eye-hide")
+				+input(`Вилоятни танланг`,`select`,`Вилоятни танланг *`).authorisation-select-js
+				+input(`Туманни танланг`,`select`,`Туманни танланг *`).authorisation-select-js
+				+input(`Агромарказ менежеридан`,`select`,`Лоҳия ҳақида қаердан хабар топдингиз?`).authorisation-select-js
+				+e.btn-wrap
+					a(href="#").btn.btn-gray Рўйхатдан ўтиш
+				.to-register Рўйхатдан ўтганмисиз? &nbsp;
+					+btn('Кириш', href)
+
+mixin loginOrRegister(data)
+	+b.authorisationForm.section#authorisationForm
+		.container
+			+form-wrap
+				h2 Кириш ёки рўйхатдан ўтиш
+				+input(`+(998)97401 87 97`,`text`,`Телефон рақами`).phone-number
+				span.form-wrap__input-wrap.form-group
+					label.with-icon
+						span.form-wrap__input-title Пароль
+						input.form-wrap__input.form-control(name="text" type="password" placeholder="Паролни киритинг")
+						span.password-control
+							+icon("eye-prod")
+							+icon("eye-hide")
+				.to-register
+					+btn('Паролни тиклаш', href)
+				+e.btn-wrap
+					a(href="#").btn.btn-primary Кириш
+
+mixin passwordRecovery(data)
+	+b.authorisationForm.section#authorisationForm
+		.container
+			+form-wrap
+				h2 Паролни тиклаш
+				.desc-title Тасдиқлаш кодини жўнатиш учун телефон рақамингизни киритинг
+				+input(`Телефон рақамингизни киритинг`,`text`,`Телефон рақами`).phone-number2
+				+e.btn-wrap.mt-5
+					a(href="#").btn.btn-gray Жўнатиш
+
+mixin passwordRecovery2(data)
+	+b.authorisationForm.section#authorisationForm
+		.container
+			+form-wrap
+				h2 Кириш ёки рўйхатдан ўтиш
+				.desc-title +998 97 401 87 97 Рақамига тасдиқлаш коди юборилди &nbsp;
+					+btn('Рақамни ўзгартириш', href)
+				+input(``,`text`,`Тасдиқлаш коди`)
+				span.form-wrap__input-wrap.form-group
+					label.with-icon
+						span.form-wrap__input-title Янги парол
+						input.form-wrap__input.form-control(name="text" type="password" placeholder="")
+						span.password-control
+							+icon("eye-prod")
+							+icon("eye-hide")
+				.to-register Паролни исталган вақтда шахсий кабинет орқали ўзгартиришингиз мумкин
+				+e.btn-wrap.mt-5
+					a(href="#").btn.btn-gray Ўзгартириш
+
+mixin additionalInfo(data)
+	+b.authorisationForm.section#authorisationForm
+		.container
+			+form-wrap
+				h2 Қўшимча маълумотлар
+				+input(`Вилоятни танланг`,`select`,`Вилоятни танланг *`).authorisation-select-js
+				+input(`Туманни танланг`,`select`,`Туманни танланг *`).authorisation-select-js
+				+input(`Агромарказ менежеридан`,`select`,`Лоҳия ҳақида қаердан хабар топдингиз?`).authorisation-select-js
+				+e.btn-wrap
+					a(href="#").btn.btn-gray Рўйхатдан ўтиш
+
+mixin additionalInfoPersonal(data)
+	+b.additionalInfoPersonal.section#additionalInfoPersonal
+		+form-wrap
+			+input(`Вилоятни танланг`,`select`,`Вилоятни танланг *`).authorisation-select-js
+			+input(`Туманни танланг`,`select`,`Туманни танланг *`).authorisation-select-js
+			+input(`Агромарказ менежеридан`,`select`,`Лоҳия ҳақида қаердан хабар топдингиз?`).authorisation-select-js
+			+e.btn-wrap
+				a(href="#").btn.btn-primary.mt-4 Тасдиқлаш
