@@ -962,6 +962,18 @@ mixin additionalInfo(data)
 				+e.btn-wrap
 					a(href="#").btn.btn-gray Рўйхатдан ўтиш
 
+mixin additionalInfo2(data)
+	+b.authorisationForm.section#authorisationForm
+		.container
+			+form-wrap
+				h2 Қўшимча маълумотлар
+				.desc-title.mt-1 Илтимос қўшимча маълумотларни киритинг. Бу сервисдан  фойдаланишдан яна ҳам қулайлик яратади
+				+input(`Вилоятни танланг`,`select`,`Вилоятни танланг *`).authorisation-select-js
+				+input(`Туманни танланг`,`select`,`Туманни танланг *`).authorisation-select-js
+				+input(`Агромарказ менежеридан`,`select`,`Лоҳия ҳақида қаердан хабар топдингиз?`).authorisation-select-js
+				+e.btn-wrap
+					a(href="#").btn.btn-primary Тасдиқлаш
+
 mixin additionalInfoPersonal(data)
 	+b.additionalInfoPersonal.section#additionalInfoPersonal
 		+form-wrap

@@ -1,0 +1,17 @@
+extends layout/main
+
+
+include ../blocks/sForm/_sForm.pug
+
+block variables
+    - let  mainPage= 'authorisation'
+    - let  bg= 'main.jpg'
+
+block title
+    - let  title= 'Қўшимча маълумотлар'
+    title= title
+block pagecontent
+
+    .logotype
+        img(src="img/svg/logo.svg", alt="")
+    +additionalInfo2()
