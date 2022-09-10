@@ -1,4 +1,6 @@
 include ../sNotifications/_sNotifications.pug
+
+
 mixin serivedroop()
 
 	.drop-down-wrap
@@ -6,25 +8,34 @@ mixin serivedroop()
 			+icon("menu")
 			| Сервислар
 		+b.dropdown-block--servises
-			mixin item(i,t,p,grey)
-				+e.item(href="#")
-					+e.img-wrap
-						+pic(`drop-${i}.png`,'bg',0)
-					div
-						.h6.mb-1= t
-						.text-secondary= p
-			+item(`1`,`Фермерлар Мактаби`,`Ёш Фермерларни тайёрлаш мактаби`)
-			+item(`2`,`Агролаб`,`Лобаратория билан ишлаш маҳорати`)
-			+item(`4`,`Медиабиблиотека`,`Керакли видео маҳсулотлар учун майдон`)
-			+item(`4`,`Онлайн консултант`,`Керакли видео маҳсулотлар учун майдон`)
-			+e.item--grey(href="#")
-				+e.img-wrap
-					+pic(`drop-3.png`,'bg',0)
-				div
-					.h6 Агротехкарталар
-					p
-						+icon(`clock-2`)
-						span Тез орада
+			+e.drop-wrapper
+				mixin item(i,t,p,grey)
+					+e.item(href="#")
+						+e.img-wrap
+							+pic(`drop${i}.png`,'',0)
+						div
+							.h6= t
+							.text-secondary= p
+				+e.title Qo’shimcha xizmatlar
+				+e.item-wrapper
+					+item('1','Ҳамкор хизматлари','Бизнес учун фойдали хизматлар')
+				+e.title Bizning xizmatlari
+				+e.item-wrapper.scrolled
+					+item(`2`,`O‘zimizniki`,`Чакана савдо майдони`)
+					+item(`3`,`Онлайн консултант`,`Керакли видео маҳсулотлар учун майдон`)
+					+item(`4`,`АгроМарказ`,`Лобаратория билан ишлаш маҳорати`)
+					+item(`5`,`Agrobooks`,`Керакли видео маҳсулотлар учун майдон`)
+					+item(`6`,`Фермерлар Мактаби`,`Ёш Фермерларни тайёрлаш мактаби`)
+					+item(`7`,`Медиабиблиотека`,`Керакли видео маҳсулотлар учун майдон`)
+					+item(`8`,`Agrojobs`,`Керакли видео маҳсулотлар учун майдон`)
+					+e.item--grey(href="#")
+						+e.img-wrap
+							+pic(`drop9.png`,'',0)
+						div
+							.h6 Агротехкарталар
+							p.time
+								+icon(`clock-2`)
+								span Тез орада
 
 mixin mob-mnu()
 	-
@@ -235,13 +246,14 @@ mixin top-nav(logout)
 									img.avatar(src="img/@1x/user-avatar.png", alt="")
 								+icon("icon-user-cabinet")
 							+b.dropdown-block--cabinet
-								mixin item(t)
-									+e.item(href="#").h6= t
-								+item(`Профил`)
-								+item(`Махсулотлар`)
-								+item(`Буюртмаларим`)
-								+item(`Харидор буюртмалари`)
-								+item(`Чиқиш`)
+								+e.item-wrapper
+									mixin item(t)
+										+e.item(href="#").h6= t
+									+item(`Профил`)
+									+item(`Махсулотлар`)
+									+item(`Буюртмаларим`)
+									+item(`Харидор буюртмалари`)
+									+item(`Чиқиш`)
 	// end top-nav
 mixin top-nav-cabinet(comp)
 	// start top-nav  в этом блоке отличия
@@ -325,33 +337,6 @@ mixin top-nav-cabinet(comp)
 				.col-4
 					+serivedroop()
 	// end top-nav
-
-mixin serivedroop()
-
-	.drop-down-wrap
-		+e.btn.btn.btn-outline-primary(type="button")
-			+icon("menu")
-			| Сервислар
-		+b.dropdown-block--servises
-			mixin item(i,t,p,grey)
-				+e.item(href="#")
-					+e.img-wrap
-						+pic(`drop-${i}.png`,'bg',0)
-					div
-						.h6.mb-1= t
-						.text-secondary= p
-			+item(`1`,`Фермерлар Мактаби`,`Ёш Фермерларни тайёрлаш мактаби`)
-			+item(`2`,`Агролаб`,`Лобаратория билан ишлаш маҳорати`)
-			+item(`4`,`Медиабиблиотека`,`Керакли видео маҳсулотлар учун майдон`)
-			+item(`4`,`Онлайн консултант`,`Керакли видео маҳсулотлар учун майдон`)
-			+e.item--grey(href="#")
-				+e.img-wrap
-					+pic(`drop-3.png`,'bg',0)
-				div
-					.h6 Агротехкарталар
-					p
-						+icon(`clock-2`)
-						span Тез орада
 
 mixin mob-mnu()
 	-
