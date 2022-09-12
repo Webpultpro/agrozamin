@@ -991,6 +991,9 @@ li.active {
 		margin-top: 18px;
 	}
 	&__item-wrapper {
+		padding-bottom: 15px;
+		margin-bottom: 15px;
+		border-bottom: 1px solid #CED4DA;
 		gap: 15px;
 		display: flex;
 		flex-direction: column;
@@ -1033,12 +1036,6 @@ li.active {
 		line-height: 20px;
 		color: #3e3e3e;
 		margin-bottom: 15px;
-		border-top: 1px solid #ced4da;
-		padding-top: 15px;
-		margin-top: 15px;
-		&:first-child {
-			margin-top: 0;
-		}
 	}
 	&--servises &__item {
 		display: flex;
