@@ -55,8 +55,7 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			&::before {
-				content: "Хабар юбориш учун чатни танланг";
+			.sChat__text-empty {
 				font-size: rem(18);
 			}
 			.sChat__messages-body {
